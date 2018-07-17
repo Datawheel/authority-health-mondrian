@@ -1,0 +1,14 @@
+<Schema name="authority_health">
+  <Cube name="test">
+
+
+    <Table name="test_table" schema="test"/>
+    <Dimension name="Year">
+      <Hierarchy hasAll="true">
+        <Level column="year" levelType="TimeYears" name="Year" type="Numeric" uniqueMembers="true"/>
+      </Hierarchy>
+    </Dimension>
+    <Measure name="Value" column="val" aggregator="sum" visible="true"/>
+  </Cube>
+
+</Schema>
