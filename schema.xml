@@ -30,6 +30,11 @@
       <Annotations>
         <Annotation name="dim_type">Geography</Annotation>
       </Annotations>
+      <!--
+      Ordinarily, would use a table in the geography hierarchy, but since this data
+      only contains a small subset of Zips, we'll reference only the zips in this table
+      so as to limit the cut options.
+      -->
       <Hierarchy hasAll="true">
         <Level column="zip" name="Zip" type="String" uniqueMembers="true">
           <NameExpression>
