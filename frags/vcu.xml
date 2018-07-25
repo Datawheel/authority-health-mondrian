@@ -38,8 +38,8 @@
       <Hierarchy hasAll="true">
         <Level column="zip" name="Zip" type="String" uniqueMembers="true">
           <NameExpression>
-             <SQL>
-               RIGHT(zip, 5)
+            <SQL>
+              RIGHT(zip, 5)
             </SQL>
           </NameExpression>
         </Level>
