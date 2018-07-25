@@ -1,4 +1,3 @@
-<?xml version='1.0' encoding='utf8'?>
 <Cube name="Activity Limitations">
     <Annotations>
         <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>
@@ -7,15 +6,15 @@
         <Annotation name="topic">Health</Annotation>
         <Annotation name="subtopic">Risk Factors</Annotation>
     </Annotations>
-    
-    <Table name="activity_limited" schema="mibrfs" />
+
+    <Table name="activity_limited" schema="mibrfs"/>
 
     <Dimension name="Start Year">
         <Annotations>
           <Annotation name="dim_type">TIME</Annotation>
         </Annotations>
         <Hierarchy hasAll="true">
-          <Level column="start_year" levelType="TimeYears" name="Start Year" type="Numeric" uniqueMembers="true" />
+          <Level name="Start Year" column="start_year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />
         </Hierarchy>
     </Dimension>
 
@@ -24,7 +23,7 @@
           <Annotation name="dim_type">TIME</Annotation>
         </Annotations>
         <Hierarchy hasAll="true">
-          <Level column="end_year" levelType="TimeYears" name="End Year" type="Numeric" uniqueMembers="true" />
+          <Level name="End Year" column="end_year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />
         </Hierarchy>
     </Dimension>
 
@@ -32,15 +31,26 @@
         <Annotations>
           <Annotation name="dim_type">GEOGRAPHY</Annotation>
         </Annotations>
-        <Hierarchy hasAll="true" primaryKey="zip_region_id">
-          <Table name="zip_regions" schema="dims" />
-          <Level column="zip_region_id" name="Zip Region" nameColumn="zip_region_name" uniqueMembers="true" />
+        <Hierarchy primaryKey="zip_region_id" hasAll="true">
+          <Table name="zip_regions" schema="dims"/>
+          <Level column="zip_region_id" name="Zip Region" nameColumn="zip_region_name" uniqueMembers="true"/>
         </Hierarchy>
     </Dimension>
 
-    
-    <Measure aggregator="sum" column="sample_frequency" name="Sample Frequency" />
-    <Measure aggregator="sum" column="weighted_frequency" name="Weighted Frequency" />
-    <Measure aggregator="avg" column="weighted_percent" name="Weighted Percent" />
+    <Dimension name="Activity Limitations">
+        <Annotations>
+          <Annotation name="dim_type">RISK FACTORS</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true">
+          <Level name="Category" column="activity_limited" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
 
+     
+    <Measure name="Sample Frequency" column="sample_frequency" aggregator="sum" />
+      
+    <Measure name="Weighted Frequency" column="weighted_frequency" aggregator="sum" />
+      
+    <Measure name="Weighted Percent" column="weighted_percent" aggregator="avg" />
+     
 </Cube>
