@@ -1,11 +1,11 @@
 <Schema name="authority_health">
 <Cube name="General Health Status">
     <Annotations>
-      <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>
-      <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>
-      <Annotation name="dataset_name">General Health Status</Annotation>
-      <Annotation name="topic">Health</Annotation>
-      <Annotation name="subtopic">Risk Factors</Annotation>
+        <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>
+        <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>
+        <Annotation name="dataset_name">General Health Status</Annotation>
+        <Annotation name="topic">Health</Annotation>
+        <Annotation name="subtopic">Risk Factors</Annotation>
     </Annotations>
     
     <Table name="gen_health" schema="mibrfs" />
@@ -34,7 +34,7 @@
         </Annotations>
         <Hierarchy hasAll="true" primaryKey="zip_region_id">
           <Table name="zip_regions" schema="dims" />
-          <Level column="zip_region" name="Zip Region" nameColumn="zip_region_name" uniqueMembers="true" />
+          <Level column="zip_region_id" name="Zip Region" nameColumn="zip_region_name" uniqueMembers="true" />
         </Hierarchy>
     </Dimension>
 
@@ -45,11 +45,11 @@
 
 </Cube><Cube name="Ever Told Diabetes">
     <Annotations>
-      <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>
-      <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>
-      <Annotation name="dataset_name">Ever Told Diabetes</Annotation>
-      <Annotation name="topic">Health</Annotation>
-      <Annotation name="subtopic">Risk Factors</Annotation>
+        <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>
+        <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>
+        <Annotation name="dataset_name">Ever Told Diabetes</Annotation>
+        <Annotation name="topic">Health</Annotation>
+        <Annotation name="subtopic">Risk Factors</Annotation>
     </Annotations>
     
     <Table name="diabetes" schema="mibrfs" />
@@ -78,7 +78,7 @@
         </Annotations>
         <Hierarchy hasAll="true" primaryKey="zip_region_id">
           <Table name="zip_regions" schema="dims" />
-          <Level column="zip_region" name="Zip Region" nameColumn="zip_region_name" uniqueMembers="true" />
+          <Level column="zip_region_id" name="Zip Region" nameColumn="zip_region_name" uniqueMembers="true" />
         </Hierarchy>
     </Dimension>
 
@@ -89,11 +89,11 @@
 
 </Cube><Cube name="Ever Told Depression">
     <Annotations>
-      <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>
-      <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>
-      <Annotation name="dataset_name">Ever Told Depression</Annotation>
-      <Annotation name="topic">Health</Annotation>
-      <Annotation name="subtopic">Risk Factors</Annotation>
+        <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>
+        <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>
+        <Annotation name="dataset_name">Ever Told Depression</Annotation>
+        <Annotation name="topic">Health</Annotation>
+        <Annotation name="subtopic">Risk Factors</Annotation>
     </Annotations>
     
     <Table name="depressive" schema="mibrfs" />
@@ -122,7 +122,7 @@
         </Annotations>
         <Hierarchy hasAll="true" primaryKey="zip_region_id">
           <Table name="zip_regions" schema="dims" />
-          <Level column="zip_region" name="Zip Region" nameColumn="zip_region_name" uniqueMembers="true" />
+          <Level column="zip_region_id" name="Zip Region" nameColumn="zip_region_name" uniqueMembers="true" />
         </Hierarchy>
     </Dimension>
 
@@ -133,11 +133,11 @@
 
 </Cube><Cube name="Poor Mental Health">
     <Annotations>
-      <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>
-      <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>
-      <Annotation name="dataset_name">Poor Mental Health</Annotation>
-      <Annotation name="topic">Health</Annotation>
-      <Annotation name="subtopic">Risk Factors</Annotation>
+        <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>
+        <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>
+        <Annotation name="dataset_name">Poor Mental Health</Annotation>
+        <Annotation name="topic">Health</Annotation>
+        <Annotation name="subtopic">Risk Factors</Annotation>
     </Annotations>
     
     <Table name="poor_mental_health" schema="mibrfs" />
@@ -166,7 +166,7 @@
         </Annotations>
         <Hierarchy hasAll="true" primaryKey="zip_region_id">
           <Table name="zip_regions" schema="dims" />
-          <Level column="zip_region" name="Zip Region" nameColumn="zip_region_name" uniqueMembers="true" />
+          <Level column="zip_region_id" name="Zip Region" nameColumn="zip_region_name" uniqueMembers="true" />
         </Hierarchy>
     </Dimension>
 
@@ -177,11 +177,11 @@
 
 </Cube><Cube name="Routine Checkup in Past Year">
     <Annotations>
-      <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>
-      <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>
-      <Annotation name="dataset_name">Routine Checkup in Past Year</Annotation>
-      <Annotation name="topic">Health</Annotation>
-      <Annotation name="subtopic">Risk Factors</Annotation>
+        <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>
+        <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>
+        <Annotation name="dataset_name">Routine Checkup in Past Year</Annotation>
+        <Annotation name="topic">Health</Annotation>
+        <Annotation name="subtopic">Risk Factors</Annotation>
     </Annotations>
     
     <Table name="had_routine_checkup" schema="mibrfs" />
@@ -210,7 +210,7 @@
         </Annotations>
         <Hierarchy hasAll="true" primaryKey="zip_region_id">
           <Table name="zip_regions" schema="dims" />
-          <Level column="zip_region" name="Zip Region" nameColumn="zip_region_name" uniqueMembers="true" />
+          <Level column="zip_region_id" name="Zip Region" nameColumn="zip_region_name" uniqueMembers="true" />
         </Hierarchy>
     </Dimension>
 
@@ -221,11 +221,11 @@
 
 </Cube><Cube name="Current Asthma">
     <Annotations>
-      <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>
-      <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>
-      <Annotation name="dataset_name">Current Asthma</Annotation>
-      <Annotation name="topic">Health</Annotation>
-      <Annotation name="subtopic">Risk Factors</Annotation>
+        <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>
+        <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>
+        <Annotation name="dataset_name">Current Asthma</Annotation>
+        <Annotation name="topic">Health</Annotation>
+        <Annotation name="subtopic">Risk Factors</Annotation>
     </Annotations>
     
     <Table name="current_asthma" schema="mibrfs" />
@@ -254,7 +254,7 @@
         </Annotations>
         <Hierarchy hasAll="true" primaryKey="zip_region_id">
           <Table name="zip_regions" schema="dims" />
-          <Level column="zip_region" name="Zip Region" nameColumn="zip_region_name" uniqueMembers="true" />
+          <Level column="zip_region_id" name="Zip Region" nameColumn="zip_region_name" uniqueMembers="true" />
         </Hierarchy>
     </Dimension>
 
@@ -265,11 +265,11 @@
 
 </Cube><Cube name="Weight Status">
     <Annotations>
-      <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>
-      <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>
-      <Annotation name="dataset_name">Weight Status</Annotation>
-      <Annotation name="topic">Health</Annotation>
-      <Annotation name="subtopic">Risk Factors</Annotation>
+        <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>
+        <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>
+        <Annotation name="dataset_name">Weight Status</Annotation>
+        <Annotation name="topic">Health</Annotation>
+        <Annotation name="subtopic">Risk Factors</Annotation>
     </Annotations>
     
     <Table name="bmi_categories" schema="mibrfs" />
@@ -298,7 +298,7 @@
         </Annotations>
         <Hierarchy hasAll="true" primaryKey="zip_region_id">
           <Table name="zip_regions" schema="dims" />
-          <Level column="zip_region" name="Zip Region" nameColumn="zip_region_name" uniqueMembers="true" />
+          <Level column="zip_region_id" name="Zip Region" nameColumn="zip_region_name" uniqueMembers="true" />
         </Hierarchy>
     </Dimension>
 
@@ -309,11 +309,11 @@
 
 </Cube><Cube name="Cigarette Smoking">
     <Annotations>
-      <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>
-      <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>
-      <Annotation name="dataset_name">Cigarette Smoking</Annotation>
-      <Annotation name="topic">Health</Annotation>
-      <Annotation name="subtopic">Risk Factors</Annotation>
+        <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>
+        <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>
+        <Annotation name="dataset_name">Cigarette Smoking</Annotation>
+        <Annotation name="topic">Health</Annotation>
+        <Annotation name="subtopic">Risk Factors</Annotation>
     </Annotations>
     
     <Table name="smoking_status" schema="mibrfs" />
@@ -342,7 +342,7 @@
         </Annotations>
         <Hierarchy hasAll="true" primaryKey="zip_region_id">
           <Table name="zip_regions" schema="dims" />
-          <Level column="zip_region" name="Zip Region" nameColumn="zip_region_name" uniqueMembers="true" />
+          <Level column="zip_region_id" name="Zip Region" nameColumn="zip_region_name" uniqueMembers="true" />
         </Hierarchy>
     </Dimension>
 
@@ -353,11 +353,11 @@
 
 </Cube><Cube name="Activity Limitations">
     <Annotations>
-      <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>
-      <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>
-      <Annotation name="dataset_name">Activity Limitations</Annotation>
-      <Annotation name="topic">Health</Annotation>
-      <Annotation name="subtopic">Risk Factors</Annotation>
+        <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>
+        <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>
+        <Annotation name="dataset_name">Activity Limitations</Annotation>
+        <Annotation name="topic">Health</Annotation>
+        <Annotation name="subtopic">Risk Factors</Annotation>
     </Annotations>
     
     <Table name="activity_limited" schema="mibrfs" />
@@ -386,7 +386,7 @@
         </Annotations>
         <Hierarchy hasAll="true" primaryKey="zip_region_id">
           <Table name="zip_regions" schema="dims" />
-          <Level column="zip_region" name="Zip Region" nameColumn="zip_region_name" uniqueMembers="true" />
+          <Level column="zip_region_id" name="Zip Region" nameColumn="zip_region_name" uniqueMembers="true" />
         </Hierarchy>
     </Dimension>
 
@@ -397,11 +397,11 @@
 
 </Cube><Cube name="Disability Status">
     <Annotations>
-      <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>
-      <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>
-      <Annotation name="dataset_name">Disability Status</Annotation>
-      <Annotation name="topic">Health</Annotation>
-      <Annotation name="subtopic">Risk Factors</Annotation>
+        <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>
+        <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>
+        <Annotation name="dataset_name">Disability Status</Annotation>
+        <Annotation name="topic">Health</Annotation>
+        <Annotation name="subtopic">Risk Factors</Annotation>
     </Annotations>
     
     <Table name="limited_or_special_equip" schema="mibrfs" />
@@ -430,7 +430,7 @@
         </Annotations>
         <Hierarchy hasAll="true" primaryKey="zip_region_id">
           <Table name="zip_regions" schema="dims" />
-          <Level column="zip_region" name="Zip Region" nameColumn="zip_region_name" uniqueMembers="true" />
+          <Level column="zip_region_id" name="Zip Region" nameColumn="zip_region_name" uniqueMembers="true" />
         </Hierarchy>
     </Dimension>
 
@@ -441,11 +441,11 @@
 
 </Cube><Cube name="Ever Told High Blood Pressure (2011 and 2013 Only)">
     <Annotations>
-      <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>
-      <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>
-      <Annotation name="dataset_name">Ever Told High Blood Pressure (2011 and 2013 Only)</Annotation>
-      <Annotation name="topic">Health</Annotation>
-      <Annotation name="subtopic">Risk Factors</Annotation>
+        <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>
+        <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>
+        <Annotation name="dataset_name">Ever Told High Blood Pressure (2011 and 2013 Only)</Annotation>
+        <Annotation name="topic">Health</Annotation>
+        <Annotation name="subtopic">Risk Factors</Annotation>
     </Annotations>
     
     <Table name="hbp" schema="mibrfs" />
@@ -474,7 +474,7 @@
         </Annotations>
         <Hierarchy hasAll="true" primaryKey="zip_region_id">
           <Table name="zip_regions" schema="dims" />
-          <Level column="zip_region" name="Zip Region" nameColumn="zip_region_name" uniqueMembers="true" />
+          <Level column="zip_region_id" name="Zip Region" nameColumn="zip_region_name" uniqueMembers="true" />
         </Hierarchy>
     </Dimension>
 
