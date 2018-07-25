@@ -1,0 +1,46 @@
+<?xml version='1.0' encoding='utf8'?>
+<Cube name="Weight Status">
+    <Annotations>
+      <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>
+      <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>
+      <Annotation name="dataset_name">Weight Status</Annotation>
+      <Annotation name="topic">Health</Annotation>
+      <Annotation name="subtopic">Risk Factors</Annotation>
+    </Annotations>
+    
+    <Table name="bmi_categories" schema="mibrfs" />
+
+    <Dimension name="Start Year">
+        <Annotations>
+          <Annotation name="dim_type">TIME</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true">
+          <Level column="start_year" levelType="TimeYears" name="Start Year" type="Numeric" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension name="End Year">
+        <Annotations>
+          <Annotation name="dim_type">TIME</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true">
+          <Level column="end_year" levelType="TimeYears" name="End Year" type="Numeric" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension foreignKey="region_id" name="Geography">
+        <Annotations>
+          <Annotation name="dim_type">GEOGRAPHY</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true" primaryKey="zip_region_id">
+          <Table name="zip_regions" schema="dims" />
+          <Level column="zip_region" name="Zip Region" nameColumn="zip_region_name" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
+
+    
+            <Measure aggregator="sum" column="sample_frequency" name="Sample Frequency" />
+            <Measure aggregator="sum" column="weighted_frequency" name="Weighted Frequency" />
+            <Measure aggregator="avg" column="weighted_percent" name="Weighted Percent" />
+            
+</Cube>
