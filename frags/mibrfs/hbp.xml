@@ -39,8 +39,8 @@
     </Dimension>
 
     
-            <Measure aggregator="sum" column="sample_frequency" name="Sample Frequency" />
-            <Measure aggregator="sum" column="weighted_frequency" name="Weighted Frequency" />
-            <Measure aggregator="avg" column="weighted_percent" name="Weighted Percent" />
-            
+    <Measure aggregator="sum" column="sample_frequency" name="Sample Frequency" />
+    <Measure aggregator="sum" column="weighted_frequency" name="Weighted Frequency" />
+    <Measure aggregator="avg" column="weighted_percent" name="Weighted Percent" />
+
 </Cube>
