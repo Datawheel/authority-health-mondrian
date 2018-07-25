@@ -7,15 +7,15 @@
         <Annotation name="topic">Health</Annotation>
         <Annotation name="subtopic">Risk Factors</Annotation>
     </Annotations>
-    
-    <Table name="gen_health" schema="mibrfs" />
+
+    <Table name="gen_health" schema="mibrfs"/>
 
     <Dimension name="Start Year">
         <Annotations>
           <Annotation name="dim_type">TIME</Annotation>
         </Annotations>
         <Hierarchy hasAll="true">
-          <Level column="start_year" levelType="TimeYears" name="Start Year" type="Numeric" uniqueMembers="true" />
+          <Level name="Start Year" column="start_year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />
         </Hierarchy>
     </Dimension>
 
@@ -24,7 +24,7 @@
           <Annotation name="dim_type">TIME</Annotation>
         </Annotations>
         <Hierarchy hasAll="true">
-          <Level column="end_year" levelType="TimeYears" name="End Year" type="Numeric" uniqueMembers="true" />
+          <Level name="End Year" column="end_year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />
         </Hierarchy>
     </Dimension>
 
@@ -32,17 +32,28 @@
         <Annotations>
           <Annotation name="dim_type">GEOGRAPHY</Annotation>
         </Annotations>
-        <Hierarchy hasAll="true" primaryKey="zip_region_id">
-          <Table name="zip_regions" schema="dims" />
-          <Level column="zip_region_id" name="Zip Region" nameColumn="zip_region_name" uniqueMembers="true" />
+        <Hierarchy primaryKey="zip_region_id" hasAll="true">
+          <Table name="zip_regions" schema="dims"/>
+          <Level column="zip_region_id" name="Zip Region" nameColumn="zip_region_name" uniqueMembers="true"/>
         </Hierarchy>
     </Dimension>
 
-    
-    <Measure aggregator="sum" column="sample_frequency" name="Sample Frequency" />
-    <Measure aggregator="sum" column="weighted_frequency" name="Weighted Frequency" />
-    <Measure aggregator="avg" column="weighted_percent" name="Weighted Percent" />
+    <Dimension name="General Health Status">
+        <Annotations>
+          <Annotation name="dim_type">RISK FACTORS</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true">
+          <Level name="Category" column="gen_health" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
 
+     
+    <Measure name="Sample Frequency" column="sample_frequency" aggregator="sum" />
+      
+    <Measure name="Weighted Frequency" column="weighted_frequency" aggregator="sum" />
+      
+    <Measure name="Weighted Percent" column="weighted_percent" aggregator="avg" />
+     
 </Cube><Cube name="Ever Told Diabetes">
     <Annotations>
         <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>
@@ -51,15 +62,15 @@
         <Annotation name="topic">Health</Annotation>
         <Annotation name="subtopic">Risk Factors</Annotation>
     </Annotations>
-    
-    <Table name="diabetes" schema="mibrfs" />
+
+    <Table name="diabetes" schema="mibrfs"/>
 
     <Dimension name="Start Year">
         <Annotations>
           <Annotation name="dim_type">TIME</Annotation>
         </Annotations>
         <Hierarchy hasAll="true">
-          <Level column="start_year" levelType="TimeYears" name="Start Year" type="Numeric" uniqueMembers="true" />
+          <Level name="Start Year" column="start_year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />
         </Hierarchy>
     </Dimension>
 
@@ -68,7 +79,7 @@
           <Annotation name="dim_type">TIME</Annotation>
         </Annotations>
         <Hierarchy hasAll="true">
-          <Level column="end_year" levelType="TimeYears" name="End Year" type="Numeric" uniqueMembers="true" />
+          <Level name="End Year" column="end_year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />
         </Hierarchy>
     </Dimension>
 
@@ -76,17 +87,28 @@
         <Annotations>
           <Annotation name="dim_type">GEOGRAPHY</Annotation>
         </Annotations>
-        <Hierarchy hasAll="true" primaryKey="zip_region_id">
-          <Table name="zip_regions" schema="dims" />
-          <Level column="zip_region_id" name="Zip Region" nameColumn="zip_region_name" uniqueMembers="true" />
+        <Hierarchy primaryKey="zip_region_id" hasAll="true">
+          <Table name="zip_regions" schema="dims"/>
+          <Level column="zip_region_id" name="Zip Region" nameColumn="zip_region_name" uniqueMembers="true"/>
         </Hierarchy>
     </Dimension>
 
-    
-    <Measure aggregator="sum" column="sample_frequency" name="Sample Frequency" />
-    <Measure aggregator="sum" column="weighted_frequency" name="Weighted Frequency" />
-    <Measure aggregator="avg" column="weighted_percent" name="Weighted Percent" />
+    <Dimension name="Ever Told Diabetes">
+        <Annotations>
+          <Annotation name="dim_type">RISK FACTORS</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true">
+          <Level name="Category" column="diabetes" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
 
+     
+    <Measure name="Sample Frequency" column="sample_frequency" aggregator="sum" />
+      
+    <Measure name="Weighted Frequency" column="weighted_frequency" aggregator="sum" />
+      
+    <Measure name="Weighted Percent" column="weighted_percent" aggregator="avg" />
+     
 </Cube><Cube name="Ever Told Depression">
     <Annotations>
         <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>
@@ -95,15 +117,15 @@
         <Annotation name="topic">Health</Annotation>
         <Annotation name="subtopic">Risk Factors</Annotation>
     </Annotations>
-    
-    <Table name="depressive" schema="mibrfs" />
+
+    <Table name="depressive" schema="mibrfs"/>
 
     <Dimension name="Start Year">
         <Annotations>
           <Annotation name="dim_type">TIME</Annotation>
         </Annotations>
         <Hierarchy hasAll="true">
-          <Level column="start_year" levelType="TimeYears" name="Start Year" type="Numeric" uniqueMembers="true" />
+          <Level name="Start Year" column="start_year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />
         </Hierarchy>
     </Dimension>
 
@@ -112,7 +134,7 @@
           <Annotation name="dim_type">TIME</Annotation>
         </Annotations>
         <Hierarchy hasAll="true">
-          <Level column="end_year" levelType="TimeYears" name="End Year" type="Numeric" uniqueMembers="true" />
+          <Level name="End Year" column="end_year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />
         </Hierarchy>
     </Dimension>
 
@@ -120,17 +142,28 @@
         <Annotations>
           <Annotation name="dim_type">GEOGRAPHY</Annotation>
         </Annotations>
-        <Hierarchy hasAll="true" primaryKey="zip_region_id">
-          <Table name="zip_regions" schema="dims" />
-          <Level column="zip_region_id" name="Zip Region" nameColumn="zip_region_name" uniqueMembers="true" />
+        <Hierarchy primaryKey="zip_region_id" hasAll="true">
+          <Table name="zip_regions" schema="dims"/>
+          <Level column="zip_region_id" name="Zip Region" nameColumn="zip_region_name" uniqueMembers="true"/>
         </Hierarchy>
     </Dimension>
 
-    
-    <Measure aggregator="sum" column="sample_frequency" name="Sample Frequency" />
-    <Measure aggregator="sum" column="weighted_frequency" name="Weighted Frequency" />
-    <Measure aggregator="avg" column="weighted_percent" name="Weighted Percent" />
+    <Dimension name="Ever Told Depression">
+        <Annotations>
+          <Annotation name="dim_type">RISK FACTORS</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true">
+          <Level name="Category" column="depressive" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
 
+     
+    <Measure name="Sample Frequency" column="sample_frequency" aggregator="sum" />
+      
+    <Measure name="Weighted Frequency" column="weighted_frequency" aggregator="sum" />
+      
+    <Measure name="Weighted Percent" column="weighted_percent" aggregator="avg" />
+     
 </Cube><Cube name="Poor Mental Health">
     <Annotations>
         <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>
@@ -139,15 +172,15 @@
         <Annotation name="topic">Health</Annotation>
         <Annotation name="subtopic">Risk Factors</Annotation>
     </Annotations>
-    
-    <Table name="poor_mental_health" schema="mibrfs" />
+
+    <Table name="poor_mental_health" schema="mibrfs"/>
 
     <Dimension name="Start Year">
         <Annotations>
           <Annotation name="dim_type">TIME</Annotation>
         </Annotations>
         <Hierarchy hasAll="true">
-          <Level column="start_year" levelType="TimeYears" name="Start Year" type="Numeric" uniqueMembers="true" />
+          <Level name="Start Year" column="start_year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />
         </Hierarchy>
     </Dimension>
 
@@ -156,7 +189,7 @@
           <Annotation name="dim_type">TIME</Annotation>
         </Annotations>
         <Hierarchy hasAll="true">
-          <Level column="end_year" levelType="TimeYears" name="End Year" type="Numeric" uniqueMembers="true" />
+          <Level name="End Year" column="end_year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />
         </Hierarchy>
     </Dimension>
 
@@ -164,17 +197,28 @@
         <Annotations>
           <Annotation name="dim_type">GEOGRAPHY</Annotation>
         </Annotations>
-        <Hierarchy hasAll="true" primaryKey="zip_region_id">
-          <Table name="zip_regions" schema="dims" />
-          <Level column="zip_region_id" name="Zip Region" nameColumn="zip_region_name" uniqueMembers="true" />
+        <Hierarchy primaryKey="zip_region_id" hasAll="true">
+          <Table name="zip_regions" schema="dims"/>
+          <Level column="zip_region_id" name="Zip Region" nameColumn="zip_region_name" uniqueMembers="true"/>
         </Hierarchy>
     </Dimension>
 
-    
-    <Measure aggregator="sum" column="sample_frequency" name="Sample Frequency" />
-    <Measure aggregator="sum" column="weighted_frequency" name="Weighted Frequency" />
-    <Measure aggregator="avg" column="weighted_percent" name="Weighted Percent" />
+    <Dimension name="Poor Mental Health">
+        <Annotations>
+          <Annotation name="dim_type">RISK FACTORS</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true">
+          <Level name="Category" column="poor_mental_health" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
 
+     
+    <Measure name="Sample Frequency" column="sample_frequency" aggregator="sum" />
+      
+    <Measure name="Weighted Frequency" column="weighted_frequency" aggregator="sum" />
+      
+    <Measure name="Weighted Percent" column="weighted_percent" aggregator="avg" />
+     
 </Cube><Cube name="Routine Checkup in Past Year">
     <Annotations>
         <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>
@@ -183,15 +227,15 @@
         <Annotation name="topic">Health</Annotation>
         <Annotation name="subtopic">Risk Factors</Annotation>
     </Annotations>
-    
-    <Table name="had_routine_checkup" schema="mibrfs" />
+
+    <Table name="had_routine_checkup" schema="mibrfs"/>
 
     <Dimension name="Start Year">
         <Annotations>
           <Annotation name="dim_type">TIME</Annotation>
         </Annotations>
         <Hierarchy hasAll="true">
-          <Level column="start_year" levelType="TimeYears" name="Start Year" type="Numeric" uniqueMembers="true" />
+          <Level name="Start Year" column="start_year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />
         </Hierarchy>
     </Dimension>
 
@@ -200,7 +244,7 @@
           <Annotation name="dim_type">TIME</Annotation>
         </Annotations>
         <Hierarchy hasAll="true">
-          <Level column="end_year" levelType="TimeYears" name="End Year" type="Numeric" uniqueMembers="true" />
+          <Level name="End Year" column="end_year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />
         </Hierarchy>
     </Dimension>
 
@@ -208,17 +252,28 @@
         <Annotations>
           <Annotation name="dim_type">GEOGRAPHY</Annotation>
         </Annotations>
-        <Hierarchy hasAll="true" primaryKey="zip_region_id">
-          <Table name="zip_regions" schema="dims" />
-          <Level column="zip_region_id" name="Zip Region" nameColumn="zip_region_name" uniqueMembers="true" />
+        <Hierarchy primaryKey="zip_region_id" hasAll="true">
+          <Table name="zip_regions" schema="dims"/>
+          <Level column="zip_region_id" name="Zip Region" nameColumn="zip_region_name" uniqueMembers="true"/>
         </Hierarchy>
     </Dimension>
 
-    
-    <Measure aggregator="sum" column="sample_frequency" name="Sample Frequency" />
-    <Measure aggregator="sum" column="weighted_frequency" name="Weighted Frequency" />
-    <Measure aggregator="avg" column="weighted_percent" name="Weighted Percent" />
+    <Dimension name="Routine Checkup in Past Year">
+        <Annotations>
+          <Annotation name="dim_type">RISK FACTORS</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true">
+          <Level name="Category" column="had_routine_checkup" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
 
+     
+    <Measure name="Sample Frequency" column="sample_frequency" aggregator="sum" />
+      
+    <Measure name="Weighted Frequency" column="weighted_frequency" aggregator="sum" />
+      
+    <Measure name="Weighted Percent" column="weighted_percent" aggregator="avg" />
+     
 </Cube><Cube name="Current Asthma">
     <Annotations>
         <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>
@@ -227,15 +282,15 @@
         <Annotation name="topic">Health</Annotation>
         <Annotation name="subtopic">Risk Factors</Annotation>
     </Annotations>
-    
-    <Table name="current_asthma" schema="mibrfs" />
+
+    <Table name="current_asthma" schema="mibrfs"/>
 
     <Dimension name="Start Year">
         <Annotations>
           <Annotation name="dim_type">TIME</Annotation>
         </Annotations>
         <Hierarchy hasAll="true">
-          <Level column="start_year" levelType="TimeYears" name="Start Year" type="Numeric" uniqueMembers="true" />
+          <Level name="Start Year" column="start_year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />
         </Hierarchy>
     </Dimension>
 
@@ -244,7 +299,7 @@
           <Annotation name="dim_type">TIME</Annotation>
         </Annotations>
         <Hierarchy hasAll="true">
-          <Level column="end_year" levelType="TimeYears" name="End Year" type="Numeric" uniqueMembers="true" />
+          <Level name="End Year" column="end_year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />
         </Hierarchy>
     </Dimension>
 
@@ -252,17 +307,28 @@
         <Annotations>
           <Annotation name="dim_type">GEOGRAPHY</Annotation>
         </Annotations>
-        <Hierarchy hasAll="true" primaryKey="zip_region_id">
-          <Table name="zip_regions" schema="dims" />
-          <Level column="zip_region_id" name="Zip Region" nameColumn="zip_region_name" uniqueMembers="true" />
+        <Hierarchy primaryKey="zip_region_id" hasAll="true">
+          <Table name="zip_regions" schema="dims"/>
+          <Level column="zip_region_id" name="Zip Region" nameColumn="zip_region_name" uniqueMembers="true"/>
         </Hierarchy>
     </Dimension>
 
-    
-    <Measure aggregator="sum" column="sample_frequency" name="Sample Frequency" />
-    <Measure aggregator="sum" column="weighted_frequency" name="Weighted Frequency" />
-    <Measure aggregator="avg" column="weighted_percent" name="Weighted Percent" />
+    <Dimension name="Current Asthma">
+        <Annotations>
+          <Annotation name="dim_type">RISK FACTORS</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true">
+          <Level name="Category" column="current_asthma" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
 
+     
+    <Measure name="Sample Frequency" column="sample_frequency" aggregator="sum" />
+      
+    <Measure name="Weighted Frequency" column="weighted_frequency" aggregator="sum" />
+      
+    <Measure name="Weighted Percent" column="weighted_percent" aggregator="avg" />
+     
 </Cube><Cube name="Weight Status">
     <Annotations>
         <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>
@@ -271,15 +337,15 @@
         <Annotation name="topic">Health</Annotation>
         <Annotation name="subtopic">Risk Factors</Annotation>
     </Annotations>
-    
-    <Table name="bmi_categories" schema="mibrfs" />
+
+    <Table name="bmi_categories" schema="mibrfs"/>
 
     <Dimension name="Start Year">
         <Annotations>
           <Annotation name="dim_type">TIME</Annotation>
         </Annotations>
         <Hierarchy hasAll="true">
-          <Level column="start_year" levelType="TimeYears" name="Start Year" type="Numeric" uniqueMembers="true" />
+          <Level name="Start Year" column="start_year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />
         </Hierarchy>
     </Dimension>
 
@@ -288,7 +354,7 @@
           <Annotation name="dim_type">TIME</Annotation>
         </Annotations>
         <Hierarchy hasAll="true">
-          <Level column="end_year" levelType="TimeYears" name="End Year" type="Numeric" uniqueMembers="true" />
+          <Level name="End Year" column="end_year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />
         </Hierarchy>
     </Dimension>
 
@@ -296,17 +362,28 @@
         <Annotations>
           <Annotation name="dim_type">GEOGRAPHY</Annotation>
         </Annotations>
-        <Hierarchy hasAll="true" primaryKey="zip_region_id">
-          <Table name="zip_regions" schema="dims" />
-          <Level column="zip_region_id" name="Zip Region" nameColumn="zip_region_name" uniqueMembers="true" />
+        <Hierarchy primaryKey="zip_region_id" hasAll="true">
+          <Table name="zip_regions" schema="dims"/>
+          <Level column="zip_region_id" name="Zip Region" nameColumn="zip_region_name" uniqueMembers="true"/>
         </Hierarchy>
     </Dimension>
 
-    
-    <Measure aggregator="sum" column="sample_frequency" name="Sample Frequency" />
-    <Measure aggregator="sum" column="weighted_frequency" name="Weighted Frequency" />
-    <Measure aggregator="avg" column="weighted_percent" name="Weighted Percent" />
+    <Dimension name="Weight Status">
+        <Annotations>
+          <Annotation name="dim_type">RISK FACTORS</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true">
+          <Level name="Category" column="bmi_categories" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
 
+     
+    <Measure name="Sample Frequency" column="sample_frequency" aggregator="sum" />
+      
+    <Measure name="Weighted Frequency" column="weighted_frequency" aggregator="sum" />
+      
+    <Measure name="Weighted Percent" column="weighted_percent" aggregator="avg" />
+     
 </Cube><Cube name="Cigarette Smoking">
     <Annotations>
         <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>
@@ -315,15 +392,15 @@
         <Annotation name="topic">Health</Annotation>
         <Annotation name="subtopic">Risk Factors</Annotation>
     </Annotations>
-    
-    <Table name="smoking_status" schema="mibrfs" />
+
+    <Table name="smoking_status" schema="mibrfs"/>
 
     <Dimension name="Start Year">
         <Annotations>
           <Annotation name="dim_type">TIME</Annotation>
         </Annotations>
         <Hierarchy hasAll="true">
-          <Level column="start_year" levelType="TimeYears" name="Start Year" type="Numeric" uniqueMembers="true" />
+          <Level name="Start Year" column="start_year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />
         </Hierarchy>
     </Dimension>
 
@@ -332,7 +409,7 @@
           <Annotation name="dim_type">TIME</Annotation>
         </Annotations>
         <Hierarchy hasAll="true">
-          <Level column="end_year" levelType="TimeYears" name="End Year" type="Numeric" uniqueMembers="true" />
+          <Level name="End Year" column="end_year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />
         </Hierarchy>
     </Dimension>
 
@@ -340,17 +417,28 @@
         <Annotations>
           <Annotation name="dim_type">GEOGRAPHY</Annotation>
         </Annotations>
-        <Hierarchy hasAll="true" primaryKey="zip_region_id">
-          <Table name="zip_regions" schema="dims" />
-          <Level column="zip_region_id" name="Zip Region" nameColumn="zip_region_name" uniqueMembers="true" />
+        <Hierarchy primaryKey="zip_region_id" hasAll="true">
+          <Table name="zip_regions" schema="dims"/>
+          <Level column="zip_region_id" name="Zip Region" nameColumn="zip_region_name" uniqueMembers="true"/>
         </Hierarchy>
     </Dimension>
 
-    
-    <Measure aggregator="sum" column="sample_frequency" name="Sample Frequency" />
-    <Measure aggregator="sum" column="weighted_frequency" name="Weighted Frequency" />
-    <Measure aggregator="avg" column="weighted_percent" name="Weighted Percent" />
+    <Dimension name="Cigarette Smoking">
+        <Annotations>
+          <Annotation name="dim_type">RISK FACTORS</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true">
+          <Level name="Category" column="smoking_status" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
 
+     
+    <Measure name="Sample Frequency" column="sample_frequency" aggregator="sum" />
+      
+    <Measure name="Weighted Frequency" column="weighted_frequency" aggregator="sum" />
+      
+    <Measure name="Weighted Percent" column="weighted_percent" aggregator="avg" />
+     
 </Cube><Cube name="Activity Limitations">
     <Annotations>
         <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>
@@ -359,15 +447,15 @@
         <Annotation name="topic">Health</Annotation>
         <Annotation name="subtopic">Risk Factors</Annotation>
     </Annotations>
-    
-    <Table name="activity_limited" schema="mibrfs" />
+
+    <Table name="activity_limited" schema="mibrfs"/>
 
     <Dimension name="Start Year">
         <Annotations>
           <Annotation name="dim_type">TIME</Annotation>
         </Annotations>
         <Hierarchy hasAll="true">
-          <Level column="start_year" levelType="TimeYears" name="Start Year" type="Numeric" uniqueMembers="true" />
+          <Level name="Start Year" column="start_year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />
         </Hierarchy>
     </Dimension>
 
@@ -376,7 +464,7 @@
           <Annotation name="dim_type">TIME</Annotation>
         </Annotations>
         <Hierarchy hasAll="true">
-          <Level column="end_year" levelType="TimeYears" name="End Year" type="Numeric" uniqueMembers="true" />
+          <Level name="End Year" column="end_year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />
         </Hierarchy>
     </Dimension>
 
@@ -384,17 +472,28 @@
         <Annotations>
           <Annotation name="dim_type">GEOGRAPHY</Annotation>
         </Annotations>
-        <Hierarchy hasAll="true" primaryKey="zip_region_id">
-          <Table name="zip_regions" schema="dims" />
-          <Level column="zip_region_id" name="Zip Region" nameColumn="zip_region_name" uniqueMembers="true" />
+        <Hierarchy primaryKey="zip_region_id" hasAll="true">
+          <Table name="zip_regions" schema="dims"/>
+          <Level column="zip_region_id" name="Zip Region" nameColumn="zip_region_name" uniqueMembers="true"/>
         </Hierarchy>
     </Dimension>
 
-    
-    <Measure aggregator="sum" column="sample_frequency" name="Sample Frequency" />
-    <Measure aggregator="sum" column="weighted_frequency" name="Weighted Frequency" />
-    <Measure aggregator="avg" column="weighted_percent" name="Weighted Percent" />
+    <Dimension name="Activity Limitations">
+        <Annotations>
+          <Annotation name="dim_type">RISK FACTORS</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true">
+          <Level name="Category" column="activity_limited" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
 
+     
+    <Measure name="Sample Frequency" column="sample_frequency" aggregator="sum" />
+      
+    <Measure name="Weighted Frequency" column="weighted_frequency" aggregator="sum" />
+      
+    <Measure name="Weighted Percent" column="weighted_percent" aggregator="avg" />
+     
 </Cube><Cube name="Disability Status">
     <Annotations>
         <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>
@@ -403,15 +502,15 @@
         <Annotation name="topic">Health</Annotation>
         <Annotation name="subtopic">Risk Factors</Annotation>
     </Annotations>
-    
-    <Table name="limited_or_special_equip" schema="mibrfs" />
+
+    <Table name="limited_or_special_equip" schema="mibrfs"/>
 
     <Dimension name="Start Year">
         <Annotations>
           <Annotation name="dim_type">TIME</Annotation>
         </Annotations>
         <Hierarchy hasAll="true">
-          <Level column="start_year" levelType="TimeYears" name="Start Year" type="Numeric" uniqueMembers="true" />
+          <Level name="Start Year" column="start_year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />
         </Hierarchy>
     </Dimension>
 
@@ -420,7 +519,7 @@
           <Annotation name="dim_type">TIME</Annotation>
         </Annotations>
         <Hierarchy hasAll="true">
-          <Level column="end_year" levelType="TimeYears" name="End Year" type="Numeric" uniqueMembers="true" />
+          <Level name="End Year" column="end_year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />
         </Hierarchy>
     </Dimension>
 
@@ -428,34 +527,45 @@
         <Annotations>
           <Annotation name="dim_type">GEOGRAPHY</Annotation>
         </Annotations>
-        <Hierarchy hasAll="true" primaryKey="zip_region_id">
-          <Table name="zip_regions" schema="dims" />
-          <Level column="zip_region_id" name="Zip Region" nameColumn="zip_region_name" uniqueMembers="true" />
+        <Hierarchy primaryKey="zip_region_id" hasAll="true">
+          <Table name="zip_regions" schema="dims"/>
+          <Level column="zip_region_id" name="Zip Region" nameColumn="zip_region_name" uniqueMembers="true"/>
         </Hierarchy>
     </Dimension>
 
-    
-    <Measure aggregator="sum" column="sample_frequency" name="Sample Frequency" />
-    <Measure aggregator="sum" column="weighted_frequency" name="Weighted Frequency" />
-    <Measure aggregator="avg" column="weighted_percent" name="Weighted Percent" />
+    <Dimension name="Disability Status">
+        <Annotations>
+          <Annotation name="dim_type">RISK FACTORS</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true">
+          <Level name="Category" column="limited_or_special_equip" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
 
-</Cube><Cube name="Ever Told High Blood Pressure (2011 and 2013 Only)">
+     
+    <Measure name="Sample Frequency" column="sample_frequency" aggregator="sum" />
+      
+    <Measure name="Weighted Frequency" column="weighted_frequency" aggregator="sum" />
+      
+    <Measure name="Weighted Percent" column="weighted_percent" aggregator="avg" />
+     
+</Cube><Cube name="Ever Told High Blood Pressure (2011 &amp; 2013 Only)">
     <Annotations>
         <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>
         <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>
-        <Annotation name="dataset_name">Ever Told High Blood Pressure (2011 and 2013 Only)</Annotation>
+        <Annotation name="dataset_name">Ever Told High Blood Pressure (2011 &amp; 2013 Only)</Annotation>
         <Annotation name="topic">Health</Annotation>
         <Annotation name="subtopic">Risk Factors</Annotation>
     </Annotations>
-    
-    <Table name="hbp" schema="mibrfs" />
+
+    <Table name="hbp" schema="mibrfs"/>
 
     <Dimension name="Start Year">
         <Annotations>
           <Annotation name="dim_type">TIME</Annotation>
         </Annotations>
         <Hierarchy hasAll="true">
-          <Level column="start_year" levelType="TimeYears" name="Start Year" type="Numeric" uniqueMembers="true" />
+          <Level name="Start Year" column="start_year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />
         </Hierarchy>
     </Dimension>
 
@@ -464,7 +574,7 @@
           <Annotation name="dim_type">TIME</Annotation>
         </Annotations>
         <Hierarchy hasAll="true">
-          <Level column="end_year" levelType="TimeYears" name="End Year" type="Numeric" uniqueMembers="true" />
+          <Level name="End Year" column="end_year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />
         </Hierarchy>
     </Dimension>
 
@@ -472,17 +582,28 @@
         <Annotations>
           <Annotation name="dim_type">GEOGRAPHY</Annotation>
         </Annotations>
-        <Hierarchy hasAll="true" primaryKey="zip_region_id">
-          <Table name="zip_regions" schema="dims" />
-          <Level column="zip_region_id" name="Zip Region" nameColumn="zip_region_name" uniqueMembers="true" />
+        <Hierarchy primaryKey="zip_region_id" hasAll="true">
+          <Table name="zip_regions" schema="dims"/>
+          <Level column="zip_region_id" name="Zip Region" nameColumn="zip_region_name" uniqueMembers="true"/>
         </Hierarchy>
     </Dimension>
 
-    
-    <Measure aggregator="sum" column="sample_frequency" name="Sample Frequency" />
-    <Measure aggregator="sum" column="weighted_frequency" name="Weighted Frequency" />
-    <Measure aggregator="avg" column="weighted_percent" name="Weighted Percent" />
+    <Dimension name="Ever Told High Blood Pressure (2011 &amp; 2013 Only)">
+        <Annotations>
+          <Annotation name="dim_type">RISK FACTORS</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true">
+          <Level name="Category" column="hbp" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
 
+     
+    <Measure name="Sample Frequency" column="sample_frequency" aggregator="sum" />
+      
+    <Measure name="Weighted Frequency" column="weighted_frequency" aggregator="sum" />
+      
+    <Measure name="Weighted Percent" column="weighted_percent" aggregator="avg" />
+     
 </Cube><Cube name="vcu_life_expectancy_at_birth">
     <Annotations>
       <Annotation name="source_name">Virginia Commonwealth University Center on Society and Health</Annotation>
