@@ -54,6 +54,116 @@
       
     <Measure name="Weighted Percent" column="weighted_percent" aggregator="avg" />
      
+</Cube><Cube name="Leisure Time Physical Activity">
+    <Annotations>
+        <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>
+        <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>
+        <Annotation name="dataset_name">Leisure Time Physical Activity</Annotation>
+        <Annotation name="topic">Health</Annotation>
+        <Annotation name="subtopic">Risk Factors</Annotation>
+    </Annotations>
+
+    <Table name="leisure_time_physical_activity" schema="mibrfs"/>
+
+    <Dimension name="Start Year">
+        <Annotations>
+          <Annotation name="dim_type">TIME</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true">
+          <Level name="Start Year" column="start_year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension name="End Year">
+        <Annotations>
+          <Annotation name="dim_type">TIME</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true">
+          <Level name="End Year" column="end_year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension foreignKey="region_id" name="Geography">
+        <Annotations>
+          <Annotation name="dim_type">GEOGRAPHY</Annotation>
+        </Annotations>
+        <Hierarchy primaryKey="zip_region_id" hasAll="true">
+          <Table name="zip_regions" schema="dims"/>
+          <Level column="zip_region_id" name="Zip Region" nameColumn="zip_region_name" uniqueMembers="true"/>
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension name="Leisure Time Physical Activity">
+        <Annotations>
+          <Annotation name="dim_type">RISK FACTORS</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true">
+          <Level name="Category" column="leisure_time_physical_activity" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
+
+     
+    <Measure name="Sample Frequency" column="sample_frequency" aggregator="sum" />
+      
+    <Measure name="Weighted Frequency" column="weighted_frequency" aggregator="sum" />
+      
+    <Measure name="Weighted Percent" column="weighted_percent" aggregator="avg" />
+     
+</Cube><Cube name="Cardiovascular Disease">
+    <Annotations>
+        <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>
+        <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>
+        <Annotation name="dataset_name">Cardiovascular Disease</Annotation>
+        <Annotation name="topic">Health</Annotation>
+        <Annotation name="subtopic">Risk Factors</Annotation>
+    </Annotations>
+
+    <Table name="cardiovascular_disease" schema="mibrfs"/>
+
+    <Dimension name="Start Year">
+        <Annotations>
+          <Annotation name="dim_type">TIME</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true">
+          <Level name="Start Year" column="start_year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension name="End Year">
+        <Annotations>
+          <Annotation name="dim_type">TIME</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true">
+          <Level name="End Year" column="end_year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension foreignKey="region_id" name="Geography">
+        <Annotations>
+          <Annotation name="dim_type">GEOGRAPHY</Annotation>
+        </Annotations>
+        <Hierarchy primaryKey="zip_region_id" hasAll="true">
+          <Table name="zip_regions" schema="dims"/>
+          <Level column="zip_region_id" name="Zip Region" nameColumn="zip_region_name" uniqueMembers="true"/>
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension name="Cardiovascular Disease">
+        <Annotations>
+          <Annotation name="dim_type">RISK FACTORS</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true">
+          <Level name="Category" column="cardiovascular_disease" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
+
+     
+    <Measure name="Sample Frequency" column="sample_frequency" aggregator="sum" />
+      
+    <Measure name="Weighted Frequency" column="weighted_frequency" aggregator="sum" />
+      
+    <Measure name="Weighted Percent" column="weighted_percent" aggregator="avg" />
+     
 </Cube><Cube name="Ever Told Diabetes">
     <Annotations>
         <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>
@@ -154,6 +264,119 @@
         </Annotations>
         <Hierarchy hasAll="true">
           <Level name="Category" column="depressive" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
+
+     
+    <Measure name="Sample Frequency" column="sample_frequency" aggregator="sum" />
+      
+    <Measure name="Weighted Frequency" column="weighted_frequency" aggregator="sum" />
+      
+    <Measure name="Weighted Percent" column="weighted_percent" aggregator="avg" />
+     
+</Cube><Cube name="Ever told cancer (skin and
+or other cancers)">
+    <Annotations>
+        <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>
+        <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>
+        <Annotation name="dataset_name">Ever told cancer (skin and
+or other cancers)</Annotation>
+        <Annotation name="topic">Health</Annotation>
+        <Annotation name="subtopic">Risk Factors</Annotation>
+    </Annotations>
+
+    <Table name="ever_cancer" schema="mibrfs"/>
+
+    <Dimension name="Start Year">
+        <Annotations>
+          <Annotation name="dim_type">TIME</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true">
+          <Level name="Start Year" column="start_year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension name="End Year">
+        <Annotations>
+          <Annotation name="dim_type">TIME</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true">
+          <Level name="End Year" column="end_year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension foreignKey="region_id" name="Geography">
+        <Annotations>
+          <Annotation name="dim_type">GEOGRAPHY</Annotation>
+        </Annotations>
+        <Hierarchy primaryKey="zip_region_id" hasAll="true">
+          <Table name="zip_regions" schema="dims"/>
+          <Level column="zip_region_id" name="Zip Region" nameColumn="zip_region_name" uniqueMembers="true"/>
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension name="Ever told cancer (skin and
+or other cancers)">
+        <Annotations>
+          <Annotation name="dim_type">RISK FACTORS</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true">
+          <Level name="Category" column="ever_cancer" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
+
+     
+    <Measure name="Sample Frequency" column="sample_frequency" aggregator="sum" />
+      
+    <Measure name="Weighted Frequency" column="weighted_frequency" aggregator="sum" />
+      
+    <Measure name="Weighted Percent" column="weighted_percent" aggregator="avg" />
+     
+</Cube><Cube name="Ever Told Stroke">
+    <Annotations>
+        <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>
+        <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>
+        <Annotation name="dataset_name">Ever Told Stroke</Annotation>
+        <Annotation name="topic">Health</Annotation>
+        <Annotation name="subtopic">Risk Factors</Annotation>
+    </Annotations>
+
+    <Table name="stroke" schema="mibrfs"/>
+
+    <Dimension name="Start Year">
+        <Annotations>
+          <Annotation name="dim_type">TIME</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true">
+          <Level name="Start Year" column="start_year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension name="End Year">
+        <Annotations>
+          <Annotation name="dim_type">TIME</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true">
+          <Level name="End Year" column="end_year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension foreignKey="region_id" name="Geography">
+        <Annotations>
+          <Annotation name="dim_type">GEOGRAPHY</Annotation>
+        </Annotations>
+        <Hierarchy primaryKey="zip_region_id" hasAll="true">
+          <Table name="zip_regions" schema="dims"/>
+          <Level column="zip_region_id" name="Zip Region" nameColumn="zip_region_name" uniqueMembers="true"/>
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension name="Ever Told Stroke">
+        <Annotations>
+          <Annotation name="dim_type">RISK FACTORS</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true">
+          <Level name="Category" column="stroke" uniqueMembers="true" />
         </Hierarchy>
     </Dimension>
 
@@ -329,6 +552,61 @@
       
     <Measure name="Weighted Percent" column="weighted_percent" aggregator="avg" />
      
+</Cube><Cube name="Ever Told Asthma">
+    <Annotations>
+        <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>
+        <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>
+        <Annotation name="dataset_name">Ever Told Asthma</Annotation>
+        <Annotation name="topic">Health</Annotation>
+        <Annotation name="subtopic">Risk Factors</Annotation>
+    </Annotations>
+
+    <Table name="lifetime_asthma" schema="mibrfs"/>
+
+    <Dimension name="Start Year">
+        <Annotations>
+          <Annotation name="dim_type">TIME</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true">
+          <Level name="Start Year" column="start_year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension name="End Year">
+        <Annotations>
+          <Annotation name="dim_type">TIME</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true">
+          <Level name="End Year" column="end_year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension foreignKey="region_id" name="Geography">
+        <Annotations>
+          <Annotation name="dim_type">GEOGRAPHY</Annotation>
+        </Annotations>
+        <Hierarchy primaryKey="zip_region_id" hasAll="true">
+          <Table name="zip_regions" schema="dims"/>
+          <Level column="zip_region_id" name="Zip Region" nameColumn="zip_region_name" uniqueMembers="true"/>
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension name="Ever Told Asthma">
+        <Annotations>
+          <Annotation name="dim_type">RISK FACTORS</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true">
+          <Level name="Category" column="lifetime_asthma" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
+
+     
+    <Measure name="Sample Frequency" column="sample_frequency" aggregator="sum" />
+      
+    <Measure name="Weighted Frequency" column="weighted_frequency" aggregator="sum" />
+      
+    <Measure name="Weighted Percent" column="weighted_percent" aggregator="avg" />
+     
 </Cube><Cube name="Weight Status">
     <Annotations>
         <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>
@@ -374,6 +652,226 @@
         </Annotations>
         <Hierarchy hasAll="true">
           <Level name="Category" column="bmi_categories" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
+
+     
+    <Measure name="Sample Frequency" column="sample_frequency" aggregator="sum" />
+      
+    <Measure name="Weighted Frequency" column="weighted_frequency" aggregator="sum" />
+      
+    <Measure name="Weighted Percent" column="weighted_percent" aggregator="avg" />
+     
+</Cube><Cube name="Ever Told Angina or Coronary Heart Disease">
+    <Annotations>
+        <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>
+        <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>
+        <Annotation name="dataset_name">Ever Told Angina or Coronary Heart Disease</Annotation>
+        <Annotation name="topic">Health</Annotation>
+        <Annotation name="subtopic">Risk Factors</Annotation>
+    </Annotations>
+
+    <Table name="heart_disease" schema="mibrfs"/>
+
+    <Dimension name="Start Year">
+        <Annotations>
+          <Annotation name="dim_type">TIME</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true">
+          <Level name="Start Year" column="start_year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension name="End Year">
+        <Annotations>
+          <Annotation name="dim_type">TIME</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true">
+          <Level name="End Year" column="end_year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension foreignKey="region_id" name="Geography">
+        <Annotations>
+          <Annotation name="dim_type">GEOGRAPHY</Annotation>
+        </Annotations>
+        <Hierarchy primaryKey="zip_region_id" hasAll="true">
+          <Table name="zip_regions" schema="dims"/>
+          <Level column="zip_region_id" name="Zip Region" nameColumn="zip_region_name" uniqueMembers="true"/>
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension name="Ever Told Angina or Coronary Heart Disease">
+        <Annotations>
+          <Annotation name="dim_type">RISK FACTORS</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true">
+          <Level name="Category" column="heart_disease" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
+
+     
+    <Measure name="Sample Frequency" column="sample_frequency" aggregator="sum" />
+      
+    <Measure name="Weighted Frequency" column="weighted_frequency" aggregator="sum" />
+      
+    <Measure name="Weighted Percent" column="weighted_percent" aggregator="avg" />
+     
+</Cube><Cube name="Ever Had HIV Test">
+    <Annotations>
+        <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>
+        <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>
+        <Annotation name="dataset_name">Ever Had HIV Test</Annotation>
+        <Annotation name="topic">Health</Annotation>
+        <Annotation name="subtopic">Risk Factors</Annotation>
+    </Annotations>
+
+    <Table name="hiv_tested" schema="mibrfs"/>
+
+    <Dimension name="Start Year">
+        <Annotations>
+          <Annotation name="dim_type">TIME</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true">
+          <Level name="Start Year" column="start_year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension name="End Year">
+        <Annotations>
+          <Annotation name="dim_type">TIME</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true">
+          <Level name="End Year" column="end_year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension foreignKey="region_id" name="Geography">
+        <Annotations>
+          <Annotation name="dim_type">GEOGRAPHY</Annotation>
+        </Annotations>
+        <Hierarchy primaryKey="zip_region_id" hasAll="true">
+          <Table name="zip_regions" schema="dims"/>
+          <Level column="zip_region_id" name="Zip Region" nameColumn="zip_region_name" uniqueMembers="true"/>
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension name="Ever Had HIV Test">
+        <Annotations>
+          <Annotation name="dim_type">RISK FACTORS</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true">
+          <Level name="Category" column="hiv_tested" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
+
+     
+    <Measure name="Sample Frequency" column="sample_frequency" aggregator="sum" />
+      
+    <Measure name="Weighted Frequency" column="weighted_frequency" aggregator="sum" />
+      
+    <Measure name="Weighted Percent" column="weighted_percent" aggregator="avg" />
+     
+</Cube><Cube name="Poor Physical Health">
+    <Annotations>
+        <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>
+        <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>
+        <Annotation name="dataset_name">Poor Physical Health</Annotation>
+        <Annotation name="topic">Health</Annotation>
+        <Annotation name="subtopic">Risk Factors</Annotation>
+    </Annotations>
+
+    <Table name="poor_physical_health" schema="mibrfs"/>
+
+    <Dimension name="Start Year">
+        <Annotations>
+          <Annotation name="dim_type">TIME</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true">
+          <Level name="Start Year" column="start_year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension name="End Year">
+        <Annotations>
+          <Annotation name="dim_type">TIME</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true">
+          <Level name="End Year" column="end_year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension foreignKey="region_id" name="Geography">
+        <Annotations>
+          <Annotation name="dim_type">GEOGRAPHY</Annotation>
+        </Annotations>
+        <Hierarchy primaryKey="zip_region_id" hasAll="true">
+          <Table name="zip_regions" schema="dims"/>
+          <Level column="zip_region_id" name="Zip Region" nameColumn="zip_region_name" uniqueMembers="true"/>
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension name="Poor Physical Health">
+        <Annotations>
+          <Annotation name="dim_type">RISK FACTORS</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true">
+          <Level name="Category" column="poor_physical_health" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
+
+     
+    <Measure name="Sample Frequency" column="sample_frequency" aggregator="sum" />
+      
+    <Measure name="Weighted Frequency" column="weighted_frequency" aggregator="sum" />
+      
+    <Measure name="Weighted Percent" column="weighted_percent" aggregator="avg" />
+     
+</Cube><Cube name="Ever Told Heart Attack">
+    <Annotations>
+        <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>
+        <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>
+        <Annotation name="dataset_name">Ever Told Heart Attack</Annotation>
+        <Annotation name="topic">Health</Annotation>
+        <Annotation name="subtopic">Risk Factors</Annotation>
+    </Annotations>
+
+    <Table name="heart_attack" schema="mibrfs"/>
+
+    <Dimension name="Start Year">
+        <Annotations>
+          <Annotation name="dim_type">TIME</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true">
+          <Level name="Start Year" column="start_year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension name="End Year">
+        <Annotations>
+          <Annotation name="dim_type">TIME</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true">
+          <Level name="End Year" column="end_year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension foreignKey="region_id" name="Geography">
+        <Annotations>
+          <Annotation name="dim_type">GEOGRAPHY</Annotation>
+        </Annotations>
+        <Hierarchy primaryKey="zip_region_id" hasAll="true">
+          <Table name="zip_regions" schema="dims"/>
+          <Level column="zip_region_id" name="Zip Region" nameColumn="zip_region_name" uniqueMembers="true"/>
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension name="Ever Told Heart Attack">
+        <Annotations>
+          <Annotation name="dim_type">RISK FACTORS</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true">
+          <Level name="Category" column="heart_attack" uniqueMembers="true" />
         </Hierarchy>
     </Dimension>
 
@@ -484,6 +982,61 @@
         </Annotations>
         <Hierarchy hasAll="true">
           <Level name="Category" column="activity_limited" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
+
+     
+    <Measure name="Sample Frequency" column="sample_frequency" aggregator="sum" />
+      
+    <Measure name="Weighted Frequency" column="weighted_frequency" aggregator="sum" />
+      
+    <Measure name="Weighted Percent" column="weighted_percent" aggregator="avg" />
+     
+</Cube><Cube name="Has health insurance">
+    <Annotations>
+        <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>
+        <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>
+        <Annotation name="dataset_name">Has health insurance</Annotation>
+        <Annotation name="topic">Health</Annotation>
+        <Annotation name="subtopic">Risk Factors</Annotation>
+    </Annotations>
+
+    <Table name="has_insurance" schema="mibrfs"/>
+
+    <Dimension name="Start Year">
+        <Annotations>
+          <Annotation name="dim_type">TIME</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true">
+          <Level name="Start Year" column="start_year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension name="End Year">
+        <Annotations>
+          <Annotation name="dim_type">TIME</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true">
+          <Level name="End Year" column="end_year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension foreignKey="region_id" name="Geography">
+        <Annotations>
+          <Annotation name="dim_type">GEOGRAPHY</Annotation>
+        </Annotations>
+        <Hierarchy primaryKey="zip_region_id" hasAll="true">
+          <Table name="zip_regions" schema="dims"/>
+          <Level column="zip_region_id" name="Zip Region" nameColumn="zip_region_name" uniqueMembers="true"/>
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension name="Has health insurance">
+        <Annotations>
+          <Annotation name="dim_type">RISK FACTORS</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true">
+          <Level name="Category" column="has_insurance" uniqueMembers="true" />
         </Hierarchy>
     </Dimension>
 

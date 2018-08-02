@@ -1,8 +1,8 @@
-<Cube name="Ever Told Any Cardiovascular Disease">
+<Cube name="Cardiovascular Disease">
     <Annotations>
         <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>
         <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>
-        <Annotation name="dataset_name">Ever Told Any Cardiovascular Disease</Annotation>
+        <Annotation name="dataset_name">Cardiovascular Disease</Annotation>
         <Annotation name="topic">Health</Annotation>
         <Annotation name="subtopic">Risk Factors</Annotation>
     </Annotations>
@@ -37,7 +37,7 @@
         </Hierarchy>
     </Dimension>
 
-    <Dimension name="Ever Told Any Cardiovascular Disease">
+    <Dimension name="Cardiovascular Disease">
         <Annotations>
           <Annotation name="dim_type">RISK FACTORS</Annotation>
         </Annotations>
