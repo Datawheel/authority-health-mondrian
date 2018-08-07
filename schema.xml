@@ -1,5 +1,5 @@
 <Schema name="authority_health">
-<Cube name="General Health Status">
+<Cube name="MiBRFS - General Health Status">
     <Annotations>
         <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>
         <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>
@@ -54,7 +54,7 @@
       
     <Measure name="Weighted Percent" column="weighted_percent" aggregator="avg" />
      
-</Cube><Cube name="Leisure Time Physical Activity">
+</Cube><Cube name="MiBRFS - Leisure Time Physical Activity">
     <Annotations>
         <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>
         <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>
@@ -109,7 +109,7 @@
       
     <Measure name="Weighted Percent" column="weighted_percent" aggregator="avg" />
      
-</Cube><Cube name="Cardiovascular Disease">
+</Cube><Cube name="MiBRFS - Cardiovascular Disease">
     <Annotations>
         <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>
         <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>
@@ -164,7 +164,7 @@
       
     <Measure name="Weighted Percent" column="weighted_percent" aggregator="avg" />
      
-</Cube><Cube name="Ever Told Diabetes">
+</Cube><Cube name="MiBRFS - Ever Told Diabetes">
     <Annotations>
         <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>
         <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>
@@ -219,7 +219,7 @@
       
     <Measure name="Weighted Percent" column="weighted_percent" aggregator="avg" />
      
-</Cube><Cube name="Ever Told Depression">
+</Cube><Cube name="MiBRFS - Ever Told Depression">
     <Annotations>
         <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>
         <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>
@@ -274,13 +274,11 @@
       
     <Measure name="Weighted Percent" column="weighted_percent" aggregator="avg" />
      
-</Cube><Cube name="Ever told cancer (skin and
-or other cancers)">
+</Cube><Cube name="MiBRFS - Ever told cancer">
     <Annotations>
         <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>
         <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>
-        <Annotation name="dataset_name">Ever told cancer (skin and
-or other cancers)</Annotation>
+        <Annotation name="dataset_name">Ever told cancer (skin and or other cancers)</Annotation>
         <Annotation name="topic">Health</Annotation>
         <Annotation name="subtopic">Risk Factors</Annotation>
     </Annotations>
@@ -315,8 +313,7 @@ or other cancers)</Annotation>
         </Hierarchy>
     </Dimension>
 
-    <Dimension name="Ever told cancer (skin and
-or other cancers)">
+    <Dimension name="Ever told cancer (skin and or other cancers)">
         <Annotations>
           <Annotation name="dim_type">RISK FACTORS</Annotation>
         </Annotations>
@@ -332,7 +329,7 @@ or other cancers)">
       
     <Measure name="Weighted Percent" column="weighted_percent" aggregator="avg" />
      
-</Cube><Cube name="Ever Told Stroke">
+</Cube><Cube name="MiBRFS - Ever Told Stroke">
     <Annotations>
         <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>
         <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>
@@ -387,7 +384,7 @@ or other cancers)">
       
     <Measure name="Weighted Percent" column="weighted_percent" aggregator="avg" />
      
-</Cube><Cube name="Poor Mental Health">
+</Cube><Cube name="MiBRFS - Poor Mental Health">
     <Annotations>
         <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>
         <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>
@@ -442,7 +439,7 @@ or other cancers)">
       
     <Measure name="Weighted Percent" column="weighted_percent" aggregator="avg" />
      
-</Cube><Cube name="Routine Checkup in Past Year">
+</Cube><Cube name="MiBRFS - Routine Checkup in Past Year">
     <Annotations>
         <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>
         <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>
@@ -497,7 +494,7 @@ or other cancers)">
       
     <Measure name="Weighted Percent" column="weighted_percent" aggregator="avg" />
      
-</Cube><Cube name="Current Asthma">
+</Cube><Cube name="MiBRFS - Current Asthma">
     <Annotations>
         <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>
         <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>
@@ -552,7 +549,7 @@ or other cancers)">
       
     <Measure name="Weighted Percent" column="weighted_percent" aggregator="avg" />
      
-</Cube><Cube name="Ever Told Asthma">
+</Cube><Cube name="MiBRFS - Ever Told Asthma">
     <Annotations>
         <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>
         <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>
@@ -607,7 +604,7 @@ or other cancers)">
       
     <Measure name="Weighted Percent" column="weighted_percent" aggregator="avg" />
      
-</Cube><Cube name="Weight Status">
+</Cube><Cube name="MiBRFS - Weight Status">
     <Annotations>
         <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>
         <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>
@@ -662,7 +659,7 @@ or other cancers)">
       
     <Measure name="Weighted Percent" column="weighted_percent" aggregator="avg" />
      
-</Cube><Cube name="Ever Told Angina or Coronary Heart Disease">
+</Cube><Cube name="MiBRFS - Ever Told Angina or Coronary Heart Disease">
     <Annotations>
         <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>
         <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>
@@ -717,7 +714,7 @@ or other cancers)">
       
     <Measure name="Weighted Percent" column="weighted_percent" aggregator="avg" />
      
-</Cube><Cube name="Ever Had HIV Test">
+</Cube><Cube name="MiBRFS - Ever Had HIV Test">
     <Annotations>
         <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>
         <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>
@@ -772,7 +769,7 @@ or other cancers)">
       
     <Measure name="Weighted Percent" column="weighted_percent" aggregator="avg" />
      
-</Cube><Cube name="Poor Physical Health">
+</Cube><Cube name="MiBRFS - Poor Physical Health">
     <Annotations>
         <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>
         <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>
@@ -827,7 +824,7 @@ or other cancers)">
       
     <Measure name="Weighted Percent" column="weighted_percent" aggregator="avg" />
      
-</Cube><Cube name="Ever Told Heart Attack">
+</Cube><Cube name="MiBRFS - Ever Told Heart Attack">
     <Annotations>
         <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>
         <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>
@@ -882,7 +879,7 @@ or other cancers)">
       
     <Measure name="Weighted Percent" column="weighted_percent" aggregator="avg" />
      
-</Cube><Cube name="Cigarette Smoking">
+</Cube><Cube name="MiBRFS - Cigarette Smoking">
     <Annotations>
         <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>
         <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>
@@ -937,7 +934,7 @@ or other cancers)">
       
     <Measure name="Weighted Percent" column="weighted_percent" aggregator="avg" />
      
-</Cube><Cube name="Activity Limitations">
+</Cube><Cube name="MiBRFS - Activity Limitations">
     <Annotations>
         <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>
         <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>
@@ -992,7 +989,7 @@ or other cancers)">
       
     <Measure name="Weighted Percent" column="weighted_percent" aggregator="avg" />
      
-</Cube><Cube name="Has health insurance">
+</Cube><Cube name="MiBRFS - Has health insurance">
     <Annotations>
         <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>
         <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>
@@ -1047,7 +1044,7 @@ or other cancers)">
       
     <Measure name="Weighted Percent" column="weighted_percent" aggregator="avg" />
      
-</Cube><Cube name="Disability Status">
+</Cube><Cube name="MiBRFS - Disability Status">
     <Annotations>
         <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>
         <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>
@@ -1102,7 +1099,7 @@ or other cancers)">
       
     <Measure name="Weighted Percent" column="weighted_percent" aggregator="avg" />
      
-</Cube><Cube name="Ever Told High Blood Pressure (2011 &amp; 2013 Only)">
+</Cube><Cube name="MiBRFS - Ever Told High Blood Pressure (2011 &amp; 2013 Only)">
     <Annotations>
         <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>
         <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>
