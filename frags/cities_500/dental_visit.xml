@@ -1,0 +1,46 @@
+<Cube name="500C - Dental Visit">
+    <Annotations> 
+        <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>   
+        <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>   
+        <Annotation name="dataset_name">Dental Visit</Annotation>   
+        <Annotation name="topic">Health</Annotation>   
+        <Annotation name="subtopic">Risk Factors</Annotation>   
+        <Annotation name="measure">Visits to dentist or dental clinic among adults aged &gt;=18 Years</Annotation>   
+        <Annotation name="measure_id">DENTAL</Annotation>   
+        <Annotation name="category">Prevention</Annotation>   
+        <Annotation name="category_id">PREVENT</Annotation>  
+    </Annotations>
+
+    <Table name="dental_visit" schema="cities_500"/>
+     
+    <Dimension name="Year">
+        <Annotations>
+            <Annotation name="dim_type">TIME</Annotation>
+        </Annotations>
+         <Hierarchy hasAll="true"> 
+            <Level name="Year" column="year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />   
+        </Hierarchy> 
+    </Dimension>   
+    <Dimension name="Location">
+        <Annotations>
+            <Annotation name="dim_type">Location</Annotation>
+        </Annotations>
+         <Hierarchy hasAll="true">  
+            <Level name="City" column="city_fips" type="String" uniqueMembers="false" />   
+            <Level name="Tract" column="tract_fips" type="String" uniqueMembers="false" />  
+        </Hierarchy> 
+    </Dimension>   
+    <Dimension name="Dental Visit">
+        <Annotations>
+            <Annotation name="dim_type">Measure</Annotation>
+        </Annotations>
+         <Hierarchy hasAll="true">  
+            <Level name="Measure" column="short_question_text" type="String" uniqueMembers="true" />  
+        </Hierarchy> 
+    </Dimension>   
+     
+    <Measure name="Data Value" column="data_value" aggregator="sum" />   
+    <Measure name="Low Confidence Limit" column="low_confidence_limit" aggregator="sum" />   
+    <Measure name="High Confidence Limit" column="high_confidence_limit" aggregator="sum" />   
+    <Measure name="Population Count" column="population_count" aggregator="sum" />  
+</Cube>
