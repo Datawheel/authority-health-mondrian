@@ -13,29 +13,38 @@
 
     <Table name="coronary_heart_disease" schema="cities_500"/>
      
-    <Dimension name="Year">
+    <Dimension foreignKey="" name="Year">
         <Annotations>
             <Annotation name="dim_type">TIME</Annotation>
         </Annotations>
-         <Hierarchy hasAll="true"> 
+         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">  
             <Level name="Year" column="year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />   
         </Hierarchy> 
     </Dimension>   
-    <Dimension name="Location">
+    <Dimension foreignKey="city_fips" name="City">
         <Annotations>
-            <Annotation name="dim_type">Location</Annotation>
+            <Annotation name="dim_type">City</Annotation>
         </Annotations>
-         <Hierarchy hasAll="true">  
-            <Level name="City" column="city_fips" type="String" uniqueMembers="false" />   
-            <Level name="Tract" column="tract_fips" type="String" uniqueMembers="false" />  
+         <Hierarchy primaryKey="geoid" foreignKey="" name="City" hasAll="true">
+            <Table name="places" schema="shapes2017" />   
+            <Level name="City" column="geoid" type="" nameColumn="name" uniqueMembers="false" />  
         </Hierarchy> 
     </Dimension>   
-    <Dimension name="Coronary Heart Disease">
+    <Dimension foreignKey="tract_fips" name="Tract">
+        <Annotations>
+            <Annotation name="dim_type">Tract</Annotation>
+        </Annotations>
+         <Hierarchy primaryKey="geoid" foreignKey="" name="Tract" hasAll="true">
+            <Table name="tracts" schema="shapes2017" />   
+            <Level name="Tract" column="geoid" type="" nameColumn="name" uniqueMembers="false" />  
+        </Hierarchy> 
+    </Dimension>   
+    <Dimension foreignKey="" name="Coronary Heart Disease">
         <Annotations>
             <Annotation name="dim_type">Measure</Annotation>
         </Annotations>
-         <Hierarchy hasAll="true">  
-            <Level name="Measure" column="short_question_text" type="String" uniqueMembers="true" />  
+         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">   
+            <Level name="Measure" column="short_question_text" type="String" nameColumn="" uniqueMembers="true" />  
         </Hierarchy> 
     </Dimension>   
      

@@ -14,29 +14,38 @@
 
     <Table name="core_preventive_services_for_older_men" schema="cities_500"/>
      
-    <Dimension name="Year">
+    <Dimension foreignKey="" name="Year">
         <Annotations>
             <Annotation name="dim_type">TIME</Annotation>
         </Annotations>
-         <Hierarchy hasAll="true"> 
+         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">  
             <Level name="Year" column="year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />   
         </Hierarchy> 
     </Dimension>   
-    <Dimension name="Location">
+    <Dimension foreignKey="city_fips" name="City">
         <Annotations>
-            <Annotation name="dim_type">Location</Annotation>
+            <Annotation name="dim_type">City</Annotation>
         </Annotations>
-         <Hierarchy hasAll="true">  
-            <Level name="City" column="city_fips" type="String" uniqueMembers="false" />   
-            <Level name="Tract" column="tract_fips" type="String" uniqueMembers="false" />  
+         <Hierarchy primaryKey="geoid" foreignKey="" name="City" hasAll="true">
+            <Table name="places" schema="shapes2017" />   
+            <Level name="City" column="geoid" type="" nameColumn="name" uniqueMembers="false" />  
         </Hierarchy> 
     </Dimension>   
-    <Dimension name="Core preventive services for older men">
+    <Dimension foreignKey="tract_fips" name="Tract">
+        <Annotations>
+            <Annotation name="dim_type">Tract</Annotation>
+        </Annotations>
+         <Hierarchy primaryKey="geoid" foreignKey="" name="Tract" hasAll="true">
+            <Table name="tracts" schema="shapes2017" />   
+            <Level name="Tract" column="geoid" type="" nameColumn="name" uniqueMembers="false" />  
+        </Hierarchy> 
+    </Dimension>   
+    <Dimension foreignKey="" name="Core preventive services for older men">
         <Annotations>
             <Annotation name="dim_type">Measure</Annotation>
         </Annotations>
-         <Hierarchy hasAll="true">  
-            <Level name="Measure" column="short_question_text" type="String" uniqueMembers="true" />  
+         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">   
+            <Level name="Measure" column="short_question_text" type="String" nameColumn="" uniqueMembers="true" />  
         </Hierarchy> 
     </Dimension>   
      
@@ -59,29 +68,38 @@
 
     <Table name="binge_drinking" schema="cities_500"/>
      
-    <Dimension name="Year">
+    <Dimension foreignKey="" name="Year">
         <Annotations>
             <Annotation name="dim_type">TIME</Annotation>
         </Annotations>
-         <Hierarchy hasAll="true"> 
+         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">  
             <Level name="Year" column="year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />   
         </Hierarchy> 
     </Dimension>   
-    <Dimension name="Location">
+    <Dimension foreignKey="city_fips" name="City">
         <Annotations>
-            <Annotation name="dim_type">Location</Annotation>
+            <Annotation name="dim_type">City</Annotation>
         </Annotations>
-         <Hierarchy hasAll="true">  
-            <Level name="City" column="city_fips" type="String" uniqueMembers="false" />   
-            <Level name="Tract" column="tract_fips" type="String" uniqueMembers="false" />  
+         <Hierarchy primaryKey="geoid" foreignKey="" name="City" hasAll="true">
+            <Table name="places" schema="shapes2017" />   
+            <Level name="City" column="geoid" type="" nameColumn="name" uniqueMembers="false" />  
         </Hierarchy> 
     </Dimension>   
-    <Dimension name="Binge Drinking">
+    <Dimension foreignKey="tract_fips" name="Tract">
+        <Annotations>
+            <Annotation name="dim_type">Tract</Annotation>
+        </Annotations>
+         <Hierarchy primaryKey="geoid" foreignKey="" name="Tract" hasAll="true">
+            <Table name="tracts" schema="shapes2017" />   
+            <Level name="Tract" column="geoid" type="" nameColumn="name" uniqueMembers="false" />  
+        </Hierarchy> 
+    </Dimension>   
+    <Dimension foreignKey="" name="Binge Drinking">
         <Annotations>
             <Annotation name="dim_type">Measure</Annotation>
         </Annotations>
-         <Hierarchy hasAll="true">  
-            <Level name="Measure" column="short_question_text" type="String" uniqueMembers="true" />  
+         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">   
+            <Level name="Measure" column="short_question_text" type="String" nameColumn="" uniqueMembers="true" />  
         </Hierarchy> 
     </Dimension>   
      
@@ -104,29 +122,38 @@
 
     <Table name="obesity" schema="cities_500"/>
      
-    <Dimension name="Year">
+    <Dimension foreignKey="" name="Year">
         <Annotations>
             <Annotation name="dim_type">TIME</Annotation>
         </Annotations>
-         <Hierarchy hasAll="true"> 
+         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">  
             <Level name="Year" column="year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />   
         </Hierarchy> 
     </Dimension>   
-    <Dimension name="Location">
+    <Dimension foreignKey="city_fips" name="City">
         <Annotations>
-            <Annotation name="dim_type">Location</Annotation>
+            <Annotation name="dim_type">City</Annotation>
         </Annotations>
-         <Hierarchy hasAll="true">  
-            <Level name="City" column="city_fips" type="String" uniqueMembers="false" />   
-            <Level name="Tract" column="tract_fips" type="String" uniqueMembers="false" />  
+         <Hierarchy primaryKey="geoid" foreignKey="" name="City" hasAll="true">
+            <Table name="places" schema="shapes2017" />   
+            <Level name="City" column="geoid" type="" nameColumn="name" uniqueMembers="false" />  
         </Hierarchy> 
     </Dimension>   
-    <Dimension name="Obesity">
+    <Dimension foreignKey="tract_fips" name="Tract">
+        <Annotations>
+            <Annotation name="dim_type">Tract</Annotation>
+        </Annotations>
+         <Hierarchy primaryKey="geoid" foreignKey="" name="Tract" hasAll="true">
+            <Table name="tracts" schema="shapes2017" />   
+            <Level name="Tract" column="geoid" type="" nameColumn="name" uniqueMembers="false" />  
+        </Hierarchy> 
+    </Dimension>   
+    <Dimension foreignKey="" name="Obesity">
         <Annotations>
             <Annotation name="dim_type">Measure</Annotation>
         </Annotations>
-         <Hierarchy hasAll="true">  
-            <Level name="Measure" column="short_question_text" type="String" uniqueMembers="true" />  
+         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">   
+            <Level name="Measure" column="short_question_text" type="String" nameColumn="" uniqueMembers="true" />  
         </Hierarchy> 
     </Dimension>   
      
@@ -149,29 +176,38 @@
 
     <Table name="copd" schema="cities_500"/>
      
-    <Dimension name="Year">
+    <Dimension foreignKey="" name="Year">
         <Annotations>
             <Annotation name="dim_type">TIME</Annotation>
         </Annotations>
-         <Hierarchy hasAll="true"> 
+         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">  
             <Level name="Year" column="year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />   
         </Hierarchy> 
     </Dimension>   
-    <Dimension name="Location">
+    <Dimension foreignKey="city_fips" name="City">
         <Annotations>
-            <Annotation name="dim_type">Location</Annotation>
+            <Annotation name="dim_type">City</Annotation>
         </Annotations>
-         <Hierarchy hasAll="true">  
-            <Level name="City" column="city_fips" type="String" uniqueMembers="false" />   
-            <Level name="Tract" column="tract_fips" type="String" uniqueMembers="false" />  
+         <Hierarchy primaryKey="geoid" foreignKey="" name="City" hasAll="true">
+            <Table name="places" schema="shapes2017" />   
+            <Level name="City" column="geoid" type="" nameColumn="name" uniqueMembers="false" />  
         </Hierarchy> 
     </Dimension>   
-    <Dimension name="COPD">
+    <Dimension foreignKey="tract_fips" name="Tract">
+        <Annotations>
+            <Annotation name="dim_type">Tract</Annotation>
+        </Annotations>
+         <Hierarchy primaryKey="geoid" foreignKey="" name="Tract" hasAll="true">
+            <Table name="tracts" schema="shapes2017" />   
+            <Level name="Tract" column="geoid" type="" nameColumn="name" uniqueMembers="false" />  
+        </Hierarchy> 
+    </Dimension>   
+    <Dimension foreignKey="" name="COPD">
         <Annotations>
             <Annotation name="dim_type">Measure</Annotation>
         </Annotations>
-         <Hierarchy hasAll="true">  
-            <Level name="Measure" column="short_question_text" type="String" uniqueMembers="true" />  
+         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">   
+            <Level name="Measure" column="short_question_text" type="String" nameColumn="" uniqueMembers="true" />  
         </Hierarchy> 
     </Dimension>   
      
@@ -194,29 +230,38 @@
 
     <Table name="health_insurance" schema="cities_500"/>
      
-    <Dimension name="Year">
+    <Dimension foreignKey="" name="Year">
         <Annotations>
             <Annotation name="dim_type">TIME</Annotation>
         </Annotations>
-         <Hierarchy hasAll="true"> 
+         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">  
             <Level name="Year" column="year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />   
         </Hierarchy> 
     </Dimension>   
-    <Dimension name="Location">
+    <Dimension foreignKey="city_fips" name="City">
         <Annotations>
-            <Annotation name="dim_type">Location</Annotation>
+            <Annotation name="dim_type">City</Annotation>
         </Annotations>
-         <Hierarchy hasAll="true">  
-            <Level name="City" column="city_fips" type="String" uniqueMembers="false" />   
-            <Level name="Tract" column="tract_fips" type="String" uniqueMembers="false" />  
+         <Hierarchy primaryKey="geoid" foreignKey="" name="City" hasAll="true">
+            <Table name="places" schema="shapes2017" />   
+            <Level name="City" column="geoid" type="" nameColumn="name" uniqueMembers="false" />  
         </Hierarchy> 
     </Dimension>   
-    <Dimension name="Health Insurance">
+    <Dimension foreignKey="tract_fips" name="Tract">
+        <Annotations>
+            <Annotation name="dim_type">Tract</Annotation>
+        </Annotations>
+         <Hierarchy primaryKey="geoid" foreignKey="" name="Tract" hasAll="true">
+            <Table name="tracts" schema="shapes2017" />   
+            <Level name="Tract" column="geoid" type="" nameColumn="name" uniqueMembers="false" />  
+        </Hierarchy> 
+    </Dimension>   
+    <Dimension foreignKey="" name="Health Insurance">
         <Annotations>
             <Annotation name="dim_type">Measure</Annotation>
         </Annotations>
-         <Hierarchy hasAll="true">  
-            <Level name="Measure" column="short_question_text" type="String" uniqueMembers="true" />  
+         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">   
+            <Level name="Measure" column="short_question_text" type="String" nameColumn="" uniqueMembers="true" />  
         </Hierarchy> 
     </Dimension>   
      
@@ -239,29 +284,38 @@
 
     <Table name="coronary_heart_disease" schema="cities_500"/>
      
-    <Dimension name="Year">
+    <Dimension foreignKey="" name="Year">
         <Annotations>
             <Annotation name="dim_type">TIME</Annotation>
         </Annotations>
-         <Hierarchy hasAll="true"> 
+         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">  
             <Level name="Year" column="year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />   
         </Hierarchy> 
     </Dimension>   
-    <Dimension name="Location">
+    <Dimension foreignKey="city_fips" name="City">
         <Annotations>
-            <Annotation name="dim_type">Location</Annotation>
+            <Annotation name="dim_type">City</Annotation>
         </Annotations>
-         <Hierarchy hasAll="true">  
-            <Level name="City" column="city_fips" type="String" uniqueMembers="false" />   
-            <Level name="Tract" column="tract_fips" type="String" uniqueMembers="false" />  
+         <Hierarchy primaryKey="geoid" foreignKey="" name="City" hasAll="true">
+            <Table name="places" schema="shapes2017" />   
+            <Level name="City" column="geoid" type="" nameColumn="name" uniqueMembers="false" />  
         </Hierarchy> 
     </Dimension>   
-    <Dimension name="Coronary Heart Disease">
+    <Dimension foreignKey="tract_fips" name="Tract">
+        <Annotations>
+            <Annotation name="dim_type">Tract</Annotation>
+        </Annotations>
+         <Hierarchy primaryKey="geoid" foreignKey="" name="Tract" hasAll="true">
+            <Table name="tracts" schema="shapes2017" />   
+            <Level name="Tract" column="geoid" type="" nameColumn="name" uniqueMembers="false" />  
+        </Hierarchy> 
+    </Dimension>   
+    <Dimension foreignKey="" name="Coronary Heart Disease">
         <Annotations>
             <Annotation name="dim_type">Measure</Annotation>
         </Annotations>
-         <Hierarchy hasAll="true">  
-            <Level name="Measure" column="short_question_text" type="String" uniqueMembers="true" />  
+         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">   
+            <Level name="Measure" column="short_question_text" type="String" nameColumn="" uniqueMembers="true" />  
         </Hierarchy> 
     </Dimension>   
      
@@ -284,29 +338,38 @@
 
     <Table name="physical_inactivity" schema="cities_500"/>
      
-    <Dimension name="Year">
+    <Dimension foreignKey="" name="Year">
         <Annotations>
             <Annotation name="dim_type">TIME</Annotation>
         </Annotations>
-         <Hierarchy hasAll="true"> 
+         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">  
             <Level name="Year" column="year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />   
         </Hierarchy> 
     </Dimension>   
-    <Dimension name="Location">
+    <Dimension foreignKey="city_fips" name="City">
         <Annotations>
-            <Annotation name="dim_type">Location</Annotation>
+            <Annotation name="dim_type">City</Annotation>
         </Annotations>
-         <Hierarchy hasAll="true">  
-            <Level name="City" column="city_fips" type="String" uniqueMembers="false" />   
-            <Level name="Tract" column="tract_fips" type="String" uniqueMembers="false" />  
+         <Hierarchy primaryKey="geoid" foreignKey="" name="City" hasAll="true">
+            <Table name="places" schema="shapes2017" />   
+            <Level name="City" column="geoid" type="" nameColumn="name" uniqueMembers="false" />  
         </Hierarchy> 
     </Dimension>   
-    <Dimension name="Physical Inactivity">
+    <Dimension foreignKey="tract_fips" name="Tract">
+        <Annotations>
+            <Annotation name="dim_type">Tract</Annotation>
+        </Annotations>
+         <Hierarchy primaryKey="geoid" foreignKey="" name="Tract" hasAll="true">
+            <Table name="tracts" schema="shapes2017" />   
+            <Level name="Tract" column="geoid" type="" nameColumn="name" uniqueMembers="false" />  
+        </Hierarchy> 
+    </Dimension>   
+    <Dimension foreignKey="" name="Physical Inactivity">
         <Annotations>
             <Annotation name="dim_type">Measure</Annotation>
         </Annotations>
-         <Hierarchy hasAll="true">  
-            <Level name="Measure" column="short_question_text" type="String" uniqueMembers="true" />  
+         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">   
+            <Level name="Measure" column="short_question_text" type="String" nameColumn="" uniqueMembers="true" />  
         </Hierarchy> 
     </Dimension>   
      
@@ -329,29 +392,38 @@
 
     <Table name="teeth_loss" schema="cities_500"/>
      
-    <Dimension name="Year">
+    <Dimension foreignKey="" name="Year">
         <Annotations>
             <Annotation name="dim_type">TIME</Annotation>
         </Annotations>
-         <Hierarchy hasAll="true"> 
+         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">  
             <Level name="Year" column="year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />   
         </Hierarchy> 
     </Dimension>   
-    <Dimension name="Location">
+    <Dimension foreignKey="city_fips" name="City">
         <Annotations>
-            <Annotation name="dim_type">Location</Annotation>
+            <Annotation name="dim_type">City</Annotation>
         </Annotations>
-         <Hierarchy hasAll="true">  
-            <Level name="City" column="city_fips" type="String" uniqueMembers="false" />   
-            <Level name="Tract" column="tract_fips" type="String" uniqueMembers="false" />  
+         <Hierarchy primaryKey="geoid" foreignKey="" name="City" hasAll="true">
+            <Table name="places" schema="shapes2017" />   
+            <Level name="City" column="geoid" type="" nameColumn="name" uniqueMembers="false" />  
         </Hierarchy> 
     </Dimension>   
-    <Dimension name="Teeth Loss">
+    <Dimension foreignKey="tract_fips" name="Tract">
+        <Annotations>
+            <Annotation name="dim_type">Tract</Annotation>
+        </Annotations>
+         <Hierarchy primaryKey="geoid" foreignKey="" name="Tract" hasAll="true">
+            <Table name="tracts" schema="shapes2017" />   
+            <Level name="Tract" column="geoid" type="" nameColumn="name" uniqueMembers="false" />  
+        </Hierarchy> 
+    </Dimension>   
+    <Dimension foreignKey="" name="Teeth Loss">
         <Annotations>
             <Annotation name="dim_type">Measure</Annotation>
         </Annotations>
-         <Hierarchy hasAll="true">  
-            <Level name="Measure" column="short_question_text" type="String" uniqueMembers="true" />  
+         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">   
+            <Level name="Measure" column="short_question_text" type="String" nameColumn="" uniqueMembers="true" />  
         </Hierarchy> 
     </Dimension>   
      
@@ -374,29 +446,38 @@
 
     <Table name="high_blood_pressure" schema="cities_500"/>
      
-    <Dimension name="Year">
+    <Dimension foreignKey="" name="Year">
         <Annotations>
             <Annotation name="dim_type">TIME</Annotation>
         </Annotations>
-         <Hierarchy hasAll="true"> 
+         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">  
             <Level name="Year" column="year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />   
         </Hierarchy> 
     </Dimension>   
-    <Dimension name="Location">
+    <Dimension foreignKey="city_fips" name="City">
         <Annotations>
-            <Annotation name="dim_type">Location</Annotation>
+            <Annotation name="dim_type">City</Annotation>
         </Annotations>
-         <Hierarchy hasAll="true">  
-            <Level name="City" column="city_fips" type="String" uniqueMembers="false" />   
-            <Level name="Tract" column="tract_fips" type="String" uniqueMembers="false" />  
+         <Hierarchy primaryKey="geoid" foreignKey="" name="City" hasAll="true">
+            <Table name="places" schema="shapes2017" />   
+            <Level name="City" column="geoid" type="" nameColumn="name" uniqueMembers="false" />  
         </Hierarchy> 
     </Dimension>   
-    <Dimension name="High Blood Pressure">
+    <Dimension foreignKey="tract_fips" name="Tract">
+        <Annotations>
+            <Annotation name="dim_type">Tract</Annotation>
+        </Annotations>
+         <Hierarchy primaryKey="geoid" foreignKey="" name="Tract" hasAll="true">
+            <Table name="tracts" schema="shapes2017" />   
+            <Level name="Tract" column="geoid" type="" nameColumn="name" uniqueMembers="false" />  
+        </Hierarchy> 
+    </Dimension>   
+    <Dimension foreignKey="" name="High Blood Pressure">
         <Annotations>
             <Annotation name="dim_type">Measure</Annotation>
         </Annotations>
-         <Hierarchy hasAll="true">  
-            <Level name="Measure" column="short_question_text" type="String" uniqueMembers="true" />  
+         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">   
+            <Level name="Measure" column="short_question_text" type="String" nameColumn="" uniqueMembers="true" />  
         </Hierarchy> 
     </Dimension>   
      
@@ -419,29 +500,38 @@
 
     <Table name="had_stroke" schema="cities_500"/>
      
-    <Dimension name="Year">
+    <Dimension foreignKey="" name="Year">
         <Annotations>
             <Annotation name="dim_type">TIME</Annotation>
         </Annotations>
-         <Hierarchy hasAll="true"> 
+         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">  
             <Level name="Year" column="year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />   
         </Hierarchy> 
     </Dimension>   
-    <Dimension name="Location">
+    <Dimension foreignKey="city_fips" name="City">
         <Annotations>
-            <Annotation name="dim_type">Location</Annotation>
+            <Annotation name="dim_type">City</Annotation>
         </Annotations>
-         <Hierarchy hasAll="true">  
-            <Level name="City" column="city_fips" type="String" uniqueMembers="false" />   
-            <Level name="Tract" column="tract_fips" type="String" uniqueMembers="false" />  
+         <Hierarchy primaryKey="geoid" foreignKey="" name="City" hasAll="true">
+            <Table name="places" schema="shapes2017" />   
+            <Level name="City" column="geoid" type="" nameColumn="name" uniqueMembers="false" />  
         </Hierarchy> 
     </Dimension>   
-    <Dimension name="Stroke">
+    <Dimension foreignKey="tract_fips" name="Tract">
+        <Annotations>
+            <Annotation name="dim_type">Tract</Annotation>
+        </Annotations>
+         <Hierarchy primaryKey="geoid" foreignKey="" name="Tract" hasAll="true">
+            <Table name="tracts" schema="shapes2017" />   
+            <Level name="Tract" column="geoid" type="" nameColumn="name" uniqueMembers="false" />  
+        </Hierarchy> 
+    </Dimension>   
+    <Dimension foreignKey="" name="Stroke">
         <Annotations>
             <Annotation name="dim_type">Measure</Annotation>
         </Annotations>
-         <Hierarchy hasAll="true">  
-            <Level name="Measure" column="short_question_text" type="String" uniqueMembers="true" />  
+         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">   
+            <Level name="Measure" column="short_question_text" type="String" nameColumn="" uniqueMembers="true" />  
         </Hierarchy> 
     </Dimension>   
      
@@ -464,29 +554,38 @@
 
     <Table name="sleep_less_than_7_hours" schema="cities_500"/>
      
-    <Dimension name="Year">
+    <Dimension foreignKey="" name="Year">
         <Annotations>
             <Annotation name="dim_type">TIME</Annotation>
         </Annotations>
-         <Hierarchy hasAll="true"> 
+         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">  
             <Level name="Year" column="year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />   
         </Hierarchy> 
     </Dimension>   
-    <Dimension name="Location">
+    <Dimension foreignKey="city_fips" name="City">
         <Annotations>
-            <Annotation name="dim_type">Location</Annotation>
+            <Annotation name="dim_type">City</Annotation>
         </Annotations>
-         <Hierarchy hasAll="true">  
-            <Level name="City" column="city_fips" type="String" uniqueMembers="false" />   
-            <Level name="Tract" column="tract_fips" type="String" uniqueMembers="false" />  
+         <Hierarchy primaryKey="geoid" foreignKey="" name="City" hasAll="true">
+            <Table name="places" schema="shapes2017" />   
+            <Level name="City" column="geoid" type="" nameColumn="name" uniqueMembers="false" />  
         </Hierarchy> 
     </Dimension>   
-    <Dimension name="Sleep &lt; 7 hours">
+    <Dimension foreignKey="tract_fips" name="Tract">
+        <Annotations>
+            <Annotation name="dim_type">Tract</Annotation>
+        </Annotations>
+         <Hierarchy primaryKey="geoid" foreignKey="" name="Tract" hasAll="true">
+            <Table name="tracts" schema="shapes2017" />   
+            <Level name="Tract" column="geoid" type="" nameColumn="name" uniqueMembers="false" />  
+        </Hierarchy> 
+    </Dimension>   
+    <Dimension foreignKey="" name="Sleep &lt; 7 hours">
         <Annotations>
             <Annotation name="dim_type">Measure</Annotation>
         </Annotations>
-         <Hierarchy hasAll="true">  
-            <Level name="Measure" column="short_question_text" type="String" uniqueMembers="true" />  
+         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">   
+            <Level name="Measure" column="short_question_text" type="String" nameColumn="" uniqueMembers="true" />  
         </Hierarchy> 
     </Dimension>   
      
@@ -509,29 +608,38 @@
 
     <Table name="high_cholesterol" schema="cities_500"/>
      
-    <Dimension name="Year">
+    <Dimension foreignKey="" name="Year">
         <Annotations>
             <Annotation name="dim_type">TIME</Annotation>
         </Annotations>
-         <Hierarchy hasAll="true"> 
+         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">  
             <Level name="Year" column="year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />   
         </Hierarchy> 
     </Dimension>   
-    <Dimension name="Location">
+    <Dimension foreignKey="city_fips" name="City">
         <Annotations>
-            <Annotation name="dim_type">Location</Annotation>
+            <Annotation name="dim_type">City</Annotation>
         </Annotations>
-         <Hierarchy hasAll="true">  
-            <Level name="City" column="city_fips" type="String" uniqueMembers="false" />   
-            <Level name="Tract" column="tract_fips" type="String" uniqueMembers="false" />  
+         <Hierarchy primaryKey="geoid" foreignKey="" name="City" hasAll="true">
+            <Table name="places" schema="shapes2017" />   
+            <Level name="City" column="geoid" type="" nameColumn="name" uniqueMembers="false" />  
         </Hierarchy> 
     </Dimension>   
-    <Dimension name="High Cholesterol">
+    <Dimension foreignKey="tract_fips" name="Tract">
+        <Annotations>
+            <Annotation name="dim_type">Tract</Annotation>
+        </Annotations>
+         <Hierarchy primaryKey="geoid" foreignKey="" name="Tract" hasAll="true">
+            <Table name="tracts" schema="shapes2017" />   
+            <Level name="Tract" column="geoid" type="" nameColumn="name" uniqueMembers="false" />  
+        </Hierarchy> 
+    </Dimension>   
+    <Dimension foreignKey="" name="High Cholesterol">
         <Annotations>
             <Annotation name="dim_type">Measure</Annotation>
         </Annotations>
-         <Hierarchy hasAll="true">  
-            <Level name="Measure" column="short_question_text" type="String" uniqueMembers="true" />  
+         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">   
+            <Level name="Measure" column="short_question_text" type="String" nameColumn="" uniqueMembers="true" />  
         </Hierarchy> 
     </Dimension>   
      
@@ -554,29 +662,38 @@
 
     <Table name="cholesterol_screening" schema="cities_500"/>
      
-    <Dimension name="Year">
+    <Dimension foreignKey="" name="Year">
         <Annotations>
             <Annotation name="dim_type">TIME</Annotation>
         </Annotations>
-         <Hierarchy hasAll="true"> 
+         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">  
             <Level name="Year" column="year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />   
         </Hierarchy> 
     </Dimension>   
-    <Dimension name="Location">
+    <Dimension foreignKey="city_fips" name="City">
         <Annotations>
-            <Annotation name="dim_type">Location</Annotation>
+            <Annotation name="dim_type">City</Annotation>
         </Annotations>
-         <Hierarchy hasAll="true">  
-            <Level name="City" column="city_fips" type="String" uniqueMembers="false" />   
-            <Level name="Tract" column="tract_fips" type="String" uniqueMembers="false" />  
+         <Hierarchy primaryKey="geoid" foreignKey="" name="City" hasAll="true">
+            <Table name="places" schema="shapes2017" />   
+            <Level name="City" column="geoid" type="" nameColumn="name" uniqueMembers="false" />  
         </Hierarchy> 
     </Dimension>   
-    <Dimension name="Cholesterol Screening">
+    <Dimension foreignKey="tract_fips" name="Tract">
+        <Annotations>
+            <Annotation name="dim_type">Tract</Annotation>
+        </Annotations>
+         <Hierarchy primaryKey="geoid" foreignKey="" name="Tract" hasAll="true">
+            <Table name="tracts" schema="shapes2017" />   
+            <Level name="Tract" column="geoid" type="" nameColumn="name" uniqueMembers="false" />  
+        </Hierarchy> 
+    </Dimension>   
+    <Dimension foreignKey="" name="Cholesterol Screening">
         <Annotations>
             <Annotation name="dim_type">Measure</Annotation>
         </Annotations>
-         <Hierarchy hasAll="true">  
-            <Level name="Measure" column="short_question_text" type="String" uniqueMembers="true" />  
+         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">   
+            <Level name="Measure" column="short_question_text" type="String" nameColumn="" uniqueMembers="true" />  
         </Hierarchy> 
     </Dimension>   
      
@@ -599,29 +716,38 @@
 
     <Table name="annual_checkup" schema="cities_500"/>
      
-    <Dimension name="Year">
+    <Dimension foreignKey="" name="Year">
         <Annotations>
             <Annotation name="dim_type">TIME</Annotation>
         </Annotations>
-         <Hierarchy hasAll="true"> 
+         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">  
             <Level name="Year" column="year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />   
         </Hierarchy> 
     </Dimension>   
-    <Dimension name="Location">
+    <Dimension foreignKey="city_fips" name="City">
         <Annotations>
-            <Annotation name="dim_type">Location</Annotation>
+            <Annotation name="dim_type">City</Annotation>
         </Annotations>
-         <Hierarchy hasAll="true">  
-            <Level name="City" column="city_fips" type="String" uniqueMembers="false" />   
-            <Level name="Tract" column="tract_fips" type="String" uniqueMembers="false" />  
+         <Hierarchy primaryKey="geoid" foreignKey="" name="City" hasAll="true">
+            <Table name="places" schema="shapes2017" />   
+            <Level name="City" column="geoid" type="" nameColumn="name" uniqueMembers="false" />  
         </Hierarchy> 
     </Dimension>   
-    <Dimension name="Annual Checkup">
+    <Dimension foreignKey="tract_fips" name="Tract">
+        <Annotations>
+            <Annotation name="dim_type">Tract</Annotation>
+        </Annotations>
+         <Hierarchy primaryKey="geoid" foreignKey="" name="Tract" hasAll="true">
+            <Table name="tracts" schema="shapes2017" />   
+            <Level name="Tract" column="geoid" type="" nameColumn="name" uniqueMembers="false" />  
+        </Hierarchy> 
+    </Dimension>   
+    <Dimension foreignKey="" name="Annual Checkup">
         <Annotations>
             <Annotation name="dim_type">Measure</Annotation>
         </Annotations>
-         <Hierarchy hasAll="true">  
-            <Level name="Measure" column="short_question_text" type="String" uniqueMembers="true" />  
+         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">   
+            <Level name="Measure" column="short_question_text" type="String" nameColumn="" uniqueMembers="true" />  
         </Hierarchy> 
     </Dimension>   
      
@@ -644,29 +770,38 @@
 
     <Table name="chronic_kidney_disease" schema="cities_500"/>
      
-    <Dimension name="Year">
+    <Dimension foreignKey="" name="Year">
         <Annotations>
             <Annotation name="dim_type">TIME</Annotation>
         </Annotations>
-         <Hierarchy hasAll="true"> 
+         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">  
             <Level name="Year" column="year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />   
         </Hierarchy> 
     </Dimension>   
-    <Dimension name="Location">
+    <Dimension foreignKey="city_fips" name="City">
         <Annotations>
-            <Annotation name="dim_type">Location</Annotation>
+            <Annotation name="dim_type">City</Annotation>
         </Annotations>
-         <Hierarchy hasAll="true">  
-            <Level name="City" column="city_fips" type="String" uniqueMembers="false" />   
-            <Level name="Tract" column="tract_fips" type="String" uniqueMembers="false" />  
+         <Hierarchy primaryKey="geoid" foreignKey="" name="City" hasAll="true">
+            <Table name="places" schema="shapes2017" />   
+            <Level name="City" column="geoid" type="" nameColumn="name" uniqueMembers="false" />  
         </Hierarchy> 
     </Dimension>   
-    <Dimension name="Chronic Kidney Disease">
+    <Dimension foreignKey="tract_fips" name="Tract">
+        <Annotations>
+            <Annotation name="dim_type">Tract</Annotation>
+        </Annotations>
+         <Hierarchy primaryKey="geoid" foreignKey="" name="Tract" hasAll="true">
+            <Table name="tracts" schema="shapes2017" />   
+            <Level name="Tract" column="geoid" type="" nameColumn="name" uniqueMembers="false" />  
+        </Hierarchy> 
+    </Dimension>   
+    <Dimension foreignKey="" name="Chronic Kidney Disease">
         <Annotations>
             <Annotation name="dim_type">Measure</Annotation>
         </Annotations>
-         <Hierarchy hasAll="true">  
-            <Level name="Measure" column="short_question_text" type="String" uniqueMembers="true" />  
+         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">   
+            <Level name="Measure" column="short_question_text" type="String" nameColumn="" uniqueMembers="true" />  
         </Hierarchy> 
     </Dimension>   
      
@@ -689,29 +824,38 @@
 
     <Table name="colorectal_cancer_screening" schema="cities_500"/>
      
-    <Dimension name="Year">
+    <Dimension foreignKey="" name="Year">
         <Annotations>
             <Annotation name="dim_type">TIME</Annotation>
         </Annotations>
-         <Hierarchy hasAll="true"> 
+         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">  
             <Level name="Year" column="year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />   
         </Hierarchy> 
     </Dimension>   
-    <Dimension name="Location">
+    <Dimension foreignKey="city_fips" name="City">
         <Annotations>
-            <Annotation name="dim_type">Location</Annotation>
+            <Annotation name="dim_type">City</Annotation>
         </Annotations>
-         <Hierarchy hasAll="true">  
-            <Level name="City" column="city_fips" type="String" uniqueMembers="false" />   
-            <Level name="Tract" column="tract_fips" type="String" uniqueMembers="false" />  
+         <Hierarchy primaryKey="geoid" foreignKey="" name="City" hasAll="true">
+            <Table name="places" schema="shapes2017" />   
+            <Level name="City" column="geoid" type="" nameColumn="name" uniqueMembers="false" />  
         </Hierarchy> 
     </Dimension>   
-    <Dimension name="Colorectal Cancer Screening">
+    <Dimension foreignKey="tract_fips" name="Tract">
+        <Annotations>
+            <Annotation name="dim_type">Tract</Annotation>
+        </Annotations>
+         <Hierarchy primaryKey="geoid" foreignKey="" name="Tract" hasAll="true">
+            <Table name="tracts" schema="shapes2017" />   
+            <Level name="Tract" column="geoid" type="" nameColumn="name" uniqueMembers="false" />  
+        </Hierarchy> 
+    </Dimension>   
+    <Dimension foreignKey="" name="Colorectal Cancer Screening">
         <Annotations>
             <Annotation name="dim_type">Measure</Annotation>
         </Annotations>
-         <Hierarchy hasAll="true">  
-            <Level name="Measure" column="short_question_text" type="String" uniqueMembers="true" />  
+         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">   
+            <Level name="Measure" column="short_question_text" type="String" nameColumn="" uniqueMembers="true" />  
         </Hierarchy> 
     </Dimension>   
      
@@ -734,29 +878,38 @@
 
     <Table name="asthma" schema="cities_500"/>
      
-    <Dimension name="Year">
+    <Dimension foreignKey="" name="Year">
         <Annotations>
             <Annotation name="dim_type">TIME</Annotation>
         </Annotations>
-         <Hierarchy hasAll="true"> 
+         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">  
             <Level name="Year" column="year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />   
         </Hierarchy> 
     </Dimension>   
-    <Dimension name="Location">
+    <Dimension foreignKey="city_fips" name="City">
         <Annotations>
-            <Annotation name="dim_type">Location</Annotation>
+            <Annotation name="dim_type">City</Annotation>
         </Annotations>
-         <Hierarchy hasAll="true">  
-            <Level name="City" column="city_fips" type="String" uniqueMembers="false" />   
-            <Level name="Tract" column="tract_fips" type="String" uniqueMembers="false" />  
+         <Hierarchy primaryKey="geoid" foreignKey="" name="City" hasAll="true">
+            <Table name="places" schema="shapes2017" />   
+            <Level name="City" column="geoid" type="" nameColumn="name" uniqueMembers="false" />  
         </Hierarchy> 
     </Dimension>   
-    <Dimension name="Current Asthma">
+    <Dimension foreignKey="tract_fips" name="Tract">
+        <Annotations>
+            <Annotation name="dim_type">Tract</Annotation>
+        </Annotations>
+         <Hierarchy primaryKey="geoid" foreignKey="" name="Tract" hasAll="true">
+            <Table name="tracts" schema="shapes2017" />   
+            <Level name="Tract" column="geoid" type="" nameColumn="name" uniqueMembers="false" />  
+        </Hierarchy> 
+    </Dimension>   
+    <Dimension foreignKey="" name="Current Asthma">
         <Annotations>
             <Annotation name="dim_type">Measure</Annotation>
         </Annotations>
-         <Hierarchy hasAll="true">  
-            <Level name="Measure" column="short_question_text" type="String" uniqueMembers="true" />  
+         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">   
+            <Level name="Measure" column="short_question_text" type="String" nameColumn="" uniqueMembers="true" />  
         </Hierarchy> 
     </Dimension>   
      
@@ -779,29 +932,38 @@
 
     <Table name="current_smoking" schema="cities_500"/>
      
-    <Dimension name="Year">
+    <Dimension foreignKey="" name="Year">
         <Annotations>
             <Annotation name="dim_type">TIME</Annotation>
         </Annotations>
-         <Hierarchy hasAll="true"> 
+         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">  
             <Level name="Year" column="year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />   
         </Hierarchy> 
     </Dimension>   
-    <Dimension name="Location">
+    <Dimension foreignKey="city_fips" name="City">
         <Annotations>
-            <Annotation name="dim_type">Location</Annotation>
+            <Annotation name="dim_type">City</Annotation>
         </Annotations>
-         <Hierarchy hasAll="true">  
-            <Level name="City" column="city_fips" type="String" uniqueMembers="false" />   
-            <Level name="Tract" column="tract_fips" type="String" uniqueMembers="false" />  
+         <Hierarchy primaryKey="geoid" foreignKey="" name="City" hasAll="true">
+            <Table name="places" schema="shapes2017" />   
+            <Level name="City" column="geoid" type="" nameColumn="name" uniqueMembers="false" />  
         </Hierarchy> 
     </Dimension>   
-    <Dimension name="Current Smoking">
+    <Dimension foreignKey="tract_fips" name="Tract">
+        <Annotations>
+            <Annotation name="dim_type">Tract</Annotation>
+        </Annotations>
+         <Hierarchy primaryKey="geoid" foreignKey="" name="Tract" hasAll="true">
+            <Table name="tracts" schema="shapes2017" />   
+            <Level name="Tract" column="geoid" type="" nameColumn="name" uniqueMembers="false" />  
+        </Hierarchy> 
+    </Dimension>   
+    <Dimension foreignKey="" name="Current Smoking">
         <Annotations>
             <Annotation name="dim_type">Measure</Annotation>
         </Annotations>
-         <Hierarchy hasAll="true">  
-            <Level name="Measure" column="short_question_text" type="String" uniqueMembers="true" />  
+         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">   
+            <Level name="Measure" column="short_question_text" type="String" nameColumn="" uniqueMembers="true" />  
         </Hierarchy> 
     </Dimension>   
      
@@ -824,29 +986,38 @@
 
     <Table name="arthritis" schema="cities_500"/>
      
-    <Dimension name="Year">
+    <Dimension foreignKey="" name="Year">
         <Annotations>
             <Annotation name="dim_type">TIME</Annotation>
         </Annotations>
-         <Hierarchy hasAll="true"> 
+         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">  
             <Level name="Year" column="year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />   
         </Hierarchy> 
     </Dimension>   
-    <Dimension name="Location">
+    <Dimension foreignKey="city_fips" name="City">
         <Annotations>
-            <Annotation name="dim_type">Location</Annotation>
+            <Annotation name="dim_type">City</Annotation>
         </Annotations>
-         <Hierarchy hasAll="true">  
-            <Level name="City" column="city_fips" type="String" uniqueMembers="false" />   
-            <Level name="Tract" column="tract_fips" type="String" uniqueMembers="false" />  
+         <Hierarchy primaryKey="geoid" foreignKey="" name="City" hasAll="true">
+            <Table name="places" schema="shapes2017" />   
+            <Level name="City" column="geoid" type="" nameColumn="name" uniqueMembers="false" />  
         </Hierarchy> 
     </Dimension>   
-    <Dimension name="Arthritis">
+    <Dimension foreignKey="tract_fips" name="Tract">
+        <Annotations>
+            <Annotation name="dim_type">Tract</Annotation>
+        </Annotations>
+         <Hierarchy primaryKey="geoid" foreignKey="" name="Tract" hasAll="true">
+            <Table name="tracts" schema="shapes2017" />   
+            <Level name="Tract" column="geoid" type="" nameColumn="name" uniqueMembers="false" />  
+        </Hierarchy> 
+    </Dimension>   
+    <Dimension foreignKey="" name="Arthritis">
         <Annotations>
             <Annotation name="dim_type">Measure</Annotation>
         </Annotations>
-         <Hierarchy hasAll="true">  
-            <Level name="Measure" column="short_question_text" type="String" uniqueMembers="true" />  
+         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">   
+            <Level name="Measure" column="short_question_text" type="String" nameColumn="" uniqueMembers="true" />  
         </Hierarchy> 
     </Dimension>   
      
@@ -869,29 +1040,38 @@
 
     <Table name="mammography" schema="cities_500"/>
      
-    <Dimension name="Year">
+    <Dimension foreignKey="" name="Year">
         <Annotations>
             <Annotation name="dim_type">TIME</Annotation>
         </Annotations>
-         <Hierarchy hasAll="true"> 
+         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">  
             <Level name="Year" column="year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />   
         </Hierarchy> 
     </Dimension>   
-    <Dimension name="Location">
+    <Dimension foreignKey="city_fips" name="City">
         <Annotations>
-            <Annotation name="dim_type">Location</Annotation>
+            <Annotation name="dim_type">City</Annotation>
         </Annotations>
-         <Hierarchy hasAll="true">  
-            <Level name="City" column="city_fips" type="String" uniqueMembers="false" />   
-            <Level name="Tract" column="tract_fips" type="String" uniqueMembers="false" />  
+         <Hierarchy primaryKey="geoid" foreignKey="" name="City" hasAll="true">
+            <Table name="places" schema="shapes2017" />   
+            <Level name="City" column="geoid" type="" nameColumn="name" uniqueMembers="false" />  
         </Hierarchy> 
     </Dimension>   
-    <Dimension name="Mammography">
+    <Dimension foreignKey="tract_fips" name="Tract">
+        <Annotations>
+            <Annotation name="dim_type">Tract</Annotation>
+        </Annotations>
+         <Hierarchy primaryKey="geoid" foreignKey="" name="Tract" hasAll="true">
+            <Table name="tracts" schema="shapes2017" />   
+            <Level name="Tract" column="geoid" type="" nameColumn="name" uniqueMembers="false" />  
+        </Hierarchy> 
+    </Dimension>   
+    <Dimension foreignKey="" name="Mammography">
         <Annotations>
             <Annotation name="dim_type">Measure</Annotation>
         </Annotations>
-         <Hierarchy hasAll="true">  
-            <Level name="Measure" column="short_question_text" type="String" uniqueMembers="true" />  
+         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">   
+            <Level name="Measure" column="short_question_text" type="String" nameColumn="" uniqueMembers="true" />  
         </Hierarchy> 
     </Dimension>   
      
@@ -914,29 +1094,38 @@
 
     <Table name="dental_visit" schema="cities_500"/>
      
-    <Dimension name="Year">
+    <Dimension foreignKey="" name="Year">
         <Annotations>
             <Annotation name="dim_type">TIME</Annotation>
         </Annotations>
-         <Hierarchy hasAll="true"> 
+         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">  
             <Level name="Year" column="year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />   
         </Hierarchy> 
     </Dimension>   
-    <Dimension name="Location">
+    <Dimension foreignKey="city_fips" name="City">
         <Annotations>
-            <Annotation name="dim_type">Location</Annotation>
+            <Annotation name="dim_type">City</Annotation>
         </Annotations>
-         <Hierarchy hasAll="true">  
-            <Level name="City" column="city_fips" type="String" uniqueMembers="false" />   
-            <Level name="Tract" column="tract_fips" type="String" uniqueMembers="false" />  
+         <Hierarchy primaryKey="geoid" foreignKey="" name="City" hasAll="true">
+            <Table name="places" schema="shapes2017" />   
+            <Level name="City" column="geoid" type="" nameColumn="name" uniqueMembers="false" />  
         </Hierarchy> 
     </Dimension>   
-    <Dimension name="Dental Visit">
+    <Dimension foreignKey="tract_fips" name="Tract">
+        <Annotations>
+            <Annotation name="dim_type">Tract</Annotation>
+        </Annotations>
+         <Hierarchy primaryKey="geoid" foreignKey="" name="Tract" hasAll="true">
+            <Table name="tracts" schema="shapes2017" />   
+            <Level name="Tract" column="geoid" type="" nameColumn="name" uniqueMembers="false" />  
+        </Hierarchy> 
+    </Dimension>   
+    <Dimension foreignKey="" name="Dental Visit">
         <Annotations>
             <Annotation name="dim_type">Measure</Annotation>
         </Annotations>
-         <Hierarchy hasAll="true">  
-            <Level name="Measure" column="short_question_text" type="String" uniqueMembers="true" />  
+         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">   
+            <Level name="Measure" column="short_question_text" type="String" nameColumn="" uniqueMembers="true" />  
         </Hierarchy> 
     </Dimension>   
      
@@ -959,29 +1148,38 @@
 
     <Table name="has_diabetes" schema="cities_500"/>
      
-    <Dimension name="Year">
+    <Dimension foreignKey="" name="Year">
         <Annotations>
             <Annotation name="dim_type">TIME</Annotation>
         </Annotations>
-         <Hierarchy hasAll="true"> 
+         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">  
             <Level name="Year" column="year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />   
         </Hierarchy> 
     </Dimension>   
-    <Dimension name="Location">
+    <Dimension foreignKey="city_fips" name="City">
         <Annotations>
-            <Annotation name="dim_type">Location</Annotation>
+            <Annotation name="dim_type">City</Annotation>
         </Annotations>
-         <Hierarchy hasAll="true">  
-            <Level name="City" column="city_fips" type="String" uniqueMembers="false" />   
-            <Level name="Tract" column="tract_fips" type="String" uniqueMembers="false" />  
+         <Hierarchy primaryKey="geoid" foreignKey="" name="City" hasAll="true">
+            <Table name="places" schema="shapes2017" />   
+            <Level name="City" column="geoid" type="" nameColumn="name" uniqueMembers="false" />  
         </Hierarchy> 
     </Dimension>   
-    <Dimension name="Diabetes">
+    <Dimension foreignKey="tract_fips" name="Tract">
+        <Annotations>
+            <Annotation name="dim_type">Tract</Annotation>
+        </Annotations>
+         <Hierarchy primaryKey="geoid" foreignKey="" name="Tract" hasAll="true">
+            <Table name="tracts" schema="shapes2017" />   
+            <Level name="Tract" column="geoid" type="" nameColumn="name" uniqueMembers="false" />  
+        </Hierarchy> 
+    </Dimension>   
+    <Dimension foreignKey="" name="Diabetes">
         <Annotations>
             <Annotation name="dim_type">Measure</Annotation>
         </Annotations>
-         <Hierarchy hasAll="true">  
-            <Level name="Measure" column="short_question_text" type="String" uniqueMembers="true" />  
+         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">   
+            <Level name="Measure" column="short_question_text" type="String" nameColumn="" uniqueMembers="true" />  
         </Hierarchy> 
     </Dimension>   
      
@@ -1004,29 +1202,38 @@
 
     <Table name="physical_health" schema="cities_500"/>
      
-    <Dimension name="Year">
+    <Dimension foreignKey="" name="Year">
         <Annotations>
             <Annotation name="dim_type">TIME</Annotation>
         </Annotations>
-         <Hierarchy hasAll="true"> 
+         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">  
             <Level name="Year" column="year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />   
         </Hierarchy> 
     </Dimension>   
-    <Dimension name="Location">
+    <Dimension foreignKey="city_fips" name="City">
         <Annotations>
-            <Annotation name="dim_type">Location</Annotation>
+            <Annotation name="dim_type">City</Annotation>
         </Annotations>
-         <Hierarchy hasAll="true">  
-            <Level name="City" column="city_fips" type="String" uniqueMembers="false" />   
-            <Level name="Tract" column="tract_fips" type="String" uniqueMembers="false" />  
+         <Hierarchy primaryKey="geoid" foreignKey="" name="City" hasAll="true">
+            <Table name="places" schema="shapes2017" />   
+            <Level name="City" column="geoid" type="" nameColumn="name" uniqueMembers="false" />  
         </Hierarchy> 
     </Dimension>   
-    <Dimension name="Physical Health">
+    <Dimension foreignKey="tract_fips" name="Tract">
+        <Annotations>
+            <Annotation name="dim_type">Tract</Annotation>
+        </Annotations>
+         <Hierarchy primaryKey="geoid" foreignKey="" name="Tract" hasAll="true">
+            <Table name="tracts" schema="shapes2017" />   
+            <Level name="Tract" column="geoid" type="" nameColumn="name" uniqueMembers="false" />  
+        </Hierarchy> 
+    </Dimension>   
+    <Dimension foreignKey="" name="Physical Health">
         <Annotations>
             <Annotation name="dim_type">Measure</Annotation>
         </Annotations>
-         <Hierarchy hasAll="true">  
-            <Level name="Measure" column="short_question_text" type="String" uniqueMembers="true" />  
+         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">   
+            <Level name="Measure" column="short_question_text" type="String" nameColumn="" uniqueMembers="true" />  
         </Hierarchy> 
     </Dimension>   
      
@@ -1049,29 +1256,38 @@
 
     <Table name="taking_bp_medication" schema="cities_500"/>
      
-    <Dimension name="Year">
+    <Dimension foreignKey="" name="Year">
         <Annotations>
             <Annotation name="dim_type">TIME</Annotation>
         </Annotations>
-         <Hierarchy hasAll="true"> 
+         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">  
             <Level name="Year" column="year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />   
         </Hierarchy> 
     </Dimension>   
-    <Dimension name="Location">
+    <Dimension foreignKey="city_fips" name="City">
         <Annotations>
-            <Annotation name="dim_type">Location</Annotation>
+            <Annotation name="dim_type">City</Annotation>
         </Annotations>
-         <Hierarchy hasAll="true">  
-            <Level name="City" column="city_fips" type="String" uniqueMembers="false" />   
-            <Level name="Tract" column="tract_fips" type="String" uniqueMembers="false" />  
+         <Hierarchy primaryKey="geoid" foreignKey="" name="City" hasAll="true">
+            <Table name="places" schema="shapes2017" />   
+            <Level name="City" column="geoid" type="" nameColumn="name" uniqueMembers="false" />  
         </Hierarchy> 
     </Dimension>   
-    <Dimension name="Taking BP Medication">
+    <Dimension foreignKey="tract_fips" name="Tract">
+        <Annotations>
+            <Annotation name="dim_type">Tract</Annotation>
+        </Annotations>
+         <Hierarchy primaryKey="geoid" foreignKey="" name="Tract" hasAll="true">
+            <Table name="tracts" schema="shapes2017" />   
+            <Level name="Tract" column="geoid" type="" nameColumn="name" uniqueMembers="false" />  
+        </Hierarchy> 
+    </Dimension>   
+    <Dimension foreignKey="" name="Taking BP Medication">
         <Annotations>
             <Annotation name="dim_type">Measure</Annotation>
         </Annotations>
-         <Hierarchy hasAll="true">  
-            <Level name="Measure" column="short_question_text" type="String" uniqueMembers="true" />  
+         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">   
+            <Level name="Measure" column="short_question_text" type="String" nameColumn="" uniqueMembers="true" />  
         </Hierarchy> 
     </Dimension>   
      
@@ -1094,29 +1310,38 @@
 
     <Table name="pap_smear_test" schema="cities_500"/>
      
-    <Dimension name="Year">
+    <Dimension foreignKey="" name="Year">
         <Annotations>
             <Annotation name="dim_type">TIME</Annotation>
         </Annotations>
-         <Hierarchy hasAll="true"> 
+         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">  
             <Level name="Year" column="year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />   
         </Hierarchy> 
     </Dimension>   
-    <Dimension name="Location">
+    <Dimension foreignKey="city_fips" name="City">
         <Annotations>
-            <Annotation name="dim_type">Location</Annotation>
+            <Annotation name="dim_type">City</Annotation>
         </Annotations>
-         <Hierarchy hasAll="true">  
-            <Level name="City" column="city_fips" type="String" uniqueMembers="false" />   
-            <Level name="Tract" column="tract_fips" type="String" uniqueMembers="false" />  
+         <Hierarchy primaryKey="geoid" foreignKey="" name="City" hasAll="true">
+            <Table name="places" schema="shapes2017" />   
+            <Level name="City" column="geoid" type="" nameColumn="name" uniqueMembers="false" />  
         </Hierarchy> 
     </Dimension>   
-    <Dimension name="Pap Smear Test">
+    <Dimension foreignKey="tract_fips" name="Tract">
+        <Annotations>
+            <Annotation name="dim_type">Tract</Annotation>
+        </Annotations>
+         <Hierarchy primaryKey="geoid" foreignKey="" name="Tract" hasAll="true">
+            <Table name="tracts" schema="shapes2017" />   
+            <Level name="Tract" column="geoid" type="" nameColumn="name" uniqueMembers="false" />  
+        </Hierarchy> 
+    </Dimension>   
+    <Dimension foreignKey="" name="Pap Smear Test">
         <Annotations>
             <Annotation name="dim_type">Measure</Annotation>
         </Annotations>
-         <Hierarchy hasAll="true">  
-            <Level name="Measure" column="short_question_text" type="String" uniqueMembers="true" />  
+         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">   
+            <Level name="Measure" column="short_question_text" type="String" nameColumn="" uniqueMembers="true" />  
         </Hierarchy> 
     </Dimension>   
      
@@ -1139,29 +1364,38 @@
 
     <Table name="cancer_except_skin" schema="cities_500"/>
      
-    <Dimension name="Year">
+    <Dimension foreignKey="" name="Year">
         <Annotations>
             <Annotation name="dim_type">TIME</Annotation>
         </Annotations>
-         <Hierarchy hasAll="true"> 
+         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">  
             <Level name="Year" column="year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />   
         </Hierarchy> 
     </Dimension>   
-    <Dimension name="Location">
+    <Dimension foreignKey="city_fips" name="City">
         <Annotations>
-            <Annotation name="dim_type">Location</Annotation>
+            <Annotation name="dim_type">City</Annotation>
         </Annotations>
-         <Hierarchy hasAll="true">  
-            <Level name="City" column="city_fips" type="String" uniqueMembers="false" />   
-            <Level name="Tract" column="tract_fips" type="String" uniqueMembers="false" />  
+         <Hierarchy primaryKey="geoid" foreignKey="" name="City" hasAll="true">
+            <Table name="places" schema="shapes2017" />   
+            <Level name="City" column="geoid" type="" nameColumn="name" uniqueMembers="false" />  
         </Hierarchy> 
     </Dimension>   
-    <Dimension name="Cancer (except skin)">
+    <Dimension foreignKey="tract_fips" name="Tract">
+        <Annotations>
+            <Annotation name="dim_type">Tract</Annotation>
+        </Annotations>
+         <Hierarchy primaryKey="geoid" foreignKey="" name="Tract" hasAll="true">
+            <Table name="tracts" schema="shapes2017" />   
+            <Level name="Tract" column="geoid" type="" nameColumn="name" uniqueMembers="false" />  
+        </Hierarchy> 
+    </Dimension>   
+    <Dimension foreignKey="" name="Cancer (except skin)">
         <Annotations>
             <Annotation name="dim_type">Measure</Annotation>
         </Annotations>
-         <Hierarchy hasAll="true">  
-            <Level name="Measure" column="short_question_text" type="String" uniqueMembers="true" />  
+         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">   
+            <Level name="Measure" column="short_question_text" type="String" nameColumn="" uniqueMembers="true" />  
         </Hierarchy> 
     </Dimension>   
      
@@ -1184,29 +1418,38 @@
 
     <Table name="mental_health" schema="cities_500"/>
      
-    <Dimension name="Year">
+    <Dimension foreignKey="" name="Year">
         <Annotations>
             <Annotation name="dim_type">TIME</Annotation>
         </Annotations>
-         <Hierarchy hasAll="true"> 
+         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">  
             <Level name="Year" column="year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />   
         </Hierarchy> 
     </Dimension>   
-    <Dimension name="Location">
+    <Dimension foreignKey="city_fips" name="City">
         <Annotations>
-            <Annotation name="dim_type">Location</Annotation>
+            <Annotation name="dim_type">City</Annotation>
         </Annotations>
-         <Hierarchy hasAll="true">  
-            <Level name="City" column="city_fips" type="String" uniqueMembers="false" />   
-            <Level name="Tract" column="tract_fips" type="String" uniqueMembers="false" />  
+         <Hierarchy primaryKey="geoid" foreignKey="" name="City" hasAll="true">
+            <Table name="places" schema="shapes2017" />   
+            <Level name="City" column="geoid" type="" nameColumn="name" uniqueMembers="false" />  
         </Hierarchy> 
     </Dimension>   
-    <Dimension name="Mental Health">
+    <Dimension foreignKey="tract_fips" name="Tract">
+        <Annotations>
+            <Annotation name="dim_type">Tract</Annotation>
+        </Annotations>
+         <Hierarchy primaryKey="geoid" foreignKey="" name="Tract" hasAll="true">
+            <Table name="tracts" schema="shapes2017" />   
+            <Level name="Tract" column="geoid" type="" nameColumn="name" uniqueMembers="false" />  
+        </Hierarchy> 
+    </Dimension>   
+    <Dimension foreignKey="" name="Mental Health">
         <Annotations>
             <Annotation name="dim_type">Measure</Annotation>
         </Annotations>
-         <Hierarchy hasAll="true">  
-            <Level name="Measure" column="short_question_text" type="String" uniqueMembers="true" />  
+         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">   
+            <Level name="Measure" column="short_question_text" type="String" nameColumn="" uniqueMembers="true" />  
         </Hierarchy> 
     </Dimension>   
      
@@ -1229,29 +1472,38 @@
 
     <Table name="core_preventive_services_for_older_women" schema="cities_500"/>
      
-    <Dimension name="Year">
+    <Dimension foreignKey="" name="Year">
         <Annotations>
             <Annotation name="dim_type">TIME</Annotation>
         </Annotations>
-         <Hierarchy hasAll="true"> 
+         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">  
             <Level name="Year" column="year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />   
         </Hierarchy> 
     </Dimension>   
-    <Dimension name="Location">
+    <Dimension foreignKey="city_fips" name="City">
         <Annotations>
-            <Annotation name="dim_type">Location</Annotation>
+            <Annotation name="dim_type">City</Annotation>
         </Annotations>
-         <Hierarchy hasAll="true">  
-            <Level name="City" column="city_fips" type="String" uniqueMembers="false" />   
-            <Level name="Tract" column="tract_fips" type="String" uniqueMembers="false" />  
+         <Hierarchy primaryKey="geoid" foreignKey="" name="City" hasAll="true">
+            <Table name="places" schema="shapes2017" />   
+            <Level name="City" column="geoid" type="" nameColumn="name" uniqueMembers="false" />  
         </Hierarchy> 
     </Dimension>   
-    <Dimension name="Core preventive services for older women">
+    <Dimension foreignKey="tract_fips" name="Tract">
+        <Annotations>
+            <Annotation name="dim_type">Tract</Annotation>
+        </Annotations>
+         <Hierarchy primaryKey="geoid" foreignKey="" name="Tract" hasAll="true">
+            <Table name="tracts" schema="shapes2017" />   
+            <Level name="Tract" column="geoid" type="" nameColumn="name" uniqueMembers="false" />  
+        </Hierarchy> 
+    </Dimension>   
+    <Dimension foreignKey="" name="Core preventive services for older women">
         <Annotations>
             <Annotation name="dim_type">Measure</Annotation>
         </Annotations>
-         <Hierarchy hasAll="true">  
-            <Level name="Measure" column="short_question_text" type="String" uniqueMembers="true" />  
+         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">   
+            <Level name="Measure" column="short_question_text" type="String" nameColumn="" uniqueMembers="true" />  
         </Hierarchy> 
     </Dimension>   
      
