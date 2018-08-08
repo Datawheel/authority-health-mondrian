@@ -18,7 +18,7 @@
             <Annotation name="dim_type">TIME</Annotation>
         </Annotations>
          <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">  
-            <Level name="Year" column="year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />   
+            <Level name="Year" column="year" type="Numeric" levelType="TimeYears" nameColumn="" uniqueMembers="true" />  
         </Hierarchy> 
     </Dimension>   
     <Dimension foreignKey="city_fips" name="City">
@@ -26,8 +26,8 @@
             <Annotation name="dim_type">City</Annotation>
         </Annotations>
          <Hierarchy primaryKey="geoid" foreignKey="" name="City" hasAll="true">
-            <Table name="places" schema="shapes2017" />   
-            <Level name="City" column="geoid" type="" nameColumn="name" uniqueMembers="false" />  
+            <Table name="places" schema="shapes2017" />  
+            <Level name="City" column="geoid" type="" levelType="" nameColumn="name" uniqueMembers="false" />  
         </Hierarchy> 
     </Dimension>   
     <Dimension foreignKey="tract_fips" name="Tract">
@@ -35,18 +35,18 @@
             <Annotation name="dim_type">Tract</Annotation>
         </Annotations>
          <Hierarchy primaryKey="geoid" foreignKey="" name="Tract" hasAll="true">
-            <Table name="tracts" schema="shapes2017" />   
-            <Level name="Tract" column="geoid" type="" nameColumn="name" uniqueMembers="false" />  
+            <Table name="tracts" schema="shapes2017" />  
+            <Level name="Tract" column="geoid" type="" levelType="" nameColumn="name" uniqueMembers="false" />  
         </Hierarchy> 
     </Dimension>   
     <Dimension foreignKey="" name="Stroke">
         <Annotations>
             <Annotation name="dim_type">Measure</Annotation>
         </Annotations>
-         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">   
-            <Level name="Measure" column="short_question_text" type="String" nameColumn="" uniqueMembers="true" />  
+         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">  
+            <Level name="Measure" column="short_question_text" type="String" levelType="" nameColumn="" uniqueMembers="true" />  
         </Hierarchy> 
-    </Dimension>   
+    </Dimension>  
      
     <Measure name="Data Value" column="data_value" aggregator="sum" />   
     <Measure name="Low Confidence Limit" column="low_confidence_limit" aggregator="sum" />   
