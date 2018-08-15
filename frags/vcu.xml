@@ -1,5 +1,5 @@
 <Schema name="authority_health">
-  <Cube name="vcu_life_expectancy_at_birth">
+  <Cube name="VCU - Life Expectancy at Birth">
     <Annotations>
       <Annotation name="source_name">Virginia Commonwealth University Center on Society and Health</Annotation>
       <Annotation name="source_description">According to its site: The VCU Center on Society and Health (formerly the VCU Center on Human Needs) is an academic research center that studies the health implications of social factors—such as education, income, neighborhood and community environmental conditions, and public policy.</Annotation>
