@@ -1,0 +1,57 @@
+<Cube name="NAEP Reading Assessment">
+    <Annotations>
+        <Annotation name="source_name">FBI: Uniform Crime Reporting</Annotation>
+        <Annotation name="source_link">https://ucr.fbi.gov/</Annotation>
+        <Annotation name="dataset_name">FBI UCR</Annotation>
+        <Annotation name="topic">Crime</Annotation>
+    </Annotations>
+
+    <Table name="naep" schema="naep"/>
+     
+    <Dimension name="Year">
+        <Annotations>
+            <Annotation name="dim_type">TIME</Annotation>
+        </Annotations>
+         <Hierarchy hasAll="true">
+            <Level name="Year" column="year" type="Numeric" levelType="TimeYears" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension name="Grade">
+        <Annotations>
+            <Annotation name="dim_type">Grade</Annotation>
+        </Annotations>
+         <Hierarchy hasAll="true">
+            <Level name="Grade" column="grade" type="String" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
+    
+    <Measure name="Score" column="score" aggregator="sum" />
+    <Measure name="National Average" column="national_average" aggregator="sum" />
+    <Measure name="Michigan Average" column="michigan_average" aggregator="sum" />
+
+    <Measure name="Race - Black" column="race_black" aggregator="sum" />
+    <Measure name="Race - Hispanic" column="race_hispanic" aggregator="sum" />
+
+    <Measure name="Gender - Male" column="gender_male" aggregator="sum" />
+    <Measure name="Gender - Female" column="gender_female" aggregator="sum" />
+
+    <Measure name="NSLP Eligible" column="nslp_eligible" aggregator="sum" />
+    <Measure name="NSLP Ineligible" column="nslp_ineligible" aggregator="sum" />
+
+    <Measure name="Parent edu - No high school" column="edu_no_high_school" aggregator="sum" />
+    <Measure name="Parent edu - High school" column="edu_high_school" aggregator="sum" />
+    <Measure name="Parent edu - Some college" column="edu_some_college" aggregator="sum" />
+    <Measure name="Parent edu - College" column="edu_college" aggregator="sum" />
+    <Measure name="Parent edu - Unknown" column="edu_unknown" aggregator="sum" />
+
+    <Measure name="Disability - Yes" column="disabilities" aggregator="sum" />
+    <Measure name="Disability - No" column="no_disabilities" aggregator="sum" />
+
+    <Measure name="ELL - Yes" column="ell" aggregator="sum" />
+    <Measure name="ELL - No" column="not_ell" aggregator="sum" />
+
+    <Measure name="Percent Proficient - Detroit" column="proficient_percent" aggregator="sum" />
+    <Measure name="Percent Proficient - National" column="national_proficient_percent" aggregator="sum" />
+    <Measure name="Percent Proficient - Michigan" column="michigan_proficient_percent" aggregator="sum" />
+</Cube>
