@@ -94,6 +94,29 @@
     <Measure name="Percent Proficient - National" column="national_proficient_percent" aggregator="sum" />
     <Measure name="Percent Proficient - Michigan" column="michigan_proficient_percent" aggregator="sum" />
 </Cube>
+<Cube name="USDA">
+    <Annotations>
+        <Annotation name="source_name">United State Department of Agriculture</Annotation>
+        <Annotation name="source_link">https://www.ers.usda.gov/</Annotation>
+        <Annotation name="dataset_name">USDA</Annotation>
+        <Annotation name="topic">Environmental</Annotation>
+    </Annotations>
+
+    <Table name="usda" schema="usda"/>
+     
+    <Dimension foreignKey="fips" name="County">
+        <Annotations>
+            <Annotation name="dim_type">County</Annotation>
+        </Annotations>
+         <Hierarchy primaryKey="geoid" name="County" hasAll="true">
+            <Table name="counties" schema="shapes2017" />  
+            <Level name="County" column="geoid" nameColumn="name" uniqueMembers="false" />  
+        </Hierarchy> 
+    </Dimension>
+
+    <Measure name="Total Farmer's Markets in 2009" column="number_of_farmers_markets_2009" aggregator="sum" />
+    <Measure name="Total Farmer's Markets in 2016" column="number_of_farmers_markets_2016" aggregator="sum" />
+</Cube>
 <Cube name="500 Cities">
     <Annotations> 
         <Annotation name="source_name">500 Cities: Local Data for Better Health</Annotation>   
@@ -1417,8 +1440,6 @@
             <Level name="Zip Code" column="name" nameColumn="name" uniqueMembers="false" />  
         </Hierarchy> 
     </Dimension>
-
-    <!-- <Measure name="Population Density" column="population_density" aggregator="" /> -->
 
     <Measure name="Total Population" column="total_population" aggregator="sum" />
     <Measure name="High School Dropout Rate" column="high_school_dropout_rate" aggregator="avg" />
