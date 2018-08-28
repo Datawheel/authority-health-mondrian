@@ -1,0 +1,43 @@
+<Cube name="DCI">
+    <Annotations>
+        <Annotation name="source_name">Distressed Communities Index</Annotation>
+        <Annotation name="source_link">https://eig.org/dci/</Annotation>
+        <Annotation name="dataset_name">DCI</Annotation>
+        <Annotation name="topic">Socio-economic</Annotation>
+    </Annotations>
+
+    <Table name="dci" schema="dci"/>
+     
+    <!-- TODO: Uncomment once we have confirmation from AH that year is 2017 -->
+    <!-- <Dimension name="Year">
+        <Annotations>
+            <Annotation name="dim_type">TIME</Annotation>
+        </Annotations>
+         <Hierarchy hasAll="true">
+            <Level name="Year" column="year" type="Numeric" levelType="TimeYears" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension> -->
+
+    <Dimension foreignKey="zipcode" name="Zip Code">
+        <Annotations>
+            <Annotation name="dim_type">Zip Code</Annotation>
+        </Annotations>
+         <Hierarchy primaryKey="name" name="Zip Code" hasAll="true">
+            <Table name="zips" schema="shapes2017" />  
+            <Level name="Zip Code" column="name" nameColumn="name" uniqueMembers="false" />  
+        </Hierarchy> 
+    </Dimension>
+
+    <Measure name="Total Population" column="total_population" aggregator="sum" />
+    <Measure name="High School Dropout Rate" column="high_school_dropout_rate" aggregator="avg" />
+    <Measure name="Poverty Rate" column="poverty_rate" aggregator="avg" />
+    <Measure name="Percent Adults not Working" column="percent_adults_not_working" aggregator="avg" />
+    <Measure name="Housing Vacancy Rate" column="housing_vacancy_rate" aggregator="avg" />
+    <Measure name="Median Income Ratio" column="median_income_ratio" aggregator="avg" />
+    <Measure name="Percent Change in Employment" column="percent_change_in_employment" aggregator="avg" />
+    <Measure name="Percent Change in Establishments" column="percent_change_in_establishments" aggregator="avg" />
+    <Measure name="Distress Score" column="distress_score" aggregator="min" />
+    <Measure name="Distress Quintile" column="distress_quintile" aggregator="min" />
+    <Measure name="Distress County Ranking" column="distress_county_ranking" aggregator="min" />
+    <Measure name="Distress State Ranking" column="distress_state_ranking" aggregator="min" />
+</Cube>
