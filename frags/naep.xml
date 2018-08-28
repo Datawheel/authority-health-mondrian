@@ -1,9 +1,9 @@
 <Cube name="NAEP Reading Assessment">
     <Annotations>
-        <Annotation name="source_name">FBI: Uniform Crime Reporting</Annotation>
-        <Annotation name="source_link">https://ucr.fbi.gov/</Annotation>
-        <Annotation name="dataset_name">FBI UCR</Annotation>
-        <Annotation name="topic">Crime</Annotation>
+        <Annotation name="source_name">NAEP Reading Assessment</Annotation>
+        <Annotation name="source_link">https://www.nationsreportcard.gov/reading_2017/#?grade=4</Annotation>
+        <Annotation name="dataset_name">NAEP Reading Assessment</Annotation>
+        <Annotation name="topic">Education</Annotation>
     </Annotations>
 
     <Table name="naep" schema="naep"/>
