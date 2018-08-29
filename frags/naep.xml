@@ -29,28 +29,21 @@
     <Measure name="Score" column="score" aggregator="sum" />
     <Measure name="National Average" column="national_average" aggregator="sum" />
     <Measure name="Michigan Average" column="michigan_average" aggregator="sum" />
-
     <Measure name="Race - Black" column="race_black" aggregator="sum" />
     <Measure name="Race - Hispanic" column="race_hispanic" aggregator="sum" />
-
     <Measure name="Gender - Male" column="gender_male" aggregator="sum" />
     <Measure name="Gender - Female" column="gender_female" aggregator="sum" />
-
     <Measure name="NSLP Eligible" column="nslp_eligible" aggregator="sum" />
     <Measure name="NSLP Ineligible" column="nslp_ineligible" aggregator="sum" />
-
     <Measure name="Parent edu - No high school" column="edu_no_high_school" aggregator="sum" />
     <Measure name="Parent edu - High school" column="edu_high_school" aggregator="sum" />
     <Measure name="Parent edu - Some college" column="edu_some_college" aggregator="sum" />
     <Measure name="Parent edu - College" column="edu_college" aggregator="sum" />
     <Measure name="Parent edu - Unknown" column="edu_unknown" aggregator="sum" />
-
     <Measure name="Disability - Yes" column="disabilities" aggregator="sum" />
     <Measure name="Disability - No" column="no_disabilities" aggregator="sum" />
-
     <Measure name="ELL - Yes" column="ell" aggregator="sum" />
     <Measure name="ELL - No" column="not_ell" aggregator="sum" />
-
     <Measure name="Percent Proficient - Detroit" column="proficient_percent" aggregator="sum" />
     <Measure name="Percent Proficient - National" column="national_proficient_percent" aggregator="sum" />
     <Measure name="Percent Proficient - Michigan" column="michigan_proficient_percent" aggregator="sum" />

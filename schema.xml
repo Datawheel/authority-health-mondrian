@@ -1,4 +1,62 @@
 <Schema name="authority_health">
+<Cube name="HRSA">
+    <Annotations>
+        <Annotation name="source_name">Health Resources and Services Administration</Annotation>
+        <Annotation name="source_link">https://datawarehouse.hrsa.gov/topics/ahrf.aspx</Annotation>
+        <Annotation name="dataset_name">HRSA</Annotation>
+        <Annotation name="topic">Health</Annotation>
+    </Annotations>
+
+    <Table name="hrsa" schema="hrsa"/>
+
+    <Dimension name="Year">
+        <Annotations>
+            <Annotation name="dim_type">TIME</Annotation>
+        </Annotations>
+         <Hierarchy hasAll="true">
+            <Level name="Year" column="year" type="Numeric" levelType="TimeYears" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension foreignKey="county_fips" name="County">
+        <Annotations>
+            <Annotation name="dim_type">County</Annotation>
+        </Annotations>
+         <Hierarchy primaryKey="geoid" name="County" hasAll="true">
+            <Table name="counties" schema="shapes2017" />  
+            <Level name="County" column="geoid" nameColumn="name" uniqueMembers="false" />  
+        </Hierarchy> 
+    </Dimension>
+
+    <Measure name="Dentists w/NPI" column="npi_total" aggregator="sum" />
+    <Measure name="Dentists, Male w/NPI" column="npi_gender_male" aggregator="sum" />
+    <Measure name="Dentists,Female w/NPI" column="npi_gender_female" aggregator="sum" />
+    <Measure name="Dentists, Total Priv Practice" column="priv_practice_total" aggregator="sum" />
+    <Measure name="Dentists, Total, Priv Pract, FT" column="priv_practice_ft" aggregator="sum" />
+    <Measure name="Dentists, Total, Priv Pract, PT" column="priv_practice_pt" aggregator="sum" />
+    <Measure name="Dent, Total Male, Priv Pract" column="priv_practice_gender_male" aggregator="sum" />
+    <Measure name="Dent, Total Female, Priv Pract" column="priv_practice_gender_female" aggregator="sum" />
+    <Measure name="Dent, Gender Unknown,Priv Pract" column="priv_practice_gender_unknown" aggregator="sum" />
+    <Measure name="Dent, Priv Pract,Tot GPs and Ped" column="priv_practice_gps_and_ped" aggregator="sum" />
+    <Measure name="Dent, Priv Pract,Tot Other Spec" column="priv_practice_other_specialties" aggregator="sum" />
+    <Measure name="Dentists, Seeking Employment" column="status_seeking_employment" aggregator="sum" />
+    <Measure name="Dentists, Other Occupation" column="status_other_occupation" aggregator="sum" />
+    <Measure name="Dentists, No Longer in Practice" column="status_inactive" aggregator="sum" />
+    <Measure name="Dentists, Occup Type Unknown" column="status_unknown" aggregator="sum" />
+    <Measure name="Dentists, Total Prof Active" column="status_active" aggregator="sum" />
+    <Measure name="Dentists, State or Local Govt" column="cat_government" aggregator="sum" />
+    <Measure name="Dent,Staff, Fac and Staf,Hlth Org" column="cat_health_org_staff" aggregator="sum" />
+    <Measure name="Dentists, Grad Student/Resident" column="cat_grad_student" aggregator="sum" />
+    <Measure name="Dent,Armed Forces and Oth Fed Srv" column="cat_fed_service" aggregator="sum" />
+    <Measure name="Dentists, Dental School Faculty" column="cat_dental_school_faculty" aggregator="sum" />
+    <Measure name="Dentists,PT Faculty/PT Practice" column="cat_pt_faculty_or_practice" aggregator="sum" />
+    <Measure name="# Active Dentists less than 35" column="age_35_or_less" aggregator="sum" />
+    <Measure name="# Active Dentists 35" column="age_35_44" aggregator="sum" />
+    <Measure name="# Active Dentists 45" column="age_45_54" aggregator="sum" />
+    <Measure name="# Active Dentists 55" column="age_55_64" aggregator="sum" />
+    <Measure name="# Active Dentists 65 or more" column="age_65_or_more" aggregator="sum" />
+    <Measure name="# Active Dentists Age Unknown" column="age_unknown" aggregator="sum" />
+</Cube>
 <Cube name="FBI UCR">
     <Annotations> 
         <Annotation name="source_name">FBI: Uniform Crime Reporting</Annotation>   
@@ -68,28 +126,21 @@
     <Measure name="Score" column="score" aggregator="sum" />
     <Measure name="National Average" column="national_average" aggregator="sum" />
     <Measure name="Michigan Average" column="michigan_average" aggregator="sum" />
-
     <Measure name="Race - Black" column="race_black" aggregator="sum" />
     <Measure name="Race - Hispanic" column="race_hispanic" aggregator="sum" />
-
     <Measure name="Gender - Male" column="gender_male" aggregator="sum" />
     <Measure name="Gender - Female" column="gender_female" aggregator="sum" />
-
     <Measure name="NSLP Eligible" column="nslp_eligible" aggregator="sum" />
     <Measure name="NSLP Ineligible" column="nslp_ineligible" aggregator="sum" />
-
     <Measure name="Parent edu - No high school" column="edu_no_high_school" aggregator="sum" />
     <Measure name="Parent edu - High school" column="edu_high_school" aggregator="sum" />
     <Measure name="Parent edu - Some college" column="edu_some_college" aggregator="sum" />
     <Measure name="Parent edu - College" column="edu_college" aggregator="sum" />
     <Measure name="Parent edu - Unknown" column="edu_unknown" aggregator="sum" />
-
     <Measure name="Disability - Yes" column="disabilities" aggregator="sum" />
     <Measure name="Disability - No" column="no_disabilities" aggregator="sum" />
-
     <Measure name="ELL - Yes" column="ell" aggregator="sum" />
     <Measure name="ELL - No" column="not_ell" aggregator="sum" />
-
     <Measure name="Percent Proficient - Detroit" column="proficient_percent" aggregator="sum" />
     <Measure name="Percent Proficient - National" column="national_proficient_percent" aggregator="sum" />
     <Measure name="Percent Proficient - Michigan" column="michigan_proficient_percent" aggregator="sum" />
