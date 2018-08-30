@@ -1,0 +1,62 @@
+<Cube name="CDC Wonder - Diabetes">
+    <Annotations>
+        <Annotation name="source_name">CDC Wonder</Annotation>
+        <Annotation name="source_link">https://www.cdc.gov/diabetes/data/countydata/countydataindicators.html</Annotation>
+        <Annotation name="dataset_name">CDC Wonder</Annotation>
+        <Annotation name="topic">Health Status</Annotation>
+    </Annotations>
+
+    <Table name="diabetes" schema="cdc_wonder"/>
+
+    <Dimension name="Year">
+        <Annotations>
+            <Annotation name="dim_type">TIME</Annotation>
+        </Annotations>
+         <Hierarchy hasAll="true">
+            <Level name="Year" column="year" type="Numeric" levelType="TimeYears" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension foreignKey="county_fips" name="County">
+        <Annotations>
+            <Annotation name="dim_type">County</Annotation>
+        </Annotations>
+         <Hierarchy primaryKey="geoid" name="County" hasAll="true">
+            <Table name="counties" schema="shapes2017" />  
+            <Level name="County" column="geoid" nameColumn="name" uniqueMembers="false" />  
+        </Hierarchy> 
+    </Dimension>
+
+    <Dimension name="Measure">
+        <Annotations>
+          <Annotation name="dim_type">Measure</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true">
+          <Level name="Category" column="measure" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
+
+    <Measure name="Number" column="number" aggregator="sum" />
+    <Measure name="Percent" column="percent" aggregator="avg" />
+    <Measure name="Lower Confidence Limit" column="lower_confidence_limit" aggregator="avg" />
+    <Measure name="Upper Confidence Limit" column="upper_confidence_limit" aggregator="avg" />
+    <Measure name="Age-adjusted Percent" column="adj_percent" aggregator="avg" />
+    <Measure name="Age-adjusted Lower Confidence Limit" column="adj_lower_confidence_limit" aggregator="avg" />
+    <Measure name="Age-adjusted Upper Confidence Limit" column="adj_upper_confidence_limit" aggregator="avg" />
+    <Measure name="Number (Men)" column="number" aggregator="sum" />
+    <Measure name="Percent (Men)" column="percent" aggregator="avg" />
+    <Measure name="Lower Confidence Limit (Men)" column="lower_confidence_limit" aggregator="avg" />
+    <Measure name="Upper Confidence Limit (Men)" column="upper_confidence_limit" aggregator="avg" />
+    <Measure name="Age-adjusted Percent (Men)" column="adj_percent" aggregator="avg" />
+    <Measure name="Age-adjusted Lower Confidence Limit (Men)" column="adj_lower_confidence_limit" aggregator="avg" />
+    <Measure name="Age-adjusted Upper Confidence Limit (Men)" column="adj_upper_confidence_limit" aggregator="avg" />
+    <Measure name="Number (Women)" column="number" aggregator="sum" />
+    <Measure name="Percent (Women)" column="percent" aggregator="avg" />
+    <Measure name="Lower Confidence Limit (Women)" column="lower_confidence_limit" aggregator="avg" />
+    <Measure name="Upper Confidence Limit (Women)" column="upper_confidence_limit" aggregator="avg" />
+    <Measure name="Age-adjusted Percent (Women)" column="adj_percent" aggregator="avg" />
+    <Measure name="Age-adjusted Lower Confidence Limit (Women)" column="adj_lower_confidence_limit" aggregator="avg" />
+    <Measure name="Age-adjusted Upper Confidence Limit (Women)" column="adj_upper_confidence_limit" aggregator="avg" />
+    <Measure name="Rate per 100" column="rate_per_100" aggregator="avg" />
+    <Measure name="Age-adjusted Rate per 100" column="adj_rate_per_100" aggregator="avg" />
+</Cube>
