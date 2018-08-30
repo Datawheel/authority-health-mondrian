@@ -270,6 +270,42 @@
     <Measure name="High Confidence Limit" column="high_confidence_limit" aggregator="sum" />   
     <Measure name="Population Count" column="population_count" aggregator="sum" />  
 </Cube>
+<Cube name="Feeding America">
+    <Annotations>
+        <Annotation name="source_name">Feeding America: Map the Meal Gap</Annotation>
+        <Annotation name="source_link">http://www.feedingamerica.org/</Annotation>
+        <Annotation name="dataset_name"></Annotation>
+        <Annotation name="topic">Environmental</Annotation>
+    </Annotations>
+
+    <Table name="feeding_america" schema="feeding_america"/>
+
+    <Dimension name="Year">
+        <Annotations>
+            <Annotation name="dim_type">TIME</Annotation>
+        </Annotations>
+         <Hierarchy hasAll="true">
+            <Level name="Year" column="year" type="Numeric" levelType="TimeYears" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension foreignKey="county" name="County">
+        <Annotations>
+            <Annotation name="dim_type">County</Annotation>
+        </Annotations>
+         <Hierarchy primaryKey="geoid" name="County" hasAll="true">
+            <Table name="counties" schema="shapes2017" />  
+            <Level name="County" column="geoid" nameColumn="name" uniqueMembers="false" />  
+        </Hierarchy> 
+    </Dimension>
+
+    <Measure name="Food Insecurity Rate" column="food_insecurity_rate" aggregator="avg" />
+    <Measure name="Total Population Under 18" column="population_under_18" aggregator="sum" />
+    <Measure name="Child Food Insecurity Rate" column="child_food_insecurity_rate" aggregator="avg" />
+    <Measure name="Estimated Total Food Insecure Children" column="estimated_food_insecure_children" aggregator="sum" />
+    <Measure name="Percent Eligible for Federal Nuttrition Assistance" column="federal_nutrition_assistance_eligible_pct" aggregator="avg" />
+    <Measure name="Percent Ineligible for Federal Nuttrition Assistance" column="federal_nutrition_assistance_ineligible_pct" aggregator="avg" />
+</Cube>
 <Cube name="VCU - Life Expectancy at Birth">
     <Annotations>
       <Annotation name="source_name">Virginia Commonwealth University Center on Society and Health</Annotation>
