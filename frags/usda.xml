@@ -7,6 +7,15 @@
     </Annotations>
 
     <Table name="usda" schema="usda"/>
+
+    <Dimension name="Year">
+        <Annotations>
+            <Annotation name="dim_type">TIME</Annotation>
+        </Annotations>
+         <Hierarchy hasAll="true">
+            <Level name="Year" column="year" type="Numeric" levelType="TimeYears" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
      
     <Dimension foreignKey="fips" name="County">
         <Annotations>
@@ -18,6 +27,5 @@
         </Hierarchy> 
     </Dimension>
 
-    <Measure name="Total Farmer's Markets in 2009" column="number_of_farmers_markets_2009" aggregator="sum" />
-    <Measure name="Total Farmer's Markets in 2016" column="number_of_farmers_markets_2016" aggregator="sum" />
+    <Measure name="Total Farmer's Markets" column="number_of_farmers_markets" aggregator="sum" />
 </Cube>
