@@ -1,0 +1,35 @@
+<Cube name="BLS - Unemployment">
+    <Annotations>
+        <Annotation name="source_name">Bureau of Labor Statistics: Unemployment</Annotation>
+        <Annotation name="source_link">https://www.bls.gov/lau/</Annotation>
+        <Annotation name="dataset_name">BLS: Unemployment</Annotation>
+        <Annotation name="topic">Unemployment</Annotation>
+    </Annotations>
+
+    <Table name="bls" schema="bls"/>
+     
+    <Dimension name="Year">
+        <Annotations>
+            <Annotation name="dim_type">TIME</Annotation>
+        </Annotations>
+         <Hierarchy hasAll="true">
+            <Level name="Year" column="year" type="Numeric" levelType="TimeYears" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension foreignKey="geoid" name="County">
+        <Annotations>
+            <Annotation name="dim_type">County</Annotation>
+        </Annotations>
+         <Hierarchy primaryKey="geoid" name="County" hasAll="true">
+            <Table name="counties" schema="shapes2017" />  
+            <Level name="County" column="geoid" nameColumn="name" uniqueMembers="false" />  
+        </Hierarchy> 
+    </Dimension>
+
+    <Measure name="Labor Force" column="labor_force" aggregator="sum" />
+    <Measure name="Employed" column="employed" aggregator="sum" />
+    <Measure name="Unemployed" column="unemployed" aggregator="sum" />
+    <!-- TODO: Add another measure with an overall unemployment rate -->
+    <Measure name="Unemployment Rate" column="unemployment_rate" aggregator="avg" />
+</Cube>

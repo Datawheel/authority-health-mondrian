@@ -1,2452 +1,151 @@
 <Schema name="authority_health">
-<Cube name="500C - Core preventive services for older men">
-    <Annotations> 
-        <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>   
-        <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>   
-        <Annotation name="dataset_name">Core preventive services for older men</Annotation>   
-        <Annotation name="topic">Health</Annotation>   
-        <Annotation name="subtopic">Risk Factors</Annotation>   
-        <Annotation name="measure">Older adult men aged &gt;=65 Years who are up to date on a core set of clinical preventive services: Flu shot past Year, PPV shot ever, Colorectal cancer screening</Annotation>   
-        <Annotation name="measure_id">COREM</Annotation>   
-        <Annotation name="category">Prevention</Annotation>   
-        <Annotation name="category_id">PREVENT</Annotation>  
-    </Annotations>
-
-    <Table name="core_preventive_services_for_older_men" schema="cities_500"/>
-     
-    <Dimension foreignKey="" name="Year">
-        <Annotations>
-            <Annotation name="dim_type">TIME</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">  
-            <Level name="Year" column="year" type="Numeric" levelType="TimeYears" nameColumn="" uniqueMembers="true" />  
-        </Hierarchy> 
-    </Dimension>   
-    <Dimension foreignKey="city_fips" name="City">
-        <Annotations>
-            <Annotation name="dim_type">City</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="geoid" foreignKey="" name="City" hasAll="true">
-            <Table name="places" schema="shapes2017" />  
-            <Level name="City" column="geoid" type="" levelType="" nameColumn="name" uniqueMembers="false" />  
-        </Hierarchy> 
-    </Dimension>   
-    <Dimension foreignKey="tract_fips" name="Tract">
-        <Annotations>
-            <Annotation name="dim_type">Tract</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="geoid" foreignKey="" name="Tract" hasAll="true">
-            <Table name="tracts" schema="shapes2017" />  
-            <Level name="Tract" column="geoid" type="" levelType="" nameColumn="name" uniqueMembers="false" />  
-        </Hierarchy> 
-    </Dimension>   
-    <Dimension foreignKey="" name="Core preventive services for older men">
-        <Annotations>
-            <Annotation name="dim_type">Measure</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">  
-            <Level name="Measure" column="short_question_text" type="String" levelType="" nameColumn="" uniqueMembers="true" />  
-        </Hierarchy> 
-    </Dimension>  
-     
-    <Measure name="Data Value" column="data_value" aggregator="sum" />   
-    <Measure name="Low Confidence Limit" column="low_confidence_limit" aggregator="sum" />   
-    <Measure name="High Confidence Limit" column="high_confidence_limit" aggregator="sum" />   
-    <Measure name="Population Count" column="population_count" aggregator="sum" />  
-</Cube><Cube name="500C - Binge Drinking">
-    <Annotations> 
-        <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>   
-        <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>   
-        <Annotation name="dataset_name">Binge Drinking</Annotation>   
-        <Annotation name="topic">Health</Annotation>   
-        <Annotation name="subtopic">Risk Factors</Annotation>   
-        <Annotation name="measure">Binge drinking among adults aged &gt;=18 Years</Annotation>   
-        <Annotation name="measure_id">BINGE</Annotation>   
-        <Annotation name="category">Unhealthy Behaviors</Annotation>   
-        <Annotation name="category_id">UNHBEH</Annotation>  
-    </Annotations>
-
-    <Table name="binge_drinking" schema="cities_500"/>
-     
-    <Dimension foreignKey="" name="Year">
-        <Annotations>
-            <Annotation name="dim_type">TIME</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">  
-            <Level name="Year" column="year" type="Numeric" levelType="TimeYears" nameColumn="" uniqueMembers="true" />  
-        </Hierarchy> 
-    </Dimension>   
-    <Dimension foreignKey="city_fips" name="City">
-        <Annotations>
-            <Annotation name="dim_type">City</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="geoid" foreignKey="" name="City" hasAll="true">
-            <Table name="places" schema="shapes2017" />  
-            <Level name="City" column="geoid" type="" levelType="" nameColumn="name" uniqueMembers="false" />  
-        </Hierarchy> 
-    </Dimension>   
-    <Dimension foreignKey="tract_fips" name="Tract">
-        <Annotations>
-            <Annotation name="dim_type">Tract</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="geoid" foreignKey="" name="Tract" hasAll="true">
-            <Table name="tracts" schema="shapes2017" />  
-            <Level name="Tract" column="geoid" type="" levelType="" nameColumn="name" uniqueMembers="false" />  
-        </Hierarchy> 
-    </Dimension>   
-    <Dimension foreignKey="" name="Binge Drinking">
-        <Annotations>
-            <Annotation name="dim_type">Measure</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">  
-            <Level name="Measure" column="short_question_text" type="String" levelType="" nameColumn="" uniqueMembers="true" />  
-        </Hierarchy> 
-    </Dimension>  
-     
-    <Measure name="Data Value" column="data_value" aggregator="sum" />   
-    <Measure name="Low Confidence Limit" column="low_confidence_limit" aggregator="sum" />   
-    <Measure name="High Confidence Limit" column="high_confidence_limit" aggregator="sum" />   
-    <Measure name="Population Count" column="population_count" aggregator="sum" />  
-</Cube><Cube name="500C - Obesity">
-    <Annotations> 
-        <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>   
-        <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>   
-        <Annotation name="dataset_name">Obesity</Annotation>   
-        <Annotation name="topic">Health</Annotation>   
-        <Annotation name="subtopic">Risk Factors</Annotation>   
-        <Annotation name="measure">Obesity among adults aged &gt;=18 Years</Annotation>   
-        <Annotation name="measure_id">OBESITY</Annotation>   
-        <Annotation name="category">Unhealthy Behaviors</Annotation>   
-        <Annotation name="category_id">UNHBEH</Annotation>  
-    </Annotations>
-
-    <Table name="obesity" schema="cities_500"/>
-     
-    <Dimension foreignKey="" name="Year">
-        <Annotations>
-            <Annotation name="dim_type">TIME</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">  
-            <Level name="Year" column="year" type="Numeric" levelType="TimeYears" nameColumn="" uniqueMembers="true" />  
-        </Hierarchy> 
-    </Dimension>   
-    <Dimension foreignKey="city_fips" name="City">
-        <Annotations>
-            <Annotation name="dim_type">City</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="geoid" foreignKey="" name="City" hasAll="true">
-            <Table name="places" schema="shapes2017" />  
-            <Level name="City" column="geoid" type="" levelType="" nameColumn="name" uniqueMembers="false" />  
-        </Hierarchy> 
-    </Dimension>   
-    <Dimension foreignKey="tract_fips" name="Tract">
-        <Annotations>
-            <Annotation name="dim_type">Tract</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="geoid" foreignKey="" name="Tract" hasAll="true">
-            <Table name="tracts" schema="shapes2017" />  
-            <Level name="Tract" column="geoid" type="" levelType="" nameColumn="name" uniqueMembers="false" />  
-        </Hierarchy> 
-    </Dimension>   
-    <Dimension foreignKey="" name="Obesity">
-        <Annotations>
-            <Annotation name="dim_type">Measure</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">  
-            <Level name="Measure" column="short_question_text" type="String" levelType="" nameColumn="" uniqueMembers="true" />  
-        </Hierarchy> 
-    </Dimension>  
-     
-    <Measure name="Data Value" column="data_value" aggregator="sum" />   
-    <Measure name="Low Confidence Limit" column="low_confidence_limit" aggregator="sum" />   
-    <Measure name="High Confidence Limit" column="high_confidence_limit" aggregator="sum" />   
-    <Measure name="Population Count" column="population_count" aggregator="sum" />  
-</Cube><Cube name="500C - COPD">
-    <Annotations> 
-        <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>   
-        <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>   
-        <Annotation name="dataset_name">COPD</Annotation>   
-        <Annotation name="topic">Health</Annotation>   
-        <Annotation name="subtopic">Risk Factors</Annotation>   
-        <Annotation name="measure">Chronic obstructive pulmonary disease among adults aged &gt;=18 Years</Annotation>   
-        <Annotation name="measure_id">COPD</Annotation>   
-        <Annotation name="category">Health Outcomes</Annotation>   
-        <Annotation name="category_id">HLTHOUT</Annotation>  
-    </Annotations>
-
-    <Table name="copd" schema="cities_500"/>
-     
-    <Dimension foreignKey="" name="Year">
-        <Annotations>
-            <Annotation name="dim_type">TIME</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">  
-            <Level name="Year" column="year" type="Numeric" levelType="TimeYears" nameColumn="" uniqueMembers="true" />  
-        </Hierarchy> 
-    </Dimension>   
-    <Dimension foreignKey="city_fips" name="City">
-        <Annotations>
-            <Annotation name="dim_type">City</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="geoid" foreignKey="" name="City" hasAll="true">
-            <Table name="places" schema="shapes2017" />  
-            <Level name="City" column="geoid" type="" levelType="" nameColumn="name" uniqueMembers="false" />  
-        </Hierarchy> 
-    </Dimension>   
-    <Dimension foreignKey="tract_fips" name="Tract">
-        <Annotations>
-            <Annotation name="dim_type">Tract</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="geoid" foreignKey="" name="Tract" hasAll="true">
-            <Table name="tracts" schema="shapes2017" />  
-            <Level name="Tract" column="geoid" type="" levelType="" nameColumn="name" uniqueMembers="false" />  
-        </Hierarchy> 
-    </Dimension>   
-    <Dimension foreignKey="" name="COPD">
-        <Annotations>
-            <Annotation name="dim_type">Measure</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">  
-            <Level name="Measure" column="short_question_text" type="String" levelType="" nameColumn="" uniqueMembers="true" />  
-        </Hierarchy> 
-    </Dimension>  
-     
-    <Measure name="Data Value" column="data_value" aggregator="sum" />   
-    <Measure name="Low Confidence Limit" column="low_confidence_limit" aggregator="sum" />   
-    <Measure name="High Confidence Limit" column="high_confidence_limit" aggregator="sum" />   
-    <Measure name="Population Count" column="population_count" aggregator="sum" />  
-</Cube><Cube name="500C - Health Insurance">
-    <Annotations> 
-        <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>   
-        <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>   
-        <Annotation name="dataset_name">Health Insurance</Annotation>   
-        <Annotation name="topic">Health</Annotation>   
-        <Annotation name="subtopic">Risk Factors</Annotation>   
-        <Annotation name="measure">Current lack of health insurance among adults aged 18–64 Years</Annotation>   
-        <Annotation name="measure_id">ACCESS2</Annotation>   
-        <Annotation name="category">Prevention</Annotation>   
-        <Annotation name="category_id">PREVENT</Annotation>  
-    </Annotations>
-
-    <Table name="health_insurance" schema="cities_500"/>
-     
-    <Dimension foreignKey="" name="Year">
-        <Annotations>
-            <Annotation name="dim_type">TIME</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">  
-            <Level name="Year" column="year" type="Numeric" levelType="TimeYears" nameColumn="" uniqueMembers="true" />  
-        </Hierarchy> 
-    </Dimension>   
-    <Dimension foreignKey="city_fips" name="City">
-        <Annotations>
-            <Annotation name="dim_type">City</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="geoid" foreignKey="" name="City" hasAll="true">
-            <Table name="places" schema="shapes2017" />  
-            <Level name="City" column="geoid" type="" levelType="" nameColumn="name" uniqueMembers="false" />  
-        </Hierarchy> 
-    </Dimension>   
-    <Dimension foreignKey="tract_fips" name="Tract">
-        <Annotations>
-            <Annotation name="dim_type">Tract</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="geoid" foreignKey="" name="Tract" hasAll="true">
-            <Table name="tracts" schema="shapes2017" />  
-            <Level name="Tract" column="geoid" type="" levelType="" nameColumn="name" uniqueMembers="false" />  
-        </Hierarchy> 
-    </Dimension>   
-    <Dimension foreignKey="" name="Health Insurance">
-        <Annotations>
-            <Annotation name="dim_type">Measure</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">  
-            <Level name="Measure" column="short_question_text" type="String" levelType="" nameColumn="" uniqueMembers="true" />  
-        </Hierarchy> 
-    </Dimension>  
-     
-    <Measure name="Data Value" column="data_value" aggregator="sum" />   
-    <Measure name="Low Confidence Limit" column="low_confidence_limit" aggregator="sum" />   
-    <Measure name="High Confidence Limit" column="high_confidence_limit" aggregator="sum" />   
-    <Measure name="Population Count" column="population_count" aggregator="sum" />  
-</Cube><Cube name="500C - Coronary Heart Disease">
-    <Annotations> 
-        <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>   
-        <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>   
-        <Annotation name="dataset_name">Coronary Heart Disease</Annotation>   
-        <Annotation name="topic">Health</Annotation>   
-        <Annotation name="subtopic">Risk Factors</Annotation>   
-        <Annotation name="measure">Coronary heart disease among adults aged &gt;=18 Years</Annotation>   
-        <Annotation name="measure_id">CHD</Annotation>   
-        <Annotation name="category">Health Outcomes</Annotation>   
-        <Annotation name="category_id">HLTHOUT</Annotation>  
-    </Annotations>
-
-    <Table name="coronary_heart_disease" schema="cities_500"/>
-     
-    <Dimension foreignKey="" name="Year">
-        <Annotations>
-            <Annotation name="dim_type">TIME</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">  
-            <Level name="Year" column="year" type="Numeric" levelType="TimeYears" nameColumn="" uniqueMembers="true" />  
-        </Hierarchy> 
-    </Dimension>   
-    <Dimension foreignKey="city_fips" name="City">
-        <Annotations>
-            <Annotation name="dim_type">City</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="geoid" foreignKey="" name="City" hasAll="true">
-            <Table name="places" schema="shapes2017" />  
-            <Level name="City" column="geoid" type="" levelType="" nameColumn="name" uniqueMembers="false" />  
-        </Hierarchy> 
-    </Dimension>   
-    <Dimension foreignKey="tract_fips" name="Tract">
-        <Annotations>
-            <Annotation name="dim_type">Tract</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="geoid" foreignKey="" name="Tract" hasAll="true">
-            <Table name="tracts" schema="shapes2017" />  
-            <Level name="Tract" column="geoid" type="" levelType="" nameColumn="name" uniqueMembers="false" />  
-        </Hierarchy> 
-    </Dimension>   
-    <Dimension foreignKey="" name="Coronary Heart Disease">
-        <Annotations>
-            <Annotation name="dim_type">Measure</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">  
-            <Level name="Measure" column="short_question_text" type="String" levelType="" nameColumn="" uniqueMembers="true" />  
-        </Hierarchy> 
-    </Dimension>  
-     
-    <Measure name="Data Value" column="data_value" aggregator="sum" />   
-    <Measure name="Low Confidence Limit" column="low_confidence_limit" aggregator="sum" />   
-    <Measure name="High Confidence Limit" column="high_confidence_limit" aggregator="sum" />   
-    <Measure name="Population Count" column="population_count" aggregator="sum" />  
-</Cube><Cube name="500C - Physical Inactivity">
-    <Annotations> 
-        <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>   
-        <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>   
-        <Annotation name="dataset_name">Physical Inactivity</Annotation>   
-        <Annotation name="topic">Health</Annotation>   
-        <Annotation name="subtopic">Risk Factors</Annotation>   
-        <Annotation name="measure">No leisure-time physical activity among adults aged &gt;=18 Years</Annotation>   
-        <Annotation name="measure_id">LPA</Annotation>   
-        <Annotation name="category">Unhealthy Behaviors</Annotation>   
-        <Annotation name="category_id">UNHBEH</Annotation>  
-    </Annotations>
-
-    <Table name="physical_inactivity" schema="cities_500"/>
-     
-    <Dimension foreignKey="" name="Year">
-        <Annotations>
-            <Annotation name="dim_type">TIME</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">  
-            <Level name="Year" column="year" type="Numeric" levelType="TimeYears" nameColumn="" uniqueMembers="true" />  
-        </Hierarchy> 
-    </Dimension>   
-    <Dimension foreignKey="city_fips" name="City">
-        <Annotations>
-            <Annotation name="dim_type">City</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="geoid" foreignKey="" name="City" hasAll="true">
-            <Table name="places" schema="shapes2017" />  
-            <Level name="City" column="geoid" type="" levelType="" nameColumn="name" uniqueMembers="false" />  
-        </Hierarchy> 
-    </Dimension>   
-    <Dimension foreignKey="tract_fips" name="Tract">
-        <Annotations>
-            <Annotation name="dim_type">Tract</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="geoid" foreignKey="" name="Tract" hasAll="true">
-            <Table name="tracts" schema="shapes2017" />  
-            <Level name="Tract" column="geoid" type="" levelType="" nameColumn="name" uniqueMembers="false" />  
-        </Hierarchy> 
-    </Dimension>   
-    <Dimension foreignKey="" name="Physical Inactivity">
-        <Annotations>
-            <Annotation name="dim_type">Measure</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">  
-            <Level name="Measure" column="short_question_text" type="String" levelType="" nameColumn="" uniqueMembers="true" />  
-        </Hierarchy> 
-    </Dimension>  
-     
-    <Measure name="Data Value" column="data_value" aggregator="sum" />   
-    <Measure name="Low Confidence Limit" column="low_confidence_limit" aggregator="sum" />   
-    <Measure name="High Confidence Limit" column="high_confidence_limit" aggregator="sum" />   
-    <Measure name="Population Count" column="population_count" aggregator="sum" />  
-</Cube><Cube name="500C - Teeth Loss">
-    <Annotations> 
-        <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>   
-        <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>   
-        <Annotation name="dataset_name">Teeth Loss</Annotation>   
-        <Annotation name="topic">Health</Annotation>   
-        <Annotation name="subtopic">Risk Factors</Annotation>   
-        <Annotation name="measure">All teeth lost among adults aged &gt;=65 Years</Annotation>   
-        <Annotation name="measure_id">TEETHLOST</Annotation>   
-        <Annotation name="category">Health Outcomes</Annotation>   
-        <Annotation name="category_id">HLTHOUT</Annotation>  
-    </Annotations>
-
-    <Table name="teeth_loss" schema="cities_500"/>
-     
-    <Dimension foreignKey="" name="Year">
-        <Annotations>
-            <Annotation name="dim_type">TIME</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">  
-            <Level name="Year" column="year" type="Numeric" levelType="TimeYears" nameColumn="" uniqueMembers="true" />  
-        </Hierarchy> 
-    </Dimension>   
-    <Dimension foreignKey="city_fips" name="City">
-        <Annotations>
-            <Annotation name="dim_type">City</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="geoid" foreignKey="" name="City" hasAll="true">
-            <Table name="places" schema="shapes2017" />  
-            <Level name="City" column="geoid" type="" levelType="" nameColumn="name" uniqueMembers="false" />  
-        </Hierarchy> 
-    </Dimension>   
-    <Dimension foreignKey="tract_fips" name="Tract">
-        <Annotations>
-            <Annotation name="dim_type">Tract</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="geoid" foreignKey="" name="Tract" hasAll="true">
-            <Table name="tracts" schema="shapes2017" />  
-            <Level name="Tract" column="geoid" type="" levelType="" nameColumn="name" uniqueMembers="false" />  
-        </Hierarchy> 
-    </Dimension>   
-    <Dimension foreignKey="" name="Teeth Loss">
-        <Annotations>
-            <Annotation name="dim_type">Measure</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">  
-            <Level name="Measure" column="short_question_text" type="String" levelType="" nameColumn="" uniqueMembers="true" />  
-        </Hierarchy> 
-    </Dimension>  
-     
-    <Measure name="Data Value" column="data_value" aggregator="sum" />   
-    <Measure name="Low Confidence Limit" column="low_confidence_limit" aggregator="sum" />   
-    <Measure name="High Confidence Limit" column="high_confidence_limit" aggregator="sum" />   
-    <Measure name="Population Count" column="population_count" aggregator="sum" />  
-</Cube><Cube name="500C - High Blood Pressure">
-    <Annotations> 
-        <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>   
-        <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>   
-        <Annotation name="dataset_name">High Blood Pressure</Annotation>   
-        <Annotation name="topic">Health</Annotation>   
-        <Annotation name="subtopic">Risk Factors</Annotation>   
-        <Annotation name="measure">High blood pressure among adults aged &gt;=18 Years</Annotation>   
-        <Annotation name="measure_id">BPHIGH</Annotation>   
-        <Annotation name="category">Health Outcomes</Annotation>   
-        <Annotation name="category_id">HLTHOUT</Annotation>  
-    </Annotations>
-
-    <Table name="high_blood_pressure" schema="cities_500"/>
-     
-    <Dimension foreignKey="" name="Year">
-        <Annotations>
-            <Annotation name="dim_type">TIME</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">  
-            <Level name="Year" column="year" type="Numeric" levelType="TimeYears" nameColumn="" uniqueMembers="true" />  
-        </Hierarchy> 
-    </Dimension>   
-    <Dimension foreignKey="city_fips" name="City">
-        <Annotations>
-            <Annotation name="dim_type">City</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="geoid" foreignKey="" name="City" hasAll="true">
-            <Table name="places" schema="shapes2017" />  
-            <Level name="City" column="geoid" type="" levelType="" nameColumn="name" uniqueMembers="false" />  
-        </Hierarchy> 
-    </Dimension>   
-    <Dimension foreignKey="tract_fips" name="Tract">
-        <Annotations>
-            <Annotation name="dim_type">Tract</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="geoid" foreignKey="" name="Tract" hasAll="true">
-            <Table name="tracts" schema="shapes2017" />  
-            <Level name="Tract" column="geoid" type="" levelType="" nameColumn="name" uniqueMembers="false" />  
-        </Hierarchy> 
-    </Dimension>   
-    <Dimension foreignKey="" name="High Blood Pressure">
-        <Annotations>
-            <Annotation name="dim_type">Measure</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">  
-            <Level name="Measure" column="short_question_text" type="String" levelType="" nameColumn="" uniqueMembers="true" />  
-        </Hierarchy> 
-    </Dimension>  
-     
-    <Measure name="Data Value" column="data_value" aggregator="sum" />   
-    <Measure name="Low Confidence Limit" column="low_confidence_limit" aggregator="sum" />   
-    <Measure name="High Confidence Limit" column="high_confidence_limit" aggregator="sum" />   
-    <Measure name="Population Count" column="population_count" aggregator="sum" />  
-</Cube><Cube name="500C - Stroke">
-    <Annotations> 
-        <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>   
-        <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>   
-        <Annotation name="dataset_name">Stroke</Annotation>   
-        <Annotation name="topic">Health</Annotation>   
-        <Annotation name="subtopic">Risk Factors</Annotation>   
-        <Annotation name="measure">Stroke among adults aged &gt;=18 Years</Annotation>   
-        <Annotation name="measure_id">STROKE</Annotation>   
-        <Annotation name="category">Health Outcomes</Annotation>   
-        <Annotation name="category_id">HLTHOUT</Annotation>  
-    </Annotations>
-
-    <Table name="had_stroke" schema="cities_500"/>
-     
-    <Dimension foreignKey="" name="Year">
-        <Annotations>
-            <Annotation name="dim_type">TIME</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">  
-            <Level name="Year" column="year" type="Numeric" levelType="TimeYears" nameColumn="" uniqueMembers="true" />  
-        </Hierarchy> 
-    </Dimension>   
-    <Dimension foreignKey="city_fips" name="City">
-        <Annotations>
-            <Annotation name="dim_type">City</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="geoid" foreignKey="" name="City" hasAll="true">
-            <Table name="places" schema="shapes2017" />  
-            <Level name="City" column="geoid" type="" levelType="" nameColumn="name" uniqueMembers="false" />  
-        </Hierarchy> 
-    </Dimension>   
-    <Dimension foreignKey="tract_fips" name="Tract">
-        <Annotations>
-            <Annotation name="dim_type">Tract</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="geoid" foreignKey="" name="Tract" hasAll="true">
-            <Table name="tracts" schema="shapes2017" />  
-            <Level name="Tract" column="geoid" type="" levelType="" nameColumn="name" uniqueMembers="false" />  
-        </Hierarchy> 
-    </Dimension>   
-    <Dimension foreignKey="" name="Stroke">
-        <Annotations>
-            <Annotation name="dim_type">Measure</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">  
-            <Level name="Measure" column="short_question_text" type="String" levelType="" nameColumn="" uniqueMembers="true" />  
-        </Hierarchy> 
-    </Dimension>  
-     
-    <Measure name="Data Value" column="data_value" aggregator="sum" />   
-    <Measure name="Low Confidence Limit" column="low_confidence_limit" aggregator="sum" />   
-    <Measure name="High Confidence Limit" column="high_confidence_limit" aggregator="sum" />   
-    <Measure name="Population Count" column="population_count" aggregator="sum" />  
-</Cube><Cube name="500C - Sleep &lt; 7 hours">
-    <Annotations> 
-        <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>   
-        <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>   
-        <Annotation name="dataset_name">Sleep &lt; 7 hours</Annotation>   
-        <Annotation name="topic">Health</Annotation>   
-        <Annotation name="subtopic">Risk Factors</Annotation>   
-        <Annotation name="measure">Sleeping less than 7 hours among adults aged &gt;=18 Years</Annotation>   
-        <Annotation name="measure_id">SLEEP</Annotation>   
-        <Annotation name="category">Unhealthy Behaviors</Annotation>   
-        <Annotation name="category_id">UNHBEH</Annotation>  
-    </Annotations>
-
-    <Table name="sleep_less_than_7_hours" schema="cities_500"/>
-     
-    <Dimension foreignKey="" name="Year">
-        <Annotations>
-            <Annotation name="dim_type">TIME</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">  
-            <Level name="Year" column="year" type="Numeric" levelType="TimeYears" nameColumn="" uniqueMembers="true" />  
-        </Hierarchy> 
-    </Dimension>   
-    <Dimension foreignKey="city_fips" name="City">
-        <Annotations>
-            <Annotation name="dim_type">City</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="geoid" foreignKey="" name="City" hasAll="true">
-            <Table name="places" schema="shapes2017" />  
-            <Level name="City" column="geoid" type="" levelType="" nameColumn="name" uniqueMembers="false" />  
-        </Hierarchy> 
-    </Dimension>   
-    <Dimension foreignKey="tract_fips" name="Tract">
-        <Annotations>
-            <Annotation name="dim_type">Tract</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="geoid" foreignKey="" name="Tract" hasAll="true">
-            <Table name="tracts" schema="shapes2017" />  
-            <Level name="Tract" column="geoid" type="" levelType="" nameColumn="name" uniqueMembers="false" />  
-        </Hierarchy> 
-    </Dimension>   
-    <Dimension foreignKey="" name="Sleep &lt; 7 hours">
-        <Annotations>
-            <Annotation name="dim_type">Measure</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">  
-            <Level name="Measure" column="short_question_text" type="String" levelType="" nameColumn="" uniqueMembers="true" />  
-        </Hierarchy> 
-    </Dimension>  
-     
-    <Measure name="Data Value" column="data_value" aggregator="sum" />   
-    <Measure name="Low Confidence Limit" column="low_confidence_limit" aggregator="sum" />   
-    <Measure name="High Confidence Limit" column="high_confidence_limit" aggregator="sum" />   
-    <Measure name="Population Count" column="population_count" aggregator="sum" />  
-</Cube><Cube name="500C - High Cholesterol">
-    <Annotations> 
-        <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>   
-        <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>   
-        <Annotation name="dataset_name">High Cholesterol</Annotation>   
-        <Annotation name="topic">Health</Annotation>   
-        <Annotation name="subtopic">Risk Factors</Annotation>   
-        <Annotation name="measure">High cholesterol among adults aged &gt;=18 Years who have been screened in the past 5 Years</Annotation>   
-        <Annotation name="measure_id">HIGHCHOL</Annotation>   
-        <Annotation name="category">Health Outcomes</Annotation>   
-        <Annotation name="category_id">HLTHOUT</Annotation>  
-    </Annotations>
-
-    <Table name="high_cholesterol" schema="cities_500"/>
-     
-    <Dimension foreignKey="" name="Year">
-        <Annotations>
-            <Annotation name="dim_type">TIME</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">  
-            <Level name="Year" column="year" type="Numeric" levelType="TimeYears" nameColumn="" uniqueMembers="true" />  
-        </Hierarchy> 
-    </Dimension>   
-    <Dimension foreignKey="city_fips" name="City">
-        <Annotations>
-            <Annotation name="dim_type">City</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="geoid" foreignKey="" name="City" hasAll="true">
-            <Table name="places" schema="shapes2017" />  
-            <Level name="City" column="geoid" type="" levelType="" nameColumn="name" uniqueMembers="false" />  
-        </Hierarchy> 
-    </Dimension>   
-    <Dimension foreignKey="tract_fips" name="Tract">
-        <Annotations>
-            <Annotation name="dim_type">Tract</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="geoid" foreignKey="" name="Tract" hasAll="true">
-            <Table name="tracts" schema="shapes2017" />  
-            <Level name="Tract" column="geoid" type="" levelType="" nameColumn="name" uniqueMembers="false" />  
-        </Hierarchy> 
-    </Dimension>   
-    <Dimension foreignKey="" name="High Cholesterol">
-        <Annotations>
-            <Annotation name="dim_type">Measure</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">  
-            <Level name="Measure" column="short_question_text" type="String" levelType="" nameColumn="" uniqueMembers="true" />  
-        </Hierarchy> 
-    </Dimension>  
-     
-    <Measure name="Data Value" column="data_value" aggregator="sum" />   
-    <Measure name="Low Confidence Limit" column="low_confidence_limit" aggregator="sum" />   
-    <Measure name="High Confidence Limit" column="high_confidence_limit" aggregator="sum" />   
-    <Measure name="Population Count" column="population_count" aggregator="sum" />  
-</Cube><Cube name="500C - Cholesterol Screening">
-    <Annotations> 
-        <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>   
-        <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>   
-        <Annotation name="dataset_name">Cholesterol Screening</Annotation>   
-        <Annotation name="topic">Health</Annotation>   
-        <Annotation name="subtopic">Risk Factors</Annotation>   
-        <Annotation name="measure">Cholesterol screening among adults aged &gt;=18 Years</Annotation>   
-        <Annotation name="measure_id">CHOLSCREEN</Annotation>   
-        <Annotation name="category">Prevention</Annotation>   
-        <Annotation name="category_id">PREVENT</Annotation>  
-    </Annotations>
-
-    <Table name="cholesterol_screening" schema="cities_500"/>
-     
-    <Dimension foreignKey="" name="Year">
-        <Annotations>
-            <Annotation name="dim_type">TIME</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">  
-            <Level name="Year" column="year" type="Numeric" levelType="TimeYears" nameColumn="" uniqueMembers="true" />  
-        </Hierarchy> 
-    </Dimension>   
-    <Dimension foreignKey="city_fips" name="City">
-        <Annotations>
-            <Annotation name="dim_type">City</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="geoid" foreignKey="" name="City" hasAll="true">
-            <Table name="places" schema="shapes2017" />  
-            <Level name="City" column="geoid" type="" levelType="" nameColumn="name" uniqueMembers="false" />  
-        </Hierarchy> 
-    </Dimension>   
-    <Dimension foreignKey="tract_fips" name="Tract">
-        <Annotations>
-            <Annotation name="dim_type">Tract</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="geoid" foreignKey="" name="Tract" hasAll="true">
-            <Table name="tracts" schema="shapes2017" />  
-            <Level name="Tract" column="geoid" type="" levelType="" nameColumn="name" uniqueMembers="false" />  
-        </Hierarchy> 
-    </Dimension>   
-    <Dimension foreignKey="" name="Cholesterol Screening">
-        <Annotations>
-            <Annotation name="dim_type">Measure</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">  
-            <Level name="Measure" column="short_question_text" type="String" levelType="" nameColumn="" uniqueMembers="true" />  
-        </Hierarchy> 
-    </Dimension>  
-     
-    <Measure name="Data Value" column="data_value" aggregator="sum" />   
-    <Measure name="Low Confidence Limit" column="low_confidence_limit" aggregator="sum" />   
-    <Measure name="High Confidence Limit" column="high_confidence_limit" aggregator="sum" />   
-    <Measure name="Population Count" column="population_count" aggregator="sum" />  
-</Cube><Cube name="500C - Annual Checkup">
-    <Annotations> 
-        <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>   
-        <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>   
-        <Annotation name="dataset_name">Annual Checkup</Annotation>   
-        <Annotation name="topic">Health</Annotation>   
-        <Annotation name="subtopic">Risk Factors</Annotation>   
-        <Annotation name="measure">Visits to doctor for routine checkup within the past Year among adults aged &gt;=18 Years</Annotation>   
-        <Annotation name="measure_id">CHECKUP</Annotation>   
-        <Annotation name="category">Prevention</Annotation>   
-        <Annotation name="category_id">PREVENT</Annotation>  
-    </Annotations>
-
-    <Table name="annual_checkup" schema="cities_500"/>
-     
-    <Dimension foreignKey="" name="Year">
-        <Annotations>
-            <Annotation name="dim_type">TIME</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">  
-            <Level name="Year" column="year" type="Numeric" levelType="TimeYears" nameColumn="" uniqueMembers="true" />  
-        </Hierarchy> 
-    </Dimension>   
-    <Dimension foreignKey="city_fips" name="City">
-        <Annotations>
-            <Annotation name="dim_type">City</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="geoid" foreignKey="" name="City" hasAll="true">
-            <Table name="places" schema="shapes2017" />  
-            <Level name="City" column="geoid" type="" levelType="" nameColumn="name" uniqueMembers="false" />  
-        </Hierarchy> 
-    </Dimension>   
-    <Dimension foreignKey="tract_fips" name="Tract">
-        <Annotations>
-            <Annotation name="dim_type">Tract</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="geoid" foreignKey="" name="Tract" hasAll="true">
-            <Table name="tracts" schema="shapes2017" />  
-            <Level name="Tract" column="geoid" type="" levelType="" nameColumn="name" uniqueMembers="false" />  
-        </Hierarchy> 
-    </Dimension>   
-    <Dimension foreignKey="" name="Annual Checkup">
-        <Annotations>
-            <Annotation name="dim_type">Measure</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">  
-            <Level name="Measure" column="short_question_text" type="String" levelType="" nameColumn="" uniqueMembers="true" />  
-        </Hierarchy> 
-    </Dimension>  
-     
-    <Measure name="Data Value" column="data_value" aggregator="sum" />   
-    <Measure name="Low Confidence Limit" column="low_confidence_limit" aggregator="sum" />   
-    <Measure name="High Confidence Limit" column="high_confidence_limit" aggregator="sum" />   
-    <Measure name="Population Count" column="population_count" aggregator="sum" />  
-</Cube><Cube name="500C - Chronic Kidney Disease">
-    <Annotations> 
-        <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>   
-        <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>   
-        <Annotation name="dataset_name">Chronic Kidney Disease</Annotation>   
-        <Annotation name="topic">Health</Annotation>   
-        <Annotation name="subtopic">Risk Factors</Annotation>   
-        <Annotation name="measure">Chronic kidney disease among adults aged &gt;=18 Years</Annotation>   
-        <Annotation name="measure_id">KIDNEY</Annotation>   
-        <Annotation name="category">Health Outcomes</Annotation>   
-        <Annotation name="category_id">HLTHOUT</Annotation>  
-    </Annotations>
-
-    <Table name="chronic_kidney_disease" schema="cities_500"/>
-     
-    <Dimension foreignKey="" name="Year">
-        <Annotations>
-            <Annotation name="dim_type">TIME</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">  
-            <Level name="Year" column="year" type="Numeric" levelType="TimeYears" nameColumn="" uniqueMembers="true" />  
-        </Hierarchy> 
-    </Dimension>   
-    <Dimension foreignKey="city_fips" name="City">
-        <Annotations>
-            <Annotation name="dim_type">City</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="geoid" foreignKey="" name="City" hasAll="true">
-            <Table name="places" schema="shapes2017" />  
-            <Level name="City" column="geoid" type="" levelType="" nameColumn="name" uniqueMembers="false" />  
-        </Hierarchy> 
-    </Dimension>   
-    <Dimension foreignKey="tract_fips" name="Tract">
-        <Annotations>
-            <Annotation name="dim_type">Tract</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="geoid" foreignKey="" name="Tract" hasAll="true">
-            <Table name="tracts" schema="shapes2017" />  
-            <Level name="Tract" column="geoid" type="" levelType="" nameColumn="name" uniqueMembers="false" />  
-        </Hierarchy> 
-    </Dimension>   
-    <Dimension foreignKey="" name="Chronic Kidney Disease">
-        <Annotations>
-            <Annotation name="dim_type">Measure</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">  
-            <Level name="Measure" column="short_question_text" type="String" levelType="" nameColumn="" uniqueMembers="true" />  
-        </Hierarchy> 
-    </Dimension>  
-     
-    <Measure name="Data Value" column="data_value" aggregator="sum" />   
-    <Measure name="Low Confidence Limit" column="low_confidence_limit" aggregator="sum" />   
-    <Measure name="High Confidence Limit" column="high_confidence_limit" aggregator="sum" />   
-    <Measure name="Population Count" column="population_count" aggregator="sum" />  
-</Cube><Cube name="500C - Colorectal Cancer Screening">
-    <Annotations> 
-        <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>   
-        <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>   
-        <Annotation name="dataset_name">Colorectal Cancer Screening</Annotation>   
-        <Annotation name="topic">Health</Annotation>   
-        <Annotation name="subtopic">Risk Factors</Annotation>   
-        <Annotation name="measure">Fecal occult blood test, sigmoidoscopy, or colonoscopy among adults aged 50–75 Years</Annotation>   
-        <Annotation name="measure_id">COLON_SCREEN</Annotation>   
-        <Annotation name="category">Prevention</Annotation>   
-        <Annotation name="category_id">PREVENT</Annotation>  
-    </Annotations>
-
-    <Table name="colorectal_cancer_screening" schema="cities_500"/>
-     
-    <Dimension foreignKey="" name="Year">
-        <Annotations>
-            <Annotation name="dim_type">TIME</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">  
-            <Level name="Year" column="year" type="Numeric" levelType="TimeYears" nameColumn="" uniqueMembers="true" />  
-        </Hierarchy> 
-    </Dimension>   
-    <Dimension foreignKey="city_fips" name="City">
-        <Annotations>
-            <Annotation name="dim_type">City</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="geoid" foreignKey="" name="City" hasAll="true">
-            <Table name="places" schema="shapes2017" />  
-            <Level name="City" column="geoid" type="" levelType="" nameColumn="name" uniqueMembers="false" />  
-        </Hierarchy> 
-    </Dimension>   
-    <Dimension foreignKey="tract_fips" name="Tract">
-        <Annotations>
-            <Annotation name="dim_type">Tract</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="geoid" foreignKey="" name="Tract" hasAll="true">
-            <Table name="tracts" schema="shapes2017" />  
-            <Level name="Tract" column="geoid" type="" levelType="" nameColumn="name" uniqueMembers="false" />  
-        </Hierarchy> 
-    </Dimension>   
-    <Dimension foreignKey="" name="Colorectal Cancer Screening">
-        <Annotations>
-            <Annotation name="dim_type">Measure</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">  
-            <Level name="Measure" column="short_question_text" type="String" levelType="" nameColumn="" uniqueMembers="true" />  
-        </Hierarchy> 
-    </Dimension>  
-     
-    <Measure name="Data Value" column="data_value" aggregator="sum" />   
-    <Measure name="Low Confidence Limit" column="low_confidence_limit" aggregator="sum" />   
-    <Measure name="High Confidence Limit" column="high_confidence_limit" aggregator="sum" />   
-    <Measure name="Population Count" column="population_count" aggregator="sum" />  
-</Cube><Cube name="500C - Current Asthma">
-    <Annotations> 
-        <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>   
-        <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>   
-        <Annotation name="dataset_name">Current Asthma</Annotation>   
-        <Annotation name="topic">Health</Annotation>   
-        <Annotation name="subtopic">Risk Factors</Annotation>   
-        <Annotation name="measure">Current asthma among adults aged &gt;=18 Years</Annotation>   
-        <Annotation name="measure_id">CASTHMA</Annotation>   
-        <Annotation name="category">Health Outcomes</Annotation>   
-        <Annotation name="category_id">HLTHOUT</Annotation>  
-    </Annotations>
-
-    <Table name="asthma" schema="cities_500"/>
-     
-    <Dimension foreignKey="" name="Year">
-        <Annotations>
-            <Annotation name="dim_type">TIME</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">  
-            <Level name="Year" column="year" type="Numeric" levelType="TimeYears" nameColumn="" uniqueMembers="true" />  
-        </Hierarchy> 
-    </Dimension>   
-    <Dimension foreignKey="city_fips" name="City">
-        <Annotations>
-            <Annotation name="dim_type">City</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="geoid" foreignKey="" name="City" hasAll="true">
-            <Table name="places" schema="shapes2017" />  
-            <Level name="City" column="geoid" type="" levelType="" nameColumn="name" uniqueMembers="false" />  
-        </Hierarchy> 
-    </Dimension>   
-    <Dimension foreignKey="tract_fips" name="Tract">
-        <Annotations>
-            <Annotation name="dim_type">Tract</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="geoid" foreignKey="" name="Tract" hasAll="true">
-            <Table name="tracts" schema="shapes2017" />  
-            <Level name="Tract" column="geoid" type="" levelType="" nameColumn="name" uniqueMembers="false" />  
-        </Hierarchy> 
-    </Dimension>   
-    <Dimension foreignKey="" name="Current Asthma">
-        <Annotations>
-            <Annotation name="dim_type">Measure</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">  
-            <Level name="Measure" column="short_question_text" type="String" levelType="" nameColumn="" uniqueMembers="true" />  
-        </Hierarchy> 
-    </Dimension>  
-     
-    <Measure name="Data Value" column="data_value" aggregator="sum" />   
-    <Measure name="Low Confidence Limit" column="low_confidence_limit" aggregator="sum" />   
-    <Measure name="High Confidence Limit" column="high_confidence_limit" aggregator="sum" />   
-    <Measure name="Population Count" column="population_count" aggregator="sum" />  
-</Cube><Cube name="500C - Current Smoking">
-    <Annotations> 
-        <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>   
-        <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>   
-        <Annotation name="dataset_name">Current Smoking</Annotation>   
-        <Annotation name="topic">Health</Annotation>   
-        <Annotation name="subtopic">Risk Factors</Annotation>   
-        <Annotation name="measure">Current smoking among adults aged &gt;=18 Years</Annotation>   
-        <Annotation name="measure_id">CSMOKING</Annotation>   
-        <Annotation name="category">Unhealthy Behaviors</Annotation>   
-        <Annotation name="category_id">UNHBEH</Annotation>  
-    </Annotations>
-
-    <Table name="current_smoking" schema="cities_500"/>
-     
-    <Dimension foreignKey="" name="Year">
-        <Annotations>
-            <Annotation name="dim_type">TIME</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">  
-            <Level name="Year" column="year" type="Numeric" levelType="TimeYears" nameColumn="" uniqueMembers="true" />  
-        </Hierarchy> 
-    </Dimension>   
-    <Dimension foreignKey="city_fips" name="City">
-        <Annotations>
-            <Annotation name="dim_type">City</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="geoid" foreignKey="" name="City" hasAll="true">
-            <Table name="places" schema="shapes2017" />  
-            <Level name="City" column="geoid" type="" levelType="" nameColumn="name" uniqueMembers="false" />  
-        </Hierarchy> 
-    </Dimension>   
-    <Dimension foreignKey="tract_fips" name="Tract">
-        <Annotations>
-            <Annotation name="dim_type">Tract</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="geoid" foreignKey="" name="Tract" hasAll="true">
-            <Table name="tracts" schema="shapes2017" />  
-            <Level name="Tract" column="geoid" type="" levelType="" nameColumn="name" uniqueMembers="false" />  
-        </Hierarchy> 
-    </Dimension>   
-    <Dimension foreignKey="" name="Current Smoking">
-        <Annotations>
-            <Annotation name="dim_type">Measure</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">  
-            <Level name="Measure" column="short_question_text" type="String" levelType="" nameColumn="" uniqueMembers="true" />  
-        </Hierarchy> 
-    </Dimension>  
-     
-    <Measure name="Data Value" column="data_value" aggregator="sum" />   
-    <Measure name="Low Confidence Limit" column="low_confidence_limit" aggregator="sum" />   
-    <Measure name="High Confidence Limit" column="high_confidence_limit" aggregator="sum" />   
-    <Measure name="Population Count" column="population_count" aggregator="sum" />  
-</Cube><Cube name="500C - Arthritis">
-    <Annotations> 
-        <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>   
-        <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>   
-        <Annotation name="dataset_name">Arthritis</Annotation>   
-        <Annotation name="topic">Health</Annotation>   
-        <Annotation name="subtopic">Risk Factors</Annotation>   
-        <Annotation name="measure">Arthritis among adults aged &gt;=18 Years</Annotation>   
-        <Annotation name="measure_id">ARTHRITIS</Annotation>   
-        <Annotation name="category">Health Outcomes</Annotation>   
-        <Annotation name="category_id">HLTHOUT</Annotation>  
-    </Annotations>
-
-    <Table name="arthritis" schema="cities_500"/>
-     
-    <Dimension foreignKey="" name="Year">
-        <Annotations>
-            <Annotation name="dim_type">TIME</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">  
-            <Level name="Year" column="year" type="Numeric" levelType="TimeYears" nameColumn="" uniqueMembers="true" />  
-        </Hierarchy> 
-    </Dimension>   
-    <Dimension foreignKey="city_fips" name="City">
-        <Annotations>
-            <Annotation name="dim_type">City</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="geoid" foreignKey="" name="City" hasAll="true">
-            <Table name="places" schema="shapes2017" />  
-            <Level name="City" column="geoid" type="" levelType="" nameColumn="name" uniqueMembers="false" />  
-        </Hierarchy> 
-    </Dimension>   
-    <Dimension foreignKey="tract_fips" name="Tract">
-        <Annotations>
-            <Annotation name="dim_type">Tract</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="geoid" foreignKey="" name="Tract" hasAll="true">
-            <Table name="tracts" schema="shapes2017" />  
-            <Level name="Tract" column="geoid" type="" levelType="" nameColumn="name" uniqueMembers="false" />  
-        </Hierarchy> 
-    </Dimension>   
-    <Dimension foreignKey="" name="Arthritis">
-        <Annotations>
-            <Annotation name="dim_type">Measure</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">  
-            <Level name="Measure" column="short_question_text" type="String" levelType="" nameColumn="" uniqueMembers="true" />  
-        </Hierarchy> 
-    </Dimension>  
-     
-    <Measure name="Data Value" column="data_value" aggregator="sum" />   
-    <Measure name="Low Confidence Limit" column="low_confidence_limit" aggregator="sum" />   
-    <Measure name="High Confidence Limit" column="high_confidence_limit" aggregator="sum" />   
-    <Measure name="Population Count" column="population_count" aggregator="sum" />  
-</Cube><Cube name="500C - Mammography">
-    <Annotations> 
-        <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>   
-        <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>   
-        <Annotation name="dataset_name">Mammography</Annotation>   
-        <Annotation name="topic">Health</Annotation>   
-        <Annotation name="subtopic">Risk Factors</Annotation>   
-        <Annotation name="measure">Mammography use among women aged 50–74 Years</Annotation>   
-        <Annotation name="measure_id">MAMMOUSE</Annotation>   
-        <Annotation name="category">Prevention</Annotation>   
-        <Annotation name="category_id">PREVENT</Annotation>  
-    </Annotations>
-
-    <Table name="mammography" schema="cities_500"/>
-     
-    <Dimension foreignKey="" name="Year">
-        <Annotations>
-            <Annotation name="dim_type">TIME</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">  
-            <Level name="Year" column="year" type="Numeric" levelType="TimeYears" nameColumn="" uniqueMembers="true" />  
-        </Hierarchy> 
-    </Dimension>   
-    <Dimension foreignKey="city_fips" name="City">
-        <Annotations>
-            <Annotation name="dim_type">City</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="geoid" foreignKey="" name="City" hasAll="true">
-            <Table name="places" schema="shapes2017" />  
-            <Level name="City" column="geoid" type="" levelType="" nameColumn="name" uniqueMembers="false" />  
-        </Hierarchy> 
-    </Dimension>   
-    <Dimension foreignKey="tract_fips" name="Tract">
-        <Annotations>
-            <Annotation name="dim_type">Tract</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="geoid" foreignKey="" name="Tract" hasAll="true">
-            <Table name="tracts" schema="shapes2017" />  
-            <Level name="Tract" column="geoid" type="" levelType="" nameColumn="name" uniqueMembers="false" />  
-        </Hierarchy> 
-    </Dimension>   
-    <Dimension foreignKey="" name="Mammography">
-        <Annotations>
-            <Annotation name="dim_type">Measure</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">  
-            <Level name="Measure" column="short_question_text" type="String" levelType="" nameColumn="" uniqueMembers="true" />  
-        </Hierarchy> 
-    </Dimension>  
-     
-    <Measure name="Data Value" column="data_value" aggregator="sum" />   
-    <Measure name="Low Confidence Limit" column="low_confidence_limit" aggregator="sum" />   
-    <Measure name="High Confidence Limit" column="high_confidence_limit" aggregator="sum" />   
-    <Measure name="Population Count" column="population_count" aggregator="sum" />  
-</Cube><Cube name="500C - Dental Visit">
-    <Annotations> 
-        <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>   
-        <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>   
-        <Annotation name="dataset_name">Dental Visit</Annotation>   
-        <Annotation name="topic">Health</Annotation>   
-        <Annotation name="subtopic">Risk Factors</Annotation>   
-        <Annotation name="measure">Visits to dentist or dental clinic among adults aged &gt;=18 Years</Annotation>   
-        <Annotation name="measure_id">DENTAL</Annotation>   
-        <Annotation name="category">Prevention</Annotation>   
-        <Annotation name="category_id">PREVENT</Annotation>  
-    </Annotations>
-
-    <Table name="dental_visit" schema="cities_500"/>
-     
-    <Dimension foreignKey="" name="Year">
-        <Annotations>
-            <Annotation name="dim_type">TIME</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">  
-            <Level name="Year" column="year" type="Numeric" levelType="TimeYears" nameColumn="" uniqueMembers="true" />  
-        </Hierarchy> 
-    </Dimension>   
-    <Dimension foreignKey="city_fips" name="City">
-        <Annotations>
-            <Annotation name="dim_type">City</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="geoid" foreignKey="" name="City" hasAll="true">
-            <Table name="places" schema="shapes2017" />  
-            <Level name="City" column="geoid" type="" levelType="" nameColumn="name" uniqueMembers="false" />  
-        </Hierarchy> 
-    </Dimension>   
-    <Dimension foreignKey="tract_fips" name="Tract">
-        <Annotations>
-            <Annotation name="dim_type">Tract</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="geoid" foreignKey="" name="Tract" hasAll="true">
-            <Table name="tracts" schema="shapes2017" />  
-            <Level name="Tract" column="geoid" type="" levelType="" nameColumn="name" uniqueMembers="false" />  
-        </Hierarchy> 
-    </Dimension>   
-    <Dimension foreignKey="" name="Dental Visit">
-        <Annotations>
-            <Annotation name="dim_type">Measure</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">  
-            <Level name="Measure" column="short_question_text" type="String" levelType="" nameColumn="" uniqueMembers="true" />  
-        </Hierarchy> 
-    </Dimension>  
-     
-    <Measure name="Data Value" column="data_value" aggregator="sum" />   
-    <Measure name="Low Confidence Limit" column="low_confidence_limit" aggregator="sum" />   
-    <Measure name="High Confidence Limit" column="high_confidence_limit" aggregator="sum" />   
-    <Measure name="Population Count" column="population_count" aggregator="sum" />  
-</Cube><Cube name="500C - Diabetes">
-    <Annotations> 
-        <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>   
-        <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>   
-        <Annotation name="dataset_name">Diabetes</Annotation>   
-        <Annotation name="topic">Health</Annotation>   
-        <Annotation name="subtopic">Risk Factors</Annotation>   
-        <Annotation name="measure">Diagnosed diabetes among adults aged &gt;=18 Years</Annotation>   
-        <Annotation name="measure_id">DIABETES</Annotation>   
-        <Annotation name="category">Health Outcomes</Annotation>   
-        <Annotation name="category_id">HLTHOUT</Annotation>  
-    </Annotations>
-
-    <Table name="has_diabetes" schema="cities_500"/>
-     
-    <Dimension foreignKey="" name="Year">
-        <Annotations>
-            <Annotation name="dim_type">TIME</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">  
-            <Level name="Year" column="year" type="Numeric" levelType="TimeYears" nameColumn="" uniqueMembers="true" />  
-        </Hierarchy> 
-    </Dimension>   
-    <Dimension foreignKey="city_fips" name="City">
-        <Annotations>
-            <Annotation name="dim_type">City</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="geoid" foreignKey="" name="City" hasAll="true">
-            <Table name="places" schema="shapes2017" />  
-            <Level name="City" column="geoid" type="" levelType="" nameColumn="name" uniqueMembers="false" />  
-        </Hierarchy> 
-    </Dimension>   
-    <Dimension foreignKey="tract_fips" name="Tract">
-        <Annotations>
-            <Annotation name="dim_type">Tract</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="geoid" foreignKey="" name="Tract" hasAll="true">
-            <Table name="tracts" schema="shapes2017" />  
-            <Level name="Tract" column="geoid" type="" levelType="" nameColumn="name" uniqueMembers="false" />  
-        </Hierarchy> 
-    </Dimension>   
-    <Dimension foreignKey="" name="Diabetes">
-        <Annotations>
-            <Annotation name="dim_type">Measure</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">  
-            <Level name="Measure" column="short_question_text" type="String" levelType="" nameColumn="" uniqueMembers="true" />  
-        </Hierarchy> 
-    </Dimension>  
-     
-    <Measure name="Data Value" column="data_value" aggregator="sum" />   
-    <Measure name="Low Confidence Limit" column="low_confidence_limit" aggregator="sum" />   
-    <Measure name="High Confidence Limit" column="high_confidence_limit" aggregator="sum" />   
-    <Measure name="Population Count" column="population_count" aggregator="sum" />  
-</Cube><Cube name="500C - Physical Health">
-    <Annotations> 
-        <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>   
-        <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>   
-        <Annotation name="dataset_name">Physical Health</Annotation>   
-        <Annotation name="topic">Health</Annotation>   
-        <Annotation name="subtopic">Risk Factors</Annotation>   
-        <Annotation name="measure">Physical health not good for &gt;=14 days among adults aged &gt;=18 Years</Annotation>   
-        <Annotation name="measure_id">PHLTH</Annotation>   
-        <Annotation name="category">Health Outcomes</Annotation>   
-        <Annotation name="category_id">HLTHOUT</Annotation>  
-    </Annotations>
-
-    <Table name="physical_health" schema="cities_500"/>
-     
-    <Dimension foreignKey="" name="Year">
-        <Annotations>
-            <Annotation name="dim_type">TIME</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">  
-            <Level name="Year" column="year" type="Numeric" levelType="TimeYears" nameColumn="" uniqueMembers="true" />  
-        </Hierarchy> 
-    </Dimension>   
-    <Dimension foreignKey="city_fips" name="City">
-        <Annotations>
-            <Annotation name="dim_type">City</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="geoid" foreignKey="" name="City" hasAll="true">
-            <Table name="places" schema="shapes2017" />  
-            <Level name="City" column="geoid" type="" levelType="" nameColumn="name" uniqueMembers="false" />  
-        </Hierarchy> 
-    </Dimension>   
-    <Dimension foreignKey="tract_fips" name="Tract">
-        <Annotations>
-            <Annotation name="dim_type">Tract</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="geoid" foreignKey="" name="Tract" hasAll="true">
-            <Table name="tracts" schema="shapes2017" />  
-            <Level name="Tract" column="geoid" type="" levelType="" nameColumn="name" uniqueMembers="false" />  
-        </Hierarchy> 
-    </Dimension>   
-    <Dimension foreignKey="" name="Physical Health">
-        <Annotations>
-            <Annotation name="dim_type">Measure</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">  
-            <Level name="Measure" column="short_question_text" type="String" levelType="" nameColumn="" uniqueMembers="true" />  
-        </Hierarchy> 
-    </Dimension>  
-     
-    <Measure name="Data Value" column="data_value" aggregator="sum" />   
-    <Measure name="Low Confidence Limit" column="low_confidence_limit" aggregator="sum" />   
-    <Measure name="High Confidence Limit" column="high_confidence_limit" aggregator="sum" />   
-    <Measure name="Population Count" column="population_count" aggregator="sum" />  
-</Cube><Cube name="500C - Taking BP Medication">
-    <Annotations> 
-        <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>   
-        <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>   
-        <Annotation name="dataset_name">Taking BP Medication</Annotation>   
-        <Annotation name="topic">Health</Annotation>   
-        <Annotation name="subtopic">Risk Factors</Annotation>   
-        <Annotation name="measure">Taking medicine for high blood pressure control among adults aged &gt;=18 Years with high blood pressure</Annotation>   
-        <Annotation name="measure_id">BPMED</Annotation>   
-        <Annotation name="category">Prevention</Annotation>   
-        <Annotation name="category_id">PREVENT</Annotation>  
-    </Annotations>
-
-    <Table name="taking_bp_medication" schema="cities_500"/>
-     
-    <Dimension foreignKey="" name="Year">
-        <Annotations>
-            <Annotation name="dim_type">TIME</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">  
-            <Level name="Year" column="year" type="Numeric" levelType="TimeYears" nameColumn="" uniqueMembers="true" />  
-        </Hierarchy> 
-    </Dimension>   
-    <Dimension foreignKey="city_fips" name="City">
-        <Annotations>
-            <Annotation name="dim_type">City</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="geoid" foreignKey="" name="City" hasAll="true">
-            <Table name="places" schema="shapes2017" />  
-            <Level name="City" column="geoid" type="" levelType="" nameColumn="name" uniqueMembers="false" />  
-        </Hierarchy> 
-    </Dimension>   
-    <Dimension foreignKey="tract_fips" name="Tract">
-        <Annotations>
-            <Annotation name="dim_type">Tract</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="geoid" foreignKey="" name="Tract" hasAll="true">
-            <Table name="tracts" schema="shapes2017" />  
-            <Level name="Tract" column="geoid" type="" levelType="" nameColumn="name" uniqueMembers="false" />  
-        </Hierarchy> 
-    </Dimension>   
-    <Dimension foreignKey="" name="Taking BP Medication">
-        <Annotations>
-            <Annotation name="dim_type">Measure</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">  
-            <Level name="Measure" column="short_question_text" type="String" levelType="" nameColumn="" uniqueMembers="true" />  
-        </Hierarchy> 
-    </Dimension>  
-     
-    <Measure name="Data Value" column="data_value" aggregator="sum" />   
-    <Measure name="Low Confidence Limit" column="low_confidence_limit" aggregator="sum" />   
-    <Measure name="High Confidence Limit" column="high_confidence_limit" aggregator="sum" />   
-    <Measure name="Population Count" column="population_count" aggregator="sum" />  
-</Cube><Cube name="500C - Pap Smear Test">
-    <Annotations> 
-        <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>   
-        <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>   
-        <Annotation name="dataset_name">Pap Smear Test</Annotation>   
-        <Annotation name="topic">Health</Annotation>   
-        <Annotation name="subtopic">Risk Factors</Annotation>   
-        <Annotation name="measure">Papanicolaou smear use among adult women aged 21–65 Years</Annotation>   
-        <Annotation name="measure_id">PAPTEST</Annotation>   
-        <Annotation name="category">Prevention</Annotation>   
-        <Annotation name="category_id">PREVENT</Annotation>  
-    </Annotations>
-
-    <Table name="pap_smear_test" schema="cities_500"/>
-     
-    <Dimension foreignKey="" name="Year">
-        <Annotations>
-            <Annotation name="dim_type">TIME</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">  
-            <Level name="Year" column="year" type="Numeric" levelType="TimeYears" nameColumn="" uniqueMembers="true" />  
-        </Hierarchy> 
-    </Dimension>   
-    <Dimension foreignKey="city_fips" name="City">
-        <Annotations>
-            <Annotation name="dim_type">City</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="geoid" foreignKey="" name="City" hasAll="true">
-            <Table name="places" schema="shapes2017" />  
-            <Level name="City" column="geoid" type="" levelType="" nameColumn="name" uniqueMembers="false" />  
-        </Hierarchy> 
-    </Dimension>   
-    <Dimension foreignKey="tract_fips" name="Tract">
-        <Annotations>
-            <Annotation name="dim_type">Tract</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="geoid" foreignKey="" name="Tract" hasAll="true">
-            <Table name="tracts" schema="shapes2017" />  
-            <Level name="Tract" column="geoid" type="" levelType="" nameColumn="name" uniqueMembers="false" />  
-        </Hierarchy> 
-    </Dimension>   
-    <Dimension foreignKey="" name="Pap Smear Test">
-        <Annotations>
-            <Annotation name="dim_type">Measure</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">  
-            <Level name="Measure" column="short_question_text" type="String" levelType="" nameColumn="" uniqueMembers="true" />  
-        </Hierarchy> 
-    </Dimension>  
-     
-    <Measure name="Data Value" column="data_value" aggregator="sum" />   
-    <Measure name="Low Confidence Limit" column="low_confidence_limit" aggregator="sum" />   
-    <Measure name="High Confidence Limit" column="high_confidence_limit" aggregator="sum" />   
-    <Measure name="Population Count" column="population_count" aggregator="sum" />  
-</Cube><Cube name="500C - Cancer (except skin)">
-    <Annotations> 
-        <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>   
-        <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>   
-        <Annotation name="dataset_name">Cancer (except skin)</Annotation>   
-        <Annotation name="topic">Health</Annotation>   
-        <Annotation name="subtopic">Risk Factors</Annotation>   
-        <Annotation name="measure">Cancer (excluding skin cancer) among adults aged &gt;=18 Years</Annotation>   
-        <Annotation name="measure_id">CANCER</Annotation>   
-        <Annotation name="category">Health Outcomes</Annotation>   
-        <Annotation name="category_id">HLTHOUT</Annotation>  
-    </Annotations>
-
-    <Table name="cancer_except_skin" schema="cities_500"/>
-     
-    <Dimension foreignKey="" name="Year">
-        <Annotations>
-            <Annotation name="dim_type">TIME</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">  
-            <Level name="Year" column="year" type="Numeric" levelType="TimeYears" nameColumn="" uniqueMembers="true" />  
-        </Hierarchy> 
-    </Dimension>   
-    <Dimension foreignKey="city_fips" name="City">
-        <Annotations>
-            <Annotation name="dim_type">City</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="geoid" foreignKey="" name="City" hasAll="true">
-            <Table name="places" schema="shapes2017" />  
-            <Level name="City" column="geoid" type="" levelType="" nameColumn="name" uniqueMembers="false" />  
-        </Hierarchy> 
-    </Dimension>   
-    <Dimension foreignKey="tract_fips" name="Tract">
-        <Annotations>
-            <Annotation name="dim_type">Tract</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="geoid" foreignKey="" name="Tract" hasAll="true">
-            <Table name="tracts" schema="shapes2017" />  
-            <Level name="Tract" column="geoid" type="" levelType="" nameColumn="name" uniqueMembers="false" />  
-        </Hierarchy> 
-    </Dimension>   
-    <Dimension foreignKey="" name="Cancer (except skin)">
-        <Annotations>
-            <Annotation name="dim_type">Measure</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">  
-            <Level name="Measure" column="short_question_text" type="String" levelType="" nameColumn="" uniqueMembers="true" />  
-        </Hierarchy> 
-    </Dimension>  
-     
-    <Measure name="Data Value" column="data_value" aggregator="sum" />   
-    <Measure name="Low Confidence Limit" column="low_confidence_limit" aggregator="sum" />   
-    <Measure name="High Confidence Limit" column="high_confidence_limit" aggregator="sum" />   
-    <Measure name="Population Count" column="population_count" aggregator="sum" />  
-</Cube><Cube name="500C - Mental Health">
-    <Annotations> 
-        <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>   
-        <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>   
-        <Annotation name="dataset_name">Mental Health</Annotation>   
-        <Annotation name="topic">Health</Annotation>   
-        <Annotation name="subtopic">Risk Factors</Annotation>   
-        <Annotation name="measure">Mental health not good for &gt;=14 days among adults aged &gt;=18 Years</Annotation>   
-        <Annotation name="measure_id">MHLTH</Annotation>   
-        <Annotation name="category">Health Outcomes</Annotation>   
-        <Annotation name="category_id">HLTHOUT</Annotation>  
-    </Annotations>
-
-    <Table name="mental_health" schema="cities_500"/>
-     
-    <Dimension foreignKey="" name="Year">
-        <Annotations>
-            <Annotation name="dim_type">TIME</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">  
-            <Level name="Year" column="year" type="Numeric" levelType="TimeYears" nameColumn="" uniqueMembers="true" />  
-        </Hierarchy> 
-    </Dimension>   
-    <Dimension foreignKey="city_fips" name="City">
-        <Annotations>
-            <Annotation name="dim_type">City</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="geoid" foreignKey="" name="City" hasAll="true">
-            <Table name="places" schema="shapes2017" />  
-            <Level name="City" column="geoid" type="" levelType="" nameColumn="name" uniqueMembers="false" />  
-        </Hierarchy> 
-    </Dimension>   
-    <Dimension foreignKey="tract_fips" name="Tract">
-        <Annotations>
-            <Annotation name="dim_type">Tract</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="geoid" foreignKey="" name="Tract" hasAll="true">
-            <Table name="tracts" schema="shapes2017" />  
-            <Level name="Tract" column="geoid" type="" levelType="" nameColumn="name" uniqueMembers="false" />  
-        </Hierarchy> 
-    </Dimension>   
-    <Dimension foreignKey="" name="Mental Health">
-        <Annotations>
-            <Annotation name="dim_type">Measure</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">  
-            <Level name="Measure" column="short_question_text" type="String" levelType="" nameColumn="" uniqueMembers="true" />  
-        </Hierarchy> 
-    </Dimension>  
-     
-    <Measure name="Data Value" column="data_value" aggregator="sum" />   
-    <Measure name="Low Confidence Limit" column="low_confidence_limit" aggregator="sum" />   
-    <Measure name="High Confidence Limit" column="high_confidence_limit" aggregator="sum" />   
-    <Measure name="Population Count" column="population_count" aggregator="sum" />  
-</Cube><Cube name="500C - Core preventive services for older women">
-    <Annotations> 
-        <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>   
-        <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>   
-        <Annotation name="dataset_name">Core preventive services for older women</Annotation>   
-        <Annotation name="topic">Health</Annotation>   
-        <Annotation name="subtopic">Risk Factors</Annotation>   
-        <Annotation name="measure">Older adult women aged &gt;=65 Years who are up to date on a core set of clinical preventive services: Flu shot past Year, PPV shot ever, Colorectal cancer screening, and Mammogram past 2 Years</Annotation>   
-        <Annotation name="measure_id">COREW</Annotation>   
-        <Annotation name="category">Prevention</Annotation>   
-        <Annotation name="category_id">PREVENT</Annotation>  
-    </Annotations>
-
-    <Table name="core_preventive_services_for_older_women" schema="cities_500"/>
-     
-    <Dimension foreignKey="" name="Year">
-        <Annotations>
-            <Annotation name="dim_type">TIME</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">  
-            <Level name="Year" column="year" type="Numeric" levelType="TimeYears" nameColumn="" uniqueMembers="true" />  
-        </Hierarchy> 
-    </Dimension>   
-    <Dimension foreignKey="city_fips" name="City">
-        <Annotations>
-            <Annotation name="dim_type">City</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="geoid" foreignKey="" name="City" hasAll="true">
-            <Table name="places" schema="shapes2017" />  
-            <Level name="City" column="geoid" type="" levelType="" nameColumn="name" uniqueMembers="false" />  
-        </Hierarchy> 
-    </Dimension>   
-    <Dimension foreignKey="tract_fips" name="Tract">
-        <Annotations>
-            <Annotation name="dim_type">Tract</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="geoid" foreignKey="" name="Tract" hasAll="true">
-            <Table name="tracts" schema="shapes2017" />  
-            <Level name="Tract" column="geoid" type="" levelType="" nameColumn="name" uniqueMembers="false" />  
-        </Hierarchy> 
-    </Dimension>   
-    <Dimension foreignKey="" name="Core preventive services for older women">
-        <Annotations>
-            <Annotation name="dim_type">Measure</Annotation>
-        </Annotations>
-         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">  
-            <Level name="Measure" column="short_question_text" type="String" levelType="" nameColumn="" uniqueMembers="true" />  
-        </Hierarchy> 
-    </Dimension>  
-     
-    <Measure name="Data Value" column="data_value" aggregator="sum" />   
-    <Measure name="Low Confidence Limit" column="low_confidence_limit" aggregator="sum" />   
-    <Measure name="High Confidence Limit" column="high_confidence_limit" aggregator="sum" />   
-    <Measure name="Population Count" column="population_count" aggregator="sum" />  
-</Cube><Cube name="MiBRFS - General Health Status">
+<Cube name="HRSA">
     <Annotations>
-        <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>
-        <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>
-        <Annotation name="dataset_name">General Health Status</Annotation>
+        <Annotation name="source_name">Health Resources and Services Administration</Annotation>
+        <Annotation name="source_link">https://datawarehouse.hrsa.gov/topics/ahrf.aspx</Annotation>
+        <Annotation name="dataset_name">HRSA</Annotation>
         <Annotation name="topic">Health</Annotation>
-        <Annotation name="subtopic">Risk Factors</Annotation>
     </Annotations>
 
-    <Table name="gen_health" schema="mibrfs"/>
+    <Table name="hrsa" schema="hrsa"/>
 
-    <Dimension name="Start Year">
+    <Dimension name="Year">
         <Annotations>
-          <Annotation name="dim_type">TIME</Annotation>
+            <Annotation name="dim_type">TIME</Annotation>
         </Annotations>
-        <Hierarchy hasAll="true">
-          <Level name="Start Year" column="start_year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />
+         <Hierarchy hasAll="true">
+            <Level name="Year" column="year" type="Numeric" levelType="TimeYears" uniqueMembers="true" />
         </Hierarchy>
     </Dimension>
 
-    <Dimension name="End Year">
+    <Dimension foreignKey="county_fips" name="County">
         <Annotations>
-          <Annotation name="dim_type">TIME</Annotation>
+            <Annotation name="dim_type">County</Annotation>
         </Annotations>
-        <Hierarchy hasAll="true">
-          <Level name="End Year" column="end_year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />
-        </Hierarchy>
+         <Hierarchy primaryKey="geoid" name="County" hasAll="true">
+            <Table name="counties" schema="shapes2017" />  
+            <Level name="County" column="geoid" nameColumn="name" uniqueMembers="false" />  
+        </Hierarchy> 
     </Dimension>
 
-    <Dimension foreignKey="region_id" name="Geography">
-        <Annotations>
-          <Annotation name="dim_type">GEOGRAPHY</Annotation>
-        </Annotations>
-        <Hierarchy primaryKey="zip_region_id" hasAll="true">
-          <Table name="zip_regions" schema="dims"/>
-          <Level column="zip_region_id" name="Zip Region" nameColumn="zip_region_name" uniqueMembers="true"/>
-        </Hierarchy>
-    </Dimension>
+    <Measure name="Dentists w/NPI" column="npi_total" aggregator="sum" />
+    <Measure name="Dentists, Male w/NPI" column="npi_gender_male" aggregator="sum" />
+    <Measure name="Dentists,Female w/NPI" column="npi_gender_female" aggregator="sum" />
+    <Measure name="Dentists, Total Priv Practice" column="priv_practice_total" aggregator="sum" />
+    <Measure name="Dentists, Total, Priv Pract, FT" column="priv_practice_ft" aggregator="sum" />
+    <Measure name="Dentists, Total, Priv Pract, PT" column="priv_practice_pt" aggregator="sum" />
+    <Measure name="Dent, Total Male, Priv Pract" column="priv_practice_gender_male" aggregator="sum" />
+    <Measure name="Dent, Total Female, Priv Pract" column="priv_practice_gender_female" aggregator="sum" />
+    <Measure name="Dent, Gender Unknown,Priv Pract" column="priv_practice_gender_unknown" aggregator="sum" />
+    <Measure name="Dent, Priv Pract,Tot GPs and Ped" column="priv_practice_gps_and_ped" aggregator="sum" />
+    <Measure name="Dent, Priv Pract,Tot Other Spec" column="priv_practice_other_specialties" aggregator="sum" />
+    <Measure name="Dentists, Seeking Employment" column="status_seeking_employment" aggregator="sum" />
+    <Measure name="Dentists, Other Occupation" column="status_other_occupation" aggregator="sum" />
+    <Measure name="Dentists, No Longer in Practice" column="status_inactive" aggregator="sum" />
+    <Measure name="Dentists, Occup Type Unknown" column="status_unknown" aggregator="sum" />
+    <Measure name="Dentists, Total Prof Active" column="status_active" aggregator="sum" />
+    <Measure name="Dentists, State or Local Govt" column="cat_government" aggregator="sum" />
+    <Measure name="Dent,Staff, Fac and Staf,Hlth Org" column="cat_health_org_staff" aggregator="sum" />
+    <Measure name="Dentists, Grad Student/Resident" column="cat_grad_student" aggregator="sum" />
+    <Measure name="Dent,Armed Forces and Oth Fed Srv" column="cat_fed_service" aggregator="sum" />
+    <Measure name="Dentists, Dental School Faculty" column="cat_dental_school_faculty" aggregator="sum" />
+    <Measure name="Dentists,PT Faculty/PT Practice" column="cat_pt_faculty_or_practice" aggregator="sum" />
+    <Measure name="# Active Dentists less than 35" column="age_35_or_less" aggregator="sum" />
+    <Measure name="# Active Dentists 35" column="age_35_44" aggregator="sum" />
+    <Measure name="# Active Dentists 45" column="age_45_54" aggregator="sum" />
+    <Measure name="# Active Dentists 55" column="age_55_64" aggregator="sum" />
+    <Measure name="# Active Dentists 65 or more" column="age_65_or_more" aggregator="sum" />
+    <Measure name="# Active Dentists Age Unknown" column="age_unknown" aggregator="sum" />
+</Cube>
+<Cube name="FBI UCR">
+    <Annotations> 
+        <Annotation name="source_name">FBI: Uniform Crime Reporting</Annotation>   
+        <Annotation name="source_link">https://ucr.fbi.gov/</Annotation>   
+        <Annotation name="dataset_name">FBI UCR</Annotation>   
+        <Annotation name="topic">Crime</Annotation>   
+    </Annotations>
 
-    <Dimension name="General Health Status">
-        <Annotations>
-          <Annotation name="dim_type">RISK FACTORS</Annotation>
-        </Annotations>
-        <Hierarchy hasAll="true">
-          <Level name="Category" column="gen_health" uniqueMembers="true" />
-        </Hierarchy>
-    </Dimension>
-
+    <Table name="fbi_crime" schema="fbi_crime"/>
      
-    <Measure name="Sample Frequency" column="sample_frequency" aggregator="sum" />
-      
-    <Measure name="Weighted Frequency" column="weighted_frequency" aggregator="sum" />
-      
-    <Measure name="Weighted Percent" column="weighted_percent" aggregator="avg" />
-     
-</Cube><Cube name="MiBRFS - Leisure Time Physical Activity">
+    <Dimension name="Year">
+        <Annotations>
+            <Annotation name="dim_type">TIME</Annotation>
+        </Annotations>
+         <Hierarchy hasAll="true">  
+            <Level name="Year" column="year" type="Numeric" levelType="TimeYears" uniqueMembers="true" />  
+        </Hierarchy> 
+    </Dimension>   
+    
+    <Dimension foreignKey="geoid" name="City">
+        <Annotations>
+            <Annotation name="dim_type">City</Annotation>
+        </Annotations>
+         <Hierarchy primaryKey="geoid" name="City" hasAll="true">
+            <Table name="places" schema="shapes2017" />  
+            <Level name="City" column="geoid" nameColumn="name" uniqueMembers="false" />  
+        </Hierarchy> 
+    </Dimension>
+    
+    <Measure name="Population" column="population" aggregator="sum" />
+    <Measure name="Total Violent Crimes" column="violent_crime_total" aggregator="sum" />
+    <Measure name="Murder" column="murder" aggregator="sum" />
+    <Measure name="Rape" column="rape" aggregator="sum" />
+    <Measure name="Robbery" column="robbery" aggregator="sum" />
+    <Measure name="Aggravated Assault" column="aggravated_assault" aggregator="sum" />
+
+    <!-- TODO: Can add property crime data if AH is interested -->
+</Cube>
+<Cube name="NAEP Reading Assessment">
     <Annotations>
-        <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>
-        <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>
-        <Annotation name="dataset_name">Leisure Time Physical Activity</Annotation>
-        <Annotation name="topic">Health</Annotation>
-        <Annotation name="subtopic">Risk Factors</Annotation>
+        <Annotation name="source_name">NAEP Reading Assessment</Annotation>
+        <Annotation name="source_link">https://www.nationsreportcard.gov/reading_2017/#?grade=4</Annotation>
+        <Annotation name="dataset_name">NAEP Reading Assessment</Annotation>
+        <Annotation name="topic">Education</Annotation>
     </Annotations>
 
-    <Table name="leisure_time_physical_activity" schema="mibrfs"/>
-
-    <Dimension name="Start Year">
-        <Annotations>
-          <Annotation name="dim_type">TIME</Annotation>
-        </Annotations>
-        <Hierarchy hasAll="true">
-          <Level name="Start Year" column="start_year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />
-        </Hierarchy>
-    </Dimension>
-
-    <Dimension name="End Year">
-        <Annotations>
-          <Annotation name="dim_type">TIME</Annotation>
-        </Annotations>
-        <Hierarchy hasAll="true">
-          <Level name="End Year" column="end_year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />
-        </Hierarchy>
-    </Dimension>
-
-    <Dimension foreignKey="region_id" name="Geography">
-        <Annotations>
-          <Annotation name="dim_type">GEOGRAPHY</Annotation>
-        </Annotations>
-        <Hierarchy primaryKey="zip_region_id" hasAll="true">
-          <Table name="zip_regions" schema="dims"/>
-          <Level column="zip_region_id" name="Zip Region" nameColumn="zip_region_name" uniqueMembers="true"/>
-        </Hierarchy>
-    </Dimension>
-
-    <Dimension name="Leisure Time Physical Activity">
-        <Annotations>
-          <Annotation name="dim_type">RISK FACTORS</Annotation>
-        </Annotations>
-        <Hierarchy hasAll="true">
-          <Level name="Category" column="leisure_time_physical_activity" uniqueMembers="true" />
-        </Hierarchy>
-    </Dimension>
-
+    <Table name="naep" schema="naep"/>
      
-    <Measure name="Sample Frequency" column="sample_frequency" aggregator="sum" />
-      
-    <Measure name="Weighted Frequency" column="weighted_frequency" aggregator="sum" />
-      
-    <Measure name="Weighted Percent" column="weighted_percent" aggregator="avg" />
-     
-</Cube><Cube name="MiBRFS - Cardiovascular Disease">
-    <Annotations>
-        <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>
-        <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>
-        <Annotation name="dataset_name">Cardiovascular Disease</Annotation>
-        <Annotation name="topic">Health</Annotation>
-        <Annotation name="subtopic">Risk Factors</Annotation>
-    </Annotations>
-
-    <Table name="cardiovascular_disease" schema="mibrfs"/>
-
-    <Dimension name="Start Year">
+    <Dimension name="Year">
         <Annotations>
-          <Annotation name="dim_type">TIME</Annotation>
+            <Annotation name="dim_type">TIME</Annotation>
         </Annotations>
-        <Hierarchy hasAll="true">
-          <Level name="Start Year" column="start_year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />
+         <Hierarchy hasAll="true">
+            <Level name="Year" column="year" type="Numeric" levelType="TimeYears" uniqueMembers="true" />
         </Hierarchy>
     </Dimension>
 
-    <Dimension name="End Year">
+    <Dimension name="Grade">
         <Annotations>
-          <Annotation name="dim_type">TIME</Annotation>
+            <Annotation name="dim_type">Grade</Annotation>
         </Annotations>
-        <Hierarchy hasAll="true">
-          <Level name="End Year" column="end_year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />
+         <Hierarchy hasAll="true">
+            <Level name="Grade" column="grade" type="String" uniqueMembers="true" />
         </Hierarchy>
     </Dimension>
-
-    <Dimension foreignKey="region_id" name="Geography">
-        <Annotations>
-          <Annotation name="dim_type">GEOGRAPHY</Annotation>
-        </Annotations>
-        <Hierarchy primaryKey="zip_region_id" hasAll="true">
-          <Table name="zip_regions" schema="dims"/>
-          <Level column="zip_region_id" name="Zip Region" nameColumn="zip_region_name" uniqueMembers="true"/>
-        </Hierarchy>
-    </Dimension>
-
-    <Dimension name="Cardiovascular Disease">
-        <Annotations>
-          <Annotation name="dim_type">RISK FACTORS</Annotation>
-        </Annotations>
-        <Hierarchy hasAll="true">
-          <Level name="Category" column="cardiovascular_disease" uniqueMembers="true" />
-        </Hierarchy>
-    </Dimension>
-
-     
-    <Measure name="Sample Frequency" column="sample_frequency" aggregator="sum" />
-      
-    <Measure name="Weighted Frequency" column="weighted_frequency" aggregator="sum" />
-      
-    <Measure name="Weighted Percent" column="weighted_percent" aggregator="avg" />
-     
-</Cube><Cube name="MiBRFS - Ever Told Diabetes">
-    <Annotations>
-        <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>
-        <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>
-        <Annotation name="dataset_name">Ever Told Diabetes</Annotation>
-        <Annotation name="topic">Health</Annotation>
-        <Annotation name="subtopic">Risk Factors</Annotation>
-    </Annotations>
-
-    <Table name="diabetes" schema="mibrfs"/>
-
-    <Dimension name="Start Year">
-        <Annotations>
-          <Annotation name="dim_type">TIME</Annotation>
-        </Annotations>
-        <Hierarchy hasAll="true">
-          <Level name="Start Year" column="start_year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />
-        </Hierarchy>
-    </Dimension>
-
-    <Dimension name="End Year">
-        <Annotations>
-          <Annotation name="dim_type">TIME</Annotation>
-        </Annotations>
-        <Hierarchy hasAll="true">
-          <Level name="End Year" column="end_year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />
-        </Hierarchy>
-    </Dimension>
-
-    <Dimension foreignKey="region_id" name="Geography">
-        <Annotations>
-          <Annotation name="dim_type">GEOGRAPHY</Annotation>
-        </Annotations>
-        <Hierarchy primaryKey="zip_region_id" hasAll="true">
-          <Table name="zip_regions" schema="dims"/>
-          <Level column="zip_region_id" name="Zip Region" nameColumn="zip_region_name" uniqueMembers="true"/>
-        </Hierarchy>
-    </Dimension>
-
-    <Dimension name="Ever Told Diabetes">
-        <Annotations>
-          <Annotation name="dim_type">RISK FACTORS</Annotation>
-        </Annotations>
-        <Hierarchy hasAll="true">
-          <Level name="Category" column="diabetes" uniqueMembers="true" />
-        </Hierarchy>
-    </Dimension>
-
-     
-    <Measure name="Sample Frequency" column="sample_frequency" aggregator="sum" />
-      
-    <Measure name="Weighted Frequency" column="weighted_frequency" aggregator="sum" />
-      
-    <Measure name="Weighted Percent" column="weighted_percent" aggregator="avg" />
-     
-</Cube><Cube name="MiBRFS - Ever Told Depression">
-    <Annotations>
-        <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>
-        <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>
-        <Annotation name="dataset_name">Ever Told Depression</Annotation>
-        <Annotation name="topic">Health</Annotation>
-        <Annotation name="subtopic">Risk Factors</Annotation>
-    </Annotations>
-
-    <Table name="depressive" schema="mibrfs"/>
-
-    <Dimension name="Start Year">
-        <Annotations>
-          <Annotation name="dim_type">TIME</Annotation>
-        </Annotations>
-        <Hierarchy hasAll="true">
-          <Level name="Start Year" column="start_year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />
-        </Hierarchy>
-    </Dimension>
-
-    <Dimension name="End Year">
-        <Annotations>
-          <Annotation name="dim_type">TIME</Annotation>
-        </Annotations>
-        <Hierarchy hasAll="true">
-          <Level name="End Year" column="end_year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />
-        </Hierarchy>
-    </Dimension>
-
-    <Dimension foreignKey="region_id" name="Geography">
-        <Annotations>
-          <Annotation name="dim_type">GEOGRAPHY</Annotation>
-        </Annotations>
-        <Hierarchy primaryKey="zip_region_id" hasAll="true">
-          <Table name="zip_regions" schema="dims"/>
-          <Level column="zip_region_id" name="Zip Region" nameColumn="zip_region_name" uniqueMembers="true"/>
-        </Hierarchy>
-    </Dimension>
-
-    <Dimension name="Ever Told Depression">
-        <Annotations>
-          <Annotation name="dim_type">RISK FACTORS</Annotation>
-        </Annotations>
-        <Hierarchy hasAll="true">
-          <Level name="Category" column="depressive" uniqueMembers="true" />
-        </Hierarchy>
-    </Dimension>
-
-     
-    <Measure name="Sample Frequency" column="sample_frequency" aggregator="sum" />
-      
-    <Measure name="Weighted Frequency" column="weighted_frequency" aggregator="sum" />
-      
-    <Measure name="Weighted Percent" column="weighted_percent" aggregator="avg" />
-     
-</Cube><Cube name="MiBRFS - Ever told cancer">
-    <Annotations>
-        <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>
-        <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>
-        <Annotation name="dataset_name">Ever told cancer (skin and or other cancers)</Annotation>
-        <Annotation name="topic">Health</Annotation>
-        <Annotation name="subtopic">Risk Factors</Annotation>
-    </Annotations>
-
-    <Table name="ever_cancer" schema="mibrfs"/>
-
-    <Dimension name="Start Year">
-        <Annotations>
-          <Annotation name="dim_type">TIME</Annotation>
-        </Annotations>
-        <Hierarchy hasAll="true">
-          <Level name="Start Year" column="start_year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />
-        </Hierarchy>
-    </Dimension>
-
-    <Dimension name="End Year">
-        <Annotations>
-          <Annotation name="dim_type">TIME</Annotation>
-        </Annotations>
-        <Hierarchy hasAll="true">
-          <Level name="End Year" column="end_year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />
-        </Hierarchy>
-    </Dimension>
-
-    <Dimension foreignKey="region_id" name="Geography">
-        <Annotations>
-          <Annotation name="dim_type">GEOGRAPHY</Annotation>
-        </Annotations>
-        <Hierarchy primaryKey="zip_region_id" hasAll="true">
-          <Table name="zip_regions" schema="dims"/>
-          <Level column="zip_region_id" name="Zip Region" nameColumn="zip_region_name" uniqueMembers="true"/>
-        </Hierarchy>
-    </Dimension>
-
-    <Dimension name="Ever told cancer (skin and or other cancers)">
-        <Annotations>
-          <Annotation name="dim_type">RISK FACTORS</Annotation>
-        </Annotations>
-        <Hierarchy hasAll="true">
-          <Level name="Category" column="ever_cancer" uniqueMembers="true" />
-        </Hierarchy>
-    </Dimension>
-
-     
-    <Measure name="Sample Frequency" column="sample_frequency" aggregator="sum" />
-      
-    <Measure name="Weighted Frequency" column="weighted_frequency" aggregator="sum" />
-      
-    <Measure name="Weighted Percent" column="weighted_percent" aggregator="avg" />
-     
-</Cube><Cube name="MiBRFS - Ever Told Stroke">
-    <Annotations>
-        <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>
-        <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>
-        <Annotation name="dataset_name">Ever Told Stroke</Annotation>
-        <Annotation name="topic">Health</Annotation>
-        <Annotation name="subtopic">Risk Factors</Annotation>
-    </Annotations>
-
-    <Table name="stroke" schema="mibrfs"/>
-
-    <Dimension name="Start Year">
-        <Annotations>
-          <Annotation name="dim_type">TIME</Annotation>
-        </Annotations>
-        <Hierarchy hasAll="true">
-          <Level name="Start Year" column="start_year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />
-        </Hierarchy>
-    </Dimension>
-
-    <Dimension name="End Year">
-        <Annotations>
-          <Annotation name="dim_type">TIME</Annotation>
-        </Annotations>
-        <Hierarchy hasAll="true">
-          <Level name="End Year" column="end_year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />
-        </Hierarchy>
-    </Dimension>
-
-    <Dimension foreignKey="region_id" name="Geography">
-        <Annotations>
-          <Annotation name="dim_type">GEOGRAPHY</Annotation>
-        </Annotations>
-        <Hierarchy primaryKey="zip_region_id" hasAll="true">
-          <Table name="zip_regions" schema="dims"/>
-          <Level column="zip_region_id" name="Zip Region" nameColumn="zip_region_name" uniqueMembers="true"/>
-        </Hierarchy>
-    </Dimension>
-
-    <Dimension name="Ever Told Stroke">
-        <Annotations>
-          <Annotation name="dim_type">RISK FACTORS</Annotation>
-        </Annotations>
-        <Hierarchy hasAll="true">
-          <Level name="Category" column="stroke" uniqueMembers="true" />
-        </Hierarchy>
-    </Dimension>
-
-     
-    <Measure name="Sample Frequency" column="sample_frequency" aggregator="sum" />
-      
-    <Measure name="Weighted Frequency" column="weighted_frequency" aggregator="sum" />
-      
-    <Measure name="Weighted Percent" column="weighted_percent" aggregator="avg" />
-     
-</Cube><Cube name="MiBRFS - Poor Mental Health">
-    <Annotations>
-        <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>
-        <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>
-        <Annotation name="dataset_name">Poor Mental Health</Annotation>
-        <Annotation name="topic">Health</Annotation>
-        <Annotation name="subtopic">Risk Factors</Annotation>
-    </Annotations>
-
-    <Table name="poor_mental_health" schema="mibrfs"/>
-
-    <Dimension name="Start Year">
-        <Annotations>
-          <Annotation name="dim_type">TIME</Annotation>
-        </Annotations>
-        <Hierarchy hasAll="true">
-          <Level name="Start Year" column="start_year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />
-        </Hierarchy>
-    </Dimension>
-
-    <Dimension name="End Year">
-        <Annotations>
-          <Annotation name="dim_type">TIME</Annotation>
-        </Annotations>
-        <Hierarchy hasAll="true">
-          <Level name="End Year" column="end_year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />
-        </Hierarchy>
-    </Dimension>
-
-    <Dimension foreignKey="region_id" name="Geography">
-        <Annotations>
-          <Annotation name="dim_type">GEOGRAPHY</Annotation>
-        </Annotations>
-        <Hierarchy primaryKey="zip_region_id" hasAll="true">
-          <Table name="zip_regions" schema="dims"/>
-          <Level column="zip_region_id" name="Zip Region" nameColumn="zip_region_name" uniqueMembers="true"/>
-        </Hierarchy>
-    </Dimension>
-
-    <Dimension name="Poor Mental Health">
-        <Annotations>
-          <Annotation name="dim_type">RISK FACTORS</Annotation>
-        </Annotations>
-        <Hierarchy hasAll="true">
-          <Level name="Category" column="poor_mental_health" uniqueMembers="true" />
-        </Hierarchy>
-    </Dimension>
-
-     
-    <Measure name="Sample Frequency" column="sample_frequency" aggregator="sum" />
-      
-    <Measure name="Weighted Frequency" column="weighted_frequency" aggregator="sum" />
-      
-    <Measure name="Weighted Percent" column="weighted_percent" aggregator="avg" />
-     
-</Cube><Cube name="MiBRFS - Routine Checkup in Past Year">
-    <Annotations>
-        <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>
-        <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>
-        <Annotation name="dataset_name">Routine Checkup in Past Year</Annotation>
-        <Annotation name="topic">Health</Annotation>
-        <Annotation name="subtopic">Risk Factors</Annotation>
-    </Annotations>
-
-    <Table name="had_routine_checkup" schema="mibrfs"/>
-
-    <Dimension name="Start Year">
-        <Annotations>
-          <Annotation name="dim_type">TIME</Annotation>
-        </Annotations>
-        <Hierarchy hasAll="true">
-          <Level name="Start Year" column="start_year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />
-        </Hierarchy>
-    </Dimension>
-
-    <Dimension name="End Year">
-        <Annotations>
-          <Annotation name="dim_type">TIME</Annotation>
-        </Annotations>
-        <Hierarchy hasAll="true">
-          <Level name="End Year" column="end_year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />
-        </Hierarchy>
-    </Dimension>
-
-    <Dimension foreignKey="region_id" name="Geography">
-        <Annotations>
-          <Annotation name="dim_type">GEOGRAPHY</Annotation>
-        </Annotations>
-        <Hierarchy primaryKey="zip_region_id" hasAll="true">
-          <Table name="zip_regions" schema="dims"/>
-          <Level column="zip_region_id" name="Zip Region" nameColumn="zip_region_name" uniqueMembers="true"/>
-        </Hierarchy>
-    </Dimension>
-
-    <Dimension name="Routine Checkup in Past Year">
-        <Annotations>
-          <Annotation name="dim_type">RISK FACTORS</Annotation>
-        </Annotations>
-        <Hierarchy hasAll="true">
-          <Level name="Category" column="had_routine_checkup" uniqueMembers="true" />
-        </Hierarchy>
-    </Dimension>
-
-     
-    <Measure name="Sample Frequency" column="sample_frequency" aggregator="sum" />
-      
-    <Measure name="Weighted Frequency" column="weighted_frequency" aggregator="sum" />
-      
-    <Measure name="Weighted Percent" column="weighted_percent" aggregator="avg" />
-     
-</Cube><Cube name="MiBRFS - Current Asthma">
-    <Annotations>
-        <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>
-        <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>
-        <Annotation name="dataset_name">Current Asthma</Annotation>
-        <Annotation name="topic">Health</Annotation>
-        <Annotation name="subtopic">Risk Factors</Annotation>
-    </Annotations>
-
-    <Table name="current_asthma" schema="mibrfs"/>
-
-    <Dimension name="Start Year">
-        <Annotations>
-          <Annotation name="dim_type">TIME</Annotation>
-        </Annotations>
-        <Hierarchy hasAll="true">
-          <Level name="Start Year" column="start_year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />
-        </Hierarchy>
-    </Dimension>
-
-    <Dimension name="End Year">
-        <Annotations>
-          <Annotation name="dim_type">TIME</Annotation>
-        </Annotations>
-        <Hierarchy hasAll="true">
-          <Level name="End Year" column="end_year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />
-        </Hierarchy>
-    </Dimension>
-
-    <Dimension foreignKey="region_id" name="Geography">
-        <Annotations>
-          <Annotation name="dim_type">GEOGRAPHY</Annotation>
-        </Annotations>
-        <Hierarchy primaryKey="zip_region_id" hasAll="true">
-          <Table name="zip_regions" schema="dims"/>
-          <Level column="zip_region_id" name="Zip Region" nameColumn="zip_region_name" uniqueMembers="true"/>
-        </Hierarchy>
-    </Dimension>
-
-    <Dimension name="Current Asthma">
-        <Annotations>
-          <Annotation name="dim_type">RISK FACTORS</Annotation>
-        </Annotations>
-        <Hierarchy hasAll="true">
-          <Level name="Category" column="current_asthma" uniqueMembers="true" />
-        </Hierarchy>
-    </Dimension>
-
-     
-    <Measure name="Sample Frequency" column="sample_frequency" aggregator="sum" />
-      
-    <Measure name="Weighted Frequency" column="weighted_frequency" aggregator="sum" />
-      
-    <Measure name="Weighted Percent" column="weighted_percent" aggregator="avg" />
-     
-</Cube><Cube name="MiBRFS - Ever Told Asthma">
-    <Annotations>
-        <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>
-        <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>
-        <Annotation name="dataset_name">Ever Told Asthma</Annotation>
-        <Annotation name="topic">Health</Annotation>
-        <Annotation name="subtopic">Risk Factors</Annotation>
-    </Annotations>
-
-    <Table name="lifetime_asthma" schema="mibrfs"/>
-
-    <Dimension name="Start Year">
-        <Annotations>
-          <Annotation name="dim_type">TIME</Annotation>
-        </Annotations>
-        <Hierarchy hasAll="true">
-          <Level name="Start Year" column="start_year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />
-        </Hierarchy>
-    </Dimension>
-
-    <Dimension name="End Year">
-        <Annotations>
-          <Annotation name="dim_type">TIME</Annotation>
-        </Annotations>
-        <Hierarchy hasAll="true">
-          <Level name="End Year" column="end_year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />
-        </Hierarchy>
-    </Dimension>
-
-    <Dimension foreignKey="region_id" name="Geography">
-        <Annotations>
-          <Annotation name="dim_type">GEOGRAPHY</Annotation>
-        </Annotations>
-        <Hierarchy primaryKey="zip_region_id" hasAll="true">
-          <Table name="zip_regions" schema="dims"/>
-          <Level column="zip_region_id" name="Zip Region" nameColumn="zip_region_name" uniqueMembers="true"/>
-        </Hierarchy>
-    </Dimension>
-
-    <Dimension name="Ever Told Asthma">
-        <Annotations>
-          <Annotation name="dim_type">RISK FACTORS</Annotation>
-        </Annotations>
-        <Hierarchy hasAll="true">
-          <Level name="Category" column="lifetime_asthma" uniqueMembers="true" />
-        </Hierarchy>
-    </Dimension>
-
-     
-    <Measure name="Sample Frequency" column="sample_frequency" aggregator="sum" />
-      
-    <Measure name="Weighted Frequency" column="weighted_frequency" aggregator="sum" />
-      
-    <Measure name="Weighted Percent" column="weighted_percent" aggregator="avg" />
-     
-</Cube><Cube name="MiBRFS - Weight Status">
-    <Annotations>
-        <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>
-        <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>
-        <Annotation name="dataset_name">Weight Status</Annotation>
-        <Annotation name="topic">Health</Annotation>
-        <Annotation name="subtopic">Risk Factors</Annotation>
-    </Annotations>
-
-    <Table name="bmi_categories" schema="mibrfs"/>
-
-    <Dimension name="Start Year">
-        <Annotations>
-          <Annotation name="dim_type">TIME</Annotation>
-        </Annotations>
-        <Hierarchy hasAll="true">
-          <Level name="Start Year" column="start_year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />
-        </Hierarchy>
-    </Dimension>
-
-    <Dimension name="End Year">
-        <Annotations>
-          <Annotation name="dim_type">TIME</Annotation>
-        </Annotations>
-        <Hierarchy hasAll="true">
-          <Level name="End Year" column="end_year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />
-        </Hierarchy>
-    </Dimension>
-
-    <Dimension foreignKey="region_id" name="Geography">
-        <Annotations>
-          <Annotation name="dim_type">GEOGRAPHY</Annotation>
-        </Annotations>
-        <Hierarchy primaryKey="zip_region_id" hasAll="true">
-          <Table name="zip_regions" schema="dims"/>
-          <Level column="zip_region_id" name="Zip Region" nameColumn="zip_region_name" uniqueMembers="true"/>
-        </Hierarchy>
-    </Dimension>
-
-    <Dimension name="Weight Status">
-        <Annotations>
-          <Annotation name="dim_type">RISK FACTORS</Annotation>
-        </Annotations>
-        <Hierarchy hasAll="true">
-          <Level name="Category" column="bmi_categories" uniqueMembers="true" />
-        </Hierarchy>
-    </Dimension>
-
-     
-    <Measure name="Sample Frequency" column="sample_frequency" aggregator="sum" />
-      
-    <Measure name="Weighted Frequency" column="weighted_frequency" aggregator="sum" />
-      
-    <Measure name="Weighted Percent" column="weighted_percent" aggregator="avg" />
-     
-</Cube><Cube name="MiBRFS - Ever Told Angina or Coronary Heart Disease">
-    <Annotations>
-        <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>
-        <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>
-        <Annotation name="dataset_name">Ever Told Angina or Coronary Heart Disease</Annotation>
-        <Annotation name="topic">Health</Annotation>
-        <Annotation name="subtopic">Risk Factors</Annotation>
-    </Annotations>
-
-    <Table name="heart_disease" schema="mibrfs"/>
-
-    <Dimension name="Start Year">
-        <Annotations>
-          <Annotation name="dim_type">TIME</Annotation>
-        </Annotations>
-        <Hierarchy hasAll="true">
-          <Level name="Start Year" column="start_year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />
-        </Hierarchy>
-    </Dimension>
-
-    <Dimension name="End Year">
-        <Annotations>
-          <Annotation name="dim_type">TIME</Annotation>
-        </Annotations>
-        <Hierarchy hasAll="true">
-          <Level name="End Year" column="end_year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />
-        </Hierarchy>
-    </Dimension>
-
-    <Dimension foreignKey="region_id" name="Geography">
-        <Annotations>
-          <Annotation name="dim_type">GEOGRAPHY</Annotation>
-        </Annotations>
-        <Hierarchy primaryKey="zip_region_id" hasAll="true">
-          <Table name="zip_regions" schema="dims"/>
-          <Level column="zip_region_id" name="Zip Region" nameColumn="zip_region_name" uniqueMembers="true"/>
-        </Hierarchy>
-    </Dimension>
-
-    <Dimension name="Ever Told Angina or Coronary Heart Disease">
-        <Annotations>
-          <Annotation name="dim_type">RISK FACTORS</Annotation>
-        </Annotations>
-        <Hierarchy hasAll="true">
-          <Level name="Category" column="heart_disease" uniqueMembers="true" />
-        </Hierarchy>
-    </Dimension>
-
-     
-    <Measure name="Sample Frequency" column="sample_frequency" aggregator="sum" />
-      
-    <Measure name="Weighted Frequency" column="weighted_frequency" aggregator="sum" />
-      
-    <Measure name="Weighted Percent" column="weighted_percent" aggregator="avg" />
-     
-</Cube><Cube name="MiBRFS - Ever Had HIV Test">
-    <Annotations>
-        <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>
-        <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>
-        <Annotation name="dataset_name">Ever Had HIV Test</Annotation>
-        <Annotation name="topic">Health</Annotation>
-        <Annotation name="subtopic">Risk Factors</Annotation>
-    </Annotations>
-
-    <Table name="hiv_tested" schema="mibrfs"/>
-
-    <Dimension name="Start Year">
-        <Annotations>
-          <Annotation name="dim_type">TIME</Annotation>
-        </Annotations>
-        <Hierarchy hasAll="true">
-          <Level name="Start Year" column="start_year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />
-        </Hierarchy>
-    </Dimension>
-
-    <Dimension name="End Year">
-        <Annotations>
-          <Annotation name="dim_type">TIME</Annotation>
-        </Annotations>
-        <Hierarchy hasAll="true">
-          <Level name="End Year" column="end_year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />
-        </Hierarchy>
-    </Dimension>
-
-    <Dimension foreignKey="region_id" name="Geography">
-        <Annotations>
-          <Annotation name="dim_type">GEOGRAPHY</Annotation>
-        </Annotations>
-        <Hierarchy primaryKey="zip_region_id" hasAll="true">
-          <Table name="zip_regions" schema="dims"/>
-          <Level column="zip_region_id" name="Zip Region" nameColumn="zip_region_name" uniqueMembers="true"/>
-        </Hierarchy>
-    </Dimension>
-
-    <Dimension name="Ever Had HIV Test">
-        <Annotations>
-          <Annotation name="dim_type">RISK FACTORS</Annotation>
-        </Annotations>
-        <Hierarchy hasAll="true">
-          <Level name="Category" column="hiv_tested" uniqueMembers="true" />
-        </Hierarchy>
-    </Dimension>
-
-     
-    <Measure name="Sample Frequency" column="sample_frequency" aggregator="sum" />
-      
-    <Measure name="Weighted Frequency" column="weighted_frequency" aggregator="sum" />
-      
-    <Measure name="Weighted Percent" column="weighted_percent" aggregator="avg" />
-     
-</Cube><Cube name="MiBRFS - Poor Physical Health">
-    <Annotations>
-        <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>
-        <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>
-        <Annotation name="dataset_name">Poor Physical Health</Annotation>
-        <Annotation name="topic">Health</Annotation>
-        <Annotation name="subtopic">Risk Factors</Annotation>
-    </Annotations>
-
-    <Table name="poor_physical_health" schema="mibrfs"/>
-
-    <Dimension name="Start Year">
-        <Annotations>
-          <Annotation name="dim_type">TIME</Annotation>
-        </Annotations>
-        <Hierarchy hasAll="true">
-          <Level name="Start Year" column="start_year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />
-        </Hierarchy>
-    </Dimension>
-
-    <Dimension name="End Year">
-        <Annotations>
-          <Annotation name="dim_type">TIME</Annotation>
-        </Annotations>
-        <Hierarchy hasAll="true">
-          <Level name="End Year" column="end_year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />
-        </Hierarchy>
-    </Dimension>
-
-    <Dimension foreignKey="region_id" name="Geography">
-        <Annotations>
-          <Annotation name="dim_type">GEOGRAPHY</Annotation>
-        </Annotations>
-        <Hierarchy primaryKey="zip_region_id" hasAll="true">
-          <Table name="zip_regions" schema="dims"/>
-          <Level column="zip_region_id" name="Zip Region" nameColumn="zip_region_name" uniqueMembers="true"/>
-        </Hierarchy>
-    </Dimension>
-
-    <Dimension name="Poor Physical Health">
-        <Annotations>
-          <Annotation name="dim_type">RISK FACTORS</Annotation>
-        </Annotations>
-        <Hierarchy hasAll="true">
-          <Level name="Category" column="poor_physical_health" uniqueMembers="true" />
-        </Hierarchy>
-    </Dimension>
-
-     
-    <Measure name="Sample Frequency" column="sample_frequency" aggregator="sum" />
-      
-    <Measure name="Weighted Frequency" column="weighted_frequency" aggregator="sum" />
-      
-    <Measure name="Weighted Percent" column="weighted_percent" aggregator="avg" />
-     
-</Cube><Cube name="MiBRFS - Ever Told Heart Attack">
-    <Annotations>
-        <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>
-        <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>
-        <Annotation name="dataset_name">Ever Told Heart Attack</Annotation>
-        <Annotation name="topic">Health</Annotation>
-        <Annotation name="subtopic">Risk Factors</Annotation>
-    </Annotations>
-
-    <Table name="heart_attack" schema="mibrfs"/>
-
-    <Dimension name="Start Year">
-        <Annotations>
-          <Annotation name="dim_type">TIME</Annotation>
-        </Annotations>
-        <Hierarchy hasAll="true">
-          <Level name="Start Year" column="start_year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />
-        </Hierarchy>
-    </Dimension>
-
-    <Dimension name="End Year">
-        <Annotations>
-          <Annotation name="dim_type">TIME</Annotation>
-        </Annotations>
-        <Hierarchy hasAll="true">
-          <Level name="End Year" column="end_year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />
-        </Hierarchy>
-    </Dimension>
-
-    <Dimension foreignKey="region_id" name="Geography">
-        <Annotations>
-          <Annotation name="dim_type">GEOGRAPHY</Annotation>
-        </Annotations>
-        <Hierarchy primaryKey="zip_region_id" hasAll="true">
-          <Table name="zip_regions" schema="dims"/>
-          <Level column="zip_region_id" name="Zip Region" nameColumn="zip_region_name" uniqueMembers="true"/>
-        </Hierarchy>
-    </Dimension>
-
-    <Dimension name="Ever Told Heart Attack">
-        <Annotations>
-          <Annotation name="dim_type">RISK FACTORS</Annotation>
-        </Annotations>
-        <Hierarchy hasAll="true">
-          <Level name="Category" column="heart_attack" uniqueMembers="true" />
-        </Hierarchy>
-    </Dimension>
-
-     
-    <Measure name="Sample Frequency" column="sample_frequency" aggregator="sum" />
-      
-    <Measure name="Weighted Frequency" column="weighted_frequency" aggregator="sum" />
-      
-    <Measure name="Weighted Percent" column="weighted_percent" aggregator="avg" />
-     
-</Cube><Cube name="MiBRFS - Cigarette Smoking">
-    <Annotations>
-        <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>
-        <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>
-        <Annotation name="dataset_name">Cigarette Smoking</Annotation>
-        <Annotation name="topic">Health</Annotation>
-        <Annotation name="subtopic">Risk Factors</Annotation>
-    </Annotations>
-
-    <Table name="smoking_status" schema="mibrfs"/>
-
-    <Dimension name="Start Year">
-        <Annotations>
-          <Annotation name="dim_type">TIME</Annotation>
-        </Annotations>
-        <Hierarchy hasAll="true">
-          <Level name="Start Year" column="start_year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />
-        </Hierarchy>
-    </Dimension>
-
-    <Dimension name="End Year">
-        <Annotations>
-          <Annotation name="dim_type">TIME</Annotation>
-        </Annotations>
-        <Hierarchy hasAll="true">
-          <Level name="End Year" column="end_year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />
-        </Hierarchy>
-    </Dimension>
-
-    <Dimension foreignKey="region_id" name="Geography">
-        <Annotations>
-          <Annotation name="dim_type">GEOGRAPHY</Annotation>
-        </Annotations>
-        <Hierarchy primaryKey="zip_region_id" hasAll="true">
-          <Table name="zip_regions" schema="dims"/>
-          <Level column="zip_region_id" name="Zip Region" nameColumn="zip_region_name" uniqueMembers="true"/>
-        </Hierarchy>
-    </Dimension>
-
-    <Dimension name="Cigarette Smoking">
-        <Annotations>
-          <Annotation name="dim_type">RISK FACTORS</Annotation>
-        </Annotations>
-        <Hierarchy hasAll="true">
-          <Level name="Category" column="smoking_status" uniqueMembers="true" />
-        </Hierarchy>
-    </Dimension>
-
-     
-    <Measure name="Sample Frequency" column="sample_frequency" aggregator="sum" />
-      
-    <Measure name="Weighted Frequency" column="weighted_frequency" aggregator="sum" />
-      
-    <Measure name="Weighted Percent" column="weighted_percent" aggregator="avg" />
-     
-</Cube><Cube name="MiBRFS - Activity Limitations">
+    
+    <Measure name="Score" column="score" aggregator="sum" />
+    <Measure name="National Average" column="national_average" aggregator="sum" />
+    <Measure name="Michigan Average" column="michigan_average" aggregator="sum" />
+    <Measure name="Race - Black" column="race_black" aggregator="sum" />
+    <Measure name="Race - Hispanic" column="race_hispanic" aggregator="sum" />
+    <Measure name="Gender - Male" column="gender_male" aggregator="sum" />
+    <Measure name="Gender - Female" column="gender_female" aggregator="sum" />
+    <Measure name="NSLP Eligible" column="nslp_eligible" aggregator="sum" />
+    <Measure name="NSLP Ineligible" column="nslp_ineligible" aggregator="sum" />
+    <Measure name="Parent edu - No high school" column="edu_no_high_school" aggregator="sum" />
+    <Measure name="Parent edu - High school" column="edu_high_school" aggregator="sum" />
+    <Measure name="Parent edu - Some college" column="edu_some_college" aggregator="sum" />
+    <Measure name="Parent edu - College" column="edu_college" aggregator="sum" />
+    <Measure name="Parent edu - Unknown" column="edu_unknown" aggregator="sum" />
+    <Measure name="Disability - Yes" column="disabilities" aggregator="sum" />
+    <Measure name="Disability - No" column="no_disabilities" aggregator="sum" />
+    <Measure name="ELL - Yes" column="ell" aggregator="sum" />
+    <Measure name="ELL - No" column="not_ell" aggregator="sum" />
+    <Measure name="Percent Proficient - Detroit" column="proficient_percent" aggregator="sum" />
+    <Measure name="Percent Proficient - National" column="national_proficient_percent" aggregator="sum" />
+    <Measure name="Percent Proficient - Michigan" column="michigan_proficient_percent" aggregator="sum" />
+</Cube>
+<Cube name="MiBRFS">
     <Annotations>
         <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>
         <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>
@@ -2455,7 +154,7 @@
         <Annotation name="subtopic">Risk Factors</Annotation>
     </Annotations>
 
-    <Table name="activity_limited" schema="mibrfs"/>
+    <Table name="mibrfs" schema="mibrfs"/>
 
     <Dimension name="Start Year">
         <Annotations>
@@ -2485,188 +184,129 @@
         </Hierarchy>
     </Dimension>
 
-    <Dimension name="Activity Limitations">
+    <Dimension name="Measure">
         <Annotations>
-          <Annotation name="dim_type">RISK FACTORS</Annotation>
+          <Annotation name="dim_type">Measure</Annotation>
         </Annotations>
         <Hierarchy hasAll="true">
-          <Level name="Category" column="activity_limited" uniqueMembers="true" />
+          <Level name="Category" column="measure" uniqueMembers="true" />
         </Hierarchy>
     </Dimension>
-
      
     <Measure name="Sample Frequency" column="sample_frequency" aggregator="sum" />
-      
     <Measure name="Weighted Frequency" column="weighted_frequency" aggregator="sum" />
-      
     <Measure name="Weighted Percent" column="weighted_percent" aggregator="avg" />
-     
-</Cube><Cube name="MiBRFS - Has health insurance">
+</Cube><Cube name="USDA">
     <Annotations>
-        <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>
-        <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>
-        <Annotation name="dataset_name">Has health insurance</Annotation>
-        <Annotation name="topic">Health</Annotation>
-        <Annotation name="subtopic">Risk Factors</Annotation>
+        <Annotation name="source_name">United State Department of Agriculture</Annotation>
+        <Annotation name="source_link">https://www.ers.usda.gov/</Annotation>
+        <Annotation name="dataset_name">USDA</Annotation>
+        <Annotation name="topic">Environmental</Annotation>
     </Annotations>
 
-    <Table name="has_insurance" schema="mibrfs"/>
-
-    <Dimension name="Start Year">
-        <Annotations>
-          <Annotation name="dim_type">TIME</Annotation>
-        </Annotations>
-        <Hierarchy hasAll="true">
-          <Level name="Start Year" column="start_year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />
-        </Hierarchy>
-    </Dimension>
-
-    <Dimension name="End Year">
-        <Annotations>
-          <Annotation name="dim_type">TIME</Annotation>
-        </Annotations>
-        <Hierarchy hasAll="true">
-          <Level name="End Year" column="end_year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />
-        </Hierarchy>
-    </Dimension>
-
-    <Dimension foreignKey="region_id" name="Geography">
-        <Annotations>
-          <Annotation name="dim_type">GEOGRAPHY</Annotation>
-        </Annotations>
-        <Hierarchy primaryKey="zip_region_id" hasAll="true">
-          <Table name="zip_regions" schema="dims"/>
-          <Level column="zip_region_id" name="Zip Region" nameColumn="zip_region_name" uniqueMembers="true"/>
-        </Hierarchy>
-    </Dimension>
-
-    <Dimension name="Has health insurance">
-        <Annotations>
-          <Annotation name="dim_type">RISK FACTORS</Annotation>
-        </Annotations>
-        <Hierarchy hasAll="true">
-          <Level name="Category" column="has_insurance" uniqueMembers="true" />
-        </Hierarchy>
-    </Dimension>
-
+    <Table name="usda" schema="usda"/>
      
-    <Measure name="Sample Frequency" column="sample_frequency" aggregator="sum" />
-      
-    <Measure name="Weighted Frequency" column="weighted_frequency" aggregator="sum" />
-      
-    <Measure name="Weighted Percent" column="weighted_percent" aggregator="avg" />
-     
-</Cube><Cube name="MiBRFS - Disability Status">
-    <Annotations>
-        <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>
-        <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>
-        <Annotation name="dataset_name">Disability Status</Annotation>
-        <Annotation name="topic">Health</Annotation>
-        <Annotation name="subtopic">Risk Factors</Annotation>
+    <Dimension foreignKey="fips" name="County">
+        <Annotations>
+            <Annotation name="dim_type">County</Annotation>
+        </Annotations>
+         <Hierarchy primaryKey="geoid" name="County" hasAll="true">
+            <Table name="counties" schema="shapes2017" />  
+            <Level name="County" column="geoid" nameColumn="name" uniqueMembers="false" />  
+        </Hierarchy> 
+    </Dimension>
+
+    <Measure name="Total Farmer's Markets in 2009" column="number_of_farmers_markets_2009" aggregator="sum" />
+    <Measure name="Total Farmer's Markets in 2016" column="number_of_farmers_markets_2016" aggregator="sum" />
+</Cube>
+<Cube name="500 Cities">
+    <Annotations> 
+        <Annotation name="source_name">500 Cities: Local Data for Better Health</Annotation>   
+        <Annotation name="source_link">https://www.cdc.gov/500cities/</Annotation>   
+        <Annotation name="dataset_name">500 Cities</Annotation>   
+        <Annotation name="topic">Health</Annotation>   
+        <Annotation name="subtopic">Chronic disease risk factors, health outcomes, and clinical preventive service use</Annotation>   
     </Annotations>
 
-    <Table name="limited_or_special_equip" schema="mibrfs"/>
-
-    <Dimension name="Start Year">
-        <Annotations>
-          <Annotation name="dim_type">TIME</Annotation>
-        </Annotations>
-        <Hierarchy hasAll="true">
-          <Level name="Start Year" column="start_year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />
-        </Hierarchy>
-    </Dimension>
-
-    <Dimension name="End Year">
-        <Annotations>
-          <Annotation name="dim_type">TIME</Annotation>
-        </Annotations>
-        <Hierarchy hasAll="true">
-          <Level name="End Year" column="end_year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />
-        </Hierarchy>
-    </Dimension>
-
-    <Dimension foreignKey="region_id" name="Geography">
-        <Annotations>
-          <Annotation name="dim_type">GEOGRAPHY</Annotation>
-        </Annotations>
-        <Hierarchy primaryKey="zip_region_id" hasAll="true">
-          <Table name="zip_regions" schema="dims"/>
-          <Level column="zip_region_id" name="Zip Region" nameColumn="zip_region_name" uniqueMembers="true"/>
-        </Hierarchy>
-    </Dimension>
-
-    <Dimension name="Disability Status">
-        <Annotations>
-          <Annotation name="dim_type">RISK FACTORS</Annotation>
-        </Annotations>
-        <Hierarchy hasAll="true">
-          <Level name="Category" column="limited_or_special_equip" uniqueMembers="true" />
-        </Hierarchy>
-    </Dimension>
-
+    <Table name="cities_500" schema="cities_500"/>
      
-    <Measure name="Sample Frequency" column="sample_frequency" aggregator="sum" />
-      
-    <Measure name="Weighted Frequency" column="weighted_frequency" aggregator="sum" />
-      
-    <Measure name="Weighted Percent" column="weighted_percent" aggregator="avg" />
+    <Dimension name="Year">
+        <Annotations>
+            <Annotation name="dim_type">TIME</Annotation>
+        </Annotations>
+         <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">  
+            <Level name="Year" column="year" type="Numeric" levelType="TimeYears" nameColumn="" uniqueMembers="true" />  
+        </Hierarchy> 
+    </Dimension>   
+    <Dimension foreignKey="city_fips" name="City">
+        <Annotations>
+            <Annotation name="dim_type">City</Annotation>
+        </Annotations>
+         <Hierarchy primaryKey="geoid" foreignKey="" name="City" hasAll="true">
+            <Table name="places" schema="shapes2017" />  
+            <Level name="City" column="geoid" type="" levelType="" nameColumn="name" uniqueMembers="false" />  
+        </Hierarchy> 
+    </Dimension>   
+    <Dimension foreignKey="tract_fips" name="Tract">
+        <Annotations>
+            <Annotation name="dim_type">Tract</Annotation>
+        </Annotations>
+         <Hierarchy primaryKey="geoid" foreignKey="" name="Tract" hasAll="true">
+            <Table name="tracts" schema="shapes2017" />  
+            <Level name="Tract" column="geoid" type="" levelType="" nameColumn="name" uniqueMembers="false" />  
+        </Hierarchy> 
+    </Dimension>   
+    <Dimension name="Indicator">
+        <Annotations>
+            <Annotation name="dim_type">Measure</Annotation>
+        </Annotations>
+         <Hierarchy hasAll="true">  
+            <Level name="Measure" column="short_question_text" type="String" uniqueMembers="true" />  
+        </Hierarchy> 
+    </Dimension>  
      
-</Cube><Cube name="MiBRFS - Ever Told High Blood Pressure (2011 &amp; 2013 Only)">
+    <Measure name="Data Value" column="data_value" aggregator="sum" />   
+    <Measure name="Low Confidence Limit" column="low_confidence_limit" aggregator="sum" />   
+    <Measure name="High Confidence Limit" column="high_confidence_limit" aggregator="sum" />   
+    <Measure name="Population Count" column="population_count" aggregator="sum" />  
+</Cube>
+<Cube name="Feeding America">
     <Annotations>
-        <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>
-        <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>
-        <Annotation name="dataset_name">Ever Told High Blood Pressure (2011 &amp; 2013 Only)</Annotation>
-        <Annotation name="topic">Health</Annotation>
-        <Annotation name="subtopic">Risk Factors</Annotation>
+        <Annotation name="source_name">Feeding America: Map the Meal Gap</Annotation>
+        <Annotation name="source_link">http://www.feedingamerica.org/</Annotation>
+        <Annotation name="dataset_name"></Annotation>
+        <Annotation name="topic">Environmental</Annotation>
     </Annotations>
 
-    <Table name="hbp" schema="mibrfs"/>
+    <Table name="feeding_america" schema="feeding_america"/>
 
-    <Dimension name="Start Year">
+    <Dimension name="Year">
         <Annotations>
-          <Annotation name="dim_type">TIME</Annotation>
+            <Annotation name="dim_type">TIME</Annotation>
         </Annotations>
-        <Hierarchy hasAll="true">
-          <Level name="Start Year" column="start_year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />
+         <Hierarchy hasAll="true">
+            <Level name="Year" column="year" type="Numeric" levelType="TimeYears" uniqueMembers="true" />
         </Hierarchy>
     </Dimension>
 
-    <Dimension name="End Year">
+    <Dimension foreignKey="county" name="County">
         <Annotations>
-          <Annotation name="dim_type">TIME</Annotation>
+            <Annotation name="dim_type">County</Annotation>
         </Annotations>
-        <Hierarchy hasAll="true">
-          <Level name="End Year" column="end_year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />
-        </Hierarchy>
+         <Hierarchy primaryKey="geoid" name="County" hasAll="true">
+            <Table name="counties" schema="shapes2017" />  
+            <Level name="County" column="geoid" nameColumn="name" uniqueMembers="false" />  
+        </Hierarchy> 
     </Dimension>
 
-    <Dimension foreignKey="region_id" name="Geography">
-        <Annotations>
-          <Annotation name="dim_type">GEOGRAPHY</Annotation>
-        </Annotations>
-        <Hierarchy primaryKey="zip_region_id" hasAll="true">
-          <Table name="zip_regions" schema="dims"/>
-          <Level column="zip_region_id" name="Zip Region" nameColumn="zip_region_name" uniqueMembers="true"/>
-        </Hierarchy>
-    </Dimension>
-
-    <Dimension name="Ever Told High Blood Pressure (2011 &amp; 2013 Only)">
-        <Annotations>
-          <Annotation name="dim_type">RISK FACTORS</Annotation>
-        </Annotations>
-        <Hierarchy hasAll="true">
-          <Level name="Category" column="hbp" uniqueMembers="true" />
-        </Hierarchy>
-    </Dimension>
-
-     
-    <Measure name="Sample Frequency" column="sample_frequency" aggregator="sum" />
-      
-    <Measure name="Weighted Frequency" column="weighted_frequency" aggregator="sum" />
-      
-    <Measure name="Weighted Percent" column="weighted_percent" aggregator="avg" />
-     
-</Cube><Cube name="VCU - Life Expectancy at Birth">
+    <Measure name="Food Insecurity Rate" column="food_insecurity_rate" aggregator="avg" />
+    <Measure name="Total Population Under 18" column="population_under_18" aggregator="sum" />
+    <Measure name="Child Food Insecurity Rate" column="child_food_insecurity_rate" aggregator="avg" />
+    <Measure name="Estimated Total Food Insecure Children" column="estimated_food_insecure_children" aggregator="sum" />
+    <Measure name="Percent Eligible for Federal Nuttrition Assistance" column="federal_nutrition_assistance_eligible_pct" aggregator="avg" />
+    <Measure name="Percent Ineligible for Federal Nuttrition Assistance" column="federal_nutrition_assistance_ineligible_pct" aggregator="avg" />
+</Cube>
+<Cube name="VCU - Life Expectancy at Birth">
     <Annotations>
       <Annotation name="source_name">Virginia Commonwealth University Center on Society and Health</Annotation>
       <Annotation name="source_description">According to its site: The VCU Center on Society and Health (formerly the VCU Center on Human Needs) is an academic research center that studies the health implications of social factors—such as education, income, neighborhood and community environmental conditions, and public policy.</Annotation>
@@ -2719,5 +359,83 @@
       </Annotations>
     </Measure>
   </Cube>
+<Cube name="BLS - Unemployment">
+    <Annotations>
+        <Annotation name="source_name">Bureau of Labor Statistics: Unemployment</Annotation>
+        <Annotation name="source_link">https://www.bls.gov/lau/</Annotation>
+        <Annotation name="dataset_name">BLS: Unemployment</Annotation>
+        <Annotation name="topic">Unemployment</Annotation>
+    </Annotations>
+
+    <Table name="bls" schema="bls"/>
+     
+    <Dimension name="Year">
+        <Annotations>
+            <Annotation name="dim_type">TIME</Annotation>
+        </Annotations>
+         <Hierarchy hasAll="true">
+            <Level name="Year" column="year" type="Numeric" levelType="TimeYears" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension foreignKey="geoid" name="County">
+        <Annotations>
+            <Annotation name="dim_type">County</Annotation>
+        </Annotations>
+         <Hierarchy primaryKey="geoid" name="County" hasAll="true">
+            <Table name="counties" schema="shapes2017" />  
+            <Level name="County" column="geoid" nameColumn="name" uniqueMembers="false" />  
+        </Hierarchy> 
+    </Dimension>
+
+    <Measure name="Labor Force" column="labor_force" aggregator="sum" />
+    <Measure name="Employed" column="employed" aggregator="sum" />
+    <Measure name="Unemployed" column="unemployed" aggregator="sum" />
+    <!-- TODO: Add another measure with an overall unemployment rate -->
+    <Measure name="Unemployment Rate" column="unemployment_rate" aggregator="avg" />
+</Cube>
+<Cube name="DCI">
+    <Annotations>
+        <Annotation name="source_name">Distressed Communities Index</Annotation>
+        <Annotation name="source_link">https://eig.org/dci/</Annotation>
+        <Annotation name="dataset_name">DCI</Annotation>
+        <Annotation name="topic">Socio-economic</Annotation>
+    </Annotations>
+
+    <Table name="dci" schema="dci"/>
+     
+    <!-- TODO: Uncomment once we have confirmation from AH that year is 2017 -->
+    <!-- <Dimension name="Year">
+        <Annotations>
+            <Annotation name="dim_type">TIME</Annotation>
+        </Annotations>
+         <Hierarchy hasAll="true">
+            <Level name="Year" column="year" type="Numeric" levelType="TimeYears" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension> -->
+
+    <Dimension foreignKey="zipcode" name="Zip Code">
+        <Annotations>
+            <Annotation name="dim_type">Zip Code</Annotation>
+        </Annotations>
+         <Hierarchy primaryKey="name" name="Zip Code" hasAll="true">
+            <Table name="zips" schema="shapes2017" />  
+            <Level name="Zip Code" column="name" nameColumn="name" uniqueMembers="false" />  
+        </Hierarchy> 
+    </Dimension>
+
+    <Measure name="Total Population" column="total_population" aggregator="sum" />
+    <Measure name="High School Dropout Rate" column="high_school_dropout_rate" aggregator="avg" />
+    <Measure name="Poverty Rate" column="poverty_rate" aggregator="avg" />
+    <Measure name="Percent Adults not Working" column="percent_adults_not_working" aggregator="avg" />
+    <Measure name="Housing Vacancy Rate" column="housing_vacancy_rate" aggregator="avg" />
+    <Measure name="Median Income Ratio" column="median_income_ratio" aggregator="avg" />
+    <Measure name="Percent Change in Employment" column="percent_change_in_employment" aggregator="avg" />
+    <Measure name="Percent Change in Establishments" column="percent_change_in_establishments" aggregator="avg" />
+    <Measure name="Distress Score" column="distress_score" aggregator="min" />
+    <Measure name="Distress Quintile" column="distress_quintile" aggregator="min" />
+    <Measure name="Distress County Ranking" column="distress_county_ranking" aggregator="min" />
+    <Measure name="Distress State Ranking" column="distress_state_ranking" aggregator="min" />
+</Cube>
 
 </Schema>
