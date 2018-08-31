@@ -24,7 +24,7 @@
         </Annotations>
          <Hierarchy primaryKey="geoid" name="County" hasAll="true">
             <Table name="counties" schema="shapes2017" />  
-            <Level name="County" column="geoid" nameColumn="name" uniqueMembers="false" />  
+            <Level name="County" column="geoid" nameColumn="name" uniqueMembers="true" />  
         </Hierarchy> 
     </Dimension>
 
@@ -454,7 +454,7 @@
         </Annotations>
          <Hierarchy primaryKey="geoid" name="County" hasAll="true">
             <Table name="counties" schema="shapes2017" />  
-            <Level name="County" column="geoid" nameColumn="name" uniqueMembers="false" />  
+            <Level name="County" column="geoid" nameColumn="name" uniqueMembers="true" />  
         </Hierarchy> 
     </Dimension>
 
