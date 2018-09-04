@@ -23,7 +23,7 @@
           <Annotation name="dim_type">TIME</Annotation>
         </Annotations>
         <Hierarchy hasAll="true">
-          <Level name="End Year" column="end_year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />
+          <Level name="End Year" column="year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />
         </Hierarchy>
     </Dimension>
 
