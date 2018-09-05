@@ -27,36 +27,96 @@
         </Hierarchy> 
     </Dimension>
 
-    <Dimension name="Measure">
-        <Annotations>
-          <Annotation name="dim_type">Measure</Annotation>
-        </Annotations>
-        <Hierarchy hasAll="true">
-          <Level name="Category" column="measure" uniqueMembers="true" />
-        </Hierarchy>
-    </Dimension>
-
-    <Measure name="Number" column="number" aggregator="sum" />
-    <Measure name="Percent" column="percent" aggregator="avg" />
-    <Measure name="Lower Confidence Limit" column="lower_confidence_limit" aggregator="avg" />
-    <Measure name="Upper Confidence Limit" column="upper_confidence_limit" aggregator="avg" />
-    <Measure name="Age-adjusted Percent" column="adj_percent" aggregator="avg" />
-    <Measure name="Age-adjusted Lower Confidence Limit" column="adj_lower_confidence_limit" aggregator="avg" />
-    <Measure name="Age-adjusted Upper Confidence Limit" column="adj_upper_confidence_limit" aggregator="avg" />
-    <Measure name="Number (Men)" column="number" aggregator="sum" />
-    <Measure name="Percent (Men)" column="percent" aggregator="avg" />
-    <Measure name="Lower Confidence Limit (Men)" column="lower_confidence_limit" aggregator="avg" />
-    <Measure name="Upper Confidence Limit (Men)" column="upper_confidence_limit" aggregator="avg" />
-    <Measure name="Age-adjusted Percent (Men)" column="adj_percent" aggregator="avg" />
-    <Measure name="Age-adjusted Lower Confidence Limit (Men)" column="adj_lower_confidence_limit" aggregator="avg" />
-    <Measure name="Age-adjusted Upper Confidence Limit (Men)" column="adj_upper_confidence_limit" aggregator="avg" />
-    <Measure name="Number (Women)" column="number" aggregator="sum" />
-    <Measure name="Percent (Women)" column="percent" aggregator="avg" />
-    <Measure name="Lower Confidence Limit (Women)" column="lower_confidence_limit" aggregator="avg" />
-    <Measure name="Upper Confidence Limit (Women)" column="upper_confidence_limit" aggregator="avg" />
-    <Measure name="Age-adjusted Percent (Women)" column="adj_percent" aggregator="avg" />
-    <Measure name="Age-adjusted Lower Confidence Limit (Women)" column="adj_lower_confidence_limit" aggregator="avg" />
-    <Measure name="Age-adjusted Upper Confidence Limit (Women)" column="adj_upper_confidence_limit" aggregator="avg" />
-    <Measure name="Rate per 100" column="rate_per_100" aggregator="avg" />
-    <Measure name="Age-adjusted Rate per 100" column="adj_rate_per_100" aggregator="avg" />
+    <Measure name="Diagnosed Diabetes Incidence Rate Per 100" column="diabetes_incidence_rate_per_100" aggregator="avg" />
+    <Measure name="Diagnosed Diabetes Incidence Adj Rate Per 100" column="diabetes_incidence_adj_rate_per_100" aggregator="avg" />
+    <Measure name="Diagnosed Diabetes Incidence Number" column="diabetes_incidence_number" aggregator="sum" />
+    <Measure name="Diagnosed Diabetes Incidence Percent" column="diabetes_incidence_percent" aggregator="avg" />
+    <Measure name="Diagnosed Diabetes Incidence Lower Confidence Limit" column="diabetes_incidence_lower_confidence_limit" aggregator="avg" />
+    <Measure name="Diagnosed Diabetes Incidence Upper Confidence Limit" column="diabetes_incidence_upper_confidence_limit" aggregator="avg" />
+    <Measure name="Diagnosed Diabetes Incidence Adj Percent" column="diabetes_incidence_adj_percent" aggregator="avg" />
+    <Measure name="Diagnosed Diabetes Incidence Adj Lower Confidence Limit" column="diabetes_incidence_adj_lower_confidence_limit" aggregator="avg" />
+    <Measure name="Diagnosed Diabetes Incidence Adj Upper Confidence Limit" column="diabetes_incidence_adj_upper_confidence_limit" aggregator="avg" />
+    <Measure name="Diagnosed Diabetes Incidence Number Men" column="diabetes_incidence_number_men" aggregator="sum" />
+    <Measure name="Diagnosed Diabetes Incidence Percent Men" column="diabetes_incidence_percent_men" aggregator="avg" />
+    <Measure name="Diagnosed Diabetes Incidence Lower Confidence Limit Men" column="diabetes_incidence_lower_confidence_limit_men" aggregator="avg" />
+    <Measure name="Diagnosed Diabetes Incidence Upper Confidence Limit Men" column="diabetes_incidence_upper_confidence_limit_men" aggregator="avg" />
+    <Measure name="Diagnosed Diabetes Incidence Adj Percent Men" column="diabetes_incidence_adj_percent_men" aggregator="avg" />
+    <Measure name="Diagnosed Diabetes Incidence Adj Lower Confidence Limit Men" column="diabetes_incidence_adj_lower_confidence_limit_men" aggregator="avg" />
+    <Measure name="Diagnosed Diabetes Incidence Adj Upper Confidence Limit Men" column="diabetes_incidence_adj_upper_confidence_limit_men" aggregator="avg" />
+    <Measure name="Diagnosed Diabetes Incidence Number Women" column="diabetes_incidence_number_women" aggregator="sum" />
+    <Measure name="Diagnosed Diabetes Incidence Percent Women" column="diabetes_incidence_percent_women" aggregator="avg" />
+    <Measure name="Diagnosed Diabetes Incidence Lower Confidence Limit Women" column="diabetes_incidence_lower_confidence_limit_women" aggregator="avg" />
+    <Measure name="Diagnosed Diabetes Incidence Upper Confidence Limit Women" column="diabetes_incidence_upper_confidence_limit_women" aggregator="avg" />
+    <Measure name="Diagnosed Diabetes Incidence Adj Percent Women" column="diabetes_incidence_adj_percent_women" aggregator="avg" />
+    <Measure name="Diagnosed Diabetes Incidence Adj Lower Confidence Limit Women" column="diabetes_incidence_adj_lower_confidence_limit_women" aggregator="avg" />
+    <Measure name="Diagnosed Diabetes Incidence Adj Upper Confidence Limit Women" column="diabetes_incidence_adj_upper_confidence_limit_women" aggregator="avg" />
+    <Measure name="Diagnosed Diabetes Prevalence Rate Per 100" column="diabetes_prevalence_rate_per_100" aggregator="avg" />
+    <Measure name="Diagnosed Diabetes Prevalence Adj Rate Per 100" column="diabetes_prevalence_adj_rate_per_100" aggregator="avg" />
+    <Measure name="Diagnosed Diabetes Prevalence Number" column="diabetes_prevalence_number" aggregator="sum" />
+    <Measure name="Diagnosed Diabetes Prevalence Percent" column="diabetes_prevalence_percent" aggregator="avg" />
+    <Measure name="Diagnosed Diabetes Prevalence Lower Confidence Limit" column="diabetes_prevalence_lower_confidence_limit" aggregator="avg" />
+    <Measure name="Diagnosed Diabetes Prevalence Upper Confidence Limit" column="diabetes_prevalence_upper_confidence_limit" aggregator="avg" />
+    <Measure name="Diagnosed Diabetes Prevalence Adj Percent" column="diabetes_prevalence_adj_percent" aggregator="avg" />
+    <Measure name="Diagnosed Diabetes Prevalence Adj Lower Confidence Limit" column="diabetes_prevalence_adj_lower_confidence_limit" aggregator="avg" />
+    <Measure name="Diagnosed Diabetes Prevalence Adj Upper Confidence Limit" column="diabetes_prevalence_adj_upper_confidence_limit" aggregator="avg" />
+    <Measure name="Diagnosed Diabetes Prevalence Number Men" column="diabetes_prevalence_number_men" aggregator="sum" />
+    <Measure name="Diagnosed Diabetes Prevalence Percent Men" column="diabetes_prevalence_percent_men" aggregator="avg" />
+    <Measure name="Diagnosed Diabetes Prevalence Lower Confidence Limit Men" column="diabetes_prevalence_lower_confidence_limit_men" aggregator="avg" />
+    <Measure name="Diagnosed Diabetes Prevalence Upper Confidence Limit Men" column="diabetes_prevalence_upper_confidence_limit_men" aggregator="avg" />
+    <Measure name="Diagnosed Diabetes Prevalence Adj Percent Men" column="diabetes_prevalence_adj_percent_men" aggregator="avg" />
+    <Measure name="Diagnosed Diabetes Prevalence Adj Lower Confidence Limit Men" column="diabetes_prevalence_adj_lower_confidence_limit_men" aggregator="avg" />
+    <Measure name="Diagnosed Diabetes Prevalence Adj Upper Confidence Limit Men" column="diabetes_prevalence_adj_upper_confidence_limit_men" aggregator="avg" />
+    <Measure name="Diagnosed Diabetes Prevalence Number Women" column="diabetes_prevalence_number_women" aggregator="sum" />
+    <Measure name="Diagnosed Diabetes Prevalence Percent Women" column="diabetes_prevalence_percent_women" aggregator="avg" />
+    <Measure name="Diagnosed Diabetes Prevalence Lower Confidence Limit Women" column="diabetes_prevalence_lower_confidence_limit_women" aggregator="avg" />
+    <Measure name="Diagnosed Diabetes Prevalence Upper Confidence Limit Women" column="diabetes_prevalence_upper_confidence_limit_women" aggregator="avg" />
+    <Measure name="Diagnosed Diabetes Prevalence Adj Percent Women" column="diabetes_prevalence_adj_percent_women" aggregator="avg" />
+    <Measure name="Diagnosed Diabetes Prevalence Adj Lower Confidence Limit Women" column="diabetes_prevalence_adj_lower_confidence_limit_women" aggregator="avg" />
+    <Measure name="Diagnosed Diabetes Prevalence Adj Upper Confidence Limit Women" column="diabetes_prevalence_adj_upper_confidence_limit_women" aggregator="avg" />
+    <Measure name="Leisure-Time Physical Inactivity Prevalence Rate Per 100" column="phys_inactivity_prevalence_rate_per_100" aggregator="avg" />
+    <Measure name="Leisure-Time Physical Inactivity Prevalence Adj Rate Per 100" column="phys_inactivity_prevalence_adj_rate_per_100" aggregator="avg" />
+    <Measure name="Leisure-Time Physical Inactivity Prevalence Number" column="phys_inactivity_prevalence_number" aggregator="sum" />
+    <Measure name="Leisure-Time Physical Inactivity Prevalence Percent" column="phys_inactivity_prevalence_percent" aggregator="avg" />
+    <Measure name="Leisure-Time Physical Inactivity Prevalence Lower Confidence Limit" column="phys_inactivity_prevalence_lower_confidence_limit" aggregator="avg" />
+    <Measure name="Leisure-Time Physical Inactivity Prevalence Upper Confidence Limit" column="phys_inactivity_prevalence_upper_confidence_limit" aggregator="avg" />
+    <Measure name="Leisure-Time Physical Inactivity Prevalence Adj Percent" column="phys_inactivity_prevalence_adj_percent" aggregator="avg" />
+    <Measure name="Leisure-Time Physical Inactivity Prevalence Adj Lower Confidence Limit" column="phys_inactivity_prevalence_adj_lower_confidence_limit" aggregator="avg" />
+    <Measure name="Leisure-Time Physical Inactivity Prevalence Adj Upper Confidence Limit" column="phys_inactivity_prevalence_adj_upper_confidence_limit" aggregator="avg" />
+    <Measure name="Leisure-Time Physical Inactivity Prevalence Number Men" column="phys_inactivity_prevalence_number_men" aggregator="sum" />
+    <Measure name="Leisure-Time Physical Inactivity Prevalence Percent Men" column="phys_inactivity_prevalence_percent_men" aggregator="avg" />
+    <Measure name="Leisure-Time Physical Inactivity Prevalence Lower Confidence Limit Men" column="phys_inactivity_prevalence_lower_confidence_limit_men" aggregator="avg" />
+    <Measure name="Leisure-Time Physical Inactivity Prevalence Upper Confidence Limit Men" column="phys_inactivity_prevalence_upper_confidence_limit_men" aggregator="avg" />
+    <Measure name="Leisure-Time Physical Inactivity Prevalence Adj Percent Men" column="phys_inactivity_prevalence_adj_percent_men" aggregator="avg" />
+    <Measure name="Leisure-Time Physical Inactivity Prevalence Adj Lower Confidence Limit Men" column="phys_inactivity_prevalence_adj_lower_confidence_limit_men" aggregator="avg" />
+    <Measure name="Leisure-Time Physical Inactivity Prevalence Adj Upper Confidence Limit Men" column="phys_inactivity_prevalence_adj_upper_confidence_limit_men" aggregator="avg" />
+    <Measure name="Leisure-Time Physical Inactivity Prevalence Number Women" column="phys_inactivity_prevalence_number_women" aggregator="sum" />
+    <Measure name="Leisure-Time Physical Inactivity Prevalence Percent Women" column="phys_inactivity_prevalence_percent_women" aggregator="avg" />
+    <Measure name="Leisure-Time Physical Inactivity Prevalence Lower Confidence Limit Women" column="phys_inactivity_prevalence_lower_confidence_limit_women" aggregator="avg" />
+    <Measure name="Leisure-Time Physical Inactivity Prevalence Upper Confidence Limit Women" column="phys_inactivity_prevalence_upper_confidence_limit_women" aggregator="avg" />
+    <Measure name="Leisure-Time Physical Inactivity Prevalence Adj Percent Women" column="phys_inactivity_prevalence_adj_percent_women" aggregator="avg" />
+    <Measure name="Leisure-Time Physical Inactivity Prevalence Adj Lower Confidence Limit Women" column="phys_inactivity_prevalence_adj_lower_confidence_limit_women" aggregator="avg" />
+    <Measure name="Leisure-Time Physical Inactivity Prevalence Adj Upper Confidence Limit Women" column="phys_inactivity_prevalence_adj_upper_confidence_limit_women" aggregator="avg" />
+    <Measure name="Obesity Prevalence Rate Per 100" column="obesity_prevalence_rate_per_100" aggregator="avg" />
+    <Measure name="Obesity Prevalence Adj Rate Per 100" column="obesity_prevalence_adj_rate_per_100" aggregator="avg" />
+    <Measure name="Obesity Prevalence Number" column="obesity_prevalence_number" aggregator="sum" />
+    <Measure name="Obesity Prevalence Percent" column="obesity_prevalence_percent" aggregator="avg" />
+    <Measure name="Obesity Prevalence Lower Confidence Limit" column="obesity_prevalence_lower_confidence_limit" aggregator="avg" />
+    <Measure name="Obesity Prevalence Upper Confidence Limit" column="obesity_prevalence_upper_confidence_limit" aggregator="avg" />
+    <Measure name="Obesity Prevalence Adj Percent" column="obesity_prevalence_adj_percent" aggregator="avg" />
+    <Measure name="Obesity Prevalence Adj Lower Confidence Limit" column="obesity_prevalence_adj_lower_confidence_limit" aggregator="avg" />
+    <Measure name="Obesity Prevalence Adj Upper Confidence Limit" column="obesity_prevalence_adj_upper_confidence_limit" aggregator="avg" />
+    <Measure name="Obesity Prevalence Number Men" column="obesity_prevalence_number_men" aggregator="sum" />
+    <Measure name="Obesity Prevalence Percent Men" column="obesity_prevalence_percent_men" aggregator="avg" />
+    <Measure name="Obesity Prevalence Lower Confidence Limit Men" column="obesity_prevalence_lower_confidence_limit_men" aggregator="avg" />
+    <Measure name="Obesity Prevalence Upper Confidence Limit Men" column="obesity_prevalence_upper_confidence_limit_men" aggregator="avg" />
+    <Measure name="Obesity Prevalence Adj Percent Men" column="obesity_prevalence_adj_percent_men" aggregator="avg" />
+    <Measure name="Obesity Prevalence Adj Lower Confidence Limit Men" column="obesity_prevalence_adj_lower_confidence_limit_men" aggregator="avg" />
+    <Measure name="Obesity Prevalence Adj Upper Confidence Limit Men" column="obesity_prevalence_adj_upper_confidence_limit_men" aggregator="avg" />
+    <Measure name="Obesity Prevalence Number Women" column="obesity_prevalence_number_women" aggregator="sum" />
+    <Measure name="Obesity Prevalence Percent Women" column="obesity_prevalence_percent_women" aggregator="avg" />
+    <Measure name="Obesity Prevalence Lower Confidence Limit Women" column="obesity_prevalence_lower_confidence_limit_women" aggregator="avg" />
+    <Measure name="Obesity Prevalence Upper Confidence Limit Women" column="obesity_prevalence_upper_confidence_limit_women" aggregator="avg" />
+    <Measure name="Obesity Prevalence Adj Percent Women" column="obesity_prevalence_adj_percent_women" aggregator="avg" />
+    <Measure name="Obesity Prevalence Adj Lower Confidence Limit Women" column="obesity_prevalence_adj_lower_confidence_limit_women" aggregator="avg" />
+    <Measure name="Obesity Prevalence Adj Upper Confidence Limit Women" column="obesity_prevalence_adj_upper_confidence_limit_women" aggregator="avg" />
 </Cube>
