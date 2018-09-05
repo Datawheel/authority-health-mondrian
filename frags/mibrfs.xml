@@ -36,89 +36,140 @@
           <Level column="zip_region_id" name="Zip Region" nameColumn="zip_region_name" uniqueMembers="true"/>
         </Hierarchy>
     </Dimension>
-     
-    <Measure name="Activity limited Sample frequency" column="activity_limited_sample_frequency" aggregator="sum" />
-    <!-- <Measure name="Activity limited Value" column="activity_limited_value" aggregator="min" /> -->
-    <Measure name="Activity limited Weighted frequency" column="activity_limited_weighted_frequency" aggregator="sum" />
-    <Measure name="Activity limited Weighted percent" column="activity_limited_weighted_percent" aggregator="avg" />
-    <Measure name="Bmi categories Sample frequency" column="bmi_categories_sample_frequency" aggregator="sum" />
-    <!-- <Measure name="Bmi categories Value" column="bmi_categories_value" aggregator="min" /> -->
-    <Measure name="Bmi categories Weighted frequency" column="bmi_categories_weighted_frequency" aggregator="sum" />
-    <Measure name="Bmi categories Weighted percent" column="bmi_categories_weighted_percent" aggregator="avg" />
-    <Measure name="Cardiovascular disease Sample frequency" column="cardiovascular_disease_sample_frequency" aggregator="sum" />
-    <!-- <Measure name="Cardiovascular disease Value" column="cardiovascular_disease_value" aggregator="min" /> -->
-    <Measure name="Cardiovascular disease Weighted frequency" column="cardiovascular_disease_weighted_frequency" aggregator="sum" />
-    <Measure name="Cardiovascular disease Weighted percent" column="cardiovascular_disease_weighted_percent" aggregator="avg" />
-    <Measure name="Current asthma Sample frequency" column="current_asthma_sample_frequency" aggregator="sum" />
-    <!-- <Measure name="Current asthma Value" column="current_asthma_value" aggregator="min" /> -->
-    <Measure name="Current asthma Weighted frequency" column="current_asthma_weighted_frequency" aggregator="sum" />
-    <Measure name="Current asthma Weighted percent" column="current_asthma_weighted_percent" aggregator="avg" />
-    <Measure name="Depressive Sample frequency" column="depressive_sample_frequency" aggregator="sum" />
-    <!-- <Measure name="Depressive Value" column="depressive_value" aggregator="min" /> -->
-    <Measure name="Depressive Weighted frequency" column="depressive_weighted_frequency" aggregator="sum" />
-    <Measure name="Depressive Weighted percent" column="depressive_weighted_percent" aggregator="avg" />
-    <Measure name="Diabetes Sample frequency" column="diabetes_sample_frequency" aggregator="sum" />
-    <!-- <Measure name="Diabetes Value" column="diabetes_value" aggregator="min" /> -->
-    <Measure name="Diabetes Weighted frequency" column="diabetes_weighted_frequency" aggregator="sum" />
-    <Measure name="Diabetes Weighted percent" column="diabetes_weighted_percent" aggregator="avg" />
-    <Measure name="Ever cancer Sample frequency" column="ever_cancer_sample_frequency" aggregator="sum" />
-    <!-- <Measure name="Ever cancer Value" column="ever_cancer_value" aggregator="min" /> -->
-    <Measure name="Ever cancer Weighted frequency" column="ever_cancer_weighted_frequency" aggregator="sum" />
-    <Measure name="Ever cancer Weighted percent" column="ever_cancer_weighted_percent" aggregator="avg" />
-    <Measure name="Gen health Sample frequency" column="gen_health_sample_frequency" aggregator="sum" />
-    <!-- <Measure name="Gen health Value" column="gen_health_value" aggregator="min" /> -->
-    <Measure name="Gen health Weighted frequency" column="gen_health_weighted_frequency" aggregator="sum" />
-    <Measure name="Gen health Weighted percent" column="gen_health_weighted_percent" aggregator="avg" />
-    <Measure name="Had routine checkup Sample frequency" column="had_routine_checkup_sample_frequency" aggregator="sum" />
-    <!-- <Measure name="Had routine checkup Value" column="had_routine_checkup_value" aggregator="min" /> -->
-    <Measure name="Had routine checkup Weighted frequency" column="had_routine_checkup_weighted_frequency" aggregator="sum" />
-    <Measure name="Had routine checkup Weighted percent" column="had_routine_checkup_weighted_percent" aggregator="avg" />
-    <Measure name="Has insurance Sample frequency" column="has_insurance_sample_frequency" aggregator="sum" />
-    <!-- <Measure name="Has insurance Value" column="has_insurance_value" aggregator="min" /> -->
-    <Measure name="Has insurance Weighted frequency" column="has_insurance_weighted_frequency" aggregator="sum" />
-    <Measure name="Has insurance Weighted percent" column="has_insurance_weighted_percent" aggregator="avg" />
-    <Measure name="Heart attack Sample frequency" column="heart_attack_sample_frequency" aggregator="sum" />
-    <!-- <Measure name="Heart attack Value" column="heart_attack_value" aggregator="min" /> -->
-    <Measure name="Heart attack Weighted frequency" column="heart_attack_weighted_frequency" aggregator="sum" />
-    <Measure name="Heart attack Weighted percent" column="heart_attack_weighted_percent" aggregator="avg" />
-    <Measure name="Heart disease Sample frequency" column="heart_disease_sample_frequency" aggregator="sum" />
-    <!-- <Measure name="Heart disease Value" column="heart_disease_value" aggregator="min" /> -->
-    <Measure name="Heart disease Weighted frequency" column="heart_disease_weighted_frequency" aggregator="sum" />
-    <Measure name="Heart disease Weighted percent" column="heart_disease_weighted_percent" aggregator="avg" />
-    <Measure name="Hiv tested Sample frequency" column="hiv_tested_sample_frequency" aggregator="sum" />
-    <!-- <Measure name="Hiv tested Value" column="hiv_tested_value" aggregator="min" /> -->
-    <Measure name="Hiv tested Weighted frequency" column="hiv_tested_weighted_frequency" aggregator="sum" />
-    <Measure name="Hiv tested Weighted percent" column="hiv_tested_weighted_percent" aggregator="avg" />
-    <Measure name="Leisure time physical activity Sample frequency" column="leisure_time_physical_activity_sample_frequency" aggregator="sum" />
-    <!-- <Measure name="Leisure time physical activity Value" column="leisure_time_physical_activity_value" aggregator="min" /> -->
-    <Measure name="Leisure time physical activity Weighted frequency" column="leisure_time_physical_activity_weighted_frequency" aggregator="sum" />
-    <Measure name="Leisure time physical activity Weighted percent" column="leisure_time_physical_activity_weighted_percent" aggregator="avg" />
-    <Measure name="Lifetime asthma Sample frequency" column="lifetime_asthma_sample_frequency" aggregator="sum" />
-    <!-- <Measure name="Lifetime asthma Value" column="lifetime_asthma_value" aggregator="min" /> -->
-    <Measure name="Lifetime asthma Weighted frequency" column="lifetime_asthma_weighted_frequency" aggregator="sum" />
-    <Measure name="Lifetime asthma Weighted percent" column="lifetime_asthma_weighted_percent" aggregator="avg" />
-    <Measure name="Limited or special equip Sample frequency" column="limited_or_special_equip_sample_frequency" aggregator="sum" />
-    <!-- <Measure name="Limited or special equip Value" column="limited_or_special_equip_value" aggregator="min" /> -->
-    <Measure name="Limited or special equip Weighted frequency" column="limited_or_special_equip_weighted_frequency" aggregator="sum" />
-    <Measure name="Limited or special equip Weighted percent" column="limited_or_special_equip_weighted_percent" aggregator="avg" />
-    <Measure name="Poor mental health Sample frequency" column="poor_mental_health_sample_frequency" aggregator="sum" />
-    <!-- <Measure name="Poor mental health Value" column="poor_mental_health_value" aggregator="min" /> -->
-    <Measure name="Poor mental health Weighted frequency" column="poor_mental_health_weighted_frequency" aggregator="sum" />
-    <Measure name="Poor mental health Weighted percent" column="poor_mental_health_weighted_percent" aggregator="avg" />
-    <Measure name="Poor physical health Sample frequency" column="poor_physical_health_sample_frequency" aggregator="sum" />
-    <!-- <Measure name="Poor physical health Value" column="poor_physical_health_value" aggregator="min" /> -->
-    <Measure name="Poor physical health Weighted frequency" column="poor_physical_health_weighted_frequency" aggregator="sum" />
-    <Measure name="Poor physical health Weighted percent" column="poor_physical_health_weighted_percent" aggregator="avg" />
-    <Measure name="Smoking status Sample frequency" column="smoking_status_sample_frequency" aggregator="sum" />
-    <!-- <Measure name="Smoking status Value" column="smoking_status_value" aggregator="min" /> -->
-    <Measure name="Smoking status Weighted frequency" column="smoking_status_weighted_frequency" aggregator="sum" />
-    <Measure name="Smoking status Weighted percent" column="smoking_status_weighted_percent" aggregator="avg" />
-    <Measure name="Stroke Sample frequency" column="stroke_sample_frequency" aggregator="sum" />
-    <!-- <Measure name="Stroke Value" column="stroke_value" aggregator="min" /> -->
-    <Measure name="Stroke Weighted frequency" column="stroke_weighted_frequency" aggregator="sum" />
-    <Measure name="Stroke Weighted percent" column="stroke_weighted_percent" aggregator="avg" />
-    <Measure name="Hbp Sample frequency" column="hbp_sample_frequency" aggregator="sum" />
-    <!-- <Measure name="Hbp Value" column="hbp_value" aggregator="min" /> -->
-    <Measure name="Hbp Weighted percent" column="hbp_weighted_percent" aggregator="avg" />
-    <Measure name="Hbp Weighted frequency" column="hbp_weighted_frequency" aggregator="sum" />
+
+    <Measure name="Activity Limited 13 Or Less Days Sample Frequency" column="activity_limited_13_or_less_days_sample_frequency" aggregator="sum" />
+    <Measure name="Activity Limited 13 Or Less Days Weighted Frequency" column="activity_limited_13_or_less_days_weighted_frequency" aggregator="sum" />
+    <Measure name="Activity Limited 13 Or Less Days Weighted Percent" column="activity_limited_13_or_less_days_weighted_percent" aggregator="avg" />
+    <Measure name="Activity Limited 14 Or More Days Sample Frequency" column="activity_limited_14_or_more_days_sample_frequency" aggregator="sum" />
+    <Measure name="Activity Limited 14 Or More Days Weighted Frequency" column="activity_limited_14_or_more_days_weighted_frequency" aggregator="sum" />
+    <Measure name="Activity Limited 14 Or More Days Weighted Percent" column="activity_limited_14_or_more_days_weighted_percent" aggregator="avg" />
+    <Measure name="Bmi Healthy Weight Sample Frequency" column="bmi_healthy_weight_sample_frequency" aggregator="sum" />
+    <Measure name="Bmi Healthy Weight Weighted Frequency" column="bmi_healthy_weight_weighted_frequency" aggregator="sum" />
+    <Measure name="Bmi Healthy Weight Weighted Percent" column="bmi_healthy_weight_weighted_percent" aggregator="avg" />
+    <Measure name="Bmi Obese Sample Frequency" column="bmi_obese_sample_frequency" aggregator="sum" />
+    <Measure name="Bmi Obese Weighted Frequency" column="bmi_obese_weighted_frequency" aggregator="sum" />
+    <Measure name="Bmi Obese Weighted Percent" column="bmi_obese_weighted_percent" aggregator="avg" />
+    <Measure name="Bmi Overweight Sample Frequency" column="bmi_overweight_sample_frequency" aggregator="sum" />
+    <Measure name="Bmi Overweight Weighted Frequency" column="bmi_overweight_weighted_frequency" aggregator="sum" />
+    <Measure name="Bmi Overweight Weighted Percent" column="bmi_overweight_weighted_percent" aggregator="avg" />
+    <Measure name="Bmi Underweight Sample Frequency" column="bmi_underweight_sample_frequency" aggregator="sum" />
+    <Measure name="Bmi Underweight Weighted Frequency" column="bmi_underweight_weighted_frequency" aggregator="sum" />
+    <Measure name="Bmi Underweight Weighted Percent" column="bmi_underweight_weighted_percent" aggregator="avg" />
+    <Measure name="Cardiovascular Disease No Sample Frequency" column="cardiovascular_disease_no_sample_frequency" aggregator="sum" />
+    <Measure name="Cardiovascular Disease No Weighted Frequency" column="cardiovascular_disease_no_weighted_frequency" aggregator="sum" />
+    <Measure name="Cardiovascular Disease No Weighted Percent" column="cardiovascular_disease_no_weighted_percent" aggregator="avg" />
+    <Measure name="Cardiovascular Disease Yes Sample Frequency" column="cardiovascular_disease_yes_sample_frequency" aggregator="sum" />
+    <Measure name="Cardiovascular Disease Yes Weighted Frequency" column="cardiovascular_disease_yes_weighted_frequency" aggregator="sum" />
+    <Measure name="Cardiovascular Disease Yes Weighted Percent" column="cardiovascular_disease_yes_weighted_percent" aggregator="avg" />
+    <Measure name="Current Asthma No Sample Frequency" column="current_asthma_no_sample_frequency" aggregator="sum" />
+    <Measure name="Current Asthma No Weighted Frequency" column="current_asthma_no_weighted_frequency" aggregator="sum" />
+    <Measure name="Current Asthma No Weighted Percent" column="current_asthma_no_weighted_percent" aggregator="avg" />
+    <Measure name="Current Asthma Yes Sample Frequency" column="current_asthma_yes_sample_frequency" aggregator="sum" />
+    <Measure name="Current Asthma Yes Weighted Frequency" column="current_asthma_yes_weighted_frequency" aggregator="sum" />
+    <Measure name="Current Asthma Yes Weighted Percent" column="current_asthma_yes_weighted_percent" aggregator="avg" />
+    <Measure name="Diabetes No Sample Frequency" column="diabetes_no_sample_frequency" aggregator="sum" />
+    <Measure name="Diabetes No Weighted Frequency" column="diabetes_no_weighted_frequency" aggregator="sum" />
+    <Measure name="Diabetes No Weighted Percent" column="diabetes_no_weighted_percent" aggregator="avg" />
+    <Measure name="Diabetes Yes Sample Frequency" column="diabetes_yes_sample_frequency" aggregator="sum" />
+    <Measure name="Diabetes Yes Weighted Frequency" column="diabetes_yes_weighted_frequency" aggregator="sum" />
+    <Measure name="Diabetes Yes Weighted Percent" column="diabetes_yes_weighted_percent" aggregator="avg" />
+    <Measure name="Ever Cancer No Sample Frequency" column="ever_cancer_no_sample_frequency" aggregator="sum" />
+    <Measure name="Ever Cancer No Weighted Frequency" column="ever_cancer_no_weighted_frequency" aggregator="sum" />
+    <Measure name="Ever Cancer No Weighted Percent" column="ever_cancer_no_weighted_percent" aggregator="avg" />
+    <Measure name="Ever Cancer Yes Sample Frequency" column="ever_cancer_yes_sample_frequency" aggregator="sum" />
+    <Measure name="Ever Cancer Yes Weighted Frequency" column="ever_cancer_yes_weighted_frequency" aggregator="sum" />
+    <Measure name="Ever Cancer Yes Weighted Percent" column="ever_cancer_yes_weighted_percent" aggregator="avg" />
+    <Measure name="Ever Depressive No Sample Frequency" column="ever_depressive_no_sample_frequency" aggregator="sum" />
+    <Measure name="Ever Depressive No Weighted Frequency" column="ever_depressive_no_weighted_frequency" aggregator="sum" />
+    <Measure name="Ever Depressive No Weighted Percent" column="ever_depressive_no_weighted_percent" aggregator="avg" />
+    <Measure name="Ever Depressive Yes Sample Frequency" column="ever_depressive_yes_sample_frequency" aggregator="sum" />
+    <Measure name="Ever Depressive Yes Weighted Frequency" column="ever_depressive_yes_weighted_frequency" aggregator="sum" />
+    <Measure name="Ever Depressive Yes Weighted Percent" column="ever_depressive_yes_weighted_percent" aggregator="avg" />
+    <Measure name="Ever Hbp No Sample Frequency" column="ever_hbp_no_sample_frequency" aggregator="sum" />
+    <Measure name="Ever Hbp No Weighted Frequency" column="ever_hbp_no_weighted_frequency" aggregator="sum" />
+    <Measure name="Ever Hbp No Weighted Percent" column="ever_hbp_no_weighted_percent" aggregator="avg" />
+    <Measure name="Ever Hbp Yes Sample Frequency" column="ever_hbp_yes_sample_frequency" aggregator="sum" />
+    <Measure name="Ever Hbp Yes Weighted Frequency" column="ever_hbp_yes_weighted_frequency" aggregator="sum" />
+    <Measure name="Ever Hbp Yes Weighted Percent" column="ever_hbp_yes_weighted_percent" aggregator="avg" />
+    <Measure name="Ever Heart Attack No Sample Frequency" column="ever_heart_attack_no_sample_frequency" aggregator="sum" />
+    <Measure name="Ever Heart Attack No Weighted Frequency" column="ever_heart_attack_no_weighted_frequency" aggregator="sum" />
+    <Measure name="Ever Heart Attack No Weighted Percent" column="ever_heart_attack_no_weighted_percent" aggregator="avg" />
+    <Measure name="Ever Heart Attack Yes Sample Frequency" column="ever_heart_attack_yes_sample_frequency" aggregator="sum" />
+    <Measure name="Ever Heart Attack Yes Weighted Frequency" column="ever_heart_attack_yes_weighted_frequency" aggregator="sum" />
+    <Measure name="Ever Heart Attack Yes Weighted Percent" column="ever_heart_attack_yes_weighted_percent" aggregator="avg" />
+    <Measure name="Ever Stroke No Sample Frequency" column="ever_stroke_no_sample_frequency" aggregator="sum" />
+    <Measure name="Ever Stroke No Weighted Frequency" column="ever_stroke_no_weighted_frequency" aggregator="sum" />
+    <Measure name="Ever Stroke No Weighted Percent" column="ever_stroke_no_weighted_percent" aggregator="avg" />
+    <Measure name="Ever Stroke Yes Sample Frequency" column="ever_stroke_yes_sample_frequency" aggregator="sum" />
+    <Measure name="Ever Stroke Yes Weighted Frequency" column="ever_stroke_yes_weighted_frequency" aggregator="sum" />
+    <Measure name="Ever Stroke Yes Weighted Percent" column="ever_stroke_yes_weighted_percent" aggregator="avg" />
+    <Measure name="Gen Health Fair Or Poor Sample Frequency" column="gen_health_fair_or_poor_sample_frequency" aggregator="sum" />
+    <Measure name="Gen Health Fair Or Poor Weighted Frequency" column="gen_health_fair_or_poor_weighted_frequency" aggregator="sum" />
+    <Measure name="Gen Health Fair Or Poor Weighted Percent" column="gen_health_fair_or_poor_weighted_percent" aggregator="avg" />
+    <Measure name="Gen Health Good Or Better Sample Frequency" column="gen_health_good_or_better_sample_frequency" aggregator="sum" />
+    <Measure name="Gen Health Good Or Better Weighted Frequency" column="gen_health_good_or_better_weighted_frequency" aggregator="sum" />
+    <Measure name="Gen Health Good Or Better Weighted Percent" column="gen_health_good_or_better_weighted_percent" aggregator="avg" />
+    <Measure name="Had Routine Checkup Last Year No Sample Frequency" column="had_routine_checkup_last_year_no_sample_frequency" aggregator="sum" />
+    <Measure name="Had Routine Checkup Last Year No Weighted Frequency" column="had_routine_checkup_last_year_no_weighted_frequency" aggregator="sum" />
+    <Measure name="Had Routine Checkup Last Year No Weighted Percent" column="had_routine_checkup_last_year_no_weighted_percent" aggregator="avg" />
+    <Measure name="Had Routine Checkup Last Year Yes Sample Frequency" column="had_routine_checkup_last_year_yes_sample_frequency" aggregator="sum" />
+    <Measure name="Had Routine Checkup Last Year Yes Weighted Frequency" column="had_routine_checkup_last_year_yes_weighted_frequency" aggregator="sum" />
+    <Measure name="Had Routine Checkup Last Year Yes Weighted Percent" column="had_routine_checkup_last_year_yes_weighted_percent" aggregator="avg" />
+    <Measure name="Has Insurance No Sample Frequency" column="has_insurance_no_sample_frequency" aggregator="sum" />
+    <Measure name="Has Insurance No Weighted Frequency" column="has_insurance_no_weighted_frequency" aggregator="sum" />
+    <Measure name="Has Insurance No Weighted Percent" column="has_insurance_no_weighted_percent" aggregator="avg" />
+    <Measure name="Has Insurance Yes Sample Frequency" column="has_insurance_yes_sample_frequency" aggregator="sum" />
+    <Measure name="Has Insurance Yes Weighted Frequency" column="has_insurance_yes_weighted_frequency" aggregator="sum" />
+    <Measure name="Has Insurance Yes Weighted Percent" column="has_insurance_yes_weighted_percent" aggregator="avg" />
+    <Measure name="Heart Disease No Sample Frequency" column="heart_disease_no_sample_frequency" aggregator="sum" />
+    <Measure name="Heart Disease No Weighted Frequency" column="heart_disease_no_weighted_frequency" aggregator="sum" />
+    <Measure name="Heart Disease No Weighted Percent" column="heart_disease_no_weighted_percent" aggregator="avg" />
+    <Measure name="Heart Disease Yes Sample Frequency" column="heart_disease_yes_sample_frequency" aggregator="sum" />
+    <Measure name="Heart Disease Yes Weighted Frequency" column="heart_disease_yes_weighted_frequency" aggregator="sum" />
+    <Measure name="Heart Disease Yes Weighted Percent" column="heart_disease_yes_weighted_percent" aggregator="avg" />
+    <Measure name="Hiv Tested No Sample Frequency" column="hiv_tested_no_sample_frequency" aggregator="sum" />
+    <Measure name="Hiv Tested No Weighted Frequency" column="hiv_tested_no_weighted_frequency" aggregator="sum" />
+    <Measure name="Hiv Tested No Weighted Percent" column="hiv_tested_no_weighted_percent" aggregator="avg" />
+    <Measure name="Hiv Tested Yes Sample Frequency" column="hiv_tested_yes_sample_frequency" aggregator="sum" />
+    <Measure name="Hiv Tested Yes Weighted Frequency" column="hiv_tested_yes_weighted_frequency" aggregator="sum" />
+    <Measure name="Hiv Tested Yes Weighted Percent" column="hiv_tested_yes_weighted_percent" aggregator="avg" />
+    <Measure name="Leisure Time Physical Activity No Sample Frequency" column="leisure_time_physical_activity_no_sample_frequency" aggregator="sum" />
+    <Measure name="Leisure Time Physical Activity No Weighted Frequency" column="leisure_time_physical_activity_no_weighted_frequency" aggregator="sum" />
+    <Measure name="Leisure Time Physical Activity No Weighted Percent" column="leisure_time_physical_activity_no_weighted_percent" aggregator="avg" />
+    <Measure name="Leisure Time Physical Activity Yes Sample Frequency" column="leisure_time_physical_activity_yes_sample_frequency" aggregator="sum" />
+    <Measure name="Leisure Time Physical Activity Yes Weighted Frequency" column="leisure_time_physical_activity_yes_weighted_frequency" aggregator="sum" />
+    <Measure name="Leisure Time Physical Activity Yes Weighted Percent" column="leisure_time_physical_activity_yes_weighted_percent" aggregator="avg" />
+    <Measure name="Lifetime Asthma No Sample Frequency" column="lifetime_asthma_no_sample_frequency" aggregator="sum" />
+    <Measure name="Lifetime Asthma No Weighted Frequency" column="lifetime_asthma_no_weighted_frequency" aggregator="sum" />
+    <Measure name="Lifetime Asthma No Weighted Percent" column="lifetime_asthma_no_weighted_percent" aggregator="avg" />
+    <Measure name="Lifetime Asthma Yes Sample Frequency" column="lifetime_asthma_yes_sample_frequency" aggregator="sum" />
+    <Measure name="Lifetime Asthma Yes Weighted Frequency" column="lifetime_asthma_yes_weighted_frequency" aggregator="sum" />
+    <Measure name="Lifetime Asthma Yes Weighted Percent" column="lifetime_asthma_yes_weighted_percent" aggregator="avg" />
+    <Measure name="Limited Or Special Equip No Sample Frequency" column="limited_or_special_equip_no_sample_frequency" aggregator="sum" />
+    <Measure name="Limited Or Special Equip No Weighted Frequency" column="limited_or_special_equip_no_weighted_frequency" aggregator="sum" />
+    <Measure name="Limited Or Special Equip No Weighted Percent" column="limited_or_special_equip_no_weighted_percent" aggregator="avg" />
+    <Measure name="Limited Or Special Equip Yes Sample Frequency" column="limited_or_special_equip_yes_sample_frequency" aggregator="sum" />
+    <Measure name="Limited Or Special Equip Yes Weighted Frequency" column="limited_or_special_equip_yes_weighted_frequency" aggregator="sum" />
+    <Measure name="Limited Or Special Equip Yes Weighted Percent" column="limited_or_special_equip_yes_weighted_percent" aggregator="avg" />
+    <Measure name="Poor Mental Health 13 Or Less Days Sample Frequency" column="poor_mental_health_13_or_less_days_sample_frequency" aggregator="sum" />
+    <Measure name="Poor Mental Health 13 Or Less Days Weighted Frequency" column="poor_mental_health_13_or_less_days_weighted_frequency" aggregator="sum" />
+    <Measure name="Poor Mental Health 13 Or Less Days Weighted Percent" column="poor_mental_health_13_or_less_days_weighted_percent" aggregator="avg" />
+    <Measure name="Poor Mental Health 14 Or More Days Sample Frequency" column="poor_mental_health_14_or_more_days_sample_frequency" aggregator="sum" />
+    <Measure name="Poor Mental Health 14 Or More Days Weighted Frequency" column="poor_mental_health_14_or_more_days_weighted_frequency" aggregator="sum" />
+    <Measure name="Poor Mental Health 14 Or More Days Weighted Percent" column="poor_mental_health_14_or_more_days_weighted_percent" aggregator="avg" />
+    <Measure name="Poor Physical Health 13 Or Less Days Sample Frequency" column="poor_physical_health_13_or_less_days_sample_frequency" aggregator="sum" />
+    <Measure name="Poor Physical Health 13 Or Less Days Weighted Frequency" column="poor_physical_health_13_or_less_days_weighted_frequency" aggregator="sum" />
+    <Measure name="Poor Physical Health 13 Or Less Days Weighted Percent" column="poor_physical_health_13_or_less_days_weighted_percent" aggregator="avg" />
+    <Measure name="Poor Physical Health 14 Or More Days Sample Frequency" column="poor_physical_health_14_or_more_days_sample_frequency" aggregator="sum" />
+    <Measure name="Poor Physical Health 14 Or More Days Weighted Frequency" column="poor_physical_health_14_or_more_days_weighted_frequency" aggregator="sum" />
+    <Measure name="Poor Physical Health 14 Or More Days Weighted Percent" column="poor_physical_health_14_or_more_days_weighted_percent" aggregator="avg" />
+    <Measure name="Smoking Status Current Sample Frequency" column="smoking_status_current_sample_frequency" aggregator="sum" />
+    <Measure name="Smoking Status Current Weighted Frequency" column="smoking_status_current_weighted_frequency" aggregator="sum" />
+    <Measure name="Smoking Status Current Weighted Percent" column="smoking_status_current_weighted_percent" aggregator="avg" />
+    <Measure name="Smoking Status Former Sample Frequency" column="smoking_status_former_sample_frequency" aggregator="sum" />
+    <Measure name="Smoking Status Former Weighted Frequency" column="smoking_status_former_weighted_frequency" aggregator="sum" />
+    <Measure name="Smoking Status Former Weighted Percent" column="smoking_status_former_weighted_percent" aggregator="avg" />
+    <Measure name="Smoking Status Never Sample Frequency" column="smoking_status_never_sample_frequency" aggregator="sum" />
+    <Measure name="Smoking Status Never Weighted Frequency" column="smoking_status_never_weighted_frequency" aggregator="sum" />
+    <Measure name="Smoking Status Never Weighted Percent" column="smoking_status_never_weighted_percent" aggregator="avg" />
 </Cube>
