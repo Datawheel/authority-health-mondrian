@@ -17,14 +17,14 @@
         </Hierarchy> 
     </Dimension>   
     
-    <Dimension foreignKey="geoid" name="City">
+    <Dimension foreignKey="geoid" name="Geography">
         <Annotations>
-            <Annotation name="dim_type">City</Annotation>
+            <Annotation name="dim_type">GEOGRAPHY</Annotation>
         </Annotations>
-         <Hierarchy primaryKey="geoid" name="City" hasAll="true">
-            <Table name="places" schema="shapes2017" />  
-            <Level name="City" column="geoid" nameColumn="name" uniqueMembers="false" />  
-        </Hierarchy> 
+        <Hierarchy hasAll="true" name="City">
+            <Table name="places" schema="shapes2017"/>
+            <Level name="City" column="geoid" nameColumn="name" uniqueMembers="true" hideMemberIf="IfBlankName" />
+        </Hierarchy>
     </Dimension>
     
     <Measure name="Population" column="population" aggregator="sum" />

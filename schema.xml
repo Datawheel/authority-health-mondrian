@@ -18,14 +18,14 @@
         </Hierarchy>
     </Dimension>
 
-    <Dimension foreignKey="county_fips" name="County">
+    <Dimension foreignKey="county_fips" name="Geography">
         <Annotations>
-            <Annotation name="dim_type">County</Annotation>
+            <Annotation name="dim_type">GEOGRAPHY</Annotation>
         </Annotations>
-         <Hierarchy primaryKey="geoid" name="County" hasAll="true">
-            <Table name="counties" schema="shapes2017" />  
-            <Level name="County" column="geoid" nameColumn="name" uniqueMembers="true" />  
-        </Hierarchy> 
+        <Hierarchy hasAll="true" name="County">
+            <Table name="counties" schema="shapes2017"/>
+            <Level name="County" column="geoid" nameColumn="name" uniqueMembers="true" hideMemberIf="IfBlankName" />
+        </Hierarchy>
     </Dimension>
 
     <Measure name="Dentists w/NPI" column="npi_total" aggregator="sum" />
@@ -76,14 +76,14 @@
         </Hierarchy>
     </Dimension>
 
-    <Dimension foreignKey="county_fips" name="County">
+    <Dimension foreignKey="county_fips" name="Geography">
         <Annotations>
-            <Annotation name="dim_type">County</Annotation>
+            <Annotation name="dim_type">GEOGRAPHY</Annotation>
         </Annotations>
-         <Hierarchy primaryKey="geoid" name="County" hasAll="true">
-            <Table name="counties" schema="shapes2017" />  
-            <Level name="County" column="geoid" nameColumn="name" uniqueMembers="false" />  
-        </Hierarchy> 
+        <Hierarchy hasAll="true" name="County">
+            <Table name="counties" schema="shapes2017"/>
+            <Level name="County" column="geoid" nameColumn="name" uniqueMembers="true" hideMemberIf="IfBlankName" />
+        </Hierarchy>
     </Dimension>
 
     <Measure name="Diagnosed Diabetes Incidence Rate Per 100" column="diabetes_incidence_rate_per_100" aggregator="avg" />
@@ -198,14 +198,14 @@
         </Hierarchy> 
     </Dimension>   
     
-    <Dimension foreignKey="geoid" name="City">
+    <Dimension foreignKey="geoid" name="Geography">
         <Annotations>
-            <Annotation name="dim_type">City</Annotation>
+            <Annotation name="dim_type">GEOGRAPHY</Annotation>
         </Annotations>
-         <Hierarchy primaryKey="geoid" name="City" hasAll="true">
-            <Table name="places" schema="shapes2017" />  
-            <Level name="City" column="geoid" nameColumn="name" uniqueMembers="false" />  
-        </Hierarchy> 
+        <Hierarchy hasAll="true" name="City">
+            <Table name="places" schema="shapes2017"/>
+            <Level name="City" column="geoid" nameColumn="name" uniqueMembers="true" hideMemberIf="IfBlankName" />
+        </Hierarchy>
     </Dimension>
     
     <Measure name="Population" column="population" aggregator="sum" />
@@ -236,14 +236,14 @@
         </Hierarchy>
     </Dimension>
 
-    <Dimension foreignKey="geoid" name="City">
+    <Dimension foreignKey="geoid" name="Geography">
         <Annotations>
-            <Annotation name="dim_type">City</Annotation>
+            <Annotation name="dim_type">GEOGRAPHY</Annotation>
         </Annotations>
-         <Hierarchy primaryKey="geoid" name="City" hasAll="true">
-            <Table name="places" schema="shapes2017" />  
-            <Level name="City" column="geoid" nameColumn="name" uniqueMembers="false" />  
-        </Hierarchy> 
+        <Hierarchy hasAll="true" name="City">
+            <Table name="places" schema="shapes2017"/>
+            <Level name="City" column="geoid" nameColumn="name" uniqueMembers="true" hideMemberIf="IfBlankName" />
+        </Hierarchy>
     </Dimension>
 
     <Dimension name="Grade">
@@ -310,9 +310,9 @@
         <Annotations>
           <Annotation name="dim_type">GEOGRAPHY</Annotation>
         </Annotations>
-        <Hierarchy primaryKey="zip_region_id" hasAll="true">
-          <Table name="zip_regions" schema="dims"/>
-          <Level column="zip_region_id" name="Zip Region" nameColumn="zip_region_name" uniqueMembers="true"/>
+        <Hierarchy name="Zip Region" hasAll="true">
+            <Table name="zip_regions" schema="dims"/>
+            <Level column="zip_region_id" name="Zip Region" nameColumn="zip_region_name" uniqueMembers="true" hideMemberIf="IfBlankName" />
         </Hierarchy>
     </Dimension>
 
@@ -469,15 +469,15 @@
             <Level name="Year" column="year" type="Numeric" levelType="TimeYears" uniqueMembers="true" />
         </Hierarchy>
     </Dimension>
-     
-    <Dimension foreignKey="fips" name="County">
+
+    <Dimension foreignKey="fips" name="Geography">
         <Annotations>
-            <Annotation name="dim_type">County</Annotation>
+            <Annotation name="dim_type">GEOGRAPHY</Annotation>
         </Annotations>
-         <Hierarchy primaryKey="geoid" name="County" hasAll="true">
-            <Table name="counties" schema="shapes2017" />  
-            <Level name="County" column="geoid" nameColumn="name" uniqueMembers="false" />  
-        </Hierarchy> 
+        <Hierarchy hasAll="true" name="County">
+            <Table name="counties" schema="shapes2017"/>
+            <Level name="County" column="geoid" nameColumn="name" uniqueMembers="true" hideMemberIf="IfBlankName" />
+        </Hierarchy>
     </Dimension>
 
     <Measure name="Total Farmer's Markets" column="number_of_farmers_markets" aggregator="sum" />
@@ -500,33 +500,31 @@
          <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">  
             <Level name="Year" column="year" type="Numeric" levelType="TimeYears" nameColumn="" uniqueMembers="true" />  
         </Hierarchy> 
-    </Dimension>   
-    <Dimension foreignKey="city_fips" name="City">
+    </Dimension>
+
+    <!-- <Dimension foreignKey="city_fips" name="Geography">
         <Annotations>
-            <Annotation name="dim_type">City</Annotation>
+            <Annotation name="dim_type">GEOGRAPHY</Annotation>
         </Annotations>
-         <Hierarchy primaryKey="geoid" foreignKey="" name="City" hasAll="true">
-            <Table name="places" schema="shapes2017" />  
-            <Level name="City" column="geoid" type="" levelType="" nameColumn="name" uniqueMembers="false" />  
-        </Hierarchy> 
-    </Dimension>   
-    <Dimension foreignKey="tract_fips" name="Tract">
+        <Hierarchy hasAll="true" name="City">
+            <Table name="places" schema="shapes2017"/>
+            <Level name="City" column="geoid" nameColumn="name" uniqueMembers="true" hideMemberIf="IfBlankName" />
+        </Hierarchy>
+        <Hierarchy hasAll="true" name="Tract">
+            <Table name="tracts" schema="shapes2017"/>
+            <Level name="Tract" column="geoid" nameColumn="name" uniqueMembers="true" hideMemberIf="IfBlankName" />
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension foreignKey="tract_fips" name="Geography">
         <Annotations>
-            <Annotation name="dim_type">Tract</Annotation>
+            <Annotation name="dim_type">GEOGRAPHY</Annotation>
         </Annotations>
-         <Hierarchy primaryKey="geoid" foreignKey="" name="Tract" hasAll="true">
-            <Table name="tracts" schema="shapes2017" />  
-            <Level name="Tract" column="geoid" type="" levelType="" nameColumn="name" uniqueMembers="false" />  
-        </Hierarchy> 
-    </Dimension>   
-    <Dimension name="Indicator">
-        <Annotations>
-            <Annotation name="dim_type">Measure</Annotation>
-        </Annotations>
-         <Hierarchy hasAll="true">  
-            <Level name="Measure" column="short_question_text" type="String" uniqueMembers="true" />  
-        </Hierarchy> 
-    </Dimension>  
+        <Hierarchy hasAll="true" name="Tract">
+            <Table name="tracts" schema="shapes2017"/>
+            <Level name="Tract" column="geoid" nameColumn="name" uniqueMembers="true" hideMemberIf="IfBlankName" />
+        </Hierarchy>
+    </Dimension> -->
 
     <Measure name="Population Count" column="population_count" aggregator="sum" />
     <Measure name="Annual Checkup Data Value" column="annual_checkup_data_value" aggregator="sum" />
@@ -633,14 +631,14 @@
         </Hierarchy>
     </Dimension>
 
-    <Dimension foreignKey="county" name="County">
+    <Dimension foreignKey="county" name="Geography">
         <Annotations>
-            <Annotation name="dim_type">County</Annotation>
+            <Annotation name="dim_type">GEOGRAPHY</Annotation>
         </Annotations>
-         <Hierarchy primaryKey="geoid" name="County" hasAll="true">
-            <Table name="counties" schema="shapes2017" />  
-            <Level name="County" column="geoid" nameColumn="name" uniqueMembers="false" />  
-        </Hierarchy> 
+        <Hierarchy hasAll="true" name="County">
+            <Table name="counties" schema="shapes2017"/>
+            <Level name="County" column="geoid" nameColumn="name" uniqueMembers="true" hideMemberIf="IfBlankName" />
+        </Hierarchy>
     </Dimension>
 
     <Measure name="Food Insecurity Rate" column="food_insecurity_rate" aggregator="avg" />
@@ -722,14 +720,14 @@
         </Hierarchy>
     </Dimension>
 
-    <Dimension foreignKey="geoid" name="County">
+    <Dimension foreignKey="geoid" name="Geography">
         <Annotations>
-            <Annotation name="dim_type">County</Annotation>
+            <Annotation name="dim_type">GEOGRAPHY</Annotation>
         </Annotations>
-         <Hierarchy primaryKey="geoid" name="County" hasAll="true">
-            <Table name="counties" schema="shapes2017" />  
-            <Level name="County" column="geoid" nameColumn="name" uniqueMembers="true" />  
-        </Hierarchy> 
+        <Hierarchy hasAll="true" name="County">
+            <Table name="counties" schema="shapes2017"/>
+            <Level name="County" column="geoid" nameColumn="name" uniqueMembers="true" hideMemberIf="IfBlankName" />
+        </Hierarchy>
     </Dimension>
 
     <Measure name="Labor Force" column="labor_force" aggregator="sum" />
@@ -758,14 +756,14 @@
         </Hierarchy>
     </Dimension> -->
 
-    <Dimension foreignKey="zipcode" name="Zip Code">
+    <Dimension foreignKey="zipcode" name="Geography">
         <Annotations>
-            <Annotation name="dim_type">Zip Code</Annotation>
+            <Annotation name="dim_type">GEOGRAPHY</Annotation>
         </Annotations>
-         <Hierarchy primaryKey="name" name="Zip Code" hasAll="true">
-            <Table name="zips" schema="shapes2017" />  
-            <Level name="Zip Code" column="name" nameColumn="name" uniqueMembers="false" />  
-        </Hierarchy> 
+        <Hierarchy hasAll="true" name="Zip Code">
+            <Table name="zips" schema="shapes2017"/>
+            <Level name="Zip Code" column="name" nameColumn="name" uniqueMembers="true" hideMemberIf="IfBlankName" />
+        </Hierarchy>
     </Dimension>
 
     <Measure name="Total Population" column="total_population" aggregator="sum" />

@@ -16,15 +16,15 @@
             <Level name="Year" column="year" type="Numeric" levelType="TimeYears" uniqueMembers="true" />
         </Hierarchy>
     </Dimension>
-     
-    <Dimension foreignKey="fips" name="County">
+
+    <Dimension foreignKey="fips" name="Geography">
         <Annotations>
-            <Annotation name="dim_type">County</Annotation>
+            <Annotation name="dim_type">GEOGRAPHY</Annotation>
         </Annotations>
-         <Hierarchy primaryKey="geoid" name="County" hasAll="true">
-            <Table name="counties" schema="shapes2017" />  
-            <Level name="County" column="geoid" nameColumn="name" uniqueMembers="false" />  
-        </Hierarchy> 
+        <Hierarchy hasAll="true" name="County">
+            <Table name="counties" schema="shapes2017"/>
+            <Level name="County" column="geoid" nameColumn="name" uniqueMembers="true" hideMemberIf="IfBlankName" />
+        </Hierarchy>
     </Dimension>
 
     <Measure name="Total Farmer's Markets" column="number_of_farmers_markets" aggregator="sum" />

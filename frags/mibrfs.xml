@@ -31,9 +31,9 @@
         <Annotations>
           <Annotation name="dim_type">GEOGRAPHY</Annotation>
         </Annotations>
-        <Hierarchy primaryKey="zip_region_id" hasAll="true">
-          <Table name="zip_regions" schema="dims"/>
-          <Level column="zip_region_id" name="Zip Region" nameColumn="zip_region_name" uniqueMembers="true"/>
+        <Hierarchy name="Zip Region" hasAll="true">
+            <Table name="zip_regions" schema="dims"/>
+            <Level column="zip_region_id" name="Zip Region" nameColumn="zip_region_name" uniqueMembers="true" hideMemberIf="IfBlankName" />
         </Hierarchy>
     </Dimension>
 

@@ -17,14 +17,14 @@
         </Hierarchy>
     </Dimension>
 
-    <Dimension foreignKey="county_fips" name="County">
+    <Dimension foreignKey="county_fips" name="Geography">
         <Annotations>
-            <Annotation name="dim_type">County</Annotation>
+            <Annotation name="dim_type">GEOGRAPHY</Annotation>
         </Annotations>
-         <Hierarchy primaryKey="geoid" name="County" hasAll="true">
-            <Table name="counties" schema="shapes2017" />  
-            <Level name="County" column="geoid" nameColumn="name" uniqueMembers="false" />  
-        </Hierarchy> 
+        <Hierarchy hasAll="true" name="County">
+            <Table name="counties" schema="shapes2017"/>
+            <Level name="County" column="geoid" nameColumn="name" uniqueMembers="true" hideMemberIf="IfBlankName" />
+        </Hierarchy>
     </Dimension>
 
     <Measure name="Diagnosed Diabetes Incidence Rate Per 100" column="diabetes_incidence_rate_per_100" aggregator="avg" />
