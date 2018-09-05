@@ -43,18 +43,18 @@
     <Measure name="Activity Limited 14 Or More Days Sample Frequency" column="activity_limited_14_or_more_days_sample_frequency" aggregator="sum" />
     <Measure name="Activity Limited 14 Or More Days Weighted Frequency" column="activity_limited_14_or_more_days_weighted_frequency" aggregator="sum" />
     <Measure name="Activity Limited 14 Or More Days Weighted Percent" column="activity_limited_14_or_more_days_weighted_percent" aggregator="avg" />
-    <Measure name="Bmi Healthy Weight Sample Frequency" column="bmi_healthy_weight_sample_frequency" aggregator="sum" />
-    <Measure name="Bmi Healthy Weight Weighted Frequency" column="bmi_healthy_weight_weighted_frequency" aggregator="sum" />
-    <Measure name="Bmi Healthy Weight Weighted Percent" column="bmi_healthy_weight_weighted_percent" aggregator="avg" />
-    <Measure name="Bmi Obese Sample Frequency" column="bmi_obese_sample_frequency" aggregator="sum" />
-    <Measure name="Bmi Obese Weighted Frequency" column="bmi_obese_weighted_frequency" aggregator="sum" />
-    <Measure name="Bmi Obese Weighted Percent" column="bmi_obese_weighted_percent" aggregator="avg" />
-    <Measure name="Bmi Overweight Sample Frequency" column="bmi_overweight_sample_frequency" aggregator="sum" />
-    <Measure name="Bmi Overweight Weighted Frequency" column="bmi_overweight_weighted_frequency" aggregator="sum" />
-    <Measure name="Bmi Overweight Weighted Percent" column="bmi_overweight_weighted_percent" aggregator="avg" />
-    <Measure name="Bmi Underweight Sample Frequency" column="bmi_underweight_sample_frequency" aggregator="sum" />
-    <Measure name="Bmi Underweight Weighted Frequency" column="bmi_underweight_weighted_frequency" aggregator="sum" />
-    <Measure name="Bmi Underweight Weighted Percent" column="bmi_underweight_weighted_percent" aggregator="avg" />
+    <Measure name="BMI Healthy Weight Sample Frequency" column="bmi_healthy_weight_sample_frequency" aggregator="sum" />
+    <Measure name="BMI Healthy Weight Weighted Frequency" column="bmi_healthy_weight_weighted_frequency" aggregator="sum" />
+    <Measure name="BMI Healthy Weight Weighted Percent" column="bmi_healthy_weight_weighted_percent" aggregator="avg" />
+    <Measure name="BMI Obese Sample Frequency" column="bmi_obese_sample_frequency" aggregator="sum" />
+    <Measure name="BMI Obese Weighted Frequency" column="bmi_obese_weighted_frequency" aggregator="sum" />
+    <Measure name="BMI Obese Weighted Percent" column="bmi_obese_weighted_percent" aggregator="avg" />
+    <Measure name="BMI Overweight Sample Frequency" column="bmi_overweight_sample_frequency" aggregator="sum" />
+    <Measure name="BMI Overweight Weighted Frequency" column="bmi_overweight_weighted_frequency" aggregator="sum" />
+    <Measure name="BMI Overweight Weighted Percent" column="bmi_overweight_weighted_percent" aggregator="avg" />
+    <Measure name="BMI Underweight Sample Frequency" column="bmi_underweight_sample_frequency" aggregator="sum" />
+    <Measure name="BMI Underweight Weighted Frequency" column="bmi_underweight_weighted_frequency" aggregator="sum" />
+    <Measure name="BMI Underweight Weighted Percent" column="bmi_underweight_weighted_percent" aggregator="avg" />
     <Measure name="Cardiovascular Disease No Sample Frequency" column="cardiovascular_disease_no_sample_frequency" aggregator="sum" />
     <Measure name="Cardiovascular Disease No Weighted Frequency" column="cardiovascular_disease_no_weighted_frequency" aggregator="sum" />
     <Measure name="Cardiovascular Disease No Weighted Percent" column="cardiovascular_disease_no_weighted_percent" aggregator="avg" />
@@ -85,12 +85,12 @@
     <Measure name="Ever Depressive Yes Sample Frequency" column="ever_depressive_yes_sample_frequency" aggregator="sum" />
     <Measure name="Ever Depressive Yes Weighted Frequency" column="ever_depressive_yes_weighted_frequency" aggregator="sum" />
     <Measure name="Ever Depressive Yes Weighted Percent" column="ever_depressive_yes_weighted_percent" aggregator="avg" />
-    <Measure name="Ever Hbp No Sample Frequency" column="ever_hbp_no_sample_frequency" aggregator="sum" />
-    <Measure name="Ever Hbp No Weighted Frequency" column="ever_hbp_no_weighted_frequency" aggregator="sum" />
-    <Measure name="Ever Hbp No Weighted Percent" column="ever_hbp_no_weighted_percent" aggregator="avg" />
-    <Measure name="Ever Hbp Yes Sample Frequency" column="ever_hbp_yes_sample_frequency" aggregator="sum" />
-    <Measure name="Ever Hbp Yes Weighted Frequency" column="ever_hbp_yes_weighted_frequency" aggregator="sum" />
-    <Measure name="Ever Hbp Yes Weighted Percent" column="ever_hbp_yes_weighted_percent" aggregator="avg" />
+    <Measure name="Ever HBP No Sample Frequency" column="ever_hbp_no_sample_frequency" aggregator="sum" />
+    <Measure name="Ever HBP No Weighted Frequency" column="ever_hbp_no_weighted_frequency" aggregator="sum" />
+    <Measure name="Ever HBP No Weighted Percent" column="ever_hbp_no_weighted_percent" aggregator="avg" />
+    <Measure name="Ever HBP Yes Sample Frequency" column="ever_hbp_yes_sample_frequency" aggregator="sum" />
+    <Measure name="Ever HBP Yes Weighted Frequency" column="ever_hbp_yes_weighted_frequency" aggregator="sum" />
+    <Measure name="Ever HBP Yes Weighted Percent" column="ever_hbp_yes_weighted_percent" aggregator="avg" />
     <Measure name="Ever Heart Attack No Sample Frequency" column="ever_heart_attack_no_sample_frequency" aggregator="sum" />
     <Measure name="Ever Heart Attack No Weighted Frequency" column="ever_heart_attack_no_weighted_frequency" aggregator="sum" />
     <Measure name="Ever Heart Attack No Weighted Percent" column="ever_heart_attack_no_weighted_percent" aggregator="avg" />
@@ -127,12 +127,12 @@
     <Measure name="Heart Disease Yes Sample Frequency" column="heart_disease_yes_sample_frequency" aggregator="sum" />
     <Measure name="Heart Disease Yes Weighted Frequency" column="heart_disease_yes_weighted_frequency" aggregator="sum" />
     <Measure name="Heart Disease Yes Weighted Percent" column="heart_disease_yes_weighted_percent" aggregator="avg" />
-    <Measure name="Hiv Tested No Sample Frequency" column="hiv_tested_no_sample_frequency" aggregator="sum" />
-    <Measure name="Hiv Tested No Weighted Frequency" column="hiv_tested_no_weighted_frequency" aggregator="sum" />
-    <Measure name="Hiv Tested No Weighted Percent" column="hiv_tested_no_weighted_percent" aggregator="avg" />
-    <Measure name="Hiv Tested Yes Sample Frequency" column="hiv_tested_yes_sample_frequency" aggregator="sum" />
-    <Measure name="Hiv Tested Yes Weighted Frequency" column="hiv_tested_yes_weighted_frequency" aggregator="sum" />
-    <Measure name="Hiv Tested Yes Weighted Percent" column="hiv_tested_yes_weighted_percent" aggregator="avg" />
+    <Measure name="HIV Tested No Sample Frequency" column="hiv_tested_no_sample_frequency" aggregator="sum" />
+    <Measure name="HIV Tested No Weighted Frequency" column="hiv_tested_no_weighted_frequency" aggregator="sum" />
+    <Measure name="HIV Tested No Weighted Percent" column="hiv_tested_no_weighted_percent" aggregator="avg" />
+    <Measure name="HIV Tested Yes Sample Frequency" column="hiv_tested_yes_sample_frequency" aggregator="sum" />
+    <Measure name="HIV Tested Yes Weighted Frequency" column="hiv_tested_yes_weighted_frequency" aggregator="sum" />
+    <Measure name="HIV Tested Yes Weighted Percent" column="hiv_tested_yes_weighted_percent" aggregator="avg" />
     <Measure name="Leisure Time Physical Activity No Sample Frequency" column="leisure_time_physical_activity_no_sample_frequency" aggregator="sum" />
     <Measure name="Leisure Time Physical Activity No Weighted Frequency" column="leisure_time_physical_activity_no_weighted_frequency" aggregator="sum" />
     <Measure name="Leisure Time Physical Activity No Weighted Percent" column="leisure_time_physical_activity_no_weighted_percent" aggregator="avg" />
