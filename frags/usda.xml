@@ -7,17 +7,25 @@
     </Annotations>
 
     <Table name="usda" schema="usda"/>
-     
-    <Dimension foreignKey="fips" name="County">
+
+    <Dimension name="Year">
         <Annotations>
-            <Annotation name="dim_type">County</Annotation>
+            <Annotation name="dim_type">TIME</Annotation>
         </Annotations>
-         <Hierarchy primaryKey="geoid" name="County" hasAll="true">
-            <Table name="counties" schema="shapes2017" />  
-            <Level name="County" column="geoid" nameColumn="name" uniqueMembers="false" />  
-        </Hierarchy> 
+         <Hierarchy hasAll="true">
+            <Level name="Year" column="year" type="Numeric" levelType="TimeYears" uniqueMembers="true" />
+        </Hierarchy>
     </Dimension>
 
-    <Measure name="Total Farmer's Markets in 2009" column="number_of_farmers_markets_2009" aggregator="sum" />
-    <Measure name="Total Farmer's Markets in 2016" column="number_of_farmers_markets_2016" aggregator="sum" />
+    <Dimension foreignKey="fips" name="Geography">
+        <Annotations>
+            <Annotation name="dim_type">GEOGRAPHY</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true" name="County">
+            <Table name="counties" schema="shapes2017"/>
+            <Level name="County" column="geoid" nameColumn="name" uniqueMembers="true" hideMemberIf="IfBlankName" />
+        </Hierarchy>
+    </Dimension>
+
+    <Measure name="Total Farmer's Markets" column="number_of_farmers_markets" aggregator="sum" />
 </Cube>

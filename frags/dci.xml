@@ -18,14 +18,14 @@
         </Hierarchy>
     </Dimension> -->
 
-    <Dimension foreignKey="zipcode" name="Zip Code">
+    <Dimension foreignKey="zipcode" name="Geography">
         <Annotations>
-            <Annotation name="dim_type">Zip Code</Annotation>
+            <Annotation name="dim_type">GEOGRAPHY</Annotation>
         </Annotations>
-         <Hierarchy primaryKey="name" name="Zip Code" hasAll="true">
-            <Table name="zips" schema="shapes2017" />  
-            <Level name="Zip Code" column="name" nameColumn="name" uniqueMembers="false" />  
-        </Hierarchy> 
+        <Hierarchy hasAll="true" name="Zip Code">
+            <Table name="zips" schema="shapes2017"/>
+            <Level name="Zip Code" column="name" nameColumn="name" uniqueMembers="true" hideMemberIf="IfBlankName" />
+        </Hierarchy>
     </Dimension>
 
     <Measure name="Total Population" column="total_population" aggregator="sum" />

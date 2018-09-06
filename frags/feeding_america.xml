@@ -17,14 +17,14 @@
         </Hierarchy>
     </Dimension>
 
-    <Dimension foreignKey="county" name="County">
+    <Dimension foreignKey="county" name="Geography">
         <Annotations>
-            <Annotation name="dim_type">County</Annotation>
+            <Annotation name="dim_type">GEOGRAPHY</Annotation>
         </Annotations>
-         <Hierarchy primaryKey="geoid" name="County" hasAll="true">
-            <Table name="counties" schema="shapes2017" />  
-            <Level name="County" column="geoid" nameColumn="name" uniqueMembers="false" />  
-        </Hierarchy> 
+        <Hierarchy hasAll="true" name="County">
+            <Table name="counties" schema="shapes2017"/>
+            <Level name="County" column="geoid" nameColumn="name" uniqueMembers="true" hideMemberIf="IfBlankName" />
+        </Hierarchy>
     </Dimension>
 
     <Measure name="Food Insecurity Rate" column="food_insecurity_rate" aggregator="avg" />

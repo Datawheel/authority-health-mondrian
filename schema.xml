@@ -18,14 +18,14 @@
         </Hierarchy>
     </Dimension>
 
-    <Dimension foreignKey="county_fips" name="County">
+    <Dimension foreignKey="county_fips" name="Geography">
         <Annotations>
-            <Annotation name="dim_type">County</Annotation>
+            <Annotation name="dim_type">GEOGRAPHY</Annotation>
         </Annotations>
-         <Hierarchy primaryKey="geoid" name="County" hasAll="true">
-            <Table name="counties" schema="shapes2017" />  
-            <Level name="County" column="geoid" nameColumn="name" uniqueMembers="false" />  
-        </Hierarchy> 
+        <Hierarchy hasAll="true" name="County">
+            <Table name="counties" schema="shapes2017"/>
+            <Level name="County" column="geoid" nameColumn="name" uniqueMembers="true" hideMemberIf="IfBlankName" />
+        </Hierarchy>
     </Dimension>
 
     <Measure name="Dentists w/NPI" column="npi_total" aggregator="sum" />
@@ -57,6 +57,128 @@
     <Measure name="# Active Dentists 65 or more" column="age_65_or_more" aggregator="sum" />
     <Measure name="# Active Dentists Age Unknown" column="age_unknown" aggregator="sum" />
 </Cube>
+<Cube name="CDC Wonder - Diabetes">
+    <Annotations>
+        <Annotation name="source_name">CDC Wonder</Annotation>
+        <Annotation name="source_link">https://www.cdc.gov/diabetes/data/countydata/countydataindicators.html</Annotation>
+        <Annotation name="dataset_name">CDC Wonder</Annotation>
+        <Annotation name="topic">Health Status</Annotation>
+    </Annotations>
+
+    <Table name="diabetes" schema="cdc_wonder"/>
+
+    <Dimension name="Year">
+        <Annotations>
+            <Annotation name="dim_type">TIME</Annotation>
+        </Annotations>
+         <Hierarchy hasAll="true">
+            <Level name="Year" column="year" type="Numeric" levelType="TimeYears" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension foreignKey="county_fips" name="Geography">
+        <Annotations>
+            <Annotation name="dim_type">GEOGRAPHY</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true" name="County">
+            <Table name="counties" schema="shapes2017"/>
+            <Level name="County" column="geoid" nameColumn="name" uniqueMembers="true" hideMemberIf="IfBlankName" />
+        </Hierarchy>
+    </Dimension>
+
+    <Measure name="Diagnosed Diabetes Incidence Rate Per 100" column="diabetes_incidence_rate_per_100" aggregator="avg" />
+    <Measure name="Diagnosed Diabetes Incidence Adj Rate Per 100" column="diabetes_incidence_adj_rate_per_100" aggregator="avg" />
+    <Measure name="Diagnosed Diabetes Incidence Number" column="diabetes_incidence_number" aggregator="sum" />
+    <Measure name="Diagnosed Diabetes Incidence Percent" column="diabetes_incidence_percent" aggregator="avg" />
+    <Measure name="Diagnosed Diabetes Incidence Lower Confidence Limit" column="diabetes_incidence_lower_confidence_limit" aggregator="avg" />
+    <Measure name="Diagnosed Diabetes Incidence Upper Confidence Limit" column="diabetes_incidence_upper_confidence_limit" aggregator="avg" />
+    <Measure name="Diagnosed Diabetes Incidence Adj Percent" column="diabetes_incidence_adj_percent" aggregator="avg" />
+    <Measure name="Diagnosed Diabetes Incidence Adj Lower Confidence Limit" column="diabetes_incidence_adj_lower_confidence_limit" aggregator="avg" />
+    <Measure name="Diagnosed Diabetes Incidence Adj Upper Confidence Limit" column="diabetes_incidence_adj_upper_confidence_limit" aggregator="avg" />
+    <Measure name="Diagnosed Diabetes Incidence Number Men" column="diabetes_incidence_number_men" aggregator="sum" />
+    <Measure name="Diagnosed Diabetes Incidence Percent Men" column="diabetes_incidence_percent_men" aggregator="avg" />
+    <Measure name="Diagnosed Diabetes Incidence Lower Confidence Limit Men" column="diabetes_incidence_lower_confidence_limit_men" aggregator="avg" />
+    <Measure name="Diagnosed Diabetes Incidence Upper Confidence Limit Men" column="diabetes_incidence_upper_confidence_limit_men" aggregator="avg" />
+    <Measure name="Diagnosed Diabetes Incidence Adj Percent Men" column="diabetes_incidence_adj_percent_men" aggregator="avg" />
+    <Measure name="Diagnosed Diabetes Incidence Adj Lower Confidence Limit Men" column="diabetes_incidence_adj_lower_confidence_limit_men" aggregator="avg" />
+    <Measure name="Diagnosed Diabetes Incidence Adj Upper Confidence Limit Men" column="diabetes_incidence_adj_upper_confidence_limit_men" aggregator="avg" />
+    <Measure name="Diagnosed Diabetes Incidence Number Women" column="diabetes_incidence_number_women" aggregator="sum" />
+    <Measure name="Diagnosed Diabetes Incidence Percent Women" column="diabetes_incidence_percent_women" aggregator="avg" />
+    <Measure name="Diagnosed Diabetes Incidence Lower Confidence Limit Women" column="diabetes_incidence_lower_confidence_limit_women" aggregator="avg" />
+    <Measure name="Diagnosed Diabetes Incidence Upper Confidence Limit Women" column="diabetes_incidence_upper_confidence_limit_women" aggregator="avg" />
+    <Measure name="Diagnosed Diabetes Incidence Adj Percent Women" column="diabetes_incidence_adj_percent_women" aggregator="avg" />
+    <Measure name="Diagnosed Diabetes Incidence Adj Lower Confidence Limit Women" column="diabetes_incidence_adj_lower_confidence_limit_women" aggregator="avg" />
+    <Measure name="Diagnosed Diabetes Incidence Adj Upper Confidence Limit Women" column="diabetes_incidence_adj_upper_confidence_limit_women" aggregator="avg" />
+    <Measure name="Diagnosed Diabetes Prevalence Rate Per 100" column="diabetes_prevalence_rate_per_100" aggregator="avg" />
+    <Measure name="Diagnosed Diabetes Prevalence Adj Rate Per 100" column="diabetes_prevalence_adj_rate_per_100" aggregator="avg" />
+    <Measure name="Diagnosed Diabetes Prevalence Number" column="diabetes_prevalence_number" aggregator="sum" />
+    <Measure name="Diagnosed Diabetes Prevalence Percent" column="diabetes_prevalence_percent" aggregator="avg" />
+    <Measure name="Diagnosed Diabetes Prevalence Lower Confidence Limit" column="diabetes_prevalence_lower_confidence_limit" aggregator="avg" />
+    <Measure name="Diagnosed Diabetes Prevalence Upper Confidence Limit" column="diabetes_prevalence_upper_confidence_limit" aggregator="avg" />
+    <Measure name="Diagnosed Diabetes Prevalence Adj Percent" column="diabetes_prevalence_adj_percent" aggregator="avg" />
+    <Measure name="Diagnosed Diabetes Prevalence Adj Lower Confidence Limit" column="diabetes_prevalence_adj_lower_confidence_limit" aggregator="avg" />
+    <Measure name="Diagnosed Diabetes Prevalence Adj Upper Confidence Limit" column="diabetes_prevalence_adj_upper_confidence_limit" aggregator="avg" />
+    <Measure name="Diagnosed Diabetes Prevalence Number Men" column="diabetes_prevalence_number_men" aggregator="sum" />
+    <Measure name="Diagnosed Diabetes Prevalence Percent Men" column="diabetes_prevalence_percent_men" aggregator="avg" />
+    <Measure name="Diagnosed Diabetes Prevalence Lower Confidence Limit Men" column="diabetes_prevalence_lower_confidence_limit_men" aggregator="avg" />
+    <Measure name="Diagnosed Diabetes Prevalence Upper Confidence Limit Men" column="diabetes_prevalence_upper_confidence_limit_men" aggregator="avg" />
+    <Measure name="Diagnosed Diabetes Prevalence Adj Percent Men" column="diabetes_prevalence_adj_percent_men" aggregator="avg" />
+    <Measure name="Diagnosed Diabetes Prevalence Adj Lower Confidence Limit Men" column="diabetes_prevalence_adj_lower_confidence_limit_men" aggregator="avg" />
+    <Measure name="Diagnosed Diabetes Prevalence Adj Upper Confidence Limit Men" column="diabetes_prevalence_adj_upper_confidence_limit_men" aggregator="avg" />
+    <Measure name="Diagnosed Diabetes Prevalence Number Women" column="diabetes_prevalence_number_women" aggregator="sum" />
+    <Measure name="Diagnosed Diabetes Prevalence Percent Women" column="diabetes_prevalence_percent_women" aggregator="avg" />
+    <Measure name="Diagnosed Diabetes Prevalence Lower Confidence Limit Women" column="diabetes_prevalence_lower_confidence_limit_women" aggregator="avg" />
+    <Measure name="Diagnosed Diabetes Prevalence Upper Confidence Limit Women" column="diabetes_prevalence_upper_confidence_limit_women" aggregator="avg" />
+    <Measure name="Diagnosed Diabetes Prevalence Adj Percent Women" column="diabetes_prevalence_adj_percent_women" aggregator="avg" />
+    <Measure name="Diagnosed Diabetes Prevalence Adj Lower Confidence Limit Women" column="diabetes_prevalence_adj_lower_confidence_limit_women" aggregator="avg" />
+    <Measure name="Diagnosed Diabetes Prevalence Adj Upper Confidence Limit Women" column="diabetes_prevalence_adj_upper_confidence_limit_women" aggregator="avg" />
+    <Measure name="Leisure-Time Physical Inactivity Prevalence Rate Per 100" column="phys_inactivity_prevalence_rate_per_100" aggregator="avg" />
+    <Measure name="Leisure-Time Physical Inactivity Prevalence Adj Rate Per 100" column="phys_inactivity_prevalence_adj_rate_per_100" aggregator="avg" />
+    <Measure name="Leisure-Time Physical Inactivity Prevalence Number" column="phys_inactivity_prevalence_number" aggregator="sum" />
+    <Measure name="Leisure-Time Physical Inactivity Prevalence Percent" column="phys_inactivity_prevalence_percent" aggregator="avg" />
+    <Measure name="Leisure-Time Physical Inactivity Prevalence Lower Confidence Limit" column="phys_inactivity_prevalence_lower_confidence_limit" aggregator="avg" />
+    <Measure name="Leisure-Time Physical Inactivity Prevalence Upper Confidence Limit" column="phys_inactivity_prevalence_upper_confidence_limit" aggregator="avg" />
+    <Measure name="Leisure-Time Physical Inactivity Prevalence Adj Percent" column="phys_inactivity_prevalence_adj_percent" aggregator="avg" />
+    <Measure name="Leisure-Time Physical Inactivity Prevalence Adj Lower Confidence Limit" column="phys_inactivity_prevalence_adj_lower_confidence_limit" aggregator="avg" />
+    <Measure name="Leisure-Time Physical Inactivity Prevalence Adj Upper Confidence Limit" column="phys_inactivity_prevalence_adj_upper_confidence_limit" aggregator="avg" />
+    <Measure name="Leisure-Time Physical Inactivity Prevalence Number Men" column="phys_inactivity_prevalence_number_men" aggregator="sum" />
+    <Measure name="Leisure-Time Physical Inactivity Prevalence Percent Men" column="phys_inactivity_prevalence_percent_men" aggregator="avg" />
+    <Measure name="Leisure-Time Physical Inactivity Prevalence Lower Confidence Limit Men" column="phys_inactivity_prevalence_lower_confidence_limit_men" aggregator="avg" />
+    <Measure name="Leisure-Time Physical Inactivity Prevalence Upper Confidence Limit Men" column="phys_inactivity_prevalence_upper_confidence_limit_men" aggregator="avg" />
+    <Measure name="Leisure-Time Physical Inactivity Prevalence Adj Percent Men" column="phys_inactivity_prevalence_adj_percent_men" aggregator="avg" />
+    <Measure name="Leisure-Time Physical Inactivity Prevalence Adj Lower Confidence Limit Men" column="phys_inactivity_prevalence_adj_lower_confidence_limit_men" aggregator="avg" />
+    <Measure name="Leisure-Time Physical Inactivity Prevalence Adj Upper Confidence Limit Men" column="phys_inactivity_prevalence_adj_upper_confidence_limit_men" aggregator="avg" />
+    <Measure name="Leisure-Time Physical Inactivity Prevalence Number Women" column="phys_inactivity_prevalence_number_women" aggregator="sum" />
+    <Measure name="Leisure-Time Physical Inactivity Prevalence Percent Women" column="phys_inactivity_prevalence_percent_women" aggregator="avg" />
+    <Measure name="Leisure-Time Physical Inactivity Prevalence Lower Confidence Limit Women" column="phys_inactivity_prevalence_lower_confidence_limit_women" aggregator="avg" />
+    <Measure name="Leisure-Time Physical Inactivity Prevalence Upper Confidence Limit Women" column="phys_inactivity_prevalence_upper_confidence_limit_women" aggregator="avg" />
+    <Measure name="Leisure-Time Physical Inactivity Prevalence Adj Percent Women" column="phys_inactivity_prevalence_adj_percent_women" aggregator="avg" />
+    <Measure name="Leisure-Time Physical Inactivity Prevalence Adj Lower Confidence Limit Women" column="phys_inactivity_prevalence_adj_lower_confidence_limit_women" aggregator="avg" />
+    <Measure name="Leisure-Time Physical Inactivity Prevalence Adj Upper Confidence Limit Women" column="phys_inactivity_prevalence_adj_upper_confidence_limit_women" aggregator="avg" />
+    <Measure name="Obesity Prevalence Rate Per 100" column="obesity_prevalence_rate_per_100" aggregator="avg" />
+    <Measure name="Obesity Prevalence Adj Rate Per 100" column="obesity_prevalence_adj_rate_per_100" aggregator="avg" />
+    <Measure name="Obesity Prevalence Number" column="obesity_prevalence_number" aggregator="sum" />
+    <Measure name="Obesity Prevalence Percent" column="obesity_prevalence_percent" aggregator="avg" />
+    <Measure name="Obesity Prevalence Lower Confidence Limit" column="obesity_prevalence_lower_confidence_limit" aggregator="avg" />
+    <Measure name="Obesity Prevalence Upper Confidence Limit" column="obesity_prevalence_upper_confidence_limit" aggregator="avg" />
+    <Measure name="Obesity Prevalence Adj Percent" column="obesity_prevalence_adj_percent" aggregator="avg" />
+    <Measure name="Obesity Prevalence Adj Lower Confidence Limit" column="obesity_prevalence_adj_lower_confidence_limit" aggregator="avg" />
+    <Measure name="Obesity Prevalence Adj Upper Confidence Limit" column="obesity_prevalence_adj_upper_confidence_limit" aggregator="avg" />
+    <Measure name="Obesity Prevalence Number Men" column="obesity_prevalence_number_men" aggregator="sum" />
+    <Measure name="Obesity Prevalence Percent Men" column="obesity_prevalence_percent_men" aggregator="avg" />
+    <Measure name="Obesity Prevalence Lower Confidence Limit Men" column="obesity_prevalence_lower_confidence_limit_men" aggregator="avg" />
+    <Measure name="Obesity Prevalence Upper Confidence Limit Men" column="obesity_prevalence_upper_confidence_limit_men" aggregator="avg" />
+    <Measure name="Obesity Prevalence Adj Percent Men" column="obesity_prevalence_adj_percent_men" aggregator="avg" />
+    <Measure name="Obesity Prevalence Adj Lower Confidence Limit Men" column="obesity_prevalence_adj_lower_confidence_limit_men" aggregator="avg" />
+    <Measure name="Obesity Prevalence Adj Upper Confidence Limit Men" column="obesity_prevalence_adj_upper_confidence_limit_men" aggregator="avg" />
+    <Measure name="Obesity Prevalence Number Women" column="obesity_prevalence_number_women" aggregator="sum" />
+    <Measure name="Obesity Prevalence Percent Women" column="obesity_prevalence_percent_women" aggregator="avg" />
+    <Measure name="Obesity Prevalence Lower Confidence Limit Women" column="obesity_prevalence_lower_confidence_limit_women" aggregator="avg" />
+    <Measure name="Obesity Prevalence Upper Confidence Limit Women" column="obesity_prevalence_upper_confidence_limit_women" aggregator="avg" />
+    <Measure name="Obesity Prevalence Adj Percent Women" column="obesity_prevalence_adj_percent_women" aggregator="avg" />
+    <Measure name="Obesity Prevalence Adj Lower Confidence Limit Women" column="obesity_prevalence_adj_lower_confidence_limit_women" aggregator="avg" />
+    <Measure name="Obesity Prevalence Adj Upper Confidence Limit Women" column="obesity_prevalence_adj_upper_confidence_limit_women" aggregator="avg" />
+</Cube>
 <Cube name="FBI UCR">
     <Annotations> 
         <Annotation name="source_name">FBI: Uniform Crime Reporting</Annotation>   
@@ -76,14 +198,14 @@
         </Hierarchy> 
     </Dimension>   
     
-    <Dimension foreignKey="geoid" name="City">
+    <Dimension foreignKey="geoid" name="Geography">
         <Annotations>
-            <Annotation name="dim_type">City</Annotation>
+            <Annotation name="dim_type">GEOGRAPHY</Annotation>
         </Annotations>
-         <Hierarchy primaryKey="geoid" name="City" hasAll="true">
-            <Table name="places" schema="shapes2017" />  
-            <Level name="City" column="geoid" nameColumn="name" uniqueMembers="false" />  
-        </Hierarchy> 
+        <Hierarchy hasAll="true" name="City">
+            <Table name="places" schema="shapes2017"/>
+            <Level name="City" column="geoid" nameColumn="name" uniqueMembers="true" hideMemberIf="IfBlankName" />
+        </Hierarchy>
     </Dimension>
     
     <Measure name="Population" column="population" aggregator="sum" />
@@ -95,7 +217,7 @@
 
     <!-- TODO: Can add property crime data if AH is interested -->
 </Cube>
-<Cube name="NAEP Reading Assessment">
+<Cube name="NAEP">
     <Annotations>
         <Annotation name="source_name">NAEP Reading Assessment</Annotation>
         <Annotation name="source_link">https://www.nationsreportcard.gov/reading_2017/#?grade=4</Annotation>
@@ -114,6 +236,16 @@
         </Hierarchy>
     </Dimension>
 
+    <Dimension foreignKey="geoid" name="Geography">
+        <Annotations>
+            <Annotation name="dim_type">GEOGRAPHY</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true" name="City">
+            <Table name="places" schema="shapes2017"/>
+            <Level name="City" column="geoid" nameColumn="name" uniqueMembers="true" hideMemberIf="IfBlankName" />
+        </Hierarchy>
+    </Dimension>
+
     <Dimension name="Grade">
         <Annotations>
             <Annotation name="dim_type">Grade</Annotation>
@@ -123,27 +255,27 @@
         </Hierarchy>
     </Dimension>
     
-    <Measure name="Score" column="score" aggregator="sum" />
-    <Measure name="National Average" column="national_average" aggregator="sum" />
-    <Measure name="Michigan Average" column="michigan_average" aggregator="sum" />
-    <Measure name="Race - Black" column="race_black" aggregator="sum" />
-    <Measure name="Race - Hispanic" column="race_hispanic" aggregator="sum" />
-    <Measure name="Gender - Male" column="gender_male" aggregator="sum" />
-    <Measure name="Gender - Female" column="gender_female" aggregator="sum" />
-    <Measure name="NSLP Eligible" column="nslp_eligible" aggregator="sum" />
-    <Measure name="NSLP Ineligible" column="nslp_ineligible" aggregator="sum" />
-    <Measure name="Parent edu - No high school" column="edu_no_high_school" aggregator="sum" />
-    <Measure name="Parent edu - High school" column="edu_high_school" aggregator="sum" />
-    <Measure name="Parent edu - Some college" column="edu_some_college" aggregator="sum" />
-    <Measure name="Parent edu - College" column="edu_college" aggregator="sum" />
-    <Measure name="Parent edu - Unknown" column="edu_unknown" aggregator="sum" />
-    <Measure name="Disability - Yes" column="disabilities" aggregator="sum" />
-    <Measure name="Disability - No" column="no_disabilities" aggregator="sum" />
-    <Measure name="ELL - Yes" column="ell" aggregator="sum" />
-    <Measure name="ELL - No" column="not_ell" aggregator="sum" />
-    <Measure name="Percent Proficient - Detroit" column="proficient_percent" aggregator="sum" />
-    <Measure name="Percent Proficient - National" column="national_proficient_percent" aggregator="sum" />
-    <Measure name="Percent Proficient - Michigan" column="michigan_proficient_percent" aggregator="sum" />
+    <Measure name="Reading Score Average" column="reading_score_average" aggregator="sum" />
+    <Measure name="Reading Score National Average" column="reading_score_national_average" aggregator="sum" />
+    <Measure name="Reading Score Michigan Average" column="reading_score_michigan_average" aggregator="sum" />
+    <Measure name="Reading Score Race - Black" column="reading_score_race_black" aggregator="sum" />
+    <Measure name="Reading Score Race - Hispanic" column="reading_score_race_hispanic" aggregator="sum" />
+    <Measure name="Reading Score Gender - Male" column="reading_score_gender_male" aggregator="sum" />
+    <Measure name="Reading Score Gender - Female" column="reading_score_gender_female" aggregator="sum" />
+    <Measure name="Reading Score NSLP Eligible" column="reading_score_nslp_eligible" aggregator="sum" />
+    <Measure name="Reading Score NSLP Ineligible" column="reading_score_nslp_ineligible" aggregator="sum" />
+    <Measure name="Reading Score Parent edu - No high school" column="reading_score_edu_no_high_school" aggregator="sum" />
+    <Measure name="Reading Score Parent edu - High school" column="reading_score_edu_high_school" aggregator="sum" />
+    <Measure name="Reading Score Parent edu - Some college" column="reading_score_edu_some_college" aggregator="sum" />
+    <Measure name="Reading Score Parent edu - College" column="reading_score_edu_college" aggregator="sum" />
+    <Measure name="Reading Score Parent edu - Unknown" column="reading_score_edu_unknown" aggregator="sum" />
+    <Measure name="Reading Score Disability - Yes" column="reading_score_disabilities" aggregator="sum" />
+    <Measure name="Reading Score Disability - No" column="reading_score_no_disabilities" aggregator="sum" />
+    <Measure name="Reading Score ELL - Yes" column="reading_score_ell" aggregator="sum" />
+    <Measure name="Reading Score ELL - No" column="reading_score_not_ell" aggregator="sum" />
+    <Measure name="Reading Score Percent Proficient - Detroit" column="reading_score_proficient_percent" aggregator="sum" />
+    <Measure name="Reading Score Percent Proficient - National" column="reading_score_national_proficient_percent" aggregator="sum" />
+    <Measure name="Reading Score Percent Proficient - Michigan" column="reading_score_michigan_proficient_percent" aggregator="sum" />
 </Cube>
 <Cube name="MiBRFS">
     <Annotations>
@@ -170,7 +302,7 @@
           <Annotation name="dim_type">TIME</Annotation>
         </Annotations>
         <Hierarchy hasAll="true">
-          <Level name="End Year" column="end_year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />
+          <Level name="End Year" column="year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />
         </Hierarchy>
     </Dimension>
 
@@ -178,24 +310,147 @@
         <Annotations>
           <Annotation name="dim_type">GEOGRAPHY</Annotation>
         </Annotations>
-        <Hierarchy primaryKey="zip_region_id" hasAll="true">
-          <Table name="zip_regions" schema="dims"/>
-          <Level column="zip_region_id" name="Zip Region" nameColumn="zip_region_name" uniqueMembers="true"/>
+        <Hierarchy name="Zip Region" hasAll="true">
+            <Table name="zip_regions" schema="dims"/>
+            <Level column="zip_region_id" name="Zip Region" nameColumn="zip_region_name" uniqueMembers="true" hideMemberIf="IfBlankName" />
         </Hierarchy>
     </Dimension>
 
-    <Dimension name="Measure">
-        <Annotations>
-          <Annotation name="dim_type">Measure</Annotation>
-        </Annotations>
-        <Hierarchy hasAll="true">
-          <Level name="Category" column="measure" uniqueMembers="true" />
-        </Hierarchy>
-    </Dimension>
-     
-    <Measure name="Sample Frequency" column="sample_frequency" aggregator="sum" />
-    <Measure name="Weighted Frequency" column="weighted_frequency" aggregator="sum" />
-    <Measure name="Weighted Percent" column="weighted_percent" aggregator="avg" />
+    <Measure name="Activity Limited 13 Or Less Days Sample Frequency" column="activity_limited_13_or_less_days_sample_frequency" aggregator="sum" />
+    <Measure name="Activity Limited 13 Or Less Days Weighted Frequency" column="activity_limited_13_or_less_days_weighted_frequency" aggregator="sum" />
+    <Measure name="Activity Limited 13 Or Less Days Weighted Percent" column="activity_limited_13_or_less_days_weighted_percent" aggregator="avg" />
+    <Measure name="Activity Limited 14 Or More Days Sample Frequency" column="activity_limited_14_or_more_days_sample_frequency" aggregator="sum" />
+    <Measure name="Activity Limited 14 Or More Days Weighted Frequency" column="activity_limited_14_or_more_days_weighted_frequency" aggregator="sum" />
+    <Measure name="Activity Limited 14 Or More Days Weighted Percent" column="activity_limited_14_or_more_days_weighted_percent" aggregator="avg" />
+    <Measure name="BMI Healthy Weight Sample Frequency" column="bmi_healthy_weight_sample_frequency" aggregator="sum" />
+    <Measure name="BMI Healthy Weight Weighted Frequency" column="bmi_healthy_weight_weighted_frequency" aggregator="sum" />
+    <Measure name="BMI Healthy Weight Weighted Percent" column="bmi_healthy_weight_weighted_percent" aggregator="avg" />
+    <Measure name="BMI Obese Sample Frequency" column="bmi_obese_sample_frequency" aggregator="sum" />
+    <Measure name="BMI Obese Weighted Frequency" column="bmi_obese_weighted_frequency" aggregator="sum" />
+    <Measure name="BMI Obese Weighted Percent" column="bmi_obese_weighted_percent" aggregator="avg" />
+    <Measure name="BMI Overweight Sample Frequency" column="bmi_overweight_sample_frequency" aggregator="sum" />
+    <Measure name="BMI Overweight Weighted Frequency" column="bmi_overweight_weighted_frequency" aggregator="sum" />
+    <Measure name="BMI Overweight Weighted Percent" column="bmi_overweight_weighted_percent" aggregator="avg" />
+    <Measure name="BMI Underweight Sample Frequency" column="bmi_underweight_sample_frequency" aggregator="sum" />
+    <Measure name="BMI Underweight Weighted Frequency" column="bmi_underweight_weighted_frequency" aggregator="sum" />
+    <Measure name="BMI Underweight Weighted Percent" column="bmi_underweight_weighted_percent" aggregator="avg" />
+    <Measure name="Cardiovascular Disease No Sample Frequency" column="cardiovascular_disease_no_sample_frequency" aggregator="sum" />
+    <Measure name="Cardiovascular Disease No Weighted Frequency" column="cardiovascular_disease_no_weighted_frequency" aggregator="sum" />
+    <Measure name="Cardiovascular Disease No Weighted Percent" column="cardiovascular_disease_no_weighted_percent" aggregator="avg" />
+    <Measure name="Cardiovascular Disease Yes Sample Frequency" column="cardiovascular_disease_yes_sample_frequency" aggregator="sum" />
+    <Measure name="Cardiovascular Disease Yes Weighted Frequency" column="cardiovascular_disease_yes_weighted_frequency" aggregator="sum" />
+    <Measure name="Cardiovascular Disease Yes Weighted Percent" column="cardiovascular_disease_yes_weighted_percent" aggregator="avg" />
+    <Measure name="Current Asthma No Sample Frequency" column="current_asthma_no_sample_frequency" aggregator="sum" />
+    <Measure name="Current Asthma No Weighted Frequency" column="current_asthma_no_weighted_frequency" aggregator="sum" />
+    <Measure name="Current Asthma No Weighted Percent" column="current_asthma_no_weighted_percent" aggregator="avg" />
+    <Measure name="Current Asthma Yes Sample Frequency" column="current_asthma_yes_sample_frequency" aggregator="sum" />
+    <Measure name="Current Asthma Yes Weighted Frequency" column="current_asthma_yes_weighted_frequency" aggregator="sum" />
+    <Measure name="Current Asthma Yes Weighted Percent" column="current_asthma_yes_weighted_percent" aggregator="avg" />
+    <Measure name="Diabetes No Sample Frequency" column="diabetes_no_sample_frequency" aggregator="sum" />
+    <Measure name="Diabetes No Weighted Frequency" column="diabetes_no_weighted_frequency" aggregator="sum" />
+    <Measure name="Diabetes No Weighted Percent" column="diabetes_no_weighted_percent" aggregator="avg" />
+    <Measure name="Diabetes Yes Sample Frequency" column="diabetes_yes_sample_frequency" aggregator="sum" />
+    <Measure name="Diabetes Yes Weighted Frequency" column="diabetes_yes_weighted_frequency" aggregator="sum" />
+    <Measure name="Diabetes Yes Weighted Percent" column="diabetes_yes_weighted_percent" aggregator="avg" />
+    <Measure name="Ever Cancer No Sample Frequency" column="ever_cancer_no_sample_frequency" aggregator="sum" />
+    <Measure name="Ever Cancer No Weighted Frequency" column="ever_cancer_no_weighted_frequency" aggregator="sum" />
+    <Measure name="Ever Cancer No Weighted Percent" column="ever_cancer_no_weighted_percent" aggregator="avg" />
+    <Measure name="Ever Cancer Yes Sample Frequency" column="ever_cancer_yes_sample_frequency" aggregator="sum" />
+    <Measure name="Ever Cancer Yes Weighted Frequency" column="ever_cancer_yes_weighted_frequency" aggregator="sum" />
+    <Measure name="Ever Cancer Yes Weighted Percent" column="ever_cancer_yes_weighted_percent" aggregator="avg" />
+    <Measure name="Ever Depressive No Sample Frequency" column="ever_depressive_no_sample_frequency" aggregator="sum" />
+    <Measure name="Ever Depressive No Weighted Frequency" column="ever_depressive_no_weighted_frequency" aggregator="sum" />
+    <Measure name="Ever Depressive No Weighted Percent" column="ever_depressive_no_weighted_percent" aggregator="avg" />
+    <Measure name="Ever Depressive Yes Sample Frequency" column="ever_depressive_yes_sample_frequency" aggregator="sum" />
+    <Measure name="Ever Depressive Yes Weighted Frequency" column="ever_depressive_yes_weighted_frequency" aggregator="sum" />
+    <Measure name="Ever Depressive Yes Weighted Percent" column="ever_depressive_yes_weighted_percent" aggregator="avg" />
+    <Measure name="Ever HBP No Sample Frequency" column="ever_hbp_no_sample_frequency" aggregator="sum" />
+    <Measure name="Ever HBP No Weighted Frequency" column="ever_hbp_no_weighted_frequency" aggregator="sum" />
+    <Measure name="Ever HBP No Weighted Percent" column="ever_hbp_no_weighted_percent" aggregator="avg" />
+    <Measure name="Ever HBP Yes Sample Frequency" column="ever_hbp_yes_sample_frequency" aggregator="sum" />
+    <Measure name="Ever HBP Yes Weighted Frequency" column="ever_hbp_yes_weighted_frequency" aggregator="sum" />
+    <Measure name="Ever HBP Yes Weighted Percent" column="ever_hbp_yes_weighted_percent" aggregator="avg" />
+    <Measure name="Ever Heart Attack No Sample Frequency" column="ever_heart_attack_no_sample_frequency" aggregator="sum" />
+    <Measure name="Ever Heart Attack No Weighted Frequency" column="ever_heart_attack_no_weighted_frequency" aggregator="sum" />
+    <Measure name="Ever Heart Attack No Weighted Percent" column="ever_heart_attack_no_weighted_percent" aggregator="avg" />
+    <Measure name="Ever Heart Attack Yes Sample Frequency" column="ever_heart_attack_yes_sample_frequency" aggregator="sum" />
+    <Measure name="Ever Heart Attack Yes Weighted Frequency" column="ever_heart_attack_yes_weighted_frequency" aggregator="sum" />
+    <Measure name="Ever Heart Attack Yes Weighted Percent" column="ever_heart_attack_yes_weighted_percent" aggregator="avg" />
+    <Measure name="Ever Stroke No Sample Frequency" column="ever_stroke_no_sample_frequency" aggregator="sum" />
+    <Measure name="Ever Stroke No Weighted Frequency" column="ever_stroke_no_weighted_frequency" aggregator="sum" />
+    <Measure name="Ever Stroke No Weighted Percent" column="ever_stroke_no_weighted_percent" aggregator="avg" />
+    <Measure name="Ever Stroke Yes Sample Frequency" column="ever_stroke_yes_sample_frequency" aggregator="sum" />
+    <Measure name="Ever Stroke Yes Weighted Frequency" column="ever_stroke_yes_weighted_frequency" aggregator="sum" />
+    <Measure name="Ever Stroke Yes Weighted Percent" column="ever_stroke_yes_weighted_percent" aggregator="avg" />
+    <Measure name="Gen Health Fair Or Poor Sample Frequency" column="gen_health_fair_or_poor_sample_frequency" aggregator="sum" />
+    <Measure name="Gen Health Fair Or Poor Weighted Frequency" column="gen_health_fair_or_poor_weighted_frequency" aggregator="sum" />
+    <Measure name="Gen Health Fair Or Poor Weighted Percent" column="gen_health_fair_or_poor_weighted_percent" aggregator="avg" />
+    <Measure name="Gen Health Good Or Better Sample Frequency" column="gen_health_good_or_better_sample_frequency" aggregator="sum" />
+    <Measure name="Gen Health Good Or Better Weighted Frequency" column="gen_health_good_or_better_weighted_frequency" aggregator="sum" />
+    <Measure name="Gen Health Good Or Better Weighted Percent" column="gen_health_good_or_better_weighted_percent" aggregator="avg" />
+    <Measure name="Had Routine Checkup Last Year No Sample Frequency" column="had_routine_checkup_last_year_no_sample_frequency" aggregator="sum" />
+    <Measure name="Had Routine Checkup Last Year No Weighted Frequency" column="had_routine_checkup_last_year_no_weighted_frequency" aggregator="sum" />
+    <Measure name="Had Routine Checkup Last Year No Weighted Percent" column="had_routine_checkup_last_year_no_weighted_percent" aggregator="avg" />
+    <Measure name="Had Routine Checkup Last Year Yes Sample Frequency" column="had_routine_checkup_last_year_yes_sample_frequency" aggregator="sum" />
+    <Measure name="Had Routine Checkup Last Year Yes Weighted Frequency" column="had_routine_checkup_last_year_yes_weighted_frequency" aggregator="sum" />
+    <Measure name="Had Routine Checkup Last Year Yes Weighted Percent" column="had_routine_checkup_last_year_yes_weighted_percent" aggregator="avg" />
+    <Measure name="Has Insurance No Sample Frequency" column="has_insurance_no_sample_frequency" aggregator="sum" />
+    <Measure name="Has Insurance No Weighted Frequency" column="has_insurance_no_weighted_frequency" aggregator="sum" />
+    <Measure name="Has Insurance No Weighted Percent" column="has_insurance_no_weighted_percent" aggregator="avg" />
+    <Measure name="Has Insurance Yes Sample Frequency" column="has_insurance_yes_sample_frequency" aggregator="sum" />
+    <Measure name="Has Insurance Yes Weighted Frequency" column="has_insurance_yes_weighted_frequency" aggregator="sum" />
+    <Measure name="Has Insurance Yes Weighted Percent" column="has_insurance_yes_weighted_percent" aggregator="avg" />
+    <Measure name="Heart Disease No Sample Frequency" column="heart_disease_no_sample_frequency" aggregator="sum" />
+    <Measure name="Heart Disease No Weighted Frequency" column="heart_disease_no_weighted_frequency" aggregator="sum" />
+    <Measure name="Heart Disease No Weighted Percent" column="heart_disease_no_weighted_percent" aggregator="avg" />
+    <Measure name="Heart Disease Yes Sample Frequency" column="heart_disease_yes_sample_frequency" aggregator="sum" />
+    <Measure name="Heart Disease Yes Weighted Frequency" column="heart_disease_yes_weighted_frequency" aggregator="sum" />
+    <Measure name="Heart Disease Yes Weighted Percent" column="heart_disease_yes_weighted_percent" aggregator="avg" />
+    <Measure name="HIV Tested No Sample Frequency" column="hiv_tested_no_sample_frequency" aggregator="sum" />
+    <Measure name="HIV Tested No Weighted Frequency" column="hiv_tested_no_weighted_frequency" aggregator="sum" />
+    <Measure name="HIV Tested No Weighted Percent" column="hiv_tested_no_weighted_percent" aggregator="avg" />
+    <Measure name="HIV Tested Yes Sample Frequency" column="hiv_tested_yes_sample_frequency" aggregator="sum" />
+    <Measure name="HIV Tested Yes Weighted Frequency" column="hiv_tested_yes_weighted_frequency" aggregator="sum" />
+    <Measure name="HIV Tested Yes Weighted Percent" column="hiv_tested_yes_weighted_percent" aggregator="avg" />
+    <Measure name="Leisure Time Physical Activity No Sample Frequency" column="leisure_time_physical_activity_no_sample_frequency" aggregator="sum" />
+    <Measure name="Leisure Time Physical Activity No Weighted Frequency" column="leisure_time_physical_activity_no_weighted_frequency" aggregator="sum" />
+    <Measure name="Leisure Time Physical Activity No Weighted Percent" column="leisure_time_physical_activity_no_weighted_percent" aggregator="avg" />
+    <Measure name="Leisure Time Physical Activity Yes Sample Frequency" column="leisure_time_physical_activity_yes_sample_frequency" aggregator="sum" />
+    <Measure name="Leisure Time Physical Activity Yes Weighted Frequency" column="leisure_time_physical_activity_yes_weighted_frequency" aggregator="sum" />
+    <Measure name="Leisure Time Physical Activity Yes Weighted Percent" column="leisure_time_physical_activity_yes_weighted_percent" aggregator="avg" />
+    <Measure name="Lifetime Asthma No Sample Frequency" column="lifetime_asthma_no_sample_frequency" aggregator="sum" />
+    <Measure name="Lifetime Asthma No Weighted Frequency" column="lifetime_asthma_no_weighted_frequency" aggregator="sum" />
+    <Measure name="Lifetime Asthma No Weighted Percent" column="lifetime_asthma_no_weighted_percent" aggregator="avg" />
+    <Measure name="Lifetime Asthma Yes Sample Frequency" column="lifetime_asthma_yes_sample_frequency" aggregator="sum" />
+    <Measure name="Lifetime Asthma Yes Weighted Frequency" column="lifetime_asthma_yes_weighted_frequency" aggregator="sum" />
+    <Measure name="Lifetime Asthma Yes Weighted Percent" column="lifetime_asthma_yes_weighted_percent" aggregator="avg" />
+    <Measure name="Limited Or Special Equip No Sample Frequency" column="limited_or_special_equip_no_sample_frequency" aggregator="sum" />
+    <Measure name="Limited Or Special Equip No Weighted Frequency" column="limited_or_special_equip_no_weighted_frequency" aggregator="sum" />
+    <Measure name="Limited Or Special Equip No Weighted Percent" column="limited_or_special_equip_no_weighted_percent" aggregator="avg" />
+    <Measure name="Limited Or Special Equip Yes Sample Frequency" column="limited_or_special_equip_yes_sample_frequency" aggregator="sum" />
+    <Measure name="Limited Or Special Equip Yes Weighted Frequency" column="limited_or_special_equip_yes_weighted_frequency" aggregator="sum" />
+    <Measure name="Limited Or Special Equip Yes Weighted Percent" column="limited_or_special_equip_yes_weighted_percent" aggregator="avg" />
+    <Measure name="Poor Mental Health 13 Or Less Days Sample Frequency" column="poor_mental_health_13_or_less_days_sample_frequency" aggregator="sum" />
+    <Measure name="Poor Mental Health 13 Or Less Days Weighted Frequency" column="poor_mental_health_13_or_less_days_weighted_frequency" aggregator="sum" />
+    <Measure name="Poor Mental Health 13 Or Less Days Weighted Percent" column="poor_mental_health_13_or_less_days_weighted_percent" aggregator="avg" />
+    <Measure name="Poor Mental Health 14 Or More Days Sample Frequency" column="poor_mental_health_14_or_more_days_sample_frequency" aggregator="sum" />
+    <Measure name="Poor Mental Health 14 Or More Days Weighted Frequency" column="poor_mental_health_14_or_more_days_weighted_frequency" aggregator="sum" />
+    <Measure name="Poor Mental Health 14 Or More Days Weighted Percent" column="poor_mental_health_14_or_more_days_weighted_percent" aggregator="avg" />
+    <Measure name="Poor Physical Health 13 Or Less Days Sample Frequency" column="poor_physical_health_13_or_less_days_sample_frequency" aggregator="sum" />
+    <Measure name="Poor Physical Health 13 Or Less Days Weighted Frequency" column="poor_physical_health_13_or_less_days_weighted_frequency" aggregator="sum" />
+    <Measure name="Poor Physical Health 13 Or Less Days Weighted Percent" column="poor_physical_health_13_or_less_days_weighted_percent" aggregator="avg" />
+    <Measure name="Poor Physical Health 14 Or More Days Sample Frequency" column="poor_physical_health_14_or_more_days_sample_frequency" aggregator="sum" />
+    <Measure name="Poor Physical Health 14 Or More Days Weighted Frequency" column="poor_physical_health_14_or_more_days_weighted_frequency" aggregator="sum" />
+    <Measure name="Poor Physical Health 14 Or More Days Weighted Percent" column="poor_physical_health_14_or_more_days_weighted_percent" aggregator="avg" />
+    <Measure name="Smoking Status Current Sample Frequency" column="smoking_status_current_sample_frequency" aggregator="sum" />
+    <Measure name="Smoking Status Current Weighted Frequency" column="smoking_status_current_weighted_frequency" aggregator="sum" />
+    <Measure name="Smoking Status Current Weighted Percent" column="smoking_status_current_weighted_percent" aggregator="avg" />
+    <Measure name="Smoking Status Former Sample Frequency" column="smoking_status_former_sample_frequency" aggregator="sum" />
+    <Measure name="Smoking Status Former Weighted Frequency" column="smoking_status_former_weighted_frequency" aggregator="sum" />
+    <Measure name="Smoking Status Former Weighted Percent" column="smoking_status_former_weighted_percent" aggregator="avg" />
+    <Measure name="Smoking Status Never Sample Frequency" column="smoking_status_never_sample_frequency" aggregator="sum" />
+    <Measure name="Smoking Status Never Weighted Frequency" column="smoking_status_never_weighted_frequency" aggregator="sum" />
+    <Measure name="Smoking Status Never Weighted Percent" column="smoking_status_never_weighted_percent" aggregator="avg" />
 </Cube><Cube name="USDA">
     <Annotations>
         <Annotation name="source_name">United State Department of Agriculture</Annotation>
@@ -205,19 +460,27 @@
     </Annotations>
 
     <Table name="usda" schema="usda"/>
-     
-    <Dimension foreignKey="fips" name="County">
+
+    <Dimension name="Year">
         <Annotations>
-            <Annotation name="dim_type">County</Annotation>
+            <Annotation name="dim_type">TIME</Annotation>
         </Annotations>
-         <Hierarchy primaryKey="geoid" name="County" hasAll="true">
-            <Table name="counties" schema="shapes2017" />  
-            <Level name="County" column="geoid" nameColumn="name" uniqueMembers="false" />  
-        </Hierarchy> 
+         <Hierarchy hasAll="true">
+            <Level name="Year" column="year" type="Numeric" levelType="TimeYears" uniqueMembers="true" />
+        </Hierarchy>
     </Dimension>
 
-    <Measure name="Total Farmer's Markets in 2009" column="number_of_farmers_markets_2009" aggregator="sum" />
-    <Measure name="Total Farmer's Markets in 2016" column="number_of_farmers_markets_2016" aggregator="sum" />
+    <Dimension foreignKey="fips" name="Geography">
+        <Annotations>
+            <Annotation name="dim_type">GEOGRAPHY</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true" name="County">
+            <Table name="counties" schema="shapes2017"/>
+            <Level name="County" column="geoid" nameColumn="name" uniqueMembers="true" hideMemberIf="IfBlankName" />
+        </Hierarchy>
+    </Dimension>
+
+    <Measure name="Total Farmer's Markets" column="number_of_farmers_markets" aggregator="sum" />
 </Cube>
 <Cube name="500 Cities">
     <Annotations> 
@@ -237,38 +500,113 @@
          <Hierarchy primaryKey="" foreignKey="" name="" hasAll="true">  
             <Level name="Year" column="year" type="Numeric" levelType="TimeYears" nameColumn="" uniqueMembers="true" />  
         </Hierarchy> 
-    </Dimension>   
-    <Dimension foreignKey="city_fips" name="City">
+    </Dimension>
+
+    <Dimension foreignKey="city_fips" name="Geography">
         <Annotations>
-            <Annotation name="dim_type">City</Annotation>
+            <Annotation name="dim_type">GEOGRAPHY</Annotation>
         </Annotations>
-         <Hierarchy primaryKey="geoid" foreignKey="" name="City" hasAll="true">
-            <Table name="places" schema="shapes2017" />  
-            <Level name="City" column="geoid" type="" levelType="" nameColumn="name" uniqueMembers="false" />  
-        </Hierarchy> 
-    </Dimension>   
-    <Dimension foreignKey="tract_fips" name="Tract">
+        <Hierarchy hasAll="true" name="City" primaryKey="geoid">
+            <Table name="places" schema="shapes2017"/>
+            <Level name="City" column="geoid" nameColumn="name" uniqueMembers="true" hideMemberIf="IfBlankName" />
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension foreignKey="tract_fips" name="Geography 2">
         <Annotations>
-            <Annotation name="dim_type">Tract</Annotation>
+            <Annotation name="dim_type">GEOGRAPHY</Annotation>
         </Annotations>
-         <Hierarchy primaryKey="geoid" foreignKey="" name="Tract" hasAll="true">
-            <Table name="tracts" schema="shapes2017" />  
-            <Level name="Tract" column="geoid" type="" levelType="" nameColumn="name" uniqueMembers="false" />  
-        </Hierarchy> 
-    </Dimension>   
-    <Dimension name="Indicator">
-        <Annotations>
-            <Annotation name="dim_type">Measure</Annotation>
-        </Annotations>
-         <Hierarchy hasAll="true">  
-            <Level name="Measure" column="short_question_text" type="String" uniqueMembers="true" />  
-        </Hierarchy> 
-    </Dimension>  
-     
-    <Measure name="Data Value" column="data_value" aggregator="sum" />   
-    <Measure name="Low Confidence Limit" column="low_confidence_limit" aggregator="sum" />   
-    <Measure name="High Confidence Limit" column="high_confidence_limit" aggregator="sum" />   
-    <Measure name="Population Count" column="population_count" aggregator="sum" />  
+        <Hierarchy hasAll="true" name="Tract" primaryKey="geoid">
+            <Table name="tracts" schema="shapes2017"/>
+            <Level name="Tract" column="geoid" nameColumn="name" uniqueMembers="true" hideMemberIf="IfBlankName" />
+        </Hierarchy>
+    </Dimension>
+
+    <Measure name="Population Count" column="population_count" aggregator="sum" />
+    <Measure name="Annual Checkup Data Value" column="annual_checkup_data_value" aggregator="sum" />
+    <Measure name="Annual Checkup Low Confidence Limit" column="annual_checkup_low_confidence_limit" aggregator="sum" />
+    <Measure name="Annual Checkup High Confidence Limit" column="annual_checkup_high_confidence_limit" aggregator="sum" />
+    <Measure name="Arthritis Data Value" column="arthritis_data_value" aggregator="sum" />
+    <Measure name="Arthritis Low Confidence Limit" column="arthritis_low_confidence_limit" aggregator="sum" />
+    <Measure name="Arthritis High Confidence Limit" column="arthritis_high_confidence_limit" aggregator="sum" />
+    <Measure name="Binge Drinking Data Value" column="binge_drinking_data_value" aggregator="sum" />
+    <Measure name="Binge Drinking Low Confidence Limit" column="binge_drinking_low_confidence_limit" aggregator="sum" />
+    <Measure name="Binge Drinking High Confidence Limit" column="binge_drinking_high_confidence_limit" aggregator="sum" />
+    <Measure name="COPD Data Value" column="copd_data_value" aggregator="sum" />
+    <Measure name="COPD Low Confidence Limit" column="copd_low_confidence_limit" aggregator="sum" />
+    <Measure name="COPD High Confidence Limit" column="copd_high_confidence_limit" aggregator="sum" />
+    <Measure name="Cancer (except skin) Data Value" column="cancer_except_skin_data_value" aggregator="sum" />
+    <Measure name="Cancer (except skin) Low Confidence Limit" column="cancer_except_skin_low_confidence_limit" aggregator="sum" />
+    <Measure name="Cancer (except skin) High Confidence Limit" column="cancer_except_skin_high_confidence_limit" aggregator="sum" />
+    <Measure name="Cholesterol Screening Data Value" column="cholesterol_screening_data_value" aggregator="sum" />
+    <Measure name="Cholesterol Screening Low Confidence Limit" column="cholesterol_screening_low_confidence_limit" aggregator="sum" />
+    <Measure name="Cholesterol Screening High Confidence Limit" column="cholesterol_screening_high_confidence_limit" aggregator="sum" />
+    <Measure name="Chronic Kidney Disease Data Value" column="chronic_kidney_disease_data_value" aggregator="sum" />
+    <Measure name="Chronic Kidney Disease Low Confidence Limit" column="chronic_kidney_disease_low_confidence_limit" aggregator="sum" />
+    <Measure name="Chronic Kidney Disease High Confidence Limit" column="chronic_kidney_disease_high_confidence_limit" aggregator="sum" />
+    <Measure name="Colorectal Cancer Screening Data Value" column="colorectal_cancer_screening_data_value" aggregator="sum" />
+    <Measure name="Colorectal Cancer Screening Low Confidence Limit" column="colorectal_cancer_screening_low_confidence_limit" aggregator="sum" />
+    <Measure name="Colorectal Cancer Screening High Confidence Limit" column="colorectal_cancer_screening_high_confidence_limit" aggregator="sum" />
+    <Measure name="Core preventive services for older men Data Value" column="core_preventive_services_for_older_men_data_value" aggregator="sum" />
+    <Measure name="Core preventive services for older men Low Confidence Limit" column="core_preventive_services_for_older_men_low_confidence_limit" aggregator="sum" />
+    <Measure name="Core preventive services for older men High Confidence Limit" column="core_preventive_services_for_older_men_high_confidence_limit" aggregator="sum" />
+    <Measure name="Core preventive services for older women Data Value" column="core_preventive_services_for_older_women_data_value" aggregator="sum" />
+    <Measure name="Core preventive services for older women Low Confidence Limit" column="core_preventive_services_for_older_women_low_confidence_limit" aggregator="sum" />
+    <Measure name="Core preventive services for older women High Confidence Limit" column="core_preventive_services_for_older_women_high_confidence_limit" aggregator="sum" />
+    <Measure name="Coronary Heart Disease Data Value" column="coronary_heart_disease_data_value" aggregator="sum" />
+    <Measure name="Coronary Heart Disease Low Confidence Limit" column="coronary_heart_disease_low_confidence_limit" aggregator="sum" />
+    <Measure name="Coronary Heart Disease High Confidence Limit" column="coronary_heart_disease_high_confidence_limit" aggregator="sum" />
+    <Measure name="Current Asthma Data Value" column="asthma_data_value" aggregator="sum" />
+    <Measure name="Current Asthma Low Confidence Limit" column="asthma_low_confidence_limit" aggregator="sum" />
+    <Measure name="Current Asthma High Confidence Limit" column="asthma_high_confidence_limit" aggregator="sum" />
+    <Measure name="Current Smoking Data Value" column="current_smoking_data_value" aggregator="sum" />
+    <Measure name="Current Smoking Low Confidence Limit" column="current_smoking_low_confidence_limit" aggregator="sum" />
+    <Measure name="Current Smoking High Confidence Limit" column="current_smoking_high_confidence_limit" aggregator="sum" />
+    <Measure name="Dental Visit Data Value" column="dental_visit_data_value" aggregator="sum" />
+    <Measure name="Dental Visit Low Confidence Limit" column="dental_visit_low_confidence_limit" aggregator="sum" />
+    <Measure name="Dental Visit High Confidence Limit" column="dental_visit_high_confidence_limit" aggregator="sum" />
+    <Measure name="Diabetes Data Value" column="has_diabetes_data_value" aggregator="sum" />
+    <Measure name="Diabetes Low Confidence Limit" column="has_diabetes_low_confidence_limit" aggregator="sum" />
+    <Measure name="Diabetes High Confidence Limit" column="has_diabetes_high_confidence_limit" aggregator="sum" />
+    <Measure name="Health Insurance Data Value" column="health_insurance_data_value" aggregator="sum" />
+    <Measure name="Health Insurance Low Confidence Limit" column="health_insurance_low_confidence_limit" aggregator="sum" />
+    <Measure name="Health Insurance High Confidence Limit" column="health_insurance_high_confidence_limit" aggregator="sum" />
+    <Measure name="High Blood Pressure Data Value" column="high_blood_pressure_data_value" aggregator="sum" />
+    <Measure name="High Blood Pressure Low Confidence Limit" column="high_blood_pressure_low_confidence_limit" aggregator="sum" />
+    <Measure name="High Blood Pressure High Confidence Limit" column="high_blood_pressure_high_confidence_limit" aggregator="sum" />
+    <Measure name="High Cholesterol Data Value" column="high_cholesterol_data_value" aggregator="sum" />
+    <Measure name="High Cholesterol Low Confidence Limit" column="high_cholesterol_low_confidence_limit" aggregator="sum" />
+    <Measure name="High Cholesterol High Confidence Limit" column="high_cholesterol_high_confidence_limit" aggregator="sum" />
+    <Measure name="Mammography Data Value" column="mammography_data_value" aggregator="sum" />
+    <Measure name="Mammography Low Confidence Limit" column="mammography_low_confidence_limit" aggregator="sum" />
+    <Measure name="Mammography High Confidence Limit" column="mammography_high_confidence_limit" aggregator="sum" />
+    <Measure name="Mental Health Data Value" column="mental_health_data_value" aggregator="sum" />
+    <Measure name="Mental Health Low Confidence Limit" column="mental_health_low_confidence_limit" aggregator="sum" />
+    <Measure name="Mental Health High Confidence Limit" column="mental_health_high_confidence_limit" aggregator="sum" />
+    <Measure name="Obesity Data Value" column="obesity_data_value" aggregator="sum" />
+    <Measure name="Obesity Low Confidence Limit" column="obesity_low_confidence_limit" aggregator="sum" />
+    <Measure name="Obesity High Confidence Limit" column="obesity_high_confidence_limit" aggregator="sum" />
+    <Measure name="Pap Smear Test Data Value" column="pap_smear_test_data_value" aggregator="sum" />
+    <Measure name="Pap Smear Test Low Confidence Limit" column="pap_smear_test_low_confidence_limit" aggregator="sum" />
+    <Measure name="Pap Smear Test High Confidence Limit" column="pap_smear_test_high_confidence_limit" aggregator="sum" />
+    <Measure name="Physical Health Data Value" column="physical_health_data_value" aggregator="sum" />
+    <Measure name="Physical Health Low Confidence Limit" column="physical_health_low_confidence_limit" aggregator="sum" />
+    <Measure name="Physical Health High Confidence Limit" column="physical_health_high_confidence_limit" aggregator="sum" />
+    <Measure name="Physical Inactivity Data Value" column="physical_inactivity_data_value" aggregator="sum" />
+    <Measure name="Physical Inactivity Low Confidence Limit" column="physical_inactivity_low_confidence_limit" aggregator="sum" />
+    <Measure name="Physical Inactivity High Confidence Limit" column="physical_inactivity_high_confidence_limit" aggregator="sum" />
+    <Measure name="Sleep less than 7 hours Data Value" column="sleep_less_than_7_hours_data_value" aggregator="sum" />
+    <Measure name="Sleep less than 7 hours Low Confidence Limit" column="sleep_less_than_7_hours_low_confidence_limit" aggregator="sum" />
+    <Measure name="Sleep less than 7 hours High Confidence Limit" column="sleep_less_than_7_hours_high_confidence_limit" aggregator="sum" />
+    <Measure name="Stroke Data Value" column="had_stroke_data_value" aggregator="sum" />
+    <Measure name="Stroke Low Confidence Limit" column="had_stroke_low_confidence_limit" aggregator="sum" />
+    <Measure name="Stroke High Confidence Limit" column="had_stroke_high_confidence_limit" aggregator="sum" />
+    <Measure name="Taking BP Medication Data Value" column="taking_bp_medication_data_value" aggregator="sum" />
+    <Measure name="Taking BP Medication Low Confidence Limit" column="taking_bp_medication_low_confidence_limit" aggregator="sum" />
+    <Measure name="Taking BP Medication High Confidence Limit" column="taking_bp_medication_high_confidence_limit" aggregator="sum" />
+    <Measure name="Teeth Loss Data Value" column="teeth_loss_data_value" aggregator="sum" />
+    <Measure name="Teeth Loss Low Confidence Limit" column="teeth_loss_low_confidence_limit" aggregator="sum" />
+    <Measure name="Teeth Loss High Confidence Limit" column="teeth_loss_high_confidence_limit" aggregator="sum" />
 </Cube>
 <Cube name="Feeding America">
     <Annotations>
@@ -289,14 +627,14 @@
         </Hierarchy>
     </Dimension>
 
-    <Dimension foreignKey="county" name="County">
+    <Dimension foreignKey="county" name="Geography">
         <Annotations>
-            <Annotation name="dim_type">County</Annotation>
+            <Annotation name="dim_type">GEOGRAPHY</Annotation>
         </Annotations>
-         <Hierarchy primaryKey="geoid" name="County" hasAll="true">
-            <Table name="counties" schema="shapes2017" />  
-            <Level name="County" column="geoid" nameColumn="name" uniqueMembers="false" />  
-        </Hierarchy> 
+        <Hierarchy hasAll="true" name="County">
+            <Table name="counties" schema="shapes2017"/>
+            <Level name="County" column="geoid" nameColumn="name" uniqueMembers="true" hideMemberIf="IfBlankName" />
+        </Hierarchy>
     </Dimension>
 
     <Measure name="Food Insecurity Rate" column="food_insecurity_rate" aggregator="avg" />
@@ -378,14 +716,14 @@
         </Hierarchy>
     </Dimension>
 
-    <Dimension foreignKey="geoid" name="County">
+    <Dimension foreignKey="geoid" name="Geography">
         <Annotations>
-            <Annotation name="dim_type">County</Annotation>
+            <Annotation name="dim_type">GEOGRAPHY</Annotation>
         </Annotations>
-         <Hierarchy primaryKey="geoid" name="County" hasAll="true">
-            <Table name="counties" schema="shapes2017" />  
-            <Level name="County" column="geoid" nameColumn="name" uniqueMembers="false" />  
-        </Hierarchy> 
+        <Hierarchy hasAll="true" name="County">
+            <Table name="counties" schema="shapes2017"/>
+            <Level name="County" column="geoid" nameColumn="name" uniqueMembers="true" hideMemberIf="IfBlankName" />
+        </Hierarchy>
     </Dimension>
 
     <Measure name="Labor Force" column="labor_force" aggregator="sum" />
@@ -414,14 +752,14 @@
         </Hierarchy>
     </Dimension> -->
 
-    <Dimension foreignKey="zipcode" name="Zip Code">
+    <Dimension foreignKey="zipcode" name="Geography">
         <Annotations>
-            <Annotation name="dim_type">Zip Code</Annotation>
+            <Annotation name="dim_type">GEOGRAPHY</Annotation>
         </Annotations>
-         <Hierarchy primaryKey="name" name="Zip Code" hasAll="true">
-            <Table name="zips" schema="shapes2017" />  
-            <Level name="Zip Code" column="name" nameColumn="name" uniqueMembers="false" />  
-        </Hierarchy> 
+        <Hierarchy hasAll="true" name="Zip Code">
+            <Table name="zips" schema="shapes2017"/>
+            <Level name="Zip Code" column="name" nameColumn="name" uniqueMembers="true" hideMemberIf="IfBlankName" />
+        </Hierarchy>
     </Dimension>
 
     <Measure name="Total Population" column="total_population" aggregator="sum" />
