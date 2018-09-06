@@ -39,88 +39,88 @@
     </Dimension>
 
     <Measure name="Population Count" column="population_count" aggregator="sum" />
-    <Measure name="Annual Checkup Data Value" column="annual_checkup_data_value" aggregator="sum" />
-    <Measure name="Annual Checkup Low Confidence Limit" column="annual_checkup_low_confidence_limit" aggregator="sum" />
-    <Measure name="Annual Checkup High Confidence Limit" column="annual_checkup_high_confidence_limit" aggregator="sum" />
-    <Measure name="Arthritis Data Value" column="arthritis_data_value" aggregator="sum" />
-    <Measure name="Arthritis Low Confidence Limit" column="arthritis_low_confidence_limit" aggregator="sum" />
-    <Measure name="Arthritis High Confidence Limit" column="arthritis_high_confidence_limit" aggregator="sum" />
-    <Measure name="Binge Drinking Data Value" column="binge_drinking_data_value" aggregator="sum" />
-    <Measure name="Binge Drinking Low Confidence Limit" column="binge_drinking_low_confidence_limit" aggregator="sum" />
-    <Measure name="Binge Drinking High Confidence Limit" column="binge_drinking_high_confidence_limit" aggregator="sum" />
-    <Measure name="COPD Data Value" column="copd_data_value" aggregator="sum" />
-    <Measure name="COPD Low Confidence Limit" column="copd_low_confidence_limit" aggregator="sum" />
-    <Measure name="COPD High Confidence Limit" column="copd_high_confidence_limit" aggregator="sum" />
-    <Measure name="Cancer (except skin) Data Value" column="cancer_except_skin_data_value" aggregator="sum" />
-    <Measure name="Cancer (except skin) Low Confidence Limit" column="cancer_except_skin_low_confidence_limit" aggregator="sum" />
-    <Measure name="Cancer (except skin) High Confidence Limit" column="cancer_except_skin_high_confidence_limit" aggregator="sum" />
-    <Measure name="Cholesterol Screening Data Value" column="cholesterol_screening_data_value" aggregator="sum" />
-    <Measure name="Cholesterol Screening Low Confidence Limit" column="cholesterol_screening_low_confidence_limit" aggregator="sum" />
-    <Measure name="Cholesterol Screening High Confidence Limit" column="cholesterol_screening_high_confidence_limit" aggregator="sum" />
-    <Measure name="Chronic Kidney Disease Data Value" column="chronic_kidney_disease_data_value" aggregator="sum" />
-    <Measure name="Chronic Kidney Disease Low Confidence Limit" column="chronic_kidney_disease_low_confidence_limit" aggregator="sum" />
-    <Measure name="Chronic Kidney Disease High Confidence Limit" column="chronic_kidney_disease_high_confidence_limit" aggregator="sum" />
-    <Measure name="Colorectal Cancer Screening Data Value" column="colorectal_cancer_screening_data_value" aggregator="sum" />
-    <Measure name="Colorectal Cancer Screening Low Confidence Limit" column="colorectal_cancer_screening_low_confidence_limit" aggregator="sum" />
-    <Measure name="Colorectal Cancer Screening High Confidence Limit" column="colorectal_cancer_screening_high_confidence_limit" aggregator="sum" />
-    <Measure name="Core preventive services for older men Data Value" column="core_preventive_services_for_older_men_data_value" aggregator="sum" />
-    <Measure name="Core preventive services for older men Low Confidence Limit" column="core_preventive_services_for_older_men_low_confidence_limit" aggregator="sum" />
-    <Measure name="Core preventive services for older men High Confidence Limit" column="core_preventive_services_for_older_men_high_confidence_limit" aggregator="sum" />
-    <Measure name="Core preventive services for older women Data Value" column="core_preventive_services_for_older_women_data_value" aggregator="sum" />
-    <Measure name="Core preventive services for older women Low Confidence Limit" column="core_preventive_services_for_older_women_low_confidence_limit" aggregator="sum" />
-    <Measure name="Core preventive services for older women High Confidence Limit" column="core_preventive_services_for_older_women_high_confidence_limit" aggregator="sum" />
-    <Measure name="Coronary Heart Disease Data Value" column="coronary_heart_disease_data_value" aggregator="sum" />
-    <Measure name="Coronary Heart Disease Low Confidence Limit" column="coronary_heart_disease_low_confidence_limit" aggregator="sum" />
-    <Measure name="Coronary Heart Disease High Confidence Limit" column="coronary_heart_disease_high_confidence_limit" aggregator="sum" />
-    <Measure name="Current Asthma Data Value" column="asthma_data_value" aggregator="sum" />
-    <Measure name="Current Asthma Low Confidence Limit" column="asthma_low_confidence_limit" aggregator="sum" />
-    <Measure name="Current Asthma High Confidence Limit" column="asthma_high_confidence_limit" aggregator="sum" />
-    <Measure name="Current Smoking Data Value" column="current_smoking_data_value" aggregator="sum" />
-    <Measure name="Current Smoking Low Confidence Limit" column="current_smoking_low_confidence_limit" aggregator="sum" />
-    <Measure name="Current Smoking High Confidence Limit" column="current_smoking_high_confidence_limit" aggregator="sum" />
-    <Measure name="Dental Visit Data Value" column="dental_visit_data_value" aggregator="sum" />
-    <Measure name="Dental Visit Low Confidence Limit" column="dental_visit_low_confidence_limit" aggregator="sum" />
-    <Measure name="Dental Visit High Confidence Limit" column="dental_visit_high_confidence_limit" aggregator="sum" />
-    <Measure name="Diabetes Data Value" column="has_diabetes_data_value" aggregator="sum" />
-    <Measure name="Diabetes Low Confidence Limit" column="has_diabetes_low_confidence_limit" aggregator="sum" />
-    <Measure name="Diabetes High Confidence Limit" column="has_diabetes_high_confidence_limit" aggregator="sum" />
-    <Measure name="Health Insurance Data Value" column="health_insurance_data_value" aggregator="sum" />
-    <Measure name="Health Insurance Low Confidence Limit" column="health_insurance_low_confidence_limit" aggregator="sum" />
-    <Measure name="Health Insurance High Confidence Limit" column="health_insurance_high_confidence_limit" aggregator="sum" />
-    <Measure name="High Blood Pressure Data Value" column="high_blood_pressure_data_value" aggregator="sum" />
-    <Measure name="High Blood Pressure Low Confidence Limit" column="high_blood_pressure_low_confidence_limit" aggregator="sum" />
-    <Measure name="High Blood Pressure High Confidence Limit" column="high_blood_pressure_high_confidence_limit" aggregator="sum" />
-    <Measure name="High Cholesterol Data Value" column="high_cholesterol_data_value" aggregator="sum" />
-    <Measure name="High Cholesterol Low Confidence Limit" column="high_cholesterol_low_confidence_limit" aggregator="sum" />
-    <Measure name="High Cholesterol High Confidence Limit" column="high_cholesterol_high_confidence_limit" aggregator="sum" />
-    <Measure name="Mammography Data Value" column="mammography_data_value" aggregator="sum" />
-    <Measure name="Mammography Low Confidence Limit" column="mammography_low_confidence_limit" aggregator="sum" />
-    <Measure name="Mammography High Confidence Limit" column="mammography_high_confidence_limit" aggregator="sum" />
-    <Measure name="Mental Health Data Value" column="mental_health_data_value" aggregator="sum" />
-    <Measure name="Mental Health Low Confidence Limit" column="mental_health_low_confidence_limit" aggregator="sum" />
-    <Measure name="Mental Health High Confidence Limit" column="mental_health_high_confidence_limit" aggregator="sum" />
-    <Measure name="Obesity Data Value" column="obesity_data_value" aggregator="sum" />
-    <Measure name="Obesity Low Confidence Limit" column="obesity_low_confidence_limit" aggregator="sum" />
-    <Measure name="Obesity High Confidence Limit" column="obesity_high_confidence_limit" aggregator="sum" />
-    <Measure name="Pap Smear Test Data Value" column="pap_smear_test_data_value" aggregator="sum" />
-    <Measure name="Pap Smear Test Low Confidence Limit" column="pap_smear_test_low_confidence_limit" aggregator="sum" />
-    <Measure name="Pap Smear Test High Confidence Limit" column="pap_smear_test_high_confidence_limit" aggregator="sum" />
-    <Measure name="Physical Health Data Value" column="physical_health_data_value" aggregator="sum" />
-    <Measure name="Physical Health Low Confidence Limit" column="physical_health_low_confidence_limit" aggregator="sum" />
-    <Measure name="Physical Health High Confidence Limit" column="physical_health_high_confidence_limit" aggregator="sum" />
-    <Measure name="Physical Inactivity Data Value" column="physical_inactivity_data_value" aggregator="sum" />
-    <Measure name="Physical Inactivity Low Confidence Limit" column="physical_inactivity_low_confidence_limit" aggregator="sum" />
-    <Measure name="Physical Inactivity High Confidence Limit" column="physical_inactivity_high_confidence_limit" aggregator="sum" />
-    <Measure name="Sleep less than 7 hours Data Value" column="sleep_less_than_7_hours_data_value" aggregator="sum" />
-    <Measure name="Sleep less than 7 hours Low Confidence Limit" column="sleep_less_than_7_hours_low_confidence_limit" aggregator="sum" />
-    <Measure name="Sleep less than 7 hours High Confidence Limit" column="sleep_less_than_7_hours_high_confidence_limit" aggregator="sum" />
-    <Measure name="Stroke Data Value" column="had_stroke_data_value" aggregator="sum" />
-    <Measure name="Stroke Low Confidence Limit" column="had_stroke_low_confidence_limit" aggregator="sum" />
-    <Measure name="Stroke High Confidence Limit" column="had_stroke_high_confidence_limit" aggregator="sum" />
-    <Measure name="Taking BP Medication Data Value" column="taking_bp_medication_data_value" aggregator="sum" />
-    <Measure name="Taking BP Medication Low Confidence Limit" column="taking_bp_medication_low_confidence_limit" aggregator="sum" />
-    <Measure name="Taking BP Medication High Confidence Limit" column="taking_bp_medication_high_confidence_limit" aggregator="sum" />
-    <Measure name="Teeth Loss Data Value" column="teeth_loss_data_value" aggregator="sum" />
-    <Measure name="Teeth Loss Low Confidence Limit" column="teeth_loss_low_confidence_limit" aggregator="sum" />
-    <Measure name="Teeth Loss High Confidence Limit" column="teeth_loss_high_confidence_limit" aggregator="sum" />
+    <Measure name="Annual Checkup Data Value" column="annual_checkup_data_value" aggregator="avg" />
+    <Measure name="Annual Checkup Low Confidence Limit" column="annual_checkup_low_confidence_limit" aggregator="avg" />
+    <Measure name="Annual Checkup High Confidence Limit" column="annual_checkup_high_confidence_limit" aggregator="avg" />
+    <Measure name="Arthritis Data Value" column="arthritis_data_value" aggregator="avg" />
+    <Measure name="Arthritis Low Confidence Limit" column="arthritis_low_confidence_limit" aggregator="avg" />
+    <Measure name="Arthritis High Confidence Limit" column="arthritis_high_confidence_limit" aggregator="avg" />
+    <Measure name="Binge Drinking Data Value" column="binge_drinking_data_value" aggregator="avg" />
+    <Measure name="Binge Drinking Low Confidence Limit" column="binge_drinking_low_confidence_limit" aggregator="avg" />
+    <Measure name="Binge Drinking High Confidence Limit" column="binge_drinking_high_confidence_limit" aggregator="avg" />
+    <Measure name="COPD Data Value" column="copd_data_value" aggregator="avg" />
+    <Measure name="COPD Low Confidence Limit" column="copd_low_confidence_limit" aggregator="avg" />
+    <Measure name="COPD High Confidence Limit" column="copd_high_confidence_limit" aggregator="avg" />
+    <Measure name="Cancer (except skin) Data Value" column="cancer_except_skin_data_value" aggregator="avg" />
+    <Measure name="Cancer (except skin) Low Confidence Limit" column="cancer_except_skin_low_confidence_limit" aggregator="avg" />
+    <Measure name="Cancer (except skin) High Confidence Limit" column="cancer_except_skin_high_confidence_limit" aggregator="avg" />
+    <Measure name="Cholesterol Screening Data Value" column="cholesterol_screening_data_value" aggregator="avg" />
+    <Measure name="Cholesterol Screening Low Confidence Limit" column="cholesterol_screening_low_confidence_limit" aggregator="avg" />
+    <Measure name="Cholesterol Screening High Confidence Limit" column="cholesterol_screening_high_confidence_limit" aggregator="avg" />
+    <Measure name="Chronic Kidney Disease Data Value" column="chronic_kidney_disease_data_value" aggregator="avg" />
+    <Measure name="Chronic Kidney Disease Low Confidence Limit" column="chronic_kidney_disease_low_confidence_limit" aggregator="avg" />
+    <Measure name="Chronic Kidney Disease High Confidence Limit" column="chronic_kidney_disease_high_confidence_limit" aggregator="avg" />
+    <Measure name="Colorectal Cancer Screening Data Value" column="colorectal_cancer_screening_data_value" aggregator="avg" />
+    <Measure name="Colorectal Cancer Screening Low Confidence Limit" column="colorectal_cancer_screening_low_confidence_limit" aggregator="avg" />
+    <Measure name="Colorectal Cancer Screening High Confidence Limit" column="colorectal_cancer_screening_high_confidence_limit" aggregator="avg" />
+    <Measure name="Core preventive services for older men Data Value" column="core_preventive_services_for_older_men_data_value" aggregator="avg" />
+    <Measure name="Core preventive services for older men Low Confidence Limit" column="core_preventive_services_for_older_men_low_confidence_limit" aggregator="avg" />
+    <Measure name="Core preventive services for older men High Confidence Limit" column="core_preventive_services_for_older_men_high_confidence_limit" aggregator="avg" />
+    <Measure name="Core preventive services for older women Data Value" column="core_preventive_services_for_older_women_data_value" aggregator="avg" />
+    <Measure name="Core preventive services for older women Low Confidence Limit" column="core_preventive_services_for_older_women_low_confidence_limit" aggregator="avg" />
+    <Measure name="Core preventive services for older women High Confidence Limit" column="core_preventive_services_for_older_women_high_confidence_limit" aggregator="avg" />
+    <Measure name="Coronary Heart Disease Data Value" column="coronary_heart_disease_data_value" aggregator="avg" />
+    <Measure name="Coronary Heart Disease Low Confidence Limit" column="coronary_heart_disease_low_confidence_limit" aggregator="avg" />
+    <Measure name="Coronary Heart Disease High Confidence Limit" column="coronary_heart_disease_high_confidence_limit" aggregator="avg" />
+    <Measure name="Current Asthma Data Value" column="asthma_data_value" aggregator="avg" />
+    <Measure name="Current Asthma Low Confidence Limit" column="asthma_low_confidence_limit" aggregator="avg" />
+    <Measure name="Current Asthma High Confidence Limit" column="asthma_high_confidence_limit" aggregator="avg" />
+    <Measure name="Current Smoking Data Value" column="current_smoking_data_value" aggregator="avg" />
+    <Measure name="Current Smoking Low Confidence Limit" column="current_smoking_low_confidence_limit" aggregator="avg" />
+    <Measure name="Current Smoking High Confidence Limit" column="current_smoking_high_confidence_limit" aggregator="avg" />
+    <Measure name="Dental Visit Data Value" column="dental_visit_data_value" aggregator="avg" />
+    <Measure name="Dental Visit Low Confidence Limit" column="dental_visit_low_confidence_limit" aggregator="avg" />
+    <Measure name="Dental Visit High Confidence Limit" column="dental_visit_high_confidence_limit" aggregator="avg" />
+    <Measure name="Diabetes Data Value" column="has_diabetes_data_value" aggregator="avg" />
+    <Measure name="Diabetes Low Confidence Limit" column="has_diabetes_low_confidence_limit" aggregator="avg" />
+    <Measure name="Diabetes High Confidence Limit" column="has_diabetes_high_confidence_limit" aggregator="avg" />
+    <Measure name="Health Insurance Data Value" column="health_insurance_data_value" aggregator="avg" />
+    <Measure name="Health Insurance Low Confidence Limit" column="health_insurance_low_confidence_limit" aggregator="avg" />
+    <Measure name="Health Insurance High Confidence Limit" column="health_insurance_high_confidence_limit" aggregator="avg" />
+    <Measure name="High Blood Pressure Data Value" column="high_blood_pressure_data_value" aggregator="avg" />
+    <Measure name="High Blood Pressure Low Confidence Limit" column="high_blood_pressure_low_confidence_limit" aggregator="avg" />
+    <Measure name="High Blood Pressure High Confidence Limit" column="high_blood_pressure_high_confidence_limit" aggregator="avg" />
+    <Measure name="High Cholesterol Data Value" column="high_cholesterol_data_value" aggregator="avg" />
+    <Measure name="High Cholesterol Low Confidence Limit" column="high_cholesterol_low_confidence_limit" aggregator="avg" />
+    <Measure name="High Cholesterol High Confidence Limit" column="high_cholesterol_high_confidence_limit" aggregator="avg" />
+    <Measure name="Mammography Data Value" column="mammography_data_value" aggregator="avg" />
+    <Measure name="Mammography Low Confidence Limit" column="mammography_low_confidence_limit" aggregator="avg" />
+    <Measure name="Mammography High Confidence Limit" column="mammography_high_confidence_limit" aggregator="avg" />
+    <Measure name="Mental Health Data Value" column="mental_health_data_value" aggregator="avg" />
+    <Measure name="Mental Health Low Confidence Limit" column="mental_health_low_confidence_limit" aggregator="avg" />
+    <Measure name="Mental Health High Confidence Limit" column="mental_health_high_confidence_limit" aggregator="avg" />
+    <Measure name="Obesity Data Value" column="obesity_data_value" aggregator="avg" />
+    <Measure name="Obesity Low Confidence Limit" column="obesity_low_confidence_limit" aggregator="avg" />
+    <Measure name="Obesity High Confidence Limit" column="obesity_high_confidence_limit" aggregator="avg" />
+    <Measure name="Pap Smear Test Data Value" column="pap_smear_test_data_value" aggregator="avg" />
+    <Measure name="Pap Smear Test Low Confidence Limit" column="pap_smear_test_low_confidence_limit" aggregator="avg" />
+    <Measure name="Pap Smear Test High Confidence Limit" column="pap_smear_test_high_confidence_limit" aggregator="avg" />
+    <Measure name="Physical Health Data Value" column="physical_health_data_value" aggregator="avg" />
+    <Measure name="Physical Health Low Confidence Limit" column="physical_health_low_confidence_limit" aggregator="avg" />
+    <Measure name="Physical Health High Confidence Limit" column="physical_health_high_confidence_limit" aggregator="avg" />
+    <Measure name="Physical Inactivity Data Value" column="physical_inactivity_data_value" aggregator="avg" />
+    <Measure name="Physical Inactivity Low Confidence Limit" column="physical_inactivity_low_confidence_limit" aggregator="avg" />
+    <Measure name="Physical Inactivity High Confidence Limit" column="physical_inactivity_high_confidence_limit" aggregator="avg" />
+    <Measure name="Sleep less than 7 hours Data Value" column="sleep_less_than_7_hours_data_value" aggregator="avg" />
+    <Measure name="Sleep less than 7 hours Low Confidence Limit" column="sleep_less_than_7_hours_low_confidence_limit" aggregator="avg" />
+    <Measure name="Sleep less than 7 hours High Confidence Limit" column="sleep_less_than_7_hours_high_confidence_limit" aggregator="avg" />
+    <Measure name="Stroke Data Value" column="had_stroke_data_value" aggregator="avg" />
+    <Measure name="Stroke Low Confidence Limit" column="had_stroke_low_confidence_limit" aggregator="avg" />
+    <Measure name="Stroke High Confidence Limit" column="had_stroke_high_confidence_limit" aggregator="avg" />
+    <Measure name="Taking BP Medication Data Value" column="taking_bp_medication_data_value" aggregator="avg" />
+    <Measure name="Taking BP Medication Low Confidence Limit" column="taking_bp_medication_low_confidence_limit" aggregator="avg" />
+    <Measure name="Taking BP Medication High Confidence Limit" column="taking_bp_medication_high_confidence_limit" aggregator="avg" />
+    <Measure name="Teeth Loss Data Value" column="teeth_loss_data_value" aggregator="avg" />
+    <Measure name="Teeth Loss Low Confidence Limit" column="teeth_loss_low_confidence_limit" aggregator="avg" />
+    <Measure name="Teeth Loss High Confidence Limit" column="teeth_loss_high_confidence_limit" aggregator="avg" />
 </Cube>
