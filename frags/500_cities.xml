@@ -18,29 +18,25 @@
         </Hierarchy> 
     </Dimension>
 
-    <!-- <Dimension foreignKey="city_fips" name="Geography">
+    <Dimension foreignKey="city_fips" name="Geography">
         <Annotations>
             <Annotation name="dim_type">GEOGRAPHY</Annotation>
         </Annotations>
-        <Hierarchy hasAll="true" name="City">
+        <Hierarchy hasAll="true" name="City" primaryKey="geoid">
             <Table name="places" schema="shapes2017"/>
             <Level name="City" column="geoid" nameColumn="name" uniqueMembers="true" hideMemberIf="IfBlankName" />
         </Hierarchy>
-        <Hierarchy hasAll="true" name="Tract">
+    </Dimension>
+
+    <Dimension foreignKey="tract_fips" name="Geography 2">
+        <Annotations>
+            <Annotation name="dim_type">GEOGRAPHY</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true" name="Tract" primaryKey="geoid">
             <Table name="tracts" schema="shapes2017"/>
             <Level name="Tract" column="geoid" nameColumn="name" uniqueMembers="true" hideMemberIf="IfBlankName" />
         </Hierarchy>
     </Dimension>
-
-    <Dimension foreignKey="tract_fips" name="Geography">
-        <Annotations>
-            <Annotation name="dim_type">GEOGRAPHY</Annotation>
-        </Annotations>
-        <Hierarchy hasAll="true" name="Tract">
-            <Table name="tracts" schema="shapes2017"/>
-            <Level name="Tract" column="geoid" nameColumn="name" uniqueMembers="true" hideMemberIf="IfBlankName" />
-        </Hierarchy>
-    </Dimension> -->
 
     <Measure name="Population Count" column="population_count" aggregator="sum" />
     <Measure name="Annual Checkup Data Value" column="annual_checkup_data_value" aggregator="sum" />
