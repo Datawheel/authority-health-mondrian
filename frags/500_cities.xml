@@ -18,7 +18,7 @@
         </Hierarchy> 
     </Dimension>
 
-    <Dimension foreignKey="tract_fips" name="Geography">
+    <Dimension foreignKey="geo" name="Geography">
         <Annotations>
             <Annotation name="dim_type">GEOGRAPHY</Annotation>
         </Annotations>
