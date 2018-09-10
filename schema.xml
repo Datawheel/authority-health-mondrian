@@ -451,7 +451,47 @@
     <Measure name="Smoking Status Never Sample Frequency" column="smoking_status_never_sample_frequency" aggregator="sum" />
     <Measure name="Smoking Status Never Weighted Frequency" column="smoking_status_never_weighted_frequency" aggregator="sum" />
     <Measure name="Smoking Status Never Weighted Percent" column="smoking_status_never_weighted_percent" aggregator="avg" />
-</Cube><Cube name="USDA">
+</Cube><Cube name="CDC Wonder - Cancer">
+    <Annotations>
+        <Annotation name="source_name">CDC Wonder</Annotation>
+        <Annotation name="source_link">https://wonder.cdc.gov/CancerIncidence.html</Annotation>
+        <Annotation name="dataset_name">CDC Wonder</Annotation>
+        <Annotation name="topic">Health Status</Annotation>
+    </Annotations>
+
+    <Table name="cancer" schema="cdc_wonder"/>
+
+    <Dimension name="Year">
+        <Annotations>
+            <Annotation name="dim_type">TIME</Annotation>
+        </Annotations>
+         <Hierarchy hasAll="true">
+            <Level name="Year" column="year" type="Numeric" levelType="TimeYears" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension foreignKey="msa_code" name="Geography">
+        <Annotations>
+            <Annotation name="dim_type">GEOGRAPHY</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true" name="MSA">
+            <Table name="msas" schema="shapes2017"/>
+            <Level name="MSA" column="geoid" nameColumn="namelsad" uniqueMembers="true" hideMemberIf="IfBlankName" />
+        </Hierarchy>
+    </Dimension>
+
+    <Measure name="Count" column="count" aggregator="sum" />
+    <Measure name="Population" column="population" aggregator="sum" />
+    <Measure name="Age-Adjusted Rate" column="age_adjusted_rate" aggregator="avg" />
+    <Measure name="Age-Adjusted Rate Lower 95% Confidence Interval" column="age_adjusted_rate_lower_95_percent_confidence_interval" aggregator="avg" />
+    <Measure name="Age-Adjusted Rate Upper 95% Confidence Interval" column="age_adjusted_rate_upper_95_percent_confidence_interval" aggregator="avg" />
+    <Measure name="Age-Adjusted Rate Standard Error" column="age_adjusted_rate_standard_error" aggregator="avg" />
+    <Measure name="Crude Rate" column="crude_rate" aggregator="avg" />
+    <Measure name="Crude Rate Lower 95% Confidence Interval" column="crude_rate_lower_95_percent_confidence_interval" aggregator="avg" />
+    <Measure name="Crude Rate Upper 95% Confidence Interval" column="crude_rate_upper_95_percent_confidence_interval" aggregator="avg" />
+    <Measure name="Crude Rate Standard Error" column="crude_rate_standard_error" aggregator="avg" />
+</Cube>
+<Cube name="USDA">
     <Annotations>
         <Annotation name="source_name">United State Department of Agriculture</Annotation>
         <Annotation name="source_link">https://www.ers.usda.gov/</Annotation>
