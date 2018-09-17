@@ -9053,6 +9053,37 @@
     <!-- TODO: Add another measure with an overall unemployment rate -->
     <Measure name="Unemployment Rate" column="unemployment_rate" aggregator="avg" />
 </Cube>
+<Cube name="USCM">
+    <Annotations>
+        <Annotation name="source_name">United States Conference of Mayors</Annotation>
+        <Annotation name="source_link">https://endhomelessness.atavist.com/mayorsreport2016</Annotation>
+        <Annotation name="dataset_name">USCM</Annotation>
+        <Annotation name="topic">Demographics</Annotation>
+    </Annotations>
+
+    <Table name="homelessness" schema="uscm"/>
+
+    <Dimension name="Year">
+        <Annotations>
+            <Annotation name="dim_type">TIME</Annotation>
+        </Annotations>
+         <Hierarchy hasAll="true">
+            <Level name="Year" column="year" type="Numeric" levelType="TimeYears" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension foreignKey="geo" name="Geography">
+        <Annotations>
+            <Annotation name="dim_type">GEOGRAPHY</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true" name="Place">
+            <Table name="places" schema="shapes2017"/>
+            <Level name="Place" column="geoid" nameColumn="name" uniqueMembers="true" hideMemberIf="IfBlankName" />
+        </Hierarchy>
+    </Dimension>
+
+    <Measure name="Rate per 10,000" column="rate_per_10000" aggregator="sum" />
+</Cube>
 <Cube name="DCI">
     <Annotations>
         <Annotation name="source_name">Distressed Communities Index</Annotation>
