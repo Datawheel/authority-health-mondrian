@@ -1,0 +1,51 @@
+<?xml version="1.0" ?>
+<Schema name="authority_health">
+  <Dimension name="geography">
+    <Annotations>
+      <Annotation name="dim_type">Geography</Annotation>
+    </Annotations>
+    <Hierarchy hasAll="true" name="Nation">
+      <Table name="us" schema="shapes2017"/>
+      <Level column="geoid" name="Nation" nameColumn="name" uniqueMembers="true"/>
+    </Hierarchy>
+    <Hierarchy hasAll="true" name="Tract">
+      <Table name="tracts" schema="shapes2017"/>
+      <Level column="state_id" name="State" nameColumn="state_name" uniqueMembers="true"/>
+      <Level column="county_id" name="County" nameColumn="county_name" uniqueMembers="true"/>
+      <Level column="geoid" name="Tract" nameColumn="name" uniqueMembers="true"/>
+    </Hierarchy>
+    <Hierarchy hasAll="true" name="Place">
+      <Table name="places" schema="shapes2017"/>
+      <Level column="state_id" name="State" nameColumn="state_name" uniqueMembers="true"/>
+      <Level column="geoid" name="Place" nameColumn="name" uniqueMembers="true"/>
+    </Hierarchy>
+    <Hierarchy hasAll="true" name="Zip">
+      <Table name="zips" schema="shapes2017"/>
+      <Level column="geoid" name="Zip" nameColumn="zcta5ce10" uniqueMembers="true"/>
+    </Hierarchy>
+    <Hierarchy hasAll="true" name="County">
+      <Table name="counties" schema="shapes2017"/>
+      <Level column="state_id" name="State" nameColumn="state_name" uniqueMembers="true"/>
+      <Level column="geoid" name="County" nameColumn="name" uniqueMembers="true"/>
+    </Hierarchy>
+    <Hierarchy hasAll="true" name="State">
+      <Table name="states" schema="shapes2017"/>
+      <Level column="geoid" name="State" nameColumn="name" uniqueMembers="true"/>
+    </Hierarchy>
+    <Hierarchy hasAll="true" name="Msa">
+      <Table name="msas" schema="shapes2017"/>
+      <Level column="geoid" name="Msa" nameColumn="name" uniqueMembers="true"/>
+    </Hierarchy>
+    <Hierarchy hasAll="true" name="Puma">
+      <Table name="pumas" schema="shapes2017"/>
+      <Level column="state_id" name="State" nameColumn="state_name" uniqueMembers="true"/>
+      <Level column="geoid" name="Puma" nameColumn="name" uniqueMembers="true"/>
+    </Hierarchy>
+    <Hierarchy hasAll="true" name="County Subdivision">
+      <Table name="county_subdivisions" schema="shapes2017"/>
+      <Level column="state_id" name="State" nameColumn="state_name" uniqueMembers="true"/>
+      <Level column="county_id" name="County" nameColumn="county_name" uniqueMembers="true"/>
+      <Level column="geoid" name="County Subdivision" nameColumn="name" uniqueMembers="true"/>
+    </Hierarchy>
+  </Dimension>
+</Schema>

@@ -1,0 +1,186 @@
+<?xml version="1.0" ?>
+<Schema name="authority_health">
+  <Cube name="acs_unmarried_partner_households_by_sex_of_partner_5">
+    <Annotations>
+      <Annotation name="source_name">Census Bureau</Annotation>
+      <Annotation name="source_link">http://www.census.gov/programs-surveys/acs/</Annotation>
+      <Annotation name="dataset_name">ACS 5-year Estimate</Annotation>
+      <Annotation name="table_id">B11009</Annotation>
+    </Annotations>
+    <Table name="acs_unmarried_partner_households_by_sex_of_partner_5" schema="acs_test"/>
+
+    <DimensionUsage foreignKey="geoid" name="Geography" source="geography"/>
+    <Dimension name="Year">
+      <Hierarchy hasAll="true">
+        <Level column="year" levelType="TimeYears" name="Year" type="Numeric" uniqueMembers="true"/>
+      </Hierarchy>
+    </Dimension>
+    <Dimension foreignKey="dim_0" name="Household Type">
+      <Hierarchy hasAll="true">
+        <InlineTable alias="dim_0_table">
+          <ColumnDefs>
+            <ColumnDef name="member_0_code" type="Numeric"/>
+            <ColumnDef name="member_0" type="String"/>
+          </ColumnDefs>
+          <Rows>
+            <Row>
+              <Value column="member_0_code">0</Value>
+              <Value column="member_0">Unmarried-partner Households</Value>
+            </Row>
+            <Row>
+              <Value column="member_0_code">1</Value>
+              <Value column="member_0">All Other Households</Value>
+            </Row>
+          </Rows>
+        </InlineTable>
+      <Level column="member_0_code" hideMemberIf="IfParentsName" name="Household Type" nameColumn="member_0" uniqueMembers="true"/>
+      </Hierarchy>
+    </Dimension>
+  
+    <Dimension foreignKey="dim_1" name="Sex of Partner">
+      <Hierarchy hasAll="true">
+        <InlineTable alias="dim_1_table">
+          <ColumnDefs>
+            <ColumnDef name="member_0_code" type="Numeric"/>
+            <ColumnDef name="member_0" type="String"/>
+          </ColumnDefs>
+          <Rows>
+            <Row>
+              <Value column="member_0_code">0</Value>
+              <Value column="member_0">Male Householder &amp; Male Partner</Value>
+            </Row>
+            <Row>
+              <Value column="member_0_code">1</Value>
+              <Value column="member_0">Male Householder &amp; Female Partner</Value>
+            </Row>
+            <Row>
+              <Value column="member_0_code">2</Value>
+              <Value column="member_0">Female Householder &amp; Female Partner</Value>
+            </Row>
+            <Row>
+              <Value column="member_0_code">3</Value>
+              <Value column="member_0">Female Householder &amp; Male Partner</Value>
+            </Row>
+            <Row>
+              <Value column="member_0_code">4</Value>
+              <Value column="member_0">All Other Households</Value>
+            </Row>
+          </Rows>
+        </InlineTable>
+      <Level column="member_0_code" hideMemberIf="IfParentsName" name="Sex of Partner" nameColumn="member_0" uniqueMembers="true"/>
+      </Hierarchy>
+    </Dimension>
+  
+    <Measure aggregator="sum" column="mea_t" name="mea_t" visible="false"/>
+    <Measure aggregator="sum" column="mea_nation" name="mea_nation" visible="false"/>
+    <Measure aggregator="sum" column="mea_county" name="mea_county" visible="false"/>
+    <Measure aggregator="sum" column="mea_zip" name="mea_zip" visible="false"/>
+    <Measure aggregator="sum" column="mea_state" name="mea_state" visible="false"/>
+    <Measure aggregator="sum" column="mea_place" name="mea_place" visible="false"/>
+    <Measure aggregator="sum" column="mea_msa" name="mea_msa" visible="false"/>
+    <Measure aggregator="sum" column="mea_puma" name="mea_puma" visible="false"/>
+    <Measure aggregator="sum" column="mea_county_subdivision" name="mea_county_subdivision" visible="false"/>
+
+    <Measure aggregator="None" dataType="Numeric" name="moe_t" visible="false">
+      <MeasureExpression>
+        <SQL dialect="monetdb">sqrt(sum(power(moe_t / 1.645, 2))) * 1.645</SQL>
+      </MeasureExpression>
+    </Measure>
+    <Measure aggregator="None" dataType="Numeric" name="moe_nation" visible="false">
+      <MeasureExpression>
+        <SQL dialect="monetdb">sqrt(sum(power(moe_nation / 1.645, 2))) * 1.645</SQL>
+      </MeasureExpression>
+    </Measure>
+    <Measure aggregator="None" dataType="Numeric" name="moe_county" visible="false">
+      <MeasureExpression>
+        <SQL dialect="monetdb">sqrt(sum(power(moe_county / 1.645, 2))) * 1.645</SQL>
+      </MeasureExpression>
+    </Measure>
+    <Measure aggregator="None" dataType="Numeric" name="moe_zip" visible="false">
+      <MeasureExpression>
+        <SQL dialect="monetdb">sqrt(sum(power(moe_zip / 1.645, 2))) * 1.645</SQL>
+      </MeasureExpression>
+    </Measure>
+    <Measure aggregator="None" dataType="Numeric" name="moe_state" visible="false">
+      <MeasureExpression>
+        <SQL dialect="monetdb">sqrt(sum(power(moe_state / 1.645, 2))) * 1.645</SQL>
+      </MeasureExpression>
+    </Measure>
+    <Measure aggregator="None" dataType="Numeric" name="moe_place" visible="false">
+      <MeasureExpression>
+        <SQL dialect="monetdb">sqrt(sum(power(moe_place / 1.645, 2))) * 1.645</SQL>
+      </MeasureExpression>
+    </Measure>
+    <Measure aggregator="None" dataType="Numeric" name="moe_msa" visible="false">
+      <MeasureExpression>
+        <SQL dialect="monetdb">sqrt(sum(power(moe_msa / 1.645, 2))) * 1.645</SQL>
+      </MeasureExpression>
+    </Measure>
+    <Measure aggregator="None" dataType="Numeric" name="moe_puma" visible="false">
+      <MeasureExpression>
+        <SQL dialect="monetdb">sqrt(sum(power(moe_puma / 1.645, 2))) * 1.645</SQL>
+      </MeasureExpression>
+    </Measure>
+    <Measure aggregator="None" dataType="Numeric" name="moe_county_subdivision" visible="false">
+      <MeasureExpression>
+        <SQL dialect="monetdb">sqrt(sum(power(moe_county_subdivision / 1.645, 2))) * 1.645</SQL>
+      </MeasureExpression>
+    </Measure>
+
+    <CalculatedMember dimension="Measures" name="Population" visible="true">
+      <Formula>CASE
+        WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[mea_t]
+        WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[mea_t]
+        WHEN [Geography].[Tract].Level is [Geography].[Tract].[Tract] THEN [Measures].[mea_t]
+        WHEN [Geography].[Place].Level is [Geography].[Place].[State] THEN [Measures].[mea_place]
+        WHEN [Geography].[Place].Level is [Geography].[Place].[Place] THEN [Measures].[mea_place]
+        WHEN [Geography].[Zip].Level is [Geography].[Zip].[Zip] THEN [Measures].[mea_zip]
+        WHEN [Geography].[County].Level is [Geography].[County].[State] THEN [Measures].[mea_county]
+        WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county]
+        WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state]
+        WHEN [Geography].[Nation].Level is [Geography].[Nation].[Nation] THEN [Measures].[mea_nation]
+        WHEN [Geography].[Puma].Level is [Geography].[Puma].[State] THEN [Measures].[mea_puma]
+        WHEN [Geography].[Puma].Level is [Geography].[Puma].[Puma] THEN [Measures].[mea_puma]
+        WHEN [Geography].[Msa].Level is [Geography].[Msa].[Msa] THEN [Measures].[mea_msa]
+        WHEN [Geography].[County Subdivision].Level is [Geography].[County Subdivision].[State] THEN [Measures].[mea_county_subdivision]
+        WHEN [Geography].[County Subdivision].Level is [Geography].[County Subdivision].[County] THEN [Measures].[mea_county_subdivision]
+        WHEN [Geography].[County Subdivision].Level is [Geography].[County Subdivision].[County Subdivision] THEN [Measures].[mea_county_subdivision]
+        WHEN 1 = 1 THEN [Measures].[mea_nation]
+        END
+      </Formula>
+      <Annotations>
+        <Annotation name="aggregation_method">SUM</Annotation>
+      </Annotations>
+    </CalculatedMember>
+
+    <CalculatedMember dimension="Measures" name="Population Moe" visible="true">
+      <Formula>CASE
+        WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[moe_t]
+        WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[moe_t]
+        WHEN [Geography].[Tract].Level is [Geography].[Tract].[Tract] THEN [Measures].[moe_t]
+        WHEN [Geography].[Place].Level is [Geography].[Place].[State] THEN [Measures].[moe_place]
+        WHEN [Geography].[Place].Level is [Geography].[Place].[Place] THEN [Measures].[moe_place]
+        WHEN [Geography].[Zip].Level is [Geography].[Zip].[Zip] THEN [Measures].[moe_zip]
+        WHEN [Geography].[County].Level is [Geography].[County].[State] THEN [Measures].[moe_county]
+        WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[moe_county]
+        WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[moe_state]
+        WHEN [Geography].[Nation].Level is [Geography].[Nation].[Nation] THEN [Measures].[moe_nation]
+        WHEN [Geography].[Puma].Level is [Geography].[Puma].[State] THEN [Measures].[moe_puma]
+        WHEN [Geography].[Puma].Level is [Geography].[Puma].[Puma] THEN [Measures].[moe_puma]
+        WHEN [Geography].[Msa].Level is [Geography].[Msa].[Msa] THEN [Measures].[moe_msa]
+        WHEN [Geography].[County Subdivision].Level is [Geography].[County Subdivision].[State] THEN [Measures].[moe_county_subdivision]
+        WHEN [Geography].[County Subdivision].Level is [Geography].[County Subdivision].[County] THEN [Measures].[moe_county_subdivision]
+        WHEN [Geography].[County Subdivision].Level is [Geography].[County Subdivision].[County Subdivision] THEN [Measures].[moe_county_subdivision]
+        WHEN 1 = 1 THEN [Measures].[moe_nation]
+        END
+      </Formula>
+      <Annotations>
+        <Annotation name="aggregation_method">MOE</Annotation>
+        <Annotation name="error_for_measure">Population</Annotation>
+      </Annotations>
+    </CalculatedMember>
+
+    <!-- Here add in rca and percent calc if asked for -->
+
+  </Cube>
+</Schema>

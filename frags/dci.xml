@@ -8,15 +8,14 @@
 
     <Table name="dci" schema="dci"/>
      
-    <!-- TODO: Uncomment once we have confirmation from AH that year is 2017 -->
-    <!-- <Dimension name="Year">
+    <Dimension name="Year">
         <Annotations>
             <Annotation name="dim_type">TIME</Annotation>
         </Annotations>
          <Hierarchy hasAll="true">
             <Level name="Year" column="year" type="Numeric" levelType="TimeYears" uniqueMembers="true" />
         </Hierarchy>
-    </Dimension> -->
+    </Dimension>
 
     <Dimension foreignKey="zipcode" name="Geography">
         <Annotations>

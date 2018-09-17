@@ -33,6 +33,9 @@
     <Measure name="Rape" column="rape" aggregator="sum" />
     <Measure name="Robbery" column="robbery" aggregator="sum" />
     <Measure name="Aggravated Assault" column="aggravated_assault" aggregator="sum" />
-
-    <!-- TODO: Can add property crime data if AH is interested -->
+    <Measure name="Total Property Crimes" column="property_crime_total" aggregator="sum" />
+    <Measure name="Burglary" column="burglary" aggregator="sum" />
+    <Measure name="Larceny-Theft" column="larceny_theft" aggregator="sum" />
+    <Measure name="Motor Vehicle Theft" column="motor_vehicle_theft" aggregator="sum" />
+    <Measure name="Arson" column="arson" aggregator="sum" />
 </Cube>
