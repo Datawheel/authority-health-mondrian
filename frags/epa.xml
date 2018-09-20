@@ -1,7 +1,7 @@
 <Cube name="EPA - Air Quality">
     <Annotations>
         <Annotation name="source_name">Environmental Protection Agency</Annotation>
-        <Annotation name="source_link">https://datawarehouse.hrsa.gov/topics/ahrf.aspx</Annotation>
+        <Annotation name="source_link">https://aqs.epa.gov/aqsweb/airdata/download_files.html</Annotation>
         <Annotation name="dataset_name">EPA</Annotation>
         <Annotation name="topic">Environment</Annotation>
     </Annotations>
