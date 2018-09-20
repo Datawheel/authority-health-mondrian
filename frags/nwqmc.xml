@@ -1,0 +1,33 @@
+<Cube name="NWQMC - Water Quality">
+    <Annotations>
+        <Annotation name="source_name">National Water Quality Monitoring Council</Annotation>
+        <Annotation name="source_link">https://www.waterqualitydata.us</Annotation>
+        <Annotation name="dataset_name">NWQMC</Annotation>
+        <Annotation name="topic">Environment</Annotation>
+    </Annotations>
+
+    <Table name="water_quality" schema="nwqmc"/>
+
+    <Dimension name="Year">
+        <Annotations>
+            <Annotation name="dim_type">TIME</Annotation>
+        </Annotations>
+         <Hierarchy hasAll="true">
+            <Level name="Year" column="year" type="Numeric" levelType="TimeYears" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension foreignKey="tract" name="Geography">
+        <Annotations>
+            <Annotation name="dim_type">GEOGRAPHY</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true" name="Tract">
+            <Table name="tracts" schema="shapes2017"/>
+            <Level column="state_id" name="State" nameColumn="state_name" uniqueMembers="true"/>
+            <Level column="county_id" name="County" nameColumn="county_name" uniqueMembers="true"/>
+            <Level column="geoid" name="Tract" nameColumn="namelsad" uniqueMembers="true"/>
+        </Hierarchy>
+    </Dimension>
+
+    <Measure name="Result" column="result_short" aggregator="max" />
+</Cube>
