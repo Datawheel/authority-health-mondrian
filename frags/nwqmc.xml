@@ -29,5 +29,12 @@
         </Hierarchy>
     </Dimension>
 
-    <Measure name="Result" column="result_short" datatype="String" caption="Result" aggregator="max" />
+    <Dimension name="Water Body">
+         <Hierarchy hasAll="true">
+            <Level name="Water Body" column="monitoring_location_identifier" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
+
+    <Measure name="Lead Level" column="lead_level" datatype="String" caption="Lead Level" aggregator="max" />
+    <Measure name="Mercury Level" column="mercury_level" datatype="String" caption="Mercury Level" aggregator="max" />
 </Cube>
