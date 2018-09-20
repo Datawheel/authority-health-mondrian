@@ -29,5 +29,5 @@
         </Hierarchy>
     </Dimension>
 
-    <Measure name="Result" column="result_short" aggregator="max" />
+    <Measure name="Result" column="result_short" datatype="String" caption="Result" aggregator="max" />
 </Cube>

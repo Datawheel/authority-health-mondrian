@@ -271,7 +271,7 @@
 <Cube name="EPA - Air Quality">
     <Annotations>
         <Annotation name="source_name">Environmental Protection Agency</Annotation>
-        <Annotation name="source_link">https://datawarehouse.hrsa.gov/topics/ahrf.aspx</Annotation>
+        <Annotation name="source_link">https://aqs.epa.gov/aqsweb/airdata/download_files.html</Annotation>
         <Annotation name="dataset_name">EPA</Annotation>
         <Annotation name="topic">Environment</Annotation>
     </Annotations>
@@ -9011,40 +9011,6 @@
     <Measure name="Percent of Adults Eligible for Federal Nuttrition Assistance" column="adults_pct_federal_nutrition_assistance_eligible" aggregator="avg" />
     <Measure name="Percent of Children Eligible for Federal Nuttrition Assistance" column="children_pct_federal_nutrition_assistance_eligible" aggregator="avg" />
 </Cube>
-<Cube name="USGS - Water Quality">
-    <Annotations>
-        <Annotation name="source_name">Health Resources and Services Administration</Annotation>
-        <Annotation name="source_link">https://datawarehouse.hrsa.gov/topics/ahrf.aspx</Annotation>
-        <Annotation name="dataset_name">HRSA</Annotation>
-        <Annotation name="topic">Environment</Annotation>
-    </Annotations>
-
-    <Table name="water_quality" schema="usgs"/>
-
-    <Dimension name="Year">
-        <Annotations>
-            <Annotation name="dim_type">TIME</Annotation>
-        </Annotations>
-         <Hierarchy hasAll="true">
-            <Level name="Year" column="year" type="Numeric" levelType="TimeYears" uniqueMembers="true" />
-        </Hierarchy>
-    </Dimension>
-
-    <Dimension foreignKey="tract" name="Geography">
-        <Annotations>
-            <Annotation name="dim_type">GEOGRAPHY</Annotation>
-        </Annotations>
-        <Hierarchy hasAll="true" name="Tract">
-            <Table name="tracts" schema="shapes2017"/>
-            <Level column="state_id" name="State" nameColumn="state_name" uniqueMembers="true"/>
-            <Level column="county_id" name="County" nameColumn="county_name" uniqueMembers="true"/>
-            <Level column="geoid" name="Tract" nameColumn="namelsad" uniqueMembers="true"/>
-        </Hierarchy>
-    </Dimension>
-
-    <Measure name="Result Measure Value" column="result_measure_value" aggregator="min" />
-    <Measure name="Result" column="result_short" aggregator="min" />
-</Cube>
 <Cube name="VCU - Life Expectancy at Birth">
     <Annotations>
       <Annotation name="source_name">Virginia Commonwealth University Center on Society and Health</Annotation>
@@ -9098,6 +9064,39 @@
       </Annotations>
     </Measure>
   </Cube>
+<Cube name="NWQMC - Water Quality">
+    <Annotations>
+        <Annotation name="source_name">National Water Quality Monitoring Council</Annotation>
+        <Annotation name="source_link">https://www.waterqualitydata.us</Annotation>
+        <Annotation name="dataset_name">NWQMC</Annotation>
+        <Annotation name="topic">Environment</Annotation>
+    </Annotations>
+
+    <Table name="water_quality" schema="nwqmc"/>
+
+    <Dimension name="Year">
+        <Annotations>
+            <Annotation name="dim_type">TIME</Annotation>
+        </Annotations>
+         <Hierarchy hasAll="true">
+            <Level name="Year" column="year" type="Numeric" levelType="TimeYears" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension foreignKey="tract" name="Geography">
+        <Annotations>
+            <Annotation name="dim_type">GEOGRAPHY</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true" name="Tract">
+            <Table name="tracts" schema="shapes2017"/>
+            <Level column="state_id" name="State" nameColumn="state_name" uniqueMembers="true"/>
+            <Level column="county_id" name="County" nameColumn="county_name" uniqueMembers="true"/>
+            <Level column="geoid" name="Tract" nameColumn="namelsad" uniqueMembers="true"/>
+        </Hierarchy>
+    </Dimension>
+
+    <Measure name="Result" column="result_short" datatype="String" caption="Result" aggregator="max" />
+</Cube>
 <Cube name="BLS - Unemployment">
     <Annotations>
         <Annotation name="source_name">Bureau of Labor Statistics: Unemployment</Annotation>
