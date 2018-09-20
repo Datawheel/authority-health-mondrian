@@ -268,6 +268,52 @@
     <Measure name="Motor Vehicle Theft" column="motor_vehicle_theft" aggregator="sum" />
     <Measure name="Arson" column="arson" aggregator="sum" />
 </Cube>
+<Cube name="EPA - Air Quality">
+    <Annotations>
+        <Annotation name="source_name">Environmental Protection Agency</Annotation>
+        <Annotation name="source_link">https://datawarehouse.hrsa.gov/topics/ahrf.aspx</Annotation>
+        <Annotation name="dataset_name">EPA</Annotation>
+        <Annotation name="topic">Environment</Annotation>
+    </Annotations>
+
+    <Table name="air_quality" schema="epa"/>
+
+    <Dimension name="Year">
+        <Annotations>
+            <Annotation name="dim_type">TIME</Annotation>
+        </Annotations>
+         <Hierarchy hasAll="true">
+            <Level name="Year" column="year" type="Numeric" levelType="TimeYears" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension foreignKey="county_fips" name="Geography">
+        <Annotations>
+            <Annotation name="dim_type">GEOGRAPHY</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true" name="County">
+            <Table name="counties" schema="shapes2017"/>
+            <Level column="geoid" name="County" nameColumn="name" uniqueMembers="true"/>
+        </Hierarchy>
+    </Dimension>
+
+    <Measure name="Days with AQI" column="days_with_aqi" aggregator="avg" />
+    <Measure name="Good Days" column="good_days" aggregator="avg" />
+    <Measure name="Moderate Days" column="moderate_days" aggregator="avg" />
+    <Measure name="Unhealthy for Sensitive Groups Days" column="unhealthy_for_sensitive_groups_days" aggregator="avg" />
+    <Measure name="Unhealthy Days" column="unhealthy_days" aggregator="avg" />
+    <Measure name="Very Unhealthy Days" column="very_unhealthy_days" aggregator="avg" />
+    <Measure name="Hazardous Days" column="hazardous_days" aggregator="avg" />
+    <Measure name="Max AQI" column="max_aqi" aggregator="avg" />
+    <Measure name="90th Percentile AQI" column="90th_percentile_aqi" aggregator="avg" />
+    <Measure name="Median AQI" column="median_aqi" aggregator="avg" />
+    <Measure name="Days CO as Leading Pollutant" column="days_co" aggregator="avg" />
+    <Measure name="Days NO2 as Leading Pollutant" column="days_no2" aggregator="avg" />
+    <Measure name="Days Ozone as Leading Pollutant" column="days_ozone" aggregator="avg" />
+    <Measure name="Days SO2 as Leading Pollutant" column="days_so2" aggregator="avg" />
+    <Measure name="Days PM2.5 as Leading Pollutant" column="days_pm2_5" aggregator="avg" />
+    <Measure name="Days PM10 as Leading Pollutant" column="days_pm10" aggregator="avg" />
+</Cube>
 <Cube name="NAEP">
     <Annotations>
         <Annotation name="source_name">NAEP Reading Assessment</Annotation>
@@ -8964,6 +9010,40 @@
     <Measure name="Estimated Total Food Insecure Children" column="estimated_food_insecure_children" aggregator="sum" />
     <Measure name="Percent of Adults Eligible for Federal Nuttrition Assistance" column="adults_pct_federal_nutrition_assistance_eligible" aggregator="avg" />
     <Measure name="Percent of Children Eligible for Federal Nuttrition Assistance" column="children_pct_federal_nutrition_assistance_eligible" aggregator="avg" />
+</Cube>
+<Cube name="USGS - Water Quality">
+    <Annotations>
+        <Annotation name="source_name">Health Resources and Services Administration</Annotation>
+        <Annotation name="source_link">https://datawarehouse.hrsa.gov/topics/ahrf.aspx</Annotation>
+        <Annotation name="dataset_name">HRSA</Annotation>
+        <Annotation name="topic">Environment</Annotation>
+    </Annotations>
+
+    <Table name="water_quality" schema="usgs"/>
+
+    <Dimension name="Year">
+        <Annotations>
+            <Annotation name="dim_type">TIME</Annotation>
+        </Annotations>
+         <Hierarchy hasAll="true">
+            <Level name="Year" column="year" type="Numeric" levelType="TimeYears" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension foreignKey="tract" name="Geography">
+        <Annotations>
+            <Annotation name="dim_type">GEOGRAPHY</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true" name="Tract">
+            <Table name="tracts" schema="shapes2017"/>
+            <Level column="state_id" name="State" nameColumn="state_name" uniqueMembers="true"/>
+            <Level column="county_id" name="County" nameColumn="county_name" uniqueMembers="true"/>
+            <Level column="geoid" name="Tract" nameColumn="namelsad" uniqueMembers="true"/>
+        </Hierarchy>
+    </Dimension>
+
+    <Measure name="Result Measure Value" column="result_measure_value" aggregator="min" />
+    <Measure name="Result" column="result_short" aggregator="min" />
 </Cube>
 <Cube name="VCU - Life Expectancy at Birth">
     <Annotations>
