@@ -9139,6 +9139,88 @@
     <!-- TODO: Add another measure with an overall unemployment rate -->
     <Measure name="Unemployment Rate" column="unemployment_rate" aggregator="avg" />
 </Cube>
+<Cube name="UDS Mapper - Heatlh Centers">
+    <Annotations>
+        <Annotation name="source_name">UDS Mapper</Annotation>
+        <Annotation name="source_link">https://www.udsmapper.org/</Annotation>
+        <Annotation name="dataset_name">UDS Mapper</Annotation>
+        <Annotation name="topic">Health</Annotation>
+    </Annotations>
+
+    <Table name="health_centers" schema="uds_mapper"/>
+
+    <Dimension name="Year">
+        <Annotations>
+            <Annotation name="dim_type">TIME</Annotation>
+        </Annotations>
+         <Hierarchy hasAll="true">
+            <Level name="Year" column="year" type="Numeric" levelType="TimeYears" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension foreignKey="zip_code" name="Geography">
+        <Annotations>
+            <Annotation name="dim_type">GEOGRAPHY</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true" name="Zip Code">
+            <Table name="zips" schema="shapes2017"/>
+            <Level column="name" name="Zip Code" nameColumn="name" uniqueMembers="true"/>
+        </Hierarchy>
+    </Dimension>
+
+    <Measure name="Health Centers" column="health_centers" aggregator="sum" />
+    <Measure name="Dominant Health Center" column="dominant_health_center" datatype="String" caption="Dominant Health Center" aggregator="max" />
+    <Measure name="Total Population" column="total_population" aggregator="sum" />
+    <Measure name="Low-Income Population" column="low_income_population" aggregator="sum" />
+    <Measure name="Total Number of Health Center Patients" column="total_number_of_health_center_patients" aggregator="sum" />
+    <Measure name="Unserved Low-Income" column="unserved_low_income" aggregator="sum" />
+    <Measure name="Penetration of Low-Income" column="penetration_of_low_income" aggregator="avg" />
+    <Measure name="Penetration of Total Population" column="penetration_of_total_population" aggregator="avg" />
+    <Measure name="Penetration of Uninsured Population" column="penetration_of_uninsured_population" aggregator="avg" />
+    <Measure name="Penetration of Population with Medicaid and Other Pub Ins" column="penetration_of_population_with_medicaid_and_other_pub_ins" aggregator="avg" />
+    <Measure name="Penetration of Population with Medicare and Priv Ins" column="penetration_of_population_with_medicare_and_priv_ins" aggregator="avg" />
+    <Measure name="1-Year Patient % Change" column="1_year_patient_percent_change" aggregator="avg" />
+    <Measure name="2-Year Patient % Change" column="2_year_patient_percent_change" aggregator="avg" />
+    <Measure name="2-Year Patient # Change" column="2_year_patient_number_change" aggregator="sum" />
+    <Measure name="1-Year Uninsured Patient % Change" column="1_year_uninsured_patient_percent_change" aggregator="avg" />
+    <Measure name="1-Year Medicaid and Other Pub Ins Patient % Change" column="1_year_medicaid_and_other_pub_ins_patient_percent_change" aggregator="avg" />
+    <Measure name="1-Year Medicare and Priv Ins Patient % Change" column="1_year_medicare_and_priv_ins_patient_percent_change" aggregator="avg" />
+    <Measure name="Low-Income Not Served by Health Centers" column="low_income_not_served_by_health_centers" aggregator="sum" />
+    <Measure name="Uninsured Not Served by Health Centers" column="uninsured_not_served_by_health_centers" aggregator="sum" />
+    <Measure name="Medicaid and Other Pub Ins Not Served by Health Centers" column="medicaid_and_other_pub_ins_not_served_by_health_centers" aggregator="sum" />
+    <Measure name="Medicare and Priv Ins Not Served by Health Centers" column="medicare_and_priv_ins_not_served_by_health_centers" aggregator="sum" />
+    <Measure name="Total Population Not Served by Health Centers" column="total_population_not_served_by_health_centers" aggregator="sum" />
+    <Measure name="% Patients Uninsured" column="percent_patients_uninsured" aggregator="avg" />
+    <Measure name="% Patients with Medicaid and Other Pub Ins" column="percent_patients_with_medicaid_and_other_pub_ins" aggregator="avg" />
+    <Measure name="% Patients with Medicare and Priv Ins" column="percent_patients_with_medicare_and_priv_ins" aggregator="avg" />
+    <Measure name="% Population in Poverty" column="percent_population_in_poverty" aggregator="avg" />
+    <Measure name="% Low-Income Population" column="percent_low_income_population" aggregator="avg" />
+    <Measure name="% Non-white" column="percent_non_white" aggregator="avg" />
+    <Measure name="% Hispanic" column="percent_hispanic" aggregator="avg" />
+    <Measure name="% Black" column="percent_black" aggregator="avg" />
+    <Measure name="% Asian " column="percent_asian" aggregator="avg" />
+    <Measure name="% American Indian/Alaska Native" column="percent_american_indian_alaska_native" aggregator="avg" />
+    <Measure name="% Population Uninsured - JSI" column="percent_population_uninsured_jsi" aggregator="avg" />
+    <Measure name="% Population with Medicaid and Other Pub Ins" column="percent_population_with_medicaid_and_other_pub_ins" aggregator="avg" />
+    <Measure name="% Population with Medicare and Priv Ins" column="percent_population_with_medicare_and_priv_ins" aggregator="avg" />
+    <Measure name="% Pop Not Employed" column="percent_pop_not_employed" aggregator="avg" />
+    <Measure name="% Pop with Limited English Proficiency" column="percent_pop_with_limited_english_proficiency" aggregator="avg" />
+    <Measure name="% Pop with Less Than High School Education" column="percent_pop_with_less_than_high_school_education" aggregator="avg" />
+    <Measure name="% Population Uninsured - RGC" column="percent_population_uninsured_rgc" aggregator="avg" />
+    <Measure name="Low Birth Weight Rate" column="low_birth_weight_rate" aggregator="avg" />
+    <Measure name="Age-Adjusted Mortality Rate (per 100,000)" column="age_adjusted_mortality_rate_per_100000" aggregator="avg" />
+    <Measure name="% Adults Ever Told They Have Diabetes" column="percent_adults_ever_told_they_have_diabetes" aggregator="avg" />
+    <Measure name="% Adults Ever Told They Have High Blood Pressure" column="percent_adults_ever_told_they_have_high_blood_pressure" aggregator="avg" />
+    <Measure name="% Adults Who Are Obese" column="percent_adults_who_are_obese" aggregator="avg" />
+    <Measure name="% Adults with No Dental Visit in Past Year" column="percent_adults_with_no_dental_visit_in_past_year" aggregator="avg" />
+    <Measure name="% Adults Who Have Delayed or Not Sought Care Due to High Cost" column="percent_adults_who_have_delayed_or_not_sought_care_due_to_high_cost" aggregator="avg" />
+    <Measure name="% Adults with No Usual Source of Care" column="percent_adults_with_no_usual_source_of_care" aggregator="avg" />
+    <Measure name="% Uninsured Population Below 100% FPL" column="percent_uninsured_population_below_100_percent_fpl" aggregator="avg" />
+    <Measure name="% Uninsured Population Below 138% FPL" column="percent_uninsured_population_below_138_percent_fpl" aggregator="avg" />
+    <Measure name="% Uninsured Population Below 200% FPL" column="percent_uninsured_population_below_200_percent_fpl" aggregator="avg" />
+    <Measure name="% Uninsured Population at 100%-400% FPL" column="percent_uninsured_population_at_100_percent_400_percent_fpl" aggregator="avg" />
+    <Measure name="% Uninsured Population at 138%-400% FPL" column="percent_uninsured_population_at_138_percent_400_percent_fpl" aggregator="avg" />
+</Cube>
 <Cube name="USCM">
     <Annotations>
         <Annotation name="source_name">United States Conference of Mayors</Annotation>
