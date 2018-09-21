@@ -548,6 +548,30 @@
     <Measure name="Smoking Status Never Sample Frequency" column="smoking_status_never_sample_frequency" aggregator="sum" />
     <Measure name="Smoking Status Never Weighted Frequency" column="smoking_status_never_weighted_frequency" aggregator="sum" />
     <Measure name="Smoking Status Never Weighted Percent" column="smoking_status_never_weighted_percent" aggregator="avg" />
+</Cube><Cube name="NVSS - Life Expectancy">
+    <Annotations>
+        <Annotation name="source_name">National Vital Statistics System</Annotation>
+        <Annotation name="source_link">https://www.cdc.gov/nchs/nvss/usaleep/usaleep.html</Annotation>
+        <Annotation name="dataset_name">NVSS</Annotation>
+        <Annotation name="topic">Demographics</Annotation>
+    </Annotations>
+
+    <Table name="life_expectancy" schema="nvss"/>
+
+    <Dimension foreignKey="tract_fips" name="Geography">
+        <Annotations>
+            <Annotation name="dim_type">GEOGRAPHY</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true" name="Tract">
+            <Table name="tracts" schema="shapes2017"/>
+            <Level column="state_id" name="State" nameColumn="state_name" uniqueMembers="true"/>
+            <Level column="county_id" name="County" nameColumn="county_name" uniqueMembers="true"/>
+            <Level column="geoid" name="Tract" nameColumn="namelsad" uniqueMembers="true"/>
+        </Hierarchy>
+    </Dimension>
+
+    <Measure name="Life Expectancy" column="le_rate" aggregator="avg" />
+    <Measure name="Standard Error" column="standard_error" aggregator="avg" />
 </Cube><Cube name="CDC Wonder - Cancer">
     <Annotations>
         <Annotation name="source_name">CDC Wonder</Annotation>
