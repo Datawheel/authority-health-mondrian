@@ -22,7 +22,7 @@
             <Annotation name="dim_type">GEOGRAPHY</Annotation>
         </Annotations>
         <Hierarchy hasAll="true" name="State">
-            <Table name="zips" schema="shapes2017"/>
+            <Table name="states" schema="shapes2017"/>
             <Level column="geoid" name="State" nameColumn="name" uniqueMembers="true"/>
         </Hierarchy>
         <Hierarchy hasAll="true" name="County">
