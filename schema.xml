@@ -625,6 +625,24 @@
     <Measure name="Smoking Status Never Sample Frequency" column="smoking_status_never_sample_frequency" aggregator="sum" />
     <Measure name="Smoking Status Never Weighted Frequency" column="smoking_status_never_weighted_frequency" aggregator="sum" />
     <Measure name="Smoking Status Never Weighted Percent" column="smoking_status_never_weighted_percent" aggregator="avg" />
+    <Measure name="Had Flu Vaccine Yes Sample Frequency" column="had_flu_vaccine_yes_sample_frequency" aggregator="sum" />
+    <Measure name="Had Flu Vaccine Yes Weighted Frequency" column="had_flu_vaccine_yes_weighted_frequency" aggregator="sum" />
+    <Measure name="Had Flu Vaccine Yes Weighted Percent" column="had_flu_vaccine_yes_weighted_percent" aggregator="avg" />
+    <Measure name="Had Flu Vaccine No Sample Frequency" column="had_flu_vaccine_no_sample_frequency" aggregator="sum" />
+    <Measure name="Had Flu Vaccine No Weighted Frequency" column="had_flu_vaccine_no_weighted_frequency" aggregator="sum" />
+    <Measure name="Had Flu Vaccine No Weighted Percent" column="had_flu_vaccine_no_weighted_percent" aggregator="avg" />
+    <Measure name="Had Pneumonia Vaccine Yes Sample Frequency" column="had_pneumonia_vaccine_yes_sample_frequency" aggregator="sum" />
+    <Measure name="Had Pneumonia Vaccine Yes Weighted Frequency" column="had_pneumonia_vaccine_yes_weighted_frequency" aggregator="sum" />
+    <Measure name="Had Pneumonia Vaccine Yes Weighted Percent" column="had_pneumonia_vaccine_yes_weighted_percent" aggregator="avg" />
+    <Measure name="Had Pneumonia Vaccine No Sample Frequency" column="had_pneumonia_vaccine_no_sample_frequency" aggregator="sum" />
+    <Measure name="Had Pneumonia Vaccine No Weighted Frequency" column="had_pneumonia_vaccine_no_weighted_frequency" aggregator="sum" />
+    <Measure name="Had Pneumonia Vaccine No Weighted Percent" column="had_pneumonia_vaccine_no_weighted_percent" aggregator="avg" />
+    <Measure name="FOBT or Endoscopy Yes Sample Frequency" column="fobt_or_endoscopy_yes_sample_frequency" aggregator="sum" />
+    <Measure name="FOBT or Endoscopy Yes Weighted Frequency" column="fobt_or_endoscopy_yes_weighted_frequency" aggregator="sum" />
+    <Measure name="FOBT or Endoscopy Yes Weighted Percent" column="fobt_or_endoscopy_yes_weighted_percent" aggregator="avg" />
+    <Measure name="FOBT or Endoscopy No Sample Frequency" column="fobt_or_endoscopy_no_sample_frequency" aggregator="sum" />
+    <Measure name="FOBT or Endoscopy No Weighted Frequency" column="fobt_or_endoscopy_no_weighted_frequency" aggregator="sum" />
+    <Measure name="FOBT or Endoscopy Weighted Percent" column="fobt_or_endoscopy_no_weighted_percent" aggregator="avg" />
 </Cube><Cube name="NVSS - Life Expectancy">
     <Annotations>
         <Annotation name="source_name">National Vital Statistics System</Annotation>
