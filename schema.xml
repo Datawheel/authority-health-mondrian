@@ -47,6 +47,83 @@
       <Level column="geoid" name="County Subdivision" nameColumn="name" uniqueMembers="true"/>
     </Hierarchy>
   </Dimension>
+<Cube name="HUD - Homelessness">
+    <Annotations>
+        <Annotation name="source_name">US Department of Housing and Urban Development</Annotation>
+        <Annotation name="source_link">https://www.hudexchange.info/</Annotation>
+        <Annotation name="dataset_name">HUD</Annotation>
+        <Annotation name="topic">Demographics</Annotation>
+    </Annotations>
+
+    <Table name="homelessness" schema="hud"/>
+
+    <Dimension name="Year">
+        <Annotations>
+            <Annotation name="dim_type">TIME</Annotation>
+        </Annotations>
+         <Hierarchy hasAll="true">
+            <Level name="Year" column="year" type="Numeric" levelType="TimeYears" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension foreignKey="geo" name="Geography">
+        <Annotations>
+            <Annotation name="dim_type">GEOGRAPHY</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true" name="State">
+            <Table name="states" schema="shapes2017"/>
+            <Level column="geoid" name="State" nameColumn="name" uniqueMembers="true"/>
+        </Hierarchy>
+        <Hierarchy hasAll="true" name="County">
+            <Table name="counties" schema="shapes2017"/>
+            <Level column="geoid" name="County" nameColumn="name" uniqueMembers="true"/>
+        </Hierarchy>
+    </Dimension>
+
+    <Measure name="CoC Name" column="coc_name" datatype="String" caption="CoC Name" aggregator="max" />
+    <Measure name="Total Homeless" column="total_homeless" aggregator="sum" />
+    <Measure name="Sheltered Homeless" column="sheltered_homeless" aggregator="sum" />
+    <Measure name="Unsheltered Homeless" column="unsheltered_homeless" aggregator="sum" />
+    <Measure name="Homeless Individuals" column="homeless_individuals" aggregator="sum" />
+    <Measure name="Sheltered Homeless Individuals" column="sheltered_homeless_individuals" aggregator="sum" />
+    <Measure name="Unsheltered Homeless Individuals" column="unsheltered_homeless_individuals" aggregator="sum" />
+    <Measure name="Homeless People in Families" column="homeless_people_in_families" aggregator="sum" />
+    <Measure name="Sheltered Homeless People in Families" column="sheltered_homeless_people_in_families" aggregator="sum" />
+    <Measure name="Unsheltered Homeless People in Families" column="unsheltered_homeless_people_in_families" aggregator="sum" />
+    <Measure name="Chronically Homeless" column="chronically_homeless" aggregator="sum" />
+    <Measure name="Sheltered Chronically Homeless" column="sheltered_chronically_homeless" aggregator="sum" />
+    <Measure name="Unsheltered Chronically Homeless" column="unsheltered_chronically_homeless" aggregator="sum" />
+    <Measure name="Chronically Homeless Individuals" column="chronically_homeless_individuals" aggregator="sum" />
+    <Measure name="Sheltered Chronically Homeless Individuals" column="sheltered_chronically_homeless_individuals" aggregator="sum" />
+    <Measure name="Unsheltered Chronically Homeless Individuals" column="unsheltered_chronically_homeless_individuals" aggregator="sum" />
+    <Measure name="Chronically Homeless People in Families" column="chronically_homeless_people_in_families" aggregator="sum" />
+    <Measure name="Sheltered Chronically Homeless People in Families" column="sheltered_chronically_homeless_people_in_families" aggregator="sum" />
+    <Measure name="Unsheltered Chronically Homeless People in Families" column="unsheltered_chronically_homeless_people_in_families" aggregator="sum" />
+    <Measure name="Homeless Veterans" column="homeless_veterans" aggregator="sum" />
+    <Measure name="Sheltered Homeless Veterans" column="sheltered_homeless_veterans" aggregator="sum" />
+    <Measure name="Unsheltered Homeless Veterans" column="unsheltered_homeless_veterans" aggregator="sum" />
+    <Measure name="Homeless Unaccompanied Youth (Under 25)" column="homeless_unaccompanied_youth_under_25" aggregator="sum" />
+    <Measure name="Sheltered Homeless Unaccompanied Youth (Under 25)" column="sheltered_homeless_unaccompanied_youth_under_25" aggregator="sum" />
+    <Measure name="Unsheltered Homeless Unaccompanied Youth (Under 25)" column="unsheltered_homeless_unaccompanied_youth_under_25" aggregator="sum" />
+    <Measure name="Homeless Unaccompanied Children (Under 18)" column="homeless_unaccompanied_children_under_18" aggregator="sum" />
+    <Measure name="Sheltered Homeless Unaccompanied Children (Under 18)" column="sheltered_homeless_unaccompanied_children_under_18" aggregator="sum" />
+    <Measure name="Unsheltered Homeless Unaccompanied Children (Under 18)" column="unsheltered_homeless_unaccompanied_children_under_18" aggregator="sum" />
+    <Measure name="Sheltered Homeless Unaccompanied Young Adults (Age 18-24)" column="sheltered_homeless_unaccompanied_young_adults_age_18_24" aggregator="sum" />
+    <Measure name="Homeless Unaccompanied Young Adults (Age 18-24)" column="homeless_unaccompanied_young_adults_age_18_24" aggregator="sum" />
+    <Measure name="Unsheltered Homeless Unaccompanied Young Adults (Age 18-24)" column="unsheltered_homeless_unaccompanied_young_adults_age_18_24" aggregator="sum" />
+    <Measure name="Parenting Youth (Under 25)" column="parenting_youth_under_25" aggregator="sum" />
+    <Measure name="Sheltered Parenting Youth (Under 25)" column="sheltered_parenting_youth_under_25" aggregator="sum" />
+    <Measure name="Unsheltered Parenting Youth (Under 25)" column="unsheltered_parenting_youth_under_25" aggregator="sum" />
+    <Measure name="Parenting Youth Under 18" column="parenting_youth_under_18" aggregator="sum" />
+    <Measure name="Sheltered Parenting Youth Under 18" column="sheltered_parenting_youth_under_18" aggregator="sum" />
+    <Measure name="Unsheltered Parenting Youth Under 18" column="unsheltered_parenting_youth_under_18" aggregator="sum" />
+    <Measure name="Parenting Youth Age 18-24" column="parenting_youth_age_18_24" aggregator="sum" />
+    <Measure name="Sheltered Parenting Youth Age 18-24" column="sheltered_parenting_youth_age_18_24" aggregator="sum" />
+    <Measure name="Unsheltered Parenting Youth Age 18-24" column="unsheltered_parenting_youth_age_18_24" aggregator="sum" />
+    <Measure name="Children of Parenting Youth" column="children_of_parenting_youth" aggregator="sum" />
+    <Measure name="Sheltered Children of Parenting Youth" column="sheltered_children_of_parenting_youth" aggregator="sum" />
+    <Measure name="Unsheltered Children of Parenting Youth" column="unsheltered_children_of_parenting_youth" aggregator="sum" />
+</Cube>
 <Cube name="HRSA">
     <Annotations>
         <Annotation name="source_name">Health Resources and Services Administration</Annotation>
@@ -548,6 +625,24 @@
     <Measure name="Smoking Status Never Sample Frequency" column="smoking_status_never_sample_frequency" aggregator="sum" />
     <Measure name="Smoking Status Never Weighted Frequency" column="smoking_status_never_weighted_frequency" aggregator="sum" />
     <Measure name="Smoking Status Never Weighted Percent" column="smoking_status_never_weighted_percent" aggregator="avg" />
+    <Measure name="Had Flu Vaccine Yes Sample Frequency" column="had_flu_vaccine_yes_sample_frequency" aggregator="sum" />
+    <Measure name="Had Flu Vaccine Yes Weighted Frequency" column="had_flu_vaccine_yes_weighted_frequency" aggregator="sum" />
+    <Measure name="Had Flu Vaccine Yes Weighted Percent" column="had_flu_vaccine_yes_weighted_percent" aggregator="avg" />
+    <Measure name="Had Flu Vaccine No Sample Frequency" column="had_flu_vaccine_no_sample_frequency" aggregator="sum" />
+    <Measure name="Had Flu Vaccine No Weighted Frequency" column="had_flu_vaccine_no_weighted_frequency" aggregator="sum" />
+    <Measure name="Had Flu Vaccine No Weighted Percent" column="had_flu_vaccine_no_weighted_percent" aggregator="avg" />
+    <Measure name="Had Pneumonia Vaccine Yes Sample Frequency" column="had_pneumonia_vaccine_yes_sample_frequency" aggregator="sum" />
+    <Measure name="Had Pneumonia Vaccine Yes Weighted Frequency" column="had_pneumonia_vaccine_yes_weighted_frequency" aggregator="sum" />
+    <Measure name="Had Pneumonia Vaccine Yes Weighted Percent" column="had_pneumonia_vaccine_yes_weighted_percent" aggregator="avg" />
+    <Measure name="Had Pneumonia Vaccine No Sample Frequency" column="had_pneumonia_vaccine_no_sample_frequency" aggregator="sum" />
+    <Measure name="Had Pneumonia Vaccine No Weighted Frequency" column="had_pneumonia_vaccine_no_weighted_frequency" aggregator="sum" />
+    <Measure name="Had Pneumonia Vaccine No Weighted Percent" column="had_pneumonia_vaccine_no_weighted_percent" aggregator="avg" />
+    <Measure name="FOBT or Endoscopy Yes Sample Frequency" column="fobt_or_endoscopy_yes_sample_frequency" aggregator="sum" />
+    <Measure name="FOBT or Endoscopy Yes Weighted Frequency" column="fobt_or_endoscopy_yes_weighted_frequency" aggregator="sum" />
+    <Measure name="FOBT or Endoscopy Yes Weighted Percent" column="fobt_or_endoscopy_yes_weighted_percent" aggregator="avg" />
+    <Measure name="FOBT or Endoscopy No Sample Frequency" column="fobt_or_endoscopy_no_sample_frequency" aggregator="sum" />
+    <Measure name="FOBT or Endoscopy No Weighted Frequency" column="fobt_or_endoscopy_no_weighted_frequency" aggregator="sum" />
+    <Measure name="FOBT or Endoscopy Weighted Percent" column="fobt_or_endoscopy_no_weighted_percent" aggregator="avg" />
 </Cube><Cube name="NVSS - Life Expectancy">
     <Annotations>
         <Annotation name="source_name">National Vital Statistics System</Annotation>
@@ -646,6 +741,15 @@
 
     <Table name="usda" schema="usda"/>
 
+    <Dimension name="Year">
+        <Annotations>
+            <Annotation name="dim_type">TIME</Annotation>
+        </Annotations>
+         <Hierarchy hasAll="true">  
+            <Level name="Year" column="year" type="Numeric" levelType="TimeYears" uniqueMembers="true" />  
+        </Hierarchy> 
+    </Dimension>
+
     <Dimension foreignKey="fips" name="Geography">
         <Annotations>
             <Annotation name="dim_type">GEOGRAPHY</Annotation>
@@ -656,71 +760,33 @@
         </Hierarchy>
     </Dimension>
 
-    <Measure name="Farmers' markets, 2009" column="fmrkt09" aggregator="sum" />
-    <Measure name="Farmers' markets, 2016" column="fmrkt16" aggregator="sum" />
-    <Measure name="Farmers' markets (% change), 2009-16" column="pch_fmrkt_09_16" aggregator="avg" />
-    <Measure name="Farmers' markets/1,000 pop, 2009" column="fmrktpth09" aggregator="avg" />
-    <Measure name="Farmers' markets/1,000 pop, 2016" column="fmrktpth16" aggregator="avg" />
-    <Measure name="Farmers' markets/1,000 pop (% change), 2009-16" column="pch_fmrktpth_09_16" aggregator="avg" />
-    <Measure name="Children, low access to store (%), 2010" column="pct_laccess_child10" aggregator="avg" />
-    <Measure name="Children, low access to store (%), 2015" column="pct_laccess_child15" aggregator="avg" />
-    <Measure name="Seniors, low access to store (%), 2010" column="pct_laccess_seniors10" aggregator="avg" />
-    <Measure name="Seniors, low access to store (%), 2015" column="pct_laccess_seniors15" aggregator="avg" />
-    <Measure name="White, low access to store (%), 2015" column="pct_laccess_white15" aggregator="avg" />
-    <Measure name="Black, low access to store (%), 2015" column="pct_laccess_black15" aggregator="avg" />
-    <Measure name="Hispanic ethnicity, low access to store (%), 2015" column="pct_laccess_hisp15" aggregator="avg" />
-    <Measure name="Asian, low access to store (%), 2015" column="pct_laccess_nhasian15" aggregator="avg" />
-    <Measure name="American Indian or Alaska Native, low access to store (%), 2015" column="pct_laccess_nhna15" aggregator="avg" />
-    <Measure name="Hawaiian or Pacific Islander, low access to store (%), 2015" column="pct_laccess_nhpi15" aggregator="avg" />
-    <Measure name="Multiracial, low access to store (%), 2015" column="pct_laccess_multir15" aggregator="avg" />
-    <Measure name="Grocery stores, 2009" column="groc09" aggregator="sum" />
-    <Measure name="Grocery stores, 2014" column="groc14" aggregator="sum" />
-    <Measure name="Grocery stores (% change), 2009-14" column="pch_groc_09_14" aggregator="avg" />
-    <Measure name="Grocery stores/1,000 pop, 2009" column="grocpth09" aggregator="avg" />
-    <Measure name="Grocery stores/1,000 pop, 2014" column="grocpth14" aggregator="avg" />
-    <Measure name="Grocery stores/1,000 pop (% change), 2009-14" column="pch_grocpth_09_14" aggregator="avg" />
-    <Measure name="Supercenters and club stores, 2009" column="superc09" aggregator="sum" />
-    <Measure name="Supercenters and club stores, 2014" column="superc14" aggregator="sum" />
-    <Measure name="Supercenters and club stores (% change), 2009-14" column="pch_superc_09_14" aggregator="avg" />
-    <Measure name="Supercenters and club stores/1,000 pop, 2009" column="supercpth09" aggregator="avg" />
-    <Measure name="Supercenters and club stores/1,000 pop, 2014" column="supercpth14" aggregator="avg" />
-    <Measure name="Supercenters and club stores/1,000 pop (% change), 2007-14" column="pch_supercpth_09_14" aggregator="avg" />
-    <Measure name="Convenience stores, 2009" column="convs09" aggregator="sum" />
-    <Measure name="Convenience stores, 2014" column="convs14" aggregator="sum" />
-    <Measure name="Convenience stores (% change), 2009-14" column="pch_convs_09_14" aggregator="avg" />
-    <Measure name="Convenience stores/1,000 pop, 2009" column="convspth09" aggregator="avg" />
-    <Measure name="Convenience stores/1,000 pop, 2014" column="convspth14" aggregator="avg" />
-    <Measure name="Convenience stores/1,000 pop (% change), 2009-14" column="pch_convspth_09_14" aggregator="avg" />
-    <Measure name="Specialized food stores, 2009" column="specs09" aggregator="sum" />
-    <Measure name="Specialized food stores, 2014" column="specs14" aggregator="sum" />
-    <Measure name="Specialized food stores (% change), 2009-14" column="pch_specs_09_14" aggregator="avg" />
-    <Measure name="Specialized food stores/1,000 pop, 2009" column="specspth09" aggregator="avg" />
-    <Measure name="Specialized food stores/1,000 pop, 2014" column="specspth14" aggregator="avg" />
-    <Measure name="Specialized food stores/1,000 pop (% change), 2009-14" column="pch_specspth_09_14" aggregator="avg" />
-    <Measure name="SNAP-authorized stores, 2012" column="snaps12" aggregator="sum" />
-    <Measure name="SNAP-authorized stores, 2016" column="snaps16" aggregator="sum" />
-    <Measure name="SNAP-authorized stores (% change), 2012-16" column="pch_snaps_12_16" aggregator="avg" />
-    <Measure name="SNAP-authorized stores/1,000 pop, 2012" column="snapspth12" aggregator="avg" />
-    <Measure name="SNAP-authorized stores/1,000 pop, 2016" column="snapspth16" aggregator="avg" />
-    <Measure name="SNAP-authorized stores/1,000 pop (% change), 2012-16" column="pch_snapspth_12_16" aggregator="avg" />
-    <Measure name="WIC-authorized stores, 2008" column="wics08" aggregator="sum" />
-    <Measure name="WIC-authorized stores, 2012" column="wics12" aggregator="sum" />
-    <Measure name="WIC-authorized stores (% change), 2008-12" column="pch_wics_08_12" aggregator="avg" />
-    <Measure name="WIC-authorized stores/1,000 pop, 2008" column="wicspth08" aggregator="avg" />
-    <Measure name="WIC-authorized stores/1,000 pop, 2012" column="wicspth12" aggregator="avg" />
-    <Measure name="WIC-authorized stores/1,000 pop (% change), 2008-12" column="pch_wicspth_08_12" aggregator="avg" />
-    <Measure name="Fast-food restaurants, 2009" column="ffr09" aggregator="sum" />
-    <Measure name="Fast-food restaurants, 2014" column="ffr14" aggregator="sum" />
-    <Measure name="Fast-food restaurants (% change), 2009-14" column="pch_ffr_09_14" aggregator="avg" />
-    <Measure name="Fast-food restaurants/1,000 pop, 2009" column="ffrpth09" aggregator="avg" />
-    <Measure name="Fast-food restaurants/1,000 pop, 2014" column="ffrpth14" aggregator="avg" />
-    <Measure name="Fast-food restaurants/1,000 pop (% change), 2009-14" column="pch_ffrpth_09_14" aggregator="avg" />
-    <Measure name="Full-service restaurants, 2009" column="fsr09" aggregator="sum" />
-    <Measure name="Full-service restaurants, 2014" column="fsr14" aggregator="sum" />
-    <Measure name="Full-service restaurants (% change), 2009-14" column="pch_fsr_09_14" aggregator="avg" />
-    <Measure name="Full-service restaurants/1,000 pop, 2009" column="fsrpth09" aggregator="avg" />
-    <Measure name="Full-service restaurants/1,000 pop, 2014" column="fsrpth14" aggregator="avg" />
-    <Measure name="Full-service restaurants/1,000 pop (% change), 2009-14" column="pch_fsrpth_09_14" aggregator="avg" />
+    <Measure name="Farmers' markets" column="fmrkt" aggregator="sum" />
+    <Measure name="Farmers' markets/1,000 pop" column="fmrktpth" aggregator="avg" />
+    <Measure name="Children, low access to store (%)" column="pct_laccess_child" aggregator="avg" />
+    <Measure name="Seniors, low access to store (%)" column="pct_laccess_seniors" aggregator="avg" />
+    <Measure name="White, low access to store (%)" column="pct_laccess_white" aggregator="avg" />
+    <Measure name="Black, low access to store (%)" column="pct_laccess_black" aggregator="avg" />
+    <Measure name="Hispanic ethnicity, low access to store (%)" column="pct_laccess_hisp" aggregator="avg" />
+    <Measure name="Asian, low access to store (%)" column="pct_laccess_nhasian" aggregator="avg" />
+    <Measure name="American Indian or Alaska Native, low access to store (%)" column="pct_laccess_nhna" aggregator="avg" />
+    <Measure name="Hawaiian or Pacific Islander, low access to store (%)" column="pct_laccess_nhpi" aggregator="avg" />
+    <Measure name="Multiracial, low access to store (%)" column="pct_laccess_multir" aggregator="avg" />
+    <Measure name="Grocery stores" column="groc" aggregator="sum" />
+    <Measure name="Grocery stores/1,000 pop" column="grocpth" aggregator="avg" />
+    <Measure name="Supercenters and club stores" column="superc" aggregator="sum" />
+    <Measure name="Supercenters and club stores/1,000 pop" column="supercpth" aggregator="avg" />
+    <Measure name="Convenience stores" column="convs" aggregator="sum" />
+    <Measure name="Convenience stores/1,000 pop" column="convspth" aggregator="avg" />
+    <Measure name="Specialized food stores" column="specs" aggregator="sum" />
+    <Measure name="Specialized food stores/1,000 pop" column="specspth" aggregator="avg" />
+    <Measure name="SNAP-authorized stores" column="snaps" aggregator="sum" />
+    <Measure name="SNAP-authorized stores/1,000 pop" column="snapspth" aggregator="avg" />
+    <Measure name="WIC-authorized stores" column="wics" aggregator="sum" />
+    <Measure name="WIC-authorized stores/1,000 pop" column="wicspth" aggregator="avg" />
+    <Measure name="Fast-food restaurants" column="ffr" aggregator="sum" />
+    <Measure name="Fast-food restaurants/1,000 pop" column="ffrpth" aggregator="avg" />
+    <Measure name="Full-service restaurants" column="fsr" aggregator="sum" />
+    <Measure name="Full-service restaurants/1,000 pop" column="fsrpth" aggregator="avg" />
 </Cube>
 <Cube name="500 Cities">
     <Annotations> 
@@ -9244,37 +9310,6 @@
     <Measure name="% Uninsured Population Below 200% FPL" column="percent_uninsured_population_below_200_percent_fpl" aggregator="avg" />
     <Measure name="% Uninsured Population at 100%-400% FPL" column="percent_uninsured_population_at_100_percent_400_percent_fpl" aggregator="avg" />
     <Measure name="% Uninsured Population at 138%-400% FPL" column="percent_uninsured_population_at_138_percent_400_percent_fpl" aggregator="avg" />
-</Cube>
-<Cube name="USCM">
-    <Annotations>
-        <Annotation name="source_name">United States Conference of Mayors</Annotation>
-        <Annotation name="source_link">https://endhomelessness.atavist.com/mayorsreport2016</Annotation>
-        <Annotation name="dataset_name">USCM</Annotation>
-        <Annotation name="topic">Demographics</Annotation>
-    </Annotations>
-
-    <Table name="homelessness" schema="uscm"/>
-
-    <Dimension name="Year">
-        <Annotations>
-            <Annotation name="dim_type">TIME</Annotation>
-        </Annotations>
-         <Hierarchy hasAll="true">
-            <Level name="Year" column="year" type="Numeric" levelType="TimeYears" uniqueMembers="true" />
-        </Hierarchy>
-    </Dimension>
-
-    <Dimension foreignKey="geo" name="Geography">
-        <Annotations>
-            <Annotation name="dim_type">GEOGRAPHY</Annotation>
-        </Annotations>
-        <Hierarchy hasAll="true" name="Place">
-            <Table name="places" schema="shapes2017"/>
-            <Level name="Place" column="geoid" nameColumn="name" uniqueMembers="true" hideMemberIf="IfBlankName" />
-        </Hierarchy>
-    </Dimension>
-
-    <Measure name="Rate per 10,000" column="rate_per_10000" aggregator="sum" />
 </Cube>
 <Cube name="DCI">
     <Annotations>

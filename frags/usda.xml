@@ -8,6 +8,15 @@
 
     <Table name="usda" schema="usda"/>
 
+    <Dimension name="Year">
+        <Annotations>
+            <Annotation name="dim_type">TIME</Annotation>
+        </Annotations>
+         <Hierarchy hasAll="true">  
+            <Level name="Year" column="year" type="Numeric" levelType="TimeYears" uniqueMembers="true" />  
+        </Hierarchy> 
+    </Dimension>
+
     <Dimension foreignKey="fips" name="Geography">
         <Annotations>
             <Annotation name="dim_type">GEOGRAPHY</Annotation>
@@ -18,69 +27,31 @@
         </Hierarchy>
     </Dimension>
 
-    <Measure name="Farmers' markets, 2009" column="fmrkt09" aggregator="sum" />
-    <Measure name="Farmers' markets, 2016" column="fmrkt16" aggregator="sum" />
-    <Measure name="Farmers' markets (% change), 2009-16" column="pch_fmrkt_09_16" aggregator="avg" />
-    <Measure name="Farmers' markets/1,000 pop, 2009" column="fmrktpth09" aggregator="avg" />
-    <Measure name="Farmers' markets/1,000 pop, 2016" column="fmrktpth16" aggregator="avg" />
-    <Measure name="Farmers' markets/1,000 pop (% change), 2009-16" column="pch_fmrktpth_09_16" aggregator="avg" />
-    <Measure name="Children, low access to store (%), 2010" column="pct_laccess_child10" aggregator="avg" />
-    <Measure name="Children, low access to store (%), 2015" column="pct_laccess_child15" aggregator="avg" />
-    <Measure name="Seniors, low access to store (%), 2010" column="pct_laccess_seniors10" aggregator="avg" />
-    <Measure name="Seniors, low access to store (%), 2015" column="pct_laccess_seniors15" aggregator="avg" />
-    <Measure name="White, low access to store (%), 2015" column="pct_laccess_white15" aggregator="avg" />
-    <Measure name="Black, low access to store (%), 2015" column="pct_laccess_black15" aggregator="avg" />
-    <Measure name="Hispanic ethnicity, low access to store (%), 2015" column="pct_laccess_hisp15" aggregator="avg" />
-    <Measure name="Asian, low access to store (%), 2015" column="pct_laccess_nhasian15" aggregator="avg" />
-    <Measure name="American Indian or Alaska Native, low access to store (%), 2015" column="pct_laccess_nhna15" aggregator="avg" />
-    <Measure name="Hawaiian or Pacific Islander, low access to store (%), 2015" column="pct_laccess_nhpi15" aggregator="avg" />
-    <Measure name="Multiracial, low access to store (%), 2015" column="pct_laccess_multir15" aggregator="avg" />
-    <Measure name="Grocery stores, 2009" column="groc09" aggregator="sum" />
-    <Measure name="Grocery stores, 2014" column="groc14" aggregator="sum" />
-    <Measure name="Grocery stores (% change), 2009-14" column="pch_groc_09_14" aggregator="avg" />
-    <Measure name="Grocery stores/1,000 pop, 2009" column="grocpth09" aggregator="avg" />
-    <Measure name="Grocery stores/1,000 pop, 2014" column="grocpth14" aggregator="avg" />
-    <Measure name="Grocery stores/1,000 pop (% change), 2009-14" column="pch_grocpth_09_14" aggregator="avg" />
-    <Measure name="Supercenters and club stores, 2009" column="superc09" aggregator="sum" />
-    <Measure name="Supercenters and club stores, 2014" column="superc14" aggregator="sum" />
-    <Measure name="Supercenters and club stores (% change), 2009-14" column="pch_superc_09_14" aggregator="avg" />
-    <Measure name="Supercenters and club stores/1,000 pop, 2009" column="supercpth09" aggregator="avg" />
-    <Measure name="Supercenters and club stores/1,000 pop, 2014" column="supercpth14" aggregator="avg" />
-    <Measure name="Supercenters and club stores/1,000 pop (% change), 2007-14" column="pch_supercpth_09_14" aggregator="avg" />
-    <Measure name="Convenience stores, 2009" column="convs09" aggregator="sum" />
-    <Measure name="Convenience stores, 2014" column="convs14" aggregator="sum" />
-    <Measure name="Convenience stores (% change), 2009-14" column="pch_convs_09_14" aggregator="avg" />
-    <Measure name="Convenience stores/1,000 pop, 2009" column="convspth09" aggregator="avg" />
-    <Measure name="Convenience stores/1,000 pop, 2014" column="convspth14" aggregator="avg" />
-    <Measure name="Convenience stores/1,000 pop (% change), 2009-14" column="pch_convspth_09_14" aggregator="avg" />
-    <Measure name="Specialized food stores, 2009" column="specs09" aggregator="sum" />
-    <Measure name="Specialized food stores, 2014" column="specs14" aggregator="sum" />
-    <Measure name="Specialized food stores (% change), 2009-14" column="pch_specs_09_14" aggregator="avg" />
-    <Measure name="Specialized food stores/1,000 pop, 2009" column="specspth09" aggregator="avg" />
-    <Measure name="Specialized food stores/1,000 pop, 2014" column="specspth14" aggregator="avg" />
-    <Measure name="Specialized food stores/1,000 pop (% change), 2009-14" column="pch_specspth_09_14" aggregator="avg" />
-    <Measure name="SNAP-authorized stores, 2012" column="snaps12" aggregator="sum" />
-    <Measure name="SNAP-authorized stores, 2016" column="snaps16" aggregator="sum" />
-    <Measure name="SNAP-authorized stores (% change), 2012-16" column="pch_snaps_12_16" aggregator="avg" />
-    <Measure name="SNAP-authorized stores/1,000 pop, 2012" column="snapspth12" aggregator="avg" />
-    <Measure name="SNAP-authorized stores/1,000 pop, 2016" column="snapspth16" aggregator="avg" />
-    <Measure name="SNAP-authorized stores/1,000 pop (% change), 2012-16" column="pch_snapspth_12_16" aggregator="avg" />
-    <Measure name="WIC-authorized stores, 2008" column="wics08" aggregator="sum" />
-    <Measure name="WIC-authorized stores, 2012" column="wics12" aggregator="sum" />
-    <Measure name="WIC-authorized stores (% change), 2008-12" column="pch_wics_08_12" aggregator="avg" />
-    <Measure name="WIC-authorized stores/1,000 pop, 2008" column="wicspth08" aggregator="avg" />
-    <Measure name="WIC-authorized stores/1,000 pop, 2012" column="wicspth12" aggregator="avg" />
-    <Measure name="WIC-authorized stores/1,000 pop (% change), 2008-12" column="pch_wicspth_08_12" aggregator="avg" />
-    <Measure name="Fast-food restaurants, 2009" column="ffr09" aggregator="sum" />
-    <Measure name="Fast-food restaurants, 2014" column="ffr14" aggregator="sum" />
-    <Measure name="Fast-food restaurants (% change), 2009-14" column="pch_ffr_09_14" aggregator="avg" />
-    <Measure name="Fast-food restaurants/1,000 pop, 2009" column="ffrpth09" aggregator="avg" />
-    <Measure name="Fast-food restaurants/1,000 pop, 2014" column="ffrpth14" aggregator="avg" />
-    <Measure name="Fast-food restaurants/1,000 pop (% change), 2009-14" column="pch_ffrpth_09_14" aggregator="avg" />
-    <Measure name="Full-service restaurants, 2009" column="fsr09" aggregator="sum" />
-    <Measure name="Full-service restaurants, 2014" column="fsr14" aggregator="sum" />
-    <Measure name="Full-service restaurants (% change), 2009-14" column="pch_fsr_09_14" aggregator="avg" />
-    <Measure name="Full-service restaurants/1,000 pop, 2009" column="fsrpth09" aggregator="avg" />
-    <Measure name="Full-service restaurants/1,000 pop, 2014" column="fsrpth14" aggregator="avg" />
-    <Measure name="Full-service restaurants/1,000 pop (% change), 2009-14" column="pch_fsrpth_09_14" aggregator="avg" />
+    <Measure name="Farmers' markets" column="fmrkt" aggregator="sum" />
+    <Measure name="Farmers' markets/1,000 pop" column="fmrktpth" aggregator="avg" />
+    <Measure name="Children, low access to store (%)" column="pct_laccess_child" aggregator="avg" />
+    <Measure name="Seniors, low access to store (%)" column="pct_laccess_seniors" aggregator="avg" />
+    <Measure name="White, low access to store (%)" column="pct_laccess_white" aggregator="avg" />
+    <Measure name="Black, low access to store (%)" column="pct_laccess_black" aggregator="avg" />
+    <Measure name="Hispanic ethnicity, low access to store (%)" column="pct_laccess_hisp" aggregator="avg" />
+    <Measure name="Asian, low access to store (%)" column="pct_laccess_nhasian" aggregator="avg" />
+    <Measure name="American Indian or Alaska Native, low access to store (%)" column="pct_laccess_nhna" aggregator="avg" />
+    <Measure name="Hawaiian or Pacific Islander, low access to store (%)" column="pct_laccess_nhpi" aggregator="avg" />
+    <Measure name="Multiracial, low access to store (%)" column="pct_laccess_multir" aggregator="avg" />
+    <Measure name="Grocery stores" column="groc" aggregator="sum" />
+    <Measure name="Grocery stores/1,000 pop" column="grocpth" aggregator="avg" />
+    <Measure name="Supercenters and club stores" column="superc" aggregator="sum" />
+    <Measure name="Supercenters and club stores/1,000 pop" column="supercpth" aggregator="avg" />
+    <Measure name="Convenience stores" column="convs" aggregator="sum" />
+    <Measure name="Convenience stores/1,000 pop" column="convspth" aggregator="avg" />
+    <Measure name="Specialized food stores" column="specs" aggregator="sum" />
+    <Measure name="Specialized food stores/1,000 pop" column="specspth" aggregator="avg" />
+    <Measure name="SNAP-authorized stores" column="snaps" aggregator="sum" />
+    <Measure name="SNAP-authorized stores/1,000 pop" column="snapspth" aggregator="avg" />
+    <Measure name="WIC-authorized stores" column="wics" aggregator="sum" />
+    <Measure name="WIC-authorized stores/1,000 pop" column="wicspth" aggregator="avg" />
+    <Measure name="Fast-food restaurants" column="ffr" aggregator="sum" />
+    <Measure name="Fast-food restaurants/1,000 pop" column="ffrpth" aggregator="avg" />
+    <Measure name="Full-service restaurants" column="fsr" aggregator="sum" />
+    <Measure name="Full-service restaurants/1,000 pop" column="fsrpth" aggregator="avg" />
 </Cube>
