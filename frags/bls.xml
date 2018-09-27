@@ -6,7 +6,7 @@
         <Annotation name="topic">Unemployment</Annotation>
     </Annotations>
 
-    <Table name="bls" schema="bls"/>
+    <Table name="unemployment" schema="bls"/>
      
     <Dimension name="Year">
         <Annotations>
@@ -30,6 +30,40 @@
     <Measure name="Labor Force" column="labor_force" aggregator="sum" />
     <Measure name="Employed" column="employed" aggregator="sum" />
     <Measure name="Unemployed" column="unemployed" aggregator="sum" />
-    <!-- TODO: Add another measure with an overall unemployment rate -->
     <Measure name="Unemployment Rate" column="unemployment_rate" aggregator="avg" />
+</Cube>
+
+<Cube name="BLS - CPI">
+    <Annotations>
+        <Annotation name="source_name">Bureau of Labor Statistics: Consumer Price Index</Annotation>
+        <Annotation name="source_link">https://www.bls.gov/CPI/</Annotation>
+        <Annotation name="dataset_name">BLS: CPI</Annotation>
+        <Annotation name="topic">Cost of Living</Annotation>
+    </Annotations>
+
+    <Table name="cpi" schema="bls"/>
+     
+    <Dimension name="Time">
+        <Annotations>
+            <Annotation name="dim_type">TIME</Annotation>
+        </Annotations>
+         <Hierarchy name="Time" hasAll="true">
+            <Level name="Month" column="month" type="Numeric" levelType="TimeMonths" uniqueMembers="false" />
+            <Level name="Year" column="year" type="Numeric" levelType="TimeYears" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension foreignKey="msa" name="Geography">
+        <Annotations>
+            <Annotation name="dim_type">GEOGRAPHY</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true">
+            <Table name="msas" schema="shapes2017"/>
+            <Level column="geoid" name="MSA" nameColumn="namelsad" uniqueMembers="true"/>
+        </Hierarchy>
+    </Dimension>
+
+    <Measure name="Average CPI" column="avg" aggregator="avg" />
+    <Measure name="Average USA CPI" column="usa_avg" aggregator="avg" />
+    <Measure name="Average Midwest CPI" column="midwest_avg" aggregator="avg" />
 </Cube>
