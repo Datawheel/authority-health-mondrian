@@ -1,0 +1,37 @@
+<Cube name="CDC - SVI">
+    <Annotations>
+        <Annotation name="source_name">Center for Disease Control: Social Vulnerability Index</Annotation>
+        <Annotation name="source_link">https://svi.cdc.gov/</Annotation>
+        <Annotation name="dataset_name">CDC: SVI</Annotation>
+        <Annotation name="topic">Social Vulnerability</Annotation>
+    </Annotations>
+
+    <Table name="svi" schema="cdc"/>
+     
+    <Dimension name="Year">
+        <Annotations>
+            <Annotation name="dim_type">TIME</Annotation>
+        </Annotations>
+         <Hierarchy hasAll="true">
+            <Level name="Year" column="year" type="Numeric" levelType="TimeYears" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension foreignKey="tract_fips" name="Geography">
+        <Annotations>
+            <Annotation name="dim_type">GEOGRAPHY</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true" name="Tract">
+            <Table name="tracts" schema="shapes2017"/>
+            <Level column="state_id" name="State" nameColumn="state_name" uniqueMembers="true"/>
+            <Level column="county_id" name="County" nameColumn="county_name" uniqueMembers="true"/>
+            <Level column="geoid" name="Tract" nameColumn="namelsad" uniqueMembers="true"/>
+        </Hierarchy>
+    </Dimension>
+
+    <Measure name="Socioeconomic Ranking" column="ranking_socioeconomic" aggregator="avg" />
+    <Measure name="Household Composition and Disability Ranking" column="ranking_household_composition_and_disability" aggregator="avg" />
+    <Measure name="Minority Status and Language Ranking" column="ranking_minority_status_and_language" aggregator="avg" />
+    <Measure name="Housing and Transportation Ranking" column="ranking_housing_and_transportation" aggregator="avg" />
+    <Measure name="Overall Ranking" column="ranking_overall" aggregator="avg" />
+</Cube>
