@@ -3,7 +3,8 @@
         <Annotation name="source_name">Michigan Department of Corrections</Annotation>
         <Annotation name="source_link">https://www.michigan.gov/corrections/</Annotation>
         <Annotation name="dataset_name">MDC</Annotation>
-        <Annotation name="topic">Demographics</Annotation>
+        <Annotation name="topic">Health &amp; Safety</Annotation>
+        <Annotation name="subtopic">Incarceration</Annotation>
     </Annotations>
 
     <Table name="incarceration" schema="mdc"/>
