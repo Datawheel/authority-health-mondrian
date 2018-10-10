@@ -45,7 +45,15 @@
         </Hierarchy>
     </Dimension>
 
-    <Measure name="Offense" column="offense" datatype="String" caption="Offense" aggregator="max" />
+    <Dimension name="Offense">
+        <Annotations>
+            <Annotation name="dim_type">OFFENSE</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true">
+            <Level column="offense" name="Offense" uniqueMembers="true"/>
+        </Hierarchy>
+    </Dimension>
+
     <Measure name="Total" column="total" aggregator="sum" />
     <Measure name="Prison" column="prison" aggregator="sum" />
     <Measure name="Jail" column="jail" aggregator="sum" />
