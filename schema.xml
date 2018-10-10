@@ -9382,6 +9382,70 @@
     <Measure name="% Uninsured Population at 100%-400% FPL" column="percent_uninsured_population_at_100_percent_400_percent_fpl" aggregator="avg" />
     <Measure name="% Uninsured Population at 138%-400% FPL" column="percent_uninsured_population_at_138_percent_400_percent_fpl" aggregator="avg" />
 </Cube>
+<Cube name="MDC - Incarceration">
+    <Annotations>
+        <Annotation name="source_name">Michigan Department of Corrections</Annotation>
+        <Annotation name="source_link">https://www.michigan.gov/corrections/</Annotation>
+        <Annotation name="dataset_name">MDC</Annotation>
+        <Annotation name="topic">Health &amp; Safety</Annotation>
+        <Annotation name="subtopic">Incarceration</Annotation>
+    </Annotations>
+
+    <Table name="incarceration" schema="mdc"/>
+
+    <Dimension name="Year">
+        <Annotations>
+            <Annotation name="dim_type">TIME</Annotation>
+        </Annotations>
+         <Hierarchy hasAll="true">
+            <Level name="Year" column="year" type="Numeric" levelType="TimeYears" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension foreignKey="geoid" name="Geography">
+        <Annotations>
+            <Annotation name="dim_type">GEOGRAPHY</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true" name="County">
+            <Table name="counties" schema="shapes2017"/>
+            <Level column="geoid" name="County" nameColumn="name" uniqueMembers="true"/>
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension name="Territory">
+        <Annotations>
+            <Annotation name="dim_type">TERRITORY</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true">
+            <Level column="territory" name="Territory" uniqueMembers="true"/>
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension name="Region">
+        <Annotations>
+            <Annotation name="dim_type">REGION</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true">
+            <Level column="region" name="Region" uniqueMembers="true"/>
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension name="Offense">
+        <Annotations>
+            <Annotation name="dim_type">OFFENSE</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true">
+            <Level column="offense" name="Offense" uniqueMembers="true"/>
+        </Hierarchy>
+    </Dimension>
+
+    <Measure name="Total" column="total" aggregator="sum" />
+    <Measure name="Prison" column="prison" aggregator="sum" />
+    <Measure name="Jail" column="jail" aggregator="sum" />
+    <Measure name="Jail/Probation" column="jail_probation" aggregator="sum" />
+    <Measure name="Probation" column="probation" aggregator="sum" />
+    <Measure name="Other" column="other" aggregator="sum" />
+</Cube>
 <Cube name="DCI">
     <Annotations>
         <Annotation name="source_name">Distressed Communities Index</Annotation>
