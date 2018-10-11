@@ -155,26 +155,26 @@
 
     <Measure name="Dentists w/NPI" column="npi_total" aggregator="sum" />
     <Measure name="Dentists, Male w/NPI" column="npi_gender_male" aggregator="sum" />
-    <Measure name="Dentists,Female w/NPI" column="npi_gender_female" aggregator="sum" />
+    <Measure name="Dentists, Female w/NPI" column="npi_gender_female" aggregator="sum" />
     <Measure name="Dentists, Total Priv Practice" column="priv_practice_total" aggregator="sum" />
     <Measure name="Dentists, Total, Priv Pract, FT" column="priv_practice_ft" aggregator="sum" />
     <Measure name="Dentists, Total, Priv Pract, PT" column="priv_practice_pt" aggregator="sum" />
     <Measure name="Dent, Total Male, Priv Pract" column="priv_practice_gender_male" aggregator="sum" />
     <Measure name="Dent, Total Female, Priv Pract" column="priv_practice_gender_female" aggregator="sum" />
-    <Measure name="Dent, Gender Unknown,Priv Pract" column="priv_practice_gender_unknown" aggregator="sum" />
-    <Measure name="Dent, Priv Pract,Tot GPs and Ped" column="priv_practice_gps_and_ped" aggregator="sum" />
-    <Measure name="Dent, Priv Pract,Tot Other Spec" column="priv_practice_other_specialties" aggregator="sum" />
+    <Measure name="Dent, Gender Unknown, Priv Pract" column="priv_practice_gender_unknown" aggregator="sum" />
+    <Measure name="Dent, Priv Pract, Tot GPs and Ped" column="priv_practice_gps_and_ped" aggregator="sum" />
+    <Measure name="Dent, Priv Pract, Tot Other Spec" column="priv_practice_other_specialties" aggregator="sum" />
     <Measure name="Dentists, Seeking Employment" column="status_seeking_employment" aggregator="sum" />
     <Measure name="Dentists, Other Occupation" column="status_other_occupation" aggregator="sum" />
     <Measure name="Dentists, No Longer in Practice" column="status_inactive" aggregator="sum" />
     <Measure name="Dentists, Occup Type Unknown" column="status_unknown" aggregator="sum" />
     <Measure name="Dentists, Total Prof Active" column="status_active" aggregator="sum" />
     <Measure name="Dentists, State or Local Govt" column="cat_government" aggregator="sum" />
-    <Measure name="Dent,Staff, Fac and Staf,Hlth Org" column="cat_health_org_staff" aggregator="sum" />
+    <Measure name="Dent, Staff, Fac and Staf, Hlth Org" column="cat_health_org_staff" aggregator="sum" />
     <Measure name="Dentists, Grad Student/Resident" column="cat_grad_student" aggregator="sum" />
-    <Measure name="Dent,Armed Forces and Oth Fed Srv" column="cat_fed_service" aggregator="sum" />
+    <Measure name="Dent, Armed Forces and Oth Fed Srv" column="cat_fed_service" aggregator="sum" />
     <Measure name="Dentists, Dental School Faculty" column="cat_dental_school_faculty" aggregator="sum" />
-    <Measure name="Dentists,PT Faculty/PT Practice" column="cat_pt_faculty_or_practice" aggregator="sum" />
+    <Measure name="Dentists, PT Faculty/PT Practice" column="cat_pt_faculty_or_practice" aggregator="sum" />
     <Measure name="# Active Dentists less than 35" column="age_35_or_less" aggregator="sum" />
     <Measure name="# Active Dentists 35" column="age_35_44" aggregator="sum" />
     <Measure name="# Active Dentists 45" column="age_45_54" aggregator="sum" />
@@ -760,12 +760,12 @@
     <Measure name="Count" column="count" aggregator="sum" />
     <Measure name="Population" column="population" aggregator="sum" />
     <Measure name="Age-Adjusted Rate" column="age_adjusted_rate" aggregator="avg" />
-    <Measure name="Age-Adjusted Rate Lower 95% Confidence Interval" column="age_adjusted_rate_lower_95_percent_confidence_interval" aggregator="avg" />
-    <Measure name="Age-Adjusted Rate Upper 95% Confidence Interval" column="age_adjusted_rate_upper_95_percent_confidence_interval" aggregator="avg" />
+    <Measure name="Age-Adjusted Rate Lower 95 Percent Confidence Interval" column="age_adjusted_rate_lower_95_percent_confidence_interval" aggregator="avg" />
+    <Measure name="Age-Adjusted Rate Upper 95 Percent Confidence Interval" column="age_adjusted_rate_upper_95_percent_confidence_interval" aggregator="avg" />
     <Measure name="Age-Adjusted Rate Standard Error" column="age_adjusted_rate_standard_error" aggregator="avg" />
     <Measure name="Crude Rate" column="crude_rate" aggregator="avg" />
-    <Measure name="Crude Rate Lower 95% Confidence Interval" column="crude_rate_lower_95_percent_confidence_interval" aggregator="avg" />
-    <Measure name="Crude Rate Upper 95% Confidence Interval" column="crude_rate_upper_95_percent_confidence_interval" aggregator="avg" />
+    <Measure name="Crude Rate Lower 95 Percent Confidence Interval" column="crude_rate_lower_95_percent_confidence_interval" aggregator="avg" />
+    <Measure name="Crude Rate Upper 95 Percent Confidence Interval" column="crude_rate_upper_95_percent_confidence_interval" aggregator="avg" />
     <Measure name="Crude Rate Standard Error" column="crude_rate_standard_error" aggregator="avg" />
 </Cube>
 <Cube name="USDA">
@@ -798,32 +798,32 @@
     </Dimension>
 
     <Measure name="Farmers' markets" column="fmrkt" aggregator="sum" />
-    <Measure name="Farmers' markets/1,000 pop" column="fmrktpth" aggregator="avg" />
-    <Measure name="Children, low access to store (%)" column="pct_laccess_child" aggregator="avg" />
-    <Measure name="Seniors, low access to store (%)" column="pct_laccess_seniors" aggregator="avg" />
-    <Measure name="White, low access to store (%)" column="pct_laccess_white" aggregator="avg" />
-    <Measure name="Black, low access to store (%)" column="pct_laccess_black" aggregator="avg" />
-    <Measure name="Hispanic ethnicity, low access to store (%)" column="pct_laccess_hisp" aggregator="avg" />
-    <Measure name="Asian, low access to store (%)" column="pct_laccess_nhasian" aggregator="avg" />
-    <Measure name="American Indian or Alaska Native, low access to store (%)" column="pct_laccess_nhna" aggregator="avg" />
-    <Measure name="Hawaiian or Pacific Islander, low access to store (%)" column="pct_laccess_nhpi" aggregator="avg" />
-    <Measure name="Multiracial, low access to store (%)" column="pct_laccess_multir" aggregator="avg" />
+    <Measure name="Farmers' markets/1000 pop" column="fmrktpth" aggregator="avg" />
+    <Measure name="Children, low access to store (percent)" column="pct_laccess_child" aggregator="avg" />
+    <Measure name="Seniors, low access to store (percent)" column="pct_laccess_seniors" aggregator="avg" />
+    <Measure name="White, low access to store (percent)" column="pct_laccess_white" aggregator="avg" />
+    <Measure name="Black, low access to store (percent)" column="pct_laccess_black" aggregator="avg" />
+    <Measure name="Hispanic ethnicity, low access to store (percent)" column="pct_laccess_hisp" aggregator="avg" />
+    <Measure name="Asian, low access to store (percent)" column="pct_laccess_nhasian" aggregator="avg" />
+    <Measure name="American Indian or Alaska Native, low access to store (percent)" column="pct_laccess_nhna" aggregator="avg" />
+    <Measure name="Hawaiian or Pacific Islander, low access to store (percent)" column="pct_laccess_nhpi" aggregator="avg" />
+    <Measure name="Multiracial, low access to store (percent)" column="pct_laccess_multir" aggregator="avg" />
     <Measure name="Grocery stores" column="groc" aggregator="sum" />
-    <Measure name="Grocery stores/1,000 pop" column="grocpth" aggregator="avg" />
+    <Measure name="Grocery stores/1000 pop" column="grocpth" aggregator="avg" />
     <Measure name="Supercenters and club stores" column="superc" aggregator="sum" />
-    <Measure name="Supercenters and club stores/1,000 pop" column="supercpth" aggregator="avg" />
+    <Measure name="Supercenters and club stores/1000 pop" column="supercpth" aggregator="avg" />
     <Measure name="Convenience stores" column="convs" aggregator="sum" />
-    <Measure name="Convenience stores/1,000 pop" column="convspth" aggregator="avg" />
+    <Measure name="Convenience stores/1000 pop" column="convspth" aggregator="avg" />
     <Measure name="Specialized food stores" column="specs" aggregator="sum" />
-    <Measure name="Specialized food stores/1,000 pop" column="specspth" aggregator="avg" />
+    <Measure name="Specialized food stores/1000 pop" column="specspth" aggregator="avg" />
     <Measure name="SNAP-authorized stores" column="snaps" aggregator="sum" />
-    <Measure name="SNAP-authorized stores/1,000 pop" column="snapspth" aggregator="avg" />
+    <Measure name="SNAP-authorized stores/1000 pop" column="snapspth" aggregator="avg" />
     <Measure name="WIC-authorized stores" column="wics" aggregator="sum" />
-    <Measure name="WIC-authorized stores/1,000 pop" column="wicspth" aggregator="avg" />
+    <Measure name="WIC-authorized stores/1000 pop" column="wicspth" aggregator="avg" />
     <Measure name="Fast-food restaurants" column="ffr" aggregator="sum" />
-    <Measure name="Fast-food restaurants/1,000 pop" column="ffrpth" aggregator="avg" />
+    <Measure name="Fast-food restaurants/1000 pop" column="ffrpth" aggregator="avg" />
     <Measure name="Full-service restaurants" column="fsr" aggregator="sum" />
-    <Measure name="Full-service restaurants/1,000 pop" column="fsrpth" aggregator="avg" />
+    <Measure name="Full-service restaurants/1000 pop" column="fsrpth" aggregator="avg" />
 </Cube>
 <Cube name="500 Cities">
     <Annotations> 
@@ -9340,47 +9340,47 @@
     <Measure name="Penetration of Uninsured Population" column="penetration_of_uninsured_population" aggregator="avg" />
     <Measure name="Penetration of Population with Medicaid and Other Pub Ins" column="penetration_of_population_with_medicaid_and_other_pub_ins" aggregator="avg" />
     <Measure name="Penetration of Population with Medicare and Priv Ins" column="penetration_of_population_with_medicare_and_priv_ins" aggregator="avg" />
-    <Measure name="1-Year Patient % Change" column="1_year_patient_percent_change" aggregator="avg" />
-    <Measure name="2-Year Patient % Change" column="2_year_patient_percent_change" aggregator="avg" />
-    <Measure name="2-Year Patient # Change" column="2_year_patient_number_change" aggregator="sum" />
-    <Measure name="1-Year Uninsured Patient % Change" column="1_year_uninsured_patient_percent_change" aggregator="avg" />
-    <Measure name="1-Year Medicaid and Other Pub Ins Patient % Change" column="1_year_medicaid_and_other_pub_ins_patient_percent_change" aggregator="avg" />
-    <Measure name="1-Year Medicare and Priv Ins Patient % Change" column="1_year_medicare_and_priv_ins_patient_percent_change" aggregator="avg" />
+    <Measure name="1-Year Patient Percent Change" column="1_year_patient_percent_change" aggregator="avg" />
+    <Measure name="2-Year Patient Percent Change" column="2_year_patient_percent_change" aggregator="avg" />
+    <Measure name="2-Year Patient Change" column="2_year_patient_number_change" aggregator="sum" />
+    <Measure name="1-Year Uninsured Patient Percent Change" column="1_year_uninsured_patient_percent_change" aggregator="avg" />
+    <Measure name="1-Year Medicaid and Other Pub Ins Patient Percent Change" column="1_year_medicaid_and_other_pub_ins_patient_percent_change" aggregator="avg" />
+    <Measure name="1-Year Medicare and Priv Ins Patient Percent Change" column="1_year_medicare_and_priv_ins_patient_percent_change" aggregator="avg" />
     <Measure name="Low-Income Not Served by Health Centers" column="low_income_not_served_by_health_centers" aggregator="sum" />
     <Measure name="Uninsured Not Served by Health Centers" column="uninsured_not_served_by_health_centers" aggregator="sum" />
     <Measure name="Medicaid and Other Pub Ins Not Served by Health Centers" column="medicaid_and_other_pub_ins_not_served_by_health_centers" aggregator="sum" />
     <Measure name="Medicare and Priv Ins Not Served by Health Centers" column="medicare_and_priv_ins_not_served_by_health_centers" aggregator="sum" />
     <Measure name="Total Population Not Served by Health Centers" column="total_population_not_served_by_health_centers" aggregator="sum" />
-    <Measure name="% Patients Uninsured" column="percent_patients_uninsured" aggregator="avg" />
-    <Measure name="% Patients with Medicaid and Other Pub Ins" column="percent_patients_with_medicaid_and_other_pub_ins" aggregator="avg" />
-    <Measure name="% Patients with Medicare and Priv Ins" column="percent_patients_with_medicare_and_priv_ins" aggregator="avg" />
-    <Measure name="% Population in Poverty" column="percent_population_in_poverty" aggregator="avg" />
-    <Measure name="% Low-Income Population" column="percent_low_income_population" aggregator="avg" />
-    <Measure name="% Non-white" column="percent_non_white" aggregator="avg" />
-    <Measure name="% Hispanic" column="percent_hispanic" aggregator="avg" />
-    <Measure name="% Black" column="percent_black" aggregator="avg" />
-    <Measure name="% Asian " column="percent_asian" aggregator="avg" />
-    <Measure name="% American Indian/Alaska Native" column="percent_american_indian_alaska_native" aggregator="avg" />
-    <Measure name="% Population Uninsured - JSI" column="percent_population_uninsured_jsi" aggregator="avg" />
-    <Measure name="% Population with Medicaid and Other Pub Ins" column="percent_population_with_medicaid_and_other_pub_ins" aggregator="avg" />
-    <Measure name="% Population with Medicare and Priv Ins" column="percent_population_with_medicare_and_priv_ins" aggregator="avg" />
-    <Measure name="% Pop Not Employed" column="percent_pop_not_employed" aggregator="avg" />
-    <Measure name="% Pop with Limited English Proficiency" column="percent_pop_with_limited_english_proficiency" aggregator="avg" />
-    <Measure name="% Pop with Less Than High School Education" column="percent_pop_with_less_than_high_school_education" aggregator="avg" />
-    <Measure name="% Population Uninsured - RGC" column="percent_population_uninsured_rgc" aggregator="avg" />
+    <Measure name="Percentage Patients Uninsured" column="percent_patients_uninsured" aggregator="avg" />
+    <Measure name="Percentage Patients with Medicaid and Other Pub Ins" column="percent_patients_with_medicaid_and_other_pub_ins" aggregator="avg" />
+    <Measure name="Percentage Patients with Medicare and Priv Ins" column="percent_patients_with_medicare_and_priv_ins" aggregator="avg" />
+    <Measure name="Percentage Population in Poverty" column="percent_population_in_poverty" aggregator="avg" />
+    <Measure name="Percentage Low-Income Population" column="percent_low_income_population" aggregator="avg" />
+    <Measure name="Percentage Non-white" column="percent_non_white" aggregator="avg" />
+    <Measure name="Percentage Hispanic" column="percent_hispanic" aggregator="avg" />
+    <Measure name="Percentage Black" column="percent_black" aggregator="avg" />
+    <Measure name="Percentage Asian " column="percent_asian" aggregator="avg" />
+    <Measure name="Percentage American Indian/Alaska Native" column="percent_american_indian_alaska_native" aggregator="avg" />
+    <Measure name="Percentage Population Uninsured - JSI" column="percent_population_uninsured_jsi" aggregator="avg" />
+    <Measure name="Percentage Population with Medicaid and Other Pub Ins" column="percent_population_with_medicaid_and_other_pub_ins" aggregator="avg" />
+    <Measure name="Percentage Population with Medicare and Priv Ins" column="percent_population_with_medicare_and_priv_ins" aggregator="avg" />
+    <Measure name="Percentage Pop Not Employed" column="percent_pop_not_employed" aggregator="avg" />
+    <Measure name="Percentage Pop with Limited English Proficiency" column="percent_pop_with_limited_english_proficiency" aggregator="avg" />
+    <Measure name="Percentage Pop with Less Than High School Education" column="percent_pop_with_less_than_high_school_education" aggregator="avg" />
+    <Measure name="Percentage Population Uninsured - RGC" column="percent_population_uninsured_rgc" aggregator="avg" />
     <Measure name="Low Birth Weight Rate" column="low_birth_weight_rate" aggregator="avg" />
     <Measure name="Age-Adjusted Mortality Rate (per 100,000)" column="age_adjusted_mortality_rate_per_100000" aggregator="avg" />
-    <Measure name="% Adults Ever Told They Have Diabetes" column="percent_adults_ever_told_they_have_diabetes" aggregator="avg" />
-    <Measure name="% Adults Ever Told They Have High Blood Pressure" column="percent_adults_ever_told_they_have_high_blood_pressure" aggregator="avg" />
-    <Measure name="% Adults Who Are Obese" column="percent_adults_who_are_obese" aggregator="avg" />
-    <Measure name="% Adults with No Dental Visit in Past Year" column="percent_adults_with_no_dental_visit_in_past_year" aggregator="avg" />
-    <Measure name="% Adults Who Have Delayed or Not Sought Care Due to High Cost" column="percent_adults_who_have_delayed_or_not_sought_care_due_to_high_cost" aggregator="avg" />
-    <Measure name="% Adults with No Usual Source of Care" column="percent_adults_with_no_usual_source_of_care" aggregator="avg" />
-    <Measure name="% Uninsured Population Below 100% FPL" column="percent_uninsured_population_below_100_percent_fpl" aggregator="avg" />
-    <Measure name="% Uninsured Population Below 138% FPL" column="percent_uninsured_population_below_138_percent_fpl" aggregator="avg" />
-    <Measure name="% Uninsured Population Below 200% FPL" column="percent_uninsured_population_below_200_percent_fpl" aggregator="avg" />
-    <Measure name="% Uninsured Population at 100%-400% FPL" column="percent_uninsured_population_at_100_percent_400_percent_fpl" aggregator="avg" />
-    <Measure name="% Uninsured Population at 138%-400% FPL" column="percent_uninsured_population_at_138_percent_400_percent_fpl" aggregator="avg" />
+    <Measure name="Percentage Adults Ever Told They Have Diabetes" column="percent_adults_ever_told_they_have_diabetes" aggregator="avg" />
+    <Measure name="Percentage Adults Ever Told They Have High Blood Pressure" column="percent_adults_ever_told_they_have_high_blood_pressure" aggregator="avg" />
+    <Measure name="Percentage Adults Who Are Obese" column="percent_adults_who_are_obese" aggregator="avg" />
+    <Measure name="Percentage Adults with No Dental Visit in Past Year" column="percent_adults_with_no_dental_visit_in_past_year" aggregator="avg" />
+    <Measure name="Percentage Adults Who Have Delayed or Not Sought Care Due to High Cost" column="percent_adults_who_have_delayed_or_not_sought_care_due_to_high_cost" aggregator="avg" />
+    <Measure name="Percentage Adults with No Usual Source of Care" column="percent_adults_with_no_usual_source_of_care" aggregator="avg" />
+    <Measure name="Percentage Uninsured Population Below 100 Percent FPL" column="percent_uninsured_population_below_100_percent_fpl" aggregator="avg" />
+    <Measure name="Percentage Uninsured Population Below 138 Percent FPL" column="percent_uninsured_population_below_138_percent_fpl" aggregator="avg" />
+    <Measure name="Percentage Uninsured Population Below 200 Percent FPL" column="percent_uninsured_population_below_200_percent_fpl" aggregator="avg" />
+    <Measure name="Percentage Uninsured Population at 100 Percent - 400 Percent FPL" column="percent_uninsured_population_at_100_percent_400_percent_fpl" aggregator="avg" />
+    <Measure name="Percentage Uninsured Population at 138 Percent - 400 Percent FPL" column="percent_uninsured_population_at_138_percent_400_percent_fpl" aggregator="avg" />
 </Cube>
 <Cube name="MDC - Incarceration">
     <Annotations>
