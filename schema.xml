@@ -799,15 +799,15 @@
 
     <Measure name="Farmers' markets" column="fmrkt" aggregator="sum" />
     <Measure name="Farmers' markets/1000 pop" column="fmrktpth" aggregator="avg" />
-    <Measure name="Children, low access to store (percent)" column="pct_laccess_child" aggregator="avg" />
-    <Measure name="Seniors, low access to store (percent)" column="pct_laccess_seniors" aggregator="avg" />
-    <Measure name="White, low access to store (percent)" column="pct_laccess_white" aggregator="avg" />
-    <Measure name="Black, low access to store (percent)" column="pct_laccess_black" aggregator="avg" />
-    <Measure name="Hispanic ethnicity, low access to store (percent)" column="pct_laccess_hisp" aggregator="avg" />
-    <Measure name="Asian, low access to store (percent)" column="pct_laccess_nhasian" aggregator="avg" />
-    <Measure name="American Indian or Alaska Native, low access to store (percent)" column="pct_laccess_nhna" aggregator="avg" />
-    <Measure name="Hawaiian or Pacific Islander, low access to store (percent)" column="pct_laccess_nhpi" aggregator="avg" />
-    <Measure name="Multiracial, low access to store (percent)" column="pct_laccess_multir" aggregator="avg" />
+    <Measure name="Percent Children with low access to store" column="pct_laccess_child" aggregator="avg" />
+    <Measure name="Percent Seniors with low access to store" column="pct_laccess_seniors" aggregator="avg" />
+    <Measure name="Percent White with low access to store" column="pct_laccess_white" aggregator="avg" />
+    <Measure name="Percent Black with low access to store" column="pct_laccess_black" aggregator="avg" />
+    <Measure name="Percent Hispanic ethnicity with low access to store" column="pct_laccess_hisp" aggregator="avg" />
+    <Measure name="Percent Asian with low access to store" column="pct_laccess_nhasian" aggregator="avg" />
+    <Measure name="Percent American Indian or Alaska Native with low access to store" column="pct_laccess_nhna" aggregator="avg" />
+    <Measure name="Percent Hawaiian or Pacific Islander with low access to store" column="pct_laccess_nhpi" aggregator="avg" />
+    <Measure name="Percent Multiracial with low access to store" column="pct_laccess_multir" aggregator="avg" />
     <Measure name="Grocery stores" column="groc" aggregator="sum" />
     <Measure name="Grocery stores/1000 pop" column="grocpth" aggregator="avg" />
     <Measure name="Supercenters and club stores" column="superc" aggregator="sum" />
@@ -9316,7 +9316,7 @@
     <Measure name="Percentage Pop with Less Than High School Education" column="percent_pop_with_less_than_high_school_education" aggregator="avg" />
     <Measure name="Percentage Population Uninsured - RGC" column="percent_population_uninsured_rgc" aggregator="avg" />
     <Measure name="Low Birth Weight Rate" column="low_birth_weight_rate" aggregator="avg" />
-    <Measure name="Age-Adjusted Mortality Rate (per 100,000)" column="age_adjusted_mortality_rate_per_100000" aggregator="avg" />
+    <Measure name="Age-Adjusted Mortality Rate (per 100000)" column="age_adjusted_mortality_rate_per_100000" aggregator="avg" />
     <Measure name="Percentage Adults Ever Told They Have Diabetes" column="percent_adults_ever_told_they_have_diabetes" aggregator="avg" />
     <Measure name="Percentage Adults Ever Told They Have High Blood Pressure" column="percent_adults_ever_told_they_have_high_blood_pressure" aggregator="avg" />
     <Measure name="Percentage Adults Who Are Obese" column="percent_adults_who_are_obese" aggregator="avg" />

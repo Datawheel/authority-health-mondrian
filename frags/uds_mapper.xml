@@ -67,7 +67,7 @@
     <Measure name="Percentage Pop with Less Than High School Education" column="percent_pop_with_less_than_high_school_education" aggregator="avg" />
     <Measure name="Percentage Population Uninsured - RGC" column="percent_population_uninsured_rgc" aggregator="avg" />
     <Measure name="Low Birth Weight Rate" column="low_birth_weight_rate" aggregator="avg" />
-    <Measure name="Age-Adjusted Mortality Rate (per 100,000)" column="age_adjusted_mortality_rate_per_100000" aggregator="avg" />
+    <Measure name="Age-Adjusted Mortality Rate (per 100000)" column="age_adjusted_mortality_rate_per_100000" aggregator="avg" />
     <Measure name="Percentage Adults Ever Told They Have Diabetes" column="percent_adults_ever_told_they_have_diabetes" aggregator="avg" />
     <Measure name="Percentage Adults Ever Told They Have High Blood Pressure" column="percent_adults_ever_told_they_have_high_blood_pressure" aggregator="avg" />
     <Measure name="Percentage Adults Who Are Obese" column="percent_adults_who_are_obese" aggregator="avg" />
