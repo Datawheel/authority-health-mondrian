@@ -27,9 +27,14 @@
         </Hierarchy>
     </Dimension>
 
+    <!-- Multiple separate cubes -->
+    <!-- dentists by gender -->
+    <!-- dentists by organization -->
+
     <Measure name="Dentists with NPI" column="npi_total" aggregator="sum" />
     <Measure name="Male Dentists with NPI" column="npi_gender_male" aggregator="sum" />
     <Measure name="Female Dentists with NPI" column="npi_gender_female" aggregator="sum" />
+
     <Measure name="Total Dentists in Private Practice" column="priv_practice_total" aggregator="sum" />
     <Measure name="Total Dentists in Private Practice, Full-Time" column="priv_practice_ft" aggregator="sum" />
     <Measure name="Total Dentists in Private Practice, Part-Time" column="priv_practice_pt" aggregator="sum" />
@@ -38,6 +43,7 @@
     <Measure name="Total Dentists with Unknown Gender in Private Practice" column="priv_practice_gender_unknown" aggregator="sum" />
     <Measure name="Total GPs and Pediatric Dentists in Private Practice" column="priv_practice_gps_and_ped" aggregator="sum" />
     <Measure name="Total Other Specialty Dentists in Private Practice" column="priv_practice_other_specialties" aggregator="sum" />
+
     <Measure name="Dentists Seeking Employment" column="status_seeking_employment" aggregator="sum" />
     <Measure name="Dentists with Another Occupation" column="status_other_occupation" aggregator="sum" />
     <Measure name="Dentists No Longer in Practice" column="status_inactive" aggregator="sum" />
@@ -49,6 +55,7 @@
     <Measure name="Dentists in Armed Forces and Other Federal Service" column="cat_fed_service" aggregator="sum" />
     <Measure name="Dental School Faculty Dentists" column="cat_dental_school_faculty" aggregator="sum" />
     <Measure name="Part-Time Faculty or Part-Time Practice Dentists" column="cat_pt_faculty_or_practice" aggregator="sum" />
+
     <Measure name="Active Dentists Age less than 35" column="age_35_or_less" aggregator="sum" />
     <Measure name="Active Dentists Age 35 to 44" column="age_35_44" aggregator="sum" />
     <Measure name="Active Dentists Age 45 to 54" column="age_45_54" aggregator="sum" />

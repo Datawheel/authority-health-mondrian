@@ -27,12 +27,22 @@
         </Hierarchy>
     </Dimension>
 
+    <Dimension name="Age">
+        <Annotations>
+            <Annotation name="dim_type">AGE</Annotation>
+        </Annotations>
+        <!-- Adult and child -->
+    </Dimension>
+
+    <!-- Age drilldowns -->
     <Measure name="Population" column="population" aggregator="avg" />
     <Measure name="Population Under 18" column="population_under_18" aggregator="sum" />
+
     <Measure name="Adult Food Insecurity Rate" column="adult_food_insecurity_rate" aggregator="avg" />
     <Measure name="Estimated Total Food Insecure Adults" column="estimated_food_insecure_adults" aggregator="sum" />
+    <Measure name="Percent of Adults Eligible for Federal Nuttrition Assistance" column="adults_pct_federal_nutrition_assistance_eligible" aggregator="avg" />
+
     <Measure name="Child Food Insecurity Rate" column="child_food_insecurity_rate" aggregator="avg" />
     <Measure name="Estimated Total Food Insecure Children" column="estimated_food_insecure_children" aggregator="sum" />
-    <Measure name="Percent of Adults Eligible for Federal Nuttrition Assistance" column="adults_pct_federal_nutrition_assistance_eligible" aggregator="avg" />
     <Measure name="Percent of Children Eligible for Federal Nuttrition Assistance" column="children_pct_federal_nutrition_assistance_eligible" aggregator="avg" />
 </Cube>

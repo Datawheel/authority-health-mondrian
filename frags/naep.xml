@@ -35,25 +35,32 @@
             <Level name="Grade" column="grade" type="String" uniqueMembers="true" />
         </Hierarchy>
     </Dimension>
-    
+
     <Measure name="Reading Score Average" column="reading_score_average" aggregator="avg" />
     <Measure name="Reading Score National Average" column="reading_score_national_average" aggregator="avg" />
     <Measure name="Reading Score Michigan Average" column="reading_score_michigan_average" aggregator="avg" />
+
     <Measure name="Reading Score Race - Black" column="reading_score_race_black" aggregator="avg" />
     <Measure name="Reading Score Race - Hispanic" column="reading_score_race_hispanic" aggregator="avg" />
+    
     <Measure name="Reading Score Gender - Male" column="reading_score_gender_male" aggregator="avg" />
     <Measure name="Reading Score Gender - Female" column="reading_score_gender_female" aggregator="avg" />
+    
     <Measure name="Reading Score NSLP Eligible" column="reading_score_nslp_eligible" aggregator="avg" />
     <Measure name="Reading Score NSLP Ineligible" column="reading_score_nslp_ineligible" aggregator="avg" />
+    
     <Measure name="Reading Score Parent edu - No high school" column="reading_score_edu_no_high_school" aggregator="avg" />
     <Measure name="Reading Score Parent edu - High school" column="reading_score_edu_high_school" aggregator="avg" />
     <Measure name="Reading Score Parent edu - Some college" column="reading_score_edu_some_college" aggregator="avg" />
     <Measure name="Reading Score Parent edu - College" column="reading_score_edu_college" aggregator="avg" />
     <Measure name="Reading Score Parent edu - Unknown" column="reading_score_edu_unknown" aggregator="avg" />
+    
     <Measure name="Reading Score Disability - Yes" column="reading_score_disabilities" aggregator="avg" />
     <Measure name="Reading Score Disability - No" column="reading_score_no_disabilities" aggregator="avg" />
+    
     <Measure name="Reading Score ELL - Yes" column="reading_score_ell" aggregator="avg" />
     <Measure name="Reading Score ELL - No" column="reading_score_not_ell" aggregator="avg" />
+    
     <Measure name="Reading Score Percent Proficient - Detroit" column="reading_score_proficient_percent" aggregator="avg" />
     <Measure name="Reading Score Percent Proficient - National" column="reading_score_national_proficient_percent" aggregator="avg" />
     <Measure name="Reading Score Percent Proficient - Michigan" column="reading_score_michigan_proficient_percent" aggregator="avg" />

@@ -32,9 +32,15 @@
     </Dimension>
 
     <Measure name="CoC Name" column="coc_name" datatype="String" caption="CoC Name" aggregator="max" />
+
+    <!-- Make a drilldown -->
+    <!-- Will be pretty deep, as sheltered ... adds up to sheltered -->
+    <!-- Age buckets as dimension -->
+
     <Measure name="Total Homeless" column="total_homeless" aggregator="sum" />
     <Measure name="Sheltered Homeless" column="sheltered_homeless" aggregator="sum" />
     <Measure name="Unsheltered Homeless" column="unsheltered_homeless" aggregator="sum" />
+
     <Measure name="Homeless Individuals" column="homeless_individuals" aggregator="sum" />
     <Measure name="Sheltered Homeless Individuals" column="sheltered_homeless_individuals" aggregator="sum" />
     <Measure name="Unsheltered Homeless Individuals" column="unsheltered_homeless_individuals" aggregator="sum" />
@@ -53,6 +59,7 @@
     <Measure name="Homeless Veterans" column="homeless_veterans" aggregator="sum" />
     <Measure name="Sheltered Homeless Veterans" column="sheltered_homeless_veterans" aggregator="sum" />
     <Measure name="Unsheltered Homeless Veterans" column="unsheltered_homeless_veterans" aggregator="sum" />
+
     <Measure name="Homeless Unaccompanied Youth (Under 25)" column="homeless_unaccompanied_youth_under_25" aggregator="sum" />
     <Measure name="Sheltered Homeless Unaccompanied Youth (Under 25)" column="sheltered_homeless_unaccompanied_youth_under_25" aggregator="sum" />
     <Measure name="Unsheltered Homeless Unaccompanied Youth (Under 25)" column="unsheltered_homeless_unaccompanied_youth_under_25" aggregator="sum" />

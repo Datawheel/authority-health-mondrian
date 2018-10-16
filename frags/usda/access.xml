@@ -1,4 +1,4 @@
-<Cube name="USDA">
+<Cube name="USDA - Access">
     <Annotations>
         <Annotation name="source_name">United State Department of Agriculture</Annotation>
         <Annotation name="source_link">https://www.ers.usda.gov/</Annotation>
@@ -6,7 +6,7 @@
         <Annotation name="topic">Environmental</Annotation>
     </Annotations>
 
-    <Table name="usda" schema="usda"/>
+    <Table name="usda" schema="usda_access"/>
 
     <Dimension name="Year">
         <Annotations>
@@ -27,10 +27,22 @@
         </Hierarchy>
     </Dimension>
 
-    <Measure name="Farmers' markets" column="fmrkt" aggregator="sum" />
-    <Measure name="Farmers' markets/1000 pop" column="fmrktpth" aggregator="avg" />
+    <Dimension name="Age">
+        <Annotations>
+            <Annotation name="dim_type">AGE</Annotation>
+        </Annotations>
+    </Dimension>
+
+    <Dimension name="Race">
+        <Annotations>
+            <Annotation name="dim_type">RACE</Annotation>
+        </Annotations>
+    </Dimension>
+
+    <!-- Age -->
     <Measure name="Percent Children with low access to store" column="pct_laccess_child" aggregator="avg" />
     <Measure name="Percent Seniors with low access to store" column="pct_laccess_seniors" aggregator="avg" />
+    <!-- Race -->
     <Measure name="Percent White with low access to store" column="pct_laccess_white" aggregator="avg" />
     <Measure name="Percent Black with low access to store" column="pct_laccess_black" aggregator="avg" />
     <Measure name="Percent Hispanic ethnicity with low access to store" column="pct_laccess_hisp" aggregator="avg" />
@@ -38,20 +50,4 @@
     <Measure name="Percent American Indian or Alaska Native with low access to store" column="pct_laccess_nhna" aggregator="avg" />
     <Measure name="Percent Hawaiian or Pacific Islander with low access to store" column="pct_laccess_nhpi" aggregator="avg" />
     <Measure name="Percent Multiracial with low access to store" column="pct_laccess_multir" aggregator="avg" />
-    <Measure name="Grocery stores" column="groc" aggregator="sum" />
-    <Measure name="Grocery stores/1000 pop" column="grocpth" aggregator="avg" />
-    <Measure name="Supercenters and club stores" column="superc" aggregator="sum" />
-    <Measure name="Supercenters and club stores/1000 pop" column="supercpth" aggregator="avg" />
-    <Measure name="Convenience stores" column="convs" aggregator="sum" />
-    <Measure name="Convenience stores/1000 pop" column="convspth" aggregator="avg" />
-    <Measure name="Specialized food stores" column="specs" aggregator="sum" />
-    <Measure name="Specialized food stores/1000 pop" column="specspth" aggregator="avg" />
-    <Measure name="SNAP-authorized stores" column="snaps" aggregator="sum" />
-    <Measure name="SNAP-authorized stores/1000 pop" column="snapspth" aggregator="avg" />
-    <Measure name="WIC-authorized stores" column="wics" aggregator="sum" />
-    <Measure name="WIC-authorized stores/1000 pop" column="wicspth" aggregator="avg" />
-    <Measure name="Fast-food restaurants" column="ffr" aggregator="sum" />
-    <Measure name="Fast-food restaurants/1000 pop" column="ffrpth" aggregator="avg" />
-    <Measure name="Full-service restaurants" column="fsr" aggregator="sum" />
-    <Measure name="Full-service restaurants/1000 pop" column="fsrpth" aggregator="avg" />
 </Cube>

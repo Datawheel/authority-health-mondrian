@@ -54,11 +54,14 @@
     <Measure name="Percentage Patients with Medicare and Priv Ins" column="percent_patients_with_medicare_and_priv_ins" aggregator="avg" />
     <Measure name="Percentage Population in Poverty" column="percent_population_in_poverty" aggregator="avg" />
     <Measure name="Percentage Low-Income Population" column="percent_low_income_population" aggregator="avg" />
+    
+    <!-- Race -->
     <Measure name="Percentage Non-white" column="percent_non_white" aggregator="avg" />
     <Measure name="Percentage Hispanic" column="percent_hispanic" aggregator="avg" />
     <Measure name="Percentage Black" column="percent_black" aggregator="avg" />
     <Measure name="Percentage Asian " column="percent_asian" aggregator="avg" />
     <Measure name="Percentage American Indian/Alaska Native" column="percent_american_indian_alaska_native" aggregator="avg" />
+
     <Measure name="Percentage Population Uninsured - JSI" column="percent_population_uninsured_jsi" aggregator="avg" />
     <Measure name="Percentage Population with Medicaid and Other Pub Ins" column="percent_population_with_medicaid_and_other_pub_ins" aggregator="avg" />
     <Measure name="Percentage Population with Medicare and Priv Ins" column="percent_population_with_medicare_and_priv_ins" aggregator="avg" />
