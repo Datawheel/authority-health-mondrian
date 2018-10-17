@@ -6,7 +6,7 @@
         <Annotation name="topic">Crime</Annotation>   
     </Annotations>
 
-    <Table name="fbi_crime" schema="fbi_crime"/>
+    <Table name="ucr_crimes" schema="fbi_crime"/>
      
     <Dimension name="Year">
         <Annotations>
@@ -31,20 +31,12 @@
         <Annotations>
             <Annotation name="dim_type">CRIME_TYPE</Annotation>
         </Annotations>
+         <Hierarchy hasAll="true">
+            <Level name="Type of Crime" column="crime_type" uniqueMembers="true"/>
+            <Level name="Crime" column="crime" uniqueMembers="true"/>
+        </Hierarchy>
     </Dimension>
-    
-    <!-- Type of crime is a drilldown -->
-    <Measure name="Population" column="population" aggregator="sum" />
 
-    <!-- <Measure name="Total Violent Crimes" column="violent_crime_total" aggregator="sum" /> -->
-    <Measure name="Murder" column="murder" aggregator="sum" />
-    <Measure name="Rape" column="rape" aggregator="sum" />
-    <Measure name="Robbery" column="robbery" aggregator="sum" />
-    <Measure name="Aggravated Assault" column="aggravated_assault" aggregator="sum" />
-    
-    <!-- <Measure name="Total Property Crimes" column="property_crime_total" aggregator="sum" /> -->
-    <Measure name="Burglary" column="burglary" aggregator="sum" />
-    <Measure name="Larceny-Theft" column="larceny_theft" aggregator="sum" />
-    <Measure name="Motor Vehicle Theft" column="motor_vehicle_theft" aggregator="sum" />
-    <Measure name="Arson" column="arson" aggregator="sum" />
+    <Measure name="Population" column="population" aggregator="avg" />
+    <Measure name="Number" column="number" aggregator="sum" />
 </Cube>

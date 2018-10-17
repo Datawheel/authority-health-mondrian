@@ -37,7 +37,6 @@
     <!-- Will be pretty deep, as sheltered ... adds up to sheltered -->
     <!-- Age buckets as dimension -->
 
-
     <!-- CATEGORY: Homeless -->
     <!-- <Measure name="Total Homeless" column="total_homeless" aggregator="sum" /> -->
     <!-- <Measure name="Sheltered Homeless" column="sheltered_homeless" aggregator="sum" /> -->
@@ -49,9 +48,12 @@
     <Measure name="Sheltered Homeless People in Families" column="sheltered_homeless_people_in_families" aggregator="sum" />
     <Measure name="Unsheltered Homeless People in Families" column="unsheltered_homeless_people_in_families" aggregator="sum" />
 
+    <!-- CATEGORY: Homeless Veterans -->
+    <!-- <Measure name="Homeless Veterans" column="homeless_veterans" aggregator="sum" /> -->
+    <Measure name="Sheltered Homeless Veterans" column="sheltered_homeless_veterans" aggregator="sum" />
+    <Measure name="Unsheltered Homeless Veterans" column="unsheltered_homeless_veterans" aggregator="sum" />
 
     <!-- CATEGORY: Chronically Homeless -->
-    <!-- NOTE: Not adding up correctly -->
     <!-- <Measure name="Chronically Homeless" column="chronically_homeless" aggregator="sum" /> -->
     <!-- <Measure name="Sheltered Chronically Homeless" column="sheltered_chronically_homeless" aggregator="sum" /> -->
     <!-- <Measure name="Unsheltered Chronically Homeless" column="unsheltered_chronically_homeless" aggregator="sum" /> -->
@@ -62,37 +64,25 @@
     <Measure name="Sheltered Chronically Homeless People in Families" column="sheltered_chronically_homeless_people_in_families" aggregator="sum" />
     <Measure name="Unsheltered Chronically Homeless People in Families" column="unsheltered_chronically_homeless_people_in_families" aggregator="sum" />
 
-
-    <!-- CATEGORY: Homeless Veterans -->
-    <Measure name="Homeless Veterans" column="homeless_veterans" aggregator="sum" />
-    <Measure name="Sheltered Homeless Veterans" column="sheltered_homeless_veterans" aggregator="sum" />
-    <Measure name="Unsheltered Homeless Veterans" column="unsheltered_homeless_veterans" aggregator="sum" />
-
-
-    <!-- CATEGORY: Unaccompanied Homeless -->
-    <Measure name="Homeless Unaccompanied Youth (Under 25)" column="homeless_unaccompanied_youth_under_25" aggregator="sum" />
-    <Measure name="Sheltered Homeless Unaccompanied Youth (Under 25)" column="sheltered_homeless_unaccompanied_youth_under_25" aggregator="sum" />
-    <Measure name="Unsheltered Homeless Unaccompanied Youth (Under 25)" column="unsheltered_homeless_unaccompanied_youth_under_25" aggregator="sum" />
-    
-    <Measure name="Homeless Unaccompanied Children (Under 18)" column="homeless_unaccompanied_children_under_18" aggregator="sum" />
+    <!-- CATEGORY: Unaccompanied Youth -->
+    <!-- <Measure name="Homeless Unaccompanied Youth (Under 25)" column="homeless_unaccompanied_youth_under_25" aggregator="sum" /> -->
+    <!-- <Measure name="Sheltered Homeless Unaccompanied Youth (Under 25)" column="sheltered_homeless_unaccompanied_youth_under_25" aggregator="sum" /> -->
+    <!-- <Measure name="Unsheltered Homeless Unaccompanied Youth (Under 25)" column="unsheltered_homeless_unaccompanied_youth_under_25" aggregator="sum" /> -->
+    <!-- <Measure name="Homeless Unaccompanied Children (Under 18)" column="homeless_unaccompanied_children_under_18" aggregator="sum" /> -->
     <Measure name="Sheltered Homeless Unaccompanied Children (Under 18)" column="sheltered_homeless_unaccompanied_children_under_18" aggregator="sum" />
     <Measure name="Unsheltered Homeless Unaccompanied Children (Under 18)" column="unsheltered_homeless_unaccompanied_children_under_18" aggregator="sum" />
-
-    <Measure name="Homeless Unaccompanied Young Adults (Age 18-24)" column="homeless_unaccompanied_young_adults_age_18_24" aggregator="sum" />
+    <!-- <Measure name="Homeless Unaccompanied Young Adults (Age 18-24)" column="homeless_unaccompanied_young_adults_age_18_24" aggregator="sum" /> -->
     <Measure name="Sheltered Homeless Unaccompanied Young Adults (Age 18-24)" column="sheltered_homeless_unaccompanied_young_adults_age_18_24" aggregator="sum" />
     <Measure name="Unsheltered Homeless Unaccompanied Young Adults (Age 18-24)" column="unsheltered_homeless_unaccompanied_young_adults_age_18_24" aggregator="sum" />
     
-    
-    <!-- CATEGORY: Parenting Homeless -->
-    <Measure name="Parenting Youth (Under 25)" column="parenting_youth_under_25" aggregator="sum" />
-    <Measure name="Sheltered Parenting Youth (Under 25)" column="sheltered_parenting_youth_under_25" aggregator="sum" />
-    <Measure name="Unsheltered Parenting Youth (Under 25)" column="unsheltered_parenting_youth_under_25" aggregator="sum" />
-    
-    <Measure name="Parenting Youth Under 18" column="parenting_youth_under_18" aggregator="sum" />
+    <!-- CATEGORY: Parenting Youth -->
+    <!-- <Measure name="Parenting Youth (Under 25)" column="parenting_youth_under_25" aggregator="sum" /> -->
+    <!-- <Measure name="Sheltered Parenting Youth (Under 25)" column="sheltered_parenting_youth_under_25" aggregator="sum" /> -->
+    <!-- <Measure name="Unsheltered Parenting Youth (Under 25)" column="unsheltered_parenting_youth_under_25" aggregator="sum" /> -->
+    <!-- <Measure name="Parenting Youth Under 18" column="parenting_youth_under_18" aggregator="sum" /> -->
     <Measure name="Sheltered Parenting Youth Under 18" column="sheltered_parenting_youth_under_18" aggregator="sum" />
     <Measure name="Unsheltered Parenting Youth Under 18" column="unsheltered_parenting_youth_under_18" aggregator="sum" />
-    
-    <Measure name="Parenting Youth Age 18-24" column="parenting_youth_age_18_24" aggregator="sum" />
+    <!-- <Measure name="Parenting Youth Age 18-24" column="parenting_youth_age_18_24" aggregator="sum" /> -->
     <Measure name="Sheltered Parenting Youth Age 18-24" column="sheltered_parenting_youth_age_18_24" aggregator="sum" />
     <Measure name="Unsheltered Parenting Youth Age 18-24" column="unsheltered_parenting_youth_age_18_24" aggregator="sum" />
     

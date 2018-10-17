@@ -36,30 +36,40 @@
     <Measure name="Female Dentists with NPI" column="npi_gender_female" aggregator="sum" />
 
     <Measure name="Total Dentists in Private Practice" column="priv_practice_total" aggregator="sum" />
-    <Measure name="Total Dentists in Private Practice, Full-Time" column="priv_practice_ft" aggregator="sum" />
-    <Measure name="Total Dentists in Private Practice, Part-Time" column="priv_practice_pt" aggregator="sum" />
+    <!-- These add up to 'Total Dentists in Private Practice' -->
+    <!-- CATEGORY: Specialty -->
+    <Measure name="Total GPs and Pediatric Dentists in Private Practice" column="priv_practice_gps_and_ped" aggregator="sum" />
+    <Measure name="Total Other Specialty Dentists in Private Practice" column="priv_practice_other_specialties" aggregator="sum" />
+    <!-- These add up to 'Total Dentists in Private Practice' -->
+    <!-- CATEGORY: Sex -->
     <Measure name="Total Male Dentists in Private Practice" column="priv_practice_gender_male" aggregator="sum" />
     <Measure name="Total Female Dentists in Private Practice" column="priv_practice_gender_female" aggregator="sum" />
     <Measure name="Total Dentists with Unknown Gender in Private Practice" column="priv_practice_gender_unknown" aggregator="sum" />
-    <Measure name="Total GPs and Pediatric Dentists in Private Practice" column="priv_practice_gps_and_ped" aggregator="sum" />
-    <Measure name="Total Other Specialty Dentists in Private Practice" column="priv_practice_other_specialties" aggregator="sum" />
-
-    <Measure name="Dentists Seeking Employment" column="status_seeking_employment" aggregator="sum" />
-    <Measure name="Dentists with Another Occupation" column="status_other_occupation" aggregator="sum" />
-    <Measure name="Dentists No Longer in Practice" column="status_inactive" aggregator="sum" />
-    <Measure name="Dentists with Unknown Occupation Type" column="status_unknown" aggregator="sum" />
-    <Measure name="Total Active Dentists" column="status_active" aggregator="sum" />
-    <Measure name="State or Local Government Dentists" column="cat_government" aggregator="sum" />
-    <Measure name="Health Organization Staff Dentists" column="cat_health_org_staff" aggregator="sum" />
-    <Measure name="Grad Student/Resident Dentists" column="cat_grad_student" aggregator="sum" />
-    <Measure name="Dentists in Armed Forces and Other Federal Service" column="cat_fed_service" aggregator="sum" />
-    <Measure name="Dental School Faculty Dentists" column="cat_dental_school_faculty" aggregator="sum" />
-    <Measure name="Part-Time Faculty or Part-Time Practice Dentists" column="cat_pt_faculty_or_practice" aggregator="sum" />
-
+    <!-- These add up to 'Total Dentists in Private Practice' -->
+    <!-- CATEGORY: FT/PT -->
+    <Measure name="Total Dentists in Private Practice, Full-Time" column="priv_practice_ft" aggregator="sum" />
+    <Measure name="Total Dentists in Private Practice, Part-Time" column="priv_practice_pt" aggregator="sum" />
+    <!-- These add up to 'Total Dentists in Private Practice' -->
+    <!-- CATEGORY: Age -->
     <Measure name="Active Dentists Age less than 35" column="age_35_or_less" aggregator="sum" />
     <Measure name="Active Dentists Age 35 to 44" column="age_35_44" aggregator="sum" />
     <Measure name="Active Dentists Age 45 to 54" column="age_45_54" aggregator="sum" />
     <Measure name="Active Dentists Age 55 to 64" column="age_55_64" aggregator="sum" />
     <Measure name="Active Dentists Age 65 or more" column="age_65_or_more" aggregator="sum" />
     <Measure name="Active Dentists Age Unknown" column="age_unknown" aggregator="sum" />
+
+    <Measure name="Dentists Seeking Employment" column="status_seeking_employment" aggregator="sum" />
+    <Measure name="Dentists with Another Occupation" column="status_other_occupation" aggregator="sum" />
+    <Measure name="Dentists No Longer in Practice" column="status_inactive" aggregator="sum" />
+    <!-- Calculate this based on other information -->
+    <Measure name="Dentists with Unknown Occupation Type" column="status_unknown" aggregator="sum" />
+
+    <Measure name="Total Active Dentists" column="status_active" aggregator="sum" />
+    <!-- These add up to 'Total Active Dentists' - 'Total Dentists in Private Practice' -->
+    <Measure name="State or Local Government Dentists" column="cat_government" aggregator="sum" />
+    <Measure name="Health Organization Staff Dentists" column="cat_health_org_staff" aggregator="sum" />
+    <Measure name="Grad Student/Resident Dentists" column="cat_grad_student" aggregator="sum" />
+    <Measure name="Dentists in Armed Forces and Other Federal Service" column="cat_fed_service" aggregator="sum" />
+    <Measure name="Dental School Faculty Dentists" column="cat_dental_school_faculty" aggregator="sum" />
+    <Measure name="Part-Time Faculty or Part-Time Practice Dentists" column="cat_pt_faculty_or_practice" aggregator="sum" />
 </Cube>

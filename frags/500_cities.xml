@@ -32,11 +32,11 @@
         </Hierarchy>
     </Dimension>
 
-    <Dimension name="Condition">
+    <!-- <Dimension name="Condition">
         <Annotations>
             <Annotation name="dim_type">CONDITION</Annotation>
         </Annotations>
-    </Dimension>
+    </Dimension> -->
 
     <Measure name="Population Count" column="population_count" aggregator="sum" />
 

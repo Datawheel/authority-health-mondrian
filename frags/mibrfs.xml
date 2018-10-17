@@ -43,23 +43,18 @@
     <Measure name="Activity Limited 14 Or More Days Sample Frequency" column="activity_limited_14_or_more_days_sample_frequency" aggregator="sum" />
     <Measure name="Activity Limited 14 Or More Days Weighted Frequency" column="activity_limited_14_or_more_days_weighted_frequency" aggregator="sum" />
     <Measure name="Activity Limited 14 Or More Days Weighted Percent" column="activity_limited_14_or_more_days_weighted_percent" aggregator="avg" />
-    
     <Measure name="BMI Healthy Weight Sample Frequency" column="bmi_healthy_weight_sample_frequency" aggregator="sum" />
     <Measure name="BMI Healthy Weight Weighted Frequency" column="bmi_healthy_weight_weighted_frequency" aggregator="sum" />
     <Measure name="BMI Healthy Weight Weighted Percent" column="bmi_healthy_weight_weighted_percent" aggregator="avg" />
-    
     <Measure name="BMI Obese Sample Frequency" column="bmi_obese_sample_frequency" aggregator="sum" />
     <Measure name="BMI Obese Weighted Frequency" column="bmi_obese_weighted_frequency" aggregator="sum" />
     <Measure name="BMI Obese Weighted Percent" column="bmi_obese_weighted_percent" aggregator="avg" />
-    
     <Measure name="BMI Overweight Sample Frequency" column="bmi_overweight_sample_frequency" aggregator="sum" />
     <Measure name="BMI Overweight Weighted Frequency" column="bmi_overweight_weighted_frequency" aggregator="sum" />
     <Measure name="BMI Overweight Weighted Percent" column="bmi_overweight_weighted_percent" aggregator="avg" />
-    
     <Measure name="BMI Underweight Sample Frequency" column="bmi_underweight_sample_frequency" aggregator="sum" />
     <Measure name="BMI Underweight Weighted Frequency" column="bmi_underweight_weighted_frequency" aggregator="sum" />
     <Measure name="BMI Underweight Weighted Percent" column="bmi_underweight_weighted_percent" aggregator="avg" />
-    
     <Measure name="Cardiovascular Disease No Sample Frequency" column="cardiovascular_disease_no_sample_frequency" aggregator="sum" />
     <Measure name="Cardiovascular Disease No Weighted Frequency" column="cardiovascular_disease_no_weighted_frequency" aggregator="sum" />
     <Measure name="Cardiovascular Disease No Weighted Percent" column="cardiovascular_disease_no_weighted_percent" aggregator="avg" />

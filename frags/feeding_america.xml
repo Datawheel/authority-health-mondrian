@@ -27,12 +27,11 @@
         </Hierarchy>
     </Dimension>
 
-    <Dimension name="Age">
+    <!-- <Dimension name="Age">
         <Annotations>
             <Annotation name="dim_type">AGE</Annotation>
         </Annotations>
-        <!-- Adult and child -->
-    </Dimension>
+    </Dimension> -->
 
     <!-- Age drilldowns -->
     <Measure name="Population" column="population" aggregator="avg" />
