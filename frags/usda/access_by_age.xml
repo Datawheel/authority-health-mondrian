@@ -1,0 +1,38 @@
+<Cube name="USDA - Access by Age">
+    <Annotations>
+        <Annotation name="source_name">United State Department of Agriculture</Annotation>
+        <Annotation name="source_link">https://www.ers.usda.gov/</Annotation>
+        <Annotation name="dataset_name">USDA</Annotation>
+        <Annotation name="topic">Environmental</Annotation>
+    </Annotations>
+
+    <Table name="usda" schema="usda_access_by_age"/>
+
+    <Dimension name="Year">
+        <Annotations>
+            <Annotation name="dim_type">TIME</Annotation>
+        </Annotations>
+         <Hierarchy hasAll="true">  
+            <Level name="Year" column="year" type="Numeric" levelType="TimeYears" uniqueMembers="true" />  
+        </Hierarchy> 
+    </Dimension>
+
+    <Dimension foreignKey="fips" name="Geography">
+        <Annotations>
+            <Annotation name="dim_type">GEOGRAPHY</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true" name="County">
+            <Table name="counties" schema="shapes2017"/>
+            <Level name="County" column="geoid" nameColumn="name" uniqueMembers="true" hideMemberIf="IfBlankName" />
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension name="Age">
+        <Annotations>
+            <Annotation name="dim_type">AGE</Annotation>
+        </Annotations>
+    </Dimension>
+
+    <Measure name="Percent Children with low access to store" column="pct_laccess_child" aggregator="avg" />
+    <Measure name="Percent Seniors with low access to store" column="pct_laccess_seniors" aggregator="avg" />
+</Cube>

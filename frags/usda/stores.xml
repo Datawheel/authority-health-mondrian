@@ -31,12 +31,12 @@
         <Annotations>
             <Annotation name="dim_type">STORE_TYPE</Annotation>
         </Annotations>
-        <!-- Local, Stores, Restaurants -->
     </Dimension>
 
+    <!-- Local -->
     <Measure name="Farmers' markets" column="fmrkt" aggregator="sum" />
     <Measure name="Farmers' markets/1000 pop" column="fmrktpth" aggregator="avg" />
-    
+    <!-- Stores -->
     <Measure name="Grocery stores" column="groc" aggregator="sum" />
     <Measure name="Grocery stores/1000 pop" column="grocpth" aggregator="avg" />
     <Measure name="Supercenters and club stores" column="superc" aggregator="sum" />
@@ -45,13 +45,7 @@
     <Measure name="Convenience stores/1000 pop" column="convspth" aggregator="avg" />
     <Measure name="Specialized food stores" column="specs" aggregator="sum" />
     <Measure name="Specialized food stores/1000 pop" column="specspth" aggregator="avg" />
-    
-    <!-- TODO: Do these add up to the total or have they already been accounted for? -->
-    <Measure name="SNAP-authorized stores" column="snaps" aggregator="sum" />
-    <Measure name="SNAP-authorized stores/1000 pop" column="snapspth" aggregator="avg" />
-    <Measure name="WIC-authorized stores" column="wics" aggregator="sum" />
-    <Measure name="WIC-authorized stores/1000 pop" column="wicspth" aggregator="avg" />
-
+    <!-- Restaurants -->
     <Measure name="Fast-food restaurants" column="ffr" aggregator="sum" />
     <Measure name="Fast-food restaurants/1000 pop" column="ffrpth" aggregator="avg" />
     <Measure name="Full-service restaurants" column="fsr" aggregator="sum" />
