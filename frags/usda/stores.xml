@@ -6,7 +6,7 @@
         <Annotation name="topic">Environmental</Annotation>
     </Annotations>
 
-    <Table name="usda" schema="usda_stores"/>
+    <Table name="usda_stores" schema="usda"/>
 
     <Dimension name="Year">
         <Annotations>
@@ -27,27 +27,16 @@
         </Hierarchy>
     </Dimension>
 
-    <Dimension name="Store Type">
+    <Dimension name="Category">
         <Annotations>
-            <Annotation name="dim_type">STORE_TYPE</Annotation>
+            <Annotation name="dim_type">CATEGORY</Annotation>
         </Annotations>
+         <Hierarchy hasAll="true">
+            <Level name="Category" column="category" uniqueMembers="true"/>
+            <Level name="Sub-category" column="sub_category" uniqueMembers="true"/>
+        </Hierarchy>
     </Dimension>
 
-    <!-- Local -->
-    <Measure name="Farmers' markets" column="fmrkt" aggregator="sum" />
-    <Measure name="Farmers' markets/1000 pop" column="fmrktpth" aggregator="avg" />
-    <!-- Stores -->
-    <Measure name="Grocery stores" column="groc" aggregator="sum" />
-    <Measure name="Grocery stores/1000 pop" column="grocpth" aggregator="avg" />
-    <Measure name="Supercenters and club stores" column="superc" aggregator="sum" />
-    <Measure name="Supercenters and club stores/1000 pop" column="supercpth" aggregator="avg" />
-    <Measure name="Convenience stores" column="convs" aggregator="sum" />
-    <Measure name="Convenience stores/1000 pop" column="convspth" aggregator="avg" />
-    <Measure name="Specialized food stores" column="specs" aggregator="sum" />
-    <Measure name="Specialized food stores/1000 pop" column="specspth" aggregator="avg" />
-    <!-- Restaurants -->
-    <Measure name="Fast-food restaurants" column="ffr" aggregator="sum" />
-    <Measure name="Fast-food restaurants/1000 pop" column="ffrpth" aggregator="avg" />
-    <Measure name="Full-service restaurants" column="fsr" aggregator="sum" />
-    <Measure name="Full-service restaurants/1000 pop" column="fsrpth" aggregator="avg" />
+    <Measure name="Number" column="number" aggregator="sum" />
+    <Measure name="Number per 1000 pop" column="number_pth" aggregator="avg" />
 </Cube>

@@ -1,4 +1,4 @@
-<Cube name="USDA - Access by Race">
+<Cube name="USDA - Low-Access by Race">
     <Annotations>
         <Annotation name="source_name">United State Department of Agriculture</Annotation>
         <Annotation name="source_link">https://www.ers.usda.gov/</Annotation>
@@ -6,7 +6,7 @@
         <Annotation name="topic">Environmental</Annotation>
     </Annotations>
 
-    <Table name="usda" schema="usda_access_by_race"/>
+    <Table name="usda_access_by_race" schema="usda"/>
 
     <Dimension name="Year">
         <Annotations>
@@ -31,13 +31,10 @@
         <Annotations>
             <Annotation name="dim_type">RACE</Annotation>
         </Annotations>
+        <Hierarchy hasAll="true">  
+            <Level name="Race Group" column="race_group" uniqueMembers="true" />  
+        </Hierarchy> 
     </Dimension>
 
-    <Measure name="Percent White with low access to store" column="pct_laccess_white" aggregator="avg" />
-    <Measure name="Percent Black with low access to store" column="pct_laccess_black" aggregator="avg" />
-    <Measure name="Percent Hispanic ethnicity with low access to store" column="pct_laccess_hisp" aggregator="avg" />
-    <Measure name="Percent Asian with low access to store" column="pct_laccess_nhasian" aggregator="avg" />
-    <Measure name="Percent American Indian or Alaska Native with low access to store" column="pct_laccess_nhna" aggregator="avg" />
-    <Measure name="Percent Hawaiian or Pacific Islander with low access to store" column="pct_laccess_nhpi" aggregator="avg" />
-    <Measure name="Percent Multiracial with low access to store" column="pct_laccess_multir" aggregator="avg" />
+    <Measure name="Percent" column="percent" aggregator="avg" />
 </Cube>

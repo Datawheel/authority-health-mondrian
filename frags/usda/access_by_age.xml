@@ -1,4 +1,4 @@
-<Cube name="USDA - Access by Age">
+<Cube name="USDA - Low-Access by Age">
     <Annotations>
         <Annotation name="source_name">United State Department of Agriculture</Annotation>
         <Annotation name="source_link">https://www.ers.usda.gov/</Annotation>
@@ -6,7 +6,7 @@
         <Annotation name="topic">Environmental</Annotation>
     </Annotations>
 
-    <Table name="usda" schema="usda_access_by_age"/>
+    <Table name="usda_access_by_age" schema="usda"/>
 
     <Dimension name="Year">
         <Annotations>
@@ -31,8 +31,10 @@
         <Annotations>
             <Annotation name="dim_type">AGE</Annotation>
         </Annotations>
+        <Hierarchy hasAll="true">  
+            <Level name="Age Group" column="age_group" uniqueMembers="true" />  
+        </Hierarchy> 
     </Dimension>
 
-    <Measure name="Percent Children with low access to store" column="pct_laccess_child" aggregator="avg" />
-    <Measure name="Percent Seniors with low access to store" column="pct_laccess_seniors" aggregator="avg" />
+    <Measure name="Percent" column="percent" aggregator="avg" />
 </Cube>

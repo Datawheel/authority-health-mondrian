@@ -1,4 +1,4 @@
-<Cube name="USDA - Nutrition Assistance">
+<Cube name="USDA - Nutrition Assistance Stores">
     <Annotations>
         <Annotation name="source_name">United State Department of Agriculture</Annotation>
         <Annotation name="source_link">https://www.ers.usda.gov/</Annotation>
@@ -6,13 +6,13 @@
         <Annotation name="topic">Environmental</Annotation>
     </Annotations>
 
-    <Table name="usda" schema="usda_nutrition_assistance"/>
+    <Table name="usda_nutrition_assistance" schema="usda"/>
 
     <Dimension name="Year">
         <Annotations>
             <Annotation name="dim_type">TIME</Annotation>
         </Annotations>
-         <Hierarchy hasAll="true">  
+        <Hierarchy hasAll="true">  
             <Level name="Year" column="year" type="Numeric" levelType="TimeYears" uniqueMembers="true" />  
         </Hierarchy> 
     </Dimension>
@@ -27,14 +27,15 @@
         </Hierarchy>
     </Dimension>
 
-    <Dimension name="Store Type">
+    <Dimension name="Assistance Type">
         <Annotations>
-            <Annotation name="dim_type">STORE_TYPE</Annotation>
+            <Annotation name="dim_type">ASSISTANCE_TYPE</Annotation>
         </Annotations>
+        <Hierarchy hasAll="true">  
+            <Level name="Assistance Type" column="assistance_type" uniqueMembers="true" />
+        </Hierarchy> 
     </Dimension>
 
-    <Measure name="SNAP-authorized stores" column="snaps" aggregator="sum" />
-    <Measure name="SNAP-authorized stores/1000 pop" column="snapspth" aggregator="avg" />
-    <Measure name="WIC-authorized stores" column="wics" aggregator="sum" />
-    <Measure name="WIC-authorized stores/1000 pop" column="wicspth" aggregator="avg" />
+    <Measure name="Number" column="number" aggregator="sum" />
+    <Measure name="Number per 1000 pop" column="number_pth" aggregator="avg" />
 </Cube>
