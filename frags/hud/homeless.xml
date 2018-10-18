@@ -35,7 +35,7 @@
         <Annotations>
             <Annotation name="dim_type">CATEGORY</Annotation>
         </Annotations>
-         <Hierarchy hasAll="true">
+        <Hierarchy hasAll="true" name="Sub-category">
             <Level name="Category" column="category" uniqueMembers="true"/>
             <Level name="Sub-category" column="sub_category" uniqueMembers="true"/>
         </Hierarchy>
