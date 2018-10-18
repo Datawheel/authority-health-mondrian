@@ -47,81 +47,6 @@
       <Level column="geoid" name="County Subdivision" nameColumn="name" uniqueMembers="true"/>
     </Hierarchy>
   </Dimension>
-<Cube name="HRSA">
-    <Annotations>
-        <Annotation name="source_name">Health Resources and Services Administration</Annotation>
-        <Annotation name="source_link">https://datawarehouse.hrsa.gov/topics/ahrf.aspx</Annotation>
-        <Annotation name="dataset_name">HRSA</Annotation>
-        <Annotation name="topic">Health</Annotation>
-    </Annotations>
-
-    <Table name="hrsa" schema="hrsa"/>
-
-    <Dimension name="Year">
-        <Annotations>
-            <Annotation name="dim_type">TIME</Annotation>
-        </Annotations>
-         <Hierarchy hasAll="true">
-            <Level name="Year" column="year" type="Numeric" levelType="TimeYears" uniqueMembers="true" />
-        </Hierarchy>
-    </Dimension>
-
-    <Dimension foreignKey="county_fips" name="Geography">
-        <Annotations>
-            <Annotation name="dim_type">GEOGRAPHY</Annotation>
-        </Annotations>
-        <Hierarchy hasAll="true" name="County">
-            <Table name="counties" schema="shapes2017"/>
-            <Level name="County" column="geoid" nameColumn="name" uniqueMembers="true" hideMemberIf="IfBlankName" />
-        </Hierarchy>
-    </Dimension>
-
-    <!-- Multiple separate cubes -->
-    <!-- dentists by gender -->
-    <!-- dentists by organization -->
-
-    <Measure name="Dentists with NPI" column="npi_total" aggregator="sum" />
-    <Measure name="Male Dentists with NPI" column="npi_gender_male" aggregator="sum" />
-    <Measure name="Female Dentists with NPI" column="npi_gender_female" aggregator="sum" />
-
-    <Measure name="Total Dentists in Private Practice" column="priv_practice_total" aggregator="sum" />
-    <!-- These add up to 'Total Dentists in Private Practice' -->
-    <!-- CATEGORY: Specialty -->
-    <Measure name="Total GPs and Pediatric Dentists in Private Practice" column="priv_practice_gps_and_ped" aggregator="sum" />
-    <Measure name="Total Other Specialty Dentists in Private Practice" column="priv_practice_other_specialties" aggregator="sum" />
-    <!-- These add up to 'Total Dentists in Private Practice' -->
-    <!-- CATEGORY: Sex -->
-    <Measure name="Total Male Dentists in Private Practice" column="priv_practice_gender_male" aggregator="sum" />
-    <Measure name="Total Female Dentists in Private Practice" column="priv_practice_gender_female" aggregator="sum" />
-    <Measure name="Total Dentists with Unknown Gender in Private Practice" column="priv_practice_gender_unknown" aggregator="sum" />
-    <!-- These add up to 'Total Dentists in Private Practice' -->
-    <!-- CATEGORY: FT/PT -->
-    <Measure name="Total Dentists in Private Practice, Full-Time" column="priv_practice_ft" aggregator="sum" />
-    <Measure name="Total Dentists in Private Practice, Part-Time" column="priv_practice_pt" aggregator="sum" />
-    <!-- These add up to 'Total Dentists in Private Practice' -->
-    <!-- CATEGORY: Age -->
-    <Measure name="Active Dentists Age less than 35" column="age_35_or_less" aggregator="sum" />
-    <Measure name="Active Dentists Age 35 to 44" column="age_35_44" aggregator="sum" />
-    <Measure name="Active Dentists Age 45 to 54" column="age_45_54" aggregator="sum" />
-    <Measure name="Active Dentists Age 55 to 64" column="age_55_64" aggregator="sum" />
-    <Measure name="Active Dentists Age 65 or more" column="age_65_or_more" aggregator="sum" />
-    <Measure name="Active Dentists Age Unknown" column="age_unknown" aggregator="sum" />
-
-    <Measure name="Dentists Seeking Employment" column="status_seeking_employment" aggregator="sum" />
-    <Measure name="Dentists with Another Occupation" column="status_other_occupation" aggregator="sum" />
-    <Measure name="Dentists No Longer in Practice" column="status_inactive" aggregator="sum" />
-    <!-- Calculate this based on other information -->
-    <Measure name="Dentists with Unknown Occupation Type" column="status_unknown" aggregator="sum" />
-
-    <Measure name="Total Active Dentists" column="status_active" aggregator="sum" />
-    <!-- These add up to 'Total Active Dentists' - 'Total Dentists in Private Practice' -->
-    <Measure name="State or Local Government Dentists" column="cat_government" aggregator="sum" />
-    <Measure name="Health Organization Staff Dentists" column="cat_health_org_staff" aggregator="sum" />
-    <Measure name="Grad Student/Resident Dentists" column="cat_grad_student" aggregator="sum" />
-    <Measure name="Dentists in Armed Forces and Other Federal Service" column="cat_fed_service" aggregator="sum" />
-    <Measure name="Dental School Faculty Dentists" column="cat_dental_school_faculty" aggregator="sum" />
-    <Measure name="Part-Time Faculty or Part-Time Practice Dentists" column="cat_pt_faculty_or_practice" aggregator="sum" />
-</Cube>
 <Cube name="CDC Wonder - Diabetes">
     <Annotations>
         <Annotation name="source_name">CDC Wonder</Annotation>
@@ -9513,6 +9438,250 @@
     <Measure name="Probation" column="probation" aggregator="sum" />
     <Measure name="Other" column="other" aggregator="sum" />
 </Cube>
+<Cube name="HRSA - Dentists in Private Practice by Age">
+    <Annotations>
+        <Annotation name="source_name">Health Resources and Services Administration</Annotation>
+        <Annotation name="source_link">https://datawarehouse.hrsa.gov/topics/ahrf.aspx</Annotation>
+        <Annotation name="dataset_name">HRSA</Annotation>
+        <Annotation name="topic">Health</Annotation>
+    </Annotations>
+
+    <Table name="dentists_in_private_practice_by_age" schema="hrsa"/>
+
+    <Dimension name="Year">
+        <Annotations>
+            <Annotation name="dim_type">TIME</Annotation>
+        </Annotations>
+         <Hierarchy hasAll="true">
+            <Level name="Year" column="year" type="Numeric" levelType="TimeYears" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension foreignKey="county_fips" name="Geography">
+        <Annotations>
+            <Annotation name="dim_type">GEOGRAPHY</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true" name="County">
+            <Table name="counties" schema="shapes2017"/>
+            <Level name="County" column="geoid" nameColumn="name" uniqueMembers="true" hideMemberIf="IfBlankName" />
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension name="Age">
+        <Annotations>
+            <Annotation name="dim_type">AGE</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true">
+            <Level name="Age Group" column="age" uniqueMembers="true"/>
+        </Hierarchy>
+    </Dimension>
+
+    <Measure name="Number of Dentists" column="number" aggregator="sum" />
+</Cube>
+<Cube name="HRSA - Dentists by Employment Status">
+    <Annotations>
+        <Annotation name="source_name">Health Resources and Services Administration</Annotation>
+        <Annotation name="source_link">https://datawarehouse.hrsa.gov/topics/ahrf.aspx</Annotation>
+        <Annotation name="dataset_name">HRSA</Annotation>
+        <Annotation name="topic">Health</Annotation>
+    </Annotations>
+
+    <Table name="dentists_by_employment_status" schema="hrsa"/>
+
+    <Dimension name="Year">
+        <Annotations>
+            <Annotation name="dim_type">TIME</Annotation>
+        </Annotations>
+         <Hierarchy hasAll="true">
+            <Level name="Year" column="year" type="Numeric" levelType="TimeYears" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension foreignKey="county_fips" name="Geography">
+        <Annotations>
+            <Annotation name="dim_type">GEOGRAPHY</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true" name="County">
+            <Table name="counties" schema="shapes2017"/>
+            <Level name="County" column="geoid" nameColumn="name" uniqueMembers="true" hideMemberIf="IfBlankName" />
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension name="Employment Status">
+        <Annotations>
+            <Annotation name="dim_type">EMPLOYMENT_STATUS</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true" name="Status">
+            <Level name="Status" column="status" uniqueMembers="true"/>
+        </Hierarchy>
+        <Hierarchy hasAll="true" name="Work">
+            <Level name="Status" column="status" uniqueMembers="true"/>
+            <Level name="Work" column="work" uniqueMembers="true"/>
+        </Hierarchy>
+    </Dimension>
+
+    <Measure name="Number of Dentists" column="number" aggregator="sum" />
+</Cube>
+<Cube name="HRSA - Dentists by Sex">
+    <Annotations>
+        <Annotation name="source_name">Health Resources and Services Administration</Annotation>
+        <Annotation name="source_link">https://datawarehouse.hrsa.gov/topics/ahrf.aspx</Annotation>
+        <Annotation name="dataset_name">HRSA</Annotation>
+        <Annotation name="topic">Health</Annotation>
+    </Annotations>
+
+    <Table name="dentists_by_sex" schema="hrsa"/>
+
+    <Dimension name="Year">
+        <Annotations>
+            <Annotation name="dim_type">TIME</Annotation>
+        </Annotations>
+         <Hierarchy hasAll="true">
+            <Level name="Year" column="year" type="Numeric" levelType="TimeYears" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension foreignKey="county_fips" name="Geography">
+        <Annotations>
+            <Annotation name="dim_type">GEOGRAPHY</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true" name="County">
+            <Table name="counties" schema="shapes2017"/>
+            <Level name="County" column="geoid" nameColumn="name" uniqueMembers="true" hideMemberIf="IfBlankName" />
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension name="Sex">
+        <Annotations>
+            <Annotation name="dim_type">SEX</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true">
+            <Level name="Sex" column="sex" uniqueMembers="true"/>
+        </Hierarchy>
+    </Dimension>
+
+    <Measure name="Number of Dentists" column="number" aggregator="sum" />
+</Cube>
+<Cube name="HRSA - Dentists in Private Practice by Specialty">
+    <Annotations>
+        <Annotation name="source_name">Health Resources and Services Administration</Annotation>
+        <Annotation name="source_link">https://datawarehouse.hrsa.gov/topics/ahrf.aspx</Annotation>
+        <Annotation name="dataset_name">HRSA</Annotation>
+        <Annotation name="topic">Health</Annotation>
+    </Annotations>
+
+    <Table name="dentists_in_private_practice_by_specialty" schema="hrsa"/>
+
+    <Dimension name="Year">
+        <Annotations>
+            <Annotation name="dim_type">TIME</Annotation>
+        </Annotations>
+         <Hierarchy hasAll="true">
+            <Level name="Year" column="year" type="Numeric" levelType="TimeYears" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension foreignKey="county_fips" name="Geography">
+        <Annotations>
+            <Annotation name="dim_type">GEOGRAPHY</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true" name="County">
+            <Table name="counties" schema="shapes2017"/>
+            <Level name="County" column="geoid" nameColumn="name" uniqueMembers="true" hideMemberIf="IfBlankName" />
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension name="Specialty">
+        <Annotations>
+            <Annotation name="dim_type">SPECIALTY</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true">
+            <Level name="Specialty" column="specialty" uniqueMembers="true"/>
+        </Hierarchy>
+    </Dimension>
+
+    <Measure name="Number of Dentists" column="number" aggregator="sum" />
+</Cube>
+<Cube name="HRSA - Dentists in Private Practice by Hours">
+    <Annotations>
+        <Annotation name="source_name">Health Resources and Services Administration</Annotation>
+        <Annotation name="source_link">https://datawarehouse.hrsa.gov/topics/ahrf.aspx</Annotation>
+        <Annotation name="dataset_name">HRSA</Annotation>
+        <Annotation name="topic">Health</Annotation>
+    </Annotations>
+
+    <Table name="dentists_in_private_practice_by_hours" schema="hrsa"/>
+
+    <Dimension name="Year">
+        <Annotations>
+            <Annotation name="dim_type">TIME</Annotation>
+        </Annotations>
+         <Hierarchy hasAll="true">
+            <Level name="Year" column="year" type="Numeric" levelType="TimeYears" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension foreignKey="county_fips" name="Geography">
+        <Annotations>
+            <Annotation name="dim_type">GEOGRAPHY</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true" name="County">
+            <Table name="counties" schema="shapes2017"/>
+            <Level name="County" column="geoid" nameColumn="name" uniqueMembers="true" hideMemberIf="IfBlankName" />
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension name="Hours">
+        <Annotations>
+            <Annotation name="dim_type">HOURS</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true">
+            <Level name="Hours" column="hours" uniqueMembers="true"/>
+        </Hierarchy>
+    </Dimension>
+
+    <Measure name="Number of Dentists" column="number" aggregator="sum" />
+</Cube>
+<Cube name="HRSA - Dentists in Private Practice by Sex">
+    <Annotations>
+        <Annotation name="source_name">Health Resources and Services Administration</Annotation>
+        <Annotation name="source_link">https://datawarehouse.hrsa.gov/topics/ahrf.aspx</Annotation>
+        <Annotation name="dataset_name">HRSA</Annotation>
+        <Annotation name="topic">Health</Annotation>
+    </Annotations>
+
+    <Table name="dentists_in_private_practice_by_sex" schema="hrsa"/>
+
+    <Dimension name="Year">
+        <Annotations>
+            <Annotation name="dim_type">TIME</Annotation>
+        </Annotations>
+         <Hierarchy hasAll="true">
+            <Level name="Year" column="year" type="Numeric" levelType="TimeYears" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension foreignKey="county_fips" name="Geography">
+        <Annotations>
+            <Annotation name="dim_type">GEOGRAPHY</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true" name="County">
+            <Table name="counties" schema="shapes2017"/>
+            <Level name="County" column="geoid" nameColumn="name" uniqueMembers="true" hideMemberIf="IfBlankName" />
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension name="Sex">
+        <Annotations>
+            <Annotation name="dim_type">SEX</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true">
+            <Level name="Sex" column="sex" uniqueMembers="true"/>
+        </Hierarchy>
+    </Dimension>
+
+    <Measure name="Number of Dentists" column="number" aggregator="sum" />
+</Cube>
 <Cube name="DCI">
     <Annotations>
         <Annotation name="source_name">Distressed Communities Index</Annotation>
@@ -9642,9 +9811,6 @@
         <Annotations>
             <Annotation name="dim_type">CATEGORY</Annotation>
         </Annotations>
-        <Hierarchy hasAll="true" name="Category">
-            <Level name="Category" column="category" uniqueMembers="true"/>
-        </Hierarchy>
         <Hierarchy hasAll="true" name="Sub-category">
             <Level name="Category" column="category" uniqueMembers="true"/>
             <Level name="Sub-category" column="sub_category" uniqueMembers="true"/>
