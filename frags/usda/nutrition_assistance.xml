@@ -36,6 +36,6 @@
         </Hierarchy> 
     </Dimension>
 
-    <Measure name="Number" column="number" aggregator="sum" />
+    <Measure name="Number of Stores" column="number" aggregator="sum" />
     <Measure name="Number per 1000 pop" column="number_pth" aggregator="avg" />
 </Cube>

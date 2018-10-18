@@ -367,6 +367,9 @@
         <Annotations>
             <Annotation name="dim_type">CRIME_TYPE</Annotation>
         </Annotations>
+        <Hierarchy hasAll="true" name="Type of Crime">
+            <Level name="Type of Crime" column="crime_type" uniqueMembers="true"/>
+        </Hierarchy>
         <Hierarchy hasAll="true" name="Crime">
             <Level name="Type of Crime" column="crime_type" uniqueMembers="true"/>
             <Level name="Crime" column="crime" uniqueMembers="true"/>
@@ -9122,13 +9125,16 @@
         <Annotations>
             <Annotation name="dim_type">CATEGORY</Annotation>
         </Annotations>
-         <Hierarchy hasAll="true">
+        <Hierarchy hasAll="true" name="Category">
+            <Level name="Category" column="category" uniqueMembers="true"/>
+        </Hierarchy>
+        <Hierarchy hasAll="true" name="Sub-category">
             <Level name="Category" column="category" uniqueMembers="true"/>
             <Level name="Sub-category" column="sub_category" uniqueMembers="true"/>
         </Hierarchy>
     </Dimension>
 
-    <Measure name="Number" column="number" aggregator="sum" />
+    <Measure name="Number of Stores" column="number" aggregator="sum" />
     <Measure name="Number per 1000 pop" column="number_pth" aggregator="avg" />
 </Cube><Cube name="USDA - Low-Access by Race">
     <Annotations>
@@ -9248,7 +9254,7 @@
         </Hierarchy> 
     </Dimension>
 
-    <Measure name="Number" column="number" aggregator="sum" />
+    <Measure name="Number of Stores" column="number" aggregator="sum" />
     <Measure name="Number per 1000 pop" column="number_pth" aggregator="avg" />
 </Cube>
 <Cube name="Feeding America">

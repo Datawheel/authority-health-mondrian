@@ -31,6 +31,9 @@
         <Annotations>
             <Annotation name="dim_type">CRIME_TYPE</Annotation>
         </Annotations>
+        <Hierarchy hasAll="true" name="Type of Crime">
+            <Level name="Type of Crime" column="crime_type" uniqueMembers="true"/>
+        </Hierarchy>
         <Hierarchy hasAll="true" name="Crime">
             <Level name="Type of Crime" column="crime_type" uniqueMembers="true"/>
             <Level name="Crime" column="crime" uniqueMembers="true"/>
