@@ -28,6 +28,15 @@
         </Hierarchy>
     </Dimension>
 
+    <Dimension name="Sex">
+        <Annotations>
+            <Annotation name="dim_type">SEX</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true">
+            <Level name="Sex" column="sex" uniqueMembers="true"/>
+        </Hierarchy>
+    </Dimension>
+
     <Measure name="Number" column="number" aggregator="sum" />
     <Measure name="Percent" column="percent" aggregator="avg" />
     <Measure name="Lower Confidence Limit" column="lower_confidence_limit" aggregator="avg" />

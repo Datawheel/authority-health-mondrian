@@ -77,6 +77,15 @@
         </Hierarchy>
     </Dimension>
 
+    <Dimension name="Sex">
+        <Annotations>
+            <Annotation name="dim_type">SEX</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true">
+            <Level name="Sex" column="sex" uniqueMembers="true"/>
+        </Hierarchy>
+    </Dimension>
+
     <Measure name="Number" column="number" aggregator="sum" />
     <Measure name="Percent" column="percent" aggregator="avg" />
     <Measure name="Lower Confidence Limit" column="lower_confidence_limit" aggregator="avg" />
@@ -112,6 +121,15 @@
             <Table name="counties" schema="shapes2017"/>
             <Level column="state_id" name="State" nameColumn="state_name" uniqueMembers="true"/>
             <Level column="geoid" name="County" nameColumn="namelsad" uniqueMembers="true"/>
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension name="Sex">
+        <Annotations>
+            <Annotation name="dim_type">SEX</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true">
+            <Level name="Sex" column="sex" uniqueMembers="true"/>
         </Hierarchy>
     </Dimension>
 
@@ -199,6 +217,15 @@
             <Table name="counties" schema="shapes2017"/>
             <Level column="state_id" name="State" nameColumn="state_name" uniqueMembers="true"/>
             <Level column="geoid" name="County" nameColumn="namelsad" uniqueMembers="true"/>
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension name="Sex">
+        <Annotations>
+            <Annotation name="dim_type">SEX</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true">
+            <Level name="Sex" column="sex" uniqueMembers="true"/>
         </Hierarchy>
     </Dimension>
 
