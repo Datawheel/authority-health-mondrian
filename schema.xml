@@ -77,13 +77,13 @@
         </Hierarchy>
     </Dimension>
 
-    <Measure name="Number Men" column="number_men" aggregator="sum" />
-    <Measure name="Percent Men" column="percent_men" aggregator="avg" />
-    <Measure name="Lower Confidence Limit Men" column="lower_confidence_limit_men" aggregator="avg" />
-    <Measure name="Upper Confidence Limit Men" column="upper_confidence_limit_men" aggregator="avg" />
-    <Measure name="Adj Percent Men" column="adj_percent_men" aggregator="avg" />
-    <Measure name="Adj Lower Confidence Limit Men" column="adj_lower_confidence_limit_men" aggregator="avg" />
-    <Measure name="Adj Upper Confidence Limit Men" column="adj_upper_confidence_limit_men" aggregator="avg" />
+    <Measure name="Number" column="number" aggregator="sum" />
+    <Measure name="Percent" column="percent" aggregator="avg" />
+    <Measure name="Lower Confidence Limit" column="lower_confidence_limit" aggregator="avg" />
+    <Measure name="Upper Confidence Limit" column="upper_confidence_limit" aggregator="avg" />
+    <Measure name="Adj Percent" column="adj_percent" aggregator="avg" />
+    <Measure name="Adj Lower Confidence Limit" column="adj_lower_confidence_limit" aggregator="avg" />
+    <Measure name="Adj Upper Confidence Limit" column="adj_upper_confidence_limit" aggregator="avg" />
 </Cube>
 <Cube name="CDC Wonder - Diabetes Prevalence by Sex">
     <Annotations>
@@ -115,13 +115,13 @@
         </Hierarchy>
     </Dimension>
 
-    <Measure name="Number Men" column="number_men" aggregator="sum" />
-    <Measure name="Percent Men" column="percent_men" aggregator="avg" />
-    <Measure name="Lower Confidence Limit Men" column="lower_confidence_limit_men" aggregator="avg" />
-    <Measure name="Upper Confidence Limit Men" column="upper_confidence_limit_men" aggregator="avg" />
-    <Measure name="Adj Percent Men" column="adj_percent_men" aggregator="avg" />
-    <Measure name="Adj Lower Confidence Limit Men" column="adj_lower_confidence_limit_men" aggregator="avg" />
-    <Measure name="Adj Upper Confidence Limit Men" column="adj_upper_confidence_limit_men" aggregator="avg" />
+    <Measure name="Number" column="number" aggregator="sum" />
+    <Measure name="Percent" column="percent" aggregator="avg" />
+    <Measure name="Lower Confidence Limit" column="lower_confidence_limit" aggregator="avg" />
+    <Measure name="Upper Confidence Limit" column="upper_confidence_limit" aggregator="avg" />
+    <Measure name="Adj Percent" column="adj_percent" aggregator="avg" />
+    <Measure name="Adj Lower Confidence Limit" column="adj_lower_confidence_limit" aggregator="avg" />
+    <Measure name="Adj Upper Confidence Limit" column="adj_upper_confidence_limit" aggregator="avg" />
 </Cube>
 <Cube name="CDC Wonder - Diabetes">
     <Annotations>
@@ -202,13 +202,13 @@
         </Hierarchy>
     </Dimension>
 
-    <Measure name="Number Men" column="number_men" aggregator="sum" />
-    <Measure name="Percent Men" column="percent_men" aggregator="avg" />
-    <Measure name="Lower Confidence Limit Men" column="lower_confidence_limit_men" aggregator="avg" />
-    <Measure name="Upper Confidence Limit Men" column="upper_confidence_limit_men" aggregator="avg" />
-    <Measure name="Adj Percent Men" column="adj_percent_men" aggregator="avg" />
-    <Measure name="Adj Lower Confidence Limit Men" column="adj_lower_confidence_limit_men" aggregator="avg" />
-    <Measure name="Adj Upper Confidence Limit Men" column="adj_upper_confidence_limit_men" aggregator="avg" />
+    <Measure name="Number" column="number" aggregator="sum" />
+    <Measure name="Percent" column="percent" aggregator="avg" />
+    <Measure name="Lower Confidence Limit" column="lower_confidence_limit" aggregator="avg" />
+    <Measure name="Upper Confidence Limit" column="upper_confidence_limit" aggregator="avg" />
+    <Measure name="Adj Percent" column="adj_percent" aggregator="avg" />
+    <Measure name="Adj Lower Confidence Limit" column="adj_lower_confidence_limit" aggregator="avg" />
+    <Measure name="Adj Upper Confidence Limit" column="adj_upper_confidence_limit" aggregator="avg" />
 </Cube>
 <Cube name="CDC - SVI">
     <Annotations>
