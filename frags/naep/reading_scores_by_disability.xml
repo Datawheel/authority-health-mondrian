@@ -1,0 +1,49 @@
+<Cube name="NAEP - Reading Scores by Disability">
+    <Annotations>
+        <Annotation name="source_name">NAEP Reading Assessment</Annotation>
+        <Annotation name="source_link">https://www.nationsreportcard.gov/reading_2017/#?grade=4</Annotation>
+        <Annotation name="dataset_name">NAEP Reading Assessment</Annotation>
+        <Annotation name="topic">Education</Annotation>
+    </Annotations>
+
+    <Table name="reading_scores_by_disability" schema="naep"/>
+     
+    <Dimension name="Year">
+        <Annotations>
+            <Annotation name="dim_type">TIME</Annotation>
+        </Annotations>
+         <Hierarchy hasAll="true">
+            <Level name="Year" column="year" type="Numeric" levelType="TimeYears" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension foreignKey="geoid" name="Geography">
+        <Annotations>
+            <Annotation name="dim_type">GEOGRAPHY</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true" name="City">
+            <Table name="places" schema="shapes2017"/>
+            <Level name="City" column="geoid" nameColumn="name" uniqueMembers="true" hideMemberIf="IfBlankName" />
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension name="Grade">
+        <Annotations>
+            <Annotation name="dim_type">Grade</Annotation>
+        </Annotations>
+         <Hierarchy hasAll="true">
+            <Level name="Grade" column="grade" type="String" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension name="Disability">
+        <Annotations>
+            <Annotation name="dim_type">DISABILITY</Annotation>
+        </Annotations>
+         <Hierarchy hasAll="true">
+            <Level name="Disability" column="disability" type="String" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
+
+    <Measure name="Average Reading Score" column="average_score" aggregator="avg" />
+</Cube>
