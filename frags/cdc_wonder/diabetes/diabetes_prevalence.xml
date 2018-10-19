@@ -1,0 +1,38 @@
+<Cube name="CDC Wonder - Diabetes Prevalence by Sex">
+    <Annotations>
+        <Annotation name="source_name">CDC Wonder</Annotation>
+        <Annotation name="source_link">https://www.cdc.gov/diabetes/data/countydata/countydataindicators.html</Annotation>
+        <Annotation name="dataset_name">CDC Wonder</Annotation>
+        <Annotation name="topic">Health Status</Annotation>
+    </Annotations>
+
+    <Table name="diabetes_prevalence_by_sex" schema="cdc_wonder"/>
+
+    <Dimension name="Year">
+        <Annotations>
+            <Annotation name="dim_type">TIME</Annotation>
+        </Annotations>
+         <Hierarchy hasAll="true">
+            <Level name="Year" column="year" type="Numeric" levelType="TimeYears" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension foreignKey="county_fips" name="Geography">
+        <Annotations>
+            <Annotation name="dim_type">GEOGRAPHY</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true" name="County">
+            <Table name="counties" schema="shapes2017"/>
+            <Level column="state_id" name="State" nameColumn="state_name" uniqueMembers="true"/>
+            <Level column="geoid" name="County" nameColumn="namelsad" uniqueMembers="true"/>
+        </Hierarchy>
+    </Dimension>
+
+    <Measure name="Number Men" column="number_men" aggregator="sum" />
+    <Measure name="Percent Men" column="percent_men" aggregator="avg" />
+    <Measure name="Lower Confidence Limit Men" column="lower_confidence_limit_men" aggregator="avg" />
+    <Measure name="Upper Confidence Limit Men" column="upper_confidence_limit_men" aggregator="avg" />
+    <Measure name="Adj Percent Men" column="adj_percent_men" aggregator="avg" />
+    <Measure name="Adj Lower Confidence Limit Men" column="adj_lower_confidence_limit_men" aggregator="avg" />
+    <Measure name="Adj Upper Confidence Limit Men" column="adj_upper_confidence_limit_men" aggregator="avg" />
+</Cube>

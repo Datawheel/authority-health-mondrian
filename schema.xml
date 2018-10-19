@@ -47,7 +47,7 @@
       <Level column="geoid" name="County Subdivision" nameColumn="name" uniqueMembers="true"/>
     </Hierarchy>
   </Dimension>
-<Cube name="CDC Wonder - Diabetes">
+<Cube name="CDC Wonder - Physical Inactivity by Sex">
     <Annotations>
         <Annotation name="source_name">CDC Wonder</Annotation>
         <Annotation name="source_link">https://www.cdc.gov/diabetes/data/countydata/countydataindicators.html</Annotation>
@@ -55,7 +55,7 @@
         <Annotation name="topic">Health Status</Annotation>
     </Annotations>
 
-    <Table name="diabetes" schema="cdc_wonder"/>
+    <Table name="physical_inactivity_by_sex" schema="cdc_wonder"/>
 
     <Dimension name="Year">
         <Annotations>
@@ -72,108 +72,143 @@
         </Annotations>
         <Hierarchy hasAll="true" name="County">
             <Table name="counties" schema="shapes2017"/>
-            <Level name="County" column="geoid" nameColumn="name" uniqueMembers="true" hideMemberIf="IfBlankName" />
+            <Level column="state_id" name="State" nameColumn="state_name" uniqueMembers="true"/>
+            <Level column="geoid" name="County" nameColumn="namelsad" uniqueMembers="true"/>
         </Hierarchy>
     </Dimension>
 
-    <!-- <Dimension name="Condition">
-        <Annotations>
-            <Annotation name="dim_type">CONDITION</Annotation>
-        </Annotations>
-    </Dimension> -->
+    <Measure name="Number Men" column="number_men" aggregator="sum" />
+    <Measure name="Percent Men" column="percent_men" aggregator="avg" />
+    <Measure name="Lower Confidence Limit Men" column="lower_confidence_limit_men" aggregator="avg" />
+    <Measure name="Upper Confidence Limit Men" column="upper_confidence_limit_men" aggregator="avg" />
+    <Measure name="Adj Percent Men" column="adj_percent_men" aggregator="avg" />
+    <Measure name="Adj Lower Confidence Limit Men" column="adj_lower_confidence_limit_men" aggregator="avg" />
+    <Measure name="Adj Upper Confidence Limit Men" column="adj_upper_confidence_limit_men" aggregator="avg" />
+</Cube>
+<Cube name="CDC Wonder - Diabetes Prevalence by Sex">
+    <Annotations>
+        <Annotation name="source_name">CDC Wonder</Annotation>
+        <Annotation name="source_link">https://www.cdc.gov/diabetes/data/countydata/countydataindicators.html</Annotation>
+        <Annotation name="dataset_name">CDC Wonder</Annotation>
+        <Annotation name="topic">Health Status</Annotation>
+    </Annotations>
 
-    <Measure name="Diagnosed Diabetes Incidence Rate Per 100" column="diabetes_incidence_rate_per_100" aggregator="avg" />
-    <Measure name="Diagnosed Diabetes Incidence Adj Rate Per 100" column="diabetes_incidence_adj_rate_per_100" aggregator="avg" />
-    <Measure name="Diagnosed Diabetes Incidence Number" column="diabetes_incidence_number" aggregator="sum" />
-    <Measure name="Diagnosed Diabetes Incidence Percent" column="diabetes_incidence_percent" aggregator="avg" />
-    <Measure name="Diagnosed Diabetes Incidence Lower Confidence Limit" column="diabetes_incidence_lower_confidence_limit" aggregator="avg" />
-    <Measure name="Diagnosed Diabetes Incidence Upper Confidence Limit" column="diabetes_incidence_upper_confidence_limit" aggregator="avg" />
-    <Measure name="Diagnosed Diabetes Incidence Adj Percent" column="diabetes_incidence_adj_percent" aggregator="avg" />
-    <Measure name="Diagnosed Diabetes Incidence Adj Lower Confidence Limit" column="diabetes_incidence_adj_lower_confidence_limit" aggregator="avg" />
-    <Measure name="Diagnosed Diabetes Incidence Adj Upper Confidence Limit" column="diabetes_incidence_adj_upper_confidence_limit" aggregator="avg" />
-    <Measure name="Diagnosed Diabetes Incidence Number Men" column="diabetes_incidence_number_men" aggregator="sum" />
-    <Measure name="Diagnosed Diabetes Incidence Percent Men" column="diabetes_incidence_percent_men" aggregator="avg" />
-    <Measure name="Diagnosed Diabetes Incidence Lower Confidence Limit Men" column="diabetes_incidence_lower_confidence_limit_men" aggregator="avg" />
-    <Measure name="Diagnosed Diabetes Incidence Upper Confidence Limit Men" column="diabetes_incidence_upper_confidence_limit_men" aggregator="avg" />
-    <Measure name="Diagnosed Diabetes Incidence Adj Percent Men" column="diabetes_incidence_adj_percent_men" aggregator="avg" />
-    <Measure name="Diagnosed Diabetes Incidence Adj Lower Confidence Limit Men" column="diabetes_incidence_adj_lower_confidence_limit_men" aggregator="avg" />
-    <Measure name="Diagnosed Diabetes Incidence Adj Upper Confidence Limit Men" column="diabetes_incidence_adj_upper_confidence_limit_men" aggregator="avg" />
-    <Measure name="Diagnosed Diabetes Incidence Number Women" column="diabetes_incidence_number_women" aggregator="sum" />
-    <Measure name="Diagnosed Diabetes Incidence Percent Women" column="diabetes_incidence_percent_women" aggregator="avg" />
-    <Measure name="Diagnosed Diabetes Incidence Lower Confidence Limit Women" column="diabetes_incidence_lower_confidence_limit_women" aggregator="avg" />
-    <Measure name="Diagnosed Diabetes Incidence Upper Confidence Limit Women" column="diabetes_incidence_upper_confidence_limit_women" aggregator="avg" />
-    <Measure name="Diagnosed Diabetes Incidence Adj Percent Women" column="diabetes_incidence_adj_percent_women" aggregator="avg" />
-    <Measure name="Diagnosed Diabetes Incidence Adj Lower Confidence Limit Women" column="diabetes_incidence_adj_lower_confidence_limit_women" aggregator="avg" />
-    <Measure name="Diagnosed Diabetes Incidence Adj Upper Confidence Limit Women" column="diabetes_incidence_adj_upper_confidence_limit_women" aggregator="avg" />
-    <Measure name="Diagnosed Diabetes Prevalence Rate Per 100" column="diabetes_prevalence_rate_per_100" aggregator="avg" />
-    <Measure name="Diagnosed Diabetes Prevalence Adj Rate Per 100" column="diabetes_prevalence_adj_rate_per_100" aggregator="avg" />
-    <Measure name="Diagnosed Diabetes Prevalence Number" column="diabetes_prevalence_number" aggregator="sum" />
-    <Measure name="Diagnosed Diabetes Prevalence Percent" column="diabetes_prevalence_percent" aggregator="avg" />
-    <Measure name="Diagnosed Diabetes Prevalence Lower Confidence Limit" column="diabetes_prevalence_lower_confidence_limit" aggregator="avg" />
-    <Measure name="Diagnosed Diabetes Prevalence Upper Confidence Limit" column="diabetes_prevalence_upper_confidence_limit" aggregator="avg" />
-    <Measure name="Diagnosed Diabetes Prevalence Adj Percent" column="diabetes_prevalence_adj_percent" aggregator="avg" />
-    <Measure name="Diagnosed Diabetes Prevalence Adj Lower Confidence Limit" column="diabetes_prevalence_adj_lower_confidence_limit" aggregator="avg" />
-    <Measure name="Diagnosed Diabetes Prevalence Adj Upper Confidence Limit" column="diabetes_prevalence_adj_upper_confidence_limit" aggregator="avg" />
-    <Measure name="Diagnosed Diabetes Prevalence Number Men" column="diabetes_prevalence_number_men" aggregator="sum" />
-    <Measure name="Diagnosed Diabetes Prevalence Percent Men" column="diabetes_prevalence_percent_men" aggregator="avg" />
-    <Measure name="Diagnosed Diabetes Prevalence Lower Confidence Limit Men" column="diabetes_prevalence_lower_confidence_limit_men" aggregator="avg" />
-    <Measure name="Diagnosed Diabetes Prevalence Upper Confidence Limit Men" column="diabetes_prevalence_upper_confidence_limit_men" aggregator="avg" />
-    <Measure name="Diagnosed Diabetes Prevalence Adj Percent Men" column="diabetes_prevalence_adj_percent_men" aggregator="avg" />
-    <Measure name="Diagnosed Diabetes Prevalence Adj Lower Confidence Limit Men" column="diabetes_prevalence_adj_lower_confidence_limit_men" aggregator="avg" />
-    <Measure name="Diagnosed Diabetes Prevalence Adj Upper Confidence Limit Men" column="diabetes_prevalence_adj_upper_confidence_limit_men" aggregator="avg" />
-    <Measure name="Diagnosed Diabetes Prevalence Number Women" column="diabetes_prevalence_number_women" aggregator="sum" />
-    <Measure name="Diagnosed Diabetes Prevalence Percent Women" column="diabetes_prevalence_percent_women" aggregator="avg" />
-    <Measure name="Diagnosed Diabetes Prevalence Lower Confidence Limit Women" column="diabetes_prevalence_lower_confidence_limit_women" aggregator="avg" />
-    <Measure name="Diagnosed Diabetes Prevalence Upper Confidence Limit Women" column="diabetes_prevalence_upper_confidence_limit_women" aggregator="avg" />
-    <Measure name="Diagnosed Diabetes Prevalence Adj Percent Women" column="diabetes_prevalence_adj_percent_women" aggregator="avg" />
-    <Measure name="Diagnosed Diabetes Prevalence Adj Lower Confidence Limit Women" column="diabetes_prevalence_adj_lower_confidence_limit_women" aggregator="avg" />
-    <Measure name="Diagnosed Diabetes Prevalence Adj Upper Confidence Limit Women" column="diabetes_prevalence_adj_upper_confidence_limit_women" aggregator="avg" />
-    <Measure name="Leisure-Time Physical Inactivity Prevalence Rate Per 100" column="phys_inactivity_prevalence_rate_per_100" aggregator="avg" />
-    <Measure name="Leisure-Time Physical Inactivity Prevalence Adj Rate Per 100" column="phys_inactivity_prevalence_adj_rate_per_100" aggregator="avg" />
-    <Measure name="Leisure-Time Physical Inactivity Prevalence Number" column="phys_inactivity_prevalence_number" aggregator="sum" />
-    <Measure name="Leisure-Time Physical Inactivity Prevalence Percent" column="phys_inactivity_prevalence_percent" aggregator="avg" />
-    <Measure name="Leisure-Time Physical Inactivity Prevalence Lower Confidence Limit" column="phys_inactivity_prevalence_lower_confidence_limit" aggregator="avg" />
-    <Measure name="Leisure-Time Physical Inactivity Prevalence Upper Confidence Limit" column="phys_inactivity_prevalence_upper_confidence_limit" aggregator="avg" />
-    <Measure name="Leisure-Time Physical Inactivity Prevalence Adj Percent" column="phys_inactivity_prevalence_adj_percent" aggregator="avg" />
-    <Measure name="Leisure-Time Physical Inactivity Prevalence Adj Lower Confidence Limit" column="phys_inactivity_prevalence_adj_lower_confidence_limit" aggregator="avg" />
-    <Measure name="Leisure-Time Physical Inactivity Prevalence Adj Upper Confidence Limit" column="phys_inactivity_prevalence_adj_upper_confidence_limit" aggregator="avg" />
-    <Measure name="Leisure-Time Physical Inactivity Prevalence Number Men" column="phys_inactivity_prevalence_number_men" aggregator="sum" />
-    <Measure name="Leisure-Time Physical Inactivity Prevalence Percent Men" column="phys_inactivity_prevalence_percent_men" aggregator="avg" />
-    <Measure name="Leisure-Time Physical Inactivity Prevalence Lower Confidence Limit Men" column="phys_inactivity_prevalence_lower_confidence_limit_men" aggregator="avg" />
-    <Measure name="Leisure-Time Physical Inactivity Prevalence Upper Confidence Limit Men" column="phys_inactivity_prevalence_upper_confidence_limit_men" aggregator="avg" />
-    <Measure name="Leisure-Time Physical Inactivity Prevalence Adj Percent Men" column="phys_inactivity_prevalence_adj_percent_men" aggregator="avg" />
-    <Measure name="Leisure-Time Physical Inactivity Prevalence Adj Lower Confidence Limit Men" column="phys_inactivity_prevalence_adj_lower_confidence_limit_men" aggregator="avg" />
-    <Measure name="Leisure-Time Physical Inactivity Prevalence Adj Upper Confidence Limit Men" column="phys_inactivity_prevalence_adj_upper_confidence_limit_men" aggregator="avg" />
-    <Measure name="Leisure-Time Physical Inactivity Prevalence Number Women" column="phys_inactivity_prevalence_number_women" aggregator="sum" />
-    <Measure name="Leisure-Time Physical Inactivity Prevalence Percent Women" column="phys_inactivity_prevalence_percent_women" aggregator="avg" />
-    <Measure name="Leisure-Time Physical Inactivity Prevalence Lower Confidence Limit Women" column="phys_inactivity_prevalence_lower_confidence_limit_women" aggregator="avg" />
-    <Measure name="Leisure-Time Physical Inactivity Prevalence Upper Confidence Limit Women" column="phys_inactivity_prevalence_upper_confidence_limit_women" aggregator="avg" />
-    <Measure name="Leisure-Time Physical Inactivity Prevalence Adj Percent Women" column="phys_inactivity_prevalence_adj_percent_women" aggregator="avg" />
-    <Measure name="Leisure-Time Physical Inactivity Prevalence Adj Lower Confidence Limit Women" column="phys_inactivity_prevalence_adj_lower_confidence_limit_women" aggregator="avg" />
-    <Measure name="Leisure-Time Physical Inactivity Prevalence Adj Upper Confidence Limit Women" column="phys_inactivity_prevalence_adj_upper_confidence_limit_women" aggregator="avg" />
-    <Measure name="Obesity Prevalence Rate Per 100" column="obesity_prevalence_rate_per_100" aggregator="avg" />
-    <Measure name="Obesity Prevalence Adj Rate Per 100" column="obesity_prevalence_adj_rate_per_100" aggregator="avg" />
-    <Measure name="Obesity Prevalence Number" column="obesity_prevalence_number" aggregator="sum" />
-    <Measure name="Obesity Prevalence Percent" column="obesity_prevalence_percent" aggregator="avg" />
-    <Measure name="Obesity Prevalence Lower Confidence Limit" column="obesity_prevalence_lower_confidence_limit" aggregator="avg" />
-    <Measure name="Obesity Prevalence Upper Confidence Limit" column="obesity_prevalence_upper_confidence_limit" aggregator="avg" />
-    <Measure name="Obesity Prevalence Adj Percent" column="obesity_prevalence_adj_percent" aggregator="avg" />
-    <Measure name="Obesity Prevalence Adj Lower Confidence Limit" column="obesity_prevalence_adj_lower_confidence_limit" aggregator="avg" />
-    <Measure name="Obesity Prevalence Adj Upper Confidence Limit" column="obesity_prevalence_adj_upper_confidence_limit" aggregator="avg" />
-    <Measure name="Obesity Prevalence Number Men" column="obesity_prevalence_number_men" aggregator="sum" />
-    <Measure name="Obesity Prevalence Percent Men" column="obesity_prevalence_percent_men" aggregator="avg" />
-    <Measure name="Obesity Prevalence Lower Confidence Limit Men" column="obesity_prevalence_lower_confidence_limit_men" aggregator="avg" />
-    <Measure name="Obesity Prevalence Upper Confidence Limit Men" column="obesity_prevalence_upper_confidence_limit_men" aggregator="avg" />
-    <Measure name="Obesity Prevalence Adj Percent Men" column="obesity_prevalence_adj_percent_men" aggregator="avg" />
-    <Measure name="Obesity Prevalence Adj Lower Confidence Limit Men" column="obesity_prevalence_adj_lower_confidence_limit_men" aggregator="avg" />
-    <Measure name="Obesity Prevalence Adj Upper Confidence Limit Men" column="obesity_prevalence_adj_upper_confidence_limit_men" aggregator="avg" />
-    <Measure name="Obesity Prevalence Number Women" column="obesity_prevalence_number_women" aggregator="sum" />
-    <Measure name="Obesity Prevalence Percent Women" column="obesity_prevalence_percent_women" aggregator="avg" />
-    <Measure name="Obesity Prevalence Lower Confidence Limit Women" column="obesity_prevalence_lower_confidence_limit_women" aggregator="avg" />
-    <Measure name="Obesity Prevalence Upper Confidence Limit Women" column="obesity_prevalence_upper_confidence_limit_women" aggregator="avg" />
-    <Measure name="Obesity Prevalence Adj Percent Women" column="obesity_prevalence_adj_percent_women" aggregator="avg" />
-    <Measure name="Obesity Prevalence Adj Lower Confidence Limit Women" column="obesity_prevalence_adj_lower_confidence_limit_women" aggregator="avg" />
-    <Measure name="Obesity Prevalence Adj Upper Confidence Limit Women" column="obesity_prevalence_adj_upper_confidence_limit_women" aggregator="avg" />
+    <Table name="diabetes_prevalence_by_sex" schema="cdc_wonder"/>
+
+    <Dimension name="Year">
+        <Annotations>
+            <Annotation name="dim_type">TIME</Annotation>
+        </Annotations>
+         <Hierarchy hasAll="true">
+            <Level name="Year" column="year" type="Numeric" levelType="TimeYears" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension foreignKey="county_fips" name="Geography">
+        <Annotations>
+            <Annotation name="dim_type">GEOGRAPHY</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true" name="County">
+            <Table name="counties" schema="shapes2017"/>
+            <Level column="state_id" name="State" nameColumn="state_name" uniqueMembers="true"/>
+            <Level column="geoid" name="County" nameColumn="namelsad" uniqueMembers="true"/>
+        </Hierarchy>
+    </Dimension>
+
+    <Measure name="Number Men" column="number_men" aggregator="sum" />
+    <Measure name="Percent Men" column="percent_men" aggregator="avg" />
+    <Measure name="Lower Confidence Limit Men" column="lower_confidence_limit_men" aggregator="avg" />
+    <Measure name="Upper Confidence Limit Men" column="upper_confidence_limit_men" aggregator="avg" />
+    <Measure name="Adj Percent Men" column="adj_percent_men" aggregator="avg" />
+    <Measure name="Adj Lower Confidence Limit Men" column="adj_lower_confidence_limit_men" aggregator="avg" />
+    <Measure name="Adj Upper Confidence Limit Men" column="adj_upper_confidence_limit_men" aggregator="avg" />
+</Cube>
+<Cube name="CDC Wonder - Diabetes">
+    <Annotations>
+        <Annotation name="source_name">CDC Wonder</Annotation>
+        <Annotation name="source_link">https://www.cdc.gov/diabetes/data/countydata/countydataindicators.html</Annotation>
+        <Annotation name="dataset_name">CDC Wonder</Annotation>
+        <Annotation name="topic">Health Status</Annotation>
+    </Annotations>
+
+    <Table name="diabetes_stats" schema="cdc_wonder"/>
+
+    <Dimension name="Year">
+        <Annotations>
+            <Annotation name="dim_type">TIME</Annotation>
+        </Annotations>
+         <Hierarchy hasAll="true">
+            <Level name="Year" column="year" type="Numeric" levelType="TimeYears" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension foreignKey="county_fips" name="Geography">
+        <Annotations>
+            <Annotation name="dim_type">GEOGRAPHY</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true" name="County">
+            <Table name="counties" schema="shapes2017"/>
+            <Level column="state_id" name="State" nameColumn="state_name" uniqueMembers="true"/>
+            <Level column="geoid" name="County" nameColumn="namelsad" uniqueMembers="true"/>
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension name="Measure">
+        <Annotations>
+            <Annotation name="dim_type">MEASURE</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true" name="Measure">
+            <Level name="Measure" column="measure" uniqueMembers="true"/>
+        </Hierarchy>
+    </Dimension>
+
+    <Measure name="Rate Per 100" column="rate_per_100" aggregator="avg" />
+    <Measure name="Adj Rate Per 100" column="adj_rate_per_100" aggregator="avg" />
+    <Measure name="Number" column="number" aggregator="sum" />
+    <Measure name="Percent" column="percent" aggregator="avg" />
+    <Measure name="Lower Confidence Limit" column="lower_confidence_limit" aggregator="avg" />
+    <Measure name="Upper Confidence Limit" column="upper_confidence_limit" aggregator="avg" />
+    <Measure name="Adj Percent" column="adj_percent" aggregator="avg" />
+    <Measure name="Adj Lower Confidence Limit" column="adj_lower_confidence_limit" aggregator="avg" />
+    <Measure name="Adj Upper Confidence Limit" column="adj_upper_confidence_limit" aggregator="avg" />
+</Cube>
+<Cube name="CDC Wonder - Obesity Prevalence by Sex">
+    <Annotations>
+        <Annotation name="source_name">CDC Wonder</Annotation>
+        <Annotation name="source_link">https://www.cdc.gov/diabetes/data/countydata/countydataindicators.html</Annotation>
+        <Annotation name="dataset_name">CDC Wonder</Annotation>
+        <Annotation name="topic">Health Status</Annotation>
+    </Annotations>
+
+    <Table name="obesity_prevalence_by_sex" schema="cdc_wonder"/>
+
+    <Dimension name="Year">
+        <Annotations>
+            <Annotation name="dim_type">TIME</Annotation>
+        </Annotations>
+         <Hierarchy hasAll="true">
+            <Level name="Year" column="year" type="Numeric" levelType="TimeYears" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension foreignKey="county_fips" name="Geography">
+        <Annotations>
+            <Annotation name="dim_type">GEOGRAPHY</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true" name="County">
+            <Table name="counties" schema="shapes2017"/>
+            <Level column="state_id" name="State" nameColumn="state_name" uniqueMembers="true"/>
+            <Level column="geoid" name="County" nameColumn="namelsad" uniqueMembers="true"/>
+        </Hierarchy>
+    </Dimension>
+
+    <Measure name="Number Men" column="number_men" aggregator="sum" />
+    <Measure name="Percent Men" column="percent_men" aggregator="avg" />
+    <Measure name="Lower Confidence Limit Men" column="lower_confidence_limit_men" aggregator="avg" />
+    <Measure name="Upper Confidence Limit Men" column="upper_confidence_limit_men" aggregator="avg" />
+    <Measure name="Adj Percent Men" column="adj_percent_men" aggregator="avg" />
+    <Measure name="Adj Lower Confidence Limit Men" column="adj_lower_confidence_limit_men" aggregator="avg" />
+    <Measure name="Adj Upper Confidence Limit Men" column="adj_upper_confidence_limit_men" aggregator="avg" />
 </Cube>
 <Cube name="CDC - SVI">
     <Annotations>
@@ -211,6 +246,349 @@
     <Measure name="Minority Status and Language Ranking" column="ranking_minority_status_and_language" aggregator="avg" />
     <Measure name="Housing and Transportation Ranking" column="ranking_housing_and_transportation" aggregator="avg" />
     <Measure name="Overall Ranking" column="ranking_overall" aggregator="avg" />
+</Cube>
+<Cube name="NAEP - Reading Scores by Disability">
+    <Annotations>
+        <Annotation name="source_name">NAEP Reading Assessment</Annotation>
+        <Annotation name="source_link">https://www.nationsreportcard.gov/reading_2017/#?grade=4</Annotation>
+        <Annotation name="dataset_name">NAEP Reading Assessment</Annotation>
+        <Annotation name="topic">Education</Annotation>
+    </Annotations>
+
+    <Table name="reading_scores_by_disability" schema="naep"/>
+     
+    <Dimension name="Year">
+        <Annotations>
+            <Annotation name="dim_type">TIME</Annotation>
+        </Annotations>
+         <Hierarchy hasAll="true">
+            <Level name="Year" column="year" type="Numeric" levelType="TimeYears" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension foreignKey="geoid" name="Geography">
+        <Annotations>
+            <Annotation name="dim_type">GEOGRAPHY</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true" name="City">
+            <Table name="places" schema="shapes2017"/>
+            <Level name="City" column="geoid" nameColumn="name" uniqueMembers="true" hideMemberIf="IfBlankName" />
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension name="Grade">
+        <Annotations>
+            <Annotation name="dim_type">Grade</Annotation>
+        </Annotations>
+         <Hierarchy hasAll="true">
+            <Level name="Grade" column="grade" type="String" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension name="Disability">
+        <Annotations>
+            <Annotation name="dim_type">DISABILITY</Annotation>
+        </Annotations>
+         <Hierarchy hasAll="true">
+            <Level name="Disability" column="disability" type="String" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
+
+    <Measure name="Average Reading Score" column="average_score" aggregator="avg" />
+</Cube>
+<Cube name="NAEP - Reading Scores by ELL">
+    <Annotations>
+        <Annotation name="source_name">NAEP Reading Assessment</Annotation>
+        <Annotation name="source_link">https://www.nationsreportcard.gov/reading_2017/#?grade=4</Annotation>
+        <Annotation name="dataset_name">NAEP Reading Assessment</Annotation>
+        <Annotation name="topic">Education</Annotation>
+    </Annotations>
+
+    <Table name="reading_scores_by_ell" schema="naep"/>
+     
+    <Dimension name="Year">
+        <Annotations>
+            <Annotation name="dim_type">TIME</Annotation>
+        </Annotations>
+         <Hierarchy hasAll="true">
+            <Level name="Year" column="year" type="Numeric" levelType="TimeYears" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension foreignKey="geoid" name="Geography">
+        <Annotations>
+            <Annotation name="dim_type">GEOGRAPHY</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true" name="City">
+            <Table name="places" schema="shapes2017"/>
+            <Level name="City" column="geoid" nameColumn="name" uniqueMembers="true" hideMemberIf="IfBlankName" />
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension name="Grade">
+        <Annotations>
+            <Annotation name="dim_type">Grade</Annotation>
+        </Annotations>
+         <Hierarchy hasAll="true">
+            <Level name="Grade" column="grade" type="String" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension name="ELL">
+        <Annotations>
+            <Annotation name="dim_type">ELL</Annotation>
+        </Annotations>
+         <Hierarchy hasAll="true">
+            <Level name="ELL" column="ell" type="String" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
+
+    <Measure name="Average Reading Score" column="average_score" aggregator="avg" />
+</Cube>
+<Cube name="NAEP - Reading Scores by Parents Education">
+    <Annotations>
+        <Annotation name="source_name">NAEP Reading Assessment</Annotation>
+        <Annotation name="source_link">https://www.nationsreportcard.gov/reading_2017/#?grade=4</Annotation>
+        <Annotation name="dataset_name">NAEP Reading Assessment</Annotation>
+        <Annotation name="topic">Education</Annotation>
+    </Annotations>
+
+    <Table name="reading_scores_by_parents" schema="naep"/>
+     
+    <Dimension name="Year">
+        <Annotations>
+            <Annotation name="dim_type">TIME</Annotation>
+        </Annotations>
+         <Hierarchy hasAll="true">
+            <Level name="Year" column="year" type="Numeric" levelType="TimeYears" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension foreignKey="geoid" name="Geography">
+        <Annotations>
+            <Annotation name="dim_type">GEOGRAPHY</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true" name="City">
+            <Table name="places" schema="shapes2017"/>
+            <Level name="City" column="geoid" nameColumn="name" uniqueMembers="true" hideMemberIf="IfBlankName" />
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension name="Grade">
+        <Annotations>
+            <Annotation name="dim_type">Grade</Annotation>
+        </Annotations>
+         <Hierarchy hasAll="true">
+            <Level name="Grade" column="grade" type="String" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension name="Parents Education">
+        <Annotations>
+            <Annotation name="dim_type">PARENTS_EDUCATION</Annotation>
+        </Annotations>
+         <Hierarchy hasAll="true">
+            <Level name="Parents Education" column="parents_education" type="String" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
+
+    <Measure name="Average Reading Score" column="average_score" aggregator="avg" />
+</Cube>
+<Cube name="NAEP - Reading Scores">
+    <Annotations>
+        <Annotation name="source_name">NAEP Reading Assessment</Annotation>
+        <Annotation name="source_link">https://www.nationsreportcard.gov/reading_2017/#?grade=4</Annotation>
+        <Annotation name="dataset_name">NAEP Reading Assessment</Annotation>
+        <Annotation name="topic">Education</Annotation>
+    </Annotations>
+
+    <Table name="reading_scores" schema="naep"/>
+     
+    <Dimension name="Year">
+        <Annotations>
+            <Annotation name="dim_type">TIME</Annotation>
+        </Annotations>
+         <Hierarchy hasAll="true">
+            <Level name="Year" column="year" type="Numeric" levelType="TimeYears" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension foreignKey="geoid" name="Geography">
+        <Annotations>
+            <Annotation name="dim_type">GEOGRAPHY</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true" name="Nation">
+            <Table name="us" schema="shapes2017"/>
+            <Level name="Nation" column="geoid" nameColumn="name" uniqueMembers="true" hideMemberIf="IfBlankName" />
+        </Hierarchy>
+        <Hierarchy hasAll="true" name="State">
+            <Table name="states" schema="shapes2017"/>
+            <Level name="State" column="geoid" nameColumn="name" uniqueMembers="true" hideMemberIf="IfBlankName" />
+        </Hierarchy>
+        <Hierarchy hasAll="true" name="City">
+            <Table name="places" schema="shapes2017"/>
+            <Level name="City" column="geoid" nameColumn="name" uniqueMembers="true" hideMemberIf="IfBlankName" />
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension name="Grade">
+        <Annotations>
+            <Annotation name="dim_type">Grade</Annotation>
+        </Annotations>
+         <Hierarchy hasAll="true">
+            <Level name="Grade" column="grade" type="String" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
+
+    <Measure name="Average Reading Score" column="average_score" aggregator="avg" />
+    <Measure name="Percent Proficient (Reading)" column="proficiency" aggregator="avg" />
+</Cube>
+<Cube name="NAEP - Reading Scores by Race">
+    <Annotations>
+        <Annotation name="source_name">NAEP Reading Assessment</Annotation>
+        <Annotation name="source_link">https://www.nationsreportcard.gov/reading_2017/#?grade=4</Annotation>
+        <Annotation name="dataset_name">NAEP Reading Assessment</Annotation>
+        <Annotation name="topic">Education</Annotation>
+    </Annotations>
+
+    <Table name="reading_scores_by_race" schema="naep"/>
+     
+    <Dimension name="Year">
+        <Annotations>
+            <Annotation name="dim_type">TIME</Annotation>
+        </Annotations>
+         <Hierarchy hasAll="true">
+            <Level name="Year" column="year" type="Numeric" levelType="TimeYears" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension foreignKey="geoid" name="Geography">
+        <Annotations>
+            <Annotation name="dim_type">GEOGRAPHY</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true" name="City">
+            <Table name="places" schema="shapes2017"/>
+            <Level name="City" column="geoid" nameColumn="name" uniqueMembers="true" hideMemberIf="IfBlankName" />
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension name="Grade">
+        <Annotations>
+            <Annotation name="dim_type">Grade</Annotation>
+        </Annotations>
+         <Hierarchy hasAll="true">
+            <Level name="Grade" column="grade" type="String" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension name="Race">
+        <Annotations>
+            <Annotation name="dim_type">RACE</Annotation>
+        </Annotations>
+         <Hierarchy hasAll="true">
+            <Level name="Race" column="race_and_ethnicity" type="String" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
+
+    <Measure name="Average Reading Score" column="average_score" aggregator="avg" />
+</Cube>
+<Cube name="NAEP - Reading Scores by NSLP">
+    <Annotations>
+        <Annotation name="source_name">NAEP Reading Assessment</Annotation>
+        <Annotation name="source_link">https://www.nationsreportcard.gov/reading_2017/#?grade=4</Annotation>
+        <Annotation name="dataset_name">NAEP Reading Assessment</Annotation>
+        <Annotation name="topic">Education</Annotation>
+    </Annotations>
+
+    <Table name="reading_scores_by_nslp" schema="naep"/>
+     
+    <Dimension name="Year">
+        <Annotations>
+            <Annotation name="dim_type">TIME</Annotation>
+        </Annotations>
+         <Hierarchy hasAll="true">
+            <Level name="Year" column="year" type="Numeric" levelType="TimeYears" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension foreignKey="geoid" name="Geography">
+        <Annotations>
+            <Annotation name="dim_type">GEOGRAPHY</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true" name="City">
+            <Table name="places" schema="shapes2017"/>
+            <Level name="City" column="geoid" nameColumn="name" uniqueMembers="true" hideMemberIf="IfBlankName" />
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension name="Grade">
+        <Annotations>
+            <Annotation name="dim_type">Grade</Annotation>
+        </Annotations>
+         <Hierarchy hasAll="true">
+            <Level name="Grade" column="grade" type="String" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension name="NSLP">
+        <Annotations>
+            <Annotation name="dim_type">NSLP</Annotation>
+        </Annotations>
+         <Hierarchy hasAll="true">
+            <Level name="NSLP" column="nslp_eligible" type="String" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
+
+    <Measure name="Average Reading Score" column="average_score" aggregator="avg" />
+</Cube>
+<Cube name="NAEP - Reading Scores by Gender">
+    <Annotations>
+        <Annotation name="source_name">NAEP Reading Assessment</Annotation>
+        <Annotation name="source_link">https://www.nationsreportcard.gov/reading_2017/#?grade=4</Annotation>
+        <Annotation name="dataset_name">NAEP Reading Assessment</Annotation>
+        <Annotation name="topic">Education</Annotation>
+    </Annotations>
+
+    <Table name="reading_scores_by_gender" schema="naep"/>
+     
+    <Dimension name="Year">
+        <Annotations>
+            <Annotation name="dim_type">TIME</Annotation>
+        </Annotations>
+         <Hierarchy hasAll="true">
+            <Level name="Year" column="year" type="Numeric" levelType="TimeYears" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension foreignKey="geoid" name="Geography">
+        <Annotations>
+            <Annotation name="dim_type">GEOGRAPHY</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true" name="City">
+            <Table name="places" schema="shapes2017"/>
+            <Level name="City" column="geoid" nameColumn="name" uniqueMembers="true" hideMemberIf="IfBlankName" />
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension name="Grade">
+        <Annotations>
+            <Annotation name="dim_type">Grade</Annotation>
+        </Annotations>
+         <Hierarchy hasAll="true">
+            <Level name="Grade" column="grade" type="String" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension name="Gender">
+        <Annotations>
+            <Annotation name="dim_type">GENDER</Annotation>
+        </Annotations>
+         <Hierarchy hasAll="true">
+            <Level name="Gender" column="gender" type="String" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
+
+    <Measure name="Average Reading Score" column="average_score" aggregator="avg" />
 </Cube>
 <Cube name="FBI UCR">
     <Annotations> 
@@ -256,124 +634,6 @@
 
     <Measure name="Population" column="population" aggregator="sum" />
     <Measure name="Number of Crimes" column="number" aggregator="sum" />
-</Cube>
-<Cube name="EPA - Air Quality">
-    <Annotations>
-        <Annotation name="source_name">Environmental Protection Agency</Annotation>
-        <Annotation name="source_link">https://aqs.epa.gov/aqsweb/airdata/download_files.html</Annotation>
-        <Annotation name="dataset_name">EPA</Annotation>
-        <Annotation name="topic">Environment</Annotation>
-    </Annotations>
-
-    <Table name="air_quality" schema="epa"/>
-
-    <Dimension name="Year">
-        <Annotations>
-            <Annotation name="dim_type">TIME</Annotation>
-        </Annotations>
-         <Hierarchy hasAll="true">
-            <Level name="Year" column="year" type="Numeric" levelType="TimeYears" uniqueMembers="true" />
-        </Hierarchy>
-    </Dimension>
-
-    <Dimension foreignKey="county_fips" name="Geography">
-        <Annotations>
-            <Annotation name="dim_type">GEOGRAPHY</Annotation>
-        </Annotations>
-        <Hierarchy hasAll="true" name="County">
-            <Table name="counties" schema="shapes2017"/>
-            <Level column="geoid" name="County" nameColumn="name" uniqueMembers="true"/>
-        </Hierarchy>
-    </Dimension>
-
-    <Measure name="Days with AQI" column="days_with_aqi" aggregator="avg" />
-
-    <!-- adds up to days with AQI -->
-    <Measure name="Good Days" column="good_days" aggregator="avg" />
-    <Measure name="Moderate Days" column="moderate_days" aggregator="avg" />
-    <Measure name="Unhealthy for Sensitive Groups Days" column="unhealthy_for_sensitive_groups_days" aggregator="avg" />
-    <Measure name="Unhealthy Days" column="unhealthy_days" aggregator="avg" />
-    <Measure name="Very Unhealthy Days" column="very_unhealthy_days" aggregator="avg" />
-    <Measure name="Hazardous Days" column="hazardous_days" aggregator="avg" />
-
-    <!-- adds up to days with AQI -->
-    <Measure name="Days CO as Leading Pollutant" column="days_co" aggregator="avg" />
-    <Measure name="Days NO2 as Leading Pollutant" column="days_no2" aggregator="avg" />
-    <Measure name="Days Ozone as Leading Pollutant" column="days_ozone" aggregator="avg" />
-    <Measure name="Days SO2 as Leading Pollutant" column="days_so2" aggregator="avg" />
-    <Measure name="Days PM2.5 as Leading Pollutant" column="days_pm2_5" aggregator="avg" />
-    <Measure name="Days PM10 as Leading Pollutant" column="days_pm10" aggregator="avg" />
-
-    <Measure name="Max AQI" column="max_aqi" aggregator="avg" />
-    <Measure name="90th Percentile AQI" column="90th_percentile_aqi" aggregator="avg" />
-    <Measure name="Median AQI" column="median_aqi" aggregator="avg" />
-</Cube>
-<Cube name="NAEP">
-    <Annotations>
-        <Annotation name="source_name">NAEP Reading Assessment</Annotation>
-        <Annotation name="source_link">https://www.nationsreportcard.gov/reading_2017/#?grade=4</Annotation>
-        <Annotation name="dataset_name">NAEP Reading Assessment</Annotation>
-        <Annotation name="topic">Education</Annotation>
-    </Annotations>
-
-    <Table name="naep" schema="naep"/>
-     
-    <Dimension name="Year">
-        <Annotations>
-            <Annotation name="dim_type">TIME</Annotation>
-        </Annotations>
-         <Hierarchy hasAll="true">
-            <Level name="Year" column="year" type="Numeric" levelType="TimeYears" uniqueMembers="true" />
-        </Hierarchy>
-    </Dimension>
-
-    <Dimension foreignKey="geoid" name="Geography">
-        <Annotations>
-            <Annotation name="dim_type">GEOGRAPHY</Annotation>
-        </Annotations>
-        <Hierarchy hasAll="true" name="City">
-            <Table name="places" schema="shapes2017"/>
-            <Level name="City" column="geoid" nameColumn="name" uniqueMembers="true" hideMemberIf="IfBlankName" />
-        </Hierarchy>
-    </Dimension>
-
-    <Dimension name="Grade">
-        <Annotations>
-            <Annotation name="dim_type">Grade</Annotation>
-        </Annotations>
-         <Hierarchy hasAll="true">
-            <Level name="Grade" column="grade" type="String" uniqueMembers="true" />
-        </Hierarchy>
-    </Dimension>
-
-    <Measure name="Reading Score Average" column="reading_score_average" aggregator="avg" />
-    <Measure name="Reading Score National Average" column="reading_score_national_average" aggregator="avg" />
-    <Measure name="Reading Score Michigan Average" column="reading_score_michigan_average" aggregator="avg" />
-
-    <Measure name="Reading Score Race - Black" column="reading_score_race_black" aggregator="avg" />
-    <Measure name="Reading Score Race - Hispanic" column="reading_score_race_hispanic" aggregator="avg" />
-    
-    <Measure name="Reading Score Gender - Male" column="reading_score_gender_male" aggregator="avg" />
-    <Measure name="Reading Score Gender - Female" column="reading_score_gender_female" aggregator="avg" />
-    
-    <Measure name="Reading Score NSLP Eligible" column="reading_score_nslp_eligible" aggregator="avg" />
-    <Measure name="Reading Score NSLP Ineligible" column="reading_score_nslp_ineligible" aggregator="avg" />
-    
-    <Measure name="Reading Score Parent edu - No high school" column="reading_score_edu_no_high_school" aggregator="avg" />
-    <Measure name="Reading Score Parent edu - High school" column="reading_score_edu_high_school" aggregator="avg" />
-    <Measure name="Reading Score Parent edu - Some college" column="reading_score_edu_some_college" aggregator="avg" />
-    <Measure name="Reading Score Parent edu - College" column="reading_score_edu_college" aggregator="avg" />
-    <Measure name="Reading Score Parent edu - Unknown" column="reading_score_edu_unknown" aggregator="avg" />
-    
-    <Measure name="Reading Score Disability - Yes" column="reading_score_disabilities" aggregator="avg" />
-    <Measure name="Reading Score Disability - No" column="reading_score_no_disabilities" aggregator="avg" />
-    
-    <Measure name="Reading Score ELL - Yes" column="reading_score_ell" aggregator="avg" />
-    <Measure name="Reading Score ELL - No" column="reading_score_not_ell" aggregator="avg" />
-    
-    <Measure name="Reading Score Percent Proficient - Detroit" column="reading_score_proficient_percent" aggregator="avg" />
-    <Measure name="Reading Score Percent Proficient - National" column="reading_score_national_proficient_percent" aggregator="avg" />
-    <Measure name="Reading Score Percent Proficient - Michigan" column="reading_score_michigan_proficient_percent" aggregator="avg" />
 </Cube>
 <Cube name="MiBRFS">
     <Annotations>
@@ -1494,7 +1754,7 @@
       </MeasureExpression>
     </Measure>
 
-    <CalculatedMember dimension="Measures" name="Year Built" visible="true">
+    <CalculatedMember dimension="Measures" name="Construction Date" visible="true">
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[mea_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[mea_t]
@@ -1516,11 +1776,11 @@
         END
       </Formula>
       <Annotations>
-        <Annotation name="aggregation_method">SUM</Annotation>
+        <Annotation name="aggregation_method">AVG</Annotation>
       </Annotations>
     </CalculatedMember>
 
-    <CalculatedMember dimension="Measures" name="Year Built Moe" visible="true">
+    <CalculatedMember dimension="Measures" name="Construction Date Moe" visible="true">
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[moe_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[moe_t]
@@ -1543,7 +1803,7 @@
       </Formula>
       <Annotations>
         <Annotation name="aggregation_method">MOE</Annotation>
-        <Annotation name="error_for_measure">Year Built</Annotation>
+        <Annotation name="error_for_measure">Construction Date</Annotation>
       </Annotations>
     </CalculatedMember>
 
@@ -2308,7 +2568,7 @@
       </MeasureExpression>
     </Measure>
 
-    <CalculatedMember dimension="Measures" name="Year Built" visible="true">
+    <CalculatedMember dimension="Measures" name="Construction Date" visible="true">
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[mea_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[mea_t]
@@ -2330,11 +2590,11 @@
         END
       </Formula>
       <Annotations>
-        <Annotation name="aggregation_method">SUM</Annotation>
+        <Annotation name="aggregation_method">AVG</Annotation>
       </Annotations>
     </CalculatedMember>
 
-    <CalculatedMember dimension="Measures" name="Year Built Moe" visible="true">
+    <CalculatedMember dimension="Measures" name="Construction Date Moe" visible="true">
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[moe_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[moe_t]
@@ -2357,7 +2617,7 @@
       </Formula>
       <Annotations>
         <Annotation name="aggregation_method">MOE</Annotation>
-        <Annotation name="error_for_measure">Year Built</Annotation>
+        <Annotation name="error_for_measure">Construction Date</Annotation>
       </Annotations>
     </CalculatedMember>
 
@@ -9245,6 +9505,122 @@
     <Measure name="Average USA CPI" column="usa_avg" aggregator="avg" />
     <Measure name="Average Midwest CPI" column="midwest_avg" aggregator="avg" />
 </Cube>
+<Cube name="EPA - Air Quality Stats">
+    <Annotations>
+        <Annotation name="source_name">Environmental Protection Agency</Annotation>
+        <Annotation name="source_link">https://aqs.epa.gov/aqsweb/airdata/download_files.html</Annotation>
+        <Annotation name="dataset_name">EPA</Annotation>
+        <Annotation name="topic">Environment</Annotation>
+    </Annotations>
+
+    <Table name="air_quality_stats" schema="epa"/>
+
+    <Dimension name="Year">
+        <Annotations>
+            <Annotation name="dim_type">TIME</Annotation>
+        </Annotations>
+         <Hierarchy hasAll="true">
+            <Level name="Year" column="year" type="Numeric" levelType="TimeYears" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension foreignKey="county_fips" name="Geography">
+        <Annotations>
+            <Annotation name="dim_type">GEOGRAPHY</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true" name="County">
+            <Table name="counties" schema="shapes2017"/>
+            <Level column="state_id" name="State" nameColumn="state_name" uniqueMembers="true"/>
+            <Level column="geoid" name="County" nameColumn="namelsad" uniqueMembers="true"/>
+        </Hierarchy>
+    </Dimension>
+
+    <Measure name="Max AQI" column="max_aqi" aggregator="avg" />
+    <Measure name="90th Percentile AQI" column="90th_percentile_aqi" aggregator="avg" />
+    <Measure name="Median AQI" column="median_aqi" aggregator="avg" />
+</Cube>
+<Cube name="EPA - Air Quality Days">
+    <Annotations>
+        <Annotation name="source_name">Environmental Protection Agency</Annotation>
+        <Annotation name="source_link">https://aqs.epa.gov/aqsweb/airdata/download_files.html</Annotation>
+        <Annotation name="dataset_name">EPA</Annotation>
+        <Annotation name="topic">Environment</Annotation>
+    </Annotations>
+
+    <Table name="air_quality_days" schema="epa"/>
+
+    <Dimension name="Year">
+        <Annotations>
+            <Annotation name="dim_type">TIME</Annotation>
+        </Annotations>
+         <Hierarchy hasAll="true">
+            <Level name="Year" column="year" type="Numeric" levelType="TimeYears" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension foreignKey="county_fips" name="Geography">
+        <Annotations>
+            <Annotation name="dim_type">GEOGRAPHY</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true" name="County">
+            <Table name="counties" schema="shapes2017"/>
+            <Level column="state_id" name="State" nameColumn="state_name" uniqueMembers="true"/>
+            <Level column="geoid" name="County" nameColumn="namelsad" uniqueMembers="true"/>
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension name="Categories">
+        <Annotations>
+            <Annotation name="dim_type">CATEGORY</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true" name="Category">
+            <Level name="Category" column="category" uniqueMembers="true"/>
+        </Hierarchy>
+    </Dimension>
+
+    <Measure name="Number of Days" column="number_of_days" aggregator="sum" />
+</Cube>
+<Cube name="EPA - Air Quality Pollutants">
+    <Annotations>
+        <Annotation name="source_name">Environmental Protection Agency</Annotation>
+        <Annotation name="source_link">https://aqs.epa.gov/aqsweb/airdata/download_files.html</Annotation>
+        <Annotation name="dataset_name">EPA</Annotation>
+        <Annotation name="topic">Environment</Annotation>
+    </Annotations>
+
+    <Table name="air_quality_pollutants" schema="epa"/>
+
+    <Dimension name="Year">
+        <Annotations>
+            <Annotation name="dim_type">TIME</Annotation>
+        </Annotations>
+         <Hierarchy hasAll="true">
+            <Level name="Year" column="year" type="Numeric" levelType="TimeYears" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension foreignKey="county_fips" name="Geography">
+        <Annotations>
+            <Annotation name="dim_type">GEOGRAPHY</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true" name="County">
+            <Table name="counties" schema="shapes2017"/>
+            <Level column="state_id" name="State" nameColumn="state_name" uniqueMembers="true"/>
+            <Level column="geoid" name="County" nameColumn="namelsad" uniqueMembers="true"/>
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension name="Categories">
+        <Annotations>
+            <Annotation name="dim_type">CATEGORY</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true" name="Category">
+            <Level name="Category" column="category" uniqueMembers="true"/>
+        </Hierarchy>
+    </Dimension>
+
+    <Measure name="Number of Days" column="number_of_days" aggregator="sum" />
+</Cube>
 <Cube name="NWQMC - Water Quality">
     <Annotations>
         <Annotation name="source_name">National Water Quality Monitoring Council</Annotation>
@@ -9313,7 +9689,28 @@
             <Level column="name" name="Zip Code" nameColumn="name" uniqueMembers="true"/>
         </Hierarchy>
     </Dimension>
-
+    
+    <!-- Race -->
+    <Measure name="Percentage Non-white" column="percent_non_white" aggregator="avg" />
+    <Measure name="Percentage Hispanic" column="percent_hispanic" aggregator="avg" />
+    <Measure name="Percentage Black" column="percent_black" aggregator="avg" />
+    <Measure name="Percentage Asian " column="percent_asian" aggregator="avg" />
+    <Measure name="Percentage American Indian/Alaska Native" column="percent_american_indian_alaska_native" aggregator="avg" />
+    <!-- Insurance -->
+    <Measure name="Penetration of Uninsured Population" column="penetration_of_uninsured_population" aggregator="avg" />
+    <Measure name="Penetration of Population with Medicaid and Other Pub Ins" column="penetration_of_population_with_medicaid_and_other_pub_ins" aggregator="avg" />
+    <Measure name="Penetration of Population with Medicare and Priv Ins" column="penetration_of_population_with_medicare_and_priv_ins" aggregator="avg" />
+    <Measure name="Uninsured Not Served by Health Centers" column="uninsured_not_served_by_health_centers" aggregator="sum" />
+    <Measure name="Medicaid and Other Pub Ins Not Served by Health Centers" column="medicaid_and_other_pub_ins_not_served_by_health_centers" aggregator="sum" />
+    <Measure name="Medicare and Priv Ins Not Served by Health Centers" column="medicare_and_priv_ins_not_served_by_health_centers" aggregator="sum" />
+    <Measure name="Percentage Patients Uninsured" column="percent_patients_uninsured" aggregator="avg" />
+    <Measure name="Percentage Patients with Medicaid and Other Pub Ins" column="percent_patients_with_medicaid_and_other_pub_ins" aggregator="avg" />
+    <Measure name="Percentage Patients with Medicare and Priv Ins" column="percent_patients_with_medicare_and_priv_ins" aggregator="avg" />
+    <Measure name="Percentage Population Uninsured - JSI" column="percent_population_uninsured_jsi" aggregator="avg" />
+    <Measure name="Percentage Population Uninsured - RGC" column="percent_population_uninsured_rgc" aggregator="avg" />
+    <Measure name="Percentage Population with Medicaid and Other Pub Ins" column="percent_population_with_medicaid_and_other_pub_ins" aggregator="avg" />
+    <Measure name="Percentage Population with Medicare and Priv Ins" column="percent_population_with_medicare_and_priv_ins" aggregator="avg" />
+    <!-- Main -->
     <Measure name="Health Centers" column="health_centers" aggregator="sum" />
     <Measure name="Dominant Health Center" column="dominant_health_center" datatype="String" caption="Dominant Health Center" aggregator="max" />
     <Measure name="Total Population" column="total_population" aggregator="sum" />
@@ -9322,9 +9719,6 @@
     <Measure name="Unserved Low-Income" column="unserved_low_income" aggregator="sum" />
     <Measure name="Penetration of Low-Income" column="penetration_of_low_income" aggregator="avg" />
     <Measure name="Penetration of Total Population" column="penetration_of_total_population" aggregator="avg" />
-    <Measure name="Penetration of Uninsured Population" column="penetration_of_uninsured_population" aggregator="avg" />
-    <Measure name="Penetration of Population with Medicaid and Other Pub Ins" column="penetration_of_population_with_medicaid_and_other_pub_ins" aggregator="avg" />
-    <Measure name="Penetration of Population with Medicare and Priv Ins" column="penetration_of_population_with_medicare_and_priv_ins" aggregator="avg" />
     <Measure name="1-Year Patient Percent Change" column="1_year_patient_percent_change" aggregator="avg" />
     <Measure name="2-Year Patient Percent Change" column="2_year_patient_percent_change" aggregator="avg" />
     <Measure name="2-Year Patient Change" column="2_year_patient_number_change" aggregator="sum" />
@@ -9332,30 +9726,12 @@
     <Measure name="1-Year Medicaid and Other Pub Ins Patient Percent Change" column="1_year_medicaid_and_other_pub_ins_patient_percent_change" aggregator="avg" />
     <Measure name="1-Year Medicare and Priv Ins Patient Percent Change" column="1_year_medicare_and_priv_ins_patient_percent_change" aggregator="avg" />
     <Measure name="Low-Income Not Served by Health Centers" column="low_income_not_served_by_health_centers" aggregator="sum" />
-    <Measure name="Uninsured Not Served by Health Centers" column="uninsured_not_served_by_health_centers" aggregator="sum" />
-    <Measure name="Medicaid and Other Pub Ins Not Served by Health Centers" column="medicaid_and_other_pub_ins_not_served_by_health_centers" aggregator="sum" />
-    <Measure name="Medicare and Priv Ins Not Served by Health Centers" column="medicare_and_priv_ins_not_served_by_health_centers" aggregator="sum" />
     <Measure name="Total Population Not Served by Health Centers" column="total_population_not_served_by_health_centers" aggregator="sum" />
-    <Measure name="Percentage Patients Uninsured" column="percent_patients_uninsured" aggregator="avg" />
-    <Measure name="Percentage Patients with Medicaid and Other Pub Ins" column="percent_patients_with_medicaid_and_other_pub_ins" aggregator="avg" />
-    <Measure name="Percentage Patients with Medicare and Priv Ins" column="percent_patients_with_medicare_and_priv_ins" aggregator="avg" />
     <Measure name="Percentage Population in Poverty" column="percent_population_in_poverty" aggregator="avg" />
     <Measure name="Percentage Low-Income Population" column="percent_low_income_population" aggregator="avg" />
-    
-    <!-- Race -->
-    <Measure name="Percentage Non-white" column="percent_non_white" aggregator="avg" />
-    <Measure name="Percentage Hispanic" column="percent_hispanic" aggregator="avg" />
-    <Measure name="Percentage Black" column="percent_black" aggregator="avg" />
-    <Measure name="Percentage Asian " column="percent_asian" aggregator="avg" />
-    <Measure name="Percentage American Indian/Alaska Native" column="percent_american_indian_alaska_native" aggregator="avg" />
-
-    <Measure name="Percentage Population Uninsured - JSI" column="percent_population_uninsured_jsi" aggregator="avg" />
-    <Measure name="Percentage Population with Medicaid and Other Pub Ins" column="percent_population_with_medicaid_and_other_pub_ins" aggregator="avg" />
-    <Measure name="Percentage Population with Medicare and Priv Ins" column="percent_population_with_medicare_and_priv_ins" aggregator="avg" />
     <Measure name="Percentage Pop Not Employed" column="percent_pop_not_employed" aggregator="avg" />
     <Measure name="Percentage Pop with Limited English Proficiency" column="percent_pop_with_limited_english_proficiency" aggregator="avg" />
     <Measure name="Percentage Pop with Less Than High School Education" column="percent_pop_with_less_than_high_school_education" aggregator="avg" />
-    <Measure name="Percentage Population Uninsured - RGC" column="percent_population_uninsured_rgc" aggregator="avg" />
     <Measure name="Low Birth Weight Rate" column="low_birth_weight_rate" aggregator="avg" />
     <Measure name="Age-Adjusted Mortality Rate (per 100000)" column="age_adjusted_mortality_rate_per_100000" aggregator="avg" />
     <Measure name="Percentage Adults Ever Told They Have Diabetes" column="percent_adults_ever_told_they_have_diabetes" aggregator="avg" />
