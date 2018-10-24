@@ -1,0 +1,41 @@
+<Cube name="EPA - Air Quality Days">
+    <Annotations>
+        <Annotation name="source_name">Environmental Protection Agency</Annotation>
+        <Annotation name="source_link">https://aqs.epa.gov/aqsweb/airdata/download_files.html</Annotation>
+        <Annotation name="dataset_name">EPA</Annotation>
+        <Annotation name="topic">Environment</Annotation>
+    </Annotations>
+
+    <Table name="air_quality_days" schema="epa"/>
+
+    <Dimension name="Year">
+        <Annotations>
+            <Annotation name="dim_type">TIME</Annotation>
+        </Annotations>
+         <Hierarchy hasAll="true">
+            <Level name="Year" column="year" type="Numeric" levelType="TimeYears" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension foreignKey="county_fips" name="Geography">
+        <Annotations>
+            <Annotation name="dim_type">GEOGRAPHY</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true" name="County">
+            <Table name="counties" schema="shapes2017"/>
+            <Level column="state_id" name="State" nameColumn="state_name" uniqueMembers="true"/>
+            <Level column="geoid" name="County" nameColumn="namelsad" uniqueMembers="true"/>
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension name="Categories">
+        <Annotations>
+            <Annotation name="dim_type">CATEGORY</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true" name="Category">
+            <Level name="Category" column="category" uniqueMembers="true"/>
+        </Hierarchy>
+    </Dimension>
+
+    <Measure name="Number of Days" column="number_of_days" aggregator="sum" />
+</Cube>

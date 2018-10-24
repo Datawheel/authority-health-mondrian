@@ -1,0 +1,41 @@
+<Cube name="HRSA - Dentists by Employment Status">
+    <Annotations>
+        <Annotation name="source_name">Health Resources and Services Administration</Annotation>
+        <Annotation name="source_link">https://datawarehouse.hrsa.gov/topics/ahrf.aspx</Annotation>
+        <Annotation name="dataset_name">HRSA</Annotation>
+        <Annotation name="topic">Health</Annotation>
+    </Annotations>
+
+    <Table name="dentists_by_employment_status" schema="hrsa"/>
+
+    <Dimension name="Year">
+        <Annotations>
+            <Annotation name="dim_type">TIME</Annotation>
+        </Annotations>
+         <Hierarchy hasAll="true">
+            <Level name="Year" column="year" type="Numeric" levelType="TimeYears" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension foreignKey="county_fips" name="Geography">
+        <Annotations>
+            <Annotation name="dim_type">GEOGRAPHY</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true" name="County">
+            <Table name="counties" schema="shapes2017"/>
+            <Level name="County" column="geoid" nameColumn="name" uniqueMembers="true" hideMemberIf="IfBlankName" />
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension name="Employment Status">
+        <Annotations>
+            <Annotation name="dim_type">EMPLOYMENT_STATUS</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true" name="Work">
+            <Level name="Status" column="status" uniqueMembers="true"/>
+            <Level name="Work" column="work" uniqueMembers="true"/>
+        </Hierarchy>
+    </Dimension>
+
+    <Measure name="Number of Dentists" column="number" aggregator="sum" />
+</Cube>

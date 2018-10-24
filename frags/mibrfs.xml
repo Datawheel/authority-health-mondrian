@@ -189,5 +189,6 @@
     <Measure name="FOBT or Endoscopy Yes Weighted Percent" column="fobt_or_endoscopy_yes_weighted_percent" aggregator="avg" />
     <Measure name="FOBT or Endoscopy No Sample Frequency" column="fobt_or_endoscopy_no_sample_frequency" aggregator="sum" />
     <Measure name="FOBT or Endoscopy No Weighted Frequency" column="fobt_or_endoscopy_no_weighted_frequency" aggregator="sum" />
+    <Measure name="FOBT or Endoscopy No Weighted Percent" column="fobt_or_endoscopy_no_weighted_percent" aggregator="avg" />
     <Measure name="FOBT or Endoscopy Weighted Percent" column="fobt_or_endoscopy_no_weighted_percent" aggregator="avg" />
 </Cube>

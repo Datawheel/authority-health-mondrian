@@ -1,0 +1,47 @@
+<Cube name="HUD - Homeless">
+    <Annotations>
+        <Annotation name="source_name">US Department of Housing and Urban Development</Annotation>
+        <Annotation name="source_link">https://www.hudexchange.info/</Annotation>
+        <Annotation name="dataset_name">HUD</Annotation>
+        <Annotation name="topic">Demographics</Annotation>
+    </Annotations>
+
+    <Table name="homeless" schema="hud"/>
+
+    <Dimension name="Year">
+        <Annotations>
+            <Annotation name="dim_type">TIME</Annotation>
+        </Annotations>
+         <Hierarchy hasAll="true">
+            <Level name="Year" column="year" type="Numeric" levelType="TimeYears" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension foreignKey="geo" name="Geography">
+        <Annotations>
+            <Annotation name="dim_type">GEOGRAPHY</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true" name="State">
+            <Table name="states" schema="shapes2017"/>
+            <Level column="geoid" name="State" nameColumn="name" uniqueMembers="true"/>
+        </Hierarchy>
+        <Hierarchy hasAll="true" name="County">
+            <Table name="counties" schema="shapes2017"/>
+            <Level column="geoid" name="County" nameColumn="name" uniqueMembers="true"/>
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension name="Categories">
+        <Annotations>
+            <Annotation name="dim_type">CATEGORY</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true" name="Sub-category">
+            <Level name="Category" column="category" uniqueMembers="true"/>
+            <Level name="Sub-category" column="sub_category" uniqueMembers="true"/>
+        </Hierarchy>
+    </Dimension>
+
+    <Measure name="CoC Name" column="coc_name" datatype="String" caption="CoC Name" aggregator="max" />
+    <Measure name="Sheltered" column="sheltered" aggregator="sum" />
+    <Measure name="Unsheltered" column="unsheltered" aggregator="sum" />
+</Cube>

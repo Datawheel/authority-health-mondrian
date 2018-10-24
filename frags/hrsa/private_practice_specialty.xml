@@ -1,0 +1,40 @@
+<Cube name="HRSA - Dentists in Private Practice by Specialty">
+    <Annotations>
+        <Annotation name="source_name">Health Resources and Services Administration</Annotation>
+        <Annotation name="source_link">https://datawarehouse.hrsa.gov/topics/ahrf.aspx</Annotation>
+        <Annotation name="dataset_name">HRSA</Annotation>
+        <Annotation name="topic">Health</Annotation>
+    </Annotations>
+
+    <Table name="dentists_in_private_practice_by_specialty" schema="hrsa"/>
+
+    <Dimension name="Year">
+        <Annotations>
+            <Annotation name="dim_type">TIME</Annotation>
+        </Annotations>
+         <Hierarchy hasAll="true">
+            <Level name="Year" column="year" type="Numeric" levelType="TimeYears" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension foreignKey="county_fips" name="Geography">
+        <Annotations>
+            <Annotation name="dim_type">GEOGRAPHY</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true" name="County">
+            <Table name="counties" schema="shapes2017"/>
+            <Level name="County" column="geoid" nameColumn="name" uniqueMembers="true" hideMemberIf="IfBlankName" />
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension name="Specialty">
+        <Annotations>
+            <Annotation name="dim_type">SPECIALTY</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true">
+            <Level name="Specialty" column="specialty" uniqueMembers="true"/>
+        </Hierarchy>
+    </Dimension>
+
+    <Measure name="Number of Dentists" column="number" aggregator="sum" />
+</Cube>
