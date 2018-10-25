@@ -37,7 +37,7 @@
       </Hierarchy>
     </Dimension>
   
-    <Dimension foreignKey="dim_1" name="Family type:main">
+    <!-- <Dimension foreignKey="dim_1" name="Family type:main">
       <Hierarchy hasAll="true">
         <InlineTable alias="dim_1_table">
           <ColumnDefs>
@@ -57,9 +57,9 @@
         </InlineTable>
       <Level column="member_0_code" hideMemberIf="IfParentsName" name="Family type:main" nameColumn="member_0" uniqueMembers="true"/>
       </Hierarchy>
-    </Dimension>
+    </Dimension> -->
   
-    <Dimension foreignKey="dim_2" name="Family type:extension">
+    <Dimension foreignKey="dim_2" name="Family type">
       <Hierarchy hasAll="true">
         <InlineTable alias="dim_2_table">
           <ColumnDefs>
@@ -81,11 +81,11 @@
             </Row>
           </Rows>
         </InlineTable>
-      <Level column="member_0_code" hideMemberIf="IfParentsName" name="Family type:extension" nameColumn="member_0" uniqueMembers="true"/>
+      <Level column="member_0_code" hideMemberIf="IfParentsName" name="Family type" nameColumn="member_0" uniqueMembers="true"/>
       </Hierarchy>
     </Dimension>
   
-    <Dimension foreignKey="dim_3" name="Number of workers:main">
+    <!-- <Dimension foreignKey="dim_3" name="Number of workers:main">
       <Hierarchy hasAll="true">
         <InlineTable alias="dim_3_table">
           <ColumnDefs>
@@ -113,9 +113,9 @@
         </InlineTable>
       <Level column="member_0_code" hideMemberIf="IfParentsName" name="Number of workers:main" nameColumn="member_0" uniqueMembers="true"/>
       </Hierarchy>
-    </Dimension>
+    </Dimension> -->
   
-    <Dimension foreignKey="dim_4" name="Number of workers:extension">
+    <Dimension foreignKey="dim_4" name="Number of workers">
       <Hierarchy hasAll="true">
         <InlineTable alias="dim_4_table">
           <ColumnDefs>
@@ -149,7 +149,7 @@
             </Row>
           </Rows>
         </InlineTable>
-      <Level column="member_0_code" hideMemberIf="IfParentsName" name="Number of workers:extension" nameColumn="member_0" uniqueMembers="true"/>
+      <Level column="member_0_code" hideMemberIf="IfParentsName" name="Number of workers" nameColumn="member_0" uniqueMembers="true"/>
       </Hierarchy>
     </Dimension>
   
