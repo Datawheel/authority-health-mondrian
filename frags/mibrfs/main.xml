@@ -1,4 +1,4 @@
-<Cube name="MiBRFS">
+<Cube name="MiBRFS - All Years">
     <Annotations>
         <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>
         <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>
@@ -7,7 +7,7 @@
         <Annotation name="subtopic">Risk Factors</Annotation>
     </Annotations>
 
-    <Table name="brfs" schema="mibrfs"/>
+    <Table name="mibrfs_all_years" schema="mibrfs"/>
 
     <Dimension name="Start Year">
         <Annotations>
@@ -217,47 +217,6 @@
     <Measure name="FOBT or Endoscopy No Sample Frequency" column="fobt_or_endoscopy_no_sample_frequency" aggregator="sum" />
     <Measure name="FOBT or Endoscopy No Weighted Frequency" column="fobt_or_endoscopy_no_weighted_frequency" aggregator="sum" />
     <Measure name="FOBT or Endoscopy No Weighted Percent" column="fobt_or_endoscopy_no_weighted_percent" aggregator="avg" />
-
-    <Measure name="Had Pap Smear Yes Sample Frequency" column="hap_pap_smear_yes_sample_frequency" aggregator="sum" />
-    <Measure name="Had Pap Smear Yes Weighted Frequency" column="hap_pap_smear_yes_weighted_frequency" aggregator="sum" />
-    <Measure name="Had Pap Smear Yes Weighted Percent" column="hap_pap_smear_yes_weighted_percent" aggregator="avg" />
-    <Measure name="Had Pap Smear No Sample Frequency" column="had_pap_smear_no_sample_frequency" aggregator="sum" />
-    <Measure name="Had Pap Smear No Weighted Frequency" column="had_pap_smear_no_weighted_frequency" aggregator="sum" />
-    <Measure name="Had Pap Smear No Weighted Percent" column="had_pap_smear_no_weighted_percent" aggregator="avg" />
-
-    <Measure name="Had Mammogram Yes Sample Frequency" column="had_mammogram_yes_sample_frequency" aggregator="sum" />
-    <Measure name="Had Mammogram Yes Weighted Frequency" column="had_mammogram_yes_weighted_frequency" aggregator="sum" />
-    <Measure name="Had Mammogram Yes Weighted Percent" column="had_mammogram_yes_weighted_percent" aggregator="avg" />
-    <Measure name="Had Mammogram No Sample Frequency" column="had_mammogram_no_sample_frequency" aggregator="sum" />
-    <Measure name="Had Mammogram No Weighted Frequency" column="had_mammogram_no_weighted_frequency" aggregator="sum" />
-    <Measure name="Had Mammogram No Weighted Percent" column="had_mammogram_no_weighted_percent" aggregator="avg" />
-
-    <Measure name="Had PSA Test Yes Sample Frequency" column="had_psa_test_yes_sample_frequency" aggregator="sum" />
-    <Measure name="Had PSA Test Yes Weighted Frequency" column="had_psa_test_yes_weighted_frequency" aggregator="sum" />
-    <Measure name="Had PSA Test Yes Weighted Percent" column="had_psa_test_yes_weighted_percent" aggregator="avg" />
-    <Measure name="Had PSA Test No Sample Frequency" column="had_psa_test_no_sample_frequency" aggregator="sum" />
-    <Measure name="Had PSA Test No Weighted Frequency" column="had_psa_test_no_weighted_frequency" aggregator="sum" />
-    <Measure name="Had PSA Test No Weighted Percent" column="had_psa_test_no_weighted_percent" aggregator="avg" />
-
-    <Measure name="Last PSA Test Last Year Sample Frequency" column="last_psa_test_last_year_sample_frequency" aggregator="sum" />
-    <Measure name="Last PSA Test Last Year Weighted Frequency" column="last_psa_test_last_year_weighted_frequency" aggregator="sum" />
-    <Measure name="Last PSA Test Last Year Weighted Percent" column="last_psa_test_last_year_weighted_percent" aggregator="avg" />
-    <Measure name="Last PSA Test 1-2 Years Sample Frequency" column="last_psa_test_1_2_years_sample_frequency" aggregator="sum" />
-    <Measure name="Last PSA Test 1-2 Years Weighted Frequency" column="last_psa_test_1_2_years_weighted_frequency" aggregator="sum" />
-    <Measure name="Last PSA Test 1-2 Years Weighted Percent" column="last_psa_test_1_2_years_weighted_percent" aggregator="avg" />
-    <Measure name="Last PSA Test 2+ Years Sample Frequency" column="last_psa_test_over_2_years_sample_frequency" aggregator="sum" />
-    <Measure name="Last PSA Test 2+ Years Weighted Frequency" column="last_psa_test_over_2_years_weighted_frequency" aggregator="sum" />
-    <Measure name="Last PSA Test 2+ Years Weighted Percent" column="last_psa_test_over_2_years_weighted_percent" aggregator="avg" />
-    <Measure name="Last PSA Test Never Sample Frequency" column="last_psa_test_never_sample_frequency" aggregator="sum" />
-    <Measure name="Last PSA Test Never Weighted Frequency" column="last_psa_test_never_weighted_frequency" aggregator="sum" />
-    <Measure name="Last PSA Test Never Weighted Percent" column="last_psa_test_never_weighted_percent" aggregator="avg" />
-
-    <Measure name="Visited Dentist Yes Sample Frequency" column="visited_dentist_yes_sample_frequency" aggregator="sum" />
-    <Measure name="Visited Dentist Yes Weighted Frequency" column="visited_dentist_yes_weighted_frequency" aggregator="sum" />
-    <Measure name="Visited Dentist Yes Weighted Percent" column="visited_dentist_yes_weighted_percent" aggregator="avg" />
-    <Measure name="Visited Dentist No Sample Frequency" column="visited_dentist_no_sample_frequency" aggregator="sum" />
-    <Measure name="Visited Dentist No Weighted Frequency" column="visited_dentist_no_weighted_frequency" aggregator="sum" />
-    <Measure name="Visited Dentist No Weighted Percent" column="visited_dentist_no_weighted_percent" aggregator="avg" />
 
     <Measure name="Secondhand Smoke Exposure Yes Sample Frequency" column="secondhand_smoke_exposure_yes_sample_frequency" aggregator="sum" />
     <Measure name="Secondhand Smoke Exposure Yes Weighted Frequency" column="secondhand_smoke_exposure_yes_weighted_frequency" aggregator="sum" />
