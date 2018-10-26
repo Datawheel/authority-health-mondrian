@@ -15,15 +15,15 @@
         <Level column="year" levelType="TimeYears" name="Year" type="Numeric" uniqueMembers="true"/>
       </Hierarchy>
     </Dimension>
-    <Measure aggregator="sum" column="mea_t" name="mea_t" visible="false"/>
-    <Measure aggregator="sum" column="mea_nation" name="mea_nation" visible="false"/>
-    <Measure aggregator="sum" column="mea_county" name="mea_county" visible="false"/>
-    <Measure aggregator="sum" column="mea_zip" name="mea_zip" visible="false"/>
-    <Measure aggregator="sum" column="mea_state" name="mea_state" visible="false"/>
-    <Measure aggregator="sum" column="mea_place" name="mea_place" visible="false"/>
-    <Measure aggregator="sum" column="mea_msa" name="mea_msa" visible="false"/>
-    <Measure aggregator="sum" column="mea_puma" name="mea_puma" visible="false"/>
-    <Measure aggregator="sum" column="mea_county_subdivision" name="mea_county_subdivision" visible="false"/>
+    <Measure aggregator="avg" column="mea_t" name="mea_t" visible="false"/>
+    <Measure aggregator="avg" column="mea_nation" name="mea_nation" visible="false"/>
+    <Measure aggregator="avg" column="mea_county" name="mea_county" visible="false"/>
+    <Measure aggregator="avg" column="mea_zip" name="mea_zip" visible="false"/>
+    <Measure aggregator="avg" column="mea_state" name="mea_state" visible="false"/>
+    <Measure aggregator="avg" column="mea_place" name="mea_place" visible="false"/>
+    <Measure aggregator="avg" column="mea_msa" name="mea_msa" visible="false"/>
+    <Measure aggregator="avg" column="mea_puma" name="mea_puma" visible="false"/>
+    <Measure aggregator="avg" column="mea_county_subdivision" name="mea_county_subdivision" visible="false"/>
 
     <Measure aggregator="None" dataType="Numeric" name="moe_t" visible="false">
       <MeasureExpression>

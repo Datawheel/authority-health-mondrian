@@ -1816,15 +1816,15 @@
         <Level column="year" levelType="TimeYears" name="Year" type="Numeric" uniqueMembers="true"/>
       </Hierarchy>
     </Dimension>
-    <Measure aggregator="sum" column="mea_t" name="mea_t" visible="false"/>
-    <Measure aggregator="sum" column="mea_nation" name="mea_nation" visible="false"/>
-    <Measure aggregator="sum" column="mea_county" name="mea_county" visible="false"/>
-    <Measure aggregator="sum" column="mea_zip" name="mea_zip" visible="false"/>
-    <Measure aggregator="sum" column="mea_state" name="mea_state" visible="false"/>
-    <Measure aggregator="sum" column="mea_place" name="mea_place" visible="false"/>
-    <Measure aggregator="sum" column="mea_msa" name="mea_msa" visible="false"/>
-    <Measure aggregator="sum" column="mea_puma" name="mea_puma" visible="false"/>
-    <Measure aggregator="sum" column="mea_county_subdivision" name="mea_county_subdivision" visible="false"/>
+    <Measure aggregator="avg" column="mea_t" name="mea_t" visible="false"/>
+    <Measure aggregator="avg" column="mea_nation" name="mea_nation" visible="false"/>
+    <Measure aggregator="avg" column="mea_county" name="mea_county" visible="false"/>
+    <Measure aggregator="avg" column="mea_zip" name="mea_zip" visible="false"/>
+    <Measure aggregator="avg" column="mea_state" name="mea_state" visible="false"/>
+    <Measure aggregator="avg" column="mea_place" name="mea_place" visible="false"/>
+    <Measure aggregator="avg" column="mea_msa" name="mea_msa" visible="false"/>
+    <Measure aggregator="avg" column="mea_puma" name="mea_puma" visible="false"/>
+    <Measure aggregator="avg" column="mea_county_subdivision" name="mea_county_subdivision" visible="false"/>
 
     <Measure aggregator="None" dataType="Numeric" name="moe_t" visible="false">
       <MeasureExpression>
@@ -1874,23 +1874,23 @@
 
     <CalculatedMember dimension="Measures" name="Construction Date" visible="true">
       <Formula>CASE
-        WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN AVG([Measures].[mea_t])
-        WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN AVG([Measures].[mea_t])
-        WHEN [Geography].[Tract].Level is [Geography].[Tract].[Tract] THEN AVG([Measures].[mea_t])
-        WHEN [Geography].[Place].Level is [Geography].[Place].[State] THEN AVG([Measures].[mea_place])
-        WHEN [Geography].[Place].Level is [Geography].[Place].[Place] THEN AVG([Measures].[mea_place])
-        WHEN [Geography].[Zip].Level is [Geography].[Zip].[Zip] THEN AVG([Measures].[mea_zip])
-        WHEN [Geography].[County].Level is [Geography].[County].[State] THEN AVG([Measures].[mea_county])
-        WHEN [Geography].[County].Level is [Geography].[County].[County] THEN AVG([Measures].[mea_county])
-        WHEN [Geography].[State].Level is [Geography].[State].[State] THEN AVG([Measures].[mea_state])
-        WHEN [Geography].[Nation].Level is [Geography].[Nation].[Nation] THEN AVG([Measures].[mea_nation])
-        WHEN [Geography].[Puma].Level is [Geography].[Puma].[State] THEN AVG([Measures].[mea_puma])
-        WHEN [Geography].[Puma].Level is [Geography].[Puma].[Puma] THEN AVG([Measures].[mea_puma])
-        WHEN [Geography].[Msa].Level is [Geography].[Msa].[Msa] THEN AVG([Measures].[mea_msa])
-        WHEN [Geography].[County Subdivision].Level is [Geography].[County Subdivision].[State] THEN AVG([Measures].[mea_county_subdivision])
-        WHEN [Geography].[County Subdivision].Level is [Geography].[County Subdivision].[County] THEN AVG([Measures].[mea_county_subdivision])
-        WHEN [Geography].[County Subdivision].Level is [Geography].[County Subdivision].[County Subdivision] THEN AVG([Measures].[mea_county_subdivision])
-        WHEN 1 = 1 THEN AVG([Measures].[mea_nation])
+        WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[mea_t]
+        WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[mea_t]
+        WHEN [Geography].[Tract].Level is [Geography].[Tract].[Tract] THEN [Measures].[mea_t]
+        WHEN [Geography].[Place].Level is [Geography].[Place].[State] THEN [Measures].[mea_place]
+        WHEN [Geography].[Place].Level is [Geography].[Place].[Place] THEN [Measures].[mea_place]
+        WHEN [Geography].[Zip].Level is [Geography].[Zip].[Zip] THEN [Measures].[mea_zip]
+        WHEN [Geography].[County].Level is [Geography].[County].[State] THEN [Measures].[mea_county]
+        WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county]
+        WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state]
+        WHEN [Geography].[Nation].Level is [Geography].[Nation].[Nation] THEN [Measures].[mea_nation]
+        WHEN [Geography].[Puma].Level is [Geography].[Puma].[State] THEN [Measures].[mea_puma]
+        WHEN [Geography].[Puma].Level is [Geography].[Puma].[Puma] THEN [Measures].[mea_puma]
+        WHEN [Geography].[Msa].Level is [Geography].[Msa].[Msa] THEN [Measures].[mea_msa]
+        WHEN [Geography].[County Subdivision].Level is [Geography].[County Subdivision].[State] THEN [Measures].[mea_county_subdivision]
+        WHEN [Geography].[County Subdivision].Level is [Geography].[County Subdivision].[County] THEN [Measures].[mea_county_subdivision]
+        WHEN [Geography].[County Subdivision].Level is [Geography].[County Subdivision].[County Subdivision] THEN [Measures].[mea_county_subdivision]
+        WHEN 1 = 1 THEN [Measures].[mea_nation]
         END
       </Formula>
       <Annotations>
@@ -1900,23 +1900,23 @@
 
     <CalculatedMember dimension="Measures" name="Construction Date Moe" visible="true">
       <Formula>CASE
-        WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN AVG([Measures].[moe_t])
-        WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN AVG([Measures].[moe_t])
-        WHEN [Geography].[Tract].Level is [Geography].[Tract].[Tract] THEN AVG([Measures].[moe_t])
-        WHEN [Geography].[Place].Level is [Geography].[Place].[State] THEN AVG([Measures].[moe_place])
-        WHEN [Geography].[Place].Level is [Geography].[Place].[Place] THEN AVG([Measures].[moe_place])
-        WHEN [Geography].[Zip].Level is [Geography].[Zip].[Zip] THEN AVG([Measures].[moe_zip])
-        WHEN [Geography].[County].Level is [Geography].[County].[State] THEN AVG([Measures].[moe_county])
-        WHEN [Geography].[County].Level is [Geography].[County].[County] THEN AVG([Measures].[moe_county])
-        WHEN [Geography].[State].Level is [Geography].[State].[State] THEN AVG([Measures].[moe_state])
-        WHEN [Geography].[Nation].Level is [Geography].[Nation].[Nation] THEN AVG([Measures].[moe_nation])
-        WHEN [Geography].[Puma].Level is [Geography].[Puma].[State] THEN AVG([Measures].[moe_puma])
-        WHEN [Geography].[Puma].Level is [Geography].[Puma].[Puma] THEN AVG([Measures].[moe_puma])
-        WHEN [Geography].[Msa].Level is [Geography].[Msa].[Msa] THEN AVG([Measures].[moe_msa])
-        WHEN [Geography].[County Subdivision].Level is [Geography].[County Subdivision].[State] THEN AVG([Measures].[moe_county_subdivision])
-        WHEN [Geography].[County Subdivision].Level is [Geography].[County Subdivision].[County] THEN AVG([Measures].[moe_county_subdivision])
-        WHEN [Geography].[County Subdivision].Level is [Geography].[County Subdivision].[County Subdivision] THEN AVG([Measures].[moe_county_subdivision])
-        WHEN 1 = 1 THEN AVG([Measures].[moe_nation])
+        WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[moe_t]
+        WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[moe_t]
+        WHEN [Geography].[Tract].Level is [Geography].[Tract].[Tract] THEN [Measures].[moe_t]
+        WHEN [Geography].[Place].Level is [Geography].[Place].[State] THEN [Measures].[moe_place]
+        WHEN [Geography].[Place].Level is [Geography].[Place].[Place] THEN [Measures].[moe_place]
+        WHEN [Geography].[Zip].Level is [Geography].[Zip].[Zip] THEN [Measures].[moe_zip]
+        WHEN [Geography].[County].Level is [Geography].[County].[State] THEN [Measures].[moe_county]
+        WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[moe_county]
+        WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[moe_state]
+        WHEN [Geography].[Nation].Level is [Geography].[Nation].[Nation] THEN [Measures].[moe_nation]
+        WHEN [Geography].[Puma].Level is [Geography].[Puma].[State] THEN [Measures].[moe_puma]
+        WHEN [Geography].[Puma].Level is [Geography].[Puma].[Puma] THEN [Measures].[moe_puma]
+        WHEN [Geography].[Msa].Level is [Geography].[Msa].[Msa] THEN [Measures].[moe_msa]
+        WHEN [Geography].[County Subdivision].Level is [Geography].[County Subdivision].[State] THEN [Measures].[moe_county_subdivision]
+        WHEN [Geography].[County Subdivision].Level is [Geography].[County Subdivision].[County] THEN [Measures].[moe_county_subdivision]
+        WHEN [Geography].[County Subdivision].Level is [Geography].[County Subdivision].[County Subdivision] THEN [Measures].[moe_county_subdivision]
+        WHEN 1 = 1 THEN [Measures].[moe_nation]
         END
       </Formula>
       <Annotations>
@@ -2630,15 +2630,15 @@
         <Level column="year" levelType="TimeYears" name="Year" type="Numeric" uniqueMembers="true"/>
       </Hierarchy>
     </Dimension>
-    <Measure aggregator="sum" column="mea_t" name="mea_t" visible="false"/>
-    <Measure aggregator="sum" column="mea_nation" name="mea_nation" visible="false"/>
-    <Measure aggregator="sum" column="mea_county" name="mea_county" visible="false"/>
-    <Measure aggregator="sum" column="mea_zip" name="mea_zip" visible="false"/>
-    <Measure aggregator="sum" column="mea_state" name="mea_state" visible="false"/>
-    <Measure aggregator="sum" column="mea_place" name="mea_place" visible="false"/>
-    <Measure aggregator="sum" column="mea_msa" name="mea_msa" visible="false"/>
-    <Measure aggregator="sum" column="mea_puma" name="mea_puma" visible="false"/>
-    <Measure aggregator="sum" column="mea_county_subdivision" name="mea_county_subdivision" visible="false"/>
+    <Measure aggregator="avg" column="mea_t" name="mea_t" visible="false"/>
+    <Measure aggregator="avg" column="mea_nation" name="mea_nation" visible="false"/>
+    <Measure aggregator="avg" column="mea_county" name="mea_county" visible="false"/>
+    <Measure aggregator="avg" column="mea_zip" name="mea_zip" visible="false"/>
+    <Measure aggregator="avg" column="mea_state" name="mea_state" visible="false"/>
+    <Measure aggregator="avg" column="mea_place" name="mea_place" visible="false"/>
+    <Measure aggregator="avg" column="mea_msa" name="mea_msa" visible="false"/>
+    <Measure aggregator="avg" column="mea_puma" name="mea_puma" visible="false"/>
+    <Measure aggregator="avg" column="mea_county_subdivision" name="mea_county_subdivision" visible="false"/>
 
     <Measure aggregator="None" dataType="Numeric" name="moe_t" visible="false">
       <MeasureExpression>
@@ -2688,23 +2688,23 @@
 
     <CalculatedMember dimension="Measures" name="Construction Date" visible="true">
       <Formula>CASE
-        WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN AVG([Measures].[mea_t])
-        WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN AVG([Measures].[mea_t])
-        WHEN [Geography].[Tract].Level is [Geography].[Tract].[Tract] THEN AVG([Measures].[mea_t])
-        WHEN [Geography].[Place].Level is [Geography].[Place].[State] THEN AVG([Measures].[mea_place])
-        WHEN [Geography].[Place].Level is [Geography].[Place].[Place] THEN AVG([Measures].[mea_place])
-        WHEN [Geography].[Zip].Level is [Geography].[Zip].[Zip] THEN AVG([Measures].[mea_zip])
-        WHEN [Geography].[County].Level is [Geography].[County].[State] THEN AVG([Measures].[mea_county])
-        WHEN [Geography].[County].Level is [Geography].[County].[County] THEN AVG([Measures].[mea_county])
-        WHEN [Geography].[State].Level is [Geography].[State].[State] THEN AVG([Measures].[mea_state])
-        WHEN [Geography].[Nation].Level is [Geography].[Nation].[Nation] THEN AVG([Measures].[mea_nation])
-        WHEN [Geography].[Puma].Level is [Geography].[Puma].[State] THEN AVG([Measures].[mea_puma])
-        WHEN [Geography].[Puma].Level is [Geography].[Puma].[Puma] THEN AVG([Measures].[mea_puma])
-        WHEN [Geography].[Msa].Level is [Geography].[Msa].[Msa] THEN AVG([Measures].[mea_msa])
-        WHEN [Geography].[County Subdivision].Level is [Geography].[County Subdivision].[State] THEN AVG([Measures].[mea_county_subdivision])
-        WHEN [Geography].[County Subdivision].Level is [Geography].[County Subdivision].[County] THEN AVG([Measures].[mea_county_subdivision])
-        WHEN [Geography].[County Subdivision].Level is [Geography].[County Subdivision].[County Subdivision] THEN AVG([Measures].[mea_county_subdivision])
-        WHEN 1 = 1 THEN AVG([Measures].[mea_nation])
+        WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[mea_t]
+        WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[mea_t]
+        WHEN [Geography].[Tract].Level is [Geography].[Tract].[Tract] THEN [Measures].[mea_t]
+        WHEN [Geography].[Place].Level is [Geography].[Place].[State] THEN [Measures].[mea_place]
+        WHEN [Geography].[Place].Level is [Geography].[Place].[Place] THEN [Measures].[mea_place]
+        WHEN [Geography].[Zip].Level is [Geography].[Zip].[Zip] THEN [Measures].[mea_zip]
+        WHEN [Geography].[County].Level is [Geography].[County].[State] THEN [Measures].[mea_county]
+        WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county]
+        WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state]
+        WHEN [Geography].[Nation].Level is [Geography].[Nation].[Nation] THEN [Measures].[mea_nation]
+        WHEN [Geography].[Puma].Level is [Geography].[Puma].[State] THEN [Measures].[mea_puma]
+        WHEN [Geography].[Puma].Level is [Geography].[Puma].[Puma] THEN [Measures].[mea_puma]
+        WHEN [Geography].[Msa].Level is [Geography].[Msa].[Msa] THEN [Measures].[mea_msa]
+        WHEN [Geography].[County Subdivision].Level is [Geography].[County Subdivision].[State] THEN [Measures].[mea_county_subdivision]
+        WHEN [Geography].[County Subdivision].Level is [Geography].[County Subdivision].[County] THEN [Measures].[mea_county_subdivision]
+        WHEN [Geography].[County Subdivision].Level is [Geography].[County Subdivision].[County Subdivision] THEN [Measures].[mea_county_subdivision]
+        WHEN 1 = 1 THEN [Measures].[mea_nation]
         END
       </Formula>
       <Annotations>
@@ -2714,23 +2714,23 @@
 
     <CalculatedMember dimension="Measures" name="Construction Date Moe" visible="true">
       <Formula>CASE
-        WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN AVG([Measures].[moe_t])
-        WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN AVG([Measures].[moe_t])
-        WHEN [Geography].[Tract].Level is [Geography].[Tract].[Tract] THEN AVG([Measures].[moe_t])
-        WHEN [Geography].[Place].Level is [Geography].[Place].[State] THEN AVG([Measures].[moe_place])
-        WHEN [Geography].[Place].Level is [Geography].[Place].[Place] THEN AVG([Measures].[moe_place])
-        WHEN [Geography].[Zip].Level is [Geography].[Zip].[Zip] THEN AVG([Measures].[moe_zip])
-        WHEN [Geography].[County].Level is [Geography].[County].[State] THEN AVG([Measures].[moe_county])
-        WHEN [Geography].[County].Level is [Geography].[County].[County] THEN AVG([Measures].[moe_county])
-        WHEN [Geography].[State].Level is [Geography].[State].[State] THEN AVG([Measures].[moe_state])
-        WHEN [Geography].[Nation].Level is [Geography].[Nation].[Nation] THEN AVG([Measures].[moe_nation])
-        WHEN [Geography].[Puma].Level is [Geography].[Puma].[State] THEN AVG([Measures].[moe_puma])
-        WHEN [Geography].[Puma].Level is [Geography].[Puma].[Puma] THEN AVG([Measures].[moe_puma])
-        WHEN [Geography].[Msa].Level is [Geography].[Msa].[Msa] THEN AVG([Measures].[moe_msa])
-        WHEN [Geography].[County Subdivision].Level is [Geography].[County Subdivision].[State] THEN AVG([Measures].[moe_county_subdivision])
-        WHEN [Geography].[County Subdivision].Level is [Geography].[County Subdivision].[County] THEN AVG([Measures].[moe_county_subdivision])
-        WHEN [Geography].[County Subdivision].Level is [Geography].[County Subdivision].[County Subdivision] THEN AVG([Measures].[moe_county_subdivision])
-        WHEN 1 = 1 THEN AVG([Measures].[moe_nation])
+        WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[moe_t]
+        WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[moe_t]
+        WHEN [Geography].[Tract].Level is [Geography].[Tract].[Tract] THEN [Measures].[moe_t]
+        WHEN [Geography].[Place].Level is [Geography].[Place].[State] THEN [Measures].[moe_place]
+        WHEN [Geography].[Place].Level is [Geography].[Place].[Place] THEN [Measures].[moe_place]
+        WHEN [Geography].[Zip].Level is [Geography].[Zip].[Zip] THEN [Measures].[moe_zip]
+        WHEN [Geography].[County].Level is [Geography].[County].[State] THEN [Measures].[moe_county]
+        WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[moe_county]
+        WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[moe_state]
+        WHEN [Geography].[Nation].Level is [Geography].[Nation].[Nation] THEN [Measures].[moe_nation]
+        WHEN [Geography].[Puma].Level is [Geography].[Puma].[State] THEN [Measures].[moe_puma]
+        WHEN [Geography].[Puma].Level is [Geography].[Puma].[Puma] THEN [Measures].[moe_puma]
+        WHEN [Geography].[Msa].Level is [Geography].[Msa].[Msa] THEN [Measures].[moe_msa]
+        WHEN [Geography].[County Subdivision].Level is [Geography].[County Subdivision].[State] THEN [Measures].[moe_county_subdivision]
+        WHEN [Geography].[County Subdivision].Level is [Geography].[County Subdivision].[County] THEN [Measures].[moe_county_subdivision]
+        WHEN [Geography].[County Subdivision].Level is [Geography].[County Subdivision].[County Subdivision] THEN [Measures].[moe_county_subdivision]
+        WHEN 1 = 1 THEN [Measures].[moe_nation]
         END
       </Formula>
       <Annotations>
