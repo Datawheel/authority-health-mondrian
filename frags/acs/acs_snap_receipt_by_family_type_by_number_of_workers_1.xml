@@ -37,29 +37,7 @@
       </Hierarchy>
     </Dimension>
   
-    <Dimension foreignKey="dim_1" name="Family type:main">
-      <Hierarchy hasAll="true">
-        <InlineTable alias="dim_1_table">
-          <ColumnDefs>
-            <ColumnDef name="member_0_code" type="Numeric"/>
-            <ColumnDef name="member_0" type="String"/>
-          </ColumnDefs>
-          <Rows>
-            <Row>
-              <Value column="member_0_code">0</Value>
-              <Value column="member_0">Married-couple Family</Value>
-            </Row>
-            <Row>
-              <Value column="member_0_code">1</Value>
-              <Value column="member_0">Other Family</Value>
-            </Row>
-          </Rows>
-        </InlineTable>
-      <Level column="member_0_code" hideMemberIf="IfParentsName" name="Family type:main" nameColumn="member_0" uniqueMembers="true"/>
-      </Hierarchy>
-    </Dimension>
-  
-    <Dimension foreignKey="dim_2" name="Family type:extension">
+    <Dimension foreignKey="dim_2" name="Family type">
       <Hierarchy hasAll="true">
         <InlineTable alias="dim_2_table">
           <ColumnDefs>
@@ -81,41 +59,11 @@
             </Row>
           </Rows>
         </InlineTable>
-      <Level column="member_0_code" hideMemberIf="IfParentsName" name="Family type:extension" nameColumn="member_0" uniqueMembers="true"/>
+      <Level column="member_0_code" hideMemberIf="IfParentsName" name="Family type" nameColumn="member_0" uniqueMembers="true"/>
       </Hierarchy>
     </Dimension>
   
-    <Dimension foreignKey="dim_3" name="Number of workers:main">
-      <Hierarchy hasAll="true">
-        <InlineTable alias="dim_3_table">
-          <ColumnDefs>
-            <ColumnDef name="member_0_code" type="Numeric"/>
-            <ColumnDef name="member_0" type="String"/>
-          </ColumnDefs>
-          <Rows>
-            <Row>
-              <Value column="member_0_code">0</Value>
-              <Value column="member_0">No Workers</Value>
-            </Row>
-            <Row>
-              <Value column="member_0_code">1</Value>
-              <Value column="member_0">1 Worker</Value>
-            </Row>
-            <Row>
-              <Value column="member_0_code">2</Value>
-              <Value column="member_0">2 Workers</Value>
-            </Row>
-            <Row>
-              <Value column="member_0_code">3</Value>
-              <Value column="member_0">3 Or More Workers</Value>
-            </Row>
-          </Rows>
-        </InlineTable>
-      <Level column="member_0_code" hideMemberIf="IfParentsName" name="Number of workers:main" nameColumn="member_0" uniqueMembers="true"/>
-      </Hierarchy>
-    </Dimension>
-  
-    <Dimension foreignKey="dim_4" name="Number of workers:extension">
+    <Dimension foreignKey="dim_4" name="Number of workers">
       <Hierarchy hasAll="true">
         <InlineTable alias="dim_4_table">
           <ColumnDefs>
@@ -149,7 +97,7 @@
             </Row>
           </Rows>
         </InlineTable>
-      <Level column="member_0_code" hideMemberIf="IfParentsName" name="Number of workers:extension" nameColumn="member_0" uniqueMembers="true"/>
+      <Level column="member_0_code" hideMemberIf="IfParentsName" name="Number of workers" nameColumn="member_0" uniqueMembers="true"/>
       </Hierarchy>
     </Dimension>
   
