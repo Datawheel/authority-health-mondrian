@@ -3906,7 +3906,7 @@
       </MeasureExpression>
     </Measure>
 
-    <CalculatedMember dimension="Measures" name="Population in Poverty by Gender, Age, and Race" visible="true">
+    <CalculatedMember dimension="Measures" name="Population in Poverty" visible="true">
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[mea_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[mea_t]
@@ -3932,7 +3932,7 @@
       </Annotations>
     </CalculatedMember>
 
-    <CalculatedMember dimension="Measures" name="Population in Poverty by Gender, Age, and Race Moe" visible="true">
+    <CalculatedMember dimension="Measures" name="Population in Poverty Moe" visible="true">
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[moe_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[moe_t]
@@ -3955,7 +3955,7 @@
       </Formula>
       <Annotations>
         <Annotation name="aggregation_method">MOE</Annotation>
-        <Annotation name="error_for_measure">Population in Poverty by Gender, Age, and Race</Annotation>
+        <Annotation name="error_for_measure">Population in Poverty</Annotation>
       </Annotations>
     </CalculatedMember>
 
@@ -4498,7 +4498,7 @@
       </MeasureExpression>
     </Measure>
 
-    <CalculatedMember dimension="Measures" name="Population in Poverty by Gender, Age, and Race" visible="true">
+    <CalculatedMember dimension="Measures" name="Population in Poverty" visible="true">
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[mea_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[mea_t]
@@ -4524,7 +4524,7 @@
       </Annotations>
     </CalculatedMember>
 
-    <CalculatedMember dimension="Measures" name="Population in Poverty by Gender, Age, and Race Moe" visible="true">
+    <CalculatedMember dimension="Measures" name="Population in Poverty Moe" visible="true">
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[moe_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[moe_t]
@@ -4547,7 +4547,7 @@
       </Formula>
       <Annotations>
         <Annotation name="aggregation_method">MOE</Annotation>
-        <Annotation name="error_for_measure">Population in Poverty by Gender, Age, and Race</Annotation>
+        <Annotation name="error_for_measure">Population in Poverty</Annotation>
       </Annotations>
     </CalculatedMember>
 
@@ -8114,7 +8114,7 @@
       </MeasureExpression>
     </Measure>
 
-    <CalculatedMember dimension="Measures" name="Commute Means" visible="true">
+    <CalculatedMember dimension="Measures" name="Population" visible="true">
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[mea_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[mea_t]
@@ -8140,7 +8140,7 @@
       </Annotations>
     </CalculatedMember>
 
-    <CalculatedMember dimension="Measures" name="Commute Means Moe" visible="true">
+    <CalculatedMember dimension="Measures" name="Population Moe" visible="true">
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[moe_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[moe_t]
@@ -8163,7 +8163,7 @@
       </Formula>
       <Annotations>
         <Annotation name="aggregation_method">MOE</Annotation>
-        <Annotation name="error_for_measure">Commute Means</Annotation>
+        <Annotation name="error_for_measure">Population</Annotation>
       </Annotations>
     </CalculatedMember>
 
@@ -11585,7 +11585,7 @@
       </MeasureExpression>
     </Measure>
 
-    <CalculatedMember dimension="Measures" name="Commute Means" visible="true">
+    <CalculatedMember dimension="Measures" name="Population" visible="true">
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[mea_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[mea_t]
@@ -11611,7 +11611,7 @@
       </Annotations>
     </CalculatedMember>
 
-    <CalculatedMember dimension="Measures" name="Commute Means Moe" visible="true">
+    <CalculatedMember dimension="Measures" name="Population Moe" visible="true">
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[moe_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[moe_t]
@@ -11634,7 +11634,7 @@
       </Formula>
       <Annotations>
         <Annotation name="aggregation_method">MOE</Annotation>
-        <Annotation name="error_for_measure">Commute Means</Annotation>
+        <Annotation name="error_for_measure">Population</Annotation>
       </Annotations>
     </CalculatedMember>
 
