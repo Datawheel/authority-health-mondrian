@@ -5757,6 +5757,245 @@
     <!-- Here add in rca and percent calc if asked for -->
 
   </Cube>
+<Cube name="acs_ygv_veterans_1">
+    <Annotations>
+      <Annotation name="source_name">Census Bureau</Annotation>
+      <Annotation name="source_link">http://www.census.gov/programs-surveys/acs/</Annotation>
+      <Annotation name="dataset_name">ACS 1-year Estimate</Annotation>
+      <Annotation name="table_id">B21002</Annotation>
+    </Annotations>
+    <Table name="acs_ygv_veterans_1" schema="acs"/>
+
+    <DimensionUsage foreignKey="geoid" name="Geography" source="geography"/>
+    <Dimension name="Year">
+      <Hierarchy hasAll="true">
+        <Level column="year" levelType="TimeYears" name="Year" type="Numeric" uniqueMembers="true"/>
+      </Hierarchy>
+    </Dimension>
+    <Dimension foreignKey="dim_0" name="Period of Service">
+      <Hierarchy hasAll="true">
+        <InlineTable alias="dim_0_table">
+          <ColumnDefs>
+            <ColumnDef name="member_0_code" type="Numeric"/>
+            <ColumnDef name="member_0" type="String"/>
+          </ColumnDefs>
+          <Rows>
+            <Row>
+              <Value column="member_0_code">0</Value>
+              <Value column="member_0">Gulf War (2001-)</Value>
+            </Row>
+            <Row>
+              <Value column="member_0_code">1</Value>
+              <Value column="member_0">Gulf War (1990s)</Value>
+            </Row>
+            <Row>
+              <Value column="member_0_code">2</Value>
+              <Value column="member_0">Vietnam</Value>
+            </Row>
+            <Row>
+              <Value column="member_0_code">3</Value>
+              <Value column="member_0">Korea</Value>
+            </Row>
+            <Row>
+              <Value column="member_0_code">4</Value>
+              <Value column="member_0">World War II</Value>
+            </Row>
+            <Row>
+              <Value column="member_0_code">5</Value>
+              <Value column="member_0">Other</Value>
+            </Row>
+          </Rows>
+        </InlineTable>
+      <Level column="member_0_code" hideMemberIf="IfParentsName" name="Period of Service" nameColumn="member_0" uniqueMembers="true"/>
+      </Hierarchy>
+    </Dimension>
+  
+    <Dimension foreignKey="dim_1" name="Period of Service Granular">
+      <Hierarchy hasAll="true">
+        <InlineTable alias="dim_1_table">
+          <ColumnDefs>
+            <ColumnDef name="member_0_code" type="Numeric"/>
+            <ColumnDef name="member_0" type="String"/>
+          </ColumnDefs>
+          <Rows>
+            <Row>
+              <Value column="member_0_code">0</Value>
+              <Value column="member_0">Gulf War (9&#x2F;2001 Or Later), No Gulf War (8&#x2F;1990 To 8&#x2F;2001), No Vietnam Era</Value>
+            </Row>
+            <Row>
+              <Value column="member_0_code">1</Value>
+              <Value column="member_0">Gulf War (9&#x2F;2001 Or Later) &amp; Gulf War (8&#x2F;1990 To 8&#x2F;2001), No Vietnam Era</Value>
+            </Row>
+            <Row>
+              <Value column="member_0_code">2</Value>
+              <Value column="member_0">Gulf War (9&#x2F;2001 Or Later), &amp; Gulf War (8&#x2F;1990 To 8&#x2F;2001), &amp; Vietnam Era</Value>
+            </Row>
+            <Row>
+              <Value column="member_0_code">3</Value>
+              <Value column="member_0">Gulf War (8&#x2F;1990 To 8&#x2F;2001), No Vietnam Era</Value>
+            </Row>
+            <Row>
+              <Value column="member_0_code">4</Value>
+              <Value column="member_0">Gulf War (8&#x2F;1990 To 8&#x2F;2001) &amp; Vietnam Era</Value>
+            </Row>
+            <Row>
+              <Value column="member_0_code">5</Value>
+              <Value column="member_0">Vietnam Era, No Korean War, No World War II</Value>
+            </Row>
+            <Row>
+              <Value column="member_0_code">6</Value>
+              <Value column="member_0">Vietnam Era &amp; Korean War, No World War II</Value>
+            </Row>
+            <Row>
+              <Value column="member_0_code">7</Value>
+              <Value column="member_0">Vietnam Era &amp; Korean War &amp; World War II</Value>
+            </Row>
+            <Row>
+              <Value column="member_0_code">8</Value>
+              <Value column="member_0">Korean War, No Vietnam Era, No World War II</Value>
+            </Row>
+            <Row>
+              <Value column="member_0_code">9</Value>
+              <Value column="member_0">Korean War &amp; World War II, No Vietnam Era</Value>
+            </Row>
+            <Row>
+              <Value column="member_0_code">10</Value>
+              <Value column="member_0">World War II, No Korean War, No Vietnam Era</Value>
+            </Row>
+            <Row>
+              <Value column="member_0_code">11</Value>
+              <Value column="member_0">Between Gulf War &amp; Vietnam Era Only</Value>
+            </Row>
+            <Row>
+              <Value column="member_0_code">12</Value>
+              <Value column="member_0">Between Vietnam Era &amp; Korean War Only</Value>
+            </Row>
+            <Row>
+              <Value column="member_0_code">13</Value>
+              <Value column="member_0">Between Korean War &amp; World War IIOnly</Value>
+            </Row>
+            <Row>
+              <Value column="member_0_code">14</Value>
+              <Value column="member_0">Pre-World War IIOnly</Value>
+            </Row>
+          </Rows>
+        </InlineTable>
+      <Level column="member_0_code" hideMemberIf="IfParentsName" name="Period of Service Granular" nameColumn="member_0" uniqueMembers="true"/>
+      </Hierarchy>
+    </Dimension>
+  
+    <Measure aggregator="sum" column="mea_t" name="mea_t" visible="false"/>
+    <Measure aggregator="sum" column="mea_nation" name="mea_nation" visible="false"/>
+    <Measure aggregator="sum" column="mea_county" name="mea_county" visible="false"/>
+    <Measure aggregator="sum" column="mea_zip" name="mea_zip" visible="false"/>
+    <Measure aggregator="sum" column="mea_state" name="mea_state" visible="false"/>
+    <Measure aggregator="sum" column="mea_place" name="mea_place" visible="false"/>
+    <Measure aggregator="sum" column="mea_msa" name="mea_msa" visible="false"/>
+    <Measure aggregator="sum" column="mea_puma" name="mea_puma" visible="false"/>
+    <Measure aggregator="sum" column="mea_county_subdivision" name="mea_county_subdivision" visible="false"/>
+
+    <Measure aggregator="None" dataType="Numeric" name="moe_t" visible="false">
+      <MeasureExpression>
+        <SQL dialect="monetdb">sqrt(sum(power(moe_t / 1.645, 2))) * 1.645</SQL>
+      </MeasureExpression>
+    </Measure>
+    <Measure aggregator="None" dataType="Numeric" name="moe_nation" visible="false">
+      <MeasureExpression>
+        <SQL dialect="monetdb">sqrt(sum(power(moe_nation / 1.645, 2))) * 1.645</SQL>
+      </MeasureExpression>
+    </Measure>
+    <Measure aggregator="None" dataType="Numeric" name="moe_county" visible="false">
+      <MeasureExpression>
+        <SQL dialect="monetdb">sqrt(sum(power(moe_county / 1.645, 2))) * 1.645</SQL>
+      </MeasureExpression>
+    </Measure>
+    <Measure aggregator="None" dataType="Numeric" name="moe_zip" visible="false">
+      <MeasureExpression>
+        <SQL dialect="monetdb">sqrt(sum(power(moe_zip / 1.645, 2))) * 1.645</SQL>
+      </MeasureExpression>
+    </Measure>
+    <Measure aggregator="None" dataType="Numeric" name="moe_state" visible="false">
+      <MeasureExpression>
+        <SQL dialect="monetdb">sqrt(sum(power(moe_state / 1.645, 2))) * 1.645</SQL>
+      </MeasureExpression>
+    </Measure>
+    <Measure aggregator="None" dataType="Numeric" name="moe_place" visible="false">
+      <MeasureExpression>
+        <SQL dialect="monetdb">sqrt(sum(power(moe_place / 1.645, 2))) * 1.645</SQL>
+      </MeasureExpression>
+    </Measure>
+    <Measure aggregator="None" dataType="Numeric" name="moe_msa" visible="false">
+      <MeasureExpression>
+        <SQL dialect="monetdb">sqrt(sum(power(moe_msa / 1.645, 2))) * 1.645</SQL>
+      </MeasureExpression>
+    </Measure>
+    <Measure aggregator="None" dataType="Numeric" name="moe_puma" visible="false">
+      <MeasureExpression>
+        <SQL dialect="monetdb">sqrt(sum(power(moe_puma / 1.645, 2))) * 1.645</SQL>
+      </MeasureExpression>
+    </Measure>
+    <Measure aggregator="None" dataType="Numeric" name="moe_county_subdivision" visible="false">
+      <MeasureExpression>
+        <SQL dialect="monetdb">sqrt(sum(power(moe_county_subdivision / 1.645, 2))) * 1.645</SQL>
+      </MeasureExpression>
+    </Measure>
+
+    <CalculatedMember dimension="Measures" name="Veterans" visible="true">
+      <Formula>CASE
+        WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[mea_t]
+        WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[mea_t]
+        WHEN [Geography].[Tract].Level is [Geography].[Tract].[Tract] THEN [Measures].[mea_t]
+        WHEN [Geography].[Place].Level is [Geography].[Place].[State] THEN [Measures].[mea_place]
+        WHEN [Geography].[Place].Level is [Geography].[Place].[Place] THEN [Measures].[mea_place]
+        WHEN [Geography].[Zip].Level is [Geography].[Zip].[Zip] THEN [Measures].[mea_zip]
+        WHEN [Geography].[County].Level is [Geography].[County].[State] THEN [Measures].[mea_county]
+        WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county]
+        WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state]
+        WHEN [Geography].[Nation].Level is [Geography].[Nation].[Nation] THEN [Measures].[mea_nation]
+        WHEN [Geography].[Puma].Level is [Geography].[Puma].[State] THEN [Measures].[mea_puma]
+        WHEN [Geography].[Puma].Level is [Geography].[Puma].[Puma] THEN [Measures].[mea_puma]
+        WHEN [Geography].[Msa].Level is [Geography].[Msa].[Msa] THEN [Measures].[mea_msa]
+        WHEN [Geography].[County Subdivision].Level is [Geography].[County Subdivision].[State] THEN [Measures].[mea_county_subdivision]
+        WHEN [Geography].[County Subdivision].Level is [Geography].[County Subdivision].[County] THEN [Measures].[mea_county_subdivision]
+        WHEN [Geography].[County Subdivision].Level is [Geography].[County Subdivision].[County Subdivision] THEN [Measures].[mea_county_subdivision]
+        WHEN 1 = 1 THEN [Measures].[mea_nation]
+        END
+      </Formula>
+      <Annotations>
+        <Annotation name="aggregation_method">SUM</Annotation>
+      </Annotations>
+    </CalculatedMember>
+
+    <CalculatedMember dimension="Measures" name="Veterans Moe" visible="true">
+      <Formula>CASE
+        WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[moe_t]
+        WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[moe_t]
+        WHEN [Geography].[Tract].Level is [Geography].[Tract].[Tract] THEN [Measures].[moe_t]
+        WHEN [Geography].[Place].Level is [Geography].[Place].[State] THEN [Measures].[moe_place]
+        WHEN [Geography].[Place].Level is [Geography].[Place].[Place] THEN [Measures].[moe_place]
+        WHEN [Geography].[Zip].Level is [Geography].[Zip].[Zip] THEN [Measures].[moe_zip]
+        WHEN [Geography].[County].Level is [Geography].[County].[State] THEN [Measures].[moe_county]
+        WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[moe_county]
+        WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[moe_state]
+        WHEN [Geography].[Nation].Level is [Geography].[Nation].[Nation] THEN [Measures].[moe_nation]
+        WHEN [Geography].[Puma].Level is [Geography].[Puma].[State] THEN [Measures].[moe_puma]
+        WHEN [Geography].[Puma].Level is [Geography].[Puma].[Puma] THEN [Measures].[moe_puma]
+        WHEN [Geography].[Msa].Level is [Geography].[Msa].[Msa] THEN [Measures].[moe_msa]
+        WHEN [Geography].[County Subdivision].Level is [Geography].[County Subdivision].[State] THEN [Measures].[moe_county_subdivision]
+        WHEN [Geography].[County Subdivision].Level is [Geography].[County Subdivision].[County] THEN [Measures].[moe_county_subdivision]
+        WHEN [Geography].[County Subdivision].Level is [Geography].[County Subdivision].[County Subdivision] THEN [Measures].[moe_county_subdivision]
+        WHEN 1 = 1 THEN [Measures].[moe_nation]
+        END
+      </Formula>
+      <Annotations>
+        <Annotation name="aggregation_method">MOE</Annotation>
+        <Annotation name="error_for_measure">Veterans</Annotation>
+      </Annotations>
+    </CalculatedMember>
+
+    <!-- Here add in rca and percent calc if asked for -->
+
+  </Cube>
 <Cube name="acs_per_capita_income_1">
     <Annotations>
       <Annotation name="source_name">Census Bureau</Annotation>
@@ -6819,6 +7058,245 @@
     <!-- Here add in rca and percent calc if asked for -->
 
   </Cube>
+<Cube name="acs_ygv_veterans_5">
+    <Annotations>
+      <Annotation name="source_name">Census Bureau</Annotation>
+      <Annotation name="source_link">http://www.census.gov/programs-surveys/acs/</Annotation>
+      <Annotation name="dataset_name">ACS 5-year Estimate</Annotation>
+      <Annotation name="table_id">B21002</Annotation>
+    </Annotations>
+    <Table name="acs_ygv_veterans_5" schema="acs"/>
+
+    <DimensionUsage foreignKey="geoid" name="Geography" source="geography"/>
+    <Dimension name="Year">
+      <Hierarchy hasAll="true">
+        <Level column="year" levelType="TimeYears" name="Year" type="Numeric" uniqueMembers="true"/>
+      </Hierarchy>
+    </Dimension>
+    <Dimension foreignKey="dim_0" name="Period of Service">
+      <Hierarchy hasAll="true">
+        <InlineTable alias="dim_0_table">
+          <ColumnDefs>
+            <ColumnDef name="member_0_code" type="Numeric"/>
+            <ColumnDef name="member_0" type="String"/>
+          </ColumnDefs>
+          <Rows>
+            <Row>
+              <Value column="member_0_code">0</Value>
+              <Value column="member_0">Gulf War (2001-)</Value>
+            </Row>
+            <Row>
+              <Value column="member_0_code">1</Value>
+              <Value column="member_0">Gulf War (1990s)</Value>
+            </Row>
+            <Row>
+              <Value column="member_0_code">2</Value>
+              <Value column="member_0">Vietnam</Value>
+            </Row>
+            <Row>
+              <Value column="member_0_code">3</Value>
+              <Value column="member_0">Korea</Value>
+            </Row>
+            <Row>
+              <Value column="member_0_code">4</Value>
+              <Value column="member_0">World War II</Value>
+            </Row>
+            <Row>
+              <Value column="member_0_code">5</Value>
+              <Value column="member_0">Other</Value>
+            </Row>
+          </Rows>
+        </InlineTable>
+      <Level column="member_0_code" hideMemberIf="IfParentsName" name="Period of Service" nameColumn="member_0" uniqueMembers="true"/>
+      </Hierarchy>
+    </Dimension>
+  
+    <Dimension foreignKey="dim_1" name="Period of Service Granular">
+      <Hierarchy hasAll="true">
+        <InlineTable alias="dim_1_table">
+          <ColumnDefs>
+            <ColumnDef name="member_0_code" type="Numeric"/>
+            <ColumnDef name="member_0" type="String"/>
+          </ColumnDefs>
+          <Rows>
+            <Row>
+              <Value column="member_0_code">0</Value>
+              <Value column="member_0">Gulf War (9&#x2F;2001 Or Later), No Gulf War (8&#x2F;1990 To 8&#x2F;2001), No Vietnam Era</Value>
+            </Row>
+            <Row>
+              <Value column="member_0_code">1</Value>
+              <Value column="member_0">Gulf War (9&#x2F;2001 Or Later) &amp; Gulf War (8&#x2F;1990 To 8&#x2F;2001), No Vietnam Era</Value>
+            </Row>
+            <Row>
+              <Value column="member_0_code">2</Value>
+              <Value column="member_0">Gulf War (9&#x2F;2001 Or Later), &amp; Gulf War (8&#x2F;1990 To 8&#x2F;2001), &amp; Vietnam Era</Value>
+            </Row>
+            <Row>
+              <Value column="member_0_code">3</Value>
+              <Value column="member_0">Gulf War (8&#x2F;1990 To 8&#x2F;2001), No Vietnam Era</Value>
+            </Row>
+            <Row>
+              <Value column="member_0_code">4</Value>
+              <Value column="member_0">Gulf War (8&#x2F;1990 To 8&#x2F;2001) &amp; Vietnam Era</Value>
+            </Row>
+            <Row>
+              <Value column="member_0_code">5</Value>
+              <Value column="member_0">Vietnam Era, No Korean War, No World War II</Value>
+            </Row>
+            <Row>
+              <Value column="member_0_code">6</Value>
+              <Value column="member_0">Vietnam Era &amp; Korean War, No World War II</Value>
+            </Row>
+            <Row>
+              <Value column="member_0_code">7</Value>
+              <Value column="member_0">Vietnam Era &amp; Korean War &amp; World War II</Value>
+            </Row>
+            <Row>
+              <Value column="member_0_code">8</Value>
+              <Value column="member_0">Korean War, No Vietnam Era, No World War II</Value>
+            </Row>
+            <Row>
+              <Value column="member_0_code">9</Value>
+              <Value column="member_0">Korean War &amp; World War II, No Vietnam Era</Value>
+            </Row>
+            <Row>
+              <Value column="member_0_code">10</Value>
+              <Value column="member_0">World War II, No Korean War, No Vietnam Era</Value>
+            </Row>
+            <Row>
+              <Value column="member_0_code">11</Value>
+              <Value column="member_0">Between Gulf War &amp; Vietnam Era Only</Value>
+            </Row>
+            <Row>
+              <Value column="member_0_code">12</Value>
+              <Value column="member_0">Between Vietnam Era &amp; Korean War Only</Value>
+            </Row>
+            <Row>
+              <Value column="member_0_code">13</Value>
+              <Value column="member_0">Between Korean War &amp; World War IIOnly</Value>
+            </Row>
+            <Row>
+              <Value column="member_0_code">14</Value>
+              <Value column="member_0">Pre-World War IIOnly</Value>
+            </Row>
+          </Rows>
+        </InlineTable>
+      <Level column="member_0_code" hideMemberIf="IfParentsName" name="Period of Service Granular" nameColumn="member_0" uniqueMembers="true"/>
+      </Hierarchy>
+    </Dimension>
+  
+    <Measure aggregator="sum" column="mea_t" name="mea_t" visible="false"/>
+    <Measure aggregator="sum" column="mea_nation" name="mea_nation" visible="false"/>
+    <Measure aggregator="sum" column="mea_county" name="mea_county" visible="false"/>
+    <Measure aggregator="sum" column="mea_zip" name="mea_zip" visible="false"/>
+    <Measure aggregator="sum" column="mea_state" name="mea_state" visible="false"/>
+    <Measure aggregator="sum" column="mea_place" name="mea_place" visible="false"/>
+    <Measure aggregator="sum" column="mea_msa" name="mea_msa" visible="false"/>
+    <Measure aggregator="sum" column="mea_puma" name="mea_puma" visible="false"/>
+    <Measure aggregator="sum" column="mea_county_subdivision" name="mea_county_subdivision" visible="false"/>
+
+    <Measure aggregator="None" dataType="Numeric" name="moe_t" visible="false">
+      <MeasureExpression>
+        <SQL dialect="monetdb">sqrt(sum(power(moe_t / 1.645, 2))) * 1.645</SQL>
+      </MeasureExpression>
+    </Measure>
+    <Measure aggregator="None" dataType="Numeric" name="moe_nation" visible="false">
+      <MeasureExpression>
+        <SQL dialect="monetdb">sqrt(sum(power(moe_nation / 1.645, 2))) * 1.645</SQL>
+      </MeasureExpression>
+    </Measure>
+    <Measure aggregator="None" dataType="Numeric" name="moe_county" visible="false">
+      <MeasureExpression>
+        <SQL dialect="monetdb">sqrt(sum(power(moe_county / 1.645, 2))) * 1.645</SQL>
+      </MeasureExpression>
+    </Measure>
+    <Measure aggregator="None" dataType="Numeric" name="moe_zip" visible="false">
+      <MeasureExpression>
+        <SQL dialect="monetdb">sqrt(sum(power(moe_zip / 1.645, 2))) * 1.645</SQL>
+      </MeasureExpression>
+    </Measure>
+    <Measure aggregator="None" dataType="Numeric" name="moe_state" visible="false">
+      <MeasureExpression>
+        <SQL dialect="monetdb">sqrt(sum(power(moe_state / 1.645, 2))) * 1.645</SQL>
+      </MeasureExpression>
+    </Measure>
+    <Measure aggregator="None" dataType="Numeric" name="moe_place" visible="false">
+      <MeasureExpression>
+        <SQL dialect="monetdb">sqrt(sum(power(moe_place / 1.645, 2))) * 1.645</SQL>
+      </MeasureExpression>
+    </Measure>
+    <Measure aggregator="None" dataType="Numeric" name="moe_msa" visible="false">
+      <MeasureExpression>
+        <SQL dialect="monetdb">sqrt(sum(power(moe_msa / 1.645, 2))) * 1.645</SQL>
+      </MeasureExpression>
+    </Measure>
+    <Measure aggregator="None" dataType="Numeric" name="moe_puma" visible="false">
+      <MeasureExpression>
+        <SQL dialect="monetdb">sqrt(sum(power(moe_puma / 1.645, 2))) * 1.645</SQL>
+      </MeasureExpression>
+    </Measure>
+    <Measure aggregator="None" dataType="Numeric" name="moe_county_subdivision" visible="false">
+      <MeasureExpression>
+        <SQL dialect="monetdb">sqrt(sum(power(moe_county_subdivision / 1.645, 2))) * 1.645</SQL>
+      </MeasureExpression>
+    </Measure>
+
+    <CalculatedMember dimension="Measures" name="Veterans" visible="true">
+      <Formula>CASE
+        WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[mea_t]
+        WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[mea_t]
+        WHEN [Geography].[Tract].Level is [Geography].[Tract].[Tract] THEN [Measures].[mea_t]
+        WHEN [Geography].[Place].Level is [Geography].[Place].[State] THEN [Measures].[mea_place]
+        WHEN [Geography].[Place].Level is [Geography].[Place].[Place] THEN [Measures].[mea_place]
+        WHEN [Geography].[Zip].Level is [Geography].[Zip].[Zip] THEN [Measures].[mea_zip]
+        WHEN [Geography].[County].Level is [Geography].[County].[State] THEN [Measures].[mea_county]
+        WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county]
+        WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state]
+        WHEN [Geography].[Nation].Level is [Geography].[Nation].[Nation] THEN [Measures].[mea_nation]
+        WHEN [Geography].[Puma].Level is [Geography].[Puma].[State] THEN [Measures].[mea_puma]
+        WHEN [Geography].[Puma].Level is [Geography].[Puma].[Puma] THEN [Measures].[mea_puma]
+        WHEN [Geography].[Msa].Level is [Geography].[Msa].[Msa] THEN [Measures].[mea_msa]
+        WHEN [Geography].[County Subdivision].Level is [Geography].[County Subdivision].[State] THEN [Measures].[mea_county_subdivision]
+        WHEN [Geography].[County Subdivision].Level is [Geography].[County Subdivision].[County] THEN [Measures].[mea_county_subdivision]
+        WHEN [Geography].[County Subdivision].Level is [Geography].[County Subdivision].[County Subdivision] THEN [Measures].[mea_county_subdivision]
+        WHEN 1 = 1 THEN [Measures].[mea_nation]
+        END
+      </Formula>
+      <Annotations>
+        <Annotation name="aggregation_method">SUM</Annotation>
+      </Annotations>
+    </CalculatedMember>
+
+    <CalculatedMember dimension="Measures" name="Veterans Moe" visible="true">
+      <Formula>CASE
+        WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[moe_t]
+        WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[moe_t]
+        WHEN [Geography].[Tract].Level is [Geography].[Tract].[Tract] THEN [Measures].[moe_t]
+        WHEN [Geography].[Place].Level is [Geography].[Place].[State] THEN [Measures].[moe_place]
+        WHEN [Geography].[Place].Level is [Geography].[Place].[Place] THEN [Measures].[moe_place]
+        WHEN [Geography].[Zip].Level is [Geography].[Zip].[Zip] THEN [Measures].[moe_zip]
+        WHEN [Geography].[County].Level is [Geography].[County].[State] THEN [Measures].[moe_county]
+        WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[moe_county]
+        WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[moe_state]
+        WHEN [Geography].[Nation].Level is [Geography].[Nation].[Nation] THEN [Measures].[moe_nation]
+        WHEN [Geography].[Puma].Level is [Geography].[Puma].[State] THEN [Measures].[moe_puma]
+        WHEN [Geography].[Puma].Level is [Geography].[Puma].[Puma] THEN [Measures].[moe_puma]
+        WHEN [Geography].[Msa].Level is [Geography].[Msa].[Msa] THEN [Measures].[moe_msa]
+        WHEN [Geography].[County Subdivision].Level is [Geography].[County Subdivision].[State] THEN [Measures].[moe_county_subdivision]
+        WHEN [Geography].[County Subdivision].Level is [Geography].[County Subdivision].[County] THEN [Measures].[moe_county_subdivision]
+        WHEN [Geography].[County Subdivision].Level is [Geography].[County Subdivision].[County Subdivision] THEN [Measures].[moe_county_subdivision]
+        WHEN 1 = 1 THEN [Measures].[moe_nation]
+        END
+      </Formula>
+      <Annotations>
+        <Annotation name="aggregation_method">MOE</Annotation>
+        <Annotation name="error_for_measure">Veterans</Annotation>
+      </Annotations>
+    </CalculatedMember>
+
+    <!-- Here add in rca and percent calc if asked for -->
+
+  </Cube>
 <Cube name="acs_yg_gini_5">
     <Annotations>
       <Annotation name="source_name">Census Bureau</Annotation>
@@ -7403,6 +7881,289 @@
       <Annotations>
         <Annotation name="aggregation_method">MOE</Annotation>
         <Annotation name="error_for_measure">Renter-Occupied Housing Units</Annotation>
+      </Annotations>
+    </CalculatedMember>
+
+    <!-- Here add in rca and percent calc if asked for -->
+
+  </Cube>
+<Cube name="acs_ygt_means_of_transportation_to_work_1">
+    <Annotations>
+      <Annotation name="source_name">Census Bureau</Annotation>
+      <Annotation name="source_link">http://www.census.gov/programs-surveys/acs/</Annotation>
+      <Annotation name="dataset_name">ACS 1-year Estimate</Annotation>
+      <Annotation name="table_id">B08301</Annotation>
+    </Annotations>
+    <Table name="acs_ygt_means_of_transportation_to_work_1" schema="acs"/>
+
+    <DimensionUsage foreignKey="geoid" name="Geography" source="geography"/>
+    <Dimension name="Year">
+      <Hierarchy hasAll="true">
+        <Level column="year" levelType="TimeYears" name="Year" type="Numeric" uniqueMembers="true"/>
+      </Hierarchy>
+    </Dimension>
+    <Dimension foreignKey="dim_2" name="Transportation">
+      <Hierarchy hasAll="true">
+        <InlineTable alias="dim_2_table">
+          <ColumnDefs>
+            <ColumnDef name="member_0_code" type="Numeric"/>
+            <ColumnDef name="member_0" type="String"/>
+            <ColumnDef name="member_1_code" type="Numeric"/>
+            <ColumnDef name="member_1" type="String"/>
+            <ColumnDef name="member_2_code" type="Numeric"/>
+            <ColumnDef name="member_2" type="String"/>
+          </ColumnDefs>
+          <Rows>
+            <Row>
+              <Value column="member_0_code">0</Value>
+              <Value column="member_0">Drove Alone</Value>
+              <Value column="member_1_code">0</Value>
+              <Value column="member_1">Drove Alone (subgroup)</Value>
+              <Value column="member_2_code">0</Value>
+              <Value column="member_2">Drove Alone</Value>
+            </Row>
+            <Row>
+              <Value column="member_0_code">1</Value>
+              <Value column="member_0">Carpooled</Value>
+              <Value column="member_1_code">1</Value>
+              <Value column="member_1">Carpooled</Value>
+              <Value column="member_2_code">1</Value>
+              <Value column="member_2">In 2-person Carpool</Value>
+            </Row>
+            <Row>
+              <Value column="member_0_code">1</Value>
+              <Value column="member_0">Carpooled</Value>
+              <Value column="member_1_code">1</Value>
+              <Value column="member_1">Carpooled</Value>
+              <Value column="member_2_code">2</Value>
+              <Value column="member_2">In 3-person Carpool</Value>
+            </Row>
+            <Row>
+              <Value column="member_0_code">1</Value>
+              <Value column="member_0">Carpooled</Value>
+              <Value column="member_1_code">1</Value>
+              <Value column="member_1">Carpooled</Value>
+              <Value column="member_2_code">3</Value>
+              <Value column="member_2">In 4-person Carpool</Value>
+            </Row>
+            <Row>
+              <Value column="member_0_code">1</Value>
+              <Value column="member_0">Carpooled</Value>
+              <Value column="member_1_code">1</Value>
+              <Value column="member_1">Carpooled</Value>
+              <Value column="member_2_code">4</Value>
+              <Value column="member_2">In 5-Or 6-person Carpool</Value>
+            </Row>
+            <Row>
+              <Value column="member_0_code">1</Value>
+              <Value column="member_0">Carpooled</Value>
+              <Value column="member_1_code">1</Value>
+              <Value column="member_1">Carpooled</Value>
+              <Value column="member_2_code">5</Value>
+              <Value column="member_2">In 7-or-more-person Carpool</Value>
+            </Row>
+            <Row>
+              <Value column="member_0_code">2</Value>
+              <Value column="member_0">Public Transit</Value>
+              <Value column="member_1_code">2</Value>
+              <Value column="member_1">Public Transit</Value>
+              <Value column="member_2_code">6</Value>
+              <Value column="member_2">Bus Or Trolley Bus</Value>
+            </Row>
+            <Row>
+              <Value column="member_0_code">2</Value>
+              <Value column="member_0">Public Transit</Value>
+              <Value column="member_1_code">2</Value>
+              <Value column="member_1">Public Transit</Value>
+              <Value column="member_2_code">7</Value>
+              <Value column="member_2">Streetcar Or Trolley Car</Value>
+            </Row>
+            <Row>
+              <Value column="member_0_code">2</Value>
+              <Value column="member_0">Public Transit</Value>
+              <Value column="member_1_code">2</Value>
+              <Value column="member_1">Public Transit</Value>
+              <Value column="member_2_code">8</Value>
+              <Value column="member_2">Subway Or Elevated</Value>
+            </Row>
+            <Row>
+              <Value column="member_0_code">2</Value>
+              <Value column="member_0">Public Transit</Value>
+              <Value column="member_1_code">2</Value>
+              <Value column="member_1">Public Transit</Value>
+              <Value column="member_2_code">9</Value>
+              <Value column="member_2">Railroad</Value>
+            </Row>
+            <Row>
+              <Value column="member_0_code">2</Value>
+              <Value column="member_0">Public Transit</Value>
+              <Value column="member_1_code">2</Value>
+              <Value column="member_1">Public Transit</Value>
+              <Value column="member_2_code">10</Value>
+              <Value column="member_2">Ferryboat</Value>
+            </Row>
+            <Row>
+              <Value column="member_0_code">3</Value>
+              <Value column="member_0">Taxi</Value>
+              <Value column="member_1_code">3</Value>
+              <Value column="member_1">Taxi Subgroup</Value>
+              <Value column="member_2_code">11</Value>
+              <Value column="member_2">Taxi</Value>
+            </Row>
+            <Row>
+              <Value column="member_0_code">4</Value>
+              <Value column="member_0">Motorcycle</Value>
+              <Value column="member_1_code">4</Value>
+              <Value column="member_1">Motorcycle (subgroup)</Value>
+              <Value column="member_2_code">12</Value>
+              <Value column="member_2">Motorcycle</Value>
+            </Row>
+            <Row>
+              <Value column="member_0_code">5</Value>
+              <Value column="member_0">Bicycle</Value>
+              <Value column="member_1_code">5</Value>
+              <Value column="member_1">Bicycle (subgroup)</Value>
+              <Value column="member_2_code">13</Value>
+              <Value column="member_2">Bicycle</Value>
+            </Row>
+            <Row>
+              <Value column="member_0_code">6</Value>
+              <Value column="member_0">Walked</Value>
+              <Value column="member_1_code">6</Value>
+              <Value column="member_1">Walked (subgroup)</Value>
+              <Value column="member_2_code">14</Value>
+              <Value column="member_2">Walked</Value>
+            </Row>
+            <Row>
+              <Value column="member_0_code">7</Value>
+              <Value column="member_0">Other</Value>
+              <Value column="member_1_code">7</Value>
+              <Value column="member_1">Other</Value>
+              <Value column="member_2_code">15</Value>
+              <Value column="member_2">Other Means</Value>
+            </Row>
+            <Row>
+              <Value column="member_0_code">8</Value>
+              <Value column="member_0">Worked At Home</Value>
+              <Value column="member_1_code">8</Value>
+              <Value column="member_1">Worked At Home</Value>
+              <Value column="member_2_code">16</Value>
+              <Value column="member_2">Worked At Home</Value>
+            </Row>
+          </Rows>
+        </InlineTable>
+      <Level column="member_0_code" hideMemberIf="IfParentsName" name="Group" nameColumn="member_0" uniqueMembers="true"/>
+      <Level column="member_1_code" hideMemberIf="IfParentsName" name="Subgroup" nameColumn="member_1" uniqueMembers="true"/>
+      <Level column="member_2_code" hideMemberIf="IfParentsName" name="Transportation Means" nameColumn="member_2" uniqueMembers="true"/>
+      </Hierarchy>
+    </Dimension>
+  
+    <Measure aggregator="sum" column="mea_t" name="mea_t" visible="false"/>
+    <Measure aggregator="sum" column="mea_nation" name="mea_nation" visible="false"/>
+    <Measure aggregator="sum" column="mea_county" name="mea_county" visible="false"/>
+    <Measure aggregator="sum" column="mea_zip" name="mea_zip" visible="false"/>
+    <Measure aggregator="sum" column="mea_state" name="mea_state" visible="false"/>
+    <Measure aggregator="sum" column="mea_place" name="mea_place" visible="false"/>
+    <Measure aggregator="sum" column="mea_msa" name="mea_msa" visible="false"/>
+    <Measure aggregator="sum" column="mea_puma" name="mea_puma" visible="false"/>
+    <Measure aggregator="sum" column="mea_county_subdivision" name="mea_county_subdivision" visible="false"/>
+
+    <Measure aggregator="None" dataType="Numeric" name="moe_t" visible="false">
+      <MeasureExpression>
+        <SQL dialect="monetdb">sqrt(sum(power(moe_t / 1.645, 2))) * 1.645</SQL>
+      </MeasureExpression>
+    </Measure>
+    <Measure aggregator="None" dataType="Numeric" name="moe_nation" visible="false">
+      <MeasureExpression>
+        <SQL dialect="monetdb">sqrt(sum(power(moe_nation / 1.645, 2))) * 1.645</SQL>
+      </MeasureExpression>
+    </Measure>
+    <Measure aggregator="None" dataType="Numeric" name="moe_county" visible="false">
+      <MeasureExpression>
+        <SQL dialect="monetdb">sqrt(sum(power(moe_county / 1.645, 2))) * 1.645</SQL>
+      </MeasureExpression>
+    </Measure>
+    <Measure aggregator="None" dataType="Numeric" name="moe_zip" visible="false">
+      <MeasureExpression>
+        <SQL dialect="monetdb">sqrt(sum(power(moe_zip / 1.645, 2))) * 1.645</SQL>
+      </MeasureExpression>
+    </Measure>
+    <Measure aggregator="None" dataType="Numeric" name="moe_state" visible="false">
+      <MeasureExpression>
+        <SQL dialect="monetdb">sqrt(sum(power(moe_state / 1.645, 2))) * 1.645</SQL>
+      </MeasureExpression>
+    </Measure>
+    <Measure aggregator="None" dataType="Numeric" name="moe_place" visible="false">
+      <MeasureExpression>
+        <SQL dialect="monetdb">sqrt(sum(power(moe_place / 1.645, 2))) * 1.645</SQL>
+      </MeasureExpression>
+    </Measure>
+    <Measure aggregator="None" dataType="Numeric" name="moe_msa" visible="false">
+      <MeasureExpression>
+        <SQL dialect="monetdb">sqrt(sum(power(moe_msa / 1.645, 2))) * 1.645</SQL>
+      </MeasureExpression>
+    </Measure>
+    <Measure aggregator="None" dataType="Numeric" name="moe_puma" visible="false">
+      <MeasureExpression>
+        <SQL dialect="monetdb">sqrt(sum(power(moe_puma / 1.645, 2))) * 1.645</SQL>
+      </MeasureExpression>
+    </Measure>
+    <Measure aggregator="None" dataType="Numeric" name="moe_county_subdivision" visible="false">
+      <MeasureExpression>
+        <SQL dialect="monetdb">sqrt(sum(power(moe_county_subdivision / 1.645, 2))) * 1.645</SQL>
+      </MeasureExpression>
+    </Measure>
+
+    <CalculatedMember dimension="Measures" name="Commute Means" visible="true">
+      <Formula>CASE
+        WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[mea_t]
+        WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[mea_t]
+        WHEN [Geography].[Tract].Level is [Geography].[Tract].[Tract] THEN [Measures].[mea_t]
+        WHEN [Geography].[Place].Level is [Geography].[Place].[State] THEN [Measures].[mea_place]
+        WHEN [Geography].[Place].Level is [Geography].[Place].[Place] THEN [Measures].[mea_place]
+        WHEN [Geography].[Zip].Level is [Geography].[Zip].[Zip] THEN [Measures].[mea_zip]
+        WHEN [Geography].[County].Level is [Geography].[County].[State] THEN [Measures].[mea_county]
+        WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county]
+        WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state]
+        WHEN [Geography].[Nation].Level is [Geography].[Nation].[Nation] THEN [Measures].[mea_nation]
+        WHEN [Geography].[Puma].Level is [Geography].[Puma].[State] THEN [Measures].[mea_puma]
+        WHEN [Geography].[Puma].Level is [Geography].[Puma].[Puma] THEN [Measures].[mea_puma]
+        WHEN [Geography].[Msa].Level is [Geography].[Msa].[Msa] THEN [Measures].[mea_msa]
+        WHEN [Geography].[County Subdivision].Level is [Geography].[County Subdivision].[State] THEN [Measures].[mea_county_subdivision]
+        WHEN [Geography].[County Subdivision].Level is [Geography].[County Subdivision].[County] THEN [Measures].[mea_county_subdivision]
+        WHEN [Geography].[County Subdivision].Level is [Geography].[County Subdivision].[County Subdivision] THEN [Measures].[mea_county_subdivision]
+        WHEN 1 = 1 THEN [Measures].[mea_nation]
+        END
+      </Formula>
+      <Annotations>
+        <Annotation name="aggregation_method">SUM</Annotation>
+      </Annotations>
+    </CalculatedMember>
+
+    <CalculatedMember dimension="Measures" name="Commute Means Moe" visible="true">
+      <Formula>CASE
+        WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[moe_t]
+        WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[moe_t]
+        WHEN [Geography].[Tract].Level is [Geography].[Tract].[Tract] THEN [Measures].[moe_t]
+        WHEN [Geography].[Place].Level is [Geography].[Place].[State] THEN [Measures].[moe_place]
+        WHEN [Geography].[Place].Level is [Geography].[Place].[Place] THEN [Measures].[moe_place]
+        WHEN [Geography].[Zip].Level is [Geography].[Zip].[Zip] THEN [Measures].[moe_zip]
+        WHEN [Geography].[County].Level is [Geography].[County].[State] THEN [Measures].[moe_county]
+        WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[moe_county]
+        WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[moe_state]
+        WHEN [Geography].[Nation].Level is [Geography].[Nation].[Nation] THEN [Measures].[moe_nation]
+        WHEN [Geography].[Puma].Level is [Geography].[Puma].[State] THEN [Measures].[moe_puma]
+        WHEN [Geography].[Puma].Level is [Geography].[Puma].[Puma] THEN [Measures].[moe_puma]
+        WHEN [Geography].[Msa].Level is [Geography].[Msa].[Msa] THEN [Measures].[moe_msa]
+        WHEN [Geography].[County Subdivision].Level is [Geography].[County Subdivision].[State] THEN [Measures].[moe_county_subdivision]
+        WHEN [Geography].[County Subdivision].Level is [Geography].[County Subdivision].[County] THEN [Measures].[moe_county_subdivision]
+        WHEN [Geography].[County Subdivision].Level is [Geography].[County Subdivision].[County Subdivision] THEN [Measures].[moe_county_subdivision]
+        WHEN 1 = 1 THEN [Measures].[moe_nation]
+        END
+      </Formula>
+      <Annotations>
+        <Annotation name="aggregation_method">MOE</Annotation>
+        <Annotation name="error_for_measure">Commute Means</Annotation>
       </Annotations>
     </CalculatedMember>
 
@@ -10591,6 +11352,289 @@
       <Annotations>
         <Annotation name="aggregation_method">MOE</Annotation>
         <Annotation name="error_for_measure">Population</Annotation>
+      </Annotations>
+    </CalculatedMember>
+
+    <!-- Here add in rca and percent calc if asked for -->
+
+  </Cube>
+<Cube name="acs_ygt_means_of_transportation_to_work_5">
+    <Annotations>
+      <Annotation name="source_name">Census Bureau</Annotation>
+      <Annotation name="source_link">http://www.census.gov/programs-surveys/acs/</Annotation>
+      <Annotation name="dataset_name">ACS 5-year Estimate</Annotation>
+      <Annotation name="table_id">B08301</Annotation>
+    </Annotations>
+    <Table name="acs_ygt_means_of_transportation_to_work_5" schema="acs"/>
+
+    <DimensionUsage foreignKey="geoid" name="Geography" source="geography"/>
+    <Dimension name="Year">
+      <Hierarchy hasAll="true">
+        <Level column="year" levelType="TimeYears" name="Year" type="Numeric" uniqueMembers="true"/>
+      </Hierarchy>
+    </Dimension>
+    <Dimension foreignKey="dim_2" name="Transportation">
+      <Hierarchy hasAll="true">
+        <InlineTable alias="dim_2_table">
+          <ColumnDefs>
+            <ColumnDef name="member_0_code" type="Numeric"/>
+            <ColumnDef name="member_0" type="String"/>
+            <ColumnDef name="member_1_code" type="Numeric"/>
+            <ColumnDef name="member_1" type="String"/>
+            <ColumnDef name="member_2_code" type="Numeric"/>
+            <ColumnDef name="member_2" type="String"/>
+          </ColumnDefs>
+          <Rows>
+            <Row>
+              <Value column="member_0_code">0</Value>
+              <Value column="member_0">Drove Alone</Value>
+              <Value column="member_1_code">0</Value>
+              <Value column="member_1">Drove Alone (subgroup)</Value>
+              <Value column="member_2_code">0</Value>
+              <Value column="member_2">Drove Alone</Value>
+            </Row>
+            <Row>
+              <Value column="member_0_code">1</Value>
+              <Value column="member_0">Carpooled</Value>
+              <Value column="member_1_code">1</Value>
+              <Value column="member_1">Carpooled</Value>
+              <Value column="member_2_code">1</Value>
+              <Value column="member_2">In 2-person Carpool</Value>
+            </Row>
+            <Row>
+              <Value column="member_0_code">1</Value>
+              <Value column="member_0">Carpooled</Value>
+              <Value column="member_1_code">1</Value>
+              <Value column="member_1">Carpooled</Value>
+              <Value column="member_2_code">2</Value>
+              <Value column="member_2">In 3-person Carpool</Value>
+            </Row>
+            <Row>
+              <Value column="member_0_code">1</Value>
+              <Value column="member_0">Carpooled</Value>
+              <Value column="member_1_code">1</Value>
+              <Value column="member_1">Carpooled</Value>
+              <Value column="member_2_code">3</Value>
+              <Value column="member_2">In 4-person Carpool</Value>
+            </Row>
+            <Row>
+              <Value column="member_0_code">1</Value>
+              <Value column="member_0">Carpooled</Value>
+              <Value column="member_1_code">1</Value>
+              <Value column="member_1">Carpooled</Value>
+              <Value column="member_2_code">4</Value>
+              <Value column="member_2">In 5-Or 6-person Carpool</Value>
+            </Row>
+            <Row>
+              <Value column="member_0_code">1</Value>
+              <Value column="member_0">Carpooled</Value>
+              <Value column="member_1_code">1</Value>
+              <Value column="member_1">Carpooled</Value>
+              <Value column="member_2_code">5</Value>
+              <Value column="member_2">In 7-or-more-person Carpool</Value>
+            </Row>
+            <Row>
+              <Value column="member_0_code">2</Value>
+              <Value column="member_0">Public Transit</Value>
+              <Value column="member_1_code">2</Value>
+              <Value column="member_1">Public Transit</Value>
+              <Value column="member_2_code">6</Value>
+              <Value column="member_2">Bus Or Trolley Bus</Value>
+            </Row>
+            <Row>
+              <Value column="member_0_code">2</Value>
+              <Value column="member_0">Public Transit</Value>
+              <Value column="member_1_code">2</Value>
+              <Value column="member_1">Public Transit</Value>
+              <Value column="member_2_code">7</Value>
+              <Value column="member_2">Streetcar Or Trolley Car</Value>
+            </Row>
+            <Row>
+              <Value column="member_0_code">2</Value>
+              <Value column="member_0">Public Transit</Value>
+              <Value column="member_1_code">2</Value>
+              <Value column="member_1">Public Transit</Value>
+              <Value column="member_2_code">8</Value>
+              <Value column="member_2">Subway Or Elevated</Value>
+            </Row>
+            <Row>
+              <Value column="member_0_code">2</Value>
+              <Value column="member_0">Public Transit</Value>
+              <Value column="member_1_code">2</Value>
+              <Value column="member_1">Public Transit</Value>
+              <Value column="member_2_code">9</Value>
+              <Value column="member_2">Railroad</Value>
+            </Row>
+            <Row>
+              <Value column="member_0_code">2</Value>
+              <Value column="member_0">Public Transit</Value>
+              <Value column="member_1_code">2</Value>
+              <Value column="member_1">Public Transit</Value>
+              <Value column="member_2_code">10</Value>
+              <Value column="member_2">Ferryboat</Value>
+            </Row>
+            <Row>
+              <Value column="member_0_code">3</Value>
+              <Value column="member_0">Taxi</Value>
+              <Value column="member_1_code">3</Value>
+              <Value column="member_1">Taxi Subgroup</Value>
+              <Value column="member_2_code">11</Value>
+              <Value column="member_2">Taxi</Value>
+            </Row>
+            <Row>
+              <Value column="member_0_code">4</Value>
+              <Value column="member_0">Motorcycle</Value>
+              <Value column="member_1_code">4</Value>
+              <Value column="member_1">Motorcycle (subgroup)</Value>
+              <Value column="member_2_code">12</Value>
+              <Value column="member_2">Motorcycle</Value>
+            </Row>
+            <Row>
+              <Value column="member_0_code">5</Value>
+              <Value column="member_0">Bicycle</Value>
+              <Value column="member_1_code">5</Value>
+              <Value column="member_1">Bicycle (subgroup)</Value>
+              <Value column="member_2_code">13</Value>
+              <Value column="member_2">Bicycle</Value>
+            </Row>
+            <Row>
+              <Value column="member_0_code">6</Value>
+              <Value column="member_0">Walked</Value>
+              <Value column="member_1_code">6</Value>
+              <Value column="member_1">Walked (subgroup)</Value>
+              <Value column="member_2_code">14</Value>
+              <Value column="member_2">Walked</Value>
+            </Row>
+            <Row>
+              <Value column="member_0_code">7</Value>
+              <Value column="member_0">Other</Value>
+              <Value column="member_1_code">7</Value>
+              <Value column="member_1">Other</Value>
+              <Value column="member_2_code">15</Value>
+              <Value column="member_2">Other Means</Value>
+            </Row>
+            <Row>
+              <Value column="member_0_code">8</Value>
+              <Value column="member_0">Worked At Home</Value>
+              <Value column="member_1_code">8</Value>
+              <Value column="member_1">Worked At Home</Value>
+              <Value column="member_2_code">16</Value>
+              <Value column="member_2">Worked At Home</Value>
+            </Row>
+          </Rows>
+        </InlineTable>
+      <Level column="member_0_code" hideMemberIf="IfParentsName" name="Group" nameColumn="member_0" uniqueMembers="true"/>
+      <Level column="member_1_code" hideMemberIf="IfParentsName" name="Subgroup" nameColumn="member_1" uniqueMembers="true"/>
+      <Level column="member_2_code" hideMemberIf="IfParentsName" name="Transportation Means" nameColumn="member_2" uniqueMembers="true"/>
+      </Hierarchy>
+    </Dimension>
+  
+    <Measure aggregator="sum" column="mea_t" name="mea_t" visible="false"/>
+    <Measure aggregator="sum" column="mea_nation" name="mea_nation" visible="false"/>
+    <Measure aggregator="sum" column="mea_county" name="mea_county" visible="false"/>
+    <Measure aggregator="sum" column="mea_zip" name="mea_zip" visible="false"/>
+    <Measure aggregator="sum" column="mea_state" name="mea_state" visible="false"/>
+    <Measure aggregator="sum" column="mea_place" name="mea_place" visible="false"/>
+    <Measure aggregator="sum" column="mea_msa" name="mea_msa" visible="false"/>
+    <Measure aggregator="sum" column="mea_puma" name="mea_puma" visible="false"/>
+    <Measure aggregator="sum" column="mea_county_subdivision" name="mea_county_subdivision" visible="false"/>
+
+    <Measure aggregator="None" dataType="Numeric" name="moe_t" visible="false">
+      <MeasureExpression>
+        <SQL dialect="monetdb">sqrt(sum(power(moe_t / 1.645, 2))) * 1.645</SQL>
+      </MeasureExpression>
+    </Measure>
+    <Measure aggregator="None" dataType="Numeric" name="moe_nation" visible="false">
+      <MeasureExpression>
+        <SQL dialect="monetdb">sqrt(sum(power(moe_nation / 1.645, 2))) * 1.645</SQL>
+      </MeasureExpression>
+    </Measure>
+    <Measure aggregator="None" dataType="Numeric" name="moe_county" visible="false">
+      <MeasureExpression>
+        <SQL dialect="monetdb">sqrt(sum(power(moe_county / 1.645, 2))) * 1.645</SQL>
+      </MeasureExpression>
+    </Measure>
+    <Measure aggregator="None" dataType="Numeric" name="moe_zip" visible="false">
+      <MeasureExpression>
+        <SQL dialect="monetdb">sqrt(sum(power(moe_zip / 1.645, 2))) * 1.645</SQL>
+      </MeasureExpression>
+    </Measure>
+    <Measure aggregator="None" dataType="Numeric" name="moe_state" visible="false">
+      <MeasureExpression>
+        <SQL dialect="monetdb">sqrt(sum(power(moe_state / 1.645, 2))) * 1.645</SQL>
+      </MeasureExpression>
+    </Measure>
+    <Measure aggregator="None" dataType="Numeric" name="moe_place" visible="false">
+      <MeasureExpression>
+        <SQL dialect="monetdb">sqrt(sum(power(moe_place / 1.645, 2))) * 1.645</SQL>
+      </MeasureExpression>
+    </Measure>
+    <Measure aggregator="None" dataType="Numeric" name="moe_msa" visible="false">
+      <MeasureExpression>
+        <SQL dialect="monetdb">sqrt(sum(power(moe_msa / 1.645, 2))) * 1.645</SQL>
+      </MeasureExpression>
+    </Measure>
+    <Measure aggregator="None" dataType="Numeric" name="moe_puma" visible="false">
+      <MeasureExpression>
+        <SQL dialect="monetdb">sqrt(sum(power(moe_puma / 1.645, 2))) * 1.645</SQL>
+      </MeasureExpression>
+    </Measure>
+    <Measure aggregator="None" dataType="Numeric" name="moe_county_subdivision" visible="false">
+      <MeasureExpression>
+        <SQL dialect="monetdb">sqrt(sum(power(moe_county_subdivision / 1.645, 2))) * 1.645</SQL>
+      </MeasureExpression>
+    </Measure>
+
+    <CalculatedMember dimension="Measures" name="Commute Means" visible="true">
+      <Formula>CASE
+        WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[mea_t]
+        WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[mea_t]
+        WHEN [Geography].[Tract].Level is [Geography].[Tract].[Tract] THEN [Measures].[mea_t]
+        WHEN [Geography].[Place].Level is [Geography].[Place].[State] THEN [Measures].[mea_place]
+        WHEN [Geography].[Place].Level is [Geography].[Place].[Place] THEN [Measures].[mea_place]
+        WHEN [Geography].[Zip].Level is [Geography].[Zip].[Zip] THEN [Measures].[mea_zip]
+        WHEN [Geography].[County].Level is [Geography].[County].[State] THEN [Measures].[mea_county]
+        WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[mea_county]
+        WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[mea_state]
+        WHEN [Geography].[Nation].Level is [Geography].[Nation].[Nation] THEN [Measures].[mea_nation]
+        WHEN [Geography].[Puma].Level is [Geography].[Puma].[State] THEN [Measures].[mea_puma]
+        WHEN [Geography].[Puma].Level is [Geography].[Puma].[Puma] THEN [Measures].[mea_puma]
+        WHEN [Geography].[Msa].Level is [Geography].[Msa].[Msa] THEN [Measures].[mea_msa]
+        WHEN [Geography].[County Subdivision].Level is [Geography].[County Subdivision].[State] THEN [Measures].[mea_county_subdivision]
+        WHEN [Geography].[County Subdivision].Level is [Geography].[County Subdivision].[County] THEN [Measures].[mea_county_subdivision]
+        WHEN [Geography].[County Subdivision].Level is [Geography].[County Subdivision].[County Subdivision] THEN [Measures].[mea_county_subdivision]
+        WHEN 1 = 1 THEN [Measures].[mea_nation]
+        END
+      </Formula>
+      <Annotations>
+        <Annotation name="aggregation_method">SUM</Annotation>
+      </Annotations>
+    </CalculatedMember>
+
+    <CalculatedMember dimension="Measures" name="Commute Means Moe" visible="true">
+      <Formula>CASE
+        WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[moe_t]
+        WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[moe_t]
+        WHEN [Geography].[Tract].Level is [Geography].[Tract].[Tract] THEN [Measures].[moe_t]
+        WHEN [Geography].[Place].Level is [Geography].[Place].[State] THEN [Measures].[moe_place]
+        WHEN [Geography].[Place].Level is [Geography].[Place].[Place] THEN [Measures].[moe_place]
+        WHEN [Geography].[Zip].Level is [Geography].[Zip].[Zip] THEN [Measures].[moe_zip]
+        WHEN [Geography].[County].Level is [Geography].[County].[State] THEN [Measures].[moe_county]
+        WHEN [Geography].[County].Level is [Geography].[County].[County] THEN [Measures].[moe_county]
+        WHEN [Geography].[State].Level is [Geography].[State].[State] THEN [Measures].[moe_state]
+        WHEN [Geography].[Nation].Level is [Geography].[Nation].[Nation] THEN [Measures].[moe_nation]
+        WHEN [Geography].[Puma].Level is [Geography].[Puma].[State] THEN [Measures].[moe_puma]
+        WHEN [Geography].[Puma].Level is [Geography].[Puma].[Puma] THEN [Measures].[moe_puma]
+        WHEN [Geography].[Msa].Level is [Geography].[Msa].[Msa] THEN [Measures].[moe_msa]
+        WHEN [Geography].[County Subdivision].Level is [Geography].[County Subdivision].[State] THEN [Measures].[moe_county_subdivision]
+        WHEN [Geography].[County Subdivision].Level is [Geography].[County Subdivision].[County] THEN [Measures].[moe_county_subdivision]
+        WHEN [Geography].[County Subdivision].Level is [Geography].[County Subdivision].[County Subdivision] THEN [Measures].[moe_county_subdivision]
+        WHEN 1 = 1 THEN [Measures].[moe_nation]
+        END
+      </Formula>
+      <Annotations>
+        <Annotation name="aggregation_method">MOE</Annotation>
+        <Annotation name="error_for_measure">Commute Means</Annotation>
       </Annotations>
     </CalculatedMember>
 
