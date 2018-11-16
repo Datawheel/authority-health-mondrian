@@ -1658,51 +1658,51 @@
           <Rows>
             <Row>
               <Value column="member_0_code">0</Value>
-              <Value column="member_0">Under. 50</Value>
+              <Value column="member_0">Under .50</Value>
             </Row>
             <Row>
               <Value column="member_0_code">1</Value>
-              <Value column="member_0">. 50 To. 74</Value>
+              <Value column="member_0">.50 To .74</Value>
             </Row>
             <Row>
               <Value column="member_0_code">2</Value>
-              <Value column="member_0">. 75 To. 99</Value>
+              <Value column="member_0">.75 To .99</Value>
             </Row>
             <Row>
               <Value column="member_0_code">3</Value>
-              <Value column="member_0">1. 00 To 1. 24</Value>
+              <Value column="member_0">1.00 To 1.24</Value>
             </Row>
             <Row>
               <Value column="member_0_code">4</Value>
-              <Value column="member_0">1. 25 To 1. 49</Value>
+              <Value column="member_0">1.25 To 1.49</Value>
             </Row>
             <Row>
               <Value column="member_0_code">5</Value>
-              <Value column="member_0">1. 50 To 1. 74</Value>
+              <Value column="member_0">1.50 To 1.74</Value>
             </Row>
             <Row>
               <Value column="member_0_code">6</Value>
-              <Value column="member_0">1. 75 To 1. 84</Value>
+              <Value column="member_0">1.75 To 1.84</Value>
             </Row>
             <Row>
               <Value column="member_0_code">7</Value>
-              <Value column="member_0">1. 85 To 1. 99</Value>
+              <Value column="member_0">1.85 To 1.99</Value>
             </Row>
             <Row>
               <Value column="member_0_code">8</Value>
-              <Value column="member_0">2. 00 To 2. 99</Value>
+              <Value column="member_0">2.00 To 2.99</Value>
             </Row>
             <Row>
               <Value column="member_0_code">9</Value>
-              <Value column="member_0">3. 00 To 3. 99</Value>
+              <Value column="member_0">3.00 To 3.99</Value>
             </Row>
             <Row>
               <Value column="member_0_code">10</Value>
-              <Value column="member_0">4. 00 To 4. 99</Value>
+              <Value column="member_0">4.00 To 4.99</Value>
             </Row>
             <Row>
               <Value column="member_0_code">11</Value>
-              <Value column="member_0">5. 00 &amp; Over</Value>
+              <Value column="member_0">5.00 &amp; Over</Value>
             </Row>
           </Rows>
         </InlineTable>
@@ -6071,7 +6071,7 @@
       </MeasureExpression>
     </Measure>
 
-    <CalculatedMember dimension="Measures" name="Population" visible="true">
+    <CalculatedMember dimension="Measures" name="Housing Units" visible="true">
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[mea_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[mea_t]
@@ -6097,7 +6097,7 @@
       </Annotations>
     </CalculatedMember>
 
-    <CalculatedMember dimension="Measures" name="Population Moe" visible="true">
+    <CalculatedMember dimension="Measures" name="Housing Units Moe" visible="true">
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[moe_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[moe_t]
@@ -6120,7 +6120,7 @@
       </Formula>
       <Annotations>
         <Annotation name="aggregation_method">MOE</Annotation>
-        <Annotation name="error_for_measure">Population</Annotation>
+        <Annotation name="error_for_measure">Housing Units</Annotation>
       </Annotations>
     </CalculatedMember>
 
@@ -6220,7 +6220,7 @@
       </MeasureExpression>
     </Measure>
 
-    <CalculatedMember dimension="Measures" name="Population" visible="true">
+    <CalculatedMember dimension="Measures" name="Renter-Occupied Housing Units" visible="true">
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[mea_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[mea_t]
@@ -6246,7 +6246,7 @@
       </Annotations>
     </CalculatedMember>
 
-    <CalculatedMember dimension="Measures" name="Population Moe" visible="true">
+    <CalculatedMember dimension="Measures" name="Renter-Occupied Housing Units Moe" visible="true">
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[moe_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[moe_t]
@@ -6269,7 +6269,7 @@
       </Formula>
       <Annotations>
         <Annotation name="aggregation_method">MOE</Annotation>
-        <Annotation name="error_for_measure">Population</Annotation>
+        <Annotation name="error_for_measure">Renter-Occupied Housing Units</Annotation>
       </Annotations>
     </CalculatedMember>
 
@@ -8527,7 +8527,7 @@
       </MeasureExpression>
     </Measure>
 
-    <CalculatedMember dimension="Measures" name="Population" visible="true">
+    <CalculatedMember dimension="Measures" name="Renter-Occupied Housing Units" visible="true">
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[mea_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[mea_t]
@@ -8553,7 +8553,7 @@
       </Annotations>
     </CalculatedMember>
 
-    <CalculatedMember dimension="Measures" name="Population Moe" visible="true">
+    <CalculatedMember dimension="Measures" name="Renter-Occupied Housing Units Moe" visible="true">
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[moe_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[moe_t]
@@ -8576,7 +8576,7 @@
       </Formula>
       <Annotations>
         <Annotation name="aggregation_method">MOE</Annotation>
-        <Annotation name="error_for_measure">Population</Annotation>
+        <Annotation name="error_for_measure">Renter-Occupied Housing Units</Annotation>
       </Annotations>
     </CalculatedMember>
 
@@ -8676,7 +8676,7 @@
       </MeasureExpression>
     </Measure>
 
-    <CalculatedMember dimension="Measures" name="Population" visible="true">
+    <CalculatedMember dimension="Measures" name="Housing Units" visible="true">
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[mea_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[mea_t]
@@ -8702,7 +8702,7 @@
       </Annotations>
     </CalculatedMember>
 
-    <CalculatedMember dimension="Measures" name="Population Moe" visible="true">
+    <CalculatedMember dimension="Measures" name="Housing Units Moe" visible="true">
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[moe_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[moe_t]
@@ -8725,7 +8725,7 @@
       </Formula>
       <Annotations>
         <Annotation name="aggregation_method">MOE</Annotation>
-        <Annotation name="error_for_measure">Population</Annotation>
+        <Annotation name="error_for_measure">Housing Units</Annotation>
       </Annotations>
     </CalculatedMember>
 
@@ -9666,12 +9666,12 @@
         </Hierarchy>
     </Dimension>
 
-    <Dimension name="Categories">
+    <Dimension name="Pollutants">
         <Annotations>
-            <Annotation name="dim_type">CATEGORY</Annotation>
+            <Annotation name="dim_type">POLLUTANT</Annotation>
         </Annotations>
         <Hierarchy hasAll="true" name="Category">
-            <Level name="Category" column="category" uniqueMembers="true"/>
+            <Level name="Pollutant" column="category" uniqueMembers="true"/>
         </Hierarchy>
     </Dimension>
 
