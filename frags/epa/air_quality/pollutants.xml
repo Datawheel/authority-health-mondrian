@@ -28,12 +28,12 @@
         </Hierarchy>
     </Dimension>
 
-    <Dimension name="Categories">
+    <Dimension name="Pollutants">
         <Annotations>
-            <Annotation name="dim_type">CATEGORY</Annotation>
+            <Annotation name="dim_type">POLLUTANT</Annotation>
         </Annotations>
         <Hierarchy hasAll="true" name="Category">
-            <Level name="Category" column="category" uniqueMembers="true"/>
+            <Level name="Pollutant" column="category" uniqueMembers="true"/>
         </Hierarchy>
     </Dimension>
 
