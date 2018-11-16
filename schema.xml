@@ -1658,51 +1658,51 @@
           <Rows>
             <Row>
               <Value column="member_0_code">0</Value>
-              <Value column="member_0">Under. 50</Value>
+              <Value column="member_0">Under .50</Value>
             </Row>
             <Row>
               <Value column="member_0_code">1</Value>
-              <Value column="member_0">. 50 To. 74</Value>
+              <Value column="member_0">.50 To .74</Value>
             </Row>
             <Row>
               <Value column="member_0_code">2</Value>
-              <Value column="member_0">. 75 To. 99</Value>
+              <Value column="member_0">.75 To .99</Value>
             </Row>
             <Row>
               <Value column="member_0_code">3</Value>
-              <Value column="member_0">1. 00 To 1. 24</Value>
+              <Value column="member_0">1.00 To 1.24</Value>
             </Row>
             <Row>
               <Value column="member_0_code">4</Value>
-              <Value column="member_0">1. 25 To 1. 49</Value>
+              <Value column="member_0">1.25 To 1.49</Value>
             </Row>
             <Row>
               <Value column="member_0_code">5</Value>
-              <Value column="member_0">1. 50 To 1. 74</Value>
+              <Value column="member_0">1.50 To 1.74</Value>
             </Row>
             <Row>
               <Value column="member_0_code">6</Value>
-              <Value column="member_0">1. 75 To 1. 84</Value>
+              <Value column="member_0">1.75 To 1.84</Value>
             </Row>
             <Row>
               <Value column="member_0_code">7</Value>
-              <Value column="member_0">1. 85 To 1. 99</Value>
+              <Value column="member_0">1.85 To 1.99</Value>
             </Row>
             <Row>
               <Value column="member_0_code">8</Value>
-              <Value column="member_0">2. 00 To 2. 99</Value>
+              <Value column="member_0">2.00 To 2.99</Value>
             </Row>
             <Row>
               <Value column="member_0_code">9</Value>
-              <Value column="member_0">3. 00 To 3. 99</Value>
+              <Value column="member_0">3.00 To 3.99</Value>
             </Row>
             <Row>
               <Value column="member_0_code">10</Value>
-              <Value column="member_0">4. 00 To 4. 99</Value>
+              <Value column="member_0">4.00 To 4.99</Value>
             </Row>
             <Row>
               <Value column="member_0_code">11</Value>
-              <Value column="member_0">5. 00 &amp; Over</Value>
+              <Value column="member_0">5.00 &amp; Over</Value>
             </Row>
           </Rows>
         </InlineTable>
