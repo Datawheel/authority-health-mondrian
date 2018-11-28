@@ -10178,7 +10178,7 @@
         </Hierarchy>
     </Dimension>
 
-    <Dimension name="Categories">
+    <Dimension name="Category">
         <Annotations>
             <Annotation name="dim_type">CATEGORY</Annotation>
         </Annotations>
@@ -10228,13 +10228,13 @@
         </Hierarchy>
     </Dimension>
 
-    <Dimension name="Categories">
+    <Dimension name="Group">
         <Annotations>
-            <Annotation name="dim_type">CATEGORY</Annotation>
+            <Annotation name="dim_type">GROUP</Annotation>
         </Annotations>
-        <Hierarchy hasAll="true" name="Sub-category">
-            <Level name="Category" column="category" uniqueMembers="true"/>
-            <Level name="Sub-category" column="sub_category" uniqueMembers="true"/>
+        <Hierarchy hasAll="true" name="Sub-group">
+            <Level name="Group" column="category" uniqueMembers="true"/>
+            <Level name="Sub-group" column="sub_category" uniqueMembers="true"/>
         </Hierarchy>
     </Dimension>
 
