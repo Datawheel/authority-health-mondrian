@@ -31,7 +31,7 @@
         </Hierarchy>
     </Dimension>
 
-    <Dimension name="Categories">
+    <Dimension name="Category">
         <Annotations>
             <Annotation name="dim_type">CATEGORY</Annotation>
         </Annotations>
