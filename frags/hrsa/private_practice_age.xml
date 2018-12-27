@@ -23,7 +23,7 @@
         </Annotations>
         <Hierarchy hasAll="true" name="County">
             <Table name="counties" schema="shapes2017"/>
-            <Level name="County" column="geoid" nameColumn="name" uniqueMembers="true" hideMemberIf="IfBlankName" />
+            <Level name="County" column="geoid" nameColumn="namelsad" uniqueMembers="true" hideMemberIf="IfBlankName" />
         </Hierarchy>
     </Dimension>
 
@@ -32,7 +32,7 @@
             <Annotation name="dim_type">AGE</Annotation>
         </Annotations>
         <Hierarchy hasAll="true">
-            <Level name="Age Group" column="age" uniqueMembers="true"/>
+            <Level name="Age Group" column="age_id" nameColumn="age" uniqueMembers="true"/>
         </Hierarchy>
     </Dimension>
 
