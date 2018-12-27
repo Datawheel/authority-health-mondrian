@@ -32,7 +32,7 @@
             <Annotation name="dim_type">AGE</Annotation>
         </Annotations>
         <Hierarchy hasAll="true">
-            <Level name="Age Group" column="age" uniqueMembers="true"/>
+            <Level name="Age Group" column="age_id" nameColumn="age" uniqueMembers="true"/>
         </Hierarchy>
     </Dimension>
 
