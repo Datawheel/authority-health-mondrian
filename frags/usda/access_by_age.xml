@@ -12,9 +12,9 @@
         <Annotations>
             <Annotation name="dim_type">TIME</Annotation>
         </Annotations>
-         <Hierarchy hasAll="true">  
-            <Level name="Year" column="year" type="Numeric" levelType="TimeYears" uniqueMembers="true" />  
-        </Hierarchy> 
+         <Hierarchy hasAll="true">
+            <Level name="Year" column="year" type="Numeric" levelType="TimeYears" uniqueMembers="true" />
+        </Hierarchy>
     </Dimension>
 
     <Dimension foreignKey="fips" name="Geography">
@@ -23,7 +23,7 @@
         </Annotations>
         <Hierarchy hasAll="true" name="County">
             <Table name="counties" schema="shapes2017"/>
-            <Level name="County" column="geoid" nameColumn="name" uniqueMembers="true" hideMemberIf="IfBlankName" />
+            <Level name="County" column="geoid" nameColumn="namelsad" uniqueMembers="true" hideMemberIf="IfBlankName" />
         </Hierarchy>
     </Dimension>
 
@@ -31,9 +31,9 @@
         <Annotations>
             <Annotation name="dim_type">AGE</Annotation>
         </Annotations>
-        <Hierarchy hasAll="true">  
-            <Level name="Age Group" column="age_group" uniqueMembers="true" />  
-        </Hierarchy> 
+        <Hierarchy hasAll="true">
+            <Level name="Age Group" column="age_group" uniqueMembers="true" />
+        </Hierarchy>
     </Dimension>
 
     <Measure name="Percent" column="percent" aggregator="avg" />

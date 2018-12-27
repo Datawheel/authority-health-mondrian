@@ -24,7 +24,7 @@
         </Annotations>
         <Hierarchy hasAll="true" name="County">
             <Table name="counties" schema="shapes2017"/>
-            <Level column="geoid" name="County" nameColumn="name" uniqueMembers="true"/>
+            <Level column="geoid" name="County" nameColumn="namelsad" uniqueMembers="true"/>
         </Hierarchy>
     </Dimension>
 
