@@ -36,5 +36,5 @@
         </Hierarchy>
     </Dimension>
 
-    <Measure name="Number of Dentists" column="number" aggregator="sum" />
+    <Measure name="Number of Dentists in Private Practice" column="number" aggregator="sum" />
 </Cube>

@@ -37,11 +37,11 @@
         </Hierarchy>
     </Dimension>
 
-    <Measure name="Number" column="number" aggregator="sum" />
-    <Measure name="Percent" column="percent" aggregator="avg" />
-    <Measure name="Lower Confidence Limit" column="lower_confidence_limit" aggregator="avg" />
-    <Measure name="Upper Confidence Limit" column="upper_confidence_limit" aggregator="avg" />
-    <Measure name="Adj Percent" column="adj_percent" aggregator="avg" />
-    <Measure name="Adj Lower Confidence Limit" column="adj_lower_confidence_limit" aggregator="avg" />
-    <Measure name="Adj Upper Confidence Limit" column="adj_upper_confidence_limit" aggregator="avg" />
+    <Measure name="Obesity Prevalence Number" column="number" aggregator="sum" />
+    <Measure name="Obesity Prevalence Percent" column="percent" aggregator="avg" />
+    <Measure name="Obesity Prevalence Lower Confidence Limit" column="lower_confidence_limit" aggregator="avg" />
+    <Measure name="Obesity Prevalence Upper Confidence Limit" column="upper_confidence_limit" aggregator="avg" />
+    <Measure name="Obesity Prevalence Adj Percent" column="adj_percent" aggregator="avg" />
+    <Measure name="Obesity Prevalence Adj Lower Confidence Limit" column="adj_lower_confidence_limit" aggregator="avg" />
+    <Measure name="Obesity Prevalence Adj Upper Confidence Limit" column="adj_upper_confidence_limit" aggregator="avg" />
 </Cube>

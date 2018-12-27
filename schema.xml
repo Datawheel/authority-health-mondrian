@@ -86,13 +86,13 @@
         </Hierarchy>
     </Dimension>
 
-    <Measure name="Number" column="number" aggregator="sum" />
-    <Measure name="Percent" column="percent" aggregator="avg" />
-    <Measure name="Lower Confidence Limit" column="lower_confidence_limit" aggregator="avg" />
-    <Measure name="Upper Confidence Limit" column="upper_confidence_limit" aggregator="avg" />
-    <Measure name="Adj Percent" column="adj_percent" aggregator="avg" />
-    <Measure name="Adj Lower Confidence Limit" column="adj_lower_confidence_limit" aggregator="avg" />
-    <Measure name="Adj Upper Confidence Limit" column="adj_upper_confidence_limit" aggregator="avg" />
+    <Measure name="Physical Inactivity Number" column="number" aggregator="sum" />
+    <Measure name="Physical Inactivity Percent" column="percent" aggregator="avg" />
+    <Measure name="Physical Inactivity Lower Confidence Limit" column="lower_confidence_limit" aggregator="avg" />
+    <Measure name="Physical Inactivity Upper Confidence Limit" column="upper_confidence_limit" aggregator="avg" />
+    <Measure name="Physical Inactivity Adj Percent" column="adj_percent" aggregator="avg" />
+    <Measure name="Physical Inactivity Adj Lower Confidence Limit" column="adj_lower_confidence_limit" aggregator="avg" />
+    <Measure name="Physical Inactivity Adj Upper Confidence Limit" column="adj_upper_confidence_limit" aggregator="avg" />
 </Cube>
 <Cube name="CDC Wonder - Diabetes Prevalence by Sex">
     <Annotations>
@@ -133,13 +133,13 @@
         </Hierarchy>
     </Dimension>
 
-    <Measure name="Number" column="number" aggregator="sum" />
-    <Measure name="Percent" column="percent" aggregator="avg" />
-    <Measure name="Lower Confidence Limit" column="lower_confidence_limit" aggregator="avg" />
-    <Measure name="Upper Confidence Limit" column="upper_confidence_limit" aggregator="avg" />
-    <Measure name="Adj Percent" column="adj_percent" aggregator="avg" />
-    <Measure name="Adj Lower Confidence Limit" column="adj_lower_confidence_limit" aggregator="avg" />
-    <Measure name="Adj Upper Confidence Limit" column="adj_upper_confidence_limit" aggregator="avg" />
+    <Measure name="Diabetes Prevalence Number" column="number" aggregator="sum" />
+    <Measure name="Diabetes Prevalence Percent" column="percent" aggregator="avg" />
+    <Measure name="Diabetes Prevalence Lower Confidence Limit" column="lower_confidence_limit" aggregator="avg" />
+    <Measure name="Diabetes Prevalence Upper Confidence Limit" column="upper_confidence_limit" aggregator="avg" />
+    <Measure name="Diabetes Prevalence Adj Percent" column="adj_percent" aggregator="avg" />
+    <Measure name="Diabetes Prevalence Adj Lower Confidence Limit" column="adj_lower_confidence_limit" aggregator="avg" />
+    <Measure name="Diabetes Prevalence Adj Upper Confidence Limit" column="adj_upper_confidence_limit" aggregator="avg" />
 </Cube>
 <Cube name="CDC Wonder - Diabetes">
     <Annotations>
@@ -229,13 +229,13 @@
         </Hierarchy>
     </Dimension>
 
-    <Measure name="Number" column="number" aggregator="sum" />
-    <Measure name="Percent" column="percent" aggregator="avg" />
-    <Measure name="Lower Confidence Limit" column="lower_confidence_limit" aggregator="avg" />
-    <Measure name="Upper Confidence Limit" column="upper_confidence_limit" aggregator="avg" />
-    <Measure name="Adj Percent" column="adj_percent" aggregator="avg" />
-    <Measure name="Adj Lower Confidence Limit" column="adj_lower_confidence_limit" aggregator="avg" />
-    <Measure name="Adj Upper Confidence Limit" column="adj_upper_confidence_limit" aggregator="avg" />
+    <Measure name="Obesity Prevalence Number" column="number" aggregator="sum" />
+    <Measure name="Obesity Prevalence Percent" column="percent" aggregator="avg" />
+    <Measure name="Obesity Prevalence Lower Confidence Limit" column="lower_confidence_limit" aggregator="avg" />
+    <Measure name="Obesity Prevalence Upper Confidence Limit" column="upper_confidence_limit" aggregator="avg" />
+    <Measure name="Obesity Prevalence Adj Percent" column="adj_percent" aggregator="avg" />
+    <Measure name="Obesity Prevalence Adj Lower Confidence Limit" column="adj_lower_confidence_limit" aggregator="avg" />
+    <Measure name="Obesity Prevalence Adj Upper Confidence Limit" column="adj_upper_confidence_limit" aggregator="avg" />
 </Cube>
 <Cube name="CDC - SVI">
     <Annotations>
@@ -10101,7 +10101,7 @@
         </Hierarchy>
     </Dimension>
 
-    <Measure name="Number of Dentists" column="number" aggregator="sum" />
+    <Measure name="Number of Dentists in Private Practice" column="number" aggregator="sum" />
 </Cube>
 <Cube name="DCI">
     <Annotations>
