@@ -21,9 +21,9 @@
         <Annotations>
             <Annotation name="dim_type">GEOGRAPHY</Annotation>
         </Annotations>
-        <Hierarchy hasAll="true" name="Zip Code">
+        <Hierarchy hasAll="true" name="Zip">
             <Table name="zips" schema="shapes2017"/>
-            <Level column="name" name="Zip Code" nameColumn="name" uniqueMembers="true"/>
+            <Level column="name" name="Zip" nameColumn="name" uniqueMembers="true"/>
         </Hierarchy>
     </Dimension>
 

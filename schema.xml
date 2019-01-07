@@ -9659,9 +9659,9 @@
         <Annotations>
             <Annotation name="dim_type">GEOGRAPHY</Annotation>
         </Annotations>
-        <Hierarchy hasAll="true" name="Zip Code">
+        <Hierarchy hasAll="true" name="Zip">
             <Table name="zips" schema="shapes2017"/>
-            <Level column="name" name="Zip Code" nameColumn="name" uniqueMembers="true"/>
+            <Level column="name" name="Zip" nameColumn="name" uniqueMembers="true"/>
         </Hierarchy>
     </Dimension>
 
@@ -10031,7 +10031,7 @@
     </Annotations>
 
     <Table name="dci" schema="dci"/>
-     
+
     <Dimension name="Year">
         <Annotations>
             <Annotation name="dim_type">TIME</Annotation>
@@ -10045,9 +10045,9 @@
         <Annotations>
             <Annotation name="dim_type">GEOGRAPHY</Annotation>
         </Annotations>
-        <Hierarchy hasAll="true" name="Zip Code">
+        <Hierarchy hasAll="true" name="Zip">
             <Table name="zips" schema="shapes2017"/>
-            <Level name="Zip Code" column="name" nameColumn="name" uniqueMembers="true" hideMemberIf="IfBlankName" />
+            <Level name="Zip" column="name" nameColumn="name" uniqueMembers="true" hideMemberIf="IfBlankName" />
         </Hierarchy>
     </Dimension>
 
