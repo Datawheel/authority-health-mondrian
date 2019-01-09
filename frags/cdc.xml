@@ -7,7 +7,7 @@
     </Annotations>
 
     <Table name="svi" schema="cdc"/>
-     
+
     <Dimension name="Year">
         <Annotations>
             <Annotation name="dim_type">TIME</Annotation>
