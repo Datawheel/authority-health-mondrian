@@ -7,7 +7,7 @@
     </Annotations>
 
     <Table name="reading_scores_by_gender" schema="naep"/>
-     
+
     <Dimension name="Year">
         <Annotations>
             <Annotation name="dim_type">TIME</Annotation>
@@ -21,9 +21,9 @@
         <Annotations>
             <Annotation name="dim_type">GEOGRAPHY</Annotation>
         </Annotations>
-        <Hierarchy hasAll="true" name="City">
+        <Hierarchy hasAll="true" name="Place">
             <Table name="places" schema="shapes2017"/>
-            <Level name="City" column="geoid" nameColumn="name" uniqueMembers="true" hideMemberIf="IfBlankName" />
+            <Level name="Place" column="geoid" nameColumn="name" uniqueMembers="true" hideMemberIf="IfBlankName" />
         </Hierarchy>
     </Dimension>
 

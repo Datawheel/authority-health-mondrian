@@ -7,7 +7,7 @@
     </Annotations>
 
     <Table name="reading_scores" schema="naep"/>
-     
+
     <Dimension name="Year">
         <Annotations>
             <Annotation name="dim_type">TIME</Annotation>
@@ -28,10 +28,10 @@
         <Hierarchy hasAll="true" name="State">
             <Table name="states" schema="shapes2017"/>
             <Level name="State" column="geoid" nameColumn="name" uniqueMembers="true" hideMemberIf="IfBlankName" />
-        </Hierarchy>
-        <Hierarchy hasAll="true" name="City">
+        </Hierarchy>Place
+        <Hierarchy hasAll="true" name="Place">
             <Table name="places" schema="shapes2017"/>
-            <Level name="City" column="geoid" nameColumn="name" uniqueMembers="true" hideMemberIf="IfBlankName" />
+            <Level name="Place" column="geoid" nameColumn="name" uniqueMembers="true" hideMemberIf="IfBlankName" />
         </Hierarchy>
     </Dimension>
 

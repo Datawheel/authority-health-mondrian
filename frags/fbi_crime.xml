@@ -1,29 +1,29 @@
 <Cube name="FBI UCR">
-    <Annotations> 
-        <Annotation name="source_name">FBI: Uniform Crime Reporting</Annotation>   
-        <Annotation name="source_link">https://ucr.fbi.gov/</Annotation>   
-        <Annotation name="dataset_name">FBI UCR</Annotation>   
-        <Annotation name="topic">Crime</Annotation>   
+    <Annotations>
+        <Annotation name="source_name">FBI: Uniform Crime Reporting</Annotation>
+        <Annotation name="source_link">https://ucr.fbi.gov/</Annotation>
+        <Annotation name="dataset_name">FBI UCR</Annotation>
+        <Annotation name="topic">Crime</Annotation>
     </Annotations>
 
     <Table name="ucr_crimes" schema="fbi_crime"/>
-     
+
     <Dimension name="Year">
         <Annotations>
             <Annotation name="dim_type">TIME</Annotation>
         </Annotations>
-         <Hierarchy hasAll="true">  
-            <Level name="Year" column="year" type="Numeric" levelType="TimeYears" uniqueMembers="true" />  
-        </Hierarchy> 
-    </Dimension>   
-    
+         <Hierarchy hasAll="true">
+            <Level name="Year" column="year" type="Numeric" levelType="TimeYears" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
+
     <Dimension foreignKey="geoid" name="Geography">
         <Annotations>
             <Annotation name="dim_type">GEOGRAPHY</Annotation>
         </Annotations>
-        <Hierarchy hasAll="true" name="City">
+        <Hierarchy hasAll="true" name="Place">
             <Table name="places" schema="shapes2017"/>
-            <Level name="City" column="geoid" nameColumn="name" uniqueMembers="true" hideMemberIf="IfBlankName" />
+            <Level name="Place" column="geoid" nameColumn="name" uniqueMembers="true" hideMemberIf="IfBlankName" />
         </Hierarchy>
     </Dimension>
 

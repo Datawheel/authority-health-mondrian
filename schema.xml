@@ -347,7 +347,7 @@
     </Annotations>
 
     <Table name="reading_scores_by_disability" schema="naep"/>
-     
+
     <Dimension name="Year">
         <Annotations>
             <Annotation name="dim_type">TIME</Annotation>
@@ -361,9 +361,9 @@
         <Annotations>
             <Annotation name="dim_type">GEOGRAPHY</Annotation>
         </Annotations>
-        <Hierarchy hasAll="true" name="City">
+        <Hierarchy hasAll="true" name="Place">
             <Table name="places" schema="shapes2017"/>
-            <Level name="City" column="geoid" nameColumn="name" uniqueMembers="true" hideMemberIf="IfBlankName" />
+            <Level name="Place" column="geoid" nameColumn="name" uniqueMembers="true" hideMemberIf="IfBlankName" />
         </Hierarchy>
     </Dimension>
 
@@ -396,7 +396,7 @@
     </Annotations>
 
     <Table name="reading_scores_by_ell" schema="naep"/>
-     
+
     <Dimension name="Year">
         <Annotations>
             <Annotation name="dim_type">TIME</Annotation>
@@ -410,9 +410,9 @@
         <Annotations>
             <Annotation name="dim_type">GEOGRAPHY</Annotation>
         </Annotations>
-        <Hierarchy hasAll="true" name="City">
+        <Hierarchy hasAll="true" name="Place">
             <Table name="places" schema="shapes2017"/>
-            <Level name="City" column="geoid" nameColumn="name" uniqueMembers="true" hideMemberIf="IfBlankName" />
+            <Level name="Place" column="geoid" nameColumn="name" uniqueMembers="true" hideMemberIf="IfBlankName" />
         </Hierarchy>
     </Dimension>
 
@@ -445,7 +445,7 @@
     </Annotations>
 
     <Table name="reading_scores_by_parents" schema="naep"/>
-     
+
     <Dimension name="Year">
         <Annotations>
             <Annotation name="dim_type">TIME</Annotation>
@@ -459,9 +459,9 @@
         <Annotations>
             <Annotation name="dim_type">GEOGRAPHY</Annotation>
         </Annotations>
-        <Hierarchy hasAll="true" name="City">
+        <Hierarchy hasAll="true" name="Place">
             <Table name="places" schema="shapes2017"/>
-            <Level name="City" column="geoid" nameColumn="name" uniqueMembers="true" hideMemberIf="IfBlankName" />
+            <Level name="Place" column="geoid" nameColumn="name" uniqueMembers="true" hideMemberIf="IfBlankName" />
         </Hierarchy>
     </Dimension>
 
@@ -494,7 +494,7 @@
     </Annotations>
 
     <Table name="reading_scores" schema="naep"/>
-     
+
     <Dimension name="Year">
         <Annotations>
             <Annotation name="dim_type">TIME</Annotation>
@@ -515,10 +515,10 @@
         <Hierarchy hasAll="true" name="State">
             <Table name="states" schema="shapes2017"/>
             <Level name="State" column="geoid" nameColumn="name" uniqueMembers="true" hideMemberIf="IfBlankName" />
-        </Hierarchy>
-        <Hierarchy hasAll="true" name="City">
+        </Hierarchy>Place
+        <Hierarchy hasAll="true" name="Place">
             <Table name="places" schema="shapes2017"/>
-            <Level name="City" column="geoid" nameColumn="name" uniqueMembers="true" hideMemberIf="IfBlankName" />
+            <Level name="Place" column="geoid" nameColumn="name" uniqueMembers="true" hideMemberIf="IfBlankName" />
         </Hierarchy>
     </Dimension>
 
@@ -543,7 +543,7 @@
     </Annotations>
 
     <Table name="reading_scores_by_race" schema="naep"/>
-     
+
     <Dimension name="Year">
         <Annotations>
             <Annotation name="dim_type">TIME</Annotation>
@@ -557,9 +557,9 @@
         <Annotations>
             <Annotation name="dim_type">GEOGRAPHY</Annotation>
         </Annotations>
-        <Hierarchy hasAll="true" name="City">
+        <Hierarchy hasAll="true" name="Place">
             <Table name="places" schema="shapes2017"/>
-            <Level name="City" column="geoid" nameColumn="name" uniqueMembers="true" hideMemberIf="IfBlankName" />
+            <Level name="Place" column="geoid" nameColumn="name" uniqueMembers="true" hideMemberIf="IfBlankName" />
         </Hierarchy>
     </Dimension>
 
@@ -592,7 +592,7 @@
     </Annotations>
 
     <Table name="reading_scores_by_nslp" schema="naep"/>
-     
+
     <Dimension name="Year">
         <Annotations>
             <Annotation name="dim_type">TIME</Annotation>
@@ -606,9 +606,9 @@
         <Annotations>
             <Annotation name="dim_type">GEOGRAPHY</Annotation>
         </Annotations>
-        <Hierarchy hasAll="true" name="City">
+        <Hierarchy hasAll="true" name="Place">
             <Table name="places" schema="shapes2017"/>
-            <Level name="City" column="geoid" nameColumn="name" uniqueMembers="true" hideMemberIf="IfBlankName" />
+            <Level name="Place" column="geoid" nameColumn="name" uniqueMembers="true" hideMemberIf="IfBlankName" />
         </Hierarchy>
     </Dimension>
 
@@ -641,7 +641,7 @@
     </Annotations>
 
     <Table name="reading_scores_by_gender" schema="naep"/>
-     
+
     <Dimension name="Year">
         <Annotations>
             <Annotation name="dim_type">TIME</Annotation>
@@ -655,9 +655,9 @@
         <Annotations>
             <Annotation name="dim_type">GEOGRAPHY</Annotation>
         </Annotations>
-        <Hierarchy hasAll="true" name="City">
+        <Hierarchy hasAll="true" name="Place">
             <Table name="places" schema="shapes2017"/>
-            <Level name="City" column="geoid" nameColumn="name" uniqueMembers="true" hideMemberIf="IfBlankName" />
+            <Level name="Place" column="geoid" nameColumn="name" uniqueMembers="true" hideMemberIf="IfBlankName" />
         </Hierarchy>
     </Dimension>
 
@@ -682,31 +682,31 @@
     <Measure name="Average Reading Score" column="average_score" aggregator="avg" />
 </Cube>
 <Cube name="FBI UCR">
-    <Annotations> 
-        <Annotation name="source_name">FBI: Uniform Crime Reporting</Annotation>   
-        <Annotation name="source_link">https://ucr.fbi.gov/</Annotation>   
-        <Annotation name="dataset_name">FBI UCR</Annotation>   
-        <Annotation name="topic">Crime</Annotation>   
+    <Annotations>
+        <Annotation name="source_name">FBI: Uniform Crime Reporting</Annotation>
+        <Annotation name="source_link">https://ucr.fbi.gov/</Annotation>
+        <Annotation name="dataset_name">FBI UCR</Annotation>
+        <Annotation name="topic">Crime</Annotation>
     </Annotations>
 
     <Table name="ucr_crimes" schema="fbi_crime"/>
-     
+
     <Dimension name="Year">
         <Annotations>
             <Annotation name="dim_type">TIME</Annotation>
         </Annotations>
-         <Hierarchy hasAll="true">  
-            <Level name="Year" column="year" type="Numeric" levelType="TimeYears" uniqueMembers="true" />  
-        </Hierarchy> 
-    </Dimension>   
-    
+         <Hierarchy hasAll="true">
+            <Level name="Year" column="year" type="Numeric" levelType="TimeYears" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
+
     <Dimension foreignKey="geoid" name="Geography">
         <Annotations>
             <Annotation name="dim_type">GEOGRAPHY</Annotation>
         </Annotations>
-        <Hierarchy hasAll="true" name="City">
+        <Hierarchy hasAll="true" name="Place">
             <Table name="places" schema="shapes2017"/>
-            <Level name="City" column="geoid" nameColumn="name" uniqueMembers="true" hideMemberIf="IfBlankName" />
+            <Level name="Place" column="geoid" nameColumn="name" uniqueMembers="true" hideMemberIf="IfBlankName" />
         </Hierarchy>
     </Dimension>
 
@@ -774,9 +774,9 @@
         <Annotations>
             <Annotation name="dim_type">GEOGRAPHY</Annotation>
         </Annotations>
-        <Hierarchy hasAll="true" name="City" primaryKey="geoid">
+        <Hierarchy hasAll="true" name="Place" primaryKey="geoid">
             <Table name="places" schema="shapes2017"/>
-            <Level name="City" column="geoid" nameColumn="name" uniqueMembers="true" hideMemberIf="IfBlankName" />
+            <Level name="Place" column="geoid" nameColumn="name" uniqueMembers="true" hideMemberIf="IfBlankName" />
         </Hierarchy>
         <Hierarchy hasAll="true" name="Tract" primaryKey="geoid">
             <Table name="tracts" schema="shapes2017"/>

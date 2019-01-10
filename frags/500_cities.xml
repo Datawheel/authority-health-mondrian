@@ -22,9 +22,9 @@
         <Annotations>
             <Annotation name="dim_type">GEOGRAPHY</Annotation>
         </Annotations>
-        <Hierarchy hasAll="true" name="City" primaryKey="geoid">
+        <Hierarchy hasAll="true" name="Place" primaryKey="geoid">
             <Table name="places" schema="shapes2017"/>
-            <Level name="City" column="geoid" nameColumn="name" uniqueMembers="true" hideMemberIf="IfBlankName" />
+            <Level name="Place" column="geoid" nameColumn="name" uniqueMembers="true" hideMemberIf="IfBlankName" />
         </Hierarchy>
         <Hierarchy hasAll="true" name="Tract" primaryKey="geoid">
             <Table name="tracts" schema="shapes2017"/>
