@@ -20,7 +20,7 @@
     </Hierarchy>
     <Hierarchy hasAll="true" name="Zip">
       <Table name="zips" schema="shapes2017"/>
-      <Level column="geoid" name="Zip" nameColumn="zcta5ce10" uniqueMembers="true"/>
+      <Level column="geoid" name="Zip" nameColumn="geoid" uniqueMembers="true"/>
     </Hierarchy>
     <Hierarchy hasAll="true" name="County">
       <Table name="counties" schema="shapes2017"/>
