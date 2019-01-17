@@ -3,7 +3,7 @@
         <Annotation name="source_name">Health Resources and Services Administration</Annotation>
         <Annotation name="source_link">https://datawarehouse.hrsa.gov/topics/ahrf.aspx</Annotation>
         <Annotation name="dataset_name">HRSA</Annotation>
-        <Annotation name="topic">Health</Annotation>
+        <Annotation name="topic">Access to Care</Annotation>
     </Annotations>
 
     <Table name="dentists_by_sex" schema="hrsa"/>
@@ -36,5 +36,9 @@
         </Hierarchy>
     </Dimension>
 
-    <Measure name="Number of Dentists" column="number" aggregator="sum" />
+    <Measure name="Dentists by Sex" column="number" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
 </Cube>

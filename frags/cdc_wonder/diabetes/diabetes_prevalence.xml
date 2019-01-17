@@ -3,7 +3,7 @@
         <Annotation name="source_name">CDC Wonder</Annotation>
         <Annotation name="source_link">https://www.cdc.gov/diabetes/data/countydata/countydataindicators.html</Annotation>
         <Annotation name="dataset_name">CDC Wonder</Annotation>
-        <Annotation name="topic">Health Status</Annotation>
+        <Annotation name="topic">Health Conditions</Annotation>
     </Annotations>
 
     <Table name="diabetes_prevalence_by_sex" schema="cdc_wonder"/>
@@ -37,11 +37,48 @@
         </Hierarchy>
     </Dimension>
 
-    <Measure name="Diabetes Prevalence Number" column="number" aggregator="sum" />
-    <Measure name="Diabetes Prevalence Percent" column="percent" aggregator="avg" />
-    <Measure name="Diabetes Prevalence Lower Confidence Limit" column="lower_confidence_limit" aggregator="avg" />
-    <Measure name="Diabetes Prevalence Upper Confidence Limit" column="upper_confidence_limit" aggregator="avg" />
-    <Measure name="Diabetes Prevalence Adj Percent" column="adj_percent" aggregator="avg" />
-    <Measure name="Diabetes Prevalence Adj Lower Confidence Limit" column="adj_lower_confidence_limit" aggregator="avg" />
-    <Measure name="Diabetes Prevalence Adj Upper Confidence Limit" column="adj_upper_confidence_limit" aggregator="avg" />
+    <Measure name="Diabetes Prevalence Number" column="number" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Diabetes Prevalence Percent" column="percent" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Diabetes Prevalence Lower Confidence Limit" column="lower_confidence_limit" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Diabetes Prevalence Upper Confidence Limit" column="upper_confidence_limit" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
+
+    <Measure name="Age-Adjusted Diabetes Prevalence" column="adj_percent" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Age-Adjusted Diabetes Prevalence Lower Confidence Limit" column="adj_lower_confidence_limit" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="error_type">LCI</Annotation>
+            <Annotation name="error_for_measure">Age-Adjusted Diabetes Prevalence</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Age-Adjusted Diabetes Prevalence Upper Confidence Limit" column="adj_upper_confidence_limit" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="error_type">UCI</Annotation>
+            <Annotation name="error_for_measure">Age-Adjusted Diabetes Prevalence</Annotation>
+        </Annotations>
+    </Measure>
 </Cube>

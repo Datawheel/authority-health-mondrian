@@ -52,7 +52,7 @@
         <Annotation name="source_name">CDC Wonder</Annotation>
         <Annotation name="source_link">https://www.cdc.gov/diabetes/data/countydata/countydataindicators.html</Annotation>
         <Annotation name="dataset_name">CDC Wonder</Annotation>
-        <Annotation name="topic">Health Status</Annotation>
+        <Annotation name="topic">Health Age-Adjusted Obesity Prevalence</Annotation>
     </Annotations>
 
     <Table name="physical_inactivity_by_sex" schema="cdc_wonder"/>
@@ -86,20 +86,57 @@
         </Hierarchy>
     </Dimension>
 
-    <Measure name="Physical Inactivity Number" column="number" aggregator="sum" />
-    <Measure name="Physical Inactivity Percent" column="percent" aggregator="avg" />
-    <Measure name="Physical Inactivity Lower Confidence Limit" column="lower_confidence_limit" aggregator="avg" />
-    <Measure name="Physical Inactivity Upper Confidence Limit" column="upper_confidence_limit" aggregator="avg" />
-    <Measure name="Physical Inactivity Adj Percent" column="adj_percent" aggregator="avg" />
-    <Measure name="Physical Inactivity Adj Lower Confidence Limit" column="adj_lower_confidence_limit" aggregator="avg" />
-    <Measure name="Physical Inactivity Adj Upper Confidence Limit" column="adj_upper_confidence_limit" aggregator="avg" />
+    <Measure name="Physical Inactivity Number" column="number" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Physical Inactivity Percent" column="percent" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Physical Inactivity Lower Confidence Limit" column="lower_confidence_limit" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Physical Inactivity Upper Confidence Limit" column="upper_confidence_limit" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
+
+    <Measure name="Age-Adjusted Physical Inactivity" column="adj_percent" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Age-Adjusted Physical Inactivity Lower Confidence Limit" column="adj_lower_confidence_limit" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="error_type">LCI</Annotation>
+            <Annotation name="error_for_measure">Age-Adjusted Physical Inactivity</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Age-Adjusted Physical Inactivity Upper Confidence Limit" column="adj_upper_confidence_limit" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="error_type">UCI</Annotation>
+            <Annotation name="error_for_measure">Age-Adjusted Physical Inactivity</Annotation>
+        </Annotations>
+    </Measure>
 </Cube>
 <Cube name="CDC Wonder - Diabetes Prevalence by Sex">
     <Annotations>
         <Annotation name="source_name">CDC Wonder</Annotation>
         <Annotation name="source_link">https://www.cdc.gov/diabetes/data/countydata/countydataindicators.html</Annotation>
         <Annotation name="dataset_name">CDC Wonder</Annotation>
-        <Annotation name="topic">Health Status</Annotation>
+        <Annotation name="topic">Health Conditions</Annotation>
     </Annotations>
 
     <Table name="diabetes_prevalence_by_sex" schema="cdc_wonder"/>
@@ -133,20 +170,58 @@
         </Hierarchy>
     </Dimension>
 
-    <Measure name="Diabetes Prevalence Number" column="number" aggregator="sum" />
-    <Measure name="Diabetes Prevalence Percent" column="percent" aggregator="avg" />
-    <Measure name="Diabetes Prevalence Lower Confidence Limit" column="lower_confidence_limit" aggregator="avg" />
-    <Measure name="Diabetes Prevalence Upper Confidence Limit" column="upper_confidence_limit" aggregator="avg" />
-    <Measure name="Diabetes Prevalence Adj Percent" column="adj_percent" aggregator="avg" />
-    <Measure name="Diabetes Prevalence Adj Lower Confidence Limit" column="adj_lower_confidence_limit" aggregator="avg" />
-    <Measure name="Diabetes Prevalence Adj Upper Confidence Limit" column="adj_upper_confidence_limit" aggregator="avg" />
+    <Measure name="Diabetes Prevalence Number" column="number" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Diabetes Prevalence Percent" column="percent" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Diabetes Prevalence Lower Confidence Limit" column="lower_confidence_limit" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Diabetes Prevalence Upper Confidence Limit" column="upper_confidence_limit" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
+
+    <Measure name="Age-Adjusted Diabetes Prevalence" column="adj_percent" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Age-Adjusted Diabetes Prevalence Lower Confidence Limit" column="adj_lower_confidence_limit" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="error_type">LCI</Annotation>
+            <Annotation name="error_for_measure">Age-Adjusted Diabetes Prevalence</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Age-Adjusted Diabetes Prevalence Upper Confidence Limit" column="adj_upper_confidence_limit" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="error_type">UCI</Annotation>
+            <Annotation name="error_for_measure">Age-Adjusted Diabetes Prevalence</Annotation>
+        </Annotations>
+    </Measure>
 </Cube>
 <Cube name="CDC Wonder - Diabetes">
     <Annotations>
         <Annotation name="source_name">CDC Wonder</Annotation>
         <Annotation name="source_link">https://www.cdc.gov/diabetes/data/countydata/countydataindicators.html</Annotation>
         <Annotation name="dataset_name">CDC Wonder</Annotation>
-        <Annotation name="topic">Health Status</Annotation>
+        <Annotation name="hide_in_ui">true</Annotation>
+        <Annotation name="topic">Health Conditions</Annotation>
     </Annotations>
 
     <Table name="diabetes_stats" schema="cdc_wonder"/>
@@ -180,22 +255,67 @@
         </Hierarchy>
     </Dimension>
 
-    <Measure name="Rate Per 100" column="rate_per_100" aggregator="avg" />
-    <Measure name="Adj Rate Per 100" column="adj_rate_per_100" aggregator="avg" />
-    <Measure name="Number" column="number" aggregator="sum" />
-    <Measure name="Percent" column="percent" aggregator="avg" />
-    <Measure name="Lower Confidence Limit" column="lower_confidence_limit" aggregator="avg" />
-    <Measure name="Upper Confidence Limit" column="upper_confidence_limit" aggregator="avg" />
-    <Measure name="Adj Percent" column="adj_percent" aggregator="avg" />
-    <Measure name="Adj Lower Confidence Limit" column="adj_lower_confidence_limit" aggregator="avg" />
-    <Measure name="Adj Upper Confidence Limit" column="adj_upper_confidence_limit" aggregator="avg" />
+    <Measure name="Rate Per 100" column="rate_per_100" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Adj Rate Per 100" column="adj_rate_per_100" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Number" column="number" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Percent" column="percent" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Lower Confidence Limit" column="lower_confidence_limit" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Upper Confidence Limit" column="upper_confidence_limit" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Adj Percent" column="adj_percent" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Adj Lower Confidence Limit" column="adj_lower_confidence_limit" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Adj Upper Confidence Limit" column="adj_upper_confidence_limit" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
 </Cube>
 <Cube name="CDC Wonder - Obesity Prevalence by Sex">
     <Annotations>
         <Annotation name="source_name">CDC Wonder</Annotation>
         <Annotation name="source_link">https://www.cdc.gov/diabetes/data/countydata/countydataindicators.html</Annotation>
         <Annotation name="dataset_name">CDC Wonder</Annotation>
-        <Annotation name="topic">Health Status</Annotation>
+        <Annotation name="topic">Health Conditions</Annotation>
     </Annotations>
 
     <Table name="obesity_prevalence_by_sex" schema="cdc_wonder"/>
@@ -229,20 +349,57 @@
         </Hierarchy>
     </Dimension>
 
-    <Measure name="Obesity Prevalence Number" column="number" aggregator="sum" />
-    <Measure name="Obesity Prevalence Percent" column="percent" aggregator="avg" />
-    <Measure name="Obesity Prevalence Lower Confidence Limit" column="lower_confidence_limit" aggregator="avg" />
-    <Measure name="Obesity Prevalence Upper Confidence Limit" column="upper_confidence_limit" aggregator="avg" />
-    <Measure name="Obesity Prevalence Adj Percent" column="adj_percent" aggregator="avg" />
-    <Measure name="Obesity Prevalence Adj Lower Confidence Limit" column="adj_lower_confidence_limit" aggregator="avg" />
-    <Measure name="Obesity Prevalence Adj Upper Confidence Limit" column="adj_upper_confidence_limit" aggregator="avg" />
+    <Measure name="Obesity Prevalence Number" column="number" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Obesity Prevalence Percent" column="percent" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Obesity Prevalence Lower Confidence Limit" column="lower_confidence_limit" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Obesity Prevalence Upper Confidence Limit" column="upper_confidence_limit" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
+
+    <Measure name="Age-Adjusted Obesity Prevalence" column="adj_percent" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Age-Adjusted Obesity Prevalence Lower Confidence Limit" column="adj_lower_confidence_limit" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="error_type">LCI</Annotation>
+            <Annotation name="error_for_measure">Age-Adjusted Obesity Prevalence</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Age-Adjusted Obesity Prevalence Upper Confidence Limit" column="adj_upper_confidence_limit" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="error_type">UCI</Annotation>
+            <Annotation name="error_for_measure">Age-Adjusted Obesity Prevalence</Annotation>
+        </Annotations>
+    </Measure>
 </Cube>
 <Cube name="CDC Wonder - Cancer">
     <Annotations>
         <Annotation name="source_name">CDC Wonder</Annotation>
         <Annotation name="source_link">https://wonder.cdc.gov/CancerIncidence.html</Annotation>
         <Annotation name="dataset_name">CDC Wonder</Annotation>
-        <Annotation name="topic">Health Status</Annotation>
+        <Annotation name="topic">Health Conditions</Annotation>
     </Annotations>
 
     <Table name="cancer" schema="cdc_wonder"/>
@@ -266,47 +423,114 @@
         </Hierarchy>
     </Dimension>
 
-    <Dimension name="Cancer Sites">
+    <Dimension name="Cancer Site">
+        <Annotations>
+            <Annotation name="dim_type"></Annotation>
+        </Annotations>
          <Hierarchy hasAll="true">
             <Level name="Cancer Site" column="cancer_sites" uniqueMembers="true" />
         </Hierarchy>
     </Dimension>
 
     <Dimension name="Sex">
+        <Annotations>
+            <Annotation name="dim_type"></Annotation>
+        </Annotations>
          <Hierarchy hasAll="true">
             <Level name="Sex" column="sex" uniqueMembers="true" />
         </Hierarchy>
     </Dimension>
 
     <Dimension name="Race">
+        <Annotations>
+            <Annotation name="dim_type"></Annotation>
+        </Annotations>
          <Hierarchy hasAll="true">
             <Level name="Race" column="race" uniqueMembers="true" />
         </Hierarchy>
     </Dimension>
 
     <Dimension name="Ethnicity">
+        <Annotations>
+            <Annotation name="dim_type"></Annotation>
+        </Annotations>
          <Hierarchy hasAll="true">
             <Level name="Ethnicity" column="ethnicity" uniqueMembers="true" />
         </Hierarchy>
     </Dimension>
 
-    <Measure name="Count" column="count" aggregator="sum" />
-    <Measure name="Population" column="population" aggregator="sum" />
-    <Measure name="Age-Adjusted Rate" column="age_adjusted_rate" aggregator="avg" />
-    <Measure name="Age-Adjusted Rate Lower 95 Percent Confidence Interval" column="age_adjusted_rate_lower_95_percent_confidence_interval" aggregator="avg" />
-    <Measure name="Age-Adjusted Rate Upper 95 Percent Confidence Interval" column="age_adjusted_rate_upper_95_percent_confidence_interval" aggregator="avg" />
-    <Measure name="Age-Adjusted Rate Standard Error" column="age_adjusted_rate_standard_error" aggregator="avg" />
-    <Measure name="Crude Rate" column="crude_rate" aggregator="avg" />
-    <Measure name="Crude Rate Lower 95 Percent Confidence Interval" column="crude_rate_lower_95_percent_confidence_interval" aggregator="avg" />
-    <Measure name="Crude Rate Upper 95 Percent Confidence Interval" column="crude_rate_upper_95_percent_confidence_interval" aggregator="avg" />
-    <Measure name="Crude Rate Standard Error" column="crude_rate_standard_error" aggregator="avg" />
+    <Measure name="Cancer Diagnosis" column="count" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Population" column="population" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
+
+    <Measure name="Age-Adjusted Cancer Rate" column="age_adjusted_rate" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Age-Adjusted Cancer Rate Lower 95 Percent Confidence Interval" column="age_adjusted_rate_lower_95_percent_confidence_interval" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="error_type">LCI</Annotation>
+            <Annotation name="error_for_measure">Age-Adjusted Cancer Rate</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Age-Adjusted Cancer Rate Upper 95 Percent Confidence Interval" column="age_adjusted_rate_upper_95_percent_confidence_interval" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="error_type">UCI</Annotation>
+            <Annotation name="error_for_measure">Age-Adjusted Cancer Rate</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Age-Adjusted Cancer Rate Standard Error" column="age_adjusted_rate_standard_error" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+
+    <Measure name="Crude Rate" column="crude_rate" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Crude Rate Lower 95 Percent Confidence Interval" column="crude_rate_lower_95_percent_confidence_interval" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="error_type">LCI</Annotation>
+            <Annotation name="error_for_measure">Crude Rate</Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Crude Rate Upper 95 Percent Confidence Interval" column="crude_rate_upper_95_percent_confidence_interval" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="error_type">UCI</Annotation>
+            <Annotation name="error_for_measure">Crude Rate</Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Crude Rate Standard Error" column="crude_rate_standard_error" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
 </Cube>
 <Cube name="CDC - SVI">
     <Annotations>
         <Annotation name="source_name">Center for Disease Control: Social Vulnerability Index</Annotation>
         <Annotation name="source_link">https://svi.cdc.gov/</Annotation>
         <Annotation name="dataset_name">CDC: SVI</Annotation>
-        <Annotation name="topic">Social Vulnerability</Annotation>
+        <Annotation name="topic">Socioeconomic Outcomes</Annotation>
     </Annotations>
 
     <Table name="svi" schema="cdc"/>
@@ -332,11 +556,31 @@
         </Hierarchy>
     </Dimension>
 
-    <Measure name="Socioeconomic Ranking" column="ranking_socioeconomic" aggregator="avg" />
-    <Measure name="Household Composition and Disability Ranking" column="ranking_household_composition_and_disability" aggregator="avg" />
-    <Measure name="Minority Status and Language Ranking" column="ranking_minority_status_and_language" aggregator="avg" />
-    <Measure name="Housing and Transportation Ranking" column="ranking_housing_and_transportation" aggregator="avg" />
-    <Measure name="Overall Ranking" column="ranking_overall" aggregator="avg" />
+    <Measure name="Socioeconomic Ranking" column="ranking_socioeconomic" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Household Composition and Disability Ranking" column="ranking_household_composition_and_disability" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Minority Status and Language Ranking" column="ranking_minority_status_and_language" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Housing and Transportation Ranking" column="ranking_housing_and_transportation" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Overall Ranking" column="ranking_overall" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
 </Cube>
 <Cube name="NAEP - Reading Scores by Disability">
     <Annotations>
@@ -686,7 +930,7 @@
         <Annotation name="source_name">FBI: Uniform Crime Reporting</Annotation>
         <Annotation name="source_link">https://ucr.fbi.gov/</Annotation>
         <Annotation name="dataset_name">FBI UCR</Annotation>
-        <Annotation name="topic">Crime</Annotation>
+        <Annotation name="topic">Built Social Enviornment</Annotation>
     </Annotations>
 
     <Table name="ucr_crimes" schema="fbi_crime"/>
@@ -723,8 +967,17 @@
         </Hierarchy>
     </Dimension>
 
-    <Measure name="Population" column="population" aggregator="sum" />
-    <Measure name="Number of Crimes" column="number" aggregator="sum" />
+    <Measure name="Population" column="population" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Number of Crimes" column="number" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
 </Cube>
 <Cube name="NVSS - Life Expectancy">
     <Annotations>
@@ -784,119 +1037,572 @@
         </Hierarchy>
     </Dimension>
 
-    <Measure name="Population Count" column="population_count" aggregator="sum" />
+    <Measure name="Population Count" column="population_count" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
 
-    <Measure name="Annual Checkup" column="annual_checkup_data_value" aggregator="avg" />
-    <Measure name="Annual Checkup Low Confidence Limit" column="annual_checkup_low_confidence_limit" aggregator="avg" />
-    <Measure name="Annual Checkup High Confidence Limit" column="annual_checkup_high_confidence_limit" aggregator="avg" />
+    <Measure name="Annual Checkup" column="annual_checkup_data_value" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Annual Checkup Low Confidence Limit" column="annual_checkup_low_confidence_limit" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="error_type">LCI</Annotation>
+            <Annotation name="error_for_measure">Annual Checkup</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Annual Checkup High Confidence Limit" column="annual_checkup_high_confidence_limit" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="error_type">UCI</Annotation>
+            <Annotation name="error_for_measure">Annual Checkup</Annotation>
+        </Annotations>
+    </Measure>
 
-    <Measure name="Arthritis" column="arthritis_data_value" aggregator="avg" />
-    <Measure name="Arthritis Low Confidence Limit" column="arthritis_low_confidence_limit" aggregator="avg" />
-    <Measure name="Arthritis High Confidence Limit" column="arthritis_high_confidence_limit" aggregator="avg" />
+    <Measure name="Arthritis" column="arthritis_data_value" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Arthritis Low Confidence Limit" column="arthritis_low_confidence_limit" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="error_type">LCI</Annotation>
+            <Annotation name="error_for_measure">Arthritis</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Arthritis High Confidence Limit" column="arthritis_high_confidence_limit" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="error_type">UCI</Annotation>
+            <Annotation name="error_for_measure">Arthritis</Annotation>
+        </Annotations>
+    </Measure>
 
-    <Measure name="Binge Drinking" column="binge_drinking_data_value" aggregator="avg" />
-    <Measure name="Binge Drinking Low Confidence Limit" column="binge_drinking_low_confidence_limit" aggregator="avg" />
-    <Measure name="Binge Drinking High Confidence Limit" column="binge_drinking_high_confidence_limit" aggregator="avg" />
+    <Measure name="Binge Drinking" column="binge_drinking_data_value" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Binge Drinking Low Confidence Limit" column="binge_drinking_low_confidence_limit" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="error_type">LCI</Annotation>
+            <Annotation name="error_for_measure">Binge Drinking</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Binge Drinking High Confidence Limit" column="binge_drinking_high_confidence_limit" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="error_type">UCI</Annotation>
+            <Annotation name="error_for_measure">Binge Drinking</Annotation>
+        </Annotations>
+    </Measure>
 
-    <Measure name="COPD" column="copd_data_value" aggregator="avg" />
-    <Measure name="COPD Low Confidence Limit" column="copd_low_confidence_limit" aggregator="avg" />
-    <Measure name="COPD High Confidence Limit" column="copd_high_confidence_limit" aggregator="avg" />
+    <Measure name="COPD" column="copd_data_value" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="COPD Low Confidence Limit" column="copd_low_confidence_limit" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="error_type">LCI</Annotation>
+            <Annotation name="error_for_measure">COPD</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="COPD High Confidence Limit" column="copd_high_confidence_limit" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="error_type">UCI</Annotation>
+            <Annotation name="error_for_measure">COPD</Annotation>
+        </Annotations>
+    </Measure>
 
-    <Measure name="Cancer (except skin)" column="cancer_except_skin_data_value" aggregator="avg" />
-    <Measure name="Cancer (except skin) Low Confidence Limit" column="cancer_except_skin_low_confidence_limit" aggregator="avg" />
-    <Measure name="Cancer (except skin) High Confidence Limit" column="cancer_except_skin_high_confidence_limit" aggregator="avg" />
+    <Measure name="Cancer (except skin)" column="cancer_except_skin_data_value" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Cancer (except skin) Low Confidence Limit" column="cancer_except_skin_low_confidence_limit" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="error_type">LCI</Annotation>
+            <Annotation name="error_for_measure">Cancer (except skin)</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Cancer (except skin) High Confidence Limit" column="cancer_except_skin_high_confidence_limit" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="error_type">UCI</Annotation>
+            <Annotation name="error_for_measure">Cancer (except skin)</Annotation>
+        </Annotations>
+    </Measure>
 
-    <Measure name="Cholesterol Screening" column="cholesterol_screening_data_value" aggregator="avg" />
-    <Measure name="Cholesterol Screening Low Confidence Limit" column="cholesterol_screening_low_confidence_limit" aggregator="avg" />
-    <Measure name="Cholesterol Screening High Confidence Limit" column="cholesterol_screening_high_confidence_limit" aggregator="avg" />
+    <Measure name="Cholesterol Screening" column="cholesterol_screening_data_value" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Cholesterol Screening Low Confidence Limit" column="cholesterol_screening_low_confidence_limit" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="error_type">LCI</Annotation>
+            <Annotation name="error_for_measure">Cholesterol Screening</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Cholesterol Screening High Confidence Limit" column="cholesterol_screening_high_confidence_limit" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="error_type">UCI</Annotation>
+            <Annotation name="error_for_measure">Cholesterol Screening</Annotation>
+        </Annotations>
+    </Measure>
 
-    <Measure name="Chronic Kidney Disease" column="chronic_kidney_disease_data_value" aggregator="avg" />
-    <Measure name="Chronic Kidney Disease Low Confidence Limit" column="chronic_kidney_disease_low_confidence_limit" aggregator="avg" />
-    <Measure name="Chronic Kidney Disease High Confidence Limit" column="chronic_kidney_disease_high_confidence_limit" aggregator="avg" />
+    <Measure name="Chronic Kidney Disease" column="chronic_kidney_disease_data_value" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Chronic Kidney Disease Low Confidence Limit" column="chronic_kidney_disease_low_confidence_limit" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="error_type">LCI</Annotation>
+            <Annotation name="error_for_measure">Chronic Kidney Disease</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Chronic Kidney Disease High Confidence Limit" column="chronic_kidney_disease_high_confidence_limit" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="error_type">UCI</Annotation>
+            <Annotation name="error_for_measure">Chronic Kidney Disease</Annotation>
+        </Annotations>
+    </Measure>
 
-    <Measure name="Colorectal Cancer Screening" column="colorectal_cancer_screening_data_value" aggregator="avg" />
-    <Measure name="Colorectal Cancer Screening Low Confidence Limit" column="colorectal_cancer_screening_low_confidence_limit" aggregator="avg" />
-    <Measure name="Colorectal Cancer Screening High Confidence Limit" column="colorectal_cancer_screening_high_confidence_limit" aggregator="avg" />
+    <Measure name="Colorectal Cancer Screening" column="colorectal_cancer_screening_data_value" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Colorectal Cancer Screening Low Confidence Limit" column="colorectal_cancer_screening_low_confidence_limit" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="error_type">LCI</Annotation>
+            <Annotation name="error_for_measure">Colorectal Cancer Screening</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Colorectal Cancer Screening High Confidence Limit" column="colorectal_cancer_screening_high_confidence_limit" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="error_type">UCI</Annotation>
+            <Annotation name="error_for_measure">Colorectal Cancer Screening</Annotation>
+        </Annotations>
+    </Measure>
 
-    <Measure name="Core preventive services for older men" column="core_preventive_services_for_older_men_data_value" aggregator="avg" />
-    <Measure name="Core preventive services for older men Low Confidence Limit" column="core_preventive_services_for_older_men_low_confidence_limit" aggregator="avg" />
-    <Measure name="Core preventive services for older men High Confidence Limit" column="core_preventive_services_for_older_men_high_confidence_limit" aggregator="avg" />
+    <Measure name="Core Preventive Services for Older Men" column="core_preventive_services_for_older_men_data_value" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Core Preventive Services for Older Men Low Confidence Limit" column="core_preventive_services_for_older_men_low_confidence_limit" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="error_type">LCI</Annotation>
+            <Annotation name="error_for_measure">Core Preventive Services for Older Men</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Core Preventive Services for Older Men High Confidence Limit" column="core_preventive_services_for_older_men_high_confidence_limit" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="error_type">UCI</Annotation>
+            <Annotation name="error_for_measure">Core Preventive Services for Older Men</Annotation>
+        </Annotations>
+    </Measure>
 
-    <Measure name="Core preventive services for older women" column="core_preventive_services_for_older_women_data_value" aggregator="avg" />
-    <Measure name="Core preventive services for older women Low Confidence Limit" column="core_preventive_services_for_older_women_low_confidence_limit" aggregator="avg" />
-    <Measure name="Core preventive services for older women High Confidence Limit" column="core_preventive_services_for_older_women_high_confidence_limit" aggregator="avg" />
+    <Measure name="Core Preventive Services for Older Women" column="core_preventive_services_for_older_women_data_value" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Core Preventive Services for Older Women Low Confidence Limit" column="core_preventive_services_for_older_women_low_confidence_limit" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="error_type">LCI</Annotation>
+            <Annotation name="error_for_measure">Core Preventive Services for Older Women</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Core Preventive Services for Older Women High Confidence Limit" column="core_preventive_services_for_older_women_high_confidence_limit" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="error_type">UCI</Annotation>
+            <Annotation name="error_for_measure">Core Preventive Services for Older Women</Annotation>
+        </Annotations>
+    </Measure>
 
-    <Measure name="Coronary Heart Disease" column="coronary_heart_disease_data_value" aggregator="avg" />
-    <Measure name="Coronary Heart Disease Low Confidence Limit" column="coronary_heart_disease_low_confidence_limit" aggregator="avg" />
-    <Measure name="Coronary Heart Disease High Confidence Limit" column="coronary_heart_disease_high_confidence_limit" aggregator="avg" />
+    <Measure name="Coronary Heart Disease" column="coronary_heart_disease_data_value" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Coronary Heart Disease Low Confidence Limit" column="coronary_heart_disease_low_confidence_limit" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="error_type">LCI</Annotation>
+            <Annotation name="error_for_measure">Coronary Heart Disease</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Coronary Heart Disease High Confidence Limit" column="coronary_heart_disease_high_confidence_limit" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="error_type">UCI</Annotation>
+            <Annotation name="error_for_measure">Coronary Heart Disease</Annotation>
+        </Annotations>
+    </Measure>
 
-    <Measure name="Current Asthma" column="asthma_data_value" aggregator="avg" />
-    <Measure name="Current Asthma Low Confidence Limit" column="asthma_low_confidence_limit" aggregator="avg" />
-    <Measure name="Current Asthma High Confidence Limit" column="asthma_high_confidence_limit" aggregator="avg" />
+    <Measure name="Current Asthma" column="asthma_data_value" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Current Asthma Low Confidence Limit" column="asthma_low_confidence_limit" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="error_type">LCI</Annotation>
+            <Annotation name="error_for_measure">Current Asthma</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Current Asthma High Confidence Limit" column="asthma_high_confidence_limit" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="error_type">UCI</Annotation>
+            <Annotation name="error_for_measure">Current Asthma</Annotation>
+        </Annotations>
+    </Measure>
 
-    <Measure name="Current Smoking" column="current_smoking_data_value" aggregator="avg" />
-    <Measure name="Current Smoking Low Confidence Limit" column="current_smoking_low_confidence_limit" aggregator="avg" />
-    <Measure name="Current Smoking High Confidence Limit" column="current_smoking_high_confidence_limit" aggregator="avg" />
+    <Measure name="Current Smoking" column="current_smoking_data_value" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Current Smoking Low Confidence Limit" column="current_smoking_low_confidence_limit" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="error_type">LCI</Annotation>
+            <Annotation name="error_for_measure">Current Smoking</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Current Smoking High Confidence Limit" column="current_smoking_high_confidence_limit" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="error_type">UCI</Annotation>
+            <Annotation name="error_for_measure">Current Smoking</Annotation>
+        </Annotations>
+    </Measure>
 
-    <Measure name="Dental Visit" column="dental_visit_data_value" aggregator="avg" />
-    <Measure name="Dental Visit Low Confidence Limit" column="dental_visit_low_confidence_limit" aggregator="avg" />
-    <Measure name="Dental Visit High Confidence Limit" column="dental_visit_high_confidence_limit" aggregator="avg" />
+    <Measure name="Dental Visit" column="dental_visit_data_value" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Dental Visit Low Confidence Limit" column="dental_visit_low_confidence_limit" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="error_type">LCI</Annotation>
+            <Annotation name="error_for_measure">Dental Visit</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Dental Visit High Confidence Limit" column="dental_visit_high_confidence_limit" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="error_type">UCI</Annotation>
+            <Annotation name="error_for_measure">Dental Visit</Annotation>
+        </Annotations>
+    </Measure>
 
-    <Measure name="Diabetes" column="has_diabetes_data_value" aggregator="avg" />
-    <Measure name="Diabetes Low Confidence Limit" column="has_diabetes_low_confidence_limit" aggregator="avg" />
-    <Measure name="Diabetes High Confidence Limit" column="has_diabetes_high_confidence_limit" aggregator="avg" />
+    <Measure name="Diabetes" column="has_diabetes_data_value" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Diabetes Low Confidence Limit" column="has_diabetes_low_confidence_limit" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="error_type">LCI</Annotation>
+            <Annotation name="error_for_measure">Diabetes</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Diabetes High Confidence Limit" column="has_diabetes_high_confidence_limit" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="error_type">UCI</Annotation>
+            <Annotation name="error_for_measure">Diabetes</Annotation>
+        </Annotations>
+    </Measure>
 
-    <Measure name="Health Insurance" column="health_insurance_data_value" aggregator="avg" />
-    <Measure name="Health Insurance Low Confidence Limit" column="health_insurance_low_confidence_limit" aggregator="avg" />
-    <Measure name="Health Insurance High Confidence Limit" column="health_insurance_high_confidence_limit" aggregator="avg" />
+    <Measure name="Health Insurance" column="health_insurance_data_value" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Health Insurance Low Confidence Limit" column="health_insurance_low_confidence_limit" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="error_type">LCI</Annotation>
+            <Annotation name="error_for_measure">Health Insurance</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Health Insurance High Confidence Limit" column="health_insurance_high_confidence_limit" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="error_type">UCI</Annotation>
+            <Annotation name="error_for_measure">Health Insurance</Annotation>
+        </Annotations>
+    </Measure>
 
-    <Measure name="High Blood Pressure" column="high_blood_pressure_data_value" aggregator="avg" />
-    <Measure name="High Blood Pressure Low Confidence Limit" column="high_blood_pressure_low_confidence_limit" aggregator="avg" />
-    <Measure name="High Blood Pressure High Confidence Limit" column="high_blood_pressure_high_confidence_limit" aggregator="avg" />
+    <Measure name="High Blood Pressure" column="high_blood_pressure_data_value" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="High Blood Pressure Low Confidence Limit" column="high_blood_pressure_low_confidence_limit" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="error_type">LCI</Annotation>
+            <Annotation name="error_for_measure">High Blood Pressure</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="High Blood Pressure High Confidence Limit" column="high_blood_pressure_high_confidence_limit" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="error_type">UCI</Annotation>
+            <Annotation name="error_for_measure">High Blood Pressure</Annotation>
+        </Annotations>
+    </Measure>
 
-    <Measure name="High Cholesterol" column="high_cholesterol_data_value" aggregator="avg" />
-    <Measure name="High Cholesterol Low Confidence Limit" column="high_cholesterol_low_confidence_limit" aggregator="avg" />
-    <Measure name="High Cholesterol High Confidence Limit" column="high_cholesterol_high_confidence_limit" aggregator="avg" />
+    <Measure name="High Cholesterol" column="high_cholesterol_data_value" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="High Cholesterol Low Confidence Limit" column="high_cholesterol_low_confidence_limit" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="error_type">LCI</Annotation>
+            <Annotation name="error_for_measure">High Cholesterol</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="High Cholesterol High Confidence Limit" column="high_cholesterol_high_confidence_limit" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="error_type">UCI</Annotation>
+            <Annotation name="error_for_measure">High Cholesterol</Annotation>
+        </Annotations>
+    </Measure>
 
-    <Measure name="Mammography" column="mammography_data_value" aggregator="avg" />
-    <Measure name="Mammography Low Confidence Limit" column="mammography_low_confidence_limit" aggregator="avg" />
-    <Measure name="Mammography High Confidence Limit" column="mammography_high_confidence_limit" aggregator="avg" />
+    <Measure name="Mammography" column="mammography_data_value" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Mammography Low Confidence Limit" column="mammography_low_confidence_limit" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="error_type">LCI</Annotation>
+            <Annotation name="error_for_measure">Mammography</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Mammography High Confidence Limit" column="mammography_high_confidence_limit" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="error_type">UCI</Annotation>
+            <Annotation name="error_for_measure">Mammography</Annotation>
+        </Annotations>
+    </Measure>
 
-    <Measure name="Mental Health" column="mental_health_data_value" aggregator="avg" />
-    <Measure name="Mental Health Low Confidence Limit" column="mental_health_low_confidence_limit" aggregator="avg" />
-    <Measure name="Mental Health High Confidence Limit" column="mental_health_high_confidence_limit" aggregator="avg" />
+    <Measure name="Mental Health" column="mental_health_data_value" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Mental Health Low Confidence Limit" column="mental_health_low_confidence_limit" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="error_type">LCI</Annotation>
+            <Annotation name="error_for_measure">Mental Health</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Mental Health High Confidence Limit" column="mental_health_high_confidence_limit" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="error_type">UCI</Annotation>
+            <Annotation name="error_for_measure">Mental Health</Annotation>
+        </Annotations>
+    </Measure>
 
-    <Measure name="Obesity" column="obesity_data_value" aggregator="avg" />
-    <Measure name="Obesity Low Confidence Limit" column="obesity_low_confidence_limit" aggregator="avg" />
-    <Measure name="Obesity High Confidence Limit" column="obesity_high_confidence_limit" aggregator="avg" />
+    <Measure name="Obesity" column="obesity_data_value" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Obesity Low Confidence Limit" column="obesity_low_confidence_limit" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="error_type">LCI</Annotation>
+            <Annotation name="error_for_measure">Obesity</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Obesity High Confidence Limit" column="obesity_high_confidence_limit" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="error_type">UCI</Annotation>
+            <Annotation name="error_for_measure">Obesity</Annotation>
+        </Annotations>
+    </Measure>
 
-    <Measure name="Pap Smear Test" column="pap_smear_test_data_value" aggregator="avg" />
-    <Measure name="Pap Smear Test Low Confidence Limit" column="pap_smear_test_low_confidence_limit" aggregator="avg" />
-    <Measure name="Pap Smear Test High Confidence Limit" column="pap_smear_test_high_confidence_limit" aggregator="avg" />
+    <Measure name="Pap Smear Test" column="pap_smear_test_data_value" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Pap Smear Test Low Confidence Limit" column="pap_smear_test_low_confidence_limit" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="error_type">LCI</Annotation>
+            <Annotation name="error_for_measure">Pap Smear Test</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Pap Smear Test High Confidence Limit" column="pap_smear_test_high_confidence_limit" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="error_type">UCI</Annotation>
+            <Annotation name="error_for_measure">Pap Smear Test</Annotation>
+        </Annotations>
+    </Measure>
 
-    <Measure name="Physical Health" column="physical_health_data_value" aggregator="avg" />
-    <Measure name="Physical Health Low Confidence Limit" column="physical_health_low_confidence_limit" aggregator="avg" />
-    <Measure name="Physical Health High Confidence Limit" column="physical_health_high_confidence_limit" aggregator="avg" />
+    <Measure name="Physical Health" column="physical_health_data_value" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Physical Health Low Confidence Limit" column="physical_health_low_confidence_limit" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="error_type">LCI</Annotation>
+            <Annotation name="error_for_measure">Physical Health</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Physical Health High Confidence Limit" column="physical_health_high_confidence_limit" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="error_type">UCI</Annotation>
+            <Annotation name="error_for_measure">Physical Health</Annotation>
+        </Annotations>
+    </Measure>
 
-    <Measure name="Physical Inactivity" column="physical_inactivity_data_value" aggregator="avg" />
-    <Measure name="Physical Inactivity Low Confidence Limit" column="physical_inactivity_low_confidence_limit" aggregator="avg" />
-    <Measure name="Physical Inactivity High Confidence Limit" column="physical_inactivity_high_confidence_limit" aggregator="avg" />
+    <Measure name="Physical Inactivity" column="physical_inactivity_data_value" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Physical Inactivity Low Confidence Limit" column="physical_inactivity_low_confidence_limit" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="error_type">LCI</Annotation>
+            <Annotation name="error_for_measure">Physical Inactivity</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Physical Inactivity High Confidence Limit" column="physical_inactivity_high_confidence_limit" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="error_type">UCI</Annotation>
+            <Annotation name="error_for_measure">Physical Inactivity</Annotation>
+        </Annotations>
+    </Measure>
 
-    <Measure name="Sleep less than 7 hours" column="sleep_less_than_7_hours_data_value" aggregator="avg" />
-    <Measure name="Sleep less than 7 hours Low Confidence Limit" column="sleep_less_than_7_hours_low_confidence_limit" aggregator="avg" />
-    <Measure name="Sleep less than 7 hours High Confidence Limit" column="sleep_less_than_7_hours_high_confidence_limit" aggregator="avg" />
+    <Measure name="Sleep Less Than 7 Hours" column="sleep_less_than_7_hours_data_value" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Sleep Less Than 7 Hours Low Confidence Limit" column="sleep_less_than_7_hours_low_confidence_limit" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="error_type">LCI</Annotation>
+            <Annotation name="error_for_measure">Sleep Less Than 7 Hours</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Sleep Less Than 7 Hours High Confidence Limit" column="sleep_less_than_7_hours_high_confidence_limit" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="error_type">UCI</Annotation>
+            <Annotation name="error_for_measure">Sleep Less Than 7 Hours</Annotation>
+        </Annotations>
+    </Measure>
 
-    <Measure name="Stroke" column="had_stroke_data_value" aggregator="avg" />
-    <Measure name="Stroke Low Confidence Limit" column="had_stroke_low_confidence_limit" aggregator="avg" />
-    <Measure name="Stroke High Confidence Limit" column="had_stroke_high_confidence_limit" aggregator="avg" />
+    <Measure name="Stroke" column="had_stroke_data_value" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Stroke Low Confidence Limit" column="had_stroke_low_confidence_limit" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="error_type">LCI</Annotation>
+            <Annotation name="error_for_measure">Stroke</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Stroke High Confidence Limit" column="had_stroke_high_confidence_limit" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="error_type">UCI</Annotation>
+            <Annotation name="error_for_measure">Stroke</Annotation>
+        </Annotations>
+    </Measure>
 
-    <Measure name="Taking BP Medication" column="taking_bp_medication_data_value" aggregator="avg" />
-    <Measure name="Taking BP Medication Low Confidence Limit" column="taking_bp_medication_low_confidence_limit" aggregator="avg" />
-    <Measure name="Taking BP Medication High Confidence Limit" column="taking_bp_medication_high_confidence_limit" aggregator="avg" />
+    <Measure name="Taking Blood Pressure Medication" column="taking_bp_medication_data_value" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Taking Blood Pressure Medication Low Confidence Limit" column="taking_bp_medication_low_confidence_limit" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="error_type">LCI</Annotation>
+            <Annotation name="error_for_measure">Taking Blood Pressure Medication</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Taking Blood Pressure Medication High Confidence Limit" column="taking_bp_medication_high_confidence_limit" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="error_type">UCI</Annotation>
+            <Annotation name="error_for_measure">Taking Blood Pressure Medication</Annotation>
+        </Annotations>
+    </Measure>
 
-    <Measure name="Teeth Loss" column="teeth_loss_data_value" aggregator="avg" />
-    <Measure name="Teeth Loss Low Confidence Limit" column="teeth_loss_low_confidence_limit" aggregator="avg" />
-    <Measure name="Teeth Loss High Confidence Limit" column="teeth_loss_high_confidence_limit" aggregator="avg" />
+    <Measure name="Teeth Loss" column="teeth_loss_data_value" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Teeth Loss Low Confidence Limit" column="teeth_loss_low_confidence_limit" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="error_type">LCI</Annotation>
+            <Annotation name="error_for_measure">Teeth Loss</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Teeth Loss High Confidence Limit" column="teeth_loss_high_confidence_limit" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="error_type">UCI</Annotation>
+            <Annotation name="error_for_measure">Teeth Loss</Annotation>
+        </Annotations>
+    </Measure>
 </Cube>
 <Cube name="acs_poverty_status_by_nativity_1">
     <Annotations>
@@ -9375,7 +10081,7 @@
         <Annotation name="source_name">Feeding America: Map the Meal Gap</Annotation>
         <Annotation name="source_link">http://www.feedingamerica.org/</Annotation>
         <Annotation name="dataset_name"></Annotation>
-        <Annotation name="topic">Environmental</Annotation>
+        <Annotation name="topic">Food Access</Annotation>
     </Annotations>
 
     <Table name="food_insecurity" schema="feeding_america"/>
@@ -9408,17 +10114,34 @@
         </Hierarchy>
     </Dimension>
 
-    <Measure name="Population" column="population" aggregator="avg" />
-    <Measure name="Food Insecurity Rate" column="food_insecurity_rate" aggregator="avg" />
-    <Measure name="Estimated Total Food Insecure" column="estimated_food_insecure" aggregator="sum" />
-    <Measure name="Percent Eligible for Federal Nuttrition Assistance" column="pct_federal_nutrition_assistance_eligible" aggregator="avg" />
+    <Measure name="Population" column="population" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Food Insecurity Rate" column="food_insecurity_rate" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Estimated Food Insecure Population" column="estimated_food_insecure" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Eligible for Federal Nutrition Assistance" column="pct_federal_nutrition_assistance_eligible" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
 </Cube>
 <Cube name="BLS - Unemployment">
     <Annotations>
         <Annotation name="source_name">Bureau of Labor Statistics: Unemployment</Annotation>
         <Annotation name="source_link">https://www.bls.gov/lau/</Annotation>
         <Annotation name="dataset_name">BLS: Unemployment</Annotation>
-        <Annotation name="topic">Unemployment</Annotation>
+        <Annotation name="topic">Economy</Annotation>
     </Annotations>
 
     <Table name="unemployment" schema="bls"/>
@@ -9442,20 +10165,36 @@
         </Hierarchy>
     </Dimension>
 
-    <Measure name="Labor Force" column="labor_force" aggregator="sum" />
-    <Measure name="Employed" column="employed" aggregator="sum" />
-    <Measure name="Unemployed" column="unemployed" aggregator="sum" />
-    <Measure name="Unemployment Rate" column="unemployment_rate" aggregator="avg" />
+    <Measure name="Labor Force" column="labor_force" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Employed" column="employed" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Unemployed" column="unemployed" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Unemployment Rate" column="unemployment_rate" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
 </Cube><Cube name="BLS - CPI">
     <Annotations>
         <Annotation name="source_name">Bureau of Labor Statistics: Consumer Price Index</Annotation>
         <Annotation name="source_link">https://www.bls.gov/CPI/</Annotation>
         <Annotation name="dataset_name">BLS: CPI</Annotation>
-        <Annotation name="topic">Cost of Living</Annotation>
+        <Annotation name="topic">Economy</Annotation>
     </Annotations>
 
     <Table name="cpi" schema="bls"/>
-     
+
     <Dimension name="Time">
         <Annotations>
             <Annotation name="dim_type">TIME</Annotation>
@@ -9476,16 +10215,28 @@
         </Hierarchy>
     </Dimension>
 
-    <Measure name="Average CPI" column="avg" aggregator="avg" />
-    <Measure name="Average USA CPI" column="usa_avg" aggregator="avg" />
-    <Measure name="Average Midwest CPI" column="midwest_avg" aggregator="avg" />
+    <Measure name="Average CPI" column="avg" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Average CPI (Nation)" column="usa_avg" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Average CPI (Midwest)" column="midwest_avg" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
 </Cube>
 <Cube name="EPA - Air Quality Stats">
     <Annotations>
         <Annotation name="source_name">Environmental Protection Agency</Annotation>
         <Annotation name="source_link">https://aqs.epa.gov/aqsweb/airdata/download_files.html</Annotation>
         <Annotation name="dataset_name">EPA</Annotation>
-        <Annotation name="topic">Environment</Annotation>
+        <Annotation name="topic">Natural Enviornment</Annotation>
     </Annotations>
 
     <Table name="air_quality_stats" schema="epa"/>
@@ -9510,16 +10261,30 @@
         </Hierarchy>
     </Dimension>
 
-    <Measure name="Max AQI" column="max_aqi" aggregator="avg" />
-    <Measure name="90th Percentile AQI" column="90th_percentile_aqi" aggregator="avg" />
-    <Measure name="Median AQI" column="median_aqi" aggregator="avg" />
+    <Measure name="Max AQI" column="max_aqi" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="90th Percentile AQI" column="90th_percentile_aqi" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Median AQI" column="median_aqi" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
 </Cube>
 <Cube name="EPA - Air Quality Days">
     <Annotations>
         <Annotation name="source_name">Environmental Protection Agency</Annotation>
         <Annotation name="source_link">https://aqs.epa.gov/aqsweb/airdata/download_files.html</Annotation>
         <Annotation name="dataset_name">EPA</Annotation>
-        <Annotation name="topic">Environment</Annotation>
+        <Annotation name="topic">Natural Enviornment</Annotation>
     </Annotations>
 
     <Table name="air_quality_days" schema="epa"/>
@@ -9553,14 +10318,18 @@
         </Hierarchy>
     </Dimension>
 
-    <Measure name="Number of Days" column="number_of_days" aggregator="sum" />
+    <Measure name="Air Quality Days" column="number_of_days" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
 </Cube>
 <Cube name="EPA - Air Quality Pollutants">
     <Annotations>
         <Annotation name="source_name">Environmental Protection Agency</Annotation>
         <Annotation name="source_link">https://aqs.epa.gov/aqsweb/airdata/download_files.html</Annotation>
         <Annotation name="dataset_name">EPA</Annotation>
-        <Annotation name="topic">Environment</Annotation>
+        <Annotation name="topic">Natural Enviornment</Annotation>
     </Annotations>
 
     <Table name="air_quality_pollutants" schema="epa"/>
@@ -9594,7 +10363,11 @@
         </Hierarchy>
     </Dimension>
 
-    <Measure name="Number of Days" column="number_of_days" aggregator="sum" />
+    <Measure name="Air Pollutant Days" column="number_of_days" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
 </Cube>
 <Cube name="NWQMC - Water Quality">
     <Annotations>
@@ -9786,7 +10559,7 @@
         <Annotation name="source_name">Health Resources and Services Administration</Annotation>
         <Annotation name="source_link">https://datawarehouse.hrsa.gov/topics/ahrf.aspx</Annotation>
         <Annotation name="dataset_name">HRSA</Annotation>
-        <Annotation name="topic">Health</Annotation>
+        <Annotation name="topic">Access to Care</Annotation>
     </Annotations>
 
     <Table name="dentists_in_private_practice_by_age" schema="hrsa"/>
@@ -9819,14 +10592,18 @@
         </Hierarchy>
     </Dimension>
 
-    <Measure name="Number of Dentists" column="number" aggregator="sum" />
+    <Measure name="Dentists in Private Practice by Age" column="number" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
 </Cube>
 <Cube name="HRSA - Dentists by Employment Status">
     <Annotations>
         <Annotation name="source_name">Health Resources and Services Administration</Annotation>
         <Annotation name="source_link">https://datawarehouse.hrsa.gov/topics/ahrf.aspx</Annotation>
         <Annotation name="dataset_name">HRSA</Annotation>
-        <Annotation name="topic">Health</Annotation>
+        <Annotation name="topic">Access to Care</Annotation>
     </Annotations>
 
     <Table name="dentists_by_employment_status" schema="hrsa"/>
@@ -9860,14 +10637,18 @@
         </Hierarchy>
     </Dimension>
 
-    <Measure name="Number of Dentists" column="number" aggregator="sum" />
+    <Measure name="Number of Dentists" column="number" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
 </Cube>
 <Cube name="HRSA - Dentists by Sex">
     <Annotations>
         <Annotation name="source_name">Health Resources and Services Administration</Annotation>
         <Annotation name="source_link">https://datawarehouse.hrsa.gov/topics/ahrf.aspx</Annotation>
         <Annotation name="dataset_name">HRSA</Annotation>
-        <Annotation name="topic">Health</Annotation>
+        <Annotation name="topic">Access to Care</Annotation>
     </Annotations>
 
     <Table name="dentists_by_sex" schema="hrsa"/>
@@ -9900,14 +10681,18 @@
         </Hierarchy>
     </Dimension>
 
-    <Measure name="Number of Dentists" column="number" aggregator="sum" />
+    <Measure name="Dentists by Sex" column="number" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
 </Cube>
 <Cube name="HRSA - Dentists in Private Practice by Specialty">
     <Annotations>
         <Annotation name="source_name">Health Resources and Services Administration</Annotation>
         <Annotation name="source_link">https://datawarehouse.hrsa.gov/topics/ahrf.aspx</Annotation>
         <Annotation name="dataset_name">HRSA</Annotation>
-        <Annotation name="topic">Health</Annotation>
+        <Annotation name="topic">Access to Care</Annotation>
     </Annotations>
 
     <Table name="dentists_in_private_practice_by_specialty" schema="hrsa"/>
@@ -9940,14 +10725,18 @@
         </Hierarchy>
     </Dimension>
 
-    <Measure name="Number of Dentists" column="number" aggregator="sum" />
+    <Measure name="Dentists in Private Practice by Specialty" column="number" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
 </Cube>
 <Cube name="HRSA - Dentists in Private Practice by Hours">
     <Annotations>
         <Annotation name="source_name">Health Resources and Services Administration</Annotation>
         <Annotation name="source_link">https://datawarehouse.hrsa.gov/topics/ahrf.aspx</Annotation>
         <Annotation name="dataset_name">HRSA</Annotation>
-        <Annotation name="topic">Health</Annotation>
+        <Annotation name="topic">Access to Care</Annotation>
     </Annotations>
 
     <Table name="dentists_in_private_practice_by_hours" schema="hrsa"/>
@@ -9980,14 +10769,18 @@
         </Hierarchy>
     </Dimension>
 
-    <Measure name="Number of Dentists" column="number" aggregator="sum" />
+    <Measure name="Dentists in Private Practice by Hours" column="number" aggregator="sum" >
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
 </Cube>
 <Cube name="HRSA - Dentists in Private Practice by Sex">
     <Annotations>
         <Annotation name="source_name">Health Resources and Services Administration</Annotation>
         <Annotation name="source_link">https://datawarehouse.hrsa.gov/topics/ahrf.aspx</Annotation>
         <Annotation name="dataset_name">HRSA</Annotation>
-        <Annotation name="topic">Health</Annotation>
+        <Annotation name="topic">Access to Care</Annotation>
     </Annotations>
 
     <Table name="dentists_in_private_practice_by_sex" schema="hrsa"/>
@@ -10020,14 +10813,18 @@
         </Hierarchy>
     </Dimension>
 
-    <Measure name="Number of Dentists in Private Practice" column="number" aggregator="sum" />
+    <Measure name="Dentists in Private Practice by Sex" column="number" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
 </Cube>
 <Cube name="DCI">
     <Annotations>
         <Annotation name="source_name">Distressed Communities Index</Annotation>
         <Annotation name="source_link">https://eig.org/dci/</Annotation>
         <Annotation name="dataset_name">DCI</Annotation>
-        <Annotation name="topic">Socio-economic</Annotation>
+        <Annotation name="topic">Economy</Annotation>
     </Annotations>
 
     <Table name="dci" schema="dci"/>
@@ -10051,25 +10848,74 @@
         </Hierarchy>
     </Dimension>
 
-    <Measure name="Total Population" column="total_population" aggregator="sum" />
-    <Measure name="High School Dropout Rate" column="high_school_dropout_rate" aggregator="avg" />
-    <Measure name="Poverty Rate" column="poverty_rate" aggregator="avg" />
-    <Measure name="Percent Adults not Working" column="percent_adults_not_working" aggregator="avg" />
-    <Measure name="Housing Vacancy Rate" column="housing_vacancy_rate" aggregator="avg" />
-    <Measure name="Median Income Ratio" column="median_income_ratio" aggregator="avg" />
-    <Measure name="Percent Change in Employment" column="percent_change_in_employment" aggregator="avg" />
-    <Measure name="Percent Change in Establishments" column="percent_change_in_establishments" aggregator="avg" />
-    <Measure name="Distress Score" column="distress_score" aggregator="min" />
-    <Measure name="Distress Quintile" column="distress_quintile" aggregator="min" />
-    <Measure name="Distress County Ranking" column="distress_county_ranking" aggregator="min" />
-    <Measure name="Distress State Ranking" column="distress_state_ranking" aggregator="min" />
+    <Measure name="Total Population" column="total_population" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="High School Dropout Rate" column="high_school_dropout_rate" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Poverty Rate" column="poverty_rate" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Percent Adults Not Working" column="percent_adults_not_working" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Housing Vacancy Rate" column="housing_vacancy_rate" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Median Income Ratio" column="median_income_ratio" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Percent Change in Employment" column="percent_change_in_employment" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Percent Change in Establishments" column="percent_change_in_establishments" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Distress Score" column="distress_score" aggregator="min">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Distress Quintile" column="distress_quintile" aggregator="min">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Distress County Ranking" column="distress_county_ranking" aggregator="min">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Distress State Ranking" column="distress_state_ranking" aggregator="min">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
 </Cube>
 <Cube name="HUD - Homeless Categories">
     <Annotations>
         <Annotation name="source_name">US Department of Housing and Urban Development</Annotation>
         <Annotation name="source_link">https://www.hudexchange.info/</Annotation>
         <Annotation name="dataset_name">HUD</Annotation>
-        <Annotation name="topic">Demographics</Annotation>
+        <Annotation name="topic">Special Population</Annotation>
     </Annotations>
 
     <Table name="homeless_categories" schema="hud"/>
@@ -10110,16 +10956,29 @@
         </Hierarchy>
     </Dimension>
 
-    <Measure name="CoC Name" column="coc_name" datatype="String" caption="CoC Name" aggregator="max" />
-    <Measure name="Sheltered" column="sheltered" aggregator="sum" />
-    <Measure name="Unsheltered" column="unsheltered" aggregator="sum" />
+    <Measure name="CoC Name" column="coc_name" datatype="String" caption="CoC Name" aggregator="max">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Sheltered Homeless Population" column="sheltered" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Unsheltered Homeless Population" column="unsheltered" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
 </Cube>
 <Cube name="HUD - Homeless">
     <Annotations>
         <Annotation name="source_name">US Department of Housing and Urban Development</Annotation>
         <Annotation name="source_link">https://www.hudexchange.info/</Annotation>
         <Annotation name="dataset_name">HUD</Annotation>
-        <Annotation name="topic">Demographics</Annotation>
+        <Annotation name="topic">Special Population</Annotation>
     </Annotations>
 
     <Table name="homeless" schema="hud"/>
@@ -10157,9 +11016,22 @@
         </Hierarchy>
     </Dimension>
 
-    <Measure name="CoC Name" column="coc_name" datatype="String" caption="CoC Name" aggregator="max" />
-    <Measure name="Sheltered" column="sheltered" aggregator="sum" />
-    <Measure name="Unsheltered" column="unsheltered" aggregator="sum" />
+    <Measure name="CoC Name" column="coc_name" datatype="String" caption="CoC Name" aggregator="max">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Sheltered Homeless Population" column="sheltered" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Unsheltered Homeless Population" column="unsheltered" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
 </Cube>
 
 </Schema>

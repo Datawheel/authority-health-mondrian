@@ -3,7 +3,7 @@
         <Annotation name="source_name">Bureau of Labor Statistics: Unemployment</Annotation>
         <Annotation name="source_link">https://www.bls.gov/lau/</Annotation>
         <Annotation name="dataset_name">BLS: Unemployment</Annotation>
-        <Annotation name="topic">Unemployment</Annotation>
+        <Annotation name="topic">Economy</Annotation>
     </Annotations>
 
     <Table name="unemployment" schema="bls"/>
@@ -27,8 +27,24 @@
         </Hierarchy>
     </Dimension>
 
-    <Measure name="Labor Force" column="labor_force" aggregator="sum" />
-    <Measure name="Employed" column="employed" aggregator="sum" />
-    <Measure name="Unemployed" column="unemployed" aggregator="sum" />
-    <Measure name="Unemployment Rate" column="unemployment_rate" aggregator="avg" />
+    <Measure name="Labor Force" column="labor_force" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Employed" column="employed" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Unemployed" column="unemployed" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Unemployment Rate" column="unemployment_rate" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
 </Cube>

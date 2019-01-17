@@ -3,7 +3,7 @@
         <Annotation name="source_name">Environmental Protection Agency</Annotation>
         <Annotation name="source_link">https://aqs.epa.gov/aqsweb/airdata/download_files.html</Annotation>
         <Annotation name="dataset_name">EPA</Annotation>
-        <Annotation name="topic">Environment</Annotation>
+        <Annotation name="topic">Natural Enviornment</Annotation>
     </Annotations>
 
     <Table name="air_quality_stats" schema="epa"/>
@@ -28,7 +28,21 @@
         </Hierarchy>
     </Dimension>
 
-    <Measure name="Max AQI" column="max_aqi" aggregator="avg" />
-    <Measure name="90th Percentile AQI" column="90th_percentile_aqi" aggregator="avg" />
-    <Measure name="Median AQI" column="median_aqi" aggregator="avg" />
+    <Measure name="Max AQI" column="max_aqi" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="90th Percentile AQI" column="90th_percentile_aqi" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Median AQI" column="median_aqi" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
 </Cube>
