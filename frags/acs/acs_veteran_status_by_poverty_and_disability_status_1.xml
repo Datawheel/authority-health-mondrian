@@ -7,15 +7,24 @@
       <Annotation name="dataset_name">ACS 1-year Estimate</Annotation>
       <Annotation name="table_id">B23024</Annotation>
     </Annotations>
+
     <Table name="acs_veteran_status_by_poverty_and_disability_status_1" schema="acs_test"/>
 
     <DimensionUsage foreignKey="geoid" name="Geography" source="geography"/>
+
     <Dimension name="Year">
+      <Annotations>
+        <Annotation name="dim_type">TIME</Annotation>
+      </Annotations>
       <Hierarchy hasAll="true">
         <Level column="year" levelType="TimeYears" name="Year" type="Numeric" uniqueMembers="true"/>
       </Hierarchy>
     </Dimension>
+
     <Dimension foreignKey="dim_0" name="Poverty Status">
+      <Annotations>
+        <Annotation name="dim_type"></Annotation>
+      </Annotations>
       <Hierarchy hasAll="true">
         <InlineTable alias="dim_0_table">
           <ColumnDefs>
@@ -36,8 +45,11 @@
       <Level column="member_0_code" hideMemberIf="IfParentsName" name="Poverty Status" nameColumn="member_0" uniqueMembers="true"/>
       </Hierarchy>
     </Dimension>
-  
+
     <Dimension foreignKey="dim_1" name="Disability Status">
+      <Annotations>
+        <Annotation name="dim_type"></Annotation>
+      </Annotations>
       <Hierarchy hasAll="true">
         <InlineTable alias="dim_1_table">
           <ColumnDefs>
@@ -58,8 +70,11 @@
       <Level column="member_0_code" hideMemberIf="IfParentsName" name="Disability Status" nameColumn="member_0" uniqueMembers="true"/>
       </Hierarchy>
     </Dimension>
-  
+
     <Dimension foreignKey="dim_2" name="Labor Force Status">
+      <Annotations>
+        <Annotation name="dim_type"></Annotation>
+      </Annotations>
       <Hierarchy hasAll="true">
         <InlineTable alias="dim_2_table">
           <ColumnDefs>
@@ -80,8 +95,11 @@
       <Level column="member_0_code" hideMemberIf="IfParentsName" name="Labor Force Status" nameColumn="member_0" uniqueMembers="true"/>
       </Hierarchy>
     </Dimension>
-  
+
     <Dimension foreignKey="dim_3" name="Civilian Status">
+      <Annotations>
+        <Annotation name="dim_type"></Annotation>
+      </Annotations>
       <Hierarchy hasAll="true">
         <InlineTable alias="dim_3_table">
           <ColumnDefs>
@@ -106,8 +124,11 @@
       <Level column="member_0_code" hideMemberIf="IfParentsName" name="Civilian Status" nameColumn="member_0" uniqueMembers="true"/>
       </Hierarchy>
     </Dimension>
-  
+
     <Dimension foreignKey="dim_4" name="Employment Status">
+      <Annotations>
+        <Annotation name="dim_type"></Annotation>
+      </Annotations>
       <Hierarchy hasAll="true">
         <InlineTable alias="dim_4_table">
           <ColumnDefs>
@@ -136,7 +157,7 @@
       <Level column="member_0_code" hideMemberIf="IfParentsName" name="Employment Status" nameColumn="member_0" uniqueMembers="true"/>
       </Hierarchy>
     </Dimension>
-  
+
     <Measure aggregator="sum" column="mea_t" name="mea_t" visible="false"/>
     <Measure aggregator="sum" column="mea_nation" name="mea_nation" visible="false"/>
     <Measure aggregator="sum" column="mea_county" name="mea_county" visible="false"/>
@@ -216,6 +237,7 @@
       </Formula>
       <Annotations>
         <Annotation name="aggregation_method">SUM</Annotation>
+        <Annotation name="units_of_measurement"></Annotation>
       </Annotations>
     </CalculatedMember>
 
@@ -242,6 +264,8 @@
       </Formula>
       <Annotations>
         <Annotation name="aggregation_method">MOE</Annotation>
+        <Annotation name="units_of_measurement"></Annotation>
+        <Annotation name="error_type">MOE</Annotation>
         <Annotation name="error_for_measure">Population</Annotation>
       </Annotations>
     </CalculatedMember>

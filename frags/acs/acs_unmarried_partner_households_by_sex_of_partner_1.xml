@@ -1,3 +1,4 @@
+
 <?xml version="1.0" ?>
 <Schema name="authority_health">
   <Cube name="acs_unmarried_partner_households_by_sex_of_partner_1">
@@ -7,15 +8,24 @@
       <Annotation name="dataset_name">ACS 1-year Estimate</Annotation>
       <Annotation name="table_id">B11009</Annotation>
     </Annotations>
+
     <Table name="acs_unmarried_partner_households_by_sex_of_partner_1" schema="acs_test"/>
 
     <DimensionUsage foreignKey="geoid" name="Geography" source="geography"/>
+
     <Dimension name="Year">
+      <Annotations>
+        <Annotation name="dim_type">TIME</Annotation>
+      </Annotations>
       <Hierarchy hasAll="true">
         <Level column="year" levelType="TimeYears" name="Year" type="Numeric" uniqueMembers="true"/>
       </Hierarchy>
     </Dimension>
+
     <Dimension foreignKey="dim_0" name="Household Type">
+      <Annotations>
+        <Annotation name="dim_type"></Annotation>
+      </Annotations>
       <Hierarchy hasAll="true">
         <InlineTable alias="dim_0_table">
           <ColumnDefs>
@@ -36,8 +46,11 @@
       <Level column="member_0_code" hideMemberIf="IfParentsName" name="Household Type" nameColumn="member_0" uniqueMembers="true"/>
       </Hierarchy>
     </Dimension>
-  
+
     <Dimension foreignKey="dim_1" name="Sex of Partner">
+      <Annotations>
+        <Annotation name="dim_type"></Annotation>
+      </Annotations>
       <Hierarchy hasAll="true">
         <InlineTable alias="dim_1_table">
           <ColumnDefs>
@@ -70,7 +83,7 @@
       <Level column="member_0_code" hideMemberIf="IfParentsName" name="Sex of Partner" nameColumn="member_0" uniqueMembers="true"/>
       </Hierarchy>
     </Dimension>
-  
+
     <Measure aggregator="sum" column="mea_t" name="mea_t" visible="false"/>
     <Measure aggregator="sum" column="mea_nation" name="mea_nation" visible="false"/>
     <Measure aggregator="sum" column="mea_county" name="mea_county" visible="false"/>
@@ -150,6 +163,7 @@
       </Formula>
       <Annotations>
         <Annotation name="aggregation_method">SUM</Annotation>
+        <Annotation name="units_of_measurement"></Annotation>
       </Annotations>
     </CalculatedMember>
 
@@ -176,6 +190,8 @@
       </Formula>
       <Annotations>
         <Annotation name="aggregation_method">MOE</Annotation>
+        <Annotation name="units_of_measurement"></Annotation>
+        <Annotation name="error_type">MOE</Annotation>
         <Annotation name="error_for_measure">Population</Annotation>
       </Annotations>
     </CalculatedMember>

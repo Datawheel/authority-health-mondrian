@@ -3,19 +3,28 @@
   <Cube name="acs_disability_status_by_age_by_health_insurance_coverage_1">
     <Annotations>
       <Annotation name="source_name">Census Bureau</Annotation>
-      <Annotation name="source_link">http://www.census.gov/programs-surveys/acs/</Annotation>
+      <Annotation name="dataset_link">http://www.census.gov/programs-surveys/acs/</Annotation>
       <Annotation name="dataset_name">ACS 1-year Estimate</Annotation>
       <Annotation name="table_id">B18135</Annotation>
+      <Annotation name="topic">Special Population</Annotation>
     </Annotations>
     <Table name="acs_disability_status_by_age_by_health_insurance_coverage_1" schema="acs_test"/>
 
     <DimensionUsage foreignKey="geoid" name="Geography" source="geography"/>
+
     <Dimension name="Year">
+      <Annotations>
+        <Annotation name="dim_type">TIME</Annotation>
+      </Annotations>
       <Hierarchy hasAll="true">
         <Level column="year" levelType="TimeYears" name="Year" type="Numeric" uniqueMembers="true"/>
       </Hierarchy>
     </Dimension>
+
     <Dimension foreignKey="dim_0" name="Age">
+      <Annotations>
+        <Annotation name="dim_type"></Annotation>
+      </Annotations>
       <Hierarchy hasAll="true">
         <InlineTable alias="dim_0_table">
           <ColumnDefs>
@@ -40,8 +49,11 @@
       <Level column="member_0_code" hideMemberIf="IfParentsName" name="Age" nameColumn="member_0" uniqueMembers="true"/>
       </Hierarchy>
     </Dimension>
-  
+
     <Dimension foreignKey="dim_1" name="Disability Status">
+      <Annotations>
+        <Annotation name="dim_type"></Annotation>
+      </Annotations>
       <Hierarchy hasAll="true">
         <InlineTable alias="dim_1_table">
           <ColumnDefs>
@@ -62,8 +74,11 @@
       <Level column="member_0_code" hideMemberIf="IfParentsName" name="Disability Status" nameColumn="member_0" uniqueMembers="true"/>
       </Hierarchy>
     </Dimension>
-  
-    <Dimension foreignKey="dim_2" name="Health Insurance coverage:status">
+
+    <Dimension foreignKey="dim_2" name="Coverage Status">
+      <Annotations>
+        <Annotation name="dim_type"></Annotation>
+      </Annotations>
       <Hierarchy hasAll="true">
         <InlineTable alias="dim_2_table">
           <ColumnDefs>
@@ -81,11 +96,14 @@
             </Row>
           </Rows>
         </InlineTable>
-      <Level column="member_0_code" hideMemberIf="IfParentsName" name="Health Insurance coverage:status" nameColumn="member_0" uniqueMembers="true"/>
+      <Level column="member_0_code" hideMemberIf="IfParentsName" name="Coverage Status" nameColumn="member_0" uniqueMembers="true"/>
       </Hierarchy>
     </Dimension>
-  
-    <Dimension foreignKey="dim_3" name="Health Insurance coverage:type">
+
+    <Dimension foreignKey="dim_3" name="Coverage Type">
+      <Annotations>
+        <Annotation name="dim_type"></Annotation>
+      </Annotations>
       <Hierarchy hasAll="true">
         <InlineTable alias="dim_3_table">
           <ColumnDefs>
@@ -107,10 +125,10 @@
             </Row>
           </Rows>
         </InlineTable>
-      <Level column="member_0_code" hideMemberIf="IfParentsName" name="Health Insurance coverage:type" nameColumn="member_0" uniqueMembers="true"/>
+      <Level column="member_0_code" hideMemberIf="IfParentsName" name="Coverage Type" nameColumn="member_0" uniqueMembers="true"/>
       </Hierarchy>
     </Dimension>
-  
+
     <Measure aggregator="sum" column="mea_t" name="mea_t" visible="false"/>
     <Measure aggregator="sum" column="mea_nation" name="mea_nation" visible="false"/>
     <Measure aggregator="sum" column="mea_county" name="mea_county" visible="false"/>
@@ -167,7 +185,7 @@
       </MeasureExpression>
     </Measure>
 
-    <CalculatedMember dimension="Measures" name="Population" visible="true">
+    <CalculatedMember dimension="Measures" name="Population in Density" visible="true">
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[mea_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[mea_t]
@@ -190,10 +208,11 @@
       </Formula>
       <Annotations>
         <Annotation name="aggregation_method">SUM</Annotation>
+        <Annotation name="units_of_measurement"></Annotation>
       </Annotations>
     </CalculatedMember>
 
-    <CalculatedMember dimension="Measures" name="Population Moe" visible="true">
+    <CalculatedMember dimension="Measures" name="Population in Density Moe" visible="true">
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[moe_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[moe_t]
@@ -216,7 +235,9 @@
       </Formula>
       <Annotations>
         <Annotation name="aggregation_method">MOE</Annotation>
-        <Annotation name="error_for_measure">Population</Annotation>
+        <Annotation name="units_of_measurement"></Annotation>
+        <Annotation name="error_type">MOE</Annotation>
+        <Annotation name="error_for_measure">Population in Density</Annotation>
       </Annotations>
     </CalculatedMember>
 
