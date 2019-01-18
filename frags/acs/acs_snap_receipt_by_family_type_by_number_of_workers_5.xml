@@ -3,15 +3,22 @@
   <Cube name="acs_snap_receipt_by_family_type_by_number_of_workers_5">
     <Annotations>
       <Annotation name="source_name">Census Bureau</Annotation>
+      <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year.</Annotation>
       <Annotation name="dataset_link">http://www.census.gov/programs-surveys/acs/</Annotation>
       <Annotation name="dataset_name">ACS 5-year Estimate</Annotation>
       <Annotation name="table_id">B22007</Annotation>
       <Annotation name="topic">Economy</Annotation>
+      <Annotation name="subtopic">Economy</Annotation>
+      <Annotation name="details"></Annotation>
     </Annotations>
 
     <Table name="acs_snap_receipt_by_family_type_by_number_of_workers_5" schema="acs_test"/>
 
-    <DimensionUsage foreignKey="geoid" name="Geography" source="geography"/>
+    <DimensionUsage foreignKey="geoid" name="Geography" source="geography">
+      <Annotations>
+        <Annotation name="dim_type">GEOGRAPHY</Annotation>
+      </Annotations>
+    </DimensionUsage>
 
     <Dimension name="Year">
       <Annotations>
@@ -196,7 +203,7 @@
       </Formula>
       <Annotations>
         <Annotation name="aggregation_method">SUM</Annotation>
-        <Annotation name="units_of_measurement"></Annotation>
+        <Annotation name="units_of_measurement">Households</Annotation>
       </Annotations>
     </CalculatedMember>
 
@@ -223,7 +230,7 @@
       </Formula>
       <Annotations>
         <Annotation name="aggregation_method">MOE</Annotation>
-        <Annotation name="units_of_measurement"></Annotation>
+        <Annotation name="units_of_measurement">Households</Annotation>
         <Annotation name="error_type">MOE</Annotation>
         <Annotation name="error_for_measure">SNAP Receipts</Annotation>
       </Annotations>
