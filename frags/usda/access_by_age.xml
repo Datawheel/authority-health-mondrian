@@ -3,7 +3,7 @@
         <Annotation name="source_name">United State Department of Agriculture</Annotation>
         <Annotation name="source_link">https://www.ers.usda.gov/</Annotation>
         <Annotation name="dataset_name">USDA</Annotation>
-        <Annotation name="topic">Environmental</Annotation>
+        <Annotation name="topic">Food Access</Annotation>
     </Annotations>
 
     <Table name="usda_access_by_age" schema="usda"/>
@@ -36,5 +36,9 @@
         </Hierarchy>
     </Dimension>
 
-    <Measure name="Percent" column="percent" aggregator="avg" />
+    <Measure name="Low-Access to Food by Age" column="percent" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
+        </Annotations>
+    </Measure>
 </Cube>

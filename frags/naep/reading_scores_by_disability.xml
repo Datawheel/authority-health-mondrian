@@ -45,5 +45,9 @@
         </Hierarchy>
     </Dimension>
 
-    <Measure name="Average Reading Score" column="average_score" aggregator="avg" />
+    <Measure name="Average Reading Score by Disability" column="average_score" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
 </Cube>

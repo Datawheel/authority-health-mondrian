@@ -3,7 +3,7 @@
         <Annotation name="source_name">National Water Quality Monitoring Council</Annotation>
         <Annotation name="source_link">https://www.waterqualitydata.us</Annotation>
         <Annotation name="dataset_name">NWQMC</Annotation>
-        <Annotation name="topic">Environment</Annotation>
+        <Annotation name="topic">Natural Enviornment</Annotation>
     </Annotations>
 
     <Table name="water_quality" schema="nwqmc"/>
@@ -30,11 +30,22 @@
     </Dimension>
 
     <Dimension name="Water Body">
+        <Annotations>
+            <Annotation name="dim_type"></Annotation>
+        </Annotations>
          <Hierarchy hasAll="true">
             <Level name="Water Body" column="monitoring_location_identifier" uniqueMembers="true" />
         </Hierarchy>
     </Dimension>
 
-    <Measure name="Lead Level" column="lead_level" datatype="String" caption="Lead Level" aggregator="max" />
-    <Measure name="Mercury Level" column="mercury_level" datatype="String" caption="Mercury Level" aggregator="max" />
+    <Measure name="Lead Level" column="lead_level" datatype="String" caption="Lead Level" aggregator="max">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Mercury Level" column="mercury_level" datatype="String" caption="Mercury Level" aggregator="max">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
 </Cube>

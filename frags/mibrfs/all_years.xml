@@ -4,7 +4,7 @@
         <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>
         <Annotation name="dataset_name">Activity Limitations</Annotation>
         <Annotation name="topic">Health</Annotation>
-        <Annotation name="subtopic">Risk Factors</Annotation>
+        <Annotation name="subtopic">Health</Annotation>
     </Annotations>
 
     <Table name="all_years" schema="mibrfs"/>
@@ -41,146 +41,678 @@
         </Hierarchy>
     </Dimension>
 
-    <Measure name="Activity Limited 13 Or Less Days Sample Frequency" column="activity_limited_13_or_less_days_sample_frequency" aggregator="sum" />
-    <Measure name="Activity Limited 13 Or Less Days Weighted Frequency" column="activity_limited_13_or_less_days_weighted_frequency" aggregator="sum" />
-    <Measure name="Activity Limited 13 Or Less Days" column="activity_limited_13_or_less_days_weighted_percent" aggregator="avg" />
-    <Measure name="Activity Limited 14 Or More Days Sample Frequency" column="activity_limited_14_or_more_days_sample_frequency" aggregator="sum" />
-    <Measure name="Activity Limited 14 Or More Days Weighted Frequency" column="activity_limited_14_or_more_days_weighted_frequency" aggregator="sum" />
-    <Measure name="Activity Limited 14 Or More Days" column="activity_limited_14_or_more_days_weighted_percent" aggregator="avg" />
+    <Measure name="Activity Limited 13 Or Less Days" column="activity_limited_13_or_less_days_weighted_percent" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Activity Limited 13 Or Less Days Sample Frequency" column="activity_limited_13_or_less_days_sample_frequency" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Activity Limited 13 Or Less Days Weighted Frequency" column="activity_limited_13_or_less_days_weighted_frequency" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Activity Limited 14 Or More Days" column="activity_limited_14_or_more_days_weighted_percent" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Activity Limited 14 Or More Days Sample Frequency" column="activity_limited_14_or_more_days_sample_frequency" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Activity Limited 14 Or More Days Weighted Frequency" column="activity_limited_14_or_more_days_weighted_frequency" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
 
-    <Measure name="BMI Healthy Weight Sample Frequency" column="bmi_healthy_weight_sample_frequency" aggregator="sum" />
-    <Measure name="BMI Healthy Weight Weighted Frequency" column="bmi_healthy_weight_weighted_frequency" aggregator="sum" />
-    <Measure name="BMI Healthy Weight" column="bmi_healthy_weight_weighted_percent" aggregator="avg" />
-    <Measure name="BMI Obese Sample Frequency" column="bmi_obese_sample_frequency" aggregator="sum" />
-    <Measure name="BMI Obese Weighted Frequency" column="bmi_obese_weighted_frequency" aggregator="sum" />
-    <Measure name="BMI Obese" column="bmi_obese_weighted_percent" aggregator="avg" />
-    <Measure name="BMI Overweight Sample Frequency" column="bmi_overweight_sample_frequency" aggregator="sum" />
-    <Measure name="BMI Overweight Weighted Frequency" column="bmi_overweight_weighted_frequency" aggregator="sum" />
-    <Measure name="BMI Overweight" column="bmi_overweight_weighted_percent" aggregator="avg" />
-    <Measure name="BMI Underweight Sample Frequency" column="bmi_underweight_sample_frequency" aggregator="sum" />
-    <Measure name="BMI Underweight Weighted Frequency" column="bmi_underweight_weighted_frequency" aggregator="sum" />
-    <Measure name="BMI Underweight" column="bmi_underweight_weighted_percent" aggregator="avg" />
+    <Measure name="BMI Healthy Weight" column="bmi_healthy_weight_weighted_percent" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="BMI Healthy Weight Sample Frequency" column="bmi_healthy_weight_sample_frequency" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="BMI Healthy Weight Weighted Frequency" column="bmi_healthy_weight_weighted_frequency" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="BMI Obese" column="bmi_obese_weighted_percent" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="BMI Obese Sample Frequency" column="bmi_obese_sample_frequency" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="BMI Obese Weighted Frequency" column="bmi_obese_weighted_frequency" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="BMI Overweight" column="bmi_overweight_weighted_percent" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="BMI Overweight Sample Frequency" column="bmi_overweight_sample_frequency" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="BMI Overweight Weighted Frequency" column="bmi_overweight_weighted_frequency" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="BMI Underweight" column="bmi_underweight_weighted_percent" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="BMI Underweight Sample Frequency" column="bmi_underweight_sample_frequency" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="BMI Underweight Weighted Frequency" column="bmi_underweight_weighted_frequency" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
 
-    <Measure name="Cardiovascular Disease Sample Frequency" column="cardiovascular_disease_yes_sample_frequency" aggregator="sum" />
-    <Measure name="Cardiovascular Disease Weighted Frequency" column="cardiovascular_disease_yes_weighted_frequency" aggregator="sum" />
-    <Measure name="Cardiovascular Disease" column="cardiovascular_disease_yes_weighted_percent" aggregator="avg" />
+    <Measure name="Cardiovascular Disease" column="cardiovascular_disease_yes_weighted_percent" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Cardiovascular Disease Sample Frequency" column="cardiovascular_disease_yes_sample_frequency" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Cardiovascular Disease Weighted Frequency" column="cardiovascular_disease_yes_weighted_frequency" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
 
-    <Measure name="Current Asthma Sample Frequency" column="current_asthma_yes_sample_frequency" aggregator="sum" />
-    <Measure name="Current Asthma Weighted Frequency" column="current_asthma_yes_weighted_frequency" aggregator="sum" />
-    <Measure name="Current Asthma" column="current_asthma_yes_weighted_percent" aggregator="avg" />
+    <Measure name="Current Asthma" column="current_asthma_yes_weighted_percent" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Current Asthma Sample Frequency" column="current_asthma_yes_sample_frequency" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Current Asthma Weighted Frequency" column="current_asthma_yes_weighted_frequency" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
 
-    <Measure name="Diabetes Sample Frequency" column="diabetes_yes_sample_frequency" aggregator="sum" />
-    <Measure name="Diabetes Weighted Frequency" column="diabetes_yes_weighted_frequency" aggregator="sum" />
-    <Measure name="Diabetes" column="diabetes_yes_weighted_percent" aggregator="avg" />
+    <Measure name="Diabetes" column="diabetes_yes_weighted_percent" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Diabetes Sample Frequency" column="diabetes_yes_sample_frequency" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Diabetes Weighted Frequency" column="diabetes_yes_weighted_frequency" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
 
-    <Measure name="Ever Cancer Sample Frequency" column="ever_cancer_yes_sample_frequency" aggregator="sum" />
-    <Measure name="Ever Cancer Weighted Frequency" column="ever_cancer_yes_weighted_frequency" aggregator="sum" />
-    <Measure name="Ever Cancer" column="ever_cancer_yes_weighted_percent" aggregator="avg" />
+    <Measure name="Ever Cancer" column="ever_cancer_yes_weighted_percent" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Ever Cancer Sample Frequency" column="ever_cancer_yes_sample_frequency" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Ever Cancer Weighted Frequency" column="ever_cancer_yes_weighted_frequency" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
 
-    <Measure name="Ever Depressive Sample Frequency" column="ever_depressive_yes_sample_frequency" aggregator="sum" />
-    <Measure name="Ever Depressive Weighted Frequency" column="ever_depressive_yes_weighted_frequency" aggregator="sum" />
-    <Measure name="Ever Depressive" column="ever_depressive_yes_weighted_percent" aggregator="avg" />
+    <Measure name="Ever Depressive" column="ever_depressive_yes_weighted_percent" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Ever Depressive Sample Frequency" column="ever_depressive_yes_sample_frequency" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Ever Depressive Weighted Frequency" column="ever_depressive_yes_weighted_frequency" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
 
-    <Measure name="Ever HBP Sample Frequency" column="ever_hbp_yes_sample_frequency" aggregator="sum" />
-    <Measure name="Ever HBP Weighted Frequency" column="ever_hbp_yes_weighted_frequency" aggregator="sum" />
-    <Measure name="Ever HBP" column="ever_hbp_yes_weighted_percent" aggregator="avg" />
+    <Measure name="Ever HBP" column="ever_hbp_yes_weighted_percent" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Ever HBP Sample Frequency" column="ever_hbp_yes_sample_frequency" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Ever HBP Weighted Frequency" column="ever_hbp_yes_weighted_frequency" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
 
-    <Measure name="Ever Heart Attack Sample Frequency" column="ever_heart_attack_yes_sample_frequency" aggregator="sum" />
-    <Measure name="Ever Heart Attack Weighted Frequency" column="ever_heart_attack_yes_weighted_frequency" aggregator="sum" />
-    <Measure name="Ever Heart Attack" column="ever_heart_attack_yes_weighted_percent" aggregator="avg" />
+    <Measure name="Ever Heart Attack" column="ever_heart_attack_yes_weighted_percent" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Ever Heart Attack Sample Frequency" column="ever_heart_attack_yes_sample_frequency" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Ever Heart Attack Weighted Frequency" column="ever_heart_attack_yes_weighted_frequency" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
 
-    <Measure name="Ever Stroke Sample Frequency" column="ever_stroke_yes_sample_frequency" aggregator="sum" />
-    <Measure name="Ever Stroke Weighted Frequency" column="ever_stroke_yes_weighted_frequency" aggregator="sum" />
-    <Measure name="Ever Stroke" column="ever_stroke_yes_weighted_percent" aggregator="avg" />
+    <Measure name="Ever Stroke" column="ever_stroke_yes_weighted_percent" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Ever Stroke Sample Frequency" column="ever_stroke_yes_sample_frequency" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Ever Stroke Weighted Frequency" column="ever_stroke_yes_weighted_frequency" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
 
-    <Measure name="Gen Health Fair Or Poor Sample Frequency" column="gen_health_fair_or_poor_sample_frequency" aggregator="sum" />
-    <Measure name="Gen Health Fair Or Poor Weighted Frequency" column="gen_health_fair_or_poor_weighted_frequency" aggregator="sum" />
-    <Measure name="Gen Health Fair Or Poor" column="gen_health_fair_or_poor_weighted_percent" aggregator="avg" />
-    <Measure name="Gen Health Good Or Better Sample Frequency" column="gen_health_good_or_better_sample_frequency" aggregator="sum" />
-    <Measure name="Gen Health Good Or Better Weighted Frequency" column="gen_health_good_or_better_weighted_frequency" aggregator="sum" />
-    <Measure name="Gen Health Good Or Better" column="gen_health_good_or_better_weighted_percent" aggregator="avg" />
+    <Measure name="Gen Health Fair Or Poor" column="gen_health_fair_or_poor_weighted_percent" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Gen Health Fair Or Poor Sample Frequency" column="gen_health_fair_or_poor_sample_frequency" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Gen Health Fair Or Poor Weighted Frequency" column="gen_health_fair_or_poor_weighted_frequency" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Gen Health Good Or Better" column="gen_health_good_or_better_weighted_percent" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Gen Health Good Or Better Sample Frequency" column="gen_health_good_or_better_sample_frequency" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Gen Health Good Or Better Weighted Frequency" column="gen_health_good_or_better_weighted_frequency" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
 
-    <Measure name="Had Routine Checkup Last Year Sample Frequency" column="had_routine_checkup_last_year_yes_sample_frequency" aggregator="sum" />
-    <Measure name="Had Routine Checkup Last Year Weighted Frequency" column="had_routine_checkup_last_year_yes_weighted_frequency" aggregator="sum" />
-    <Measure name="Had Routine Checkup Last Year" column="had_routine_checkup_last_year_yes_weighted_percent" aggregator="avg" />
+    <Measure name="Had Routine Checkup Last Year" column="had_routine_checkup_last_year_yes_weighted_percent" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Had Routine Checkup Last Year Sample Frequency" column="had_routine_checkup_last_year_yes_sample_frequency" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Had Routine Checkup Last Year Weighted Frequency" column="had_routine_checkup_last_year_yes_weighted_frequency" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
 
-    <Measure name="Has Insurance Sample Frequency" column="has_insurance_yes_sample_frequency" aggregator="sum" />
-    <Measure name="Has Insurance Weighted Frequency" column="has_insurance_yes_weighted_frequency" aggregator="sum" />
-    <Measure name="Has Insurance" column="has_insurance_yes_weighted_percent" aggregator="avg" />
+    <Measure name="Has Insurance" column="has_insurance_yes_weighted_percent" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Has Insurance Sample Frequency" column="has_insurance_yes_sample_frequency" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Has Insurance Weighted Frequency" column="has_insurance_yes_weighted_frequency" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
 
-    <Measure name="Heart Disease Sample Frequency" column="heart_disease_yes_sample_frequency" aggregator="sum" />
-    <Measure name="Heart Disease Weighted Frequency" column="heart_disease_yes_weighted_frequency" aggregator="sum" />
-    <Measure name="Heart Disease" column="heart_disease_yes_weighted_percent" aggregator="avg" />
+    <Measure name="Heart Disease" column="heart_disease_yes_weighted_percent" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Heart Disease Sample Frequency" column="heart_disease_yes_sample_frequency" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Heart Disease Weighted Frequency" column="heart_disease_yes_weighted_frequency" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
 
-    <Measure name="HIV Tested Sample Frequency" column="hiv_tested_yes_sample_frequency" aggregator="sum" />
-    <Measure name="HIV Tested Weighted Frequency" column="hiv_tested_yes_weighted_frequency" aggregator="sum" />
-    <Measure name="HIV Tested" column="hiv_tested_yes_weighted_percent" aggregator="avg" />
+    <Measure name="HIV Tested" column="hiv_tested_yes_weighted_percent" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="HIV Tested Sample Frequency" column="hiv_tested_yes_sample_frequency" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="HIV Tested Weighted Frequency" column="hiv_tested_yes_weighted_frequency" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
 
-    <Measure name="Leisure Time Physical Activity Sample Frequency" column="leisure_time_physical_activity_yes_sample_frequency" aggregator="sum" />
-    <Measure name="Leisure Time Physical Activity Weighted Frequency" column="leisure_time_physical_activity_yes_weighted_frequency" aggregator="sum" />
-    <Measure name="Leisure Time Physical Activity" column="leisure_time_physical_activity_yes_weighted_percent" aggregator="avg" />
+    <Measure name="Leisure Time Physical Activity" column="leisure_time_physical_activity_yes_weighted_percent" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Leisure Time Physical Activity Sample Frequency" column="leisure_time_physical_activity_yes_sample_frequency" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Leisure Time Physical Activity Weighted Frequency" column="leisure_time_physical_activity_yes_weighted_frequency" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
 
-    <Measure name="Lifetime Asthma Sample Frequency" column="lifetime_asthma_yes_sample_frequency" aggregator="sum" />
-    <Measure name="Lifetime Asthma Weighted Frequency" column="lifetime_asthma_yes_weighted_frequency" aggregator="sum" />
-    <Measure name="Lifetime Asthma" column="lifetime_asthma_yes_weighted_percent" aggregator="avg" />
+    <Measure name="Lifetime Asthma" column="lifetime_asthma_yes_weighted_percent" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Lifetime Asthma Sample Frequency" column="lifetime_asthma_yes_sample_frequency" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Lifetime Asthma Weighted Frequency" column="lifetime_asthma_yes_weighted_frequency" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
 
-    <Measure name="Limited Or Special Equip Sample Frequency" column="limited_or_special_equip_yes_sample_frequency" aggregator="sum" />
-    <Measure name="Limited Or Special Equip Weighted Frequency" column="limited_or_special_equip_yes_weighted_frequency" aggregator="sum" />
-    <Measure name="Limited Or Special Equip" column="limited_or_special_equip_yes_weighted_percent" aggregator="avg" />
+    <Measure name="Limited Or Special Equip" column="limited_or_special_equip_yes_weighted_percent" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Limited Or Special Equip Sample Frequency" column="limited_or_special_equip_yes_sample_frequency" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Limited Or Special Equip Weighted Frequency" column="limited_or_special_equip_yes_weighted_frequency" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
 
-    <Measure name="Poor Mental Health 13 Or Less Days Sample Frequency" column="poor_mental_health_13_or_less_days_sample_frequency" aggregator="sum" />
-    <Measure name="Poor Mental Health 13 Or Less Days Weighted Frequency" column="poor_mental_health_13_or_less_days_weighted_frequency" aggregator="sum" />
-    <Measure name="Poor Mental Health 13 Or Less Days" column="poor_mental_health_13_or_less_days_weighted_percent" aggregator="avg" />
-    <Measure name="Poor Mental Health 14 Or More Days Sample Frequency" column="poor_mental_health_14_or_more_days_sample_frequency" aggregator="sum" />
-    <Measure name="Poor Mental Health 14 Or More Days Weighted Frequency" column="poor_mental_health_14_or_more_days_weighted_frequency" aggregator="sum" />
-    <Measure name="Poor Mental Health 14 Or More Days" column="poor_mental_health_14_or_more_days_weighted_percent" aggregator="avg" />
+    <Measure name="Poor Mental Health 13 Or Less Days" column="poor_mental_health_13_or_less_days_weighted_percent" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Poor Mental Health 13 Or Less Days Sample Frequency" column="poor_mental_health_13_or_less_days_sample_frequency" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Poor Mental Health 13 Or Less Days Weighted Frequency" column="poor_mental_health_13_or_less_days_weighted_frequency" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Poor Mental Health 14 Or More Days" column="poor_mental_health_14_or_more_days_weighted_percent" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Poor Mental Health 14 Or More Days Sample Frequency" column="poor_mental_health_14_or_more_days_sample_frequency" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Poor Mental Health 14 Or More Days Weighted Frequency" column="poor_mental_health_14_or_more_days_weighted_frequency" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
 
-    <Measure name="Poor Physical Health 13 Or Less Days Sample Frequency" column="poor_physical_health_13_or_less_days_sample_frequency" aggregator="sum" />
-    <Measure name="Poor Physical Health 13 Or Less Days Weighted Frequency" column="poor_physical_health_13_or_less_days_weighted_frequency" aggregator="sum" />
-    <Measure name="Poor Physical Health 13 Or Less Days" column="poor_physical_health_13_or_less_days_weighted_percent" aggregator="avg" />
-    <Measure name="Poor Physical Health 14 Or More Days Sample Frequency" column="poor_physical_health_14_or_more_days_sample_frequency" aggregator="sum" />
-    <Measure name="Poor Physical Health 14 Or More Days Weighted Frequency" column="poor_physical_health_14_or_more_days_weighted_frequency" aggregator="sum" />
-    <Measure name="Poor Physical Health 14 Or More Days" column="poor_physical_health_14_or_more_days_weighted_percent" aggregator="avg" />
+    <Measure name="Poor Physical Health 13 Or Less Days" column="poor_physical_health_13_or_less_days_weighted_percent" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Poor Physical Health 13 Or Less Days Sample Frequency" column="poor_physical_health_13_or_less_days_sample_frequency" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Poor Physical Health 13 Or Less Days Weighted Frequency" column="poor_physical_health_13_or_less_days_weighted_frequency" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Poor Physical Health 14 Or More Days" column="poor_physical_health_14_or_more_days_weighted_percent" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Poor Physical Health 14 Or More Days Sample Frequency" column="poor_physical_health_14_or_more_days_sample_frequency" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Poor Physical Health 14 Or More Days Weighted Frequency" column="poor_physical_health_14_or_more_days_weighted_frequency" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
 
-    <Measure name="Smoking Status Current Sample Frequency" column="smoking_status_current_sample_frequency" aggregator="sum" />
-    <Measure name="Smoking Status Current Weighted Frequency" column="smoking_status_current_weighted_frequency" aggregator="sum" />
-    <Measure name="Smoking Status Current" column="smoking_status_current_weighted_percent" aggregator="avg" />
-    <Measure name="Smoking Status Former Sample Frequency" column="smoking_status_former_sample_frequency" aggregator="sum" />
-    <Measure name="Smoking Status Former Weighted Frequency" column="smoking_status_former_weighted_frequency" aggregator="sum" />
-    <Measure name="Smoking Status Former" column="smoking_status_former_weighted_percent" aggregator="avg" />
-    <Measure name="Smoking Status Never Sample Frequency" column="smoking_status_never_sample_frequency" aggregator="sum" />
-    <Measure name="Smoking Status Never Weighted Frequency" column="smoking_status_never_weighted_frequency" aggregator="sum" />
-    <Measure name="Smoking Status Never" column="smoking_status_never_weighted_percent" aggregator="avg" />
+    <Measure name="Smoking Status Current" column="smoking_status_current_weighted_percent" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Smoking Status Current Sample Frequency" column="smoking_status_current_sample_frequency" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Smoking Status Current Weighted Frequency" column="smoking_status_current_weighted_frequency" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Smoking Status Former" column="smoking_status_former_weighted_percent" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Smoking Status Former Sample Frequency" column="smoking_status_former_sample_frequency" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Smoking Status Former Weighted Frequency" column="smoking_status_former_weighted_frequency" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Smoking Status Never" column="smoking_status_never_weighted_percent" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Smoking Status Never Sample Frequency" column="smoking_status_never_sample_frequency" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Smoking Status Never Weighted Frequency" column="smoking_status_never_weighted_frequency" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
 
-    <Measure name="Had Flu Vaccine Sample Frequency" column="had_flu_vaccine_yes_sample_frequency" aggregator="sum" />
-    <Measure name="Had Flu Vaccine Weighted Frequency" column="had_flu_vaccine_yes_weighted_frequency" aggregator="sum" />
-    <Measure name="Had Flu Vaccine" column="had_flu_vaccine_yes_weighted_percent" aggregator="avg" />
+    <Measure name="Had Flu Vaccine" column="had_flu_vaccine_yes_weighted_percent" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Had Flu Vaccine Sample Frequency" column="had_flu_vaccine_yes_sample_frequency" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Had Flu Vaccine Weighted Frequency" column="had_flu_vaccine_yes_weighted_frequency" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
 
-    <Measure name="Had Pneumonia Vaccine Sample Frequency" column="had_pneumonia_vaccine_yes_sample_frequency" aggregator="sum" />
-    <Measure name="Had Pneumonia Vaccine Weighted Frequency" column="had_pneumonia_vaccine_yes_weighted_frequency" aggregator="sum" />
-    <Measure name="Had Pneumonia Vaccine" column="had_pneumonia_vaccine_yes_weighted_percent" aggregator="avg" />
+    <Measure name="Had Pneumonia Vaccine" column="had_pneumonia_vaccine_yes_weighted_percent" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Had Pneumonia Vaccine Sample Frequency" column="had_pneumonia_vaccine_yes_sample_frequency" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Had Pneumonia Vaccine Weighted Frequency" column="had_pneumonia_vaccine_yes_weighted_frequency" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
 
-    <Measure name="FOBT or Endoscopy Sample Frequency" column="fobt_or_endoscopy_yes_sample_frequency" aggregator="sum" />
-    <Measure name="FOBT or Endoscopy Weighted Frequency" column="fobt_or_endoscopy_yes_weighted_frequency" aggregator="sum" />
-    <Measure name="FOBT or Endoscopy" column="fobt_or_endoscopy_yes_weighted_percent" aggregator="avg" />
+    <Measure name="FOBT or Endoscopy" column="fobt_or_endoscopy_yes_weighted_percent" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="FOBT or Endoscopy Sample Frequency" column="fobt_or_endoscopy_yes_sample_frequency" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="FOBT or Endoscopy Weighted Frequency" column="fobt_or_endoscopy_yes_weighted_frequency" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
 
-    <Measure name="Secondhand Smoke Exposure Sample Frequency" column="secondhand_smoke_exposure_yes_sample_frequency" aggregator="sum" />
-    <Measure name="Secondhand Smoke Exposure Weighted Frequency" column="secondhand_smoke_exposure_yes_weighted_frequency" aggregator="sum" />
-    <Measure name="Secondhand Smoke Exposure" column="secondhand_smoke_exposure_yes_weighted_percent" aggregator="avg" />
+    <Measure name="Secondhand Smoke Exposure" column="secondhand_smoke_exposure_yes_weighted_percent" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Secondhand Smoke Exposure Sample Frequency" column="secondhand_smoke_exposure_yes_sample_frequency" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Secondhand Smoke Exposure Weighted Frequency" column="secondhand_smoke_exposure_yes_weighted_frequency" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
 
-    <Measure name="Monthly Alcohol Consumption Sample Frequency" column="monthly_alcohol_consumption_some_sample_frequency" aggregator="sum" />
-    <Measure name="Monthly Alcohol Consumption Weighted Frequency" column="monthly_alcohol_consumption_some_weighted_frequency" aggregator="sum" />
-    <Measure name="Monthly Alcohol Consumption" column="monthly_alcohol_consumption_some_weighted_percent" aggregator="avg" />
+    <Measure name="Monthly Alcohol Consumption" column="monthly_alcohol_consumption_some_weighted_percent" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Monthly Alcohol Consumption Sample Frequency" column="monthly_alcohol_consumption_some_sample_frequency" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Monthly Alcohol Consumption Weighted Frequency" column="monthly_alcohol_consumption_some_weighted_frequency" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
 
-    <Measure name="Adequate Sleep Sample Frequency" column="adequate_sleep_yes_sample_frequency" aggregator="sum" />
-    <Measure name="Adequate Sleep Weighted Frequency" column="adequate_sleep_yes_weighted_frequency" aggregator="sum" />
-    <Measure name="Adequate Sleep" column="adequate_sleep_yes_weighted_percent" aggregator="avg" />
+    <Measure name="Adequate Sleep" column="adequate_sleep_yes_weighted_percent" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Adequate Sleep Sample Frequency" column="adequate_sleep_yes_sample_frequency" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Adequate Sleep Weighted Frequency" column="adequate_sleep_yes_weighted_frequency" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
 
-    <Measure name="Arthritis Sample Frequency" column="arthritis_yes_sample_frequency" aggregator="sum" />
-    <Measure name="Arthritis Weighted Frequency" column="arthritis_yes_weighted_frequency" aggregator="sum" />
-    <Measure name="Arthritis" column="arthritis_yes_weighted_percent" aggregator="avg" />
+    <Measure name="Arthritis" column="arthritis_yes_weighted_percent" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Arthritis Sample Frequency" column="arthritis_yes_sample_frequency" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Arthritis Weighted Frequency" column="arthritis_yes_weighted_frequency" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
 
-    <Measure name="Ever Kidney Disease Sample Frequency" column="had_kidney_disease_yes_sample_frequency" aggregator="sum" />
-    <Measure name="Ever Kidney Disease Weighted Frequency" column="had_kidney_disease_yes_weighted_frequency" aggregator="sum" />
-    <Measure name="Ever Kidney Disease" column="had_kidney_disease_yes_weighted_percent" aggregator="avg" />
+    <Measure name="Ever Kidney Disease" column="had_kidney_disease_yes_weighted_percent" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Ever Kidney Disease Sample Frequency" column="had_kidney_disease_yes_sample_frequency" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Ever Kidney Disease Weighted Frequency" column="had_kidney_disease_yes_weighted_frequency" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
 </Cube>

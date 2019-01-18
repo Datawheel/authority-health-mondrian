@@ -44,6 +44,14 @@
         </Hierarchy>
     </Dimension>
 
-    <Measure name="Average Reading Score" column="average_score" aggregator="avg" />
-    <Measure name="Percent Proficient (Reading)" column="proficiency" aggregator="avg" />
+    <Measure name="Average Reading Score" column="average_score" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Reading Proficiency" column="proficiency" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
+        </Annotations>
+    </Measure>
 </Cube>

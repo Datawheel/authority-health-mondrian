@@ -4,7 +4,7 @@
         <Annotation name="source_link">https://www.michigan.gov/corrections/</Annotation>
         <Annotation name="dataset_name">MDC</Annotation>
         <Annotation name="topic">Health &amp; Safety</Annotation>
-        <Annotation name="subtopic">Incarceration</Annotation>
+        <Annotation name="subtopic">Special Population</Annotation>
     </Annotations>
 
     <Table name="incarceration" schema="mdc"/>
@@ -55,10 +55,34 @@
         </Hierarchy>
     </Dimension>
 
-    <Measure name="Total" column="total" aggregator="sum" />
-    <Measure name="Prison" column="prison" aggregator="sum" />
-    <Measure name="Jail" column="jail" aggregator="sum" />
-    <Measure name="Jail/Probation" column="jail_probation" aggregator="sum" />
-    <Measure name="Probation" column="probation" aggregator="sum" />
-    <Measure name="Other" column="other" aggregator="sum" />
+    <Measure name="Total Incarcerations" column="total" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Prison Incarceration" column="prison" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Jail Incarceration" column="jail" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Jail/Probation Incarceration" column="jail_probation" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Jail/Probation Incarceration" column="probation" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Other Incarceration" column="other" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement"></Annotation>
+        </Annotations>
+    </Measure>
 </Cube>
