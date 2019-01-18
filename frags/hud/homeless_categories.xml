@@ -1,9 +1,12 @@
 <Cube name="HUD - Homeless Categories">
     <Annotations>
-        <Annotation name="source_name">US Department of Housing and Urban Development</Annotation>
-        <Annotation name="source_link">https://www.hudexchange.info/</Annotation>
-        <Annotation name="dataset_name">HUD</Annotation>
+        <Annotation name="source_name">HUD</Annotation>
+        <Annotation name="source_description">US Department of Housing and Urban Development</Annotation>
+        <Annotation name="dataset_link">https://www.hudexchange.info/</Annotation>
+        <Annotation name="dataset_name">US Department of Housing and Urban Development</Annotation>
         <Annotation name="topic">Special Population</Annotation>
+        <Annotation name="subtopic">Special Population</Annotation>
+        <Annotation name="details"></Annotation>
     </Annotations>
 
     <Table name="homeless_categories" schema="hud"/>

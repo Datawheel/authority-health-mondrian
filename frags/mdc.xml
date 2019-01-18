@@ -1,10 +1,12 @@
 <Cube name="MDC - Incarceration">
     <Annotations>
-        <Annotation name="source_name">Michigan Department of Corrections</Annotation>
-        <Annotation name="source_link">https://www.michigan.gov/corrections/</Annotation>
-        <Annotation name="dataset_name">MDC</Annotation>
-        <Annotation name="topic">Health &amp; Safety</Annotation>
+        <Annotation name="source_name">MDC</Annotation>
+        <Annotation name="source_description">Michigan Department of Corrections</Annotation>
+        <Annotation name="dataset_link">https://www.michigan.gov/corrections/</Annotation>
+        <Annotation name="dataset_name">Michigan Department of Corrections</Annotation>
+        <Annotation name="topic">Special Population</Annotation>
         <Annotation name="subtopic">Special Population</Annotation>
+        <Annotation name="details"></Annotation>
     </Annotations>
 
     <Table name="incarceration" schema="mdc"/>

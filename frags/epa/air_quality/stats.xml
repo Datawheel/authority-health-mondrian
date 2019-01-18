@@ -1,9 +1,12 @@
 <Cube name="EPA - Air Quality Stats">
     <Annotations>
-        <Annotation name="source_name">Environmental Protection Agency</Annotation>
-        <Annotation name="source_link">https://aqs.epa.gov/aqsweb/airdata/download_files.html</Annotation>
-        <Annotation name="dataset_name">EPA</Annotation>
+        <Annotation name="source_name">EPA</Annotation>
+        <Annotation name="source_description">Environmental Protection Agency</Annotation>
+        <Annotation name="dataset_link">https://aqs.epa.gov/aqsweb/airdata/download_files.html</Annotation>
+        <Annotation name="dataset_name">Environmental Protection Agency</Annotation>
         <Annotation name="topic">Natural Enviornment</Annotation>
+        <Annotation name="subtopic">Natural Enviornment</Annotation>
+        <Annotation name="details"></Annotation>
     </Annotations>
 
     <Table name="air_quality_stats" schema="epa"/>

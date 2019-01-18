@@ -1,10 +1,12 @@
 <Cube name="500 Cities">
     <Annotations>
-        <Annotation name="source_name">500 Cities: Local Data for Better Health</Annotation>
-        <Annotation name="source_link">https://www.cdc.gov/500cities/</Annotation>
+        <Annotation name="source_name">500 Cities</Annotation>
+        <Annotation name="source_description">500 Cities: Local Data for Better Health</Annotation>
+        <Annotation name="dataset_link">https://www.cdc.gov/500cities/</Annotation>
         <Annotation name="dataset_name">500 Cities</Annotation>
         <Annotation name="topic">Health</Annotation>
         <Annotation name="subtopic">Health</Annotation>
+        <Annotation name="details"></Annotation>
     </Annotations>
 
     <Table name="cities_500" schema="cities_500"/>

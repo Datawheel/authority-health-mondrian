@@ -1,9 +1,12 @@
 <Cube name="NWQMC - Water Quality">
     <Annotations>
-        <Annotation name="source_name">National Water Quality Monitoring Council</Annotation>
-        <Annotation name="source_link">https://www.waterqualitydata.us</Annotation>
-        <Annotation name="dataset_name">NWQMC</Annotation>
+        <Annotation name="source_name">NWQMC</Annotation>
+        <Annotation name="source_description">National Water Quality Monitoring Council</Annotation>
+        <Annotation name="dataset_link">https://www.waterqualitydata.us</Annotation>
+        <Annotation name="dataset_name">National Water Quality Monitoring Council</Annotation>
         <Annotation name="topic">Natural Enviornment</Annotation>
+        <Annotation name="subtopic">Natural Enviornment</Annotation>
+        <Annotation name="details"></Annotation>
     </Annotations>
 
     <Table name="water_quality" schema="nwqmc"/>

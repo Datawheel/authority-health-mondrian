@@ -1,9 +1,12 @@
 <Cube name="USDA - Low-Access by Age">
     <Annotations>
-        <Annotation name="source_name">United State Department of Agriculture</Annotation>
-        <Annotation name="source_link">https://www.ers.usda.gov/</Annotation>
-        <Annotation name="dataset_name">USDA</Annotation>
+        <Annotation name="source_name">USDA</Annotation>
+        <Annotation name="source_description">United State Department of Agriculture</Annotation>
+        <Annotation name="dataset_link">https://www.ers.usda.gov/</Annotation>
+        <Annotation name="dataset_name">United State Department of Agriculture</Annotation>
         <Annotation name="topic">Food Access</Annotation>
+        <Annotation name="subtopic">Food Access</Annotation>
+        <Annotation name="details"></Annotation>
     </Annotations>
 
     <Table name="usda_access_by_age" schema="usda"/>

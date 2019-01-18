@@ -1,9 +1,12 @@
 <Cube name="BLS - CPI">
     <Annotations>
-        <Annotation name="source_name">Bureau of Labor Statistics: Consumer Price Index</Annotation>
-        <Annotation name="source_link">https://www.bls.gov/CPI/</Annotation>
-        <Annotation name="dataset_name">BLS: CPI</Annotation>
+        <Annotation name="source_name">BLS</Annotation>
+        <Annotation name="source_description">Bureau of Labor Statistics: Consumer Price Index</Annotation>
+        <Annotation name="dataset_link">https://www.bls.gov/CPI/</Annotation>
+        <Annotation name="dataset_name">Bureau of Labor Statistics: Consumer Price Index</Annotation>
         <Annotation name="topic">Economy</Annotation>
+        <Annotation name="subtopic">Economy</Annotation>
+        <Annotation name="details"></Annotation>
     </Annotations>
 
     <Table name="cpi" schema="bls"/>

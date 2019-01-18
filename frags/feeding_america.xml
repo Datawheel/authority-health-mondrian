@@ -1,9 +1,12 @@
 <Cube name="Feeding America">
     <Annotations>
-        <Annotation name="source_name">Feeding America: Map the Meal Gap</Annotation>
-        <Annotation name="source_link">http://www.feedingamerica.org/</Annotation>
-        <Annotation name="dataset_name"></Annotation>
+        <Annotation name="source_name">Feeding America</Annotation>
+        <Annotation name="source_description">Feeding America: Map the Meal Gap</Annotation>
+        <Annotation name="dataset_link">http://www.feedingamerica.org/</Annotation>
+        <Annotation name="dataset_name">Feeding America</Annotation>
         <Annotation name="topic">Food Access</Annotation>
+        <Annotation name="subtopic">Food Access</Annotation>
+        <Annotation name="details"></Annotation>
     </Annotations>
 
     <Table name="food_insecurity" schema="feeding_america"/>

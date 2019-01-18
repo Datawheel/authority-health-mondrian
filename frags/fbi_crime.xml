@@ -1,9 +1,12 @@
 <Cube name="FBI UCR">
     <Annotations>
-        <Annotation name="source_name">FBI: Uniform Crime Reporting</Annotation>
-        <Annotation name="source_link">https://ucr.fbi.gov/</Annotation>
-        <Annotation name="dataset_name">FBI UCR</Annotation>
+        <Annotation name="source_name">FBI: UCR</Annotation>
+        <Annotation name="source_description">FBI: Uniform Crime Reporting</Annotation>
+        <Annotation name="dataset_link">https://ucr.fbi.gov/</Annotation>
+        <Annotation name="dataset_name">FBI: Uniform Crime Reporting</Annotation>
         <Annotation name="topic">Built Social Enviornment</Annotation>
+        <Annotation name="subtopic">Built Social Enviornmen</Annotation>
+        <Annotation name="details"></Annotation>
     </Annotations>
 
     <Table name="ucr_crimes" schema="fbi_crime"/>

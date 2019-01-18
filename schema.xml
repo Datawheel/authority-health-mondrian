@@ -50,9 +50,13 @@
 <Cube name="CDC Wonder - Physical Inactivity by Sex">
     <Annotations>
         <Annotation name="source_name">CDC Wonder</Annotation>
-        <Annotation name="source_link">https://www.cdc.gov/diabetes/data/countydata/countydataindicators.html</Annotation>
+        <Annotation name="source_description">CDC Wonder</Annotation>
+        <Annotation name="dataset_link">https://www.cdc.gov/diabetes/data/countydata/countydataindicators.html</Annotation>
         <Annotation name="dataset_name">CDC Wonder</Annotation>
-        <Annotation name="topic">Health Age-Adjusted Obesity Prevalence</Annotation>
+        <Annotation name="hide_in_ui">true</Annotation>
+        <Annotation name="topic">Health Conditions</Annotation>
+        <Annotation name="subtopic">Health Conditions</Annotation>
+        <Annotation name="details"></Annotation>
     </Annotations>
 
     <Table name="physical_inactivity_by_sex" schema="cdc_wonder"/>
@@ -134,9 +138,13 @@
 <Cube name="CDC Wonder - Diabetes Prevalence by Sex">
     <Annotations>
         <Annotation name="source_name">CDC Wonder</Annotation>
-        <Annotation name="source_link">https://www.cdc.gov/diabetes/data/countydata/countydataindicators.html</Annotation>
+        <Annotation name="source_description">CDC Wonder</Annotation>
+        <Annotation name="dataset_link">https://www.cdc.gov/diabetes/data/countydata/countydataindicators.html</Annotation>
         <Annotation name="dataset_name">CDC Wonder</Annotation>
+        <Annotation name="hide_in_ui">true</Annotation>
         <Annotation name="topic">Health Conditions</Annotation>
+        <Annotation name="subtopic">Health Conditions</Annotation>
+        <Annotation name="details"></Annotation>
     </Annotations>
 
     <Table name="diabetes_prevalence_by_sex" schema="cdc_wonder"/>
@@ -218,10 +226,13 @@
 <Cube name="CDC Wonder - Diabetes">
     <Annotations>
         <Annotation name="source_name">CDC Wonder</Annotation>
-        <Annotation name="source_link">https://www.cdc.gov/diabetes/data/countydata/countydataindicators.html</Annotation>
+        <Annotation name="source_description">CDC Wonder</Annotation>
+        <Annotation name="dataset_link">https://www.cdc.gov/diabetes/data/countydata/countydataindicators.html</Annotation>
         <Annotation name="dataset_name">CDC Wonder</Annotation>
         <Annotation name="hide_in_ui">true</Annotation>
         <Annotation name="topic">Health Conditions</Annotation>
+        <Annotation name="subtopic">Health Conditions</Annotation>
+        <Annotation name="details"></Annotation>
     </Annotations>
 
     <Table name="diabetes_stats" schema="cdc_wonder"/>
@@ -313,9 +324,13 @@
 <Cube name="CDC Wonder - Obesity Prevalence by Sex">
     <Annotations>
         <Annotation name="source_name">CDC Wonder</Annotation>
-        <Annotation name="source_link">https://www.cdc.gov/diabetes/data/countydata/countydataindicators.html</Annotation>
+        <Annotation name="source_description">CDC Wonder</Annotation>
+        <Annotation name="dataset_link">https://www.cdc.gov/diabetes/data/countydata/countydataindicators.html</Annotation>
         <Annotation name="dataset_name">CDC Wonder</Annotation>
+        <Annotation name="hide_in_ui">true</Annotation>
         <Annotation name="topic">Health Conditions</Annotation>
+        <Annotation name="subtopic">Health Conditions</Annotation>
+        <Annotation name="details"></Annotation>
     </Annotations>
 
     <Table name="obesity_prevalence_by_sex" schema="cdc_wonder"/>
@@ -397,9 +412,12 @@
 <Cube name="CDC Wonder - Cancer">
     <Annotations>
         <Annotation name="source_name">CDC Wonder</Annotation>
-        <Annotation name="source_link">https://wonder.cdc.gov/CancerIncidence.html</Annotation>
+        <Annotation name="source_description">CDC Wonder</Annotation>
+        <Annotation name="dataset_link">https://wonder.cdc.gov/CancerIncidence.html</Annotation>
         <Annotation name="dataset_name">CDC Wonder</Annotation>
         <Annotation name="topic">Health Conditions</Annotation>
+        <Annotation name="subtopic">Health Conditions</Annotation>
+        <Annotation name="details"></Annotation>
     </Annotations>
 
     <Table name="cancer" schema="cdc_wonder"/>
@@ -527,11 +545,13 @@
 </Cube>
 <Cube name="CDC - SVI">
     <Annotations>
-        <Annotation name="source_name">Center for Disease Control: Social Vulnerability Index</Annotation>
-        <Annotation name="source_link">https://svi.cdc.gov/</Annotation>
+        <Annotation name="source_name">Center for Disease Control</Annotation>
+        <Annotation name="source_description">Center for Disease Control: Social Vulnerability Index</Annotation>
+        <Annotation name="dataset_link">https://svi.cdc.gov/</Annotation>
         <Annotation name="dataset_name">CDC: SVI</Annotation>
         <Annotation name="topic">Socioeconomic Outcomes</Annotation>
         <Annotation name="subtopic">Socioeconomic Outcomes</Annotation>
+        <Annotation name="details"></Annotation>
     </Annotations>
 
     <Table name="svi" schema="cdc"/>
@@ -585,10 +605,13 @@
 </Cube>
 <Cube name="NAEP - Reading Scores by Disability">
     <Annotations>
-        <Annotation name="source_name">NAEP Reading Assessment</Annotation>
-        <Annotation name="source_link">https://www.nationsreportcard.gov/reading_2017/#?grade=4</Annotation>
+        <Annotation name="source_name">NAEP</Annotation>
+        <Annotation name="source_description">NAEP Reading Assessment</Annotation>
+        <Annotation name="dataset_link">https://www.nationsreportcard.gov/reading_2017/#?grade=4</Annotation>
         <Annotation name="dataset_name">NAEP Reading Assessment</Annotation>
         <Annotation name="topic">Education</Annotation>
+        <Annotation name="subtopic">Education</Annotation>
+        <Annotation name="details"></Annotation>
     </Annotations>
 
     <Table name="reading_scores_by_disability" schema="naep"/>
@@ -638,10 +661,13 @@
 </Cube>
 <Cube name="NAEP - Reading Scores by ELL">
     <Annotations>
-        <Annotation name="source_name">NAEP Reading Assessment</Annotation>
-        <Annotation name="source_link">https://www.nationsreportcard.gov/reading_2017/#?grade=4</Annotation>
+        <Annotation name="source_name">NAEP</Annotation>
+        <Annotation name="source_description">NAEP Reading Assessment</Annotation>
+        <Annotation name="dataset_link">https://www.nationsreportcard.gov/reading_2017/#?grade=4</Annotation>
         <Annotation name="dataset_name">NAEP Reading Assessment</Annotation>
         <Annotation name="topic">Education</Annotation>
+        <Annotation name="subtopic">Education</Annotation>
+        <Annotation name="details"></Annotation>
     </Annotations>
 
     <Table name="reading_scores_by_ell" schema="naep"/>
@@ -691,10 +717,13 @@
 </Cube>
 <Cube name="NAEP - Reading Scores by Parents Education">
     <Annotations>
-        <Annotation name="source_name">NAEP Reading Assessment</Annotation>
-        <Annotation name="source_link">https://www.nationsreportcard.gov/reading_2017/#?grade=4</Annotation>
+        <Annotation name="source_name">NAEP</Annotation>
+        <Annotation name="source_description">NAEP Reading Assessment</Annotation>
+        <Annotation name="dataset_link">https://www.nationsreportcard.gov/reading_2017/#?grade=4</Annotation>
         <Annotation name="dataset_name">NAEP Reading Assessment</Annotation>
         <Annotation name="topic">Education</Annotation>
+        <Annotation name="subtopic">Education</Annotation>
+        <Annotation name="details"></Annotation>
     </Annotations>
 
     <Table name="reading_scores_by_parents" schema="naep"/>
@@ -744,10 +773,13 @@
 </Cube>
 <Cube name="NAEP - Reading Scores">
     <Annotations>
-        <Annotation name="source_name">NAEP Reading Assessment</Annotation>
-        <Annotation name="source_link">https://www.nationsreportcard.gov/reading_2017/#?grade=4</Annotation>
+        <Annotation name="source_name">NAEP</Annotation>
+        <Annotation name="source_description">NAEP Reading Assessment</Annotation>
+        <Annotation name="dataset_link">https://www.nationsreportcard.gov/reading_2017/#?grade=4</Annotation>
         <Annotation name="dataset_name">NAEP Reading Assessment</Annotation>
         <Annotation name="topic">Education</Annotation>
+        <Annotation name="subtopic">Education</Annotation>
+        <Annotation name="details"></Annotation>
     </Annotations>
 
     <Table name="reading_scores" schema="naep"/>
@@ -801,10 +833,13 @@
 </Cube>
 <Cube name="NAEP - Reading Scores by Race">
     <Annotations>
-        <Annotation name="source_name">NAEP Reading Assessment</Annotation>
-        <Annotation name="source_link">https://www.nationsreportcard.gov/reading_2017/#?grade=4</Annotation>
+        <Annotation name="source_name">NAEP</Annotation>
+        <Annotation name="source_description">NAEP Reading Assessment</Annotation>
+        <Annotation name="dataset_link">https://www.nationsreportcard.gov/reading_2017/#?grade=4</Annotation>
         <Annotation name="dataset_name">NAEP Reading Assessment</Annotation>
         <Annotation name="topic">Education</Annotation>
+        <Annotation name="subtopic">Education</Annotation>
+        <Annotation name="details"></Annotation>
     </Annotations>
 
     <Table name="reading_scores_by_race" schema="naep"/>
@@ -854,10 +889,13 @@
 </Cube>
 <Cube name="NAEP - Reading Scores by NSLP">
     <Annotations>
-        <Annotation name="source_name">NAEP Reading Assessment</Annotation>
-        <Annotation name="source_link">https://www.nationsreportcard.gov/reading_2017/#?grade=4</Annotation>
+        <Annotation name="source_name">NAEP</Annotation>
+        <Annotation name="source_description">NAEP Reading Assessment</Annotation>
+        <Annotation name="dataset_link">https://www.nationsreportcard.gov/reading_2017/#?grade=4</Annotation>
         <Annotation name="dataset_name">NAEP Reading Assessment</Annotation>
         <Annotation name="topic">Education</Annotation>
+        <Annotation name="subtopic">Education</Annotation>
+        <Annotation name="details"></Annotation>
     </Annotations>
 
     <Table name="reading_scores_by_nslp" schema="naep"/>
@@ -907,10 +945,13 @@
 </Cube>
 <Cube name="NAEP - Reading Scores by Gender">
     <Annotations>
-        <Annotation name="source_name">NAEP Reading Assessment</Annotation>
-        <Annotation name="source_link">https://www.nationsreportcard.gov/reading_2017/#?grade=4</Annotation>
+        <Annotation name="source_name">NAEP</Annotation>
+        <Annotation name="source_description">NAEP Reading Assessment</Annotation>
+        <Annotation name="dataset_link">https://www.nationsreportcard.gov/reading_2017/#?grade=4</Annotation>
         <Annotation name="dataset_name">NAEP Reading Assessment</Annotation>
         <Annotation name="topic">Education</Annotation>
+        <Annotation name="subtopic">Education</Annotation>
+        <Annotation name="details"></Annotation>
     </Annotations>
 
     <Table name="reading_scores_by_gender" schema="naep"/>
@@ -960,10 +1001,13 @@
 </Cube>
 <Cube name="FBI UCR">
     <Annotations>
-        <Annotation name="source_name">FBI: Uniform Crime Reporting</Annotation>
-        <Annotation name="source_link">https://ucr.fbi.gov/</Annotation>
-        <Annotation name="dataset_name">FBI UCR</Annotation>
+        <Annotation name="source_name">FBI: UCR</Annotation>
+        <Annotation name="source_description">FBI: Uniform Crime Reporting</Annotation>
+        <Annotation name="dataset_link">https://ucr.fbi.gov/</Annotation>
+        <Annotation name="dataset_name">FBI: Uniform Crime Reporting</Annotation>
         <Annotation name="topic">Built Social Enviornment</Annotation>
+        <Annotation name="subtopic">Built Social Enviornmen</Annotation>
+        <Annotation name="details"></Annotation>
     </Annotations>
 
     <Table name="ucr_crimes" schema="fbi_crime"/>
@@ -1014,10 +1058,13 @@
 </Cube>
 <Cube name="NVSS - Life Expectancy">
     <Annotations>
-        <Annotation name="source_name">National Vital Statistics System</Annotation>
-        <Annotation name="source_link">https://www.cdc.gov/nchs/nvss/usaleep/usaleep.html</Annotation>
-        <Annotation name="dataset_name">NVSS</Annotation>
+        <Annotation name="source_name">NVSS</Annotation>
+        <Annotation name="source_description">National Vital Statistics System</Annotation>
+        <Annotation name="dataset_link">https://www.cdc.gov/nchs/nvss/usaleep/usaleep.html</Annotation>
+        <Annotation name="dataset_name">National Vital Statistics System</Annotation>
         <Annotation name="topic">Socioeconomic Outcomes</Annotation>
+        <Annotation name="subtopic">Socioeconomic Outcomes</Annotation>
+        <Annotation name="details"></Annotation>
     </Annotations>
 
     <Table name="life_expectancy" schema="nvss"/>
@@ -1048,11 +1095,13 @@
     </Measure>
 </Cube><Cube name="500 Cities">
     <Annotations>
-        <Annotation name="source_name">500 Cities: Local Data for Better Health</Annotation>
-        <Annotation name="source_link">https://www.cdc.gov/500cities/</Annotation>
+        <Annotation name="source_name">500 Cities</Annotation>
+        <Annotation name="source_description">500 Cities: Local Data for Better Health</Annotation>
+        <Annotation name="dataset_link">https://www.cdc.gov/500cities/</Annotation>
         <Annotation name="dataset_name">500 Cities</Annotation>
         <Annotation name="topic">Health</Annotation>
         <Annotation name="subtopic">Health</Annotation>
+        <Annotation name="details"></Annotation>
     </Annotations>
 
     <Table name="cities_500" schema="cities_500"/>
@@ -10678,11 +10727,13 @@
   </Cube>
 <Cube name="MiBRFS - All Years">
     <Annotations>
-        <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>
-        <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>
-        <Annotation name="dataset_name">Activity Limitations</Annotation>
+        <Annotation name="source_name">MiBRFS</Annotation>
+        <Annotation name="source_description">Michigan Behavioral Risk Factor Surveillance System</Annotation>
+        <Annotation name="dataset_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>
+        <Annotation name="dataset_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>
         <Annotation name="topic">Health</Annotation>
         <Annotation name="subtopic">Health</Annotation>
+        <Annotation name="details"></Annotation>
     </Annotations>
 
     <Table name="all_years" schema="mibrfs"/>
@@ -11395,12 +11446,13 @@
     </Measure>
 </Cube><Cube name="MiBRFS - Even Years">
     <Annotations>
-        <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>
-        <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>
-        <Annotation name="dataset_name">Activity Limitations</Annotation>
+        <Annotation name="source_name">MiBRFS</Annotation>
+        <Annotation name="source_description">Michigan Behavioral Risk Factor Surveillance System</Annotation>
+        <Annotation name="dataset_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>
+        <Annotation name="dataset_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>
         <Annotation name="topic">Health</Annotation>
         <Annotation name="subtopic">Health</Annotation>
-        <Annotation name="hide_in_ui">true</Annotation>
+        <Annotation name="details"></Annotation>
     </Annotations>
 
     <Table name="even_years" schema="mibrfs"/>
@@ -11563,10 +11615,13 @@
     </Measure>
 </Cube><Cube name="USDA - Stores">
     <Annotations>
-        <Annotation name="source_name">United State Department of Agriculture</Annotation>
-        <Annotation name="source_link">https://www.ers.usda.gov/</Annotation>
-        <Annotation name="dataset_name">USDA</Annotation>
+        <Annotation name="source_name">USDA</Annotation>
+        <Annotation name="source_description">United State Department of Agriculture</Annotation>
+        <Annotation name="dataset_link">https://www.ers.usda.gov/</Annotation>
+        <Annotation name="dataset_name">United State Department of Agriculture</Annotation>
         <Annotation name="topic">Food Access</Annotation>
+        <Annotation name="subtopic">Food Access</Annotation>
+        <Annotation name="details"></Annotation>
     </Annotations>
 
     <Table name="usda_stores" schema="usda"/>
@@ -11615,10 +11670,13 @@
     </Measure>
 </Cube><Cube name="USDA - Low-Access by Race">
     <Annotations>
-        <Annotation name="source_name">United State Department of Agriculture</Annotation>
-        <Annotation name="source_link">https://www.ers.usda.gov/</Annotation>
-        <Annotation name="dataset_name">USDA</Annotation>
+        <Annotation name="source_name">USDA</Annotation>
+        <Annotation name="source_description">United State Department of Agriculture</Annotation>
+        <Annotation name="dataset_link">https://www.ers.usda.gov/</Annotation>
+        <Annotation name="dataset_name">United State Department of Agriculture</Annotation>
         <Annotation name="topic">Food Access</Annotation>
+        <Annotation name="subtopic">Food Access</Annotation>
+        <Annotation name="details"></Annotation>
     </Annotations>
 
     <Table name="usda_access_by_race" schema="usda"/>
@@ -11659,10 +11717,13 @@
 </Cube>
 <Cube name="USDA - Low-Access by Age">
     <Annotations>
-        <Annotation name="source_name">United State Department of Agriculture</Annotation>
-        <Annotation name="source_link">https://www.ers.usda.gov/</Annotation>
-        <Annotation name="dataset_name">USDA</Annotation>
+        <Annotation name="source_name">USDA</Annotation>
+        <Annotation name="source_description">United State Department of Agriculture</Annotation>
+        <Annotation name="dataset_link">https://www.ers.usda.gov/</Annotation>
+        <Annotation name="dataset_name">United State Department of Agriculture</Annotation>
         <Annotation name="topic">Food Access</Annotation>
+        <Annotation name="subtopic">Food Access</Annotation>
+        <Annotation name="details"></Annotation>
     </Annotations>
 
     <Table name="usda_access_by_age" schema="usda"/>
@@ -11703,10 +11764,13 @@
 </Cube>
 <Cube name="USDA - Nutrition Assistance Stores">
     <Annotations>
-        <Annotation name="source_name">United State Department of Agriculture</Annotation>
-        <Annotation name="source_link">https://www.ers.usda.gov/</Annotation>
-        <Annotation name="dataset_name">USDA</Annotation>
+        <Annotation name="source_name">USDA</Annotation>
+        <Annotation name="source_description">United State Department of Agriculture</Annotation>
+        <Annotation name="dataset_link">https://www.ers.usda.gov/</Annotation>
+        <Annotation name="dataset_name">United State Department of Agriculture</Annotation>
         <Annotation name="topic">Food Access</Annotation>
+        <Annotation name="subtopic">Food Access</Annotation>
+        <Annotation name="details"></Annotation>
     </Annotations>
 
     <Table name="usda_nutrition_assistance" schema="usda"/>
@@ -11752,10 +11816,13 @@
 </Cube>
 <Cube name="Feeding America">
     <Annotations>
-        <Annotation name="source_name">Feeding America: Map the Meal Gap</Annotation>
-        <Annotation name="source_link">http://www.feedingamerica.org/</Annotation>
-        <Annotation name="dataset_name"></Annotation>
+        <Annotation name="source_name">Feeding America</Annotation>
+        <Annotation name="source_description">Feeding America: Map the Meal Gap</Annotation>
+        <Annotation name="dataset_link">http://www.feedingamerica.org/</Annotation>
+        <Annotation name="dataset_name">Feeding America</Annotation>
         <Annotation name="topic">Food Access</Annotation>
+        <Annotation name="subtopic">Food Access</Annotation>
+        <Annotation name="details"></Annotation>
     </Annotations>
 
     <Table name="food_insecurity" schema="feeding_america"/>
@@ -11812,10 +11879,13 @@
 </Cube>
 <Cube name="BLS - Unemployment">
     <Annotations>
-        <Annotation name="source_name">Bureau of Labor Statistics: Unemployment</Annotation>
-        <Annotation name="source_link">https://www.bls.gov/lau/</Annotation>
-        <Annotation name="dataset_name">BLS: Unemployment</Annotation>
+        <Annotation name="source_name">BLS</Annotation>
+        <Annotation name="source_description">Bureau of Labor Statistics: Unemployment</Annotation>
+        <Annotation name="dataset_link">https://www.bls.gov/lau/</Annotation>
+        <Annotation name="dataset_name">Bureau of Labor Statistics: Unemployment</Annotation>
         <Annotation name="topic">Economy</Annotation>
+        <Annotation name="subtopic">Economy</Annotation>
+        <Annotation name="details"></Annotation>
     </Annotations>
 
     <Table name="unemployment" schema="bls"/>
@@ -11861,10 +11931,13 @@
     </Measure>
 </Cube><Cube name="BLS - CPI">
     <Annotations>
-        <Annotation name="source_name">Bureau of Labor Statistics: Consumer Price Index</Annotation>
-        <Annotation name="source_link">https://www.bls.gov/CPI/</Annotation>
-        <Annotation name="dataset_name">BLS: CPI</Annotation>
+        <Annotation name="source_name">BLS</Annotation>
+        <Annotation name="source_description">Bureau of Labor Statistics: Consumer Price Index</Annotation>
+        <Annotation name="dataset_link">https://www.bls.gov/CPI/</Annotation>
+        <Annotation name="dataset_name">Bureau of Labor Statistics: Consumer Price Index</Annotation>
         <Annotation name="topic">Economy</Annotation>
+        <Annotation name="subtopic">Economy</Annotation>
+        <Annotation name="details"></Annotation>
     </Annotations>
 
     <Table name="cpi" schema="bls"/>
@@ -11907,10 +11980,13 @@
 </Cube>
 <Cube name="EPA - Air Quality Stats">
     <Annotations>
-        <Annotation name="source_name">Environmental Protection Agency</Annotation>
-        <Annotation name="source_link">https://aqs.epa.gov/aqsweb/airdata/download_files.html</Annotation>
-        <Annotation name="dataset_name">EPA</Annotation>
+        <Annotation name="source_name">EPA</Annotation>
+        <Annotation name="source_description">Environmental Protection Agency</Annotation>
+        <Annotation name="dataset_link">https://aqs.epa.gov/aqsweb/airdata/download_files.html</Annotation>
+        <Annotation name="dataset_name">Environmental Protection Agency</Annotation>
         <Annotation name="topic">Natural Enviornment</Annotation>
+        <Annotation name="subtopic">Natural Enviornment</Annotation>
+        <Annotation name="details"></Annotation>
     </Annotations>
 
     <Table name="air_quality_stats" schema="epa"/>
@@ -11955,10 +12031,13 @@
 </Cube>
 <Cube name="EPA - Air Quality Days">
     <Annotations>
-        <Annotation name="source_name">Environmental Protection Agency</Annotation>
-        <Annotation name="source_link">https://aqs.epa.gov/aqsweb/airdata/download_files.html</Annotation>
-        <Annotation name="dataset_name">EPA</Annotation>
+        <Annotation name="source_name">EPA</Annotation>
+        <Annotation name="source_description">Environmental Protection Agency</Annotation>
+        <Annotation name="dataset_link">https://aqs.epa.gov/aqsweb/airdata/download_files.html</Annotation>
+        <Annotation name="dataset_name">Environmental Protection Agency</Annotation>
         <Annotation name="topic">Natural Enviornment</Annotation>
+        <Annotation name="subtopic">Natural Enviornment</Annotation>
+        <Annotation name="details"></Annotation>
     </Annotations>
 
     <Table name="air_quality_days" schema="epa"/>
@@ -12000,10 +12079,13 @@
 </Cube>
 <Cube name="EPA - Air Quality Pollutants">
     <Annotations>
-        <Annotation name="source_name">Environmental Protection Agency</Annotation>
-        <Annotation name="source_link">https://aqs.epa.gov/aqsweb/airdata/download_files.html</Annotation>
-        <Annotation name="dataset_name">EPA</Annotation>
+        <Annotation name="source_name">EPA</Annotation>
+        <Annotation name="source_description">Environmental Protection Agency</Annotation>
+        <Annotation name="dataset_link">https://aqs.epa.gov/aqsweb/airdata/download_files.html</Annotation>
+        <Annotation name="dataset_name">Environmental Protection Agency</Annotation>
         <Annotation name="topic">Natural Enviornment</Annotation>
+        <Annotation name="subtopic">Natural Enviornment</Annotation>
+        <Annotation name="details"></Annotation>
     </Annotations>
 
     <Table name="air_quality_pollutants" schema="epa"/>
@@ -12045,10 +12127,13 @@
 </Cube>
 <Cube name="NWQMC - Water Quality">
     <Annotations>
-        <Annotation name="source_name">National Water Quality Monitoring Council</Annotation>
-        <Annotation name="source_link">https://www.waterqualitydata.us</Annotation>
-        <Annotation name="dataset_name">NWQMC</Annotation>
+        <Annotation name="source_name">NWQMC</Annotation>
+        <Annotation name="source_description">National Water Quality Monitoring Council</Annotation>
+        <Annotation name="dataset_link">https://www.waterqualitydata.us</Annotation>
+        <Annotation name="dataset_name">National Water Quality Monitoring Council</Annotation>
         <Annotation name="topic">Natural Enviornment</Annotation>
+        <Annotation name="subtopic">Natural Enviornment</Annotation>
+        <Annotation name="details"></Annotation>
     </Annotations>
 
     <Table name="water_quality" schema="nwqmc"/>
@@ -12097,9 +12182,12 @@
 <Cube name="UDS Mapper - Heatlh Centers">
     <Annotations>
         <Annotation name="source_name">UDS Mapper</Annotation>
-        <Annotation name="source_link">https://www.udsmapper.org/</Annotation>
+        <Annotation name="source_description">UDS Mapper</Annotation>
+        <Annotation name="dataset_link">https://www.udsmapper.org/</Annotation>
         <Annotation name="dataset_name">UDS Mapper</Annotation>
         <Annotation name="topic">Access to Care</Annotation>
+        <Annotation name="subtopic">Access to Care</Annotation>
+        <Annotation name="details"></Annotation>
     </Annotations>
 
     <Table name="health_centers" schema="uds_mapper"/>
@@ -12403,11 +12491,13 @@
     </Measure>
 </Cube><Cube name="MDC - Incarceration">
     <Annotations>
-        <Annotation name="source_name">Michigan Department of Corrections</Annotation>
-        <Annotation name="source_link">https://www.michigan.gov/corrections/</Annotation>
-        <Annotation name="dataset_name">MDC</Annotation>
-        <Annotation name="topic">Health &amp; Safety</Annotation>
+        <Annotation name="source_name">MDC</Annotation>
+        <Annotation name="source_description">Michigan Department of Corrections</Annotation>
+        <Annotation name="dataset_link">https://www.michigan.gov/corrections/</Annotation>
+        <Annotation name="dataset_name">Michigan Department of Corrections</Annotation>
+        <Annotation name="topic">Special Population</Annotation>
         <Annotation name="subtopic">Special Population</Annotation>
+        <Annotation name="details"></Annotation>
     </Annotations>
 
     <Table name="incarceration" schema="mdc"/>
@@ -12491,10 +12581,13 @@
 </Cube>
 <Cube name="HRSA - Dentists in Private Practice by Age">
     <Annotations>
-        <Annotation name="source_name">Health Resources and Services Administration</Annotation>
-        <Annotation name="source_link">https://datawarehouse.hrsa.gov/topics/ahrf.aspx</Annotation>
-        <Annotation name="dataset_name">HRSA</Annotation>
+        <Annotation name="source_name">HRSA</Annotation>
+        <Annotation name="source_description">Health Resources and Services Administration</Annotation>
+        <Annotation name="dataset_link">https://datawarehouse.hrsa.gov/topics/ahrf.aspx</Annotation>
+        <Annotation name="dataset_name">Health Resources and Services Administration</Annotation>
         <Annotation name="topic">Access to Care</Annotation>
+        <Annotation name="subtopic">Access to Care</Annotation>
+        <Annotation name="details"></Annotation>
     </Annotations>
 
     <Table name="dentists_in_private_practice_by_age" schema="hrsa"/>
@@ -12535,10 +12628,13 @@
 </Cube>
 <Cube name="HRSA - Dentists by Employment Status">
     <Annotations>
-        <Annotation name="source_name">Health Resources and Services Administration</Annotation>
-        <Annotation name="source_link">https://datawarehouse.hrsa.gov/topics/ahrf.aspx</Annotation>
-        <Annotation name="dataset_name">HRSA</Annotation>
+        <Annotation name="source_name">HRSA</Annotation>
+        <Annotation name="source_description">Health Resources and Services Administration</Annotation>
+        <Annotation name="dataset_link">https://datawarehouse.hrsa.gov/topics/ahrf.aspx</Annotation>
+        <Annotation name="dataset_name">Health Resources and Services Administration</Annotation>
         <Annotation name="topic">Access to Care</Annotation>
+        <Annotation name="subtopic">Access to Care</Annotation>
+        <Annotation name="details"></Annotation>
     </Annotations>
 
     <Table name="dentists_by_employment_status" schema="hrsa"/>
@@ -12580,10 +12676,13 @@
 </Cube>
 <Cube name="HRSA - Dentists by Sex">
     <Annotations>
-        <Annotation name="source_name">Health Resources and Services Administration</Annotation>
-        <Annotation name="source_link">https://datawarehouse.hrsa.gov/topics/ahrf.aspx</Annotation>
-        <Annotation name="dataset_name">HRSA</Annotation>
+        <Annotation name="source_name">HRSA</Annotation>
+        <Annotation name="source_description">Health Resources and Services Administration</Annotation>
+        <Annotation name="dataset_link">https://datawarehouse.hrsa.gov/topics/ahrf.aspx</Annotation>
+        <Annotation name="dataset_name">Health Resources and Services Administration</Annotation>
         <Annotation name="topic">Access to Care</Annotation>
+        <Annotation name="subtopic">Access to Care</Annotation>
+        <Annotation name="details"></Annotation>
     </Annotations>
 
     <Table name="dentists_by_sex" schema="hrsa"/>
@@ -12624,10 +12723,13 @@
 </Cube>
 <Cube name="HRSA - Dentists in Private Practice by Specialty">
     <Annotations>
-        <Annotation name="source_name">Health Resources and Services Administration</Annotation>
-        <Annotation name="source_link">https://datawarehouse.hrsa.gov/topics/ahrf.aspx</Annotation>
-        <Annotation name="dataset_name">HRSA</Annotation>
+        <Annotation name="source_name">HRSA</Annotation>
+        <Annotation name="source_description">Health Resources and Services Administration</Annotation>
+        <Annotation name="dataset_link">https://datawarehouse.hrsa.gov/topics/ahrf.aspx</Annotation>
+        <Annotation name="dataset_name">Health Resources and Services Administration</Annotation>
         <Annotation name="topic">Access to Care</Annotation>
+        <Annotation name="subtopic">Access to Care</Annotation>
+        <Annotation name="details"></Annotation>
     </Annotations>
 
     <Table name="dentists_in_private_practice_by_specialty" schema="hrsa"/>
@@ -12668,10 +12770,13 @@
 </Cube>
 <Cube name="HRSA - Dentists in Private Practice by Hours">
     <Annotations>
-        <Annotation name="source_name">Health Resources and Services Administration</Annotation>
-        <Annotation name="source_link">https://datawarehouse.hrsa.gov/topics/ahrf.aspx</Annotation>
-        <Annotation name="dataset_name">HRSA</Annotation>
+        <Annotation name="source_name">HRSA</Annotation>
+        <Annotation name="source_description">Health Resources and Services Administration</Annotation>
+        <Annotation name="dataset_link">https://datawarehouse.hrsa.gov/topics/ahrf.aspx</Annotation>
+        <Annotation name="dataset_name">Health Resources and Services Administration</Annotation>
         <Annotation name="topic">Access to Care</Annotation>
+        <Annotation name="subtopic">Access to Care</Annotation>
+        <Annotation name="details"></Annotation>
     </Annotations>
 
     <Table name="dentists_in_private_practice_by_hours" schema="hrsa"/>
@@ -12712,10 +12817,13 @@
 </Cube>
 <Cube name="HRSA - Dentists in Private Practice by Sex">
     <Annotations>
-        <Annotation name="source_name">Health Resources and Services Administration</Annotation>
-        <Annotation name="source_link">https://datawarehouse.hrsa.gov/topics/ahrf.aspx</Annotation>
-        <Annotation name="dataset_name">HRSA</Annotation>
+        <Annotation name="source_name">HRSA</Annotation>
+        <Annotation name="source_description">Health Resources and Services Administration</Annotation>
+        <Annotation name="dataset_link">https://datawarehouse.hrsa.gov/topics/ahrf.aspx</Annotation>
+        <Annotation name="dataset_name">Health Resources and Services Administration</Annotation>
         <Annotation name="topic">Access to Care</Annotation>
+        <Annotation name="subtopic">Access to Care</Annotation>
+        <Annotation name="details"></Annotation>
     </Annotations>
 
     <Table name="dentists_in_private_practice_by_sex" schema="hrsa"/>
@@ -12756,10 +12864,13 @@
 </Cube>
 <Cube name="DCI">
     <Annotations>
-        <Annotation name="source_name">Distressed Communities Index</Annotation>
-        <Annotation name="source_link">https://eig.org/dci/</Annotation>
-        <Annotation name="dataset_name">DCI</Annotation>
+        <Annotation name="source_name">DCI</Annotation>
+        <Annotation name="source_description">Distressed Communities Index</Annotation>
+        <Annotation name="dataset_link">https://eig.org/dci/</Annotation>
+        <Annotation name="dataset_name">Distressed Communities Index</Annotation>
         <Annotation name="topic">Economy</Annotation>
+        <Annotation name="subtopic">Economy</Annotation>
+        <Annotation name="details"></Annotation>
     </Annotations>
 
     <Table name="dci" schema="dci"/>
@@ -12847,10 +12958,13 @@
 </Cube>
 <Cube name="HUD - Homeless Categories">
     <Annotations>
-        <Annotation name="source_name">US Department of Housing and Urban Development</Annotation>
-        <Annotation name="source_link">https://www.hudexchange.info/</Annotation>
-        <Annotation name="dataset_name">HUD</Annotation>
+        <Annotation name="source_name">HUD</Annotation>
+        <Annotation name="source_description">US Department of Housing and Urban Development</Annotation>
+        <Annotation name="dataset_link">https://www.hudexchange.info/</Annotation>
+        <Annotation name="dataset_name">US Department of Housing and Urban Development</Annotation>
         <Annotation name="topic">Special Population</Annotation>
+        <Annotation name="subtopic">Special Population</Annotation>
+        <Annotation name="details"></Annotation>
     </Annotations>
 
     <Table name="homeless_categories" schema="hud"/>
@@ -12910,10 +13024,13 @@
 </Cube>
 <Cube name="HUD - Homeless">
     <Annotations>
-        <Annotation name="source_name">US Department of Housing and Urban Development</Annotation>
-        <Annotation name="source_link">https://www.hudexchange.info/</Annotation>
-        <Annotation name="dataset_name">HUD</Annotation>
+        <Annotation name="source_name">HUD</Annotation>
+        <Annotation name="source_description">US Department of Housing and Urban Development</Annotation>
+        <Annotation name="dataset_link">https://www.hudexchange.info/</Annotation>
+        <Annotation name="dataset_name">US Department of Housing and Urban Development</Annotation>
         <Annotation name="topic">Special Population</Annotation>
+        <Annotation name="subtopic">Special Population</Annotation>
+        <Annotation name="details"></Annotation>
     </Annotations>
 
     <Table name="homeless" schema="hud"/>

@@ -1,9 +1,12 @@
 <Cube name="NVSS - Life Expectancy">
     <Annotations>
-        <Annotation name="source_name">National Vital Statistics System</Annotation>
-        <Annotation name="source_link">https://www.cdc.gov/nchs/nvss/usaleep/usaleep.html</Annotation>
-        <Annotation name="dataset_name">NVSS</Annotation>
+        <Annotation name="source_name">NVSS</Annotation>
+        <Annotation name="source_description">National Vital Statistics System</Annotation>
+        <Annotation name="dataset_link">https://www.cdc.gov/nchs/nvss/usaleep/usaleep.html</Annotation>
+        <Annotation name="dataset_name">National Vital Statistics System</Annotation>
         <Annotation name="topic">Socioeconomic Outcomes</Annotation>
+        <Annotation name="subtopic">Socioeconomic Outcomes</Annotation>
+        <Annotation name="details"></Annotation>
     </Annotations>
 
     <Table name="life_expectancy" schema="nvss"/>

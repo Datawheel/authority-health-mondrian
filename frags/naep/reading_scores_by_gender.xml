@@ -1,9 +1,12 @@
 <Cube name="NAEP - Reading Scores by Gender">
     <Annotations>
-        <Annotation name="source_name">NAEP Reading Assessment</Annotation>
-        <Annotation name="source_link">https://www.nationsreportcard.gov/reading_2017/#?grade=4</Annotation>
+        <Annotation name="source_name">NAEP</Annotation>
+        <Annotation name="source_description">NAEP Reading Assessment</Annotation>
+        <Annotation name="dataset_link">https://www.nationsreportcard.gov/reading_2017/#?grade=4</Annotation>
         <Annotation name="dataset_name">NAEP Reading Assessment</Annotation>
         <Annotation name="topic">Education</Annotation>
+        <Annotation name="subtopic">Education</Annotation>
+        <Annotation name="details"></Annotation>
     </Annotations>
 
     <Table name="reading_scores_by_gender" schema="naep"/>

@@ -1,9 +1,12 @@
 <Cube name="HRSA - Dentists in Private Practice by Specialty">
     <Annotations>
-        <Annotation name="source_name">Health Resources and Services Administration</Annotation>
-        <Annotation name="source_link">https://datawarehouse.hrsa.gov/topics/ahrf.aspx</Annotation>
-        <Annotation name="dataset_name">HRSA</Annotation>
+        <Annotation name="source_name">HRSA</Annotation>
+        <Annotation name="source_description">Health Resources and Services Administration</Annotation>
+        <Annotation name="dataset_link">https://datawarehouse.hrsa.gov/topics/ahrf.aspx</Annotation>
+        <Annotation name="dataset_name">Health Resources and Services Administration</Annotation>
         <Annotation name="topic">Access to Care</Annotation>
+        <Annotation name="subtopic">Access to Care</Annotation>
+        <Annotation name="details"></Annotation>
     </Annotations>
 
     <Table name="dentists_in_private_practice_by_specialty" schema="hrsa"/>

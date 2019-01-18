@@ -1,9 +1,12 @@
 <Cube name="CDC Wonder - Cancer">
     <Annotations>
         <Annotation name="source_name">CDC Wonder</Annotation>
-        <Annotation name="source_link">https://wonder.cdc.gov/CancerIncidence.html</Annotation>
+        <Annotation name="source_description">CDC Wonder</Annotation>
+        <Annotation name="dataset_link">https://wonder.cdc.gov/CancerIncidence.html</Annotation>
         <Annotation name="dataset_name">CDC Wonder</Annotation>
         <Annotation name="topic">Health Conditions</Annotation>
+        <Annotation name="subtopic">Health Conditions</Annotation>
+        <Annotation name="details"></Annotation>
     </Annotations>
 
     <Table name="cancer" schema="cdc_wonder"/>

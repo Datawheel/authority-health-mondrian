@@ -1,9 +1,12 @@
 <Cube name="DCI">
     <Annotations>
-        <Annotation name="source_name">Distressed Communities Index</Annotation>
-        <Annotation name="source_link">https://eig.org/dci/</Annotation>
-        <Annotation name="dataset_name">DCI</Annotation>
+        <Annotation name="source_name">DCI</Annotation>
+        <Annotation name="source_description">Distressed Communities Index</Annotation>
+        <Annotation name="dataset_link">https://eig.org/dci/</Annotation>
+        <Annotation name="dataset_name">Distressed Communities Index</Annotation>
         <Annotation name="topic">Economy</Annotation>
+        <Annotation name="subtopic">Economy</Annotation>
+        <Annotation name="details"></Annotation>
     </Annotations>
 
     <Table name="dci" schema="dci"/>

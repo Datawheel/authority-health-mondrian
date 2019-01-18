@@ -1,9 +1,12 @@
 <Cube name="UDS Mapper - Heatlh Centers">
     <Annotations>
         <Annotation name="source_name">UDS Mapper</Annotation>
-        <Annotation name="source_link">https://www.udsmapper.org/</Annotation>
+        <Annotation name="source_description">UDS Mapper</Annotation>
+        <Annotation name="dataset_link">https://www.udsmapper.org/</Annotation>
         <Annotation name="dataset_name">UDS Mapper</Annotation>
         <Annotation name="topic">Access to Care</Annotation>
+        <Annotation name="subtopic">Access to Care</Annotation>
+        <Annotation name="details"></Annotation>
     </Annotations>
 
     <Table name="health_centers" schema="uds_mapper"/>

@@ -1,9 +1,13 @@
 <Cube name="CDC Wonder - Obesity Prevalence by Sex">
     <Annotations>
         <Annotation name="source_name">CDC Wonder</Annotation>
-        <Annotation name="source_link">https://www.cdc.gov/diabetes/data/countydata/countydataindicators.html</Annotation>
+        <Annotation name="source_description">CDC Wonder</Annotation>
+        <Annotation name="dataset_link">https://www.cdc.gov/diabetes/data/countydata/countydataindicators.html</Annotation>
         <Annotation name="dataset_name">CDC Wonder</Annotation>
+        <Annotation name="hide_in_ui">true</Annotation>
         <Annotation name="topic">Health Conditions</Annotation>
+        <Annotation name="subtopic">Health Conditions</Annotation>
+        <Annotation name="details"></Annotation>
     </Annotations>
 
     <Table name="obesity_prevalence_by_sex" schema="cdc_wonder"/>

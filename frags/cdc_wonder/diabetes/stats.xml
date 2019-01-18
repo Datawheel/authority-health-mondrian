@@ -1,10 +1,13 @@
 <Cube name="CDC Wonder - Diabetes">
     <Annotations>
         <Annotation name="source_name">CDC Wonder</Annotation>
-        <Annotation name="source_link">https://www.cdc.gov/diabetes/data/countydata/countydataindicators.html</Annotation>
+        <Annotation name="source_description">CDC Wonder</Annotation>
+        <Annotation name="dataset_link">https://www.cdc.gov/diabetes/data/countydata/countydataindicators.html</Annotation>
         <Annotation name="dataset_name">CDC Wonder</Annotation>
         <Annotation name="hide_in_ui">true</Annotation>
         <Annotation name="topic">Health Conditions</Annotation>
+        <Annotation name="subtopic">Health Conditions</Annotation>
+        <Annotation name="details"></Annotation>
     </Annotations>
 
     <Table name="diabetes_stats" schema="cdc_wonder"/>

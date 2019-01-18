@@ -1,10 +1,12 @@
 <Cube name="MiBRFS - All Years">
     <Annotations>
-        <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>
-        <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>
-        <Annotation name="dataset_name">Activity Limitations</Annotation>
+        <Annotation name="source_name">MiBRFS</Annotation>
+        <Annotation name="source_description">Michigan Behavioral Risk Factor Surveillance System</Annotation>
+        <Annotation name="dataset_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>
+        <Annotation name="dataset_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>
         <Annotation name="topic">Health</Annotation>
         <Annotation name="subtopic">Health</Annotation>
+        <Annotation name="details"></Annotation>
     </Annotations>
 
     <Table name="all_years" schema="mibrfs"/>

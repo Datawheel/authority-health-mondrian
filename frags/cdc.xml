@@ -1,10 +1,12 @@
 <Cube name="CDC - SVI">
     <Annotations>
-        <Annotation name="source_name">Center for Disease Control: Social Vulnerability Index</Annotation>
-        <Annotation name="source_link">https://svi.cdc.gov/</Annotation>
+        <Annotation name="source_name">Center for Disease Control</Annotation>
+        <Annotation name="source_description">Center for Disease Control: Social Vulnerability Index</Annotation>
+        <Annotation name="dataset_link">https://svi.cdc.gov/</Annotation>
         <Annotation name="dataset_name">CDC: SVI</Annotation>
         <Annotation name="topic">Socioeconomic Outcomes</Annotation>
         <Annotation name="subtopic">Socioeconomic Outcomes</Annotation>
+        <Annotation name="details"></Annotation>
     </Annotations>
 
     <Table name="svi" schema="cdc"/>
