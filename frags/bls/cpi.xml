@@ -1,13 +1,16 @@
 <Cube name="BLS - CPI">
     <Annotations>
-        <Annotation name="source_name">Bureau of Labor Statistics: Consumer Price Index</Annotation>
-        <Annotation name="source_link">https://www.bls.gov/CPI/</Annotation>
-        <Annotation name="dataset_name">BLS: CPI</Annotation>
-        <Annotation name="topic">Cost of Living</Annotation>
+        <Annotation name="source_name">BLS</Annotation>
+        <Annotation name="source_description">Bureau of Labor Statistics: Consumer Price Index</Annotation>
+        <Annotation name="dataset_link">https://www.bls.gov/CPI/</Annotation>
+        <Annotation name="dataset_name">Bureau of Labor Statistics: Consumer Price Index</Annotation>
+        <Annotation name="topic">Economy</Annotation>
+        <Annotation name="subtopic">Economy</Annotation>
+        <Annotation name="details"></Annotation>
     </Annotations>
 
     <Table name="cpi" schema="bls"/>
-     
+
     <Dimension name="Time">
         <Annotations>
             <Annotation name="dim_type">TIME</Annotation>
@@ -28,7 +31,19 @@
         </Hierarchy>
     </Dimension>
 
-    <Measure name="Average CPI" column="avg" aggregator="avg" />
-    <Measure name="Average USA CPI" column="usa_avg" aggregator="avg" />
-    <Measure name="Average Midwest CPI" column="midwest_avg" aggregator="avg" />
+    <Measure name="Average CPI" column="avg" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement">Index</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Average CPI (Nation)" column="usa_avg" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement">Index</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Average CPI (Midwest)" column="midwest_avg" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement">Index</Annotation>
+        </Annotations>
+    </Measure>
 </Cube>

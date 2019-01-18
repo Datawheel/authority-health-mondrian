@@ -3,19 +3,36 @@
   <Cube name="acs_poverty_status_by_nativity_5">
     <Annotations>
       <Annotation name="source_name">Census Bureau</Annotation>
-      <Annotation name="source_link">http://www.census.gov/programs-surveys/acs/</Annotation>
+      <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year.</Annotation>
+      <Annotation name="dataset_link">http://www.census.gov/programs-surveys/acs/</Annotation>
       <Annotation name="dataset_name">ACS 5-year Estimate</Annotation>
       <Annotation name="table_id">B17025</Annotation>
+      <Annotation name="topic">Special Population</Annotation>
+      <Annotation name="subtopic">Special Population</Annotation>
+      <Annotation name="details"></Annotation>
     </Annotations>
+
     <Table name="acs_poverty_status_by_nativity_5" schema="acs_test"/>
 
-    <DimensionUsage foreignKey="geoid" name="Geography" source="geography"/>
+    <DimensionUsage foreignKey="geoid" name="Geography" source="geography">
+      <Annotations>
+        <Annotation name="dim_type">GEOGRAPHY</Annotation>
+      </Annotations>
+    </DimensionUsage>
+
     <Dimension name="Year">
+      <Annotations>
+        <Annotation name="dim_type">TIME</Annotation>
+      </Annotations>
       <Hierarchy hasAll="true">
         <Level column="year" levelType="TimeYears" name="Year" type="Numeric" uniqueMembers="true"/>
       </Hierarchy>
     </Dimension>
+
     <Dimension foreignKey="dim_0" name="Poverty Status">
+      <Annotations>
+        <Annotation name="dim_type"></Annotation>
+      </Annotations>
       <Hierarchy hasAll="true">
         <InlineTable alias="dim_0_table">
           <ColumnDefs>
@@ -36,8 +53,11 @@
       <Level column="member_0_code" hideMemberIf="IfParentsName" name="Poverty Status" nameColumn="member_0" uniqueMembers="true"/>
       </Hierarchy>
     </Dimension>
-  
+
     <Dimension foreignKey="dim_2" name="Nativity Status">
+      <Annotations>
+        <Annotation name="dim_type"></Annotation>
+      </Annotations>
       <Hierarchy hasAll="true">
         <InlineTable alias="dim_2_table">
           <ColumnDefs>
@@ -77,7 +97,7 @@
       <Level column="member_1_code" hideMemberIf="IfParentsName" name="Citizenship Status" nameColumn="member_1" uniqueMembers="true"/>
       </Hierarchy>
     </Dimension>
-  
+
     <Measure aggregator="sum" column="mea_t" name="mea_t" visible="false"/>
     <Measure aggregator="sum" column="mea_nation" name="mea_nation" visible="false"/>
     <Measure aggregator="sum" column="mea_county" name="mea_county" visible="false"/>
@@ -134,7 +154,7 @@
       </MeasureExpression>
     </Measure>
 
-    <CalculatedMember dimension="Measures" name="Population" visible="true">
+    <CalculatedMember dimension="Measures" name="Poverty by Nativity" visible="true">
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[mea_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[mea_t]
@@ -157,10 +177,11 @@
       </Formula>
       <Annotations>
         <Annotation name="aggregation_method">SUM</Annotation>
+        <Annotation name="units_of_measurement">People</Annotation>
       </Annotations>
     </CalculatedMember>
 
-    <CalculatedMember dimension="Measures" name="Population Moe" visible="true">
+    <CalculatedMember dimension="Measures" name="Poverty by Nativity Moe" visible="true">
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[moe_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[moe_t]
@@ -183,7 +204,9 @@
       </Formula>
       <Annotations>
         <Annotation name="aggregation_method">MOE</Annotation>
-        <Annotation name="error_for_measure">Population</Annotation>
+        <Annotation name="units_of_measurement">People</Annotation>
+        <Annotation name="error_type">MOE</Annotation>
+        <Annotation name="error_for_measure">Poverty by Nativity</Annotation>
       </Annotations>
     </CalculatedMember>
 

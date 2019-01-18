@@ -1,9 +1,12 @@
 <Cube name="EPA - Air Quality Stats">
     <Annotations>
-        <Annotation name="source_name">Environmental Protection Agency</Annotation>
-        <Annotation name="source_link">https://aqs.epa.gov/aqsweb/airdata/download_files.html</Annotation>
-        <Annotation name="dataset_name">EPA</Annotation>
-        <Annotation name="topic">Environment</Annotation>
+        <Annotation name="source_name">EPA</Annotation>
+        <Annotation name="source_description">Environmental Protection Agency</Annotation>
+        <Annotation name="dataset_link">https://aqs.epa.gov/aqsweb/airdata/download_files.html</Annotation>
+        <Annotation name="dataset_name">Environmental Protection Agency</Annotation>
+        <Annotation name="topic">Natural Enviornment</Annotation>
+        <Annotation name="subtopic">Natural Enviornment</Annotation>
+        <Annotation name="details"></Annotation>
     </Annotations>
 
     <Table name="air_quality_stats" schema="epa"/>
@@ -28,7 +31,21 @@
         </Hierarchy>
     </Dimension>
 
-    <Measure name="Max AQI" column="max_aqi" aggregator="avg" />
-    <Measure name="90th Percentile AQI" column="90th_percentile_aqi" aggregator="avg" />
-    <Measure name="Median AQI" column="median_aqi" aggregator="avg" />
+    <Measure name="Max AQI" column="max_aqi" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement">Index</Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="90th Percentile AQI" column="90th_percentile_aqi" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement">Index</Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Median AQI" column="median_aqi" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement">Index</Annotation>
+        </Annotations>
+    </Measure>
 </Cube>

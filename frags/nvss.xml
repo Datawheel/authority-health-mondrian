@@ -1,9 +1,12 @@
 <Cube name="NVSS - Life Expectancy">
     <Annotations>
-        <Annotation name="source_name">National Vital Statistics System</Annotation>
-        <Annotation name="source_link">https://www.cdc.gov/nchs/nvss/usaleep/usaleep.html</Annotation>
-        <Annotation name="dataset_name">NVSS</Annotation>
-        <Annotation name="topic">Demographics</Annotation>
+        <Annotation name="source_name">NVSS</Annotation>
+        <Annotation name="source_description">National Vital Statistics System</Annotation>
+        <Annotation name="dataset_link">https://www.cdc.gov/nchs/nvss/usaleep/usaleep.html</Annotation>
+        <Annotation name="dataset_name">National Vital Statistics System</Annotation>
+        <Annotation name="topic">Socioeconomic Outcomes</Annotation>
+        <Annotation name="subtopic">Socioeconomic Outcomes</Annotation>
+        <Annotation name="details"></Annotation>
     </Annotations>
 
     <Table name="life_expectancy" schema="nvss"/>
@@ -20,6 +23,16 @@
         </Hierarchy>
     </Dimension>
 
-    <Measure name="Life Expectancy" column="le_rate" aggregator="avg" />
-    <Measure name="Standard Error" column="standard_error" aggregator="avg" />
+    <Measure name="Life Expectancy" column="le_rate" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement">Years</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Standard Error" column="standard_error" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement">Years</Annotation>
+            <Annotation name="error_type">MOE</Annotation>
+            <Annotation name="error_for_measure">Life Expectancy</Annotation>
+        </Annotations>
+    </Measure>
 </Cube>

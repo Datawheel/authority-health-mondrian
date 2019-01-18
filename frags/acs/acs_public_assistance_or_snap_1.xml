@@ -3,19 +3,36 @@
   <Cube name="acs_public_assistance_or_snap_1">
     <Annotations>
       <Annotation name="source_name">Census Bureau</Annotation>
-      <Annotation name="source_link">http://www.census.gov/programs-surveys/acs/</Annotation>
+      <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year.</Annotation>
+      <Annotation name="dataset_link">http://www.census.gov/programs-surveys/acs/</Annotation>
       <Annotation name="dataset_name">ACS 1-year Estimate</Annotation>
       <Annotation name="table_id">B19058</Annotation>
+      <Annotation name="topic">Food Access</Annotation>
+      <Annotation name="subtopic">Food Access</Annotation>
+      <Annotation name="details"></Annotation>
     </Annotations>
+
     <Table name="acs_public_assistance_or_snap_1" schema="acs_test"/>
 
-    <DimensionUsage foreignKey="geoid" name="Geography" source="geography"/>
+    <DimensionUsage foreignKey="geoid" name="Geography" source="geography">
+      <Annotations>
+        <Annotation name="dim_type">GEOGRAPHY</Annotation>
+      </Annotations>
+    </DimensionUsage>
+
     <Dimension name="Year">
+      <Annotations>
+        <Annotation name="dim_type">TIME</Annotation>
+      </Annotations>
       <Hierarchy hasAll="true">
         <Level column="year" levelType="TimeYears" name="Year" type="Numeric" uniqueMembers="true"/>
       </Hierarchy>
     </Dimension>
+
     <Dimension foreignKey="dim_0" name="Public Assistance or Snap">
+      <Annotations>
+        <Annotation name="dim_type"></Annotation>
+      </Annotations>
       <Hierarchy hasAll="true">
         <InlineTable alias="dim_0_table">
           <ColumnDefs>
@@ -36,7 +53,7 @@
       <Level column="member_0_code" hideMemberIf="IfParentsName" name="Public Assistance or Snap" nameColumn="member_0" uniqueMembers="true"/>
       </Hierarchy>
     </Dimension>
-  
+
     <Measure aggregator="sum" column="mea_t" name="mea_t" visible="false"/>
     <Measure aggregator="sum" column="mea_nation" name="mea_nation" visible="false"/>
     <Measure aggregator="sum" column="mea_county" name="mea_county" visible="false"/>
@@ -93,7 +110,7 @@
       </MeasureExpression>
     </Measure>
 
-    <CalculatedMember dimension="Measures" name="Population" visible="true">
+    <CalculatedMember dimension="Measures" name="Food-Stamp Population" visible="true">
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[mea_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[mea_t]
@@ -116,10 +133,11 @@
       </Formula>
       <Annotations>
         <Annotation name="aggregation_method">SUM</Annotation>
+        <Annotation name="units_of_measurement">People</Annotation>
       </Annotations>
     </CalculatedMember>
 
-    <CalculatedMember dimension="Measures" name="Population Moe" visible="true">
+    <CalculatedMember dimension="Measures" name="Food-Stamp Population Moe" visible="true">
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[moe_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[moe_t]
@@ -142,7 +160,9 @@
       </Formula>
       <Annotations>
         <Annotation name="aggregation_method">MOE</Annotation>
-        <Annotation name="error_for_measure">Population</Annotation>
+        <Annotation name="units_of_measurement">People</Annotation>
+        <Annotation name="error_type">MOE</Annotation>
+        <Annotation name="error_for_measure">Food-Stamp Population</Annotation>
       </Annotations>
     </CalculatedMember>
 

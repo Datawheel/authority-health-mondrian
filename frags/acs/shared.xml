@@ -2,7 +2,7 @@
 <Schema name="authority_health">
   <Dimension name="geography">
     <Annotations>
-      <Annotation name="dim_type">Geography</Annotation>
+      <Annotation name="dim_type">GEOGRAPHY</Annotation>
     </Annotations>
     <Hierarchy hasAll="true" name="Nation">
       <Table name="us" schema="shapes2017"/>

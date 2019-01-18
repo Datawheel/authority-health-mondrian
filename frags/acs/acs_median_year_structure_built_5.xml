@@ -3,18 +3,32 @@
   <Cube name="acs_median_year_structure_built_5">
     <Annotations>
       <Annotation name="source_name">Census Bureau</Annotation>
-      <Annotation name="source_link">http://www.census.gov/programs-surveys/acs/</Annotation>
+      <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year.</Annotation>
+      <Annotation name="dataset_link">http://www.census.gov/programs-surveys/acs/</Annotation>
       <Annotation name="dataset_name">ACS 5-year Estimate</Annotation>
       <Annotation name="table_id">B25035</Annotation>
+      <Annotation name="topic">Built Social Enviornment</Annotation>
+      <Annotation name="subtopic">Built Social Enviornment</Annotation>
+      <Annotation name="details"></Annotation>
     </Annotations>
+
     <Table name="acs_median_year_structure_built_5" schema="acs_test"/>
 
-    <DimensionUsage foreignKey="geoid" name="Geography" source="geography"/>
+    <DimensionUsage foreignKey="geoid" name="Geography" source="geography">
+      <Annotations>
+        <Annotation name="dim_type">GEOGRAPHY</Annotation>
+      </Annotations>
+    </DimensionUsage>
+
     <Dimension name="Year">
+      <Annotations>
+        <Annotation name="dim_type">TIME</Annotation>
+      </Annotations>
       <Hierarchy hasAll="true">
         <Level column="year" levelType="TimeYears" name="Year" type="Numeric" uniqueMembers="true"/>
       </Hierarchy>
     </Dimension>
+
     <Measure aggregator="avg" column="mea_t" name="mea_t" visible="false"/>
     <Measure aggregator="avg" column="mea_nation" name="mea_nation" visible="false"/>
     <Measure aggregator="avg" column="mea_county" name="mea_county" visible="false"/>
@@ -94,6 +108,7 @@
       </Formula>
       <Annotations>
         <Annotation name="aggregation_method">AVG</Annotation>
+        <Annotation name="units_of_measurement">Years</Annotation>
       </Annotations>
     </CalculatedMember>
 
@@ -120,6 +135,8 @@
       </Formula>
       <Annotations>
         <Annotation name="aggregation_method">MOE</Annotation>
+        <Annotation name="units_of_measurement">Years</Annotation>
+        <Annotation name="error_type">MOE</Annotation>
         <Annotation name="error_for_measure">Construction Date</Annotation>
       </Annotations>
     </CalculatedMember>

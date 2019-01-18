@@ -1,9 +1,12 @@
 <Cube name="Feeding America">
     <Annotations>
-        <Annotation name="source_name">Feeding America: Map the Meal Gap</Annotation>
-        <Annotation name="source_link">http://www.feedingamerica.org/</Annotation>
-        <Annotation name="dataset_name"></Annotation>
-        <Annotation name="topic">Environmental</Annotation>
+        <Annotation name="source_name">Feeding America</Annotation>
+        <Annotation name="source_description">Feeding America: Map the Meal Gap</Annotation>
+        <Annotation name="dataset_link">http://www.feedingamerica.org/</Annotation>
+        <Annotation name="dataset_name">Feeding America</Annotation>
+        <Annotation name="topic">Food Access</Annotation>
+        <Annotation name="subtopic">Food Access</Annotation>
+        <Annotation name="details"></Annotation>
     </Annotations>
 
     <Table name="food_insecurity" schema="feeding_america"/>
@@ -36,8 +39,25 @@
         </Hierarchy>
     </Dimension>
 
-    <Measure name="Population" column="population" aggregator="avg" />
-    <Measure name="Food Insecurity Rate" column="food_insecurity_rate" aggregator="avg" />
-    <Measure name="Estimated Total Food Insecure" column="estimated_food_insecure" aggregator="sum" />
-    <Measure name="Percent Eligible for Federal Nuttrition Assistance" column="pct_federal_nutrition_assistance_eligible" aggregator="avg" />
+    <Measure name="Population" column="population" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement">People</Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Food Insecurity Rate" column="food_insecurity_rate" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement">Rate</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Estimated Food Insecure Population" column="estimated_food_insecure" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement">People</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Eligible for Federal Nutrition Assistance" column="pct_federal_nutrition_assistance_eligible" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
+        </Annotations>
+    </Measure>
 </Cube>

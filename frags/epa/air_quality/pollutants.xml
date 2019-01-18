@@ -1,9 +1,12 @@
 <Cube name="EPA - Air Quality Pollutants">
     <Annotations>
-        <Annotation name="source_name">Environmental Protection Agency</Annotation>
-        <Annotation name="source_link">https://aqs.epa.gov/aqsweb/airdata/download_files.html</Annotation>
-        <Annotation name="dataset_name">EPA</Annotation>
-        <Annotation name="topic">Environment</Annotation>
+        <Annotation name="source_name">EPA</Annotation>
+        <Annotation name="source_description">Environmental Protection Agency</Annotation>
+        <Annotation name="dataset_link">https://aqs.epa.gov/aqsweb/airdata/download_files.html</Annotation>
+        <Annotation name="dataset_name">Environmental Protection Agency</Annotation>
+        <Annotation name="topic">Natural Enviornment</Annotation>
+        <Annotation name="subtopic">Natural Enviornment</Annotation>
+        <Annotation name="details"></Annotation>
     </Annotations>
 
     <Table name="air_quality_pollutants" schema="epa"/>
@@ -37,5 +40,9 @@
         </Hierarchy>
     </Dimension>
 
-    <Measure name="Number of Days" column="number_of_days" aggregator="sum" />
+    <Measure name="Air Pollutant Days" column="number_of_days" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement">Days</Annotation>
+        </Annotations>
+    </Measure>
 </Cube>

@@ -1,9 +1,12 @@
 <Cube name="HRSA - Dentists by Employment Status">
     <Annotations>
-        <Annotation name="source_name">Health Resources and Services Administration</Annotation>
-        <Annotation name="source_link">https://datawarehouse.hrsa.gov/topics/ahrf.aspx</Annotation>
-        <Annotation name="dataset_name">HRSA</Annotation>
-        <Annotation name="topic">Health</Annotation>
+        <Annotation name="source_name">HRSA</Annotation>
+        <Annotation name="source_description">Health Resources and Services Administration</Annotation>
+        <Annotation name="dataset_link">https://datawarehouse.hrsa.gov/topics/ahrf.aspx</Annotation>
+        <Annotation name="dataset_name">Health Resources and Services Administration</Annotation>
+        <Annotation name="topic">Access to Care</Annotation>
+        <Annotation name="subtopic">Access to Care</Annotation>
+        <Annotation name="details"></Annotation>
     </Annotations>
 
     <Table name="dentists_by_employment_status" schema="hrsa"/>
@@ -37,5 +40,9 @@
         </Hierarchy>
     </Dimension>
 
-    <Measure name="Number of Dentists" column="number" aggregator="sum" />
+    <Measure name="Number of Dentists" column="number" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement">People</Annotation>
+        </Annotations>
+    </Measure>
 </Cube>

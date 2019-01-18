@@ -1,9 +1,12 @@
 <Cube name="USDA - Nutrition Assistance Stores">
     <Annotations>
-        <Annotation name="source_name">United State Department of Agriculture</Annotation>
-        <Annotation name="source_link">https://www.ers.usda.gov/</Annotation>
-        <Annotation name="dataset_name">USDA</Annotation>
-        <Annotation name="topic">Environmental</Annotation>
+        <Annotation name="source_name">USDA</Annotation>
+        <Annotation name="source_description">United State Department of Agriculture</Annotation>
+        <Annotation name="dataset_link">https://www.ers.usda.gov/</Annotation>
+        <Annotation name="dataset_name">United State Department of Agriculture</Annotation>
+        <Annotation name="topic">Food Access</Annotation>
+        <Annotation name="subtopic">Food Access</Annotation>
+        <Annotation name="details"></Annotation>
     </Annotations>
 
     <Table name="usda_nutrition_assistance" schema="usda"/>
@@ -36,6 +39,14 @@
         </Hierarchy>
     </Dimension>
 
-    <Measure name="Number of Stores" column="number" aggregator="sum" />
-    <Measure name="Number per 1000 pop" column="number_pth" aggregator="avg" />
+    <Measure name="Number of Nutrition Assistance Stores" column="number" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement">Number</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Number of Nutrition Assistance Stores (per 1,000 Population)" column="number_pth" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement">Rate</Annotation>
+        </Annotations>
+    </Measure>
 </Cube>

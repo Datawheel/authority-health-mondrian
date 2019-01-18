@@ -1,10 +1,12 @@
 <Cube name="MiBRFS - Even Years">
     <Annotations>
-        <Annotation name="source_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>
-        <Annotation name="source_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>
-        <Annotation name="dataset_name">Activity Limitations</Annotation>
+        <Annotation name="source_name">MiBRFS</Annotation>
+        <Annotation name="source_description">Michigan Behavioral Risk Factor Surveillance System</Annotation>
+        <Annotation name="dataset_link">https://www.michigan.gov/mdhhs/0,5885,7-339-71550_5104_5279_39424---,00.html</Annotation>
+        <Annotation name="dataset_name">Michigan Behavioral Risk Factor Surveillance System</Annotation>
         <Annotation name="topic">Health</Annotation>
-        <Annotation name="subtopic">Risk Factors</Annotation>
+        <Annotation name="subtopic">Health</Annotation>
+        <Annotation name="details"></Annotation>
     </Annotations>
 
     <Table name="even_years" schema="mibrfs"/>
@@ -41,32 +43,128 @@
         </Hierarchy>
     </Dimension>
 
-    <Measure name="Had Pap Smear Sample Frequency" column="hap_pap_smear_yes_sample_frequency" aggregator="sum" />
-    <Measure name="Had Pap Smear Weighted Frequency" column="hap_pap_smear_yes_weighted_frequency" aggregator="sum" />
-    <Measure name="Had Pap Smear" column="hap_pap_smear_yes_weighted_percent" aggregator="avg" />
+    <Measure name="Had Pap Smear" column="hap_pap_smear_yes_weighted_percent" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Had Pap Smear Sample Frequency" column="hap_pap_smear_yes_sample_frequency" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement">People</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Had Pap Smear Weighted Frequency" column="hap_pap_smear_yes_weighted_frequency" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement">People</Annotation>
+        </Annotations>
+    </Measure>
 
-    <Measure name="Had Mammogram Sample Frequency" column="had_mammogram_yes_sample_frequency" aggregator="sum" />
-    <Measure name="Had Mammogram Weighted Frequency" column="had_mammogram_yes_weighted_frequency" aggregator="sum" />
-    <Measure name="Had Mammogram" column="had_mammogram_yes_weighted_percent" aggregator="avg" />
+    <Measure name="Had Mammogram" column="had_mammogram_yes_weighted_percent" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Had Mammogram Sample Frequency" column="had_mammogram_yes_sample_frequency" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement">People</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Had Mammogram Weighted Frequency" column="had_mammogram_yes_weighted_frequency" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement">People</Annotation>
+        </Annotations>
+    </Measure>
 
-    <Measure name="Had PSA Test Sample Frequency" column="had_psa_test_yes_sample_frequency" aggregator="sum" />
-    <Measure name="Had PSA Test Weighted Frequency" column="had_psa_test_yes_weighted_frequency" aggregator="sum" />
-    <Measure name="Had PSA Test" column="had_psa_test_yes_weighted_percent" aggregator="avg" />
+    <Measure name="Had PSA Test" column="had_psa_test_yes_weighted_percent" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Had PSA Test Sample Frequency" column="had_psa_test_yes_sample_frequency" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement">People</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Had PSA Test Weighted Frequency" column="had_psa_test_yes_weighted_frequency" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement">People</Annotation>
+        </Annotations>
+    </Measure>
 
-    <Measure name="Last PSA Test Last Year Sample Frequency" column="last_psa_test_last_year_sample_frequency" aggregator="sum" />
-    <Measure name="Last PSA Test Last Year Weighted Frequency" column="last_psa_test_last_year_weighted_frequency" aggregator="sum" />
-    <Measure name="Last PSA Test Last Year" column="last_psa_test_last_year_weighted_percent" aggregator="avg" />
-    <Measure name="Last PSA Test 1-2 Years Sample Frequency" column="last_psa_test_1_2_years_sample_frequency" aggregator="sum" />
-    <Measure name="Last PSA Test 1-2 Years Weighted Frequency" column="last_psa_test_1_2_years_weighted_frequency" aggregator="sum" />
-    <Measure name="Last PSA Test 1-2 Years" column="last_psa_test_1_2_years_weighted_percent" aggregator="avg" />
-    <Measure name="Last PSA Test 2+ Years Sample Frequency" column="last_psa_test_over_2_years_sample_frequency" aggregator="sum" />
-    <Measure name="Last PSA Test 2+ Years Weighted Frequency" column="last_psa_test_over_2_years_weighted_frequency" aggregator="sum" />
-    <Measure name="Last PSA Test 2+ Years" column="last_psa_test_over_2_years_weighted_percent" aggregator="avg" />
-    <Measure name="Last PSA Test Never Sample Frequency" column="last_psa_test_never_sample_frequency" aggregator="sum" />
-    <Measure name="Last PSA Test Never Weighted Frequency" column="last_psa_test_never_weighted_frequency" aggregator="sum" />
-    <Measure name="Last PSA Test Never" column="last_psa_test_never_weighted_percent" aggregator="avg" />
+    <Measure name="Last PSA Test Last Year" column="last_psa_test_last_year_weighted_percent" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Last PSA Test Last Year Sample Frequency" column="last_psa_test_last_year_sample_frequency" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement">People</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Last PSA Test Last Year Weighted Frequency" column="last_psa_test_last_year_weighted_frequency" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement">People</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Last PSA Test 1-2 Years" column="last_psa_test_1_2_years_weighted_percent" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Last PSA Test 1-2 Years Sample Frequency" column="last_psa_test_1_2_years_sample_frequency" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement">People</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Last PSA Test 1-2 Years Weighted Frequency" column="last_psa_test_1_2_years_weighted_frequency" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement">People</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Last PSA Test 2+ Years" column="last_psa_test_over_2_years_weighted_percent" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Last PSA Test 2+ Years Sample Frequency" column="last_psa_test_over_2_years_sample_frequency" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement">People</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Last PSA Test 2+ Years Weighted Frequency" column="last_psa_test_over_2_years_weighted_frequency" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement">People</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Last PSA Test Never" column="last_psa_test_never_weighted_percent" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Last PSA Test Never Sample Frequency" column="last_psa_test_never_sample_frequency" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement">People</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Last PSA Test Never Weighted Frequency" column="last_psa_test_never_weighted_frequency" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement">People</Annotation>
+        </Annotations>
+    </Measure>
 
-    <Measure name="Visited Dentist Sample Frequency" column="visited_dentist_yes_sample_frequency" aggregator="sum" />
-    <Measure name="Visited Dentist Weighted Frequency" column="visited_dentist_yes_weighted_frequency" aggregator="sum" />
-    <Measure name="Visited Dentist" column="visited_dentist_yes_weighted_percent" aggregator="avg" />
+    <Measure name="Visited Dentist" column="visited_dentist_yes_weighted_percent" aggregator="avg">
+        <Annotations>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Visited Dentist Sample Frequency" column="visited_dentist_yes_sample_frequency" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement">People</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Visited Dentist Weighted Frequency" column="visited_dentist_yes_weighted_frequency" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement">People</Annotation>
+        </Annotations>
+    </Measure>
 </Cube>

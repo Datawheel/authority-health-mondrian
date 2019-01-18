@@ -1,9 +1,12 @@
 <Cube name="FBI UCR">
     <Annotations>
-        <Annotation name="source_name">FBI: Uniform Crime Reporting</Annotation>
-        <Annotation name="source_link">https://ucr.fbi.gov/</Annotation>
-        <Annotation name="dataset_name">FBI UCR</Annotation>
-        <Annotation name="topic">Crime</Annotation>
+        <Annotation name="source_name">FBI: UCR</Annotation>
+        <Annotation name="source_description">FBI: Uniform Crime Reporting</Annotation>
+        <Annotation name="dataset_link">https://ucr.fbi.gov/</Annotation>
+        <Annotation name="dataset_name">FBI: Uniform Crime Reporting</Annotation>
+        <Annotation name="topic">Built Social Enviornment</Annotation>
+        <Annotation name="subtopic">Built Social Enviornmen</Annotation>
+        <Annotation name="details"></Annotation>
     </Annotations>
 
     <Table name="ucr_crimes" schema="fbi_crime"/>
@@ -40,6 +43,15 @@
         </Hierarchy>
     </Dimension>
 
-    <Measure name="Population" column="population" aggregator="sum" />
-    <Measure name="Number of Crimes" column="number" aggregator="sum" />
+    <Measure name="Population" column="population" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement">People</Annotation>
+            <Annotation name="hide_in_ui">true</Annotation>
+        </Annotations>
+    </Measure>
+    <Measure name="Number of Crimes" column="number" aggregator="sum">
+        <Annotations>
+            <Annotation name="units_of_measurement">Number</Annotation>
+        </Annotations>
+    </Measure>
 </Cube>
