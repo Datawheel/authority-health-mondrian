@@ -4,9 +4,10 @@
   <Cube name="acs_rent_amount_5">
     <Annotations>
       <Annotation name="source_name">Census Bureau</Annotation>
-      <Annotation name="source_link">http://www.census.gov/programs-surveys/acs/</Annotation>
+      <Annotation name="dtaaset_link">http://www.census.gov/programs-surveys/acs/</Annotation>
       <Annotation name="dataset_name">ACS 5-year Estimate</Annotation>
       <Annotation name="table_id">B25058</Annotation>
+      <Annotation name="topic">Built Social Enviornment</Annotation>
     </Annotations>
 
     <Table name="acs_rent_amount_5" schema="acs_test"/>

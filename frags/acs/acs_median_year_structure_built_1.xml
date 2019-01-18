@@ -3,9 +3,10 @@
   <Cube name="acs_median_year_structure_built_1">
     <Annotations>
       <Annotation name="source_name">Census Bureau</Annotation>
-      <Annotation name="source_link">http://www.census.gov/programs-surveys/acs/</Annotation>
+      <Annotation name="dataset_link">http://www.census.gov/programs-surveys/acs/</Annotation>
       <Annotation name="dataset_name">ACS 1-year Estimate</Annotation>
       <Annotation name="table_id">B25035</Annotation>
+      <Annotation name="topic">Built Social Enviornment</Annotation>
     </Annotations>
 
     <Table name="acs_median_year_structure_built_1" schema="acs_test"/>

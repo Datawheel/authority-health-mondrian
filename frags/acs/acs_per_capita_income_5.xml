@@ -3,9 +3,10 @@
   <Cube name="acs_per_capita_income_5">
     <Annotations>
       <Annotation name="source_name">Census Bureau</Annotation>
-      <Annotation name="source_link">http://www.census.gov/programs-surveys/acs/</Annotation>
+      <Annotation name="dataset_link">http://www.census.gov/programs-surveys/acs/</Annotation>
       <Annotation name="dataset_name">ACS 5-year Estimate</Annotation>
       <Annotation name="table_id">B19301</Annotation>
+      <Annotation name="hide_in_ui">true</Annotation>
     </Annotations>
 
     <Table name="acs_per_capita_income_5" schema="acs_test"/>

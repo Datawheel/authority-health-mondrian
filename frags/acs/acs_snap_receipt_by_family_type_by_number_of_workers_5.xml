@@ -3,9 +3,10 @@
   <Cube name="acs_snap_receipt_by_family_type_by_number_of_workers_5">
     <Annotations>
       <Annotation name="source_name">Census Bureau</Annotation>
-      <Annotation name="source_link">http://www.census.gov/programs-surveys/acs/</Annotation>
+      <Annotation name="dataset_link">http://www.census.gov/programs-surveys/acs/</Annotation>
       <Annotation name="dataset_name">ACS 5-year Estimate</Annotation>
       <Annotation name="table_id">B22007</Annotation>
+      <Annotation name="topic">Economy</Annotation>
     </Annotations>
 
     <Table name="acs_snap_receipt_by_family_type_by_number_of_workers_5" schema="acs_test"/>
@@ -172,7 +173,7 @@
       </MeasureExpression>
     </Measure>
 
-    <CalculatedMember dimension="Measures" name="Population" visible="true">
+    <CalculatedMember dimension="Measures" name="SNAP Receipts" visible="true">
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[mea_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[mea_t]
@@ -199,7 +200,7 @@
       </Annotations>
     </CalculatedMember>
 
-    <CalculatedMember dimension="Measures" name="Population Moe" visible="true">
+    <CalculatedMember dimension="Measures" name="SNAP Receipts Moe" visible="true">
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[moe_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[moe_t]
@@ -224,7 +225,7 @@
         <Annotation name="aggregation_method">MOE</Annotation>
         <Annotation name="units_of_measurement"></Annotation>
         <Annotation name="error_type">MOE</Annotation>
-        <Annotation name="error_for_measure">Population</Annotation>
+        <Annotation name="error_for_measure">SNAP Receipts</Annotation>
       </Annotations>
     </CalculatedMember>
 

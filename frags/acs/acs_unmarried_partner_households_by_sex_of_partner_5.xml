@@ -3,9 +3,10 @@
   <Cube name="acs_unmarried_partner_households_by_sex_of_partner_5">
     <Annotations>
       <Annotation name="source_name">Census Bureau</Annotation>
-      <Annotation name="source_link">http://www.census.gov/programs-surveys/acs/</Annotation>
+      <Annotation name="dataset_link">http://www.census.gov/programs-surveys/acs/</Annotation>
       <Annotation name="dataset_name">ACS 5-year Estimate</Annotation>
       <Annotation name="table_id">B11009</Annotation>
+      <Annotation name="topic">Special Population</Annotation>
     </Annotations>
 
     <Table name="acs_unmarried_partner_households_by_sex_of_partner_5" schema="acs_test"/>
@@ -139,7 +140,7 @@
       </MeasureExpression>
     </Measure>
 
-    <CalculatedMember dimension="Measures" name="Population" visible="true">
+    <CalculatedMember dimension="Measures" name="Unmarried Partner Households" visible="true">
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[mea_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[mea_t]
@@ -166,7 +167,7 @@
       </Annotations>
     </CalculatedMember>
 
-    <CalculatedMember dimension="Measures" name="Population Moe" visible="true">
+    <CalculatedMember dimension="Measures" name="Unmarried Partner Households Moe" visible="true">
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[moe_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[moe_t]
@@ -191,7 +192,7 @@
         <Annotation name="aggregation_method">MOE</Annotation>
         <Annotation name="units_of_measurement"></Annotation>
         <Annotation name="error_type">MOE</Annotation>
-        <Annotation name="error_for_measure">Population</Annotation>
+        <Annotation name="error_for_measure">Unmarried Partner Households</Annotation>
       </Annotations>
     </CalculatedMember>
 
