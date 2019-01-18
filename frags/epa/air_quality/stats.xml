@@ -30,19 +30,19 @@
 
     <Measure name="Max AQI" column="max_aqi" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Index</Annotation>
             <Annotation name="hide_in_ui">true</Annotation>
         </Annotations>
     </Measure>
     <Measure name="90th Percentile AQI" column="90th_percentile_aqi" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Index</Annotation>
             <Annotation name="hide_in_ui">true</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Median AQI" column="median_aqi" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Index</Annotation>
         </Annotations>
     </Measure>
 </Cube>

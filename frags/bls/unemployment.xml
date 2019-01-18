@@ -29,22 +29,22 @@
 
     <Measure name="Labor Force" column="labor_force" aggregator="sum">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">People</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Employed" column="employed" aggregator="sum">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">People</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Unemployed" column="unemployed" aggregator="sum">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">People</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Unemployment Rate" column="unemployment_rate" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
         </Annotations>
     </Measure>
 </Cube>

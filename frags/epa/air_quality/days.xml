@@ -39,7 +39,7 @@
 
     <Measure name="Air Quality Days" column="number_of_days" aggregator="sum">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Days</Annotation>
         </Annotations>
     </Measure>
 </Cube>

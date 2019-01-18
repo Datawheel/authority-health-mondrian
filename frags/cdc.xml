@@ -4,6 +4,7 @@
         <Annotation name="source_link">https://svi.cdc.gov/</Annotation>
         <Annotation name="dataset_name">CDC: SVI</Annotation>
         <Annotation name="topic">Socioeconomic Outcomes</Annotation>
+        <Annotation name="subtopic">Socioeconomic Outcomes</Annotation>
     </Annotations>
 
     <Table name="svi" schema="cdc"/>
@@ -31,27 +32,27 @@
 
     <Measure name="Socioeconomic Ranking" column="ranking_socioeconomic" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Rank</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Household Composition and Disability Ranking" column="ranking_household_composition_and_disability" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Rank</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Minority Status and Language Ranking" column="ranking_minority_status_and_language" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Rank</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Housing and Transportation Ranking" column="ranking_housing_and_transportation" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Rank</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Overall Ranking" column="ranking_overall" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Rank</Annotation>
         </Annotations>
     </Measure>
 </Cube>

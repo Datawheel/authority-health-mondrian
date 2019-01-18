@@ -47,7 +47,7 @@
 
     <Measure name="Average Reading Score by NSLP" column="average_score" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Score</Annotation>
         </Annotations>
     </Measure>
 </Cube>

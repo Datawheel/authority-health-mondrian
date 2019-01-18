@@ -38,23 +38,23 @@
 
     <Measure name="Population" column="population" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">People</Annotation>
             <Annotation name="hide_in_ui">true</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Food Insecurity Rate" column="food_insecurity_rate" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Rate</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Estimated Food Insecure Population" column="estimated_food_insecure" aggregator="sum">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">People</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Eligible for Federal Nutrition Assistance" column="pct_federal_nutrition_assistance_eligible" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
         </Annotations>
     </Measure>
 </Cube>

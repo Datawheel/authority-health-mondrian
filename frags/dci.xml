@@ -29,63 +29,63 @@
 
     <Measure name="Total Population" column="total_population" aggregator="sum">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">People</Annotation>
             <Annotation name="hide_in_ui">true</Annotation>
         </Annotations>
     </Measure>
     <Measure name="High School Dropout Rate" column="high_school_dropout_rate" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Rate</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Poverty Rate" column="poverty_rate" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Rate</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Percent Adults Not Working" column="percent_adults_not_working" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Housing Vacancy Rate" column="housing_vacancy_rate" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Rate</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Median Income Ratio" column="median_income_ratio" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Ratio</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Percent Change in Employment" column="percent_change_in_employment" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Percent Change in Establishments" column="percent_change_in_establishments" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Distress Score" column="distress_score" aggregator="min">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Index</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Distress Quintile" column="distress_quintile" aggregator="min">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Rank</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Distress County Ranking" column="distress_county_ranking" aggregator="min">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Rank</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Distress State Ranking" column="distress_state_ranking" aggregator="min">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Rank</Annotation>
         </Annotations>
     </Measure>
 </Cube>

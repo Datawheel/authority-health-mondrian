@@ -4,7 +4,7 @@
         <Annotation name="source_link">https://www.cdc.gov/500cities/</Annotation>
         <Annotation name="dataset_name">500 Cities</Annotation>
         <Annotation name="topic">Health</Annotation>
-        <Annotation name="subtopic">Chronic disease risk factors, health outcomes, and clinical preventive service use</Annotation>
+        <Annotation name="subtopic">Health</Annotation>
     </Annotations>
 
     <Table name="cities_500" schema="cities_500"/>
@@ -34,26 +34,26 @@
 
     <Measure name="Population Count" column="population_count" aggregator="sum">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">People</Annotation>
             <Annotation name="hide_in_ui">true</Annotation>
         </Annotations>
     </Measure>
 
     <Measure name="Annual Checkup" column="annual_checkup_data_value" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Annual Checkup Low Confidence Limit" column="annual_checkup_low_confidence_limit" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="error_type">LCI</Annotation>
             <Annotation name="error_for_measure">Annual Checkup</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Annual Checkup High Confidence Limit" column="annual_checkup_high_confidence_limit" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="error_type">UCI</Annotation>
             <Annotation name="error_for_measure">Annual Checkup</Annotation>
         </Annotations>
@@ -61,19 +61,19 @@
 
     <Measure name="Arthritis" column="arthritis_data_value" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Arthritis Low Confidence Limit" column="arthritis_low_confidence_limit" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="error_type">LCI</Annotation>
             <Annotation name="error_for_measure">Arthritis</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Arthritis High Confidence Limit" column="arthritis_high_confidence_limit" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="error_type">UCI</Annotation>
             <Annotation name="error_for_measure">Arthritis</Annotation>
         </Annotations>
@@ -81,19 +81,19 @@
 
     <Measure name="Binge Drinking" column="binge_drinking_data_value" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Binge Drinking Low Confidence Limit" column="binge_drinking_low_confidence_limit" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="error_type">LCI</Annotation>
             <Annotation name="error_for_measure">Binge Drinking</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Binge Drinking High Confidence Limit" column="binge_drinking_high_confidence_limit" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="error_type">UCI</Annotation>
             <Annotation name="error_for_measure">Binge Drinking</Annotation>
         </Annotations>
@@ -101,19 +101,19 @@
 
     <Measure name="COPD" column="copd_data_value" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
         </Annotations>
     </Measure>
     <Measure name="COPD Low Confidence Limit" column="copd_low_confidence_limit" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="error_type">LCI</Annotation>
             <Annotation name="error_for_measure">COPD</Annotation>
         </Annotations>
     </Measure>
     <Measure name="COPD High Confidence Limit" column="copd_high_confidence_limit" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="error_type">UCI</Annotation>
             <Annotation name="error_for_measure">COPD</Annotation>
         </Annotations>
@@ -121,19 +121,19 @@
 
     <Measure name="Cancer (except skin)" column="cancer_except_skin_data_value" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Cancer (except skin) Low Confidence Limit" column="cancer_except_skin_low_confidence_limit" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="error_type">LCI</Annotation>
             <Annotation name="error_for_measure">Cancer (except skin)</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Cancer (except skin) High Confidence Limit" column="cancer_except_skin_high_confidence_limit" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="error_type">UCI</Annotation>
             <Annotation name="error_for_measure">Cancer (except skin)</Annotation>
         </Annotations>
@@ -141,19 +141,19 @@
 
     <Measure name="Cholesterol Screening" column="cholesterol_screening_data_value" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Cholesterol Screening Low Confidence Limit" column="cholesterol_screening_low_confidence_limit" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="error_type">LCI</Annotation>
             <Annotation name="error_for_measure">Cholesterol Screening</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Cholesterol Screening High Confidence Limit" column="cholesterol_screening_high_confidence_limit" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="error_type">UCI</Annotation>
             <Annotation name="error_for_measure">Cholesterol Screening</Annotation>
         </Annotations>
@@ -161,19 +161,19 @@
 
     <Measure name="Chronic Kidney Disease" column="chronic_kidney_disease_data_value" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Chronic Kidney Disease Low Confidence Limit" column="chronic_kidney_disease_low_confidence_limit" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="error_type">LCI</Annotation>
             <Annotation name="error_for_measure">Chronic Kidney Disease</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Chronic Kidney Disease High Confidence Limit" column="chronic_kidney_disease_high_confidence_limit" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="error_type">UCI</Annotation>
             <Annotation name="error_for_measure">Chronic Kidney Disease</Annotation>
         </Annotations>
@@ -181,19 +181,19 @@
 
     <Measure name="Colorectal Cancer Screening" column="colorectal_cancer_screening_data_value" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Colorectal Cancer Screening Low Confidence Limit" column="colorectal_cancer_screening_low_confidence_limit" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="error_type">LCI</Annotation>
             <Annotation name="error_for_measure">Colorectal Cancer Screening</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Colorectal Cancer Screening High Confidence Limit" column="colorectal_cancer_screening_high_confidence_limit" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="error_type">UCI</Annotation>
             <Annotation name="error_for_measure">Colorectal Cancer Screening</Annotation>
         </Annotations>
@@ -201,19 +201,19 @@
 
     <Measure name="Core Preventive Services for Older Men" column="core_preventive_services_for_older_men_data_value" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Core Preventive Services for Older Men Low Confidence Limit" column="core_preventive_services_for_older_men_low_confidence_limit" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="error_type">LCI</Annotation>
             <Annotation name="error_for_measure">Core Preventive Services for Older Men</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Core Preventive Services for Older Men High Confidence Limit" column="core_preventive_services_for_older_men_high_confidence_limit" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="error_type">UCI</Annotation>
             <Annotation name="error_for_measure">Core Preventive Services for Older Men</Annotation>
         </Annotations>
@@ -221,19 +221,19 @@
 
     <Measure name="Core Preventive Services for Older Women" column="core_preventive_services_for_older_women_data_value" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Core Preventive Services for Older Women Low Confidence Limit" column="core_preventive_services_for_older_women_low_confidence_limit" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="error_type">LCI</Annotation>
             <Annotation name="error_for_measure">Core Preventive Services for Older Women</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Core Preventive Services for Older Women High Confidence Limit" column="core_preventive_services_for_older_women_high_confidence_limit" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="error_type">UCI</Annotation>
             <Annotation name="error_for_measure">Core Preventive Services for Older Women</Annotation>
         </Annotations>
@@ -241,19 +241,19 @@
 
     <Measure name="Coronary Heart Disease" column="coronary_heart_disease_data_value" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Coronary Heart Disease Low Confidence Limit" column="coronary_heart_disease_low_confidence_limit" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="error_type">LCI</Annotation>
             <Annotation name="error_for_measure">Coronary Heart Disease</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Coronary Heart Disease High Confidence Limit" column="coronary_heart_disease_high_confidence_limit" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="error_type">UCI</Annotation>
             <Annotation name="error_for_measure">Coronary Heart Disease</Annotation>
         </Annotations>
@@ -261,19 +261,19 @@
 
     <Measure name="Current Asthma" column="asthma_data_value" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Current Asthma Low Confidence Limit" column="asthma_low_confidence_limit" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="error_type">LCI</Annotation>
             <Annotation name="error_for_measure">Current Asthma</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Current Asthma High Confidence Limit" column="asthma_high_confidence_limit" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="error_type">UCI</Annotation>
             <Annotation name="error_for_measure">Current Asthma</Annotation>
         </Annotations>
@@ -281,19 +281,19 @@
 
     <Measure name="Current Smoking" column="current_smoking_data_value" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Current Smoking Low Confidence Limit" column="current_smoking_low_confidence_limit" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="error_type">LCI</Annotation>
             <Annotation name="error_for_measure">Current Smoking</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Current Smoking High Confidence Limit" column="current_smoking_high_confidence_limit" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="error_type">UCI</Annotation>
             <Annotation name="error_for_measure">Current Smoking</Annotation>
         </Annotations>
@@ -301,19 +301,19 @@
 
     <Measure name="Dental Visit" column="dental_visit_data_value" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Dental Visit Low Confidence Limit" column="dental_visit_low_confidence_limit" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="error_type">LCI</Annotation>
             <Annotation name="error_for_measure">Dental Visit</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Dental Visit High Confidence Limit" column="dental_visit_high_confidence_limit" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="error_type">UCI</Annotation>
             <Annotation name="error_for_measure">Dental Visit</Annotation>
         </Annotations>
@@ -321,19 +321,19 @@
 
     <Measure name="Diabetes" column="has_diabetes_data_value" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Diabetes Low Confidence Limit" column="has_diabetes_low_confidence_limit" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="error_type">LCI</Annotation>
             <Annotation name="error_for_measure">Diabetes</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Diabetes High Confidence Limit" column="has_diabetes_high_confidence_limit" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="error_type">UCI</Annotation>
             <Annotation name="error_for_measure">Diabetes</Annotation>
         </Annotations>
@@ -341,19 +341,19 @@
 
     <Measure name="Health Insurance" column="health_insurance_data_value" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Health Insurance Low Confidence Limit" column="health_insurance_low_confidence_limit" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="error_type">LCI</Annotation>
             <Annotation name="error_for_measure">Health Insurance</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Health Insurance High Confidence Limit" column="health_insurance_high_confidence_limit" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="error_type">UCI</Annotation>
             <Annotation name="error_for_measure">Health Insurance</Annotation>
         </Annotations>
@@ -361,19 +361,19 @@
 
     <Measure name="High Blood Pressure" column="high_blood_pressure_data_value" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
         </Annotations>
     </Measure>
     <Measure name="High Blood Pressure Low Confidence Limit" column="high_blood_pressure_low_confidence_limit" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="error_type">LCI</Annotation>
             <Annotation name="error_for_measure">High Blood Pressure</Annotation>
         </Annotations>
     </Measure>
     <Measure name="High Blood Pressure High Confidence Limit" column="high_blood_pressure_high_confidence_limit" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="error_type">UCI</Annotation>
             <Annotation name="error_for_measure">High Blood Pressure</Annotation>
         </Annotations>
@@ -381,19 +381,19 @@
 
     <Measure name="High Cholesterol" column="high_cholesterol_data_value" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
         </Annotations>
     </Measure>
     <Measure name="High Cholesterol Low Confidence Limit" column="high_cholesterol_low_confidence_limit" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="error_type">LCI</Annotation>
             <Annotation name="error_for_measure">High Cholesterol</Annotation>
         </Annotations>
     </Measure>
     <Measure name="High Cholesterol High Confidence Limit" column="high_cholesterol_high_confidence_limit" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="error_type">UCI</Annotation>
             <Annotation name="error_for_measure">High Cholesterol</Annotation>
         </Annotations>
@@ -401,19 +401,19 @@
 
     <Measure name="Mammography" column="mammography_data_value" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Mammography Low Confidence Limit" column="mammography_low_confidence_limit" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="error_type">LCI</Annotation>
             <Annotation name="error_for_measure">Mammography</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Mammography High Confidence Limit" column="mammography_high_confidence_limit" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="error_type">UCI</Annotation>
             <Annotation name="error_for_measure">Mammography</Annotation>
         </Annotations>
@@ -421,19 +421,19 @@
 
     <Measure name="Mental Health" column="mental_health_data_value" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Mental Health Low Confidence Limit" column="mental_health_low_confidence_limit" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="error_type">LCI</Annotation>
             <Annotation name="error_for_measure">Mental Health</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Mental Health High Confidence Limit" column="mental_health_high_confidence_limit" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="error_type">UCI</Annotation>
             <Annotation name="error_for_measure">Mental Health</Annotation>
         </Annotations>
@@ -441,19 +441,19 @@
 
     <Measure name="Obesity" column="obesity_data_value" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Obesity Low Confidence Limit" column="obesity_low_confidence_limit" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="error_type">LCI</Annotation>
             <Annotation name="error_for_measure">Obesity</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Obesity High Confidence Limit" column="obesity_high_confidence_limit" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="error_type">UCI</Annotation>
             <Annotation name="error_for_measure">Obesity</Annotation>
         </Annotations>
@@ -461,19 +461,19 @@
 
     <Measure name="Pap Smear Test" column="pap_smear_test_data_value" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Pap Smear Test Low Confidence Limit" column="pap_smear_test_low_confidence_limit" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="error_type">LCI</Annotation>
             <Annotation name="error_for_measure">Pap Smear Test</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Pap Smear Test High Confidence Limit" column="pap_smear_test_high_confidence_limit" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="error_type">UCI</Annotation>
             <Annotation name="error_for_measure">Pap Smear Test</Annotation>
         </Annotations>
@@ -481,19 +481,19 @@
 
     <Measure name="Physical Health" column="physical_health_data_value" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Physical Health Low Confidence Limit" column="physical_health_low_confidence_limit" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="error_type">LCI</Annotation>
             <Annotation name="error_for_measure">Physical Health</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Physical Health High Confidence Limit" column="physical_health_high_confidence_limit" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="error_type">UCI</Annotation>
             <Annotation name="error_for_measure">Physical Health</Annotation>
         </Annotations>
@@ -501,19 +501,19 @@
 
     <Measure name="Physical Inactivity" column="physical_inactivity_data_value" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Physical Inactivity Low Confidence Limit" column="physical_inactivity_low_confidence_limit" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="error_type">LCI</Annotation>
             <Annotation name="error_for_measure">Physical Inactivity</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Physical Inactivity High Confidence Limit" column="physical_inactivity_high_confidence_limit" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="error_type">UCI</Annotation>
             <Annotation name="error_for_measure">Physical Inactivity</Annotation>
         </Annotations>
@@ -521,19 +521,19 @@
 
     <Measure name="Sleep Less Than 7 Hours" column="sleep_less_than_7_hours_data_value" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Sleep Less Than 7 Hours Low Confidence Limit" column="sleep_less_than_7_hours_low_confidence_limit" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="error_type">LCI</Annotation>
             <Annotation name="error_for_measure">Sleep Less Than 7 Hours</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Sleep Less Than 7 Hours High Confidence Limit" column="sleep_less_than_7_hours_high_confidence_limit" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="error_type">UCI</Annotation>
             <Annotation name="error_for_measure">Sleep Less Than 7 Hours</Annotation>
         </Annotations>
@@ -541,19 +541,19 @@
 
     <Measure name="Stroke" column="had_stroke_data_value" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Stroke Low Confidence Limit" column="had_stroke_low_confidence_limit" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="error_type">LCI</Annotation>
             <Annotation name="error_for_measure">Stroke</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Stroke High Confidence Limit" column="had_stroke_high_confidence_limit" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="error_type">UCI</Annotation>
             <Annotation name="error_for_measure">Stroke</Annotation>
         </Annotations>
@@ -561,19 +561,19 @@
 
     <Measure name="Taking Blood Pressure Medication" column="taking_bp_medication_data_value" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Taking Blood Pressure Medication Low Confidence Limit" column="taking_bp_medication_low_confidence_limit" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="error_type">LCI</Annotation>
             <Annotation name="error_for_measure">Taking Blood Pressure Medication</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Taking Blood Pressure Medication High Confidence Limit" column="taking_bp_medication_high_confidence_limit" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="error_type">UCI</Annotation>
             <Annotation name="error_for_measure">Taking Blood Pressure Medication</Annotation>
         </Annotations>
@@ -581,19 +581,19 @@
 
     <Measure name="Teeth Loss" column="teeth_loss_data_value" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Teeth Loss Low Confidence Limit" column="teeth_loss_low_confidence_limit" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="error_type">LCI</Annotation>
             <Annotation name="error_for_measure">Teeth Loss</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Teeth Loss High Confidence Limit" column="teeth_loss_high_confidence_limit" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="error_type">UCI</Annotation>
             <Annotation name="error_for_measure">Teeth Loss</Annotation>
         </Annotations>

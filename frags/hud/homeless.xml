@@ -43,18 +43,18 @@
 
     <Measure name="CoC Name" column="coc_name" datatype="String" caption="CoC Name" aggregator="max">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Name</Annotation>
             <Annotation name="hide_in_ui">true</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Sheltered Homeless Population" column="sheltered" aggregator="sum">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">People</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Unsheltered Homeless Population" column="unsheltered" aggregator="sum">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">People</Annotation>
         </Annotations>
     </Measure>
 </Cube>

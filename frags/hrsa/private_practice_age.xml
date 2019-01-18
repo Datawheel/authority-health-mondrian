@@ -38,7 +38,7 @@
 
     <Measure name="Dentists in Private Practice by Age" column="number" aggregator="sum">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">People</Annotation>
         </Annotations>
     </Measure>
 </Cube>

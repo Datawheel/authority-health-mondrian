@@ -22,12 +22,12 @@
 
     <Measure name="Life Expectancy" column="le_rate" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Years</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Standard Error" column="standard_error" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Years</Annotation>
             <Annotation name="error_type">MOE</Annotation>
             <Annotation name="error_for_measure">Life Expectancy</Annotation>
         </Annotations>

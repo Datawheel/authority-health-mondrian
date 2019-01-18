@@ -65,50 +65,50 @@
 
     <Measure name="Cancer Diagnosis" column="count" aggregator="sum">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">People</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Population" column="population" aggregator="sum">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">People</Annotation>
             <Annotation name="hide_in_ui">true</Annotation>
         </Annotations>
     </Measure>
 
     <Measure name="Age-Adjusted Cancer Rate" column="age_adjusted_rate" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Rate</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Age-Adjusted Cancer Rate Lower 95 Percent Confidence Interval" column="age_adjusted_rate_lower_95_percent_confidence_interval" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Rate</Annotation>
             <Annotation name="error_type">LCI</Annotation>
             <Annotation name="error_for_measure">Age-Adjusted Cancer Rate</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Age-Adjusted Cancer Rate Upper 95 Percent Confidence Interval" column="age_adjusted_rate_upper_95_percent_confidence_interval" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Rate</Annotation>
             <Annotation name="error_type">UCI</Annotation>
             <Annotation name="error_for_measure">Age-Adjusted Cancer Rate</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Age-Adjusted Cancer Rate Standard Error" column="age_adjusted_rate_standard_error" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Rate</Annotation>
         </Annotations>
     </Measure>
 
     <Measure name="Crude Rate" column="crude_rate" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Rate</Annotation>
             <Annotation name="hide_in_ui">true</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Crude Rate Lower 95 Percent Confidence Interval" column="crude_rate_lower_95_percent_confidence_interval" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Rate</Annotation>
             <Annotation name="error_type">LCI</Annotation>
             <Annotation name="error_for_measure">Crude Rate</Annotation>
             <Annotation name="hide_in_ui">true</Annotation>
@@ -116,7 +116,7 @@
     </Measure>
     <Measure name="Crude Rate Upper 95 Percent Confidence Interval" column="crude_rate_upper_95_percent_confidence_interval" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Rate</Annotation>
             <Annotation name="error_type">UCI</Annotation>
             <Annotation name="error_for_measure">Crude Rate</Annotation>
             <Annotation name="hide_in_ui">true</Annotation>
@@ -124,7 +124,7 @@
     </Measure>
     <Measure name="Crude Rate Standard Error" column="crude_rate_standard_error" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Rate</Annotation>
             <Annotation name="hide_in_ui">true</Annotation>
         </Annotations>
     </Measure>

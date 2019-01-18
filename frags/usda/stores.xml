@@ -42,12 +42,12 @@
 
     <Measure name="Number of Food Stores" column="number" aggregator="sum">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Number</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Number of Food Stores (per 1,000 Population)" column="number_pth" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Rate</Annotation>
         </Annotations>
     </Measure>
 </Cube>

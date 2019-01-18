@@ -40,12 +40,12 @@
 
     <Measure name="Lead Level" column="lead_level" datatype="String" caption="Lead Level" aggregator="max">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Name</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Mercury Level" column="mercury_level" datatype="String" caption="Mercury Level" aggregator="max">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Name</Annotation>
         </Annotations>
     </Measure>
 </Cube>

@@ -30,17 +30,17 @@
 
     <Measure name="Average CPI" column="avg" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Index</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Average CPI (Nation)" column="usa_avg" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Index</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Average CPI (Midwest)" column="midwest_avg" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement"></Annotation>
+            <Annotation name="units_of_measurement">Index</Annotation>
         </Annotations>
     </Measure>
 </Cube>
