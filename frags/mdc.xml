@@ -77,7 +77,7 @@
             <Annotation name="units_of_measurement">People</Annotation>
         </Annotations>
     </Measure>
-    <Measure name="Jail/Probation Incarceration" column="probation" aggregator="sum">
+    <Measure name="Probation Incarceration" column="probation" aggregator="sum">
         <Annotations>
             <Annotation name="units_of_measurement">People</Annotation>
         </Annotations>

@@ -12207,7 +12207,7 @@
         </Annotations>
         <Hierarchy hasAll="true" name="Zip">
             <Table name="zips" schema="shapes2017"/>
-            <Level column="name" name="Zip" nameColumn="name" uniqueMembers="true"/>
+            <Level column="geoid" name="Zip" nameColumn="name" uniqueMembers="true"/>
         </Hierarchy>
     </Dimension>
 
@@ -12568,7 +12568,7 @@
             <Annotation name="units_of_measurement">People</Annotation>
         </Annotations>
     </Measure>
-    <Measure name="Jail/Probation Incarceration" column="probation" aggregator="sum">
+    <Measure name="Probation Incarceration" column="probation" aggregator="sum">
         <Annotations>
             <Annotation name="units_of_measurement">People</Annotation>
         </Annotations>
