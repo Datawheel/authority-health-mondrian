@@ -1027,6 +1027,7 @@
         </Annotations>
         <Hierarchy hasAll="true" name="Place">
             <Table name="places" schema="shapes2017"/>
+            <Level name="State" column="state_id" nameColumn="state_name" uniqueMembers="true" hideMemberIf="IfBlankName" />
             <Level name="Place" column="geoid" nameColumn="name" uniqueMembers="true" hideMemberIf="IfBlankName" />
         </Hierarchy>
     </Dimension>
