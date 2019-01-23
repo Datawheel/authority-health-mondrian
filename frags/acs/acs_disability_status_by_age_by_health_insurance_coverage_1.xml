@@ -193,7 +193,7 @@
       </MeasureExpression>
     </Measure>
 
-    <CalculatedMember dimension="Measures" name="Population in Density" visible="true">
+    <CalculatedMember dimension="Measures" name="Population in Disability" visible="true">
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[mea_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[mea_t]
@@ -220,7 +220,7 @@
       </Annotations>
     </CalculatedMember>
 
-    <CalculatedMember dimension="Measures" name="Population in Density Moe" visible="true">
+    <CalculatedMember dimension="Measures" name="Population in Disability Moe" visible="true">
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[moe_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[moe_t]
@@ -245,7 +245,7 @@
         <Annotation name="aggregation_method">MOE</Annotation>
         <Annotation name="units_of_measurement">People</Annotation>
         <Annotation name="error_type">MOE</Annotation>
-        <Annotation name="error_for_measure">Population in Density</Annotation>
+        <Annotation name="error_for_measure">Population in Disability</Annotation>
       </Annotations>
     </CalculatedMember>
 
