@@ -11,6 +11,24 @@
 
     <Table name="life_expectancy" schema="nvss"/>
 
+    <Dimension name="Start Year">
+        <Annotations>
+          <Annotation name="dim_type">TIME</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true">
+          <Level name="Start Year" column="start_year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
+
+    <Dimension name="End Year">
+        <Annotations>
+          <Annotation name="dim_type">TIME</Annotation>
+        </Annotations>
+        <Hierarchy hasAll="true">
+          <Level name="End Year" column="year" levelType="TimeYears" type="Numeric" uniqueMembers="true" />
+        </Hierarchy>
+    </Dimension>
+
     <Dimension foreignKey="tract_fips" name="Geography">
         <Annotations>
             <Annotation name="dim_type">GEOGRAPHY</Annotation>
