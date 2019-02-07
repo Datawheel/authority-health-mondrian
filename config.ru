@@ -65,13 +65,15 @@ logger = Logger.new(STDERR)
 logger.level = Logger::DEBUG
 
 raise "Please set AH_DB_HOST environment var" if !ENV.has_key?('AH_DB_HOST')
+raise "Please set AH_DB_NAME environment var" if !ENV.has_key?('AH_DB_NAME')
+raise "Please set AH_DB_USER environment var" if !ENV.has_key?('AH_DB_USER')
 raise "Please set AH_DB_PW environment var" if !ENV.has_key?('AH_DB_PW')
 
 PARAMS = {
   driver: 'postgresql',
   host: ENV['AH_DB_HOST'],
-  database: 'authority_health',
-  username: 'postgres',
+  database: ENV['AH_DB_NAME'],
+  username: ENV['AH_DB_USER'],
   password: ENV['AH_DB_PW'],
   catalog: File.join(File.dirname(__FILE__), 'schema.xml')
 }
