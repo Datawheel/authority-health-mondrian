@@ -64,11 +64,12 @@ enum.register(NoneRolapAggregator.new(index+1))
 logger = Logger.new(STDERR)
 logger.level = Logger::DEBUG
 
+raise "Please set AH_DB_HOST environment var" if !ENV.has_key?('AH_DB_HOST')
 raise "Please set AH_DB_PW environment var" if !ENV.has_key?('AH_DB_PW')
 
 PARAMS = {
   driver: 'postgresql',
-  host: 'ah-aspen.datawheel.us',
+  host: ENV['AH_DB_HOST'],
   database: 'authority_health',
   username: 'postgres',
   password: ENV['AH_DB_PW'],
