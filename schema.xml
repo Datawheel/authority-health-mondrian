@@ -765,7 +765,7 @@
         </Hierarchy>
     </Dimension>
 
-    <Measure name="Average Reading Score by NSLP" column="average_score" aggregator="avg">
+    <Measure name="Average Reading Score by Parents Education" column="average_score" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Score</Annotation>
         </Annotations>
