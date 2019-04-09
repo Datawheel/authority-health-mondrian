@@ -12954,22 +12954,22 @@
             <Annotation name="units_of_measurement">Percentage</Annotation>
         </Annotations>
     </Measure>
-    <Measure name="Distress Score" column="distress_score" aggregator="min">
+    <Measure name="Distress Score" column="distress_score" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Index</Annotation>
         </Annotations>
     </Measure>
-    <Measure name="Distress Quintile" column="distress_quintile" aggregator="min">
+    <Measure name="Distress Quintile" column="distress_quintile" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Rank</Annotation>
         </Annotations>
     </Measure>
-    <Measure name="Distress County Ranking" column="distress_county_ranking" aggregator="min">
+    <Measure name="Distress County Ranking" column="distress_county_ranking" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Rank</Annotation>
         </Annotations>
     </Measure>
-    <Measure name="Distress State Ranking" column="distress_state_ranking" aggregator="min">
+    <Measure name="Distress State Ranking" column="distress_state_ranking" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Rank</Annotation>
         </Annotations>
