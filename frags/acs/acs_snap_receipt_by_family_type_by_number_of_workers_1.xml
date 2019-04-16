@@ -182,6 +182,10 @@
     </Measure>
 
     <CalculatedMember dimension="Measures" name="SNAP Receipts" visible="true">
+      <Annotations>
+        <Annotation name="aggregation_method">SUM</Annotation>
+        <Annotation name="units_of_measurement">Households</Annotation>
+      </Annotations>
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[mea_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[mea_t]
@@ -202,13 +206,15 @@
         WHEN 1 = 1 THEN [Measures].[mea_nation]
         END
       </Formula>
-      <Annotations>
-        <Annotation name="aggregation_method">SUM</Annotation>
-        <Annotation name="units_of_measurement">Households</Annotation>
-      </Annotations>
     </CalculatedMember>
 
     <CalculatedMember dimension="Measures" name="SNAP Receipts Moe" visible="true">
+      <Annotations>
+        <Annotation name="aggregation_method">MOE</Annotation>
+        <Annotation name="units_of_measurement">Households</Annotation>
+        <Annotation name="error_type">MOE</Annotation>
+        <Annotation name="error_for_measure">SNAP Receipts</Annotation>
+      </Annotations>
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[moe_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[moe_t]
@@ -229,12 +235,6 @@
         WHEN 1 = 1 THEN [Measures].[moe_nation]
         END
       </Formula>
-      <Annotations>
-        <Annotation name="aggregation_method">MOE</Annotation>
-        <Annotation name="units_of_measurement">Households</Annotation>
-        <Annotation name="error_type">MOE</Annotation>
-        <Annotation name="error_for_measure">SNAP Receipts</Annotation>
-      </Annotations>
     </CalculatedMember>
 
     <!-- Here add in rca and percent calc if asked for -->

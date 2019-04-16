@@ -1870,6 +1870,10 @@
     </Measure>
 
     <CalculatedMember dimension="Measures" name="Poverty by Nativity" visible="true">
+      <Annotations>
+        <Annotation name="aggregation_method">SUM</Annotation>
+        <Annotation name="units_of_measurement">People</Annotation>
+      </Annotations>
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[mea_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[mea_t]
@@ -1890,13 +1894,15 @@
         WHEN 1 = 1 THEN [Measures].[mea_nation]
         END
       </Formula>
-      <Annotations>
-        <Annotation name="aggregation_method">SUM</Annotation>
-        <Annotation name="units_of_measurement">People</Annotation>
-      </Annotations>
     </CalculatedMember>
 
     <CalculatedMember dimension="Measures" name="Poverty by Nativity Moe" visible="true">
+      <Annotations>
+        <Annotation name="aggregation_method">MOE</Annotation>
+        <Annotation name="units_of_measurement">People</Annotation>
+        <Annotation name="error_type">MOE</Annotation>
+        <Annotation name="error_for_measure">Poverty by Nativity</Annotation>
+      </Annotations>
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[moe_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[moe_t]
@@ -1917,12 +1923,6 @@
         WHEN 1 = 1 THEN [Measures].[moe_nation]
         END
       </Formula>
-      <Annotations>
-        <Annotation name="aggregation_method">MOE</Annotation>
-        <Annotation name="units_of_measurement">People</Annotation>
-        <Annotation name="error_type">MOE</Annotation>
-        <Annotation name="error_for_measure">Poverty by Nativity</Annotation>
-      </Annotations>
     </CalculatedMember>
 
     <!-- Here add in rca and percent calc if asked for -->
@@ -2117,6 +2117,10 @@
     </Measure>
 
     <CalculatedMember dimension="Measures" name="Population by Insurance Coverage" visible="true">
+      <Annotations>
+        <Annotation name="aggregation_method">SUM</Annotation>
+        <Annotation name="units_of_measurement">People</Annotation>
+      </Annotations>
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[mea_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[mea_t]
@@ -2137,13 +2141,15 @@
         WHEN 1 = 1 THEN [Measures].[mea_nation]
         END
       </Formula>
-      <Annotations>
-        <Annotation name="aggregation_method">SUM</Annotation>
-        <Annotation name="units_of_measurement">People</Annotation>
-      </Annotations>
     </CalculatedMember>
 
     <CalculatedMember dimension="Measures" name="Population by Insurance Coverage Moe" visible="true">
+      <Annotations>
+        <Annotation name="aggregation_method">MOE</Annotation>
+        <Annotation name="units_of_measurement">People</Annotation>
+        <Annotation name="error_type">MOE</Annotation>
+        <Annotation name="error_for_measure">Population by Insurance Coverage</Annotation>
+      </Annotations>
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[moe_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[moe_t]
@@ -2164,12 +2170,6 @@
         WHEN 1 = 1 THEN [Measures].[moe_nation]
         END
       </Formula>
-      <Annotations>
-        <Annotation name="aggregation_method">MOE</Annotation>
-        <Annotation name="units_of_measurement">People</Annotation>
-        <Annotation name="error_type">MOE</Annotation>
-        <Annotation name="error_for_measure">Population by Insurance Coverage</Annotation>
-      </Annotations>
     </CalculatedMember>
 
     <!-- Here add in rca and percent calc if asked for -->
@@ -2340,6 +2340,10 @@
     </Measure>
 
     <CalculatedMember dimension="Measures" name="Poverty by Work Experience" visible="true">
+      <Annotations>
+        <Annotation name="aggregation_method">SUM</Annotation>
+        <Annotation name="units_of_measurement">People</Annotation>
+      </Annotations>
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[mea_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[mea_t]
@@ -2360,13 +2364,15 @@
         WHEN 1 = 1 THEN [Measures].[mea_nation]
         END
       </Formula>
-      <Annotations>
-        <Annotation name="aggregation_method">SUM</Annotation>
-        <Annotation name="units_of_measurement">People</Annotation>
-      </Annotations>
     </CalculatedMember>
 
     <CalculatedMember dimension="Measures" name="Poverty by Work Experience Moe" visible="true">
+      <Annotations>
+        <Annotation name="aggregation_method">MOE</Annotation>
+        <Annotation name="units_of_measurement">People</Annotation>
+        <Annotation name="error_type">MOE</Annotation>
+        <Annotation name="error_for_measure">Poverty by Work Experience</Annotation>
+      </Annotations>
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[moe_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[moe_t]
@@ -2387,12 +2393,6 @@
         WHEN 1 = 1 THEN [Measures].[moe_nation]
         END
       </Formula>
-      <Annotations>
-        <Annotation name="aggregation_method">MOE</Annotation>
-        <Annotation name="units_of_measurement">People</Annotation>
-        <Annotation name="error_type">MOE</Annotation>
-        <Annotation name="error_for_measure">Poverty by Work Experience</Annotation>
-      </Annotations>
     </CalculatedMember>
 
     <!-- Here add in rca and percent calc if asked for -->
@@ -2484,6 +2484,10 @@
     </Measure>
 
     <CalculatedMember dimension="Measures" name="Construction Date" visible="true">
+      <Annotations>
+        <Annotation name="aggregation_method">AVG</Annotation>
+        <Annotation name="units_of_measurement">Years</Annotation>
+      </Annotations>
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[mea_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[mea_t]
@@ -2504,13 +2508,15 @@
         WHEN 1 = 1 THEN [Measures].[mea_nation]
         END
       </Formula>
-      <Annotations>
-        <Annotation name="aggregation_method">AVG</Annotation>
-        <Annotation name="units_of_measurement">Years</Annotation>
-      </Annotations>
     </CalculatedMember>
 
     <CalculatedMember dimension="Measures" name="Construction Date Moe" visible="true">
+      <Annotations>
+        <Annotation name="aggregation_method">MOE</Annotation>
+        <Annotation name="units_of_measurement">Years</Annotation>
+        <Annotation name="error_type">MOE</Annotation>
+        <Annotation name="error_for_measure">Construction Date</Annotation>
+      </Annotations>
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[moe_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[moe_t]
@@ -2531,12 +2537,6 @@
         WHEN 1 = 1 THEN [Measures].[moe_nation]
         END
       </Formula>
-      <Annotations>
-        <Annotation name="aggregation_method">MOE</Annotation>
-        <Annotation name="units_of_measurement">Years</Annotation>
-        <Annotation name="error_type">MOE</Annotation>
-        <Annotation name="error_for_measure">Construction Date</Annotation>
-      </Annotations>
     </CalculatedMember>
 
     <!-- Here add in rca and percent calc if asked for -->
@@ -2693,6 +2693,10 @@
     </Measure>
 
     <CalculatedMember dimension="Measures" name="Population by Ratio of Income to Poverty Level" visible="true">
+      <Annotations>
+        <Annotation name="aggregation_method">SUM</Annotation>
+        <Annotation name="units_of_measurement"></Annotation>
+      </Annotations>
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[mea_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[mea_t]
@@ -2713,13 +2717,15 @@
         WHEN 1 = 1 THEN [Measures].[mea_nation]
         END
       </Formula>
-      <Annotations>
-        <Annotation name="aggregation_method">SUM</Annotation>
-        <Annotation name="units_of_measurement"></Annotation>
-      </Annotations>
     </CalculatedMember>
 
     <CalculatedMember dimension="Measures" name="Population by Ratio of Income to Poverty Level Moe" visible="true">
+      <Annotations>
+        <Annotation name="aggregation_method">MOE</Annotation>
+        <Annotation name="units_of_measurement">People</Annotation>
+        <Annotation name="error_type">MOE</Annotation>
+        <Annotation name="error_for_measure">Population by Ratio of Income to Poverty Level</Annotation>
+      </Annotations>
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[moe_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[moe_t]
@@ -2740,12 +2746,6 @@
         WHEN 1 = 1 THEN [Measures].[moe_nation]
         END
       </Formula>
-      <Annotations>
-        <Annotation name="aggregation_method">MOE</Annotation>
-        <Annotation name="units_of_measurement">People</Annotation>
-        <Annotation name="error_type">MOE</Annotation>
-        <Annotation name="error_for_measure">Population by Ratio of Income to Poverty Level</Annotation>
-      </Annotations>
     </CalculatedMember>
 
     <!-- Here add in rca and percent calc if asked for -->
@@ -2974,6 +2974,10 @@
     </Measure>
 
     <CalculatedMember dimension="Measures" name="Veteran Population" visible="true">
+      <Annotations>
+        <Annotation name="aggregation_method">SUM</Annotation>
+        <Annotation name="units_of_measurement">People</Annotation>
+      </Annotations>
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[mea_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[mea_t]
@@ -2994,13 +2998,15 @@
         WHEN 1 = 1 THEN [Measures].[mea_nation]
         END
       </Formula>
-      <Annotations>
-        <Annotation name="aggregation_method">SUM</Annotation>
-        <Annotation name="units_of_measurement">People</Annotation>
-      </Annotations>
     </CalculatedMember>
 
     <CalculatedMember dimension="Measures" name="Veteran Population Moe" visible="true">
+      <Annotations>
+        <Annotation name="aggregation_method">MOE</Annotation>
+        <Annotation name="units_of_measurement">People</Annotation>
+        <Annotation name="error_type">MOE</Annotation>
+        <Annotation name="error_for_measure">Veteran Population</Annotation>
+      </Annotations>
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[moe_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[moe_t]
@@ -3021,12 +3027,6 @@
         WHEN 1 = 1 THEN [Measures].[moe_nation]
         END
       </Formula>
-      <Annotations>
-        <Annotation name="aggregation_method">MOE</Annotation>
-        <Annotation name="units_of_measurement">People</Annotation>
-        <Annotation name="error_type">MOE</Annotation>
-        <Annotation name="error_for_measure">Veteran Population</Annotation>
-      </Annotations>
     </CalculatedMember>
 
     <!-- Here add in rca and percent calc if asked for -->
@@ -3255,6 +3255,10 @@
     </Measure>
 
     <CalculatedMember dimension="Measures" name="Veteran Population" visible="true">
+      <Annotations>
+        <Annotation name="aggregation_method">SUM</Annotation>
+        <Annotation name="units_of_measurement">People</Annotation>
+      </Annotations>
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[mea_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[mea_t]
@@ -3275,13 +3279,15 @@
         WHEN 1 = 1 THEN [Measures].[mea_nation]
         END
       </Formula>
-      <Annotations>
-        <Annotation name="aggregation_method">SUM</Annotation>
-        <Annotation name="units_of_measurement">People</Annotation>
-      </Annotations>
     </CalculatedMember>
 
     <CalculatedMember dimension="Measures" name="Veteran Population Moe" visible="true">
+      <Annotations>
+        <Annotation name="aggregation_method">MOE</Annotation>
+        <Annotation name="units_of_measurement">People</Annotation>
+        <Annotation name="error_type">MOE</Annotation>
+        <Annotation name="error_for_measure">Veteran Population</Annotation>
+      </Annotations>
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[moe_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[moe_t]
@@ -3302,12 +3308,6 @@
         WHEN 1 = 1 THEN [Measures].[moe_nation]
         END
       </Formula>
-      <Annotations>
-        <Annotation name="aggregation_method">MOE</Annotation>
-        <Annotation name="units_of_measurement">People</Annotation>
-        <Annotation name="error_type">MOE</Annotation>
-        <Annotation name="error_for_measure">Veteran Population</Annotation>
-      </Annotations>
     </CalculatedMember>
 
     <!-- Here add in rca and percent calc if asked for -->
@@ -3399,6 +3399,10 @@
     </Measure>
 
     <CalculatedMember dimension="Measures" name="Construction Date" visible="true">
+      <Annotations>
+        <Annotation name="aggregation_method">AVG</Annotation>
+        <Annotation name="units_of_measurement">Years</Annotation>
+      </Annotations>
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[mea_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[mea_t]
@@ -3419,13 +3423,15 @@
         WHEN 1 = 1 THEN [Measures].[mea_nation]
         END
       </Formula>
-      <Annotations>
-        <Annotation name="aggregation_method">AVG</Annotation>
-        <Annotation name="units_of_measurement">Years</Annotation>
-      </Annotations>
     </CalculatedMember>
 
     <CalculatedMember dimension="Measures" name="Construction Date Moe" visible="true">
+      <Annotations>
+        <Annotation name="aggregation_method">MOE</Annotation>
+        <Annotation name="units_of_measurement">Years</Annotation>
+        <Annotation name="error_type">MOE</Annotation>
+        <Annotation name="error_for_measure">Construction Date</Annotation>
+      </Annotations>
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[moe_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[moe_t]
@@ -3446,12 +3452,6 @@
         WHEN 1 = 1 THEN [Measures].[moe_nation]
         END
       </Formula>
-      <Annotations>
-        <Annotation name="aggregation_method">MOE</Annotation>
-        <Annotation name="units_of_measurement">Years</Annotation>
-        <Annotation name="error_type">MOE</Annotation>
-        <Annotation name="error_for_measure">Construction Date</Annotation>
-      </Annotations>
     </CalculatedMember>
 
     <!-- Here add in rca and percent calc if asked for -->
@@ -3622,6 +3622,10 @@
     </Measure>
 
     <CalculatedMember dimension="Measures" name="Poverty by Work Experience" visible="true">
+      <Annotations>
+        <Annotation name="aggregation_method">SUM</Annotation>
+        <Annotation name="units_of_measurement">People</Annotation>
+      </Annotations>
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[mea_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[mea_t]
@@ -3642,13 +3646,15 @@
         WHEN 1 = 1 THEN [Measures].[mea_nation]
         END
       </Formula>
-      <Annotations>
-        <Annotation name="aggregation_method">SUM</Annotation>
-        <Annotation name="units_of_measurement">People</Annotation>
-      </Annotations>
     </CalculatedMember>
 
     <CalculatedMember dimension="Measures" name="Poverty by Work Experience Moe" visible="true">
+      <Annotations>
+        <Annotation name="aggregation_method">MOE</Annotation>
+        <Annotation name="units_of_measurement">People</Annotation>
+        <Annotation name="error_type">MOE</Annotation>
+        <Annotation name="error_for_measure">Poverty by Work Experience</Annotation>
+      </Annotations>
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[moe_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[moe_t]
@@ -3669,12 +3675,6 @@
         WHEN 1 = 1 THEN [Measures].[moe_nation]
         END
       </Formula>
-      <Annotations>
-        <Annotation name="aggregation_method">MOE</Annotation>
-        <Annotation name="units_of_measurement">People</Annotation>
-        <Annotation name="error_type">MOE</Annotation>
-        <Annotation name="error_for_measure">Poverty by Work Experience</Annotation>
-      </Annotations>
     </CalculatedMember>
 
     <!-- Here add in rca and percent calc if asked for -->
@@ -3869,6 +3869,10 @@
     </Measure>
 
     <CalculatedMember dimension="Measures" name="Population by Insurance Coverage" visible="true">
+      <Annotations>
+        <Annotation name="aggregation_method">SUM</Annotation>
+        <Annotation name="units_of_measurement">People</Annotation>
+      </Annotations>
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[mea_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[mea_t]
@@ -3889,13 +3893,15 @@
         WHEN 1 = 1 THEN [Measures].[mea_nation]
         END
       </Formula>
-      <Annotations>
-        <Annotation name="aggregation_method">SUM</Annotation>
-        <Annotation name="units_of_measurement">People</Annotation>
-      </Annotations>
     </CalculatedMember>
 
     <CalculatedMember dimension="Measures" name="Population by Insurance Coverage Moe" visible="true">
+      <Annotations>
+        <Annotation name="aggregation_method">MOE</Annotation>
+        <Annotation name="units_of_measurement">People</Annotation>
+        <Annotation name="error_type">MOE</Annotation>
+        <Annotation name="error_for_measure">Population by Insurance Coverage</Annotation>
+      </Annotations>
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[moe_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[moe_t]
@@ -3916,12 +3922,6 @@
         WHEN 1 = 1 THEN [Measures].[moe_nation]
         END
       </Formula>
-      <Annotations>
-        <Annotation name="aggregation_method">MOE</Annotation>
-        <Annotation name="units_of_measurement">People</Annotation>
-        <Annotation name="error_type">MOE</Annotation>
-        <Annotation name="error_for_measure">Population by Insurance Coverage</Annotation>
-      </Annotations>
     </CalculatedMember>
 
     <!-- Here add in rca and percent calc if asked for -->
@@ -4082,6 +4082,10 @@
     </Measure>
 
     <CalculatedMember dimension="Measures" name="Poverty by Nativity" visible="true">
+      <Annotations>
+        <Annotation name="aggregation_method">SUM</Annotation>
+        <Annotation name="units_of_measurement">People</Annotation>
+      </Annotations>
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[mea_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[mea_t]
@@ -4102,13 +4106,15 @@
         WHEN 1 = 1 THEN [Measures].[mea_nation]
         END
       </Formula>
-      <Annotations>
-        <Annotation name="aggregation_method">SUM</Annotation>
-        <Annotation name="units_of_measurement">People</Annotation>
-      </Annotations>
     </CalculatedMember>
 
     <CalculatedMember dimension="Measures" name="Poverty by Nativity Moe" visible="true">
+      <Annotations>
+        <Annotation name="aggregation_method">MOE</Annotation>
+        <Annotation name="units_of_measurement">People</Annotation>
+        <Annotation name="error_type">MOE</Annotation>
+        <Annotation name="error_for_measure">Poverty by Nativity</Annotation>
+      </Annotations>
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[moe_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[moe_t]
@@ -4129,12 +4135,6 @@
         WHEN 1 = 1 THEN [Measures].[moe_nation]
         END
       </Formula>
-      <Annotations>
-        <Annotation name="aggregation_method">MOE</Annotation>
-        <Annotation name="units_of_measurement">People</Annotation>
-        <Annotation name="error_type">MOE</Annotation>
-        <Annotation name="error_for_measure">Poverty by Nativity</Annotation>
-      </Annotations>
     </CalculatedMember>
 
     <!-- Here add in rca and percent calc if asked for -->
@@ -4321,6 +4321,10 @@
     </Measure>
 
     <CalculatedMember dimension="Measures" name="SNAP Receipts" visible="true">
+      <Annotations>
+        <Annotation name="aggregation_method">SUM</Annotation>
+        <Annotation name="units_of_measurement">Households</Annotation>
+      </Annotations>
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[mea_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[mea_t]
@@ -4341,13 +4345,15 @@
         WHEN 1 = 1 THEN [Measures].[mea_nation]
         END
       </Formula>
-      <Annotations>
-        <Annotation name="aggregation_method">SUM</Annotation>
-        <Annotation name="units_of_measurement">Households</Annotation>
-      </Annotations>
     </CalculatedMember>
 
     <CalculatedMember dimension="Measures" name="SNAP Receipts Moe" visible="true">
+      <Annotations>
+        <Annotation name="aggregation_method">MOE</Annotation>
+        <Annotation name="units_of_measurement">Households</Annotation>
+        <Annotation name="error_type">MOE</Annotation>
+        <Annotation name="error_for_measure">SNAP Receipts</Annotation>
+      </Annotations>
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[moe_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[moe_t]
@@ -4368,12 +4374,6 @@
         WHEN 1 = 1 THEN [Measures].[moe_nation]
         END
       </Formula>
-      <Annotations>
-        <Annotation name="aggregation_method">MOE</Annotation>
-        <Annotation name="units_of_measurement">Households</Annotation>
-        <Annotation name="error_type">MOE</Annotation>
-        <Annotation name="error_for_measure">SNAP Receipts</Annotation>
-      </Annotations>
     </CalculatedMember>
 
     <!-- Here add in rca and percent calc if asked for -->
@@ -4564,6 +4564,10 @@
     </Measure>
 
     <CalculatedMember dimension="Measures" name="Grandparent Caregivers" visible="true">
+      <Annotations>
+        <Annotation name="aggregation_method">SUM</Annotation>
+        <Annotation name="units_of_measurement">People</Annotation>
+      </Annotations>
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[mea_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[mea_t]
@@ -4584,13 +4588,15 @@
         WHEN 1 = 1 THEN [Measures].[mea_nation]
         END
       </Formula>
-      <Annotations>
-        <Annotation name="aggregation_method">SUM</Annotation>
-        <Annotation name="units_of_measurement">People</Annotation>
-      </Annotations>
     </CalculatedMember>
 
     <CalculatedMember dimension="Measures" name="Grandparent Caregivers Moe" visible="true">
+      <Annotations>
+        <Annotation name="aggregation_method">MOE</Annotation>
+        <Annotation name="units_of_measurement">People</Annotation>
+        <Annotation name="error_type">MOE</Annotation>
+        <Annotation name="error_for_measure">Grandparent Caregivers</Annotation>
+      </Annotations>
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[moe_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[moe_t]
@@ -4611,12 +4617,6 @@
         WHEN 1 = 1 THEN [Measures].[moe_nation]
         END
       </Formula>
-      <Annotations>
-        <Annotation name="aggregation_method">MOE</Annotation>
-        <Annotation name="units_of_measurement">People</Annotation>
-        <Annotation name="error_type">MOE</Annotation>
-        <Annotation name="error_for_measure">Grandparent Caregivers</Annotation>
-      </Annotations>
     </CalculatedMember>
 
     <!-- Here add in rca and percent calc if asked for -->
@@ -4770,6 +4770,10 @@
     </Measure>
 
     <CalculatedMember dimension="Measures" name="Unmarried Partner Households" visible="true">
+      <Annotations>
+        <Annotation name="aggregation_method">SUM</Annotation>
+        <Annotation name="units_of_measurement">Households</Annotation>
+      </Annotations>
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[mea_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[mea_t]
@@ -4790,13 +4794,15 @@
         WHEN 1 = 1 THEN [Measures].[mea_nation]
         END
       </Formula>
-      <Annotations>
-        <Annotation name="aggregation_method">SUM</Annotation>
-        <Annotation name="units_of_measurement">Households</Annotation>
-      </Annotations>
     </CalculatedMember>
 
     <CalculatedMember dimension="Measures" name="Unmarried Partner Households Moe" visible="true">
+      <Annotations>
+        <Annotation name="aggregation_method">MOE</Annotation>
+        <Annotation name="units_of_measurement">Households</Annotation>
+        <Annotation name="error_type">MOE</Annotation>
+        <Annotation name="error_for_measure">Unmarried Partner Households</Annotation>
+      </Annotations>
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[moe_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[moe_t]
@@ -4817,12 +4823,6 @@
         WHEN 1 = 1 THEN [Measures].[moe_nation]
         END
       </Formula>
-      <Annotations>
-        <Annotation name="aggregation_method">MOE</Annotation>
-        <Annotation name="units_of_measurement">Households</Annotation>
-        <Annotation name="error_type">MOE</Annotation>
-        <Annotation name="error_for_measure">Unmarried Partner Households</Annotation>
-      </Annotations>
     </CalculatedMember>
 
     <!-- Here add in rca and percent calc if asked for -->
@@ -4939,6 +4939,10 @@
     </Measure>
 
     <CalculatedMember dimension="Measures" name="Food-Stamp Population" visible="true">
+      <Annotations>
+        <Annotation name="aggregation_method">SUM</Annotation>
+        <Annotation name="units_of_measurement">People</Annotation>
+      </Annotations>
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[mea_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[mea_t]
@@ -4959,13 +4963,15 @@
         WHEN 1 = 1 THEN [Measures].[mea_nation]
         END
       </Formula>
-      <Annotations>
-        <Annotation name="aggregation_method">SUM</Annotation>
-        <Annotation name="units_of_measurement">People</Annotation>
-      </Annotations>
     </CalculatedMember>
 
     <CalculatedMember dimension="Measures" name="Food-Stamp Population Moe" visible="true">
+      <Annotations>
+        <Annotation name="aggregation_method">MOE</Annotation>
+        <Annotation name="units_of_measurement">People</Annotation>
+        <Annotation name="error_type">MOE</Annotation>
+        <Annotation name="error_for_measure">Food-Stamp Population</Annotation>
+      </Annotations>
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[moe_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[moe_t]
@@ -4986,12 +4992,6 @@
         WHEN 1 = 1 THEN [Measures].[moe_nation]
         END
       </Formula>
-      <Annotations>
-        <Annotation name="aggregation_method">MOE</Annotation>
-        <Annotation name="units_of_measurement">People</Annotation>
-        <Annotation name="error_type">MOE</Annotation>
-        <Annotation name="error_for_measure">Food-Stamp Population</Annotation>
-      </Annotations>
     </CalculatedMember>
 
     <!-- Here add in rca and percent calc if asked for -->
@@ -5108,6 +5108,10 @@
     </Measure>
 
     <CalculatedMember dimension="Measures" name="Food-Stamp Population" visible="true">
+      <Annotations>
+        <Annotation name="aggregation_method">SUM</Annotation>
+        <Annotation name="units_of_measurement">People</Annotation>
+      </Annotations>
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[mea_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[mea_t]
@@ -5128,13 +5132,15 @@
         WHEN 1 = 1 THEN [Measures].[mea_nation]
         END
       </Formula>
-      <Annotations>
-        <Annotation name="aggregation_method">SUM</Annotation>
-        <Annotation name="units_of_measurement">People</Annotation>
-      </Annotations>
     </CalculatedMember>
 
     <CalculatedMember dimension="Measures" name="Food-Stamp Population Moe" visible="true">
+      <Annotations>
+        <Annotation name="aggregation_method">MOE</Annotation>
+        <Annotation name="units_of_measurement">People</Annotation>
+        <Annotation name="error_type">MOE</Annotation>
+        <Annotation name="error_for_measure">Food-Stamp Population</Annotation>
+      </Annotations>
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[moe_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[moe_t]
@@ -5155,12 +5161,6 @@
         WHEN 1 = 1 THEN [Measures].[moe_nation]
         END
       </Formula>
-      <Annotations>
-        <Annotation name="aggregation_method">MOE</Annotation>
-        <Annotation name="units_of_measurement">People</Annotation>
-        <Annotation name="error_type">MOE</Annotation>
-        <Annotation name="error_for_measure">Food-Stamp Population</Annotation>
-      </Annotations>
     </CalculatedMember>
 
     <!-- Here add in rca and percent calc if asked for -->
@@ -5314,6 +5314,10 @@
     </Measure>
 
     <CalculatedMember dimension="Measures" name="Unmarried Partner Households" visible="true">
+      <Annotations>
+        <Annotation name="aggregation_method">SUM</Annotation>
+        <Annotation name="units_of_measurement">Households</Annotation>
+      </Annotations>
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[mea_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[mea_t]
@@ -5334,13 +5338,15 @@
         WHEN 1 = 1 THEN [Measures].[mea_nation]
         END
       </Formula>
-      <Annotations>
-        <Annotation name="aggregation_method">SUM</Annotation>
-        <Annotation name="units_of_measurement">Households</Annotation>
-      </Annotations>
     </CalculatedMember>
 
     <CalculatedMember dimension="Measures" name="Unmarried Partner Households Moe" visible="true">
+      <Annotations>
+        <Annotation name="aggregation_method">MOE</Annotation>
+        <Annotation name="units_of_measurement">Households</Annotation>
+        <Annotation name="error_type">MOE</Annotation>
+        <Annotation name="error_for_measure">Unmarried Partner Households</Annotation>
+      </Annotations>
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[moe_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[moe_t]
@@ -5361,12 +5367,6 @@
         WHEN 1 = 1 THEN [Measures].[moe_nation]
         END
       </Formula>
-      <Annotations>
-        <Annotation name="aggregation_method">MOE</Annotation>
-        <Annotation name="units_of_measurement">Households</Annotation>
-        <Annotation name="error_type">MOE</Annotation>
-        <Annotation name="error_for_measure">Unmarried Partner Households</Annotation>
-      </Annotations>
     </CalculatedMember>
 
     <!-- Here add in rca and percent calc if asked for -->
@@ -5557,6 +5557,10 @@
     </Measure>
 
     <CalculatedMember dimension="Measures" name="Grandparent Caregivers" visible="true">
+      <Annotations>
+        <Annotation name="aggregation_method">SUM</Annotation>
+        <Annotation name="units_of_measurement">People</Annotation>
+      </Annotations>
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[mea_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[mea_t]
@@ -5577,13 +5581,15 @@
         WHEN 1 = 1 THEN [Measures].[mea_nation]
         END
       </Formula>
-      <Annotations>
-        <Annotation name="aggregation_method">SUM</Annotation>
-        <Annotation name="units_of_measurement">People</Annotation>
-      </Annotations>
     </CalculatedMember>
 
     <CalculatedMember dimension="Measures" name="Grandparent Caregivers Moe" visible="true">
+      <Annotations>
+        <Annotation name="aggregation_method">MOE</Annotation>
+        <Annotation name="units_of_measurement">People</Annotation>
+        <Annotation name="error_type">MOE</Annotation>
+        <Annotation name="error_for_measure">Grandparent Caregivers</Annotation>
+      </Annotations>
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[moe_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[moe_t]
@@ -5604,12 +5610,6 @@
         WHEN 1 = 1 THEN [Measures].[moe_nation]
         END
       </Formula>
-      <Annotations>
-        <Annotation name="aggregation_method">MOE</Annotation>
-        <Annotation name="units_of_measurement">People</Annotation>
-        <Annotation name="error_type">MOE</Annotation>
-        <Annotation name="error_for_measure">Grandparent Caregivers</Annotation>
-      </Annotations>
     </CalculatedMember>
 
     <!-- Here add in rca and percent calc if asked for -->
@@ -5796,6 +5796,10 @@
     </Measure>
 
     <CalculatedMember dimension="Measures" name="SNAP Receipts" visible="true">
+      <Annotations>
+        <Annotation name="aggregation_method">SUM</Annotation>
+        <Annotation name="units_of_measurement">Households</Annotation>
+      </Annotations>
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[mea_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[mea_t]
@@ -5816,13 +5820,15 @@
         WHEN 1 = 1 THEN [Measures].[mea_nation]
         END
       </Formula>
-      <Annotations>
-        <Annotation name="aggregation_method">SUM</Annotation>
-        <Annotation name="units_of_measurement">Households</Annotation>
-      </Annotations>
     </CalculatedMember>
 
     <CalculatedMember dimension="Measures" name="SNAP Receipts Moe" visible="true">
+      <Annotations>
+        <Annotation name="aggregation_method">MOE</Annotation>
+        <Annotation name="units_of_measurement">Households</Annotation>
+        <Annotation name="error_type">MOE</Annotation>
+        <Annotation name="error_for_measure">SNAP Receipts</Annotation>
+      </Annotations>
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[moe_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[moe_t]
@@ -5843,12 +5849,6 @@
         WHEN 1 = 1 THEN [Measures].[moe_nation]
         END
       </Formula>
-      <Annotations>
-        <Annotation name="aggregation_method">MOE</Annotation>
-        <Annotation name="units_of_measurement">Households</Annotation>
-        <Annotation name="error_type">MOE</Annotation>
-        <Annotation name="error_for_measure">SNAP Receipts</Annotation>
-      </Annotations>
     </CalculatedMember>
 
     <!-- Here add in rca and percent calc if asked for -->
@@ -6074,6 +6074,10 @@
     </Measure>
 
     <CalculatedMember dimension="Measures" name="Population by Sex and Age" visible="true">
+      <Annotations>
+        <Annotation name="aggregation_method">SUM</Annotation>
+        <Annotation name="units_of_measurement">People</Annotation>
+      </Annotations>
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[mea_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[mea_t]
@@ -6094,13 +6098,15 @@
         WHEN 1 = 1 THEN [Measures].[mea_nation]
         END
       </Formula>
-      <Annotations>
-        <Annotation name="aggregation_method">SUM</Annotation>
-        <Annotation name="units_of_measurement">People</Annotation>
-      </Annotations>
     </CalculatedMember>
 
     <CalculatedMember dimension="Measures" name="Population by Sex and Age Moe" visible="true">
+      <Annotations>
+        <Annotation name="aggregation_method">MOE</Annotation>
+        <Annotation name="units_of_measurement">People</Annotation>
+        <Annotation name="error_type">MOE</Annotation>
+        <Annotation name="error_for_measure">Population by Sex and Age</Annotation>
+      </Annotations>
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[moe_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[moe_t]
@@ -6121,12 +6127,6 @@
         WHEN 1 = 1 THEN [Measures].[moe_nation]
         END
       </Formula>
-      <Annotations>
-        <Annotation name="aggregation_method">MOE</Annotation>
-        <Annotation name="units_of_measurement">People</Annotation>
-        <Annotation name="error_type">MOE</Annotation>
-        <Annotation name="error_for_measure">Population by Sex and Age</Annotation>
-      </Annotations>
     </CalculatedMember>
 
     <!-- Here add in rca and percent calc if asked for -->
@@ -6219,6 +6219,10 @@
     </Measure>
 
     <CalculatedMember dimension="Measures" name="Population" visible="true">
+      <Annotations>
+        <Annotation name="aggregation_method">SUM</Annotation>
+        <Annotation name="units_of_measurement">People</Annotation>
+      </Annotations>
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[mea_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[mea_t]
@@ -6239,13 +6243,15 @@
         WHEN 1 = 1 THEN [Measures].[mea_nation]
         END
       </Formula>
-      <Annotations>
-        <Annotation name="aggregation_method">SUM</Annotation>
-        <Annotation name="units_of_measurement">People</Annotation>
-      </Annotations>
     </CalculatedMember>
 
     <CalculatedMember dimension="Measures" name="Population Moe" visible="true">
+      <Annotations>
+        <Annotation name="aggregation_method">MOE</Annotation>
+        <Annotation name="units_of_measurement">People</Annotation>
+        <Annotation name="error_type">MOE</Annotation>
+        <Annotation name="error_for_measure">Population</Annotation>
+      </Annotations>
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[moe_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[moe_t]
@@ -6266,12 +6272,6 @@
         WHEN 1 = 1 THEN [Measures].[moe_nation]
         END
       </Formula>
-      <Annotations>
-        <Annotation name="aggregation_method">MOE</Annotation>
-        <Annotation name="units_of_measurement">People</Annotation>
-        <Annotation name="error_type">MOE</Annotation>
-        <Annotation name="error_for_measure">Population</Annotation>
-      </Annotations>
     </CalculatedMember>
 
     <!-- Here add in rca and percent calc if asked for -->
@@ -6454,6 +6454,10 @@
     </Measure>
 
     <CalculatedMember dimension="Measures" name="Vision Disabilities" visible="true">
+      <Annotations>
+        <Annotation name="aggregation_method">SUM</Annotation>
+        <Annotation name="units_of_measurement">People</Annotation>
+      </Annotations>
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[mea_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[mea_t]
@@ -6474,13 +6478,15 @@
         WHEN 1 = 1 THEN [Measures].[mea_nation]
         END
       </Formula>
-      <Annotations>
-        <Annotation name="aggregation_method">SUM</Annotation>
-        <Annotation name="units_of_measurement">People</Annotation>
-      </Annotations>
     </CalculatedMember>
 
     <CalculatedMember dimension="Measures" name="Vision Disabilities Moe" visible="true">
+      <Annotations>
+        <Annotation name="aggregation_method">MOE</Annotation>
+        <Annotation name="units_of_measurement">People</Annotation>
+        <Annotation name="error_type">MOE</Annotation>
+        <Annotation name="error_for_measure">Vision Disabilities</Annotation>
+      </Annotations>
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[moe_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[moe_t]
@@ -6501,12 +6507,6 @@
         WHEN 1 = 1 THEN [Measures].[moe_nation]
         END
       </Formula>
-      <Annotations>
-        <Annotation name="aggregation_method">MOE</Annotation>
-        <Annotation name="units_of_measurement">People</Annotation>
-        <Annotation name="error_type">MOE</Annotation>
-        <Annotation name="error_for_measure">Vision Disabilities</Annotation>
-      </Annotations>
     </CalculatedMember>
 
     <!-- Here add in rca and percent calc if asked for -->
@@ -6689,6 +6689,10 @@
     </Measure>
 
     <CalculatedMember dimension="Measures" name="Vision Disabilities" visible="true">
+      <Annotations>
+        <Annotation name="aggregation_method">SUM</Annotation>
+        <Annotation name="units_of_measurement">People</Annotation>
+      </Annotations>
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[mea_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[mea_t]
@@ -6709,13 +6713,15 @@
         WHEN 1 = 1 THEN [Measures].[mea_nation]
         END
       </Formula>
-      <Annotations>
-        <Annotation name="aggregation_method">SUM</Annotation>
-        <Annotation name="units_of_measurement">People</Annotation>
-      </Annotations>
     </CalculatedMember>
 
     <CalculatedMember dimension="Measures" name="Vision Disabilities Moe" visible="true">
+      <Annotations>
+        <Annotation name="aggregation_method">MOE</Annotation>
+        <Annotation name="units_of_measurement">People</Annotation>
+        <Annotation name="error_type">MOE</Annotation>
+        <Annotation name="error_for_measure">Vision Disabilities</Annotation>
+      </Annotations>
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[moe_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[moe_t]
@@ -6736,12 +6742,6 @@
         WHEN 1 = 1 THEN [Measures].[moe_nation]
         END
       </Formula>
-      <Annotations>
-        <Annotation name="aggregation_method">MOE</Annotation>
-        <Annotation name="units_of_measurement">People</Annotation>
-        <Annotation name="error_type">MOE</Annotation>
-        <Annotation name="error_for_measure">Vision Disabilities</Annotation>
-      </Annotations>
     </CalculatedMember>
 
     <!-- Here add in rca and percent calc if asked for -->
@@ -6834,6 +6834,10 @@
     </Measure>
 
     <CalculatedMember dimension="Measures" name="Population" visible="true">
+      <Annotations>
+        <Annotation name="aggregation_method">SUM</Annotation>
+        <Annotation name="units_of_measurement">People</Annotation>
+      </Annotations>
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[mea_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[mea_t]
@@ -6854,13 +6858,15 @@
         WHEN 1 = 1 THEN [Measures].[mea_nation]
         END
       </Formula>
-      <Annotations>
-        <Annotation name="aggregation_method">SUM</Annotation>
-        <Annotation name="units_of_measurement">People</Annotation>
-      </Annotations>
     </CalculatedMember>
 
     <CalculatedMember dimension="Measures" name="Population Moe" visible="true">
+      <Annotations>
+        <Annotation name="aggregation_method">MOE</Annotation>
+        <Annotation name="units_of_measurement">People</Annotation>
+        <Annotation name="error_type">MOE</Annotation>
+        <Annotation name="error_for_measure">Population</Annotation>
+      </Annotations>
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[moe_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[moe_t]
@@ -6881,12 +6887,6 @@
         WHEN 1 = 1 THEN [Measures].[moe_nation]
         END
       </Formula>
-      <Annotations>
-        <Annotation name="aggregation_method">MOE</Annotation>
-        <Annotation name="units_of_measurement">People</Annotation>
-        <Annotation name="error_type">MOE</Annotation>
-        <Annotation name="error_for_measure">Population</Annotation>
-      </Annotations>
     </CalculatedMember>
 
     <!-- Here add in rca and percent calc if asked for -->
@@ -7112,6 +7112,10 @@
     </Measure>
 
     <CalculatedMember dimension="Measures" name="Population by Sex and Age" visible="true">
+      <Annotations>
+        <Annotation name="aggregation_method">SUM</Annotation>
+        <Annotation name="units_of_measurement">People</Annotation>
+      </Annotations>
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[mea_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[mea_t]
@@ -7132,13 +7136,15 @@
         WHEN 1 = 1 THEN [Measures].[mea_nation]
         END
       </Formula>
-      <Annotations>
-        <Annotation name="aggregation_method">SUM</Annotation>
-        <Annotation name="units_of_measurement">People</Annotation>
-      </Annotations>
     </CalculatedMember>
 
     <CalculatedMember dimension="Measures" name="Population by Sex and Age Moe" visible="true">
+      <Annotations>
+        <Annotation name="aggregation_method">MOE</Annotation>
+        <Annotation name="units_of_measurement">People</Annotation>
+        <Annotation name="error_type">MOE</Annotation>
+        <Annotation name="error_for_measure">Population by Sex and Age</Annotation>
+      </Annotations>
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[moe_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[moe_t]
@@ -7159,12 +7165,6 @@
         WHEN 1 = 1 THEN [Measures].[moe_nation]
         END
       </Formula>
-      <Annotations>
-        <Annotation name="aggregation_method">MOE</Annotation>
-        <Annotation name="units_of_measurement">People</Annotation>
-        <Annotation name="error_type">MOE</Annotation>
-        <Annotation name="error_for_measure">Population by Sex and Age</Annotation>
-      </Annotations>
     </CalculatedMember>
 
     <!-- Here add in rca and percent calc if asked for -->
@@ -7355,6 +7355,10 @@
     </Measure>
 
     <CalculatedMember dimension="Measures" name="Poverty by Schooling" visible="true">
+      <Annotations>
+        <Annotation name="aggregation_method">SUM</Annotation>
+        <Annotation name="units_of_measurement">People</Annotation>
+      </Annotations>
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[mea_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[mea_t]
@@ -7375,13 +7379,15 @@
         WHEN 1 = 1 THEN [Measures].[mea_nation]
         END
       </Formula>
-      <Annotations>
-        <Annotation name="aggregation_method">SUM</Annotation>
-        <Annotation name="units_of_measurement">People</Annotation>
-      </Annotations>
     </CalculatedMember>
 
     <CalculatedMember dimension="Measures" name="Poverty by Schooling Moe" visible="true">
+      <Annotations>
+        <Annotation name="aggregation_method">MOE</Annotation>
+        <Annotation name="units_of_measurement">People</Annotation>
+        <Annotation name="error_type">MOE</Annotation>
+        <Annotation name="error_for_measure">Poverty by Schooling</Annotation>
+      </Annotations>
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[moe_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[moe_t]
@@ -7402,12 +7408,6 @@
         WHEN 1 = 1 THEN [Measures].[moe_nation]
         END
       </Formula>
-      <Annotations>
-        <Annotation name="aggregation_method">MOE</Annotation>
-        <Annotation name="units_of_measurement">People</Annotation>
-        <Annotation name="error_type">MOE</Annotation>
-        <Annotation name="error_for_measure">Poverty by Schooling</Annotation>
-      </Annotations>
     </CalculatedMember>
 
     <!-- Here add in rca and percent calc if asked for -->
@@ -7524,6 +7524,10 @@
     </Measure>
 
     <CalculatedMember dimension="Measures" name="Housing Units" visible="true">
+      <Annotations>
+        <Annotation name="aggregation_method">SUM</Annotation>
+        <Annotation name="units_of_measurement">Housing Units</Annotation>
+      </Annotations>
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[mea_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[mea_t]
@@ -7544,13 +7548,15 @@
         WHEN 1 = 1 THEN [Measures].[mea_nation]
         END
       </Formula>
-      <Annotations>
-        <Annotation name="aggregation_method">SUM</Annotation>
-        <Annotation name="units_of_measurement">Housing Units</Annotation>
-      </Annotations>
     </CalculatedMember>
 
     <CalculatedMember dimension="Measures" name="Housing Units Moe" visible="true">
+      <Annotations>
+        <Annotation name="aggregation_method">MOE</Annotation>
+        <Annotation name="units_of_measurement">Housing Units</Annotation>
+        <Annotation name="error_type">MOE</Annotation>
+        <Annotation name="error_for_measure">Housing Units</Annotation>
+      </Annotations>
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[moe_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[moe_t]
@@ -7571,12 +7577,6 @@
         WHEN 1 = 1 THEN [Measures].[moe_nation]
         END
       </Formula>
-      <Annotations>
-        <Annotation name="aggregation_method">MOE</Annotation>
-        <Annotation name="units_of_measurement">Housing Units</Annotation>
-        <Annotation name="error_type">MOE</Annotation>
-        <Annotation name="error_for_measure">Housing Units</Annotation>
-      </Annotations>
     </CalculatedMember>
 
     <!-- Here add in rca and percent calc if asked for -->
@@ -7693,6 +7693,10 @@
     </Measure>
 
     <CalculatedMember dimension="Measures" name="Renter-Occupied Housing Units" visible="true">
+      <Annotations>
+        <Annotation name="aggregation_method">SUM</Annotation>
+        <Annotation name="units_of_measurement">Housing Units</Annotation>
+      </Annotations>
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[mea_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[mea_t]
@@ -7713,13 +7717,15 @@
         WHEN 1 = 1 THEN [Measures].[mea_nation]
         END
       </Formula>
-      <Annotations>
-        <Annotation name="aggregation_method">SUM</Annotation>
-        <Annotation name="units_of_measurement">Housing Units</Annotation>
-      </Annotations>
     </CalculatedMember>
 
     <CalculatedMember dimension="Measures" name="Renter-Occupied Housing Units Moe" visible="true">
+      <Annotations>
+        <Annotation name="aggregation_method">MOE</Annotation>
+        <Annotation name="units_of_measurement">Housing Units</Annotation>
+        <Annotation name="error_type">MOE</Annotation>
+        <Annotation name="error_for_measure">Renter-Occupied Housing Units</Annotation>
+      </Annotations>
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[moe_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[moe_t]
@@ -7740,12 +7746,6 @@
         WHEN 1 = 1 THEN [Measures].[moe_nation]
         END
       </Formula>
-      <Annotations>
-        <Annotation name="aggregation_method">MOE</Annotation>
-        <Annotation name="units_of_measurement">Housing Units</Annotation>
-        <Annotation name="error_type">MOE</Annotation>
-        <Annotation name="error_for_measure">Renter-Occupied Housing Units</Annotation>
-      </Annotations>
     </CalculatedMember>
 
     <!-- Here add in rca and percent calc if asked for -->
@@ -7943,6 +7943,10 @@
     </Measure>
 
     <CalculatedMember dimension="Measures" name="Population by Education Level" visible="true">
+      <Annotations>
+        <Annotation name="aggregation_method">SUM</Annotation>
+        <Annotation name="units_of_measurement">People</Annotation>
+      </Annotations>
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[mea_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[mea_t]
@@ -7963,13 +7967,15 @@
         WHEN 1 = 1 THEN [Measures].[mea_nation]
         END
       </Formula>
-      <Annotations>
-        <Annotation name="aggregation_method">SUM</Annotation>
-        <Annotation name="units_of_measurement">People</Annotation>
-      </Annotations>
     </CalculatedMember>
 
     <CalculatedMember dimension="Measures" name="Population by Education Level Moe" visible="true">
+      <Annotations>
+        <Annotation name="aggregation_method">MOE</Annotation>
+        <Annotation name="units_of_measurement">People</Annotation>
+        <Annotation name="error_type">MOE</Annotation>
+        <Annotation name="error_for_measure">Population by Education Level</Annotation>
+      </Annotations>
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[moe_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[moe_t]
@@ -7990,12 +7996,6 @@
         WHEN 1 = 1 THEN [Measures].[moe_nation]
         END
       </Formula>
-      <Annotations>
-        <Annotation name="aggregation_method">MOE</Annotation>
-        <Annotation name="units_of_measurement">People</Annotation>
-        <Annotation name="error_type">MOE</Annotation>
-        <Annotation name="error_for_measure">Population by Education Level</Annotation>
-      </Annotations>
     </CalculatedMember>
 
     <!-- Here add in rca and percent calc if asked for -->
@@ -8178,6 +8178,10 @@
     </Measure>
 
     <CalculatedMember dimension="Measures" name="Hearing Disabilities" visible="true">
+      <Annotations>
+        <Annotation name="aggregation_method">SUM</Annotation>
+        <Annotation name="units_of_measurement">People</Annotation>
+      </Annotations>
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[mea_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[mea_t]
@@ -8198,13 +8202,15 @@
         WHEN 1 = 1 THEN [Measures].[mea_nation]
         END
       </Formula>
-      <Annotations>
-        <Annotation name="aggregation_method">SUM</Annotation>
-        <Annotation name="units_of_measurement">People</Annotation>
-      </Annotations>
     </CalculatedMember>
 
     <CalculatedMember dimension="Measures" name="Hearing Disabilities Moe" visible="true">
+      <Annotations>
+        <Annotation name="aggregation_method">MOE</Annotation>
+        <Annotation name="units_of_measurement">People</Annotation>
+        <Annotation name="error_type">MOE</Annotation>
+        <Annotation name="error_for_measure">Hearing Disabilities</Annotation>
+      </Annotations>
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[moe_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[moe_t]
@@ -8225,12 +8231,6 @@
         WHEN 1 = 1 THEN [Measures].[moe_nation]
         END
       </Formula>
-      <Annotations>
-        <Annotation name="aggregation_method">MOE</Annotation>
-        <Annotation name="units_of_measurement">People</Annotation>
-        <Annotation name="error_type">MOE</Annotation>
-        <Annotation name="error_for_measure">Hearing Disabilities</Annotation>
-      </Annotations>
     </CalculatedMember>
 
     <!-- Here add in rca and percent calc if asked for -->
@@ -8503,6 +8503,10 @@
     </Measure>
 
     <CalculatedMember dimension="Measures" name="Population by Employment Status" visible="true">
+      <Annotations>
+        <Annotation name="aggregation_method">SUM</Annotation>
+        <Annotation name="units_of_measurement">People</Annotation>
+      </Annotations>
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[mea_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[mea_t]
@@ -8523,13 +8527,15 @@
         WHEN 1 = 1 THEN [Measures].[mea_nation]
         END
       </Formula>
-      <Annotations>
-        <Annotation name="aggregation_method">SUM</Annotation>
-        <Annotation name="units_of_measurement">People</Annotation>
-      </Annotations>
     </CalculatedMember>
 
     <CalculatedMember dimension="Measures" name="Population by Employment Status Moe" visible="true">
+      <Annotations>
+        <Annotation name="aggregation_method">MOE</Annotation>
+        <Annotation name="units_of_measurement">People</Annotation>
+        <Annotation name="error_type">MOE</Annotation>
+        <Annotation name="error_for_measure">Population by Employment Status</Annotation>
+      </Annotations>
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[moe_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[moe_t]
@@ -8550,12 +8556,6 @@
         WHEN 1 = 1 THEN [Measures].[moe_nation]
         END
       </Formula>
-      <Annotations>
-        <Annotation name="aggregation_method">MOE</Annotation>
-        <Annotation name="units_of_measurement">People</Annotation>
-        <Annotation name="error_type">MOE</Annotation>
-        <Annotation name="error_for_measure">Population by Employment Status</Annotation>
-      </Annotations>
     </CalculatedMember>
 
     <!-- Here add in rca and percent calc if asked for -->
@@ -8647,6 +8647,10 @@
     </Measure>
 
     <CalculatedMember dimension="Measures" name="Rent Amount" visible="true">
+      <Annotations>
+        <Annotation name="aggregation_method">SUM</Annotation>
+        <Annotation name="units_of_measurement">USD</Annotation>
+      </Annotations>
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[mea_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[mea_t]
@@ -8667,13 +8671,15 @@
         WHEN 1 = 1 THEN [Measures].[mea_nation]
         END
       </Formula>
-      <Annotations>
-        <Annotation name="aggregation_method">SUM</Annotation>
-        <Annotation name="units_of_measurement">USD</Annotation>
-      </Annotations>
     </CalculatedMember>
 
     <CalculatedMember dimension="Measures" name="Rent Amount Moe" visible="true">
+      <Annotations>
+        <Annotation name="aggregation_method">MOE</Annotation>
+        <Annotation name="units_of_measurement">USD</Annotation>
+        <Annotation name="error_type">MOE</Annotation>
+        <Annotation name="error_for_measure">Rent Amount</Annotation>
+      </Annotations>
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[moe_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[moe_t]
@@ -8694,12 +8700,6 @@
         WHEN 1 = 1 THEN [Measures].[moe_nation]
         END
       </Formula>
-      <Annotations>
-        <Annotation name="aggregation_method">MOE</Annotation>
-        <Annotation name="units_of_measurement">USD</Annotation>
-        <Annotation name="error_type">MOE</Annotation>
-        <Annotation name="error_for_measure">Rent Amount</Annotation>
-      </Annotations>
     </CalculatedMember>
 
     <!-- Here add in rca and percent calc if asked for -->
@@ -8899,6 +8899,10 @@
     </Measure>
 
     <CalculatedMember dimension="Measures" name="Population in Disability" visible="true">
+      <Annotations>
+        <Annotation name="aggregation_method">SUM</Annotation>
+        <Annotation name="units_of_measurement">People</Annotation>
+      </Annotations>
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[mea_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[mea_t]
@@ -8919,13 +8923,15 @@
         WHEN 1 = 1 THEN [Measures].[mea_nation]
         END
       </Formula>
-      <Annotations>
-        <Annotation name="aggregation_method">SUM</Annotation>
-        <Annotation name="units_of_measurement">People</Annotation>
-      </Annotations>
     </CalculatedMember>
 
     <CalculatedMember dimension="Measures" name="Population in Disability Moe" visible="true">
+      <Annotations>
+        <Annotation name="aggregation_method">MOE</Annotation>
+        <Annotation name="units_of_measurement">People</Annotation>
+        <Annotation name="error_type">MOE</Annotation>
+        <Annotation name="error_for_measure">Population in Disability</Annotation>
+      </Annotations>
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[moe_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[moe_t]
@@ -8946,12 +8952,6 @@
         WHEN 1 = 1 THEN [Measures].[moe_nation]
         END
       </Formula>
-      <Annotations>
-        <Annotation name="aggregation_method">MOE</Annotation>
-        <Annotation name="units_of_measurement">People</Annotation>
-        <Annotation name="error_type">MOE</Annotation>
-        <Annotation name="error_for_measure">Population in Disability</Annotation>
-      </Annotations>
     </CalculatedMember>
 
     <!-- Here add in rca and percent calc if asked for -->
@@ -9151,6 +9151,10 @@
     </Measure>
 
     <CalculatedMember dimension="Measures" name="Population in Disability" visible="true">
+      <Annotations>
+        <Annotation name="aggregation_method">SUM</Annotation>
+        <Annotation name="units_of_measurement">People</Annotation>
+      </Annotations>
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[mea_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[mea_t]
@@ -9171,13 +9175,15 @@
         WHEN 1 = 1 THEN [Measures].[mea_nation]
         END
       </Formula>
-      <Annotations>
-        <Annotation name="aggregation_method">SUM</Annotation>
-        <Annotation name="units_of_measurement">People</Annotation>
-      </Annotations>
     </CalculatedMember>
 
     <CalculatedMember dimension="Measures" name="Population in Disability Moe" visible="true">
+      <Annotations>
+        <Annotation name="aggregation_method">MOE</Annotation>
+        <Annotation name="units_of_measurement">People</Annotation>
+        <Annotation name="error_type">MOE</Annotation>
+        <Annotation name="error_for_measure">Population in Disability</Annotation>
+      </Annotations>
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[moe_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[moe_t]
@@ -9198,12 +9204,6 @@
         WHEN 1 = 1 THEN [Measures].[moe_nation]
         END
       </Formula>
-      <Annotations>
-        <Annotation name="aggregation_method">MOE</Annotation>
-        <Annotation name="units_of_measurement">People</Annotation>
-        <Annotation name="error_type">MOE</Annotation>
-        <Annotation name="error_for_measure">Population in Disability</Annotation>
-      </Annotations>
     </CalculatedMember>
 
     <!-- Here add in rca and percent calc if asked for -->
@@ -9295,6 +9295,10 @@
     </Measure>
 
     <CalculatedMember dimension="Measures" name="Rent Amount" visible="true">
+      <Annotations>
+        <Annotation name="aggregation_method">SUM</Annotation>
+        <Annotation name="units_of_measurement">USD</Annotation>
+      </Annotations>
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[mea_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[mea_t]
@@ -9315,13 +9319,15 @@
         WHEN 1 = 1 THEN [Measures].[mea_nation]
         END
       </Formula>
-      <Annotations>
-        <Annotation name="aggregation_method">SUM</Annotation>
-        <Annotation name="units_of_measurement">USD</Annotation>
-      </Annotations>
     </CalculatedMember>
 
     <CalculatedMember dimension="Measures" name="Rent Amount Moe" visible="true">
+      <Annotations>
+        <Annotation name="aggregation_method">MOE</Annotation>
+        <Annotation name="units_of_measurement">USD</Annotation>
+        <Annotation name="error_type">MOE</Annotation>
+        <Annotation name="error_for_measure">Rent Amount</Annotation>
+      </Annotations>
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[moe_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[moe_t]
@@ -9342,12 +9348,6 @@
         WHEN 1 = 1 THEN [Measures].[moe_nation]
         END
       </Formula>
-      <Annotations>
-        <Annotation name="aggregation_method">MOE</Annotation>
-        <Annotation name="units_of_measurement">USD</Annotation>
-        <Annotation name="error_type">MOE</Annotation>
-        <Annotation name="error_for_measure">Rent Amount</Annotation>
-      </Annotations>
     </CalculatedMember>
 
     <!-- Here add in rca and percent calc if asked for -->
@@ -9620,6 +9620,10 @@
     </Measure>
 
     <CalculatedMember dimension="Measures" name="Population by Employment Status" visible="true">
+      <Annotations>
+        <Annotation name="aggregation_method">SUM</Annotation>
+        <Annotation name="units_of_measurement">People</Annotation>
+      </Annotations>
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[mea_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[mea_t]
@@ -9640,13 +9644,15 @@
         WHEN 1 = 1 THEN [Measures].[mea_nation]
         END
       </Formula>
-      <Annotations>
-        <Annotation name="aggregation_method">SUM</Annotation>
-        <Annotation name="units_of_measurement">People</Annotation>
-      </Annotations>
     </CalculatedMember>
 
     <CalculatedMember dimension="Measures" name="Population by Employment Status Moe" visible="true">
+      <Annotations>
+        <Annotation name="aggregation_method">MOE</Annotation>
+        <Annotation name="units_of_measurement">People</Annotation>
+        <Annotation name="error_type">MOE</Annotation>
+        <Annotation name="error_for_measure">Population by Employment Status</Annotation>
+      </Annotations>
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[moe_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[moe_t]
@@ -9667,12 +9673,6 @@
         WHEN 1 = 1 THEN [Measures].[moe_nation]
         END
       </Formula>
-      <Annotations>
-        <Annotation name="aggregation_method">MOE</Annotation>
-        <Annotation name="units_of_measurement">People</Annotation>
-        <Annotation name="error_type">MOE</Annotation>
-        <Annotation name="error_for_measure">Population by Employment Status</Annotation>
-      </Annotations>
     </CalculatedMember>
 
     <!-- Here add in rca and percent calc if asked for -->
@@ -9855,6 +9855,10 @@
     </Measure>
 
     <CalculatedMember dimension="Measures" name="Hearing Disabilities" visible="true">
+      <Annotations>
+        <Annotation name="aggregation_method">SUM</Annotation>
+        <Annotation name="units_of_measurement">People</Annotation>
+      </Annotations>
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[mea_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[mea_t]
@@ -9875,13 +9879,15 @@
         WHEN 1 = 1 THEN [Measures].[mea_nation]
         END
       </Formula>
-      <Annotations>
-        <Annotation name="aggregation_method">SUM</Annotation>
-        <Annotation name="units_of_measurement">People</Annotation>
-      </Annotations>
     </CalculatedMember>
 
     <CalculatedMember dimension="Measures" name="Hearing Disabilities Moe" visible="true">
+      <Annotations>
+        <Annotation name="aggregation_method">MOE</Annotation>
+        <Annotation name="units_of_measurement">People</Annotation>
+        <Annotation name="error_type">MOE</Annotation>
+        <Annotation name="error_for_measure">Hearing Disabilities</Annotation>
+      </Annotations>
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[moe_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[moe_t]
@@ -9902,12 +9908,6 @@
         WHEN 1 = 1 THEN [Measures].[moe_nation]
         END
       </Formula>
-      <Annotations>
-        <Annotation name="aggregation_method">MOE</Annotation>
-        <Annotation name="units_of_measurement">People</Annotation>
-        <Annotation name="error_type">MOE</Annotation>
-        <Annotation name="error_for_measure">Hearing Disabilities</Annotation>
-      </Annotations>
     </CalculatedMember>
 
     <!-- Here add in rca and percent calc if asked for -->
@@ -10105,6 +10105,10 @@
     </Measure>
 
     <CalculatedMember dimension="Measures" name="Population by Education Level" visible="true">
+      <Annotations>
+        <Annotation name="aggregation_method">SUM</Annotation>
+        <Annotation name="units_of_measurement">People</Annotation>
+      </Annotations>
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[mea_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[mea_t]
@@ -10125,13 +10129,15 @@
         WHEN 1 = 1 THEN [Measures].[mea_nation]
         END
       </Formula>
-      <Annotations>
-        <Annotation name="aggregation_method">SUM</Annotation>
-        <Annotation name="units_of_measurement">People</Annotation>
-      </Annotations>
     </CalculatedMember>
 
     <CalculatedMember dimension="Measures" name="Population by Education Level Moe" visible="true">
+      <Annotations>
+        <Annotation name="aggregation_method">MOE</Annotation>
+        <Annotation name="units_of_measurement">People</Annotation>
+        <Annotation name="error_type">MOE</Annotation>
+        <Annotation name="error_for_measure">Population by Education Level</Annotation>
+      </Annotations>
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[moe_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[moe_t]
@@ -10152,12 +10158,6 @@
         WHEN 1 = 1 THEN [Measures].[moe_nation]
         END
       </Formula>
-      <Annotations>
-        <Annotation name="aggregation_method">MOE</Annotation>
-        <Annotation name="units_of_measurement">People</Annotation>
-        <Annotation name="error_type">MOE</Annotation>
-        <Annotation name="error_for_measure">Population by Education Level</Annotation>
-      </Annotations>
     </CalculatedMember>
 
     <!-- Here add in rca and percent calc if asked for -->
@@ -10274,6 +10274,10 @@
     </Measure>
 
     <CalculatedMember dimension="Measures" name="Renter-Occupied Housing Units" visible="true">
+      <Annotations>
+        <Annotation name="aggregation_method">SUM</Annotation>
+        <Annotation name="units_of_measurement">Housing Units</Annotation>
+      </Annotations>
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[mea_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[mea_t]
@@ -10294,13 +10298,15 @@
         WHEN 1 = 1 THEN [Measures].[mea_nation]
         END
       </Formula>
-      <Annotations>
-        <Annotation name="aggregation_method">SUM</Annotation>
-        <Annotation name="units_of_measurement">Housing Units</Annotation>
-      </Annotations>
     </CalculatedMember>
 
     <CalculatedMember dimension="Measures" name="Renter-Occupied Housing Units Moe" visible="true">
+      <Annotations>
+        <Annotation name="aggregation_method">MOE</Annotation>
+        <Annotation name="units_of_measurement">Housing Units</Annotation>
+        <Annotation name="error_type">MOE</Annotation>
+        <Annotation name="error_for_measure">Renter-Occupied Housing Units</Annotation>
+      </Annotations>
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[moe_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[moe_t]
@@ -10321,12 +10327,6 @@
         WHEN 1 = 1 THEN [Measures].[moe_nation]
         END
       </Formula>
-      <Annotations>
-        <Annotation name="aggregation_method">MOE</Annotation>
-        <Annotation name="units_of_measurement">Housing Units</Annotation>
-        <Annotation name="error_type">MOE</Annotation>
-        <Annotation name="error_for_measure">Renter-Occupied Housing Units</Annotation>
-      </Annotations>
     </CalculatedMember>
 
     <!-- Here add in rca and percent calc if asked for -->
@@ -10443,6 +10443,10 @@
     </Measure>
 
     <CalculatedMember dimension="Measures" name="Housing Units" visible="true">
+      <Annotations>
+        <Annotation name="aggregation_method">SUM</Annotation>
+        <Annotation name="units_of_measurement">Housing Units</Annotation>
+      </Annotations>
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[mea_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[mea_t]
@@ -10463,13 +10467,15 @@
         WHEN 1 = 1 THEN [Measures].[mea_nation]
         END
       </Formula>
-      <Annotations>
-        <Annotation name="aggregation_method">SUM</Annotation>
-        <Annotation name="units_of_measurement">Housing Units</Annotation>
-      </Annotations>
     </CalculatedMember>
 
     <CalculatedMember dimension="Measures" name="Housing Units Moe" visible="true">
+      <Annotations>
+        <Annotation name="aggregation_method">MOE</Annotation>
+        <Annotation name="units_of_measurement">Housing Units</Annotation>
+        <Annotation name="error_type">MOE</Annotation>
+        <Annotation name="error_for_measure">Housing Units</Annotation>
+      </Annotations>
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[moe_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[moe_t]
@@ -10490,12 +10496,6 @@
         WHEN 1 = 1 THEN [Measures].[moe_nation]
         END
       </Formula>
-      <Annotations>
-        <Annotation name="aggregation_method">MOE</Annotation>
-        <Annotation name="units_of_measurement">Housing Units</Annotation>
-        <Annotation name="error_type">MOE</Annotation>
-        <Annotation name="error_for_measure">Housing Units</Annotation>
-      </Annotations>
     </CalculatedMember>
 
     <!-- Here add in rca and percent calc if asked for -->
@@ -10686,6 +10686,10 @@
     </Measure>
 
     <CalculatedMember dimension="Measures" name="Poverty by Schooling" visible="true">
+      <Annotations>
+        <Annotation name="aggregation_method">SUM</Annotation>
+        <Annotation name="units_of_measurement">People</Annotation>
+      </Annotations>
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[mea_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[mea_t]
@@ -10706,13 +10710,15 @@
         WHEN 1 = 1 THEN [Measures].[mea_nation]
         END
       </Formula>
-      <Annotations>
-        <Annotation name="aggregation_method">SUM</Annotation>
-        <Annotation name="units_of_measurement">People</Annotation>
-      </Annotations>
     </CalculatedMember>
 
     <CalculatedMember dimension="Measures" name="Poverty by Schooling Moe" visible="true">
+      <Annotations>
+        <Annotation name="aggregation_method">MOE</Annotation>
+        <Annotation name="units_of_measurement">People</Annotation>
+        <Annotation name="error_type">MOE</Annotation>
+        <Annotation name="error_for_measure">Poverty by Schooling</Annotation>
+      </Annotations>
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[moe_t]
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[County] THEN [Measures].[moe_t]
@@ -10733,12 +10739,6 @@
         WHEN 1 = 1 THEN [Measures].[moe_nation]
         END
       </Formula>
-      <Annotations>
-        <Annotation name="aggregation_method">MOE</Annotation>
-        <Annotation name="units_of_measurement">People</Annotation>
-        <Annotation name="error_type">MOE</Annotation>
-        <Annotation name="error_for_measure">Poverty by Schooling</Annotation>
-      </Annotations>
     </CalculatedMember>
 
     <!-- Here add in rca and percent calc if asked for -->
