@@ -26,7 +26,7 @@
         </Annotations>
         <Hierarchy hasAll="true" name="Zip">
             <Table name="zips" schema="shapes2017"/>
-            <Level name="Zip" column="geoid10" nameColumn="name" uniqueMembers="true" hideMemberIf="IfBlankName" />
+            <Level name="Zip" column="geoid" nameColumn="name" uniqueMembers="true" hideMemberIf="IfBlankName" />
         </Hierarchy>
     </Dimension>
 
