@@ -4,8 +4,8 @@
         <Annotation name="source_description">FBI: Uniform Crime Reporting</Annotation>
         <Annotation name="dataset_link">https://ucr.fbi.gov/</Annotation>
         <Annotation name="dataset_name">FBI: Uniform Crime Reporting</Annotation>
-        <Annotation name="topic">Built Social Enviornment</Annotation>
-        <Annotation name="subtopic">Built Social Enviornmen</Annotation>
+        <Annotation name="topic">Built Social Environment</Annotation>
+        <Annotation name="subtopic">Built Social Environment</Annotation>
         <Annotation name="details"></Annotation>
     </Annotations>
 

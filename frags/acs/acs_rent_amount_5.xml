@@ -8,8 +8,8 @@
       <Annotation name="dtaaset_link">http://www.census.gov/programs-surveys/acs/</Annotation>
       <Annotation name="dataset_name">ACS 5-year Estimate</Annotation>
       <Annotation name="table_id">B25058</Annotation>
-      <Annotation name="topic">Built Social Enviornment</Annotation>
-      <Annotation name="subtopic">Built Social Enviornment</Annotation>
+      <Annotation name="topic">Built Social Environment</Annotation>
+      <Annotation name="subtopic">Built Social Environment</Annotation>
       <Annotation name="details"></Annotation>
     </Annotations>
 

@@ -7,8 +7,8 @@
       <Annotation name="dataset_link">http://www.census.gov/programs-surveys/acs/</Annotation>
       <Annotation name="dataset_name">ACS 1-year Estimate</Annotation>
       <Annotation name="table_id">B25002</Annotation>
-      <Annotation name="topic">Built Social Enviornment</Annotation>
-      <Annotation name="subtopic">Built Social Enviornment</Annotation>
+      <Annotation name="topic">Built Social Environment</Annotation>
+      <Annotation name="subtopic">Built Social Environment</Annotation>
       <Annotation name="details"></Annotation>
     </Annotations>
 
