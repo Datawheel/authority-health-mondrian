@@ -12086,7 +12086,7 @@
             <Annotation name="dim_type">CATEGORY</Annotation>
         </Annotations>
         <Hierarchy hasAll="true" name="Category">
-            <Level name="Category" column="category" nameColumn="category" uniqueMembers="true"/>
+            <Level name="Category" column="category_id" nameColumn="category" uniqueMembers="true"/>
         </Hierarchy>
     </Dimension>
 
