@@ -7,6 +7,7 @@
         <Annotation name="topic">Health</Annotation>
         <Annotation name="subtopic">Health</Annotation>
         <Annotation name="details"></Annotation>
+        <Annotation name="hide_in_ui">true</Annotation>
     </Annotations>
 
     <Table name="even_years" schema="mibrfs"/>
