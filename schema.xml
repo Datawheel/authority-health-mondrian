@@ -491,26 +491,26 @@
 
     <Measure name="Age-Adjusted Cancer Rate" column="age_adjusted_rate" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement">Rate</Annotation>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Age-Adjusted Cancer Rate Lower 95 Percent Confidence Interval" column="age_adjusted_rate_lower_95_percent_confidence_interval" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement">Rate</Annotation>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="error_type">LCI</Annotation>
             <Annotation name="error_for_measure">Age-Adjusted Cancer Rate</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Age-Adjusted Cancer Rate Upper 95 Percent Confidence Interval" column="age_adjusted_rate_upper_95_percent_confidence_interval" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement">Rate</Annotation>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="error_type">UCI</Annotation>
             <Annotation name="error_for_measure">Age-Adjusted Cancer Rate</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Age-Adjusted Cancer Rate Standard Error" column="age_adjusted_rate_standard_error" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement">Rate</Annotation>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
         </Annotations>
     </Measure>
 
