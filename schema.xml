@@ -12446,7 +12446,7 @@
     </Measure>
     <Measure name="Age-Adjusted Mortality Rate (per 100,000)" column="age_adjusted_mortality_rate_per_100000" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement">Rate</Annotation>
+            <Annotation name="units_of_measurement">People</Annotation>
         </Annotations>
     </Measure>
 
