@@ -5,7 +5,7 @@
         <Annotation name="dataset_link">https://datawarehouse.hrsa.gov/topics/ahrf.aspx</Annotation>
         <Annotation name="dataset_name">Health Resources and Services Administration</Annotation>
         <Annotation name="topic">Access to Care</Annotation>
-        <Annotation name="subtopic">Access to Care</Annotation>
+        <Annotation name="subtopic">Dentist Demographics</Annotation>
         <Annotation name="details"></Annotation>
     </Annotations>
 

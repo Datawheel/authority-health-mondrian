@@ -4,8 +4,8 @@
         <Annotation name="source_description">National Water Quality Monitoring Council</Annotation>
         <Annotation name="dataset_link">https://www.waterqualitydata.us</Annotation>
         <Annotation name="dataset_name">National Water Quality Monitoring Council</Annotation>
-        <Annotation name="topic">Natural Enviornment</Annotation>
-        <Annotation name="subtopic">Natural Enviornment</Annotation>
+        <Annotation name="topic">Natural Environment</Annotation>
+        <Annotation name="subtopic">Water Quality</Annotation>
         <Annotation name="details"></Annotation>
     </Annotations>
 

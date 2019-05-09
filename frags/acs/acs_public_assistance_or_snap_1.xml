@@ -8,7 +8,7 @@
       <Annotation name="dataset_name">ACS 1-year Estimate</Annotation>
       <Annotation name="table_id">B19058</Annotation>
       <Annotation name="topic">Food Access</Annotation>
-      <Annotation name="subtopic">Food Access</Annotation>
+      <Annotation name="subtopic">Food Stamps</Annotation>
       <Annotation name="details"></Annotation>
     </Annotations>
 

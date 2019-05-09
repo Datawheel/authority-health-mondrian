@@ -5,7 +5,7 @@
         <Annotation name="dataset_link">https://www.nationsreportcard.gov/reading_2017/#?grade=4</Annotation>
         <Annotation name="dataset_name">NAEP Reading Assessment</Annotation>
         <Annotation name="topic">Education</Annotation>
-        <Annotation name="subtopic">Education</Annotation>
+        <Annotation name="subtopic">Reading Assessment</Annotation>
         <Annotation name="details"></Annotation>
     </Annotations>
 

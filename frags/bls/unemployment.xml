@@ -5,7 +5,7 @@
         <Annotation name="dataset_link">https://www.bls.gov/lau/</Annotation>
         <Annotation name="dataset_name">Bureau of Labor Statistics: Unemployment</Annotation>
         <Annotation name="topic">Economy</Annotation>
-        <Annotation name="subtopic">Economy</Annotation>
+        <Annotation name="subtopic">Unemployment</Annotation>
         <Annotation name="details"></Annotation>
     </Annotations>
 

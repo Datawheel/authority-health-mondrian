@@ -4,8 +4,8 @@
         <Annotation name="source_description">Environmental Protection Agency</Annotation>
         <Annotation name="dataset_link">https://aqs.epa.gov/aqsweb/airdata/download_files.html</Annotation>
         <Annotation name="dataset_name">Environmental Protection Agency</Annotation>
-        <Annotation name="topic">Natural Enviornment</Annotation>
-        <Annotation name="subtopic">Natural Enviornment</Annotation>
+        <Annotation name="topic">Natural Environment</Annotation>
+        <Annotation name="subtopic">Air Quality</Annotation>
         <Annotation name="details"></Annotation>
     </Annotations>
 

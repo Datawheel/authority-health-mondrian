@@ -4,8 +4,8 @@
         <Annotation name="source_description">500 Cities: Local Data for Better Health</Annotation>
         <Annotation name="dataset_link">https://www.cdc.gov/500cities/</Annotation>
         <Annotation name="dataset_name">500 Cities</Annotation>
-        <Annotation name="topic">Health</Annotation>
-        <Annotation name="subtopic">Health</Annotation>
+        <Annotation name="topic">Health Behaviors</Annotation>
+        <Annotation name="subtopic">Preventative Care</Annotation>
         <Annotation name="details"></Annotation>
     </Annotations>
 

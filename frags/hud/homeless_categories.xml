@@ -5,7 +5,7 @@
         <Annotation name="dataset_link">https://www.hudexchange.info/</Annotation>
         <Annotation name="dataset_name">US Department of Housing and Urban Development</Annotation>
         <Annotation name="topic">Special Population</Annotation>
-        <Annotation name="subtopic">Special Population</Annotation>
+        <Annotation name="subtopic">Homeless</Annotation>
         <Annotation name="details"></Annotation>
     </Annotations>
 

@@ -8,7 +8,7 @@
       <Annotation name="dataset_name">ACS 5-year Estimate</Annotation>
       <Annotation name="table_id">B23001</Annotation>
       <Annotation name="topic">Economy</Annotation>
-      <Annotation name="subtopic">Economy</Annotation>
+      <Annotation name="subtopic">Unemployment</Annotation>
       <Annotation name="details"></Annotation>
     </Annotations>
 

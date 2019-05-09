@@ -8,7 +8,7 @@
       <Annotation name="dataset_name">ACS 1-year Estimate</Annotation>
       <Annotation name="table_id">B27001</Annotation>
       <Annotation name="topic">Access to Care</Annotation>
-      <Annotation name="subtopic">Access to Care</Annotation>
+      <Annotation name="subtopic">Coverage</Annotation>
       <Annotation name="details"></Annotation>
     </Annotations>
 

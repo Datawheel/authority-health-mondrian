@@ -6,7 +6,7 @@
         <Annotation name="dataset_name">CDC Wonder</Annotation>
         <Annotation name="hide_in_ui">true</Annotation>
         <Annotation name="topic">Health Conditions</Annotation>
-        <Annotation name="subtopic">Health Conditions</Annotation>
+        <Annotation name="subtopic">Obesity and Diabetes</Annotation>
         <Annotation name="details"></Annotation>
     </Annotations>
 

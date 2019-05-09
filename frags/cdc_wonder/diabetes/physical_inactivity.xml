@@ -5,8 +5,8 @@
         <Annotation name="dataset_link">https://www.cdc.gov/diabetes/data/countydata/countydataindicators.html</Annotation>
         <Annotation name="dataset_name">CDC Wonder</Annotation>
         <Annotation name="hide_in_ui">true</Annotation>
-        <Annotation name="topic">Health Conditions</Annotation>
-        <Annotation name="subtopic">Health Conditions</Annotation>
+        <Annotation name="topic">Health Behaviors</Annotation>
+        <Annotation name="subtopic">Physical Inactivity</Annotation>
         <Annotation name="details"></Annotation>
     </Annotations>
 
