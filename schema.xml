@@ -12253,7 +12253,7 @@
             <Annotation name="units_of_measurement">People</Annotation>
         </Annotations>
     </Measure>
-    <Measure name="Health Center Patients" column="total_number_of_health_center_patients" aggregator="sum">
+    <Measure name="Total Health Center Patients" column="total_number_of_health_center_patients" aggregator="sum">
         <Annotations>
             <Annotation name="units_of_measurement">People</Annotation>
         </Annotations>
@@ -12266,38 +12266,38 @@
 
     <Measure name="Low-Income Health Center Penetration" column="penetration_of_low_income" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement">Percentage</Annotation>
+            <Annotation name="units_of_measurement">Rate</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Health Center Penetration" column="penetration_of_total_population" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement">Percentage</Annotation>
+            <Annotation name="units_of_measurement">Rate</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Uninsured Health Center Penetration" column="penetration_of_uninsured_population" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement">Percentage</Annotation>
+            <Annotation name="units_of_measurement">Rate</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Health Center Penetration with Medicaid and Other Public Insurance" column="penetration_of_population_with_medicaid_and_other_pub_ins" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement">Percentage</Annotation>
+            <Annotation name="units_of_measurement">Rate</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Health Center Penetration with Medicaid and Private Insurance" column="penetration_of_population_with_medicare_and_priv_ins" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement">Percentage</Annotation>
+            <Annotation name="units_of_measurement">Rate</Annotation>
         </Annotations>
     </Measure>
 
-    <Measure name="Health Center Patient Change (1-Year)" column="1_year_patient_percent_change" aggregator="avg">
+    <Measure name="Percent Change in Health Center Patients (1-Year)" column="1_year_patient_percent_change" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement">Percentage</Annotation>
+            <Annotation name="units_of_measurement">Rate</Annotation>
         </Annotations>
     </Measure>
-    <Measure name="Health Center Patient Change (2-Year)" column="2_year_patient_percent_change" aggregator="avg">
+    <Measure name="Percent Change in Health Center Patients (2-Year)" column="2_year_patient_percent_change" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement">Percentage</Annotation>
+            <Annotation name="units_of_measurement">Rate</Annotation>
         </Annotations>
     </Measure>
     <Measure name="2-Year Patient # Change" column="2_year_patient_number_change" aggregator="sum">
@@ -12309,17 +12309,17 @@
 
     <Measure name="Health Center Uninsured Patient Change (1-Year)" column="1_year_uninsured_patient_percent_change" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement">Percentage</Annotation>
+            <Annotation name="units_of_measurement">Rate</Annotation>
         </Annotations>
     </Measure>
-    <Measure name="Health Center Medicaid and Other Public Insurance Patient Change (1-Year)" column="1_year_medicaid_and_other_pub_ins_patient_percent_change" aggregator="avg">
+    <Measure name="Percent Change in Health Center Medicaid and Other Public Insurance Patients (1-Year)" column="1_year_medicaid_and_other_pub_ins_patient_percent_change" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement">Percentage</Annotation>
+            <Annotation name="units_of_measurement">Rate</Annotation>
         </Annotations>
     </Measure>
-    <Measure name="Health Center Medicare and Private Insurance Patient Change (1-Year)" column="1_year_medicare_and_priv_ins_patient_percent_change" aggregator="avg">
+    <Measure name="Percent Change in Health Center Medicare and Private Insurance Patients (1-Year)" column="1_year_medicare_and_priv_ins_patient_percent_change" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement">Percentage</Annotation>
+            <Annotation name="units_of_measurement">Rate</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Low-Income Not Served by Health Centers" column="low_income_not_served_by_health_centers" aggregator="sum">
@@ -12350,91 +12350,91 @@
     </Measure>
     <Measure name="Uninsured Health Center Patients" column="percent_patients_uninsured" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement">Percentage</Annotation>
+            <Annotation name="units_of_measurement">Rate</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Health Center Patients with Medicaid and Other Public Insurance" column="percent_patients_with_medicaid_and_other_pub_ins" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement">Percentage</Annotation>
+            <Annotation name="units_of_measurement">Rate</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Health Center Patients with Medicare and Private Insurance" column="percent_patients_with_medicare_and_priv_ins" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement">Percentage</Annotation>
+            <Annotation name="units_of_measurement">Rate</Annotation>
         </Annotations>
     </Measure>
 
     <Measure name="Health Center Patients in Poverty" column="percent_population_in_poverty" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement">Percentage</Annotation>
+            <Annotation name="units_of_measurement">Rate</Annotation>
         </Annotations>
     </Measure>
-    <Measure name="Low-Income Health Center Patients" column="percent_low_income_population" aggregator="avg">
+    <Measure name="Low-Income Health Center Patient Population" column="percent_low_income_population" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement">Percentage</Annotation>
+            <Annotation name="units_of_measurement">Rate</Annotation>
         </Annotations>
     </Measure>
-    <Measure name="Non-white Health Center Patients" column="percent_non_white" aggregator="avg">
+    <Measure name="Non-white Health Center Patient Population" column="percent_non_white" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement">Percentage</Annotation>
+            <Annotation name="units_of_measurement">Rate</Annotation>
         </Annotations>
     </Measure>
-    <Measure name="Hispanic Health Center Patients" column="percent_hispanic" aggregator="avg">
+    <Measure name="Hispanic Health Center Patient Population" column="percent_hispanic" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement">Percentage</Annotation>
+            <Annotation name="units_of_measurement">Rate</Annotation>
         </Annotations>
     </Measure>
-    <Measure name="Black Health Center Patients" column="percent_black" aggregator="avg">
+    <Measure name="Black Health Center Patient Population" column="percent_black" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement">Percentage</Annotation>
+            <Annotation name="units_of_measurement">Rate</Annotation>
         </Annotations>
     </Measure>
-    <Measure name="Asian Health Center Patients " column="percent_asian" aggregator="avg">
+    <Measure name="Asian Health Center Patient Population" column="percent_asian" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement">Percentage</Annotation>
+            <Annotation name="units_of_measurement">Rate</Annotation>
         </Annotations>
     </Measure>
-    <Measure name="American Indian/Alaska Native Health Center Patients" column="percent_american_indian_alaska_native" aggregator="avg">
+    <Measure name="American Indian/Alaska Native Health Center Patient Population" column="percent_american_indian_alaska_native" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement">Percentage</Annotation>
+            <Annotation name="units_of_measurement">Rate</Annotation>
         </Annotations>
     </Measure>
 
     <Measure name="Percent Population Uninsured - JSI" column="percent_population_uninsured_jsi" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement">Percentage</Annotation>
+            <Annotation name="units_of_measurement">Rate</Annotation>
             <Annotation name="hide_in_ui">true</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Population with Medicaid and Other Public Insurance" column="percent_population_with_medicaid_and_other_pub_ins" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement">Percentage</Annotation>
+            <Annotation name="units_of_measurement">Rate</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Population with Medicare and Private Insurance" column="percent_population_with_medicare_and_priv_ins" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement">Percentage</Annotation>
+            <Annotation name="units_of_measurement">Rate</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Percent Pop Not Employed" column="percent_pop_not_employed" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement">Percentage</Annotation>
+            <Annotation name="units_of_measurement">Rate</Annotation>
             <Annotation name="hide_in_ui">true</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Limited English Proficiency" column="percent_pop_with_limited_english_proficiency" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement">Percentage</Annotation>
+            <Annotation name="units_of_measurement">Rate</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Less Than High School Education" column="percent_pop_with_less_than_high_school_education" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement">Percentage</Annotation>
+            <Annotation name="units_of_measurement">Rate</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Percent Population Uninsured - RGC" column="percent_population_uninsured_rgc" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement">Percentage</Annotation>
+            <Annotation name="units_of_measurement">Rate</Annotation>
             <Annotation name="hide_in_ui">true</Annotation>
         </Annotations>
     </Measure>
@@ -12452,61 +12452,61 @@
 
     <Measure name="Percent Adults Ever Told They Have Diabetes" column="percent_adults_ever_told_they_have_diabetes" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement">Percentage</Annotation>
+            <Annotation name="units_of_measurement">Rate</Annotation>
             <Annotation name="hide_in_ui">true</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Percent Adults Ever Told They Have High Blood Pressure" column="percent_adults_ever_told_they_have_high_blood_pressure" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement">Percentage</Annotation>
+            <Annotation name="units_of_measurement">Rate</Annotation>
             <Annotation name="hide_in_ui">true</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Percent Adults Who Are Obese" column="percent_adults_who_are_obese" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement">Percentage</Annotation>
+            <Annotation name="units_of_measurement">Rate</Annotation>
             <Annotation name="hide_in_ui">true</Annotation>
         </Annotations>
     </Measure>
     <Measure name="No Dental Visits in Past Year" column="percent_adults_with_no_dental_visit_in_past_year" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement">Percentage</Annotation>
+            <Annotation name="units_of_measurement">Rate</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Delayed or Not Sought Care Due to High Cost" column="percent_adults_who_have_delayed_or_not_sought_care_due_to_high_cost" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement">Percentage</Annotation>
+            <Annotation name="units_of_measurement">Rate</Annotation>
         </Annotations>
     </Measure>
     <Measure name="No Usual Source of Care" column="percent_adults_with_no_usual_source_of_care" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement">Percentage</Annotation>
+            <Annotation name="units_of_measurement">Rate</Annotation>
         </Annotations>
     </Measure>
 
     <Measure name="Uninsured Population Below 100% FPL" column="percent_uninsured_population_below_100_percent_fpl" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement">Percentage</Annotation>
+            <Annotation name="units_of_measurement">Rate</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Uninsured Population Below 138% FPL" column="percent_uninsured_population_below_138_percent_fpl" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement">Percentage</Annotation>
+            <Annotation name="units_of_measurement">Rate</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Uninsured Population Below 200% FPL" column="percent_uninsured_population_below_200_percent_fpl" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement">Percentage</Annotation>
+            <Annotation name="units_of_measurement">Rate</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Uninsured Population Below 100%-400% FPL" column="percent_uninsured_population_at_100_percent_400_percent_fpl" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement">Percentage</Annotation>
+            <Annotation name="units_of_measurement">Rate</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Uninsured Population Below 138%-400% FPL" column="percent_uninsured_population_at_138_percent_400_percent_fpl" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement">Percentage</Annotation>
+            <Annotation name="units_of_measurement">Rate</Annotation>
         </Annotations>
     </Measure>
 </Cube><Cube name="MDC - Incarceration">
