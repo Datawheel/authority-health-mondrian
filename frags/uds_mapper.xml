@@ -30,7 +30,7 @@
         </Hierarchy>
     </Dimension>
 
-    <Measure name="Health Centers" column="health_centers" aggregator="sum">
+    <Measure name="Number of Health Centers" column="health_centers" aggregator="sum">
         <Annotations>
             <Annotation name="units_of_measurement">Number</Annotation>
         </Annotations>
@@ -106,7 +106,7 @@
         </Annotations>
     </Measure>
 
-    <Measure name="Health Center Uninsured Patient Change (1-Year)" column="1_year_uninsured_patient_percent_change" aggregator="avg">
+    <Measure name="Percent Change in Health Center Uninsured Patient Population (1-Year)" column="1_year_uninsured_patient_percent_change" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Rate</Annotation>
         </Annotations>
@@ -126,12 +126,12 @@
             <Annotation name="units_of_measurement">People</Annotation>
         </Annotations>
     </Measure>
-    <Measure name="Uninsured Not Served by Health Centers" column="uninsured_not_served_by_health_centers" aggregator="sum">
+    <Measure name="Uninsured Population Not Served by Health Centers" column="uninsured_not_served_by_health_centers" aggregator="sum">
         <Annotations>
             <Annotation name="units_of_measurement">People</Annotation>
         </Annotations>
     </Measure>
-    <Measure name="Medicaid and Other Public Insurance Not Served by Health Centers" column="medicaid_and_other_pub_ins_not_served_by_health_centers" aggregator="sum">
+    <Measure name="Total Population with Medicaid or Other Public Insurance Not Served by Health Centers" column="medicaid_and_other_pub_ins_not_served_by_health_centers" aggregator="sum">
         <Annotations>
             <Annotation name="units_of_measurement">People</Annotation>
         </Annotations>
@@ -147,7 +147,7 @@
             <Annotation name="units_of_measurement">People</Annotation>
         </Annotations>
     </Measure>
-    <Measure name="Uninsured Health Center Patients" column="percent_patients_uninsured" aggregator="avg">
+    <Measure name="Health Center Patients Who Are Uninsured" column="percent_patients_uninsured" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Rate</Annotation>
         </Annotations>
@@ -205,12 +205,12 @@
             <Annotation name="hide_in_ui">true</Annotation>
         </Annotations>
     </Measure>
-    <Measure name="Population with Medicaid and Other Public Insurance" column="percent_population_with_medicaid_and_other_pub_ins" aggregator="avg">
+    <Measure name="Population with Medicaid or Other Public Insurance" column="percent_population_with_medicaid_and_other_pub_ins" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Rate</Annotation>
         </Annotations>
     </Measure>
-    <Measure name="Population with Medicare and Private Insurance" column="percent_population_with_medicare_and_priv_ins" aggregator="avg">
+    <Measure name="Population with Medicare or Other Private Insurance" column="percent_population_with_medicare_and_priv_ins" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Rate</Annotation>
         </Annotations>
@@ -221,12 +221,12 @@
             <Annotation name="hide_in_ui">true</Annotation>
         </Annotations>
     </Measure>
-    <Measure name="Limited English Proficiency" column="percent_pop_with_limited_english_proficiency" aggregator="avg">
+    <Measure name="Households with Limited English Proficiency" column="percent_pop_with_limited_english_proficiency" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Rate</Annotation>
         </Annotations>
     </Measure>
-    <Measure name="Less Than High School Education" column="percent_pop_with_less_than_high_school_education" aggregator="avg">
+    <Measure name="Population with Less Than High School Education" column="percent_pop_with_less_than_high_school_education" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Rate</Annotation>
         </Annotations>
@@ -267,17 +267,17 @@
             <Annotation name="hide_in_ui">true</Annotation>
         </Annotations>
     </Measure>
-    <Measure name="No Dental Visits in Past Year" column="percent_adults_with_no_dental_visit_in_past_year" aggregator="avg">
+    <Measure name="Adults with No Dental Visit in Past Year" column="percent_adults_with_no_dental_visit_in_past_year" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Rate</Annotation>
         </Annotations>
     </Measure>
-    <Measure name="Delayed or Not Sought Care Due to High Cost" column="percent_adults_who_have_delayed_or_not_sought_care_due_to_high_cost" aggregator="avg">
+    <Measure name="Adults Who Delayed or Did Not Seek Care Due to High Cost" column="percent_adults_who_have_delayed_or_not_sought_care_due_to_high_cost" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Rate</Annotation>
         </Annotations>
     </Measure>
-    <Measure name="No Usual Source of Care" column="percent_adults_with_no_usual_source_of_care" aggregator="avg">
+    <Measure name="Adults with No Usual Source of Care" column="percent_adults_with_no_usual_source_of_care" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Rate</Annotation>
         </Annotations>
@@ -298,12 +298,12 @@
             <Annotation name="units_of_measurement">Rate</Annotation>
         </Annotations>
     </Measure>
-    <Measure name="Uninsured Population Below 100%-400% FPL" column="percent_uninsured_population_at_100_percent_400_percent_fpl" aggregator="avg">
+    <Measure name="Uninsured Population at 100%-400% FPL" column="percent_uninsured_population_at_100_percent_400_percent_fpl" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Rate</Annotation>
         </Annotations>
     </Measure>
-    <Measure name="Uninsured Population Below 138%-400% FPL" column="percent_uninsured_population_at_138_percent_400_percent_fpl" aggregator="avg">
+    <Measure name="Uninsured Population at 138%-400% FPL" column="percent_uninsured_population_at_138_percent_400_percent_fpl" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Rate</Annotation>
         </Annotations>
