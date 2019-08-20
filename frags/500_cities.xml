@@ -61,203 +61,203 @@
         </Annotations>
     </Measure>
 
-    <Measure name="Arthritis" column="arthritis_data_value" aggregator="avg">
+    <Measure name="Adults With Arthritis" column="arthritis_data_value" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Percentage</Annotation>
         </Annotations>
     </Measure>
-    <Measure name="Arthritis Low Confidence Limit" column="arthritis_low_confidence_limit" aggregator="avg">
+    <Measure name="Adults With Arthritis Low Confidence Limit" column="arthritis_low_confidence_limit" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="error_type">LCI</Annotation>
-            <Annotation name="error_for_measure">Arthritis</Annotation>
+            <Annotation name="error_for_measure">Adults With Arthritis</Annotation>
         </Annotations>
     </Measure>
-    <Measure name="Arthritis High Confidence Limit" column="arthritis_high_confidence_limit" aggregator="avg">
+    <Measure name="Adults With Arthritis High Confidence Limit" column="arthritis_high_confidence_limit" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="error_type">UCI</Annotation>
-            <Annotation name="error_for_measure">Arthritis</Annotation>
+            <Annotation name="error_for_measure">Adults With Arthritis</Annotation>
         </Annotations>
     </Measure>
 
-    <Measure name="Binge Drinking" column="binge_drinking_data_value" aggregator="avg">
+    <Measure name="Adults Who Binge Drink" column="binge_drinking_data_value" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Percentage</Annotation>
         </Annotations>
     </Measure>
-    <Measure name="Binge Drinking Low Confidence Limit" column="binge_drinking_low_confidence_limit" aggregator="avg">
+    <Measure name="Adults Who Binge Drink Low Confidence Limit" column="binge_drinking_low_confidence_limit" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="error_type">LCI</Annotation>
-            <Annotation name="error_for_measure">Binge Drinking</Annotation>
+            <Annotation name="error_for_measure">Adults Who Binge Drink</Annotation>
         </Annotations>
     </Measure>
-    <Measure name="Binge Drinking High Confidence Limit" column="binge_drinking_high_confidence_limit" aggregator="avg">
+    <Measure name="Adults Who Binge Drink High Confidence Limit" column="binge_drinking_high_confidence_limit" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="error_type">UCI</Annotation>
-            <Annotation name="error_for_measure">Binge Drinking</Annotation>
+            <Annotation name="error_for_measure">Adults Who Binge Drink</Annotation>
         </Annotations>
     </Measure>
 
-    <Measure name="COPD" column="copd_data_value" aggregator="avg">
+    <Measure name="Adults With COPD" column="copd_data_value" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Percentage</Annotation>
         </Annotations>
     </Measure>
-    <Measure name="COPD Low Confidence Limit" column="copd_low_confidence_limit" aggregator="avg">
+    <Measure name="Adults With COPD Low Confidence Limit" column="copd_low_confidence_limit" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="error_type">LCI</Annotation>
-            <Annotation name="error_for_measure">COPD</Annotation>
+            <Annotation name="error_for_measure">Adults With COPD</Annotation>
         </Annotations>
     </Measure>
-    <Measure name="COPD High Confidence Limit" column="copd_high_confidence_limit" aggregator="avg">
+    <Measure name="Adults With COPD High Confidence Limit" column="copd_high_confidence_limit" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="error_type">UCI</Annotation>
-            <Annotation name="error_for_measure">COPD</Annotation>
+            <Annotation name="error_for_measure">Adults With COPD</Annotation>
         </Annotations>
     </Measure>
 
-    <Measure name="Cancer (except skin)" column="cancer_except_skin_data_value" aggregator="avg">
+    <Measure name="Adults With Cancer (except skin)" column="cancer_except_skin_data_value" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Percentage</Annotation>
         </Annotations>
     </Measure>
-    <Measure name="Cancer (except skin) Low Confidence Limit" column="cancer_except_skin_low_confidence_limit" aggregator="avg">
+    <Measure name="Adults With Cancer (except skin) Low Confidence Limit" column="cancer_except_skin_low_confidence_limit" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="error_type">LCI</Annotation>
-            <Annotation name="error_for_measure">Cancer (except skin)</Annotation>
+            <Annotation name="error_for_measure">Adults With Cancer (except skin)</Annotation>
         </Annotations>
     </Measure>
-    <Measure name="Cancer (except skin) High Confidence Limit" column="cancer_except_skin_high_confidence_limit" aggregator="avg">
+    <Measure name="Adults With Cancer (except skin) High Confidence Limit" column="cancer_except_skin_high_confidence_limit" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="error_type">UCI</Annotation>
-            <Annotation name="error_for_measure">Cancer (except skin)</Annotation>
+            <Annotation name="error_for_measure">Adults With Cancer (except skin)</Annotation>
         </Annotations>
     </Measure>
 
-    <Measure name="Cholesterol Screening" column="cholesterol_screening_data_value" aggregator="avg">
+    <Measure name="Adults With Cholesterol Screening" column="cholesterol_screening_data_value" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Percentage</Annotation>
         </Annotations>
     </Measure>
-    <Measure name="Cholesterol Screening Low Confidence Limit" column="cholesterol_screening_low_confidence_limit" aggregator="avg">
+    <Measure name="Adults With Cholesterol Screening Low Confidence Limit" column="cholesterol_screening_low_confidence_limit" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="error_type">LCI</Annotation>
-            <Annotation name="error_for_measure">Cholesterol Screening</Annotation>
+            <Annotation name="error_for_measure">Adults With Cholesterol Screening</Annotation>
         </Annotations>
     </Measure>
-    <Measure name="Cholesterol Screening High Confidence Limit" column="cholesterol_screening_high_confidence_limit" aggregator="avg">
+    <Measure name="Adults With Cholesterol Screening High Confidence Limit" column="cholesterol_screening_high_confidence_limit" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="error_type">UCI</Annotation>
-            <Annotation name="error_for_measure">Cholesterol Screening</Annotation>
+            <Annotation name="error_for_measure">Adults With Cholesterol Screening</Annotation>
         </Annotations>
     </Measure>
 
-    <Measure name="Chronic Kidney Disease" column="chronic_kidney_disease_data_value" aggregator="avg">
+    <Measure name="Adults With Chronic Kidney Disease" column="chronic_kidney_disease_data_value" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Percentage</Annotation>
         </Annotations>
     </Measure>
-    <Measure name="Chronic Kidney Disease Low Confidence Limit" column="chronic_kidney_disease_low_confidence_limit" aggregator="avg">
+    <Measure name="Adults With Chronic Kidney Disease Low Confidence Limit" column="chronic_kidney_disease_low_confidence_limit" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="error_type">LCI</Annotation>
-            <Annotation name="error_for_measure">Chronic Kidney Disease</Annotation>
+            <Annotation name="error_for_measure">Adults With Chronic Kidney Disease</Annotation>
         </Annotations>
     </Measure>
-    <Measure name="Chronic Kidney Disease High Confidence Limit" column="chronic_kidney_disease_high_confidence_limit" aggregator="avg">
+    <Measure name="Adults With Chronic Kidney Disease High Confidence Limit" column="chronic_kidney_disease_high_confidence_limit" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="error_type">UCI</Annotation>
-            <Annotation name="error_for_measure">Chronic Kidney Disease</Annotation>
+            <Annotation name="error_for_measure">Adults With Chronic Kidney Disease</Annotation>
         </Annotations>
     </Measure>
 
-    <Measure name="Colorectal Cancer Screening" column="colorectal_cancer_screening_data_value" aggregator="avg">
+    <Measure name="Adults Aged 50-75 Years With Colorectal Cancer Screening" column="colorectal_cancer_screening_data_value" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Percentage</Annotation>
         </Annotations>
     </Measure>
-    <Measure name="Colorectal Cancer Screening Low Confidence Limit" column="colorectal_cancer_screening_low_confidence_limit" aggregator="avg">
+    <Measure name="Adults Aged 50-75 Years With Colorectal Cancer Screening Low Confidence Limit" column="colorectal_cancer_screening_low_confidence_limit" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="error_type">LCI</Annotation>
-            <Annotation name="error_for_measure">Colorectal Cancer Screening</Annotation>
+            <Annotation name="error_for_measure">Adults Aged 50-75 Years With Colorectal Cancer Screening</Annotation>
         </Annotations>
     </Measure>
-    <Measure name="Colorectal Cancer Screening High Confidence Limit" column="colorectal_cancer_screening_high_confidence_limit" aggregator="avg">
+    <Measure name="Adults Aged 50-75 Years With Colorectal Cancer Screening High Confidence Limit" column="colorectal_cancer_screening_high_confidence_limit" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="error_type">UCI</Annotation>
-            <Annotation name="error_for_measure">Colorectal Cancer Screening</Annotation>
+            <Annotation name="error_for_measure">Adults Aged 50-75 Years With Colorectal Cancer Screening</Annotation>
         </Annotations>
     </Measure>
 
-    <Measure name="Core Preventive Services for Older Men" column="core_preventive_services_for_older_men_data_value" aggregator="avg">
+    <Measure name="Men Aged 65+ Who Are Up-to-date on Core Preventive Services" column="core_preventive_services_for_older_men_data_value" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Percentage</Annotation>
         </Annotations>
     </Measure>
-    <Measure name="Core Preventive Services for Older Men Low Confidence Limit" column="core_preventive_services_for_older_men_low_confidence_limit" aggregator="avg">
+    <Measure name="Men Aged 65+ Who Are Up-to-date on Core Preventive Services Low Confidence Limit" column="core_preventive_services_for_older_men_low_confidence_limit" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="error_type">LCI</Annotation>
-            <Annotation name="error_for_measure">Core Preventive Services for Older Men</Annotation>
+            <Annotation name="error_for_measure">Men Aged 65+ Who Are Up-to-date on Core Preventive Services</Annotation>
         </Annotations>
     </Measure>
-    <Measure name="Core Preventive Services for Older Men High Confidence Limit" column="core_preventive_services_for_older_men_high_confidence_limit" aggregator="avg">
+    <Measure name="Men Aged 65+ Who Are Up-to-date on Core Preventive Services High Confidence Limit" column="core_preventive_services_for_older_men_high_confidence_limit" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="error_type">UCI</Annotation>
-            <Annotation name="error_for_measure">Core Preventive Services for Older Men</Annotation>
+            <Annotation name="error_for_measure">Men Aged 65+ Who Are Up-to-date on Core Preventive Services</Annotation>
         </Annotations>
     </Measure>
 
-    <Measure name="Core Preventive Services for Older Women" column="core_preventive_services_for_older_women_data_value" aggregator="avg">
+    <Measure name="Women Aged 65+ Who Are Up-to-date on Core Preventive Services" column="core_preventive_services_for_older_women_data_value" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Percentage</Annotation>
         </Annotations>
     </Measure>
-    <Measure name="Core Preventive Services for Older Women Low Confidence Limit" column="core_preventive_services_for_older_women_low_confidence_limit" aggregator="avg">
+    <Measure name="Women Aged 65+ Who Are Up-to-date on Core Preventive Services Low Confidence Limit" column="core_preventive_services_for_older_women_low_confidence_limit" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="error_type">LCI</Annotation>
-            <Annotation name="error_for_measure">Core Preventive Services for Older Women</Annotation>
+            <Annotation name="error_for_measure">Women Aged 65+ Who Are Up-to-date on Core Preventive Services</Annotation>
         </Annotations>
     </Measure>
-    <Measure name="Core Preventive Services for Older Women High Confidence Limit" column="core_preventive_services_for_older_women_high_confidence_limit" aggregator="avg">
+    <Measure name="Women Aged 65+ Who Are Up-to-date on Core Preventive Services High Confidence Limit" column="core_preventive_services_for_older_women_high_confidence_limit" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="error_type">UCI</Annotation>
-            <Annotation name="error_for_measure">Core Preventive Services for Older Women</Annotation>
+            <Annotation name="error_for_measure">Women Aged 65+ Who Are Up-to-date on Core Preventive Services</Annotation>
         </Annotations>
     </Measure>
 
-    <Measure name="Coronary Heart Disease" column="coronary_heart_disease_data_value" aggregator="avg">
+    <Measure name="Adults With Coronary Heart Disease" column="coronary_heart_disease_data_value" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Percentage</Annotation>
         </Annotations>
     </Measure>
-    <Measure name="Coronary Heart Disease Low Confidence Limit" column="coronary_heart_disease_low_confidence_limit" aggregator="avg">
+    <Measure name="Adults With Coronary Heart Disease Low Confidence Limit" column="coronary_heart_disease_low_confidence_limit" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="error_type">LCI</Annotation>
-            <Annotation name="error_for_measure">Coronary Heart Disease</Annotation>
+            <Annotation name="error_for_measure">Adults With Coronary Heart Disease</Annotation>
         </Annotations>
     </Measure>
-    <Measure name="Coronary Heart Disease High Confidence Limit" column="coronary_heart_disease_high_confidence_limit" aggregator="avg">
+    <Measure name="Adults With Coronary Heart Disease High Confidence Limit" column="coronary_heart_disease_high_confidence_limit" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="error_type">UCI</Annotation>
-            <Annotation name="error_for_measure">Coronary Heart Disease</Annotation>
+            <Annotation name="error_for_measure">Adults With Coronary Heart Disease</Annotation>
         </Annotations>
     </Measure>
 
