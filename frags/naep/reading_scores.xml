@@ -1,7 +1,7 @@
 <Cube name="NAEP - Reading Scores">
     <Annotations>
         <Annotation name="source_name">NAEP</Annotation>
-        <Annotation name="source_description">NAEP Reading Assessment</Annotation>
+        <Annotation name="source_description">The National Assessment of Educational Progress (NAEP) is the only assessment that measures what U.S. students know and can do in various subjects across the nation, states, and in some urban districts. Also known as The Nation’s Report Card, NAEP has provided important information about how students are performing academically since 1969. Data is available for the Nation, the state of Michigan, and the city of Detroit.</Annotation>
         <Annotation name="dataset_link">https://www.nationsreportcard.gov/reading_2017/#?grade=4</Annotation>
         <Annotation name="dataset_name">NAEP Reading Assessment</Annotation>
         <Annotation name="topic">Education</Annotation>
