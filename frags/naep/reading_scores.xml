@@ -52,7 +52,7 @@
             <Annotation name="units_of_measurement">Score</Annotation>
         </Annotations>
     </Measure>
-    <Measure name="Reading Proficiency" column="proficiency" aggregator="avg">
+    <Measure name="Students With Reading Proficiency" column="proficiency" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Percentage</Annotation>
         </Annotations>
