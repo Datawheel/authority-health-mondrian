@@ -57,7 +57,7 @@
             <Annotation name="units_of_measurement">People</Annotation>
         </Annotations>
     </Measure>
-    <Measure name="Unserved Low-Income" column="unserved_low_income" aggregator="sum">
+    <Measure name="Low-Income Population Not Served by Health Centers" column="unserved_low_income" aggregator="sum">
         <Annotations>
             <Annotation name="units_of_measurement">People</Annotation>
         </Annotations>
