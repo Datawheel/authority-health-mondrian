@@ -47,7 +47,7 @@
     </Measure>
     <Measure name="Food Insecurity Rate" column="food_insecurity_rate" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement">Rate</Annotation>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Estimated Food Insecure Population" column="estimated_food_insecure" aggregator="sum">
