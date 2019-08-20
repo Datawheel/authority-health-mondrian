@@ -48,7 +48,7 @@
     </Measure>
     <Measure name="Percent Adults Not Working" column="percent_adults_not_working" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement">Percentage</Annotation>
+            <Annotation name="units_of_measurement">Rate</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Housing Vacancy Rate" column="housing_vacancy_rate" aggregator="avg">
