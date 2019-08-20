@@ -41,23 +41,23 @@
         </Annotations>
     </Measure>
 
-    <Measure name="Annual Checkup" column="annual_checkup_data_value" aggregator="avg">
+    <Measure name="Adults With Annual Checkups" column="annual_checkup_data_value" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Percentage</Annotation>
         </Annotations>
     </Measure>
-    <Measure name="Annual Checkup Low Confidence Limit" column="annual_checkup_low_confidence_limit" aggregator="avg">
+    <Measure name="Adults With Annual Checkups Low Confidence Limit" column="annual_checkup_low_confidence_limit" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="error_type">LCI</Annotation>
-            <Annotation name="error_for_measure">Annual Checkup</Annotation>
+            <Annotation name="error_for_measure">Adults With Annual Checkups</Annotation>
         </Annotations>
     </Measure>
-    <Measure name="Annual Checkup High Confidence Limit" column="annual_checkup_high_confidence_limit" aggregator="avg">
+    <Measure name="Adults With Annual Checkups High Confidence Limit" column="annual_checkup_high_confidence_limit" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="error_type">UCI</Annotation>
-            <Annotation name="error_for_measure">Annual Checkup</Annotation>
+            <Annotation name="error_for_measure">Adults With Annual Checkups</Annotation>
         </Annotations>
     </Measure>
 
