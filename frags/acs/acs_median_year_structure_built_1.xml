@@ -8,7 +8,7 @@
       <Annotation name="dataset_name">ACS 1-year Estimate</Annotation>
       <Annotation name="table_id">B25035</Annotation>
       <Annotation name="topic">Built/Social Environment</Annotation>
-      <Annotation name="subtopic">Homeownership</Annotation>
+      <Annotation name="subtopic">Housing Characteristics</Annotation>
       <Annotation name="details"></Annotation>
     </Annotations>
 
@@ -85,9 +85,9 @@
       </MeasureExpression>
     </Measure>
 
-    <CalculatedMember dimension="Measures" name="Construction Date" visible="true">
+    <CalculatedMember aggregator="None" dimension="Measures" name="Construction Date" visible="true">
       <Annotations>
-        <Annotation name="aggregation_method">AVG</Annotation>
+        <Annotation name="aggregation_method">NONE</Annotation>
         <Annotation name="units_of_measurement">Years</Annotation>
       </Annotations>
       <Formula>CASE
