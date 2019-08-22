@@ -606,7 +606,7 @@
 <Cube name="NAEP - Reading Scores by Disability">
     <Annotations>
         <Annotation name="source_name">NAEP</Annotation>
-        <Annotation name="source_description">NAEP Reading Assessment</Annotation>
+        <Annotation name="source_description">The National Assessment of Educational Progress (NAEP) is the only assessment that measures what U.S. students know and can do in various subjects across the nation, states, and in some urban districts. Also known as The Nation’s Report Card, NAEP has provided important information about how students are performing academically since 1969. Data is available for the Nation, the state of Michigan, and the city of Detroit.</Annotation>
         <Annotation name="dataset_link">https://www.nationsreportcard.gov/reading_2017/#?grade=4</Annotation>
         <Annotation name="dataset_name">NAEP Reading Assessment</Annotation>
         <Annotation name="topic">Education</Annotation>
@@ -662,7 +662,7 @@
 <Cube name="NAEP - Reading Scores by ELL">
     <Annotations>
         <Annotation name="source_name">NAEP</Annotation>
-        <Annotation name="source_description">NAEP Reading Assessment</Annotation>
+        <Annotation name="source_description">The National Assessment of Educational Progress (NAEP) is the only assessment that measures what U.S. students know and can do in various subjects across the nation, states, and in some urban districts. Also known as The Nation’s Report Card, NAEP has provided important information about how students are performing academically since 1969. Data is available for the Nation, the state of Michigan, and the city of Detroit.</Annotation>
         <Annotation name="dataset_link">https://www.nationsreportcard.gov/reading_2017/#?grade=4</Annotation>
         <Annotation name="dataset_name">NAEP Reading Assessment</Annotation>
         <Annotation name="topic">Education</Annotation>
@@ -718,7 +718,7 @@
 <Cube name="NAEP - Reading Scores by Parents Education">
     <Annotations>
         <Annotation name="source_name">NAEP</Annotation>
-        <Annotation name="source_description">NAEP Reading Assessment</Annotation>
+        <Annotation name="source_description">The National Assessment of Educational Progress (NAEP) is the only assessment that measures what U.S. students know and can do in various subjects across the nation, states, and in some urban districts. Also known as The Nation’s Report Card, NAEP has provided important information about how students are performing academically since 1969. Data is available for the Nation, the state of Michigan, and the city of Detroit.</Annotation>
         <Annotation name="dataset_link">https://www.nationsreportcard.gov/reading_2017/#?grade=4</Annotation>
         <Annotation name="dataset_name">NAEP Reading Assessment</Annotation>
         <Annotation name="topic">Education</Annotation>
@@ -774,7 +774,7 @@
 <Cube name="NAEP - Reading Scores">
     <Annotations>
         <Annotation name="source_name">NAEP</Annotation>
-        <Annotation name="source_description">NAEP Reading Assessment</Annotation>
+        <Annotation name="source_description">The National Assessment of Educational Progress (NAEP) is the only assessment that measures what U.S. students know and can do in various subjects across the nation, states, and in some urban districts. Also known as The Nation’s Report Card, NAEP has provided important information about how students are performing academically since 1969. Data is available for the Nation, the state of Michigan, and the city of Detroit.</Annotation>
         <Annotation name="dataset_link">https://www.nationsreportcard.gov/reading_2017/#?grade=4</Annotation>
         <Annotation name="dataset_name">NAEP Reading Assessment</Annotation>
         <Annotation name="topic">Education</Annotation>
@@ -825,7 +825,7 @@
             <Annotation name="units_of_measurement">Score</Annotation>
         </Annotations>
     </Measure>
-    <Measure name="Reading Proficiency" column="proficiency" aggregator="avg">
+    <Measure name="Students With Reading Proficiency" column="proficiency" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Percentage</Annotation>
         </Annotations>
@@ -834,7 +834,7 @@
 <Cube name="NAEP - Reading Scores by Race">
     <Annotations>
         <Annotation name="source_name">NAEP</Annotation>
-        <Annotation name="source_description">NAEP Reading Assessment</Annotation>
+        <Annotation name="source_description">The National Assessment of Educational Progress (NAEP) is the only assessment that measures what U.S. students know and can do in various subjects across the nation, states, and in some urban districts. Also known as The Nation’s Report Card, NAEP has provided important information about how students are performing academically since 1969. Data is available for the Nation, the state of Michigan, and the city of Detroit.</Annotation>
         <Annotation name="dataset_link">https://www.nationsreportcard.gov/reading_2017/#?grade=4</Annotation>
         <Annotation name="dataset_name">NAEP Reading Assessment</Annotation>
         <Annotation name="topic">Education</Annotation>
@@ -890,7 +890,7 @@
 <Cube name="NAEP - Reading Scores by NSLP">
     <Annotations>
         <Annotation name="source_name">NAEP</Annotation>
-        <Annotation name="source_description">NAEP Reading Assessment</Annotation>
+        <Annotation name="source_description">The National Assessment of Educational Progress (NAEP) is the only assessment that measures what U.S. students know and can do in various subjects across the nation, states, and in some urban districts. Also known as The Nation’s Report Card, NAEP has provided important information about how students are performing academically since 1969. Data is available for the Nation, the state of Michigan, and the city of Detroit.</Annotation>
         <Annotation name="dataset_link">https://www.nationsreportcard.gov/reading_2017/#?grade=4</Annotation>
         <Annotation name="dataset_name">NAEP Reading Assessment</Annotation>
         <Annotation name="topic">Education</Annotation>
@@ -946,7 +946,7 @@
 <Cube name="NAEP - Reading Scores by Gender">
     <Annotations>
         <Annotation name="source_name">NAEP</Annotation>
-        <Annotation name="source_description">NAEP Reading Assessment</Annotation>
+        <Annotation name="source_description">The National Assessment of Educational Progress (NAEP) is the only assessment that measures what U.S. students know and can do in various subjects across the nation, states, and in some urban districts. Also known as The Nation’s Report Card, NAEP has provided important information about how students are performing academically since 1969. Data is available for the Nation, the state of Michigan, and the city of Detroit.</Annotation>
         <Annotation name="dataset_link">https://www.nationsreportcard.gov/reading_2017/#?grade=4</Annotation>
         <Annotation name="dataset_name">NAEP Reading Assessment</Annotation>
         <Annotation name="topic">Education</Annotation>
@@ -1001,10 +1001,10 @@
 </Cube>
 <Cube name="FBI UCR">
     <Annotations>
-        <Annotation name="source_name">FBI: UCR</Annotation>
-        <Annotation name="source_description">FBI: Uniform Crime Reporting</Annotation>
+        <Annotation name="source_name">Federal Bureau of Investigation</Annotation>
+        <Annotation name="source_description">The UCR Program's primary objective is to generate reliable information for use in law enforcement administration, operation, and management. Data is only available for a subset of places.</Annotation>
         <Annotation name="dataset_link">https://ucr.fbi.gov/</Annotation>
-        <Annotation name="dataset_name">FBI: Uniform Crime Reporting</Annotation>
+        <Annotation name="dataset_name">FBI: Uniform Crime Reporting (UCR)</Annotation>
         <Annotation name="topic">Built/Social Environment</Annotation>
         <Annotation name="subtopic">Violent and Property Crimes</Annotation>
         <Annotation name="details"></Annotation>
@@ -1155,223 +1155,223 @@
         </Annotations>
     </Measure>
 
-    <Measure name="Annual Checkup" column="annual_checkup_data_value" aggregator="avg">
+    <Measure name="Adults With Annual Checkups" column="annual_checkup_data_value" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Percentage</Annotation>
         </Annotations>
     </Measure>
-    <Measure name="Annual Checkup Low Confidence Limit" column="annual_checkup_low_confidence_limit" aggregator="avg">
+    <Measure name="Adults With Annual Checkups Low Confidence Limit" column="annual_checkup_low_confidence_limit" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="error_type">LCI</Annotation>
-            <Annotation name="error_for_measure">Annual Checkup</Annotation>
+            <Annotation name="error_for_measure">Adults With Annual Checkups</Annotation>
         </Annotations>
     </Measure>
-    <Measure name="Annual Checkup High Confidence Limit" column="annual_checkup_high_confidence_limit" aggregator="avg">
+    <Measure name="Adults With Annual Checkups High Confidence Limit" column="annual_checkup_high_confidence_limit" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="error_type">UCI</Annotation>
-            <Annotation name="error_for_measure">Annual Checkup</Annotation>
+            <Annotation name="error_for_measure">Adults With Annual Checkups</Annotation>
         </Annotations>
     </Measure>
 
-    <Measure name="Arthritis" column="arthritis_data_value" aggregator="avg">
+    <Measure name="Adults With Arthritis" column="arthritis_data_value" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Percentage</Annotation>
         </Annotations>
     </Measure>
-    <Measure name="Arthritis Low Confidence Limit" column="arthritis_low_confidence_limit" aggregator="avg">
+    <Measure name="Adults With Arthritis Low Confidence Limit" column="arthritis_low_confidence_limit" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="error_type">LCI</Annotation>
-            <Annotation name="error_for_measure">Arthritis</Annotation>
+            <Annotation name="error_for_measure">Adults With Arthritis</Annotation>
         </Annotations>
     </Measure>
-    <Measure name="Arthritis High Confidence Limit" column="arthritis_high_confidence_limit" aggregator="avg">
+    <Measure name="Adults With Arthritis High Confidence Limit" column="arthritis_high_confidence_limit" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="error_type">UCI</Annotation>
-            <Annotation name="error_for_measure">Arthritis</Annotation>
+            <Annotation name="error_for_measure">Adults With Arthritis</Annotation>
         </Annotations>
     </Measure>
 
-    <Measure name="Binge Drinking" column="binge_drinking_data_value" aggregator="avg">
+    <Measure name="Adults Who Binge Drink" column="binge_drinking_data_value" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Percentage</Annotation>
         </Annotations>
     </Measure>
-    <Measure name="Binge Drinking Low Confidence Limit" column="binge_drinking_low_confidence_limit" aggregator="avg">
+    <Measure name="Adults Who Binge Drink Low Confidence Limit" column="binge_drinking_low_confidence_limit" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="error_type">LCI</Annotation>
-            <Annotation name="error_for_measure">Binge Drinking</Annotation>
+            <Annotation name="error_for_measure">Adults Who Binge Drink</Annotation>
         </Annotations>
     </Measure>
-    <Measure name="Binge Drinking High Confidence Limit" column="binge_drinking_high_confidence_limit" aggregator="avg">
+    <Measure name="Adults Who Binge Drink High Confidence Limit" column="binge_drinking_high_confidence_limit" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="error_type">UCI</Annotation>
-            <Annotation name="error_for_measure">Binge Drinking</Annotation>
+            <Annotation name="error_for_measure">Adults Who Binge Drink</Annotation>
         </Annotations>
     </Measure>
 
-    <Measure name="COPD" column="copd_data_value" aggregator="avg">
+    <Measure name="Adults With COPD" column="copd_data_value" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Percentage</Annotation>
         </Annotations>
     </Measure>
-    <Measure name="COPD Low Confidence Limit" column="copd_low_confidence_limit" aggregator="avg">
+    <Measure name="Adults With COPD Low Confidence Limit" column="copd_low_confidence_limit" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="error_type">LCI</Annotation>
-            <Annotation name="error_for_measure">COPD</Annotation>
+            <Annotation name="error_for_measure">Adults With COPD</Annotation>
         </Annotations>
     </Measure>
-    <Measure name="COPD High Confidence Limit" column="copd_high_confidence_limit" aggregator="avg">
+    <Measure name="Adults With COPD High Confidence Limit" column="copd_high_confidence_limit" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="error_type">UCI</Annotation>
-            <Annotation name="error_for_measure">COPD</Annotation>
+            <Annotation name="error_for_measure">Adults With COPD</Annotation>
         </Annotations>
     </Measure>
 
-    <Measure name="Cancer (except skin)" column="cancer_except_skin_data_value" aggregator="avg">
+    <Measure name="Adults With Cancer (except skin)" column="cancer_except_skin_data_value" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Percentage</Annotation>
         </Annotations>
     </Measure>
-    <Measure name="Cancer (except skin) Low Confidence Limit" column="cancer_except_skin_low_confidence_limit" aggregator="avg">
+    <Measure name="Adults With Cancer (except skin) Low Confidence Limit" column="cancer_except_skin_low_confidence_limit" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="error_type">LCI</Annotation>
-            <Annotation name="error_for_measure">Cancer (except skin)</Annotation>
+            <Annotation name="error_for_measure">Adults With Cancer (except skin)</Annotation>
         </Annotations>
     </Measure>
-    <Measure name="Cancer (except skin) High Confidence Limit" column="cancer_except_skin_high_confidence_limit" aggregator="avg">
+    <Measure name="Adults With Cancer (except skin) High Confidence Limit" column="cancer_except_skin_high_confidence_limit" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="error_type">UCI</Annotation>
-            <Annotation name="error_for_measure">Cancer (except skin)</Annotation>
+            <Annotation name="error_for_measure">Adults With Cancer (except skin)</Annotation>
         </Annotations>
     </Measure>
 
-    <Measure name="Cholesterol Screening" column="cholesterol_screening_data_value" aggregator="avg">
+    <Measure name="Adults With Cholesterol Screening" column="cholesterol_screening_data_value" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Percentage</Annotation>
         </Annotations>
     </Measure>
-    <Measure name="Cholesterol Screening Low Confidence Limit" column="cholesterol_screening_low_confidence_limit" aggregator="avg">
+    <Measure name="Adults With Cholesterol Screening Low Confidence Limit" column="cholesterol_screening_low_confidence_limit" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="error_type">LCI</Annotation>
-            <Annotation name="error_for_measure">Cholesterol Screening</Annotation>
+            <Annotation name="error_for_measure">Adults With Cholesterol Screening</Annotation>
         </Annotations>
     </Measure>
-    <Measure name="Cholesterol Screening High Confidence Limit" column="cholesterol_screening_high_confidence_limit" aggregator="avg">
+    <Measure name="Adults With Cholesterol Screening High Confidence Limit" column="cholesterol_screening_high_confidence_limit" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="error_type">UCI</Annotation>
-            <Annotation name="error_for_measure">Cholesterol Screening</Annotation>
+            <Annotation name="error_for_measure">Adults With Cholesterol Screening</Annotation>
         </Annotations>
     </Measure>
 
-    <Measure name="Chronic Kidney Disease" column="chronic_kidney_disease_data_value" aggregator="avg">
+    <Measure name="Adults With Chronic Kidney Disease" column="chronic_kidney_disease_data_value" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Percentage</Annotation>
         </Annotations>
     </Measure>
-    <Measure name="Chronic Kidney Disease Low Confidence Limit" column="chronic_kidney_disease_low_confidence_limit" aggregator="avg">
+    <Measure name="Adults With Chronic Kidney Disease Low Confidence Limit" column="chronic_kidney_disease_low_confidence_limit" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="error_type">LCI</Annotation>
-            <Annotation name="error_for_measure">Chronic Kidney Disease</Annotation>
+            <Annotation name="error_for_measure">Adults With Chronic Kidney Disease</Annotation>
         </Annotations>
     </Measure>
-    <Measure name="Chronic Kidney Disease High Confidence Limit" column="chronic_kidney_disease_high_confidence_limit" aggregator="avg">
+    <Measure name="Adults With Chronic Kidney Disease High Confidence Limit" column="chronic_kidney_disease_high_confidence_limit" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="error_type">UCI</Annotation>
-            <Annotation name="error_for_measure">Chronic Kidney Disease</Annotation>
+            <Annotation name="error_for_measure">Adults With Chronic Kidney Disease</Annotation>
         </Annotations>
     </Measure>
 
-    <Measure name="Colorectal Cancer Screening" column="colorectal_cancer_screening_data_value" aggregator="avg">
+    <Measure name="Adults Aged 50-75 Years With Colorectal Cancer Screening" column="colorectal_cancer_screening_data_value" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Percentage</Annotation>
         </Annotations>
     </Measure>
-    <Measure name="Colorectal Cancer Screening Low Confidence Limit" column="colorectal_cancer_screening_low_confidence_limit" aggregator="avg">
+    <Measure name="Adults Aged 50-75 Years With Colorectal Cancer Screening Low Confidence Limit" column="colorectal_cancer_screening_low_confidence_limit" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="error_type">LCI</Annotation>
-            <Annotation name="error_for_measure">Colorectal Cancer Screening</Annotation>
+            <Annotation name="error_for_measure">Adults Aged 50-75 Years With Colorectal Cancer Screening</Annotation>
         </Annotations>
     </Measure>
-    <Measure name="Colorectal Cancer Screening High Confidence Limit" column="colorectal_cancer_screening_high_confidence_limit" aggregator="avg">
+    <Measure name="Adults Aged 50-75 Years With Colorectal Cancer Screening High Confidence Limit" column="colorectal_cancer_screening_high_confidence_limit" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="error_type">UCI</Annotation>
-            <Annotation name="error_for_measure">Colorectal Cancer Screening</Annotation>
+            <Annotation name="error_for_measure">Adults Aged 50-75 Years With Colorectal Cancer Screening</Annotation>
         </Annotations>
     </Measure>
 
-    <Measure name="Core Preventive Services for Older Men" column="core_preventive_services_for_older_men_data_value" aggregator="avg">
+    <Measure name="Men Aged 65+ Who Are Up-to-date on Core Preventive Services" column="core_preventive_services_for_older_men_data_value" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Percentage</Annotation>
         </Annotations>
     </Measure>
-    <Measure name="Core Preventive Services for Older Men Low Confidence Limit" column="core_preventive_services_for_older_men_low_confidence_limit" aggregator="avg">
+    <Measure name="Men Aged 65+ Who Are Up-to-date on Core Preventive Services Low Confidence Limit" column="core_preventive_services_for_older_men_low_confidence_limit" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="error_type">LCI</Annotation>
-            <Annotation name="error_for_measure">Core Preventive Services for Older Men</Annotation>
+            <Annotation name="error_for_measure">Men Aged 65+ Who Are Up-to-date on Core Preventive Services</Annotation>
         </Annotations>
     </Measure>
-    <Measure name="Core Preventive Services for Older Men High Confidence Limit" column="core_preventive_services_for_older_men_high_confidence_limit" aggregator="avg">
+    <Measure name="Men Aged 65+ Who Are Up-to-date on Core Preventive Services High Confidence Limit" column="core_preventive_services_for_older_men_high_confidence_limit" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="error_type">UCI</Annotation>
-            <Annotation name="error_for_measure">Core Preventive Services for Older Men</Annotation>
+            <Annotation name="error_for_measure">Men Aged 65+ Who Are Up-to-date on Core Preventive Services</Annotation>
         </Annotations>
     </Measure>
 
-    <Measure name="Core Preventive Services for Older Women" column="core_preventive_services_for_older_women_data_value" aggregator="avg">
+    <Measure name="Women Aged 65+ Who Are Up-to-date on Core Preventive Services" column="core_preventive_services_for_older_women_data_value" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Percentage</Annotation>
         </Annotations>
     </Measure>
-    <Measure name="Core Preventive Services for Older Women Low Confidence Limit" column="core_preventive_services_for_older_women_low_confidence_limit" aggregator="avg">
+    <Measure name="Women Aged 65+ Who Are Up-to-date on Core Preventive Services Low Confidence Limit" column="core_preventive_services_for_older_women_low_confidence_limit" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="error_type">LCI</Annotation>
-            <Annotation name="error_for_measure">Core Preventive Services for Older Women</Annotation>
+            <Annotation name="error_for_measure">Women Aged 65+ Who Are Up-to-date on Core Preventive Services</Annotation>
         </Annotations>
     </Measure>
-    <Measure name="Core Preventive Services for Older Women High Confidence Limit" column="core_preventive_services_for_older_women_high_confidence_limit" aggregator="avg">
+    <Measure name="Women Aged 65+ Who Are Up-to-date on Core Preventive Services High Confidence Limit" column="core_preventive_services_for_older_women_high_confidence_limit" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="error_type">UCI</Annotation>
-            <Annotation name="error_for_measure">Core Preventive Services for Older Women</Annotation>
+            <Annotation name="error_for_measure">Women Aged 65+ Who Are Up-to-date on Core Preventive Services</Annotation>
         </Annotations>
     </Measure>
 
-    <Measure name="Coronary Heart Disease" column="coronary_heart_disease_data_value" aggregator="avg">
+    <Measure name="Adults With Coronary Heart Disease" column="coronary_heart_disease_data_value" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Percentage</Annotation>
         </Annotations>
     </Measure>
-    <Measure name="Coronary Heart Disease Low Confidence Limit" column="coronary_heart_disease_low_confidence_limit" aggregator="avg">
+    <Measure name="Adults With Coronary Heart Disease Low Confidence Limit" column="coronary_heart_disease_low_confidence_limit" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="error_type">LCI</Annotation>
-            <Annotation name="error_for_measure">Coronary Heart Disease</Annotation>
+            <Annotation name="error_for_measure">Adults With Coronary Heart Disease</Annotation>
         </Annotations>
     </Measure>
-    <Measure name="Coronary Heart Disease High Confidence Limit" column="coronary_heart_disease_high_confidence_limit" aggregator="avg">
+    <Measure name="Adults With Coronary Heart Disease High Confidence Limit" column="coronary_heart_disease_high_confidence_limit" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="error_type">UCI</Annotation>
-            <Annotation name="error_for_measure">Coronary Heart Disease</Annotation>
+            <Annotation name="error_for_measure">Adults With Coronary Heart Disease</Annotation>
         </Annotations>
     </Measure>
 
@@ -1718,7 +1718,7 @@
 <Cube name="acs_poverty_status_by_nativity_1">
     <Annotations>
       <Annotation name="source_name">Census Bureau</Annotation>
-      <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year.</Annotation>
+      <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year. Data might not be available for certain smaller locations in the 1-year estimate.</Annotation>
       <Annotation name="dataset_link">http://www.census.gov/programs-surveys/acs/</Annotation>
       <Annotation name="dataset_name">ACS 1-year Estimate</Annotation>
       <Annotation name="table_id">B17025</Annotation>
@@ -1931,7 +1931,7 @@
 <Cube name="acs_health_insurance_coverage_status_by_sex_by_age_5">
     <Annotations>
       <Annotation name="source_name">Census Bureau</Annotation>
-      <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year.</Annotation>
+      <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year. Data might not be available for certain smaller locations in the 1-year estimate.</Annotation>
       <Annotation name="dataset_link">http://www.census.gov/programs-surveys/acs/</Annotation>
       <Annotation name="dataset_name">ACS 5-year Estimate</Annotation>
       <Annotation name="table_id">B27001</Annotation>
@@ -2116,7 +2116,7 @@
       </MeasureExpression>
     </Measure>
 
-    <CalculatedMember dimension="Measures" name="Population by Insurance Coverage" visible="true">
+    <CalculatedMember dimension="Measures" name="Population Size by Insurance Coverage Status" visible="true">
       <Annotations>
         <Annotation name="aggregation_method">SUM</Annotation>
         <Annotation name="units_of_measurement">People</Annotation>
@@ -2143,12 +2143,12 @@
       </Formula>
     </CalculatedMember>
 
-    <CalculatedMember dimension="Measures" name="Population by Insurance Coverage Moe" visible="true">
+    <CalculatedMember dimension="Measures" name="Population Size by Insurance Coverage Status Moe" visible="true">
       <Annotations>
         <Annotation name="aggregation_method">MOE</Annotation>
         <Annotation name="units_of_measurement">People</Annotation>
         <Annotation name="error_type">MOE</Annotation>
-        <Annotation name="error_for_measure">Population by Insurance Coverage</Annotation>
+        <Annotation name="error_for_measure">Population Size by Insurance Coverage Status</Annotation>
       </Annotations>
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[moe_t]
@@ -2178,7 +2178,7 @@
 <Cube name="acs_poverty_status_by_sex_by_work_experience_1">
     <Annotations>
       <Annotation name="source_name">Census Bureau</Annotation>
-      <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year.</Annotation>
+      <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year. Data might not be available for certain smaller locations in the 1-year estimate.</Annotation>
       <Annotation name="dataset_link">http://www.census.gov/programs-surveys/acs/</Annotation>
       <Annotation name="dataset_name">ACS 1-year Estimate</Annotation>
       <Annotation name="table_id">B17004</Annotation>
@@ -2339,7 +2339,7 @@
       </MeasureExpression>
     </Measure>
 
-    <CalculatedMember dimension="Measures" name="Poverty by Work Experience" visible="true">
+    <CalculatedMember dimension="Measures" name="Population by Poverty Status" visible="true">
       <Annotations>
         <Annotation name="aggregation_method">SUM</Annotation>
         <Annotation name="units_of_measurement">People</Annotation>
@@ -2366,12 +2366,12 @@
       </Formula>
     </CalculatedMember>
 
-    <CalculatedMember dimension="Measures" name="Poverty by Work Experience Moe" visible="true">
+    <CalculatedMember dimension="Measures" name="Population by Poverty Status Moe" visible="true">
       <Annotations>
         <Annotation name="aggregation_method">MOE</Annotation>
         <Annotation name="units_of_measurement">People</Annotation>
         <Annotation name="error_type">MOE</Annotation>
-        <Annotation name="error_for_measure">Poverty by Work Experience</Annotation>
+        <Annotation name="error_for_measure">Population by Poverty Status</Annotation>
       </Annotations>
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[moe_t]
@@ -2401,12 +2401,12 @@
 <Cube name="acs_median_year_structure_built_5">
     <Annotations>
       <Annotation name="source_name">Census Bureau</Annotation>
-      <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year.</Annotation>
+      <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year. Data might not be available for certain smaller locations in the 1-year estimate.</Annotation>
       <Annotation name="dataset_link">http://www.census.gov/programs-surveys/acs/</Annotation>
       <Annotation name="dataset_name">ACS 5-year Estimate</Annotation>
       <Annotation name="table_id">B25035</Annotation>
       <Annotation name="topic">Built/Social Environment</Annotation>
-      <Annotation name="subtopic">Homeownership</Annotation>
+      <Annotation name="subtopic">Housing Characteristics</Annotation>
       <Annotation name="details"></Annotation>
     </Annotations>
 
@@ -2483,10 +2483,10 @@
       </MeasureExpression>
     </Measure>
 
-    <CalculatedMember dimension="Measures" name="Construction Date" visible="true">
+    <CalculatedMember aggregator="avg" dimension="Measures" name="Construction Year" visible="true">
       <Annotations>
-        <Annotation name="aggregation_method">AVG</Annotation>
-        <Annotation name="units_of_measurement">Years</Annotation>
+        <Annotation name="aggregation_method">NONE</Annotation>
+        <Annotation name="units_of_measurement">Year</Annotation>
       </Annotations>
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[mea_t]
@@ -2510,12 +2510,12 @@
       </Formula>
     </CalculatedMember>
 
-    <CalculatedMember dimension="Measures" name="Construction Date Moe" visible="true">
+    <CalculatedMember dimension="Measures" name="Construction Year Moe" visible="true">
       <Annotations>
         <Annotation name="aggregation_method">MOE</Annotation>
-        <Annotation name="units_of_measurement">Years</Annotation>
+        <Annotation name="units_of_measurement">Year</Annotation>
         <Annotation name="error_type">MOE</Annotation>
-        <Annotation name="error_for_measure">Construction Date</Annotation>
+        <Annotation name="error_for_measure">Construction Year</Annotation>
       </Annotations>
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[moe_t]
@@ -2545,7 +2545,7 @@
 <Cube name="acs_ratio_of_income_to_poverty_level_1">
     <Annotations>
       <Annotation name="source_name">Census Bureau</Annotation>
-      <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year.</Annotation>
+      <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year. Data might not be available for certain smaller locations in the 1-year estimate.</Annotation>
       <Annotation name="dataset_link">http://www.census.gov/programs-surveys/acs/</Annotation>
       <Annotation name="dataset_name">ACS 1-year Estimate</Annotation>
       <Annotation name="table_id">B17002</Annotation>
@@ -2754,7 +2754,7 @@
 <Cube name="acs_veteran_status_by_poverty_and_disability_status_1">
     <Annotations>
       <Annotation name="source_name">Census Bureau</Annotation>
-      <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year.</Annotation>
+      <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year. Data might not be available for certain smaller locations in the 1-year estimate.</Annotation>
       <Annotation name="dataset_link">http://www.census.gov/programs-surveys/acs/</Annotation>
       <Annotation name="dataset_name">ACS 1-year Estimate</Annotation>
       <Annotation name="table_id">B23024</Annotation>
@@ -3035,7 +3035,7 @@
 <Cube name="acs_veteran_status_by_poverty_and_disability_status_5">
     <Annotations>
       <Annotation name="source_name">Census Bureau</Annotation>
-      <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year.</Annotation>
+      <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year. Data might not be available for certain smaller locations in the 1-year estimate.</Annotation>
       <Annotation name="dataset_link">http://www.census.gov/programs-surveys/acs/</Annotation>
       <Annotation name="dataset_name">ACS 5-year Estimate</Annotation>
       <Annotation name="table_id">B23024</Annotation>
@@ -3316,12 +3316,12 @@
 <Cube name="acs_median_year_structure_built_1">
     <Annotations>
       <Annotation name="source_name">Census Bureau</Annotation>
-      <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year.</Annotation>
+      <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year. Data might not be available for certain smaller locations in the 1-year estimate.</Annotation>
       <Annotation name="dataset_link">http://www.census.gov/programs-surveys/acs/</Annotation>
       <Annotation name="dataset_name">ACS 1-year Estimate</Annotation>
       <Annotation name="table_id">B25035</Annotation>
       <Annotation name="topic">Built/Social Environment</Annotation>
-      <Annotation name="subtopic">Homeownership</Annotation>
+      <Annotation name="subtopic">Housing Characteristics</Annotation>
       <Annotation name="details"></Annotation>
     </Annotations>
 
@@ -3398,10 +3398,10 @@
       </MeasureExpression>
     </Measure>
 
-    <CalculatedMember dimension="Measures" name="Construction Date" visible="true">
+    <CalculatedMember aggregator="avg" dimension="Measures" name="Construction Year" visible="true">
       <Annotations>
-        <Annotation name="aggregation_method">AVG</Annotation>
-        <Annotation name="units_of_measurement">Years</Annotation>
+        <Annotation name="aggregation_method">NONE</Annotation>
+        <Annotation name="units_of_measurement">Year</Annotation>
       </Annotations>
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[mea_t]
@@ -3425,12 +3425,12 @@
       </Formula>
     </CalculatedMember>
 
-    <CalculatedMember dimension="Measures" name="Construction Date Moe" visible="true">
+    <CalculatedMember dimension="Measures" name="Construction Year Moe" visible="true">
       <Annotations>
         <Annotation name="aggregation_method">MOE</Annotation>
-        <Annotation name="units_of_measurement">Years</Annotation>
+        <Annotation name="units_of_measurement">Year</Annotation>
         <Annotation name="error_type">MOE</Annotation>
-        <Annotation name="error_for_measure">Construction Date</Annotation>
+        <Annotation name="error_for_measure">Construction Year</Annotation>
       </Annotations>
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[moe_t]
@@ -3460,7 +3460,7 @@
 <Cube name="acs_poverty_status_by_sex_by_work_experience_5">
     <Annotations>
       <Annotation name="source_name">Census Bureau</Annotation>
-      <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year.</Annotation>
+      <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year. Data might not be available for certain smaller locations in the 1-year estimate.</Annotation>
       <Annotation name="dataset_link">http://www.census.gov/programs-surveys/acs/</Annotation>
       <Annotation name="dataset_name">ACS 5-year Estimate</Annotation>
       <Annotation name="table_id">B17004</Annotation>
@@ -3621,7 +3621,7 @@
       </MeasureExpression>
     </Measure>
 
-    <CalculatedMember dimension="Measures" name="Poverty by Work Experience" visible="true">
+    <CalculatedMember dimension="Measures" name="Population by Poverty Status" visible="true">
       <Annotations>
         <Annotation name="aggregation_method">SUM</Annotation>
         <Annotation name="units_of_measurement">People</Annotation>
@@ -3648,12 +3648,12 @@
       </Formula>
     </CalculatedMember>
 
-    <CalculatedMember dimension="Measures" name="Poverty by Work Experience Moe" visible="true">
+    <CalculatedMember dimension="Measures" name="Population by Poverty Status Moe" visible="true">
       <Annotations>
         <Annotation name="aggregation_method">MOE</Annotation>
         <Annotation name="units_of_measurement">People</Annotation>
         <Annotation name="error_type">MOE</Annotation>
-        <Annotation name="error_for_measure">Poverty by Work Experience</Annotation>
+        <Annotation name="error_for_measure">Population by Poverty Status</Annotation>
       </Annotations>
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[moe_t]
@@ -3683,7 +3683,7 @@
 <Cube name="acs_health_insurance_coverage_status_by_sex_by_age_1">
     <Annotations>
       <Annotation name="source_name">Census Bureau</Annotation>
-      <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year.</Annotation>
+      <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year. Data might not be available for certain smaller locations in the 1-year estimate.</Annotation>
       <Annotation name="dataset_link">http://www.census.gov/programs-surveys/acs/</Annotation>
       <Annotation name="dataset_name">ACS 1-year Estimate</Annotation>
       <Annotation name="table_id">B27001</Annotation>
@@ -3868,7 +3868,7 @@
       </MeasureExpression>
     </Measure>
 
-    <CalculatedMember dimension="Measures" name="Population by Insurance Coverage" visible="true">
+    <CalculatedMember dimension="Measures" name="Population Size by Insurance Coverage Status" visible="true">
       <Annotations>
         <Annotation name="aggregation_method">SUM</Annotation>
         <Annotation name="units_of_measurement">People</Annotation>
@@ -3895,12 +3895,12 @@
       </Formula>
     </CalculatedMember>
 
-    <CalculatedMember dimension="Measures" name="Population by Insurance Coverage Moe" visible="true">
+    <CalculatedMember dimension="Measures" name="Population Size by Insurance Coverage Status Moe" visible="true">
       <Annotations>
         <Annotation name="aggregation_method">MOE</Annotation>
         <Annotation name="units_of_measurement">People</Annotation>
         <Annotation name="error_type">MOE</Annotation>
-        <Annotation name="error_for_measure">Population by Insurance Coverage</Annotation>
+        <Annotation name="error_for_measure">Population Size by Insurance Coverage Status</Annotation>
       </Annotations>
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[moe_t]
@@ -3930,7 +3930,7 @@
 <Cube name="acs_poverty_status_by_nativity_5">
     <Annotations>
       <Annotation name="source_name">Census Bureau</Annotation>
-      <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year.</Annotation>
+      <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year. Data might not be available for certain smaller locations in the 1-year estimate.</Annotation>
       <Annotation name="dataset_link">http://www.census.gov/programs-surveys/acs/</Annotation>
       <Annotation name="dataset_name">ACS 5-year Estimate</Annotation>
       <Annotation name="table_id">B17025</Annotation>
@@ -4143,7 +4143,7 @@
 <Cube name="acs_snap_receipt_by_family_type_by_number_of_workers_5">
     <Annotations>
       <Annotation name="source_name">Census Bureau</Annotation>
-      <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year.</Annotation>
+      <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year. Data might not be available for certain smaller locations in the 1-year estimate.</Annotation>
       <Annotation name="dataset_link">http://www.census.gov/programs-surveys/acs/</Annotation>
       <Annotation name="dataset_name">ACS 5-year Estimate</Annotation>
       <Annotation name="table_id">B22007</Annotation>
@@ -4382,7 +4382,7 @@
 <Cube name="acs_grandparents_responsible_for_grandchildren_by_length_1">
     <Annotations>
       <Annotation name="source_name">Census Bureau</Annotation>
-      <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year.</Annotation>
+      <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year. Data might not be available for certain smaller locations in the 1-year estimate.</Annotation>
       <Annotation name="dataset_link">http://www.census.gov/programs-surveys/acs/</Annotation>
       <Annotation name="dataset_name">ACS 1-year Estimate</Annotation>
       <Annotation name="table_id">B10050</Annotation>
@@ -4625,7 +4625,7 @@
 <Cube name="acs_unmarried_partner_households_by_sex_of_partner_1">
     <Annotations>
       <Annotation name="source_name">Census Bureau</Annotation>
-      <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year.</Annotation>
+      <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year. Data might not be available for certain smaller locations in the 1-year estimate.</Annotation>
       <Annotation name="dataset_link">http://www.census.gov/programs-surveys/acs/</Annotation>
       <Annotation name="dataset_name">ACS 1-year Estimate</Annotation>
       <Annotation name="table_id">B11009</Annotation>
@@ -4831,7 +4831,7 @@
 <Cube name="acs_public_assistance_or_snap_5">
     <Annotations>
       <Annotation name="source_name">Census Bureau</Annotation>
-      <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year.</Annotation>
+      <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year. Data might not be available for certain smaller locations in the 1-year estimate.</Annotation>
       <Annotation name="dataset_link">http://www.census.gov/programs-surveys/acs/</Annotation>
       <Annotation name="dataset_name">ACS 5-year Estimate</Annotation>
       <Annotation name="table_id">B19058</Annotation>
@@ -5000,7 +5000,7 @@
 <Cube name="acs_public_assistance_or_snap_1">
     <Annotations>
       <Annotation name="source_name">Census Bureau</Annotation>
-      <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year.</Annotation>
+      <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year. Data might not be available for certain smaller locations in the 1-year estimate.</Annotation>
       <Annotation name="dataset_link">http://www.census.gov/programs-surveys/acs/</Annotation>
       <Annotation name="dataset_name">ACS 1-year Estimate</Annotation>
       <Annotation name="table_id">B19058</Annotation>
@@ -5169,7 +5169,7 @@
 <Cube name="acs_unmarried_partner_households_by_sex_of_partner_5">
     <Annotations>
       <Annotation name="source_name">Census Bureau</Annotation>
-      <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year.</Annotation>
+      <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year. Data might not be available for certain smaller locations in the 1-year estimate.</Annotation>
       <Annotation name="dataset_link">http://www.census.gov/programs-surveys/acs/</Annotation>
       <Annotation name="dataset_name">ACS 5-year Estimate</Annotation>
       <Annotation name="table_id">B11009</Annotation>
@@ -5375,7 +5375,7 @@
 <Cube name="acs_grandparents_responsible_for_grandchildren_by_length_5">
     <Annotations>
       <Annotation name="source_name">Census Bureau</Annotation>
-      <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year.</Annotation>
+      <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year. Data might not be available for certain smaller locations in the 1-year estimate.</Annotation>
       <Annotation name="dataset_link">http://www.census.gov/programs-surveys/acs/</Annotation>
       <Annotation name="dataset_name">ACS 5-year Estimate</Annotation>
       <Annotation name="table_id">B10050</Annotation>
@@ -5618,7 +5618,7 @@
 <Cube name="acs_snap_receipt_by_family_type_by_number_of_workers_1">
     <Annotations>
       <Annotation name="source_name">Census Bureau</Annotation>
-      <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year.</Annotation>
+      <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year. Data might not be available for certain smaller locations in the 1-year estimate.</Annotation>
       <Annotation name="dataset_link">http://www.census.gov/programs-surveys/acs/</Annotation>
       <Annotation name="dataset_name">ACS 1-year Estimate</Annotation>
       <Annotation name="table_id">B22007</Annotation>
@@ -5857,7 +5857,7 @@
 <Cube name="acs_sex_by_age_5">
     <Annotations>
       <Annotation name="source_name">Census Bureau</Annotation>
-      <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year.</Annotation>
+      <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year. Data might not be available for certain smaller locations in the 1-year estimate.</Annotation>
       <Annotation name="dataset_link">http://www.census.gov/programs-surveys/acs/</Annotation>
       <Annotation name="dataset_name">ACS 5-year Estimate</Annotation>
       <Annotation name="table_id">B01001</Annotation>
@@ -6135,7 +6135,7 @@
 <Cube name="acs_per_capita_income_1">
     <Annotations>
       <Annotation name="source_name">Census Bureau</Annotation>
-      <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year.</Annotation>
+      <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year. Data might not be available for certain smaller locations in the 1-year estimate.</Annotation>
       <Annotation name="dataset_link">http://www.census.gov/programs-surveys/acs/</Annotation>
       <Annotation name="dataset_name">ACS 1-year Estimate</Annotation>
       <Annotation name="table_id">B19301</Annotation>
@@ -6280,7 +6280,7 @@
 <Cube name="acs_vision_disability_status_by_sex_and_age_5">
     <Annotations>
       <Annotation name="source_name">Census Bureau</Annotation>
-      <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year.</Annotation>
+      <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year. Data might not be available for certain smaller locations in the 1-year estimate.</Annotation>
       <Annotation name="dataset_link">http://www.census.gov/programs-surveys/acs/</Annotation>
       <Annotation name="dataset_name">ACS 5-year Estimate</Annotation>
       <Annotation name="table_id">B18103</Annotation>
@@ -6515,7 +6515,7 @@
 <Cube name="acs_vision_disability_status_by_sex_and_age_1">
     <Annotations>
       <Annotation name="source_name">Census Bureau</Annotation>
-      <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year.</Annotation>
+      <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year. Data might not be available for certain smaller locations in the 1-year estimate.</Annotation>
       <Annotation name="dataset_link">http://www.census.gov/programs-surveys/acs/</Annotation>
       <Annotation name="dataset_name">ACS 1-year Estimate</Annotation>
       <Annotation name="table_id">B18103</Annotation>
@@ -6750,7 +6750,7 @@
 <Cube name="acs_per_capita_income_5">
     <Annotations>
       <Annotation name="source_name">Census Bureau</Annotation>
-      <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year.</Annotation>
+      <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year. Data might not be available for certain smaller locations in the 1-year estimate.</Annotation>
       <Annotation name="dataset_link">http://www.census.gov/programs-surveys/acs/</Annotation>
       <Annotation name="dataset_name">ACS 5-year Estimate</Annotation>
       <Annotation name="table_id">B19301</Annotation>
@@ -6895,7 +6895,7 @@
 <Cube name="acs_sex_by_age_1">
     <Annotations>
       <Annotation name="source_name">Census Bureau</Annotation>
-      <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year.</Annotation>
+      <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year. Data might not be available for certain smaller locations in the 1-year estimate.</Annotation>
       <Annotation name="dataset_link">http://www.census.gov/programs-surveys/acs/</Annotation>
       <Annotation name="dataset_name">ACS 1-year Estimate</Annotation>
       <Annotation name="table_id">B01001</Annotation>
@@ -7173,7 +7173,7 @@
 <Cube name="acs_poverty_status_by_school_enrollment_by_level_of_school_1">
     <Annotations>
       <Annotation name="source_name">Census Bureau</Annotation>
-      <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year.</Annotation>
+      <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year. Data might not be available for certain smaller locations in the 1-year estimate.</Annotation>
       <Annotation name="dataset_link">http://www.census.gov/programs-surveys/acs/</Annotation>
       <Annotation name="dataset_name">ACS 1-year Estimate</Annotation>
       <Annotation name="table_id">B14006</Annotation>
@@ -7416,7 +7416,7 @@
 <Cube name="acs_occupancy_status_1">
     <Annotations>
       <Annotation name="source_name">Census Bureau</Annotation>
-      <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year.</Annotation>
+      <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year. Data might not be available for certain smaller locations in the 1-year estimate.</Annotation>
       <Annotation name="dataset_link">http://www.census.gov/programs-surveys/acs/</Annotation>
       <Annotation name="dataset_name">ACS 1-year Estimate</Annotation>
       <Annotation name="table_id">B25002</Annotation>
@@ -7585,7 +7585,7 @@
 <Cube name="acs_inclusion_of_utilities_in_rent_1">
     <Annotations>
       <Annotation name="source_name">Census Bureau</Annotation>
-      <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year.</Annotation>
+      <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year. Data might not be available for certain smaller locations in the 1-year estimate.</Annotation>
       <Annotation name="dataset_link">http://www.census.gov/programs-surveys/acs/</Annotation>
       <Annotation name="dataset_name">ACS 1-year Estimate</Annotation>
       <Annotation name="table_id">B25069</Annotation>
@@ -7754,7 +7754,7 @@
 <Cube name="acs_educational_attainment_by_sex_1">
     <Annotations>
       <Annotation name="source_name">Census Bureau</Annotation>
-      <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year.</Annotation>
+      <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year. Data might not be available for certain smaller locations in the 1-year estimate.</Annotation>
       <Annotation name="dataset_link">http://www.census.gov/programs-surveys/acs/</Annotation>
       <Annotation name="dataset_name">ACS 1-year Estimate</Annotation>
       <Annotation name="table_id">B15002</Annotation>
@@ -8004,7 +8004,7 @@
 <Cube name="acs_hearing_disability_status_by_sex_and_age_5">
     <Annotations>
       <Annotation name="source_name">Census Bureau</Annotation>
-      <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year.</Annotation>
+      <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year. Data might not be available for certain smaller locations in the 1-year estimate.</Annotation>
       <Annotation name="dataset_link">http://www.census.gov/programs-surveys/acs/</Annotation>
       <Annotation name="dataset_name">ACS 5-year Estimate</Annotation>
       <Annotation name="table_id">B18102</Annotation>
@@ -8239,7 +8239,7 @@
 <Cube name="acs_employment_status_by_sex_by_age_5">
     <Annotations>
       <Annotation name="source_name">Census Bureau</Annotation>
-      <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year.</Annotation>
+      <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year. Data might not be available for certain smaller locations in the 1-year estimate.</Annotation>
       <Annotation name="dataset_link">http://www.census.gov/programs-surveys/acs/</Annotation>
       <Annotation name="dataset_name">ACS 5-year Estimate</Annotation>
       <Annotation name="table_id">B23001</Annotation>
@@ -8564,7 +8564,7 @@
 <Cube name="acs_rent_amount_1">
     <Annotations>
       <Annotation name="source_name">Census Bureau</Annotation>
-      <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year.</Annotation>
+      <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year. Data might not be available for certain smaller locations in the 1-year estimate.</Annotation>
       <Annotation name="dataset_link">http://www.census.gov/programs-surveys/acs/</Annotation>
       <Annotation name="dataset_name">ACS 1-year Estimate</Annotation>
       <Annotation name="table_id">B25058</Annotation>
@@ -8646,9 +8646,9 @@
       </MeasureExpression>
     </Measure>
 
-    <CalculatedMember dimension="Measures" name="Rent Amount" visible="true">
+    <CalculatedMember dimension="Measures" name="Median Rent Amount" visible="true">
       <Annotations>
-        <Annotation name="aggregation_method">SUM</Annotation>
+        <Annotation name="aggregation_method">MEDIAN</Annotation>
         <Annotation name="units_of_measurement">USD</Annotation>
       </Annotations>
       <Formula>CASE
@@ -8673,12 +8673,12 @@
       </Formula>
     </CalculatedMember>
 
-    <CalculatedMember dimension="Measures" name="Rent Amount Moe" visible="true">
+    <CalculatedMember dimension="Measures" name="Median Rent Amount Moe" visible="true">
       <Annotations>
         <Annotation name="aggregation_method">MOE</Annotation>
         <Annotation name="units_of_measurement">USD</Annotation>
         <Annotation name="error_type">MOE</Annotation>
-        <Annotation name="error_for_measure">Rent Amount</Annotation>
+        <Annotation name="error_for_measure">Median Rent Amount</Annotation>
       </Annotations>
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[moe_t]
@@ -8708,7 +8708,7 @@
 <Cube name="acs_disability_status_by_age_by_health_insurance_coverage_5">
     <Annotations>
       <Annotation name="source_name">Census Bureau</Annotation>
-      <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year.</Annotation>
+      <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year. Data might not be available for certain smaller locations in the 1-year estimate.</Annotation>
       <Annotation name="dataset_link">http://www.census.gov/programs-surveys/acs/</Annotation>
       <Annotation name="dataset_name">ACS 5-year Estimate</Annotation>
       <Annotation name="table_id">B18135</Annotation>
@@ -8960,7 +8960,7 @@
 <Cube name="acs_disability_status_by_age_by_health_insurance_coverage_1">
     <Annotations>
       <Annotation name="source_name">Census Bureau</Annotation>
-      <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year.</Annotation>
+      <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year. Data might not be available for certain smaller locations in the 1-year estimate.</Annotation>
       <Annotation name="dataset_link">http://www.census.gov/programs-surveys/acs/</Annotation>
       <Annotation name="dataset_name">ACS 1-year Estimate</Annotation>
       <Annotation name="table_id">B18135</Annotation>
@@ -9212,7 +9212,7 @@
 <Cube name="acs_rent_amount_5">
     <Annotations>
       <Annotation name="source_name">Census Bureau</Annotation>
-      <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year.</Annotation>
+      <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year. Data might not be available for certain smaller locations in the 1-year estimate.</Annotation>
       <Annotation name="dtaaset_link">http://www.census.gov/programs-surveys/acs/</Annotation>
       <Annotation name="dataset_name">ACS 5-year Estimate</Annotation>
       <Annotation name="table_id">B25058</Annotation>
@@ -9294,9 +9294,9 @@
       </MeasureExpression>
     </Measure>
 
-    <CalculatedMember dimension="Measures" name="Rent Amount" visible="true">
+    <CalculatedMember dimension="Measures" name="Median Rent Amount" visible="true">
       <Annotations>
-        <Annotation name="aggregation_method">SUM</Annotation>
+        <Annotation name="aggregation_method">MEDIAN</Annotation>
         <Annotation name="units_of_measurement">USD</Annotation>
       </Annotations>
       <Formula>CASE
@@ -9321,12 +9321,12 @@
       </Formula>
     </CalculatedMember>
 
-    <CalculatedMember dimension="Measures" name="Rent Amount Moe" visible="true">
+    <CalculatedMember dimension="Measures" name="Median Rent Amount Moe" visible="true">
       <Annotations>
         <Annotation name="aggregation_method">MOE</Annotation>
         <Annotation name="units_of_measurement">USD</Annotation>
         <Annotation name="error_type">MOE</Annotation>
-        <Annotation name="error_for_measure">Rent Amount</Annotation>
+        <Annotation name="error_for_measure">Median Rent Amount</Annotation>
       </Annotations>
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[moe_t]
@@ -9356,7 +9356,7 @@
 <Cube name="acs_employment_status_by_sex_by_age_1">
     <Annotations>
       <Annotation name="source_name">Census Bureau</Annotation>
-      <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year.</Annotation>
+      <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year. Data might not be available for certain smaller locations in the 1-year estimate.</Annotation>
       <Annotation name="dataset_link">http://www.census.gov/programs-surveys/acs/</Annotation>
       <Annotation name="dataset_name">ACS 1-year Estimate</Annotation>
       <Annotation name="table_id">B23001</Annotation>
@@ -9681,7 +9681,7 @@
 <Cube name="acs_hearing_disability_status_by_sex_and_age_1">
     <Annotations>
       <Annotation name="source_name">Census Bureau</Annotation>
-      <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year.</Annotation>
+      <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year. Data might not be available for certain smaller locations in the 1-year estimate.</Annotation>
       <Annotation name="dataset_link">http://www.census.gov/programs-surveys/acs/</Annotation>
       <Annotation name="dataset_name">ACS 1-year Estimate</Annotation>
       <Annotation name="table_id">B18102</Annotation>
@@ -9916,7 +9916,7 @@
 <Cube name="acs_educational_attainment_by_sex_5">
     <Annotations>
       <Annotation name="source_name">Census Bureau</Annotation>
-      <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year.</Annotation>
+      <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year. Data might not be available for certain smaller locations in the 1-year estimate.</Annotation>
       <Annotation name="dataset_link">http://www.census.gov/programs-surveys/acs/</Annotation>
       <Annotation name="dataset_name">ACS 5-year Estimate</Annotation>
       <Annotation name="table_id">B15002</Annotation>
@@ -10166,7 +10166,7 @@
 <Cube name="acs_inclusion_of_utilities_in_rent_5">
     <Annotations>
       <Annotation name="source_name">Census Bureau</Annotation>
-      <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year.</Annotation>
+      <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year. Data might not be available for certain smaller locations in the 1-year estimate.</Annotation>
       <Annotation name="dataset_link">http://www.census.gov/programs-surveys/acs/</Annotation>
       <Annotation name="dataset_name">ACS 5-year Estimate</Annotation>
       <Annotation name="table_id">B25069</Annotation>
@@ -10335,7 +10335,7 @@
 <Cube name="acs_occupancy_status_5">
     <Annotations>
       <Annotation name="source_name">Census Bureau</Annotation>
-      <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year.</Annotation>
+      <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year. Data might not be available for certain smaller locations in the 1-year estimate.</Annotation>
       <Annotation name="dataset_link">http://www.census.gov/programs-surveys/acs/</Annotation>
       <Annotation name="dataset_name">ACS 5-year Estimate</Annotation>
       <Annotation name="table_id">B25002</Annotation>
@@ -10504,7 +10504,7 @@
 <Cube name="acs_poverty_status_by_school_enrollment_by_level_of_school_5">
     <Annotations>
       <Annotation name="source_name">Census Bureau</Annotation>
-      <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year.</Annotation>
+      <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year. Data might not be available for certain smaller locations in the 1-year estimate.</Annotation>
       <Annotation name="dataset_link">http://www.census.gov/programs-surveys/acs/</Annotation>
       <Annotation name="dataset_name">ACS 5-year Estimate</Annotation>
       <Annotation name="table_id">B14006</Annotation>
@@ -11685,10 +11685,11 @@
     </Measure>
     <Measure name="Number of Food Stores (per 1,000 Population)" column="number_pth" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement">Rate</Annotation>
+            <Annotation name="units_of_measurement">Number</Annotation>
         </Annotations>
     </Measure>
-</Cube><Cube name="USDA - Low-Access by Race">
+</Cube>
+<Cube name="USDA - Low-Access by Race">
     <Annotations>
         <Annotation name="source_name">USDA</Annotation>
         <Annotation name="source_description">United State Department of Agriculture</Annotation>
@@ -11830,7 +11831,7 @@
     </Measure>
     <Measure name="Number of Nutrition Assistance Stores (per 1,000 Population)" column="number_pth" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement">Rate</Annotation>
+            <Annotation name="units_of_measurement">Number</Annotation>
         </Annotations>
     </Measure>
 </Cube>
@@ -11883,7 +11884,7 @@
     </Measure>
     <Measure name="Food Insecurity Rate" column="food_insecurity_rate" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement">Rate</Annotation>
+            <Annotation name="units_of_measurement">Percentage</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Estimated Food Insecure Population" column="estimated_food_insecure" aggregator="sum">
@@ -11967,13 +11968,14 @@
             <Annotation name="dim_type">TIME</Annotation>
         </Annotations>
          <Hierarchy name="Time" hasAll="true">
-            <Level name="Month" column="month" type="Numeric" levelType="TimeMonths" uniqueMembers="false" />
             <Level name="Year" column="year" type="Numeric" levelType="TimeYears" uniqueMembers="true" />
+            <Level name="Month" column="month" type="Numeric" levelType="TimeMonths" uniqueMembers="false" />
         </Hierarchy>
     </Dimension>
 
     <Dimension foreignKey="msa" name="Geography">
         <Annotations>
+            <Annotation name="hide_in_ui">true</Annotation>
             <Annotation name="dim_type">GEOGRAPHY</Annotation>
         </Annotations>
         <Hierarchy hasAll="true">
@@ -11982,7 +11984,7 @@
         </Hierarchy>
     </Dimension>
 
-    <Measure name="Average CPI" column="avg" aggregator="avg">
+    <Measure name="Average CPI (Detroit)" column="avg" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Index</Annotation>
         </Annotations>
@@ -12202,7 +12204,7 @@
 <Cube name="UDS Mapper - Heatlh Centers">
     <Annotations>
         <Annotation name="source_name">UDS Mapper</Annotation>
-        <Annotation name="source_description">UDS Mapper</Annotation>
+        <Annotation name="source_description">The UDS Mapper is designed to help inform users about the current geographic extent of U.S. federal (Section 330) Health Center Program (HCP) awardees and look-alikes. All data is available for the most recent year, but less available in previous years for each zip code.</Annotation>
         <Annotation name="dataset_link">https://www.udsmapper.org/</Annotation>
         <Annotation name="dataset_name">UDS Mapper</Annotation>
         <Annotation name="topic">Access to Care</Annotation>
@@ -12231,7 +12233,7 @@
         </Hierarchy>
     </Dimension>
 
-    <Measure name="Health Centers" column="health_centers" aggregator="sum">
+    <Measure name="Number of Health Centers" column="health_centers" aggregator="sum">
         <Annotations>
             <Annotation name="units_of_measurement">Number</Annotation>
         </Annotations>
@@ -12258,7 +12260,7 @@
             <Annotation name="units_of_measurement">People</Annotation>
         </Annotations>
     </Measure>
-    <Measure name="Unserved Low-Income" column="unserved_low_income" aggregator="sum">
+    <Measure name="Low-Income Population Not Served by Health Centers" column="unserved_low_income" aggregator="sum">
         <Annotations>
             <Annotation name="units_of_measurement">People</Annotation>
         </Annotations>
@@ -12307,7 +12309,7 @@
         </Annotations>
     </Measure>
 
-    <Measure name="Health Center Uninsured Patient Change (1-Year)" column="1_year_uninsured_patient_percent_change" aggregator="avg">
+    <Measure name="Percent Change in Health Center Uninsured Patient Population (1-Year)" column="1_year_uninsured_patient_percent_change" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Rate</Annotation>
         </Annotations>
@@ -12327,12 +12329,12 @@
             <Annotation name="units_of_measurement">People</Annotation>
         </Annotations>
     </Measure>
-    <Measure name="Uninsured Not Served by Health Centers" column="uninsured_not_served_by_health_centers" aggregator="sum">
+    <Measure name="Uninsured Population Not Served by Health Centers" column="uninsured_not_served_by_health_centers" aggregator="sum">
         <Annotations>
             <Annotation name="units_of_measurement">People</Annotation>
         </Annotations>
     </Measure>
-    <Measure name="Medicaid and Other Public Insurance Not Served by Health Centers" column="medicaid_and_other_pub_ins_not_served_by_health_centers" aggregator="sum">
+    <Measure name="Total Population with Medicaid or Other Public Insurance Not Served by Health Centers" column="medicaid_and_other_pub_ins_not_served_by_health_centers" aggregator="sum">
         <Annotations>
             <Annotation name="units_of_measurement">People</Annotation>
         </Annotations>
@@ -12348,7 +12350,7 @@
             <Annotation name="units_of_measurement">People</Annotation>
         </Annotations>
     </Measure>
-    <Measure name="Uninsured Health Center Patients" column="percent_patients_uninsured" aggregator="avg">
+    <Measure name="Health Center Patients Who Are Uninsured" column="percent_patients_uninsured" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Rate</Annotation>
         </Annotations>
@@ -12406,12 +12408,12 @@
             <Annotation name="hide_in_ui">true</Annotation>
         </Annotations>
     </Measure>
-    <Measure name="Population with Medicaid and Other Public Insurance" column="percent_population_with_medicaid_and_other_pub_ins" aggregator="avg">
+    <Measure name="Population with Medicaid or Other Public Insurance" column="percent_population_with_medicaid_and_other_pub_ins" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Rate</Annotation>
         </Annotations>
     </Measure>
-    <Measure name="Population with Medicare and Private Insurance" column="percent_population_with_medicare_and_priv_ins" aggregator="avg">
+    <Measure name="Population with Medicare or Other Private Insurance" column="percent_population_with_medicare_and_priv_ins" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Rate</Annotation>
         </Annotations>
@@ -12422,12 +12424,12 @@
             <Annotation name="hide_in_ui">true</Annotation>
         </Annotations>
     </Measure>
-    <Measure name="Limited English Proficiency" column="percent_pop_with_limited_english_proficiency" aggregator="avg">
+    <Measure name="Households with Limited English Proficiency" column="percent_pop_with_limited_english_proficiency" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Rate</Annotation>
         </Annotations>
     </Measure>
-    <Measure name="Less Than High School Education" column="percent_pop_with_less_than_high_school_education" aggregator="avg">
+    <Measure name="Population with Less Than High School Education" column="percent_pop_with_less_than_high_school_education" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Rate</Annotation>
         </Annotations>
@@ -12468,17 +12470,17 @@
             <Annotation name="hide_in_ui">true</Annotation>
         </Annotations>
     </Measure>
-    <Measure name="No Dental Visits in Past Year" column="percent_adults_with_no_dental_visit_in_past_year" aggregator="avg">
+    <Measure name="Adults with No Dental Visit in Past Year" column="percent_adults_with_no_dental_visit_in_past_year" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Rate</Annotation>
         </Annotations>
     </Measure>
-    <Measure name="Delayed or Not Sought Care Due to High Cost" column="percent_adults_who_have_delayed_or_not_sought_care_due_to_high_cost" aggregator="avg">
+    <Measure name="Adults Who Delayed or Did Not Seek Care Due to High Cost" column="percent_adults_who_have_delayed_or_not_sought_care_due_to_high_cost" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Rate</Annotation>
         </Annotations>
     </Measure>
-    <Measure name="No Usual Source of Care" column="percent_adults_with_no_usual_source_of_care" aggregator="avg">
+    <Measure name="Adults with No Usual Source of Care" column="percent_adults_with_no_usual_source_of_care" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Rate</Annotation>
         </Annotations>
@@ -12499,17 +12501,18 @@
             <Annotation name="units_of_measurement">Rate</Annotation>
         </Annotations>
     </Measure>
-    <Measure name="Uninsured Population Below 100%-400% FPL" column="percent_uninsured_population_at_100_percent_400_percent_fpl" aggregator="avg">
+    <Measure name="Uninsured Population at 100%-400% FPL" column="percent_uninsured_population_at_100_percent_400_percent_fpl" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Rate</Annotation>
         </Annotations>
     </Measure>
-    <Measure name="Uninsured Population Below 138%-400% FPL" column="percent_uninsured_population_at_138_percent_400_percent_fpl" aggregator="avg">
+    <Measure name="Uninsured Population at 138%-400% FPL" column="percent_uninsured_population_at_138_percent_400_percent_fpl" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Rate</Annotation>
         </Annotations>
     </Measure>
-</Cube><Cube name="MDC - Incarceration">
+</Cube>
+<Cube name="MDC - Incarceration">
     <Annotations>
         <Annotation name="source_name">MDC</Annotation>
         <Annotation name="source_description">Michigan Department of Corrections</Annotation>
@@ -12932,7 +12935,7 @@
     </Measure>
     <Measure name="Percent Adults Not Working" column="percent_adults_not_working" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement">Percentage</Annotation>
+            <Annotation name="units_of_measurement">Rate</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Housing Vacancy Rate" column="housing_vacancy_rate" aggregator="avg">
@@ -12947,12 +12950,12 @@
     </Measure>
     <Measure name="Percent Change in Employment" column="percent_change_in_employment" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement">Percentage</Annotation>
+            <Annotation name="units_of_measurement">Rate</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Percent Change in Establishments" column="percent_change_in_establishments" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement">Percentage</Annotation>
+            <Annotation name="units_of_measurement">Rate</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Distress Score" column="distress_score" aggregator="avg">
