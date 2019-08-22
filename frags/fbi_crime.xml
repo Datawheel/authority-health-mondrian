@@ -1,9 +1,9 @@
 <Cube name="FBI UCR">
     <Annotations>
-        <Annotation name="source_name">FBI: UCR</Annotation>
-        <Annotation name="source_description">FBI: Uniform Crime Reporting</Annotation>
+        <Annotation name="source_name">Federal Bureau of Investigation</Annotation>
+        <Annotation name="source_description">The UCR Program's primary objective is to generate reliable information for use in law enforcement administration, operation, and management. Data is only available for a subset of places.</Annotation>
         <Annotation name="dataset_link">https://ucr.fbi.gov/</Annotation>
-        <Annotation name="dataset_name">FBI: Uniform Crime Reporting</Annotation>
+        <Annotation name="dataset_name">FBI: Uniform Crime Reporting (UCR)</Annotation>
         <Annotation name="topic">Built/Social Environment</Annotation>
         <Annotation name="subtopic">Violent and Property Crimes</Annotation>
         <Annotation name="details"></Annotation>

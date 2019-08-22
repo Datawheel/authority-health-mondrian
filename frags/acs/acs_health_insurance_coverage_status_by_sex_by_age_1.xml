@@ -3,7 +3,7 @@
   <Cube name="acs_health_insurance_coverage_status_by_sex_by_age_1">
     <Annotations>
       <Annotation name="source_name">Census Bureau</Annotation>
-      <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year.</Annotation>
+      <Annotation name="source_description">The American Community Survey (ACS) is conducted by the US Census and sent to a portion of the population every year. Data might not be available for certain smaller locations in the 1-year estimate.</Annotation>
       <Annotation name="dataset_link">http://www.census.gov/programs-surveys/acs/</Annotation>
       <Annotation name="dataset_name">ACS 1-year Estimate</Annotation>
       <Annotation name="table_id">B27001</Annotation>
@@ -188,7 +188,7 @@
       </MeasureExpression>
     </Measure>
 
-    <CalculatedMember dimension="Measures" name="Population by Insurance Coverage" visible="true">
+    <CalculatedMember dimension="Measures" name="Population Size by Insurance Coverage Status" visible="true">
       <Annotations>
         <Annotation name="aggregation_method">SUM</Annotation>
         <Annotation name="units_of_measurement">People</Annotation>
@@ -215,12 +215,12 @@
       </Formula>
     </CalculatedMember>
 
-    <CalculatedMember dimension="Measures" name="Population by Insurance Coverage Moe" visible="true">
+    <CalculatedMember dimension="Measures" name="Population Size by Insurance Coverage Status Moe" visible="true">
       <Annotations>
         <Annotation name="aggregation_method">MOE</Annotation>
         <Annotation name="units_of_measurement">People</Annotation>
         <Annotation name="error_type">MOE</Annotation>
-        <Annotation name="error_for_measure">Population by Insurance Coverage</Annotation>
+        <Annotation name="error_for_measure">Population Size by Insurance Coverage Status</Annotation>
       </Annotations>
       <Formula>CASE
         WHEN [Geography].[Tract].Level is [Geography].[Tract].[State] THEN [Measures].[moe_t]

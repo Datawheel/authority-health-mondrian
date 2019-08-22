@@ -16,13 +16,14 @@
             <Annotation name="dim_type">TIME</Annotation>
         </Annotations>
          <Hierarchy name="Time" hasAll="true">
-            <Level name="Month" column="month" type="Numeric" levelType="TimeMonths" uniqueMembers="false" />
             <Level name="Year" column="year" type="Numeric" levelType="TimeYears" uniqueMembers="true" />
+            <Level name="Month" column="month" type="Numeric" levelType="TimeMonths" uniqueMembers="false" />
         </Hierarchy>
     </Dimension>
 
     <Dimension foreignKey="msa" name="Geography">
         <Annotations>
+            <Annotation name="hide_in_ui">true</Annotation>
             <Annotation name="dim_type">GEOGRAPHY</Annotation>
         </Annotations>
         <Hierarchy hasAll="true">
@@ -31,7 +32,7 @@
         </Hierarchy>
     </Dimension>
 
-    <Measure name="Average CPI" column="avg" aggregator="avg">
+    <Measure name="Average CPI (Detroit)" column="avg" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Index</Annotation>
         </Annotations>
