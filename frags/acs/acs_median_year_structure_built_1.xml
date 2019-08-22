@@ -85,7 +85,7 @@
       </MeasureExpression>
     </Measure>
 
-    <CalculatedMember aggregator="None" dimension="Measures" name="Construction Year" visible="true">
+    <CalculatedMember aggregator="avg" dimension="Measures" name="Construction Year" visible="true">
       <Annotations>
         <Annotation name="aggregation_method">NONE</Annotation>
         <Annotation name="units_of_measurement">Year</Annotation>
