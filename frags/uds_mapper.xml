@@ -4,8 +4,8 @@
         <Annotation name="source_description">The UDS Mapper is designed to help inform users about the current geographic extent of U.S. federal (Section 330) Health Center Program (HCP) awardees and look-alikes. All data is available for the most recent year, but less available in previous years for each zip code.</Annotation>
         <Annotation name="dataset_link">https://www.udsmapper.org/</Annotation>
         <Annotation name="dataset_name">UDS Mapper</Annotation>
-        <Annotation name="topic">Access to Care</Annotation>
-        <Annotation name="subtopic">Coverage</Annotation>
+        <Annotation name="topic">Health Behaviors and Conditions</Annotation>
+        <Annotation name="subtopic">Preventive Care, Health Conditions and Risky Behavior</Annotation>
         <Annotation name="details"></Annotation>
     </Annotations>
 
