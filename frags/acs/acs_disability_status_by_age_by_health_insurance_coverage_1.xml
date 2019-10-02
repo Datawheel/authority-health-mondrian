@@ -145,7 +145,6 @@
     <Measure aggregator="sum" column="mea_place" name="mea_place" visible="false"/>
     <Measure aggregator="sum" column="mea_msa" name="mea_msa" visible="false"/>
     <Measure aggregator="sum" column="mea_puma" name="mea_puma" visible="false"/>
-    <Measure aggregator="sum" column="mea_county_subdivision" name="mea_county_subdivision" visible="false"/>
 
     <Measure aggregator="None" dataType="Numeric" name="moe_t" visible="false">
       <MeasureExpression>
@@ -187,11 +186,6 @@
         <SQL dialect="monetdb">sqrt(sum(power(moe_puma / 1.645, 2))) * 1.645</SQL>
       </MeasureExpression>
     </Measure>
-    <Measure aggregator="None" dataType="Numeric" name="moe_county_subdivision" visible="false">
-      <MeasureExpression>
-        <SQL dialect="monetdb">sqrt(sum(power(moe_county_subdivision / 1.645, 2))) * 1.645</SQL>
-      </MeasureExpression>
-    </Measure>
 
     <CalculatedMember dimension="Measures" name="Population in Disability" visible="true">
       <Annotations>
@@ -212,9 +206,6 @@
         WHEN [Geography].[Puma].Level is [Geography].[Puma].[State] THEN [Measures].[mea_puma]
         WHEN [Geography].[Puma].Level is [Geography].[Puma].[Puma] THEN [Measures].[mea_puma]
         WHEN [Geography].[Msa].Level is [Geography].[Msa].[Msa] THEN [Measures].[mea_msa]
-        WHEN [Geography].[County Subdivision].Level is [Geography].[County Subdivision].[State] THEN [Measures].[mea_county_subdivision]
-        WHEN [Geography].[County Subdivision].Level is [Geography].[County Subdivision].[County] THEN [Measures].[mea_county_subdivision]
-        WHEN [Geography].[County Subdivision].Level is [Geography].[County Subdivision].[County Subdivision] THEN [Measures].[mea_county_subdivision]
         WHEN 1 = 1 THEN [Measures].[mea_nation]
         END
       </Formula>
@@ -241,9 +232,6 @@
         WHEN [Geography].[Puma].Level is [Geography].[Puma].[State] THEN [Measures].[moe_puma]
         WHEN [Geography].[Puma].Level is [Geography].[Puma].[Puma] THEN [Measures].[moe_puma]
         WHEN [Geography].[Msa].Level is [Geography].[Msa].[Msa] THEN [Measures].[moe_msa]
-        WHEN [Geography].[County Subdivision].Level is [Geography].[County Subdivision].[State] THEN [Measures].[moe_county_subdivision]
-        WHEN [Geography].[County Subdivision].Level is [Geography].[County Subdivision].[County] THEN [Measures].[moe_county_subdivision]
-        WHEN [Geography].[County Subdivision].Level is [Geography].[County Subdivision].[County Subdivision] THEN [Measures].[moe_county_subdivision]
         WHEN 1 = 1 THEN [Measures].[moe_nation]
         END
       </Formula>
