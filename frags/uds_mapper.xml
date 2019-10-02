@@ -4,8 +4,8 @@
         <Annotation name="source_description">The UDS Mapper is designed to help inform users about the current geographic extent of U.S. federal (Section 330) Health Center Program (HCP) awardees and look-alikes. All data is available for the most recent year, but less available in previous years for each zip code.</Annotation>
         <Annotation name="dataset_link">https://www.udsmapper.org/</Annotation>
         <Annotation name="dataset_name">UDS Mapper</Annotation>
-        <Annotation name="topic">Access to Care</Annotation>
-        <Annotation name="subtopic">Coverage</Annotation>
+        <Annotation name="topic">Health Behaviors and Conditions</Annotation>
+        <Annotation name="subtopic">Preventive Care, Health Conditions and Risky Behavior</Annotation>
         <Annotation name="details"></Annotation>
     </Annotations>
 
@@ -50,6 +50,8 @@
     <Measure name="Low-Income Population" column="low_income_population" aggregator="sum">
         <Annotations>
             <Annotation name="units_of_measurement">People</Annotation>
+            <Annotation name="topic">Economy</Annotation>
+            <Annotation name="subtopic">Poverty and Low Income</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Total Health Center Patients" column="total_number_of_health_center_patients" aggregator="sum">
@@ -224,11 +226,15 @@
     <Measure name="Households with Limited English Proficiency" column="percent_pop_with_limited_english_proficiency" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Rate</Annotation>
+            <Annotation name="topic">Education</Annotation>
+            <Annotation name="subtopic">Educational Attainment</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Population with Less Than High School Education" column="percent_pop_with_less_than_high_school_education" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Rate</Annotation>
+            <Annotation name="topic">Education</Annotation>
+            <Annotation name="subtopic">Educational Attainment</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Percent Population Uninsured - RGC" column="percent_population_uninsured_rgc" aggregator="avg">
@@ -241,11 +247,13 @@
     <Measure name="Low Birth Weight Rate" column="low_birth_weight_rate" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Rate</Annotation>
+            <Annotation name="subtopic">Health Outcomes</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Age-Adjusted Mortality Rate (per 100,000)" column="age_adjusted_mortality_rate_per_100000" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">People</Annotation>
+            <Annotation name="subtopic">Health Outcomes</Annotation>
         </Annotations>
     </Measure>
 
