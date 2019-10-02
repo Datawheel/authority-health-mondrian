@@ -40,12 +40,6 @@
       <Level column="state_id" name="State" nameColumn="state_name" uniqueMembers="true"/>
       <Level column="geoid" name="Puma" nameColumn="name" uniqueMembers="true"/>
     </Hierarchy>
-    <Hierarchy hasAll="true" name="County Subdivision">
-      <Table name="county_subdivisions" schema="shapes2017"/>
-      <Level column="state_id" name="State" nameColumn="state_name" uniqueMembers="true"/>
-      <Level column="county_id" name="County" nameColumn="county_name" uniqueMembers="true"/>
-      <Level column="geoid" name="County Subdivision" nameColumn="name" uniqueMembers="true"/>
-    </Hierarchy>
   </Dimension>
 <Cube name="CDC Wonder - Physical Inactivity by Sex">
     <Annotations>
