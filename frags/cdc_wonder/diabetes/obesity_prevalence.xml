@@ -4,10 +4,9 @@
         <Annotation name="source_description">CDC Wonder</Annotation>
         <Annotation name="dataset_link">https://www.cdc.gov/diabetes/data/countydata/countydataindicators.html</Annotation>
         <Annotation name="dataset_name">CDC Wonder</Annotation>
-        <Annotation name="hide_in_ui">true</Annotation>
         <Annotation name="topic">Health Conditions</Annotation>
         <Annotation name="subtopic">Obesity and Diabetes</Annotation>
-        <Annotation name="details"></Annotation>
+        <Annotation name="details">Obesity diagnosis spans 2004-2013 at the county level and can be broken down by sex.</Annotation>
     </Annotations>
 
     <Table name="obesity_prevalence_by_sex" schema="cdc_wonder"/>
@@ -66,7 +65,7 @@
         </Annotations>
     </Measure>
 
-    <Measure name="Age-Adjusted Obesity Prevalence" column="adj_percent" aggregator="avg">
+    <Measure name="Age-Adjusted Obesity Prevalence" caption="Age-Adjusted Obesity Prevalence (per 100,000)" column="adj_percent" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Percentage</Annotation>
         </Annotations>

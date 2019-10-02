@@ -42,6 +42,9 @@
             <Level name="Category" column="category" uniqueMembers="true"/>
         </Hierarchy>
         <Hierarchy hasAll="true" name="Sub-category">
+            <Annotations>
+                <Annotation name="hide_in_ui">true</Annotation>
+            </Annotations>
             <Level name="Category" column="category" uniqueMembers="true"/>
             <Level name="Sub-category" column="sub_category" uniqueMembers="true"/>
         </Hierarchy>
@@ -53,12 +56,12 @@
             <Annotation name="hide_in_ui">true</Annotation>
         </Annotations>
     </Measure>
-    <Measure name="Sheltered Homeless Population" column="sheltered" aggregator="sum">
+    <Measure name="Sheltered Homeless Population" caption="Sheltered Homeless Population by Category" column="sheltered" aggregator="sum">
         <Annotations>
             <Annotation name="units_of_measurement">People</Annotation>
         </Annotations>
     </Measure>
-    <Measure name="Unsheltered Homeless Population" column="unsheltered" aggregator="sum">
+    <Measure name="Unsheltered Homeless Population" caption="Unsheltered Homeless Population by Category" column="unsheltered" aggregator="sum">
         <Annotations>
             <Annotation name="units_of_measurement">People</Annotation>
         </Annotations>

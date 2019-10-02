@@ -6,7 +6,7 @@
         <Annotation name="dataset_name">CDC Wonder</Annotation>
         <Annotation name="topic">Health Conditions</Annotation>
         <Annotation name="subtopic">Cancer Prevalence by Demographic</Annotation>
-        <Annotation name="details"></Annotation>
+        <Annotation name="details">Cancer diagnosis data is available for the Detroit-Warren-Dearborn MSA area from 1999 to 2014, and can be broken down by type of cancer, race (Asian or Pacific Islander; Black or African American; and White), ethnicity (Hispanic and Non-Hispanic), and sex.</Annotation>
     </Annotations>
 
     <Table name="cancer" schema="cdc_wonder"/>
@@ -66,7 +66,7 @@
         </Hierarchy>
     </Dimension>
 
-    <Measure name="Cancer Diagnosis" column="count" aggregator="sum">
+    <Measure name="Cancer Diagnosis Count" column="count" aggregator="sum">
         <Annotations>
             <Annotation name="units_of_measurement">People</Annotation>
         </Annotations>
@@ -78,28 +78,28 @@
         </Annotations>
     </Measure>
 
-    <Measure name="Age-Adjusted Cancer Rate" column="age_adjusted_rate" aggregator="avg">
+    <Measure name="Age-Adjusted Cancer Rate" caption="Age-Adjusted Cancer Incidence Rate (per 100,000)" column="age_adjusted_rate" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement">Percentage</Annotation>
+            <Annotation name="units_of_measurement">People</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Age-Adjusted Cancer Rate Lower 95 Percent Confidence Interval" column="age_adjusted_rate_lower_95_percent_confidence_interval" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement">Percentage</Annotation>
+            <Annotation name="units_of_measurement">People</Annotation>
             <Annotation name="error_type">LCI</Annotation>
             <Annotation name="error_for_measure">Age-Adjusted Cancer Rate</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Age-Adjusted Cancer Rate Upper 95 Percent Confidence Interval" column="age_adjusted_rate_upper_95_percent_confidence_interval" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement">Percentage</Annotation>
+            <Annotation name="units_of_measurement">People</Annotation>
             <Annotation name="error_type">UCI</Annotation>
             <Annotation name="error_for_measure">Age-Adjusted Cancer Rate</Annotation>
         </Annotations>
     </Measure>
-    <Measure name="Age-Adjusted Cancer Rate Standard Error" column="age_adjusted_rate_standard_error" aggregator="avg">
+    <Measure name="Age-Adjusted Cancer Rate Standard Error" caption="Age-Adjusted Cancer Incidence Rate (per 100,000) Standard Error" column="age_adjusted_rate_standard_error" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement">Percentage</Annotation>
+            <Annotation name="units_of_measurement">People</Annotation>
         </Annotations>
     </Measure>
 
