@@ -42,11 +42,11 @@
             <Level name="Category" column="category" uniqueMembers="true"/>
         </Hierarchy>
         <Hierarchy hasAll="true" name="Sub-category">
-            <Level name="Category" column="category" uniqueMembers="true"/>
-            <Level name="Sub-category" column="sub_category" uniqueMembers="true"/>
             <Annotations>
                 <Annotation name="hide_in_ui">true</Annotation>
             </Annotations>
+            <Level name="Category" column="category" uniqueMembers="true"/>
+            <Level name="Sub-category" column="sub_category" uniqueMembers="true"/>
         </Hierarchy>
     </Dimension>
 
