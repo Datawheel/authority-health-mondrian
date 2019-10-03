@@ -525,19 +525,19 @@
         </Annotations>
     </Measure>
 
-    <Measure name="Sleep Less Than 7 Hours" caption="Adults With Usually <7 Hours of Sleep Per Day" column="sleep_less_than_7_hours_data_value" aggregator="avg">
+    <Measure name="Sleep Less Than 7 Hours" caption="Adults With Usually Less Than 7 Hours of Sleep Per Day" column="sleep_less_than_7_hours_data_value" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Percentage</Annotation>
         </Annotations>
     </Measure>
-    <Measure name="Sleep Less Than 7 Hours Low Confidence Limit" caption="Adults With Usually <7 Hours of Sleep Per Day Low Confidence Limit" column="sleep_less_than_7_hours_low_confidence_limit" aggregator="avg">
+    <Measure name="Sleep Less Than 7 Hours Low Confidence Limit" caption="Adults With Usually Less Than 7 Hours of Sleep Per Day Low Confidence Limit" column="sleep_less_than_7_hours_low_confidence_limit" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="error_type">LCI</Annotation>
             <Annotation name="error_for_measure">Sleep Less Than 7 Hours</Annotation>
         </Annotations>
     </Measure>
-    <Measure name="Sleep Less Than 7 Hours High Confidence Limit" caption="Adults With Usually <7 Hours of Sleep Per Day High Confidence Limit" column="sleep_less_than_7_hours_high_confidence_limit" aggregator="avg">
+    <Measure name="Sleep Less Than 7 Hours High Confidence Limit" caption="Adults With Usually Less Than 7 Hours of Sleep Per Day High Confidence Limit" column="sleep_less_than_7_hours_high_confidence_limit" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Percentage</Annotation>
             <Annotation name="error_type">UCI</Annotation>

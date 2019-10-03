@@ -97,18 +97,18 @@
         </Annotations>
     </Measure>
 
-    <Measure name="Last PSA Test Last Year" caption="Adults Whose Last PSA Test Was <1 Year Ago" column="last_psa_test_last_year_weighted_percent" aggregator="avg">
+    <Measure name="Last PSA Test Last Year" caption="Adults Whose Last PSA Test Was Within the Last Year" column="last_psa_test_last_year_weighted_percent" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Percentage</Annotation>
         </Annotations>
     </Measure>
-    <Measure name="Last PSA Test Last Year Sample Frequency" caption="Adults Whose Last PSA Test Was <1 Year Ago Sample Frequency" column="last_psa_test_last_year_sample_frequency" aggregator="sum">
+    <Measure name="Last PSA Test Last Year Sample Frequency" caption="Adults Whose Last PSA Test Was Within the Last Year Sample Frequency" column="last_psa_test_last_year_sample_frequency" aggregator="sum">
         <Annotations>
             <Annotation name="units_of_measurement">People</Annotation>
             <Annotation name="hide_in_ui">true</Annotation>
         </Annotations>
     </Measure>
-    <Measure name="Last PSA Test Last Year Weighted Frequency" caption="Adults Whose Last PSA Test Was <1 Year Ago Weighted Frequency" column="last_psa_test_last_year_weighted_frequency" aggregator="sum">
+    <Measure name="Last PSA Test Last Year Weighted Frequency" caption="Adults Whose Last PSA Test Was Within the Last Year Weighted Frequency" column="last_psa_test_last_year_weighted_frequency" aggregator="sum">
         <Annotations>
             <Annotation name="units_of_measurement">People</Annotation>
             <Annotation name="hide_in_ui">true</Annotation>
