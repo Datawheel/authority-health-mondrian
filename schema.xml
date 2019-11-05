@@ -198,19 +198,19 @@
 
     <Measure name="Age-Adjusted Diabetes Prevalence" caption="Age-Adjusted Diabetes Prevalence (per 100,000)" column="adj_percent" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement">Percentage</Annotation>
+            <Annotation name="units_of_measurement">People</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Age-Adjusted Diabetes Prevalence Lower Confidence Limit" column="adj_lower_confidence_limit" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement">Percentage</Annotation>
+            <Annotation name="units_of_measurement">People</Annotation>
             <Annotation name="error_type">LCI</Annotation>
             <Annotation name="error_for_measure">Age-Adjusted Diabetes Prevalence</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Age-Adjusted Diabetes Prevalence Upper Confidence Limit" column="adj_upper_confidence_limit" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement">Percentage</Annotation>
+            <Annotation name="units_of_measurement">People</Annotation>
             <Annotation name="error_type">UCI</Annotation>
             <Annotation name="error_for_measure">Age-Adjusted Diabetes Prevalence</Annotation>
         </Annotations>
@@ -383,19 +383,19 @@
 
     <Measure name="Age-Adjusted Obesity Prevalence" caption="Age-Adjusted Obesity Prevalence (per 100,000)" column="adj_percent" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement">Percentage</Annotation>
+            <Annotation name="units_of_measurement">People</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Age-Adjusted Obesity Prevalence Lower Confidence Limit" column="adj_lower_confidence_limit" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement">Percentage</Annotation>
+            <Annotation name="units_of_measurement">People</Annotation>
             <Annotation name="error_type">LCI</Annotation>
             <Annotation name="error_for_measure">Age-Adjusted Obesity Prevalence</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Age-Adjusted Obesity Prevalence Upper Confidence Limit" column="adj_upper_confidence_limit" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement">Percentage</Annotation>
+            <Annotation name="units_of_measurement">People</Annotation>
             <Annotation name="error_type">UCI</Annotation>
             <Annotation name="error_for_measure">Age-Adjusted Obesity Prevalence</Annotation>
         </Annotations>
@@ -1107,7 +1107,7 @@
 </Cube><Cube name="500 Cities">
     <Annotations>
         <Annotation name="source_name">500 Cities</Annotation>
-        <Annotation name="source_description">500 Cities: Local Data for Better Health</Annotation>
+        <Annotation name="source_description">The 500 Cities project is a collaboration between CDC, the Robert Wood Johnson Foundation, and the CDC Foundation. Data is only available for Detroit, Dearborn, Livonia, and Westland.</Annotation>
         <Annotation name="dataset_link">https://www.cdc.gov/500cities/</Annotation>
         <Annotation name="dataset_name">500 Cities</Annotation>
         <Annotation name="topic">Health Behaviors</Annotation>
@@ -11016,36 +11016,36 @@
         </Hierarchy>
     </Dimension>
 
-    <Measure name="Had Pap Smear" caption="Adults Who Have Ever Had a Pap Smear" column="hap_pap_smear_yes_weighted_percent" aggregator="avg">
+    <Measure name="Had Pap Smear" caption="Adults Aged 18+ Who Have Ever Had a Pap Smear" column="hap_pap_smear_yes_weighted_percent" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Percentage</Annotation>
         </Annotations>
     </Measure>
-    <Measure name="Had Pap Smear Sample Frequency" caption="Adults Who Have Ever Had a Pap Smear Sample Frequency" column="hap_pap_smear_yes_sample_frequency" aggregator="sum">
+    <Measure name="Had Pap Smear Sample Frequency" caption="Adults Aged 18+ Who Have Ever Had a Pap Smear Sample Frequency" column="hap_pap_smear_yes_sample_frequency" aggregator="sum">
         <Annotations>
             <Annotation name="units_of_measurement">People</Annotation>
             <Annotation name="hide_in_ui">true</Annotation>
         </Annotations>
     </Measure>
-    <Measure name="Had Pap Smear Weighted Frequency" caption="Adults Who Have Ever Had a Pap Smear Weighted Frequency" column="hap_pap_smear_yes_weighted_frequency" aggregator="sum">
+    <Measure name="Had Pap Smear Weighted Frequency" caption="Adults Aged 18+ Who Have Ever Had a Pap Smear Weighted Frequency" column="hap_pap_smear_yes_weighted_frequency" aggregator="sum">
         <Annotations>
             <Annotation name="units_of_measurement">People</Annotation>
             <Annotation name="hide_in_ui">true</Annotation>
         </Annotations>
     </Measure>
 
-    <Measure name="Had Mammogram" caption="Adults Who Have Ever Had a Mammogram" column="had_mammogram_yes_weighted_percent" aggregator="avg">
+    <Measure name="Had Mammogram" caption="Adults Aged 40+ Who Ever Had a Mammogram" column="had_mammogram_yes_weighted_percent" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Percentage</Annotation>
         </Annotations>
     </Measure>
-    <Measure name="Had Mammogram Sample Frequency" caption="Adults Who Have Ever Had a Mammogram Sample Frequency" column="had_mammogram_yes_sample_frequency" aggregator="sum">
+    <Measure name="Had Mammogram Sample Frequency" caption="Adults Aged 40+ Who Ever Had a Mammogram Sample Frequency" column="had_mammogram_yes_sample_frequency" aggregator="sum">
         <Annotations>
             <Annotation name="units_of_measurement">People</Annotation>
             <Annotation name="hide_in_ui">true</Annotation>
         </Annotations>
     </Measure>
-    <Measure name="Had Mammogram Weighted Frequency" caption="Adults Who Have Ever Had a Mammogram Weighted Frequency" column="had_mammogram_yes_weighted_frequency" aggregator="sum">
+    <Measure name="Had Mammogram Weighted Frequency" caption="Adults Aged 40+ Who Ever Had a Mammogram Weighted Frequency" column="had_mammogram_yes_weighted_frequency" aggregator="sum">
         <Annotations>
             <Annotation name="units_of_measurement">People</Annotation>
             <Annotation name="hide_in_ui">true</Annotation>
@@ -11139,18 +11139,18 @@
         </Annotations>
     </Measure>
 
-    <Measure name="Visited Dentist" caption="Adults Who Have Ever Visited a Dentist" column="visited_dentist_yes_weighted_percent" aggregator="avg">
+    <Measure name="Visited Dentist" caption="Adults Who Have Visited A Dentist" column="visited_dentist_yes_weighted_percent" aggregator="avg">
         <Annotations>
             <Annotation name="units_of_measurement">Percentage</Annotation>
         </Annotations>
     </Measure>
-    <Measure name="Visited Dentist Sample Frequency" caption="Adults Who Have Ever Visited a Dentist Sample Frequency" column="visited_dentist_yes_sample_frequency" aggregator="sum">
+    <Measure name="Visited Dentist Sample Frequency" caption="Adults Who Have Visited A Dentist Sample Frequency" column="visited_dentist_yes_sample_frequency" aggregator="sum">
         <Annotations>
             <Annotation name="units_of_measurement">People</Annotation>
             <Annotation name="hide_in_ui">true</Annotation>
         </Annotations>
     </Measure>
-    <Measure name="Visited Dentist Weighted Frequency" caption="Adults Who Have Ever Visited a Dentist Weighted Frequency" column="visited_dentist_yes_weighted_frequency" aggregator="sum">
+    <Measure name="Visited Dentist Weighted Frequency" caption="Adults Who Have Visited A Dentist Weighted Frequency" column="visited_dentist_yes_weighted_frequency" aggregator="sum">
         <Annotations>
             <Annotation name="units_of_measurement">People</Annotation>
             <Annotation name="hide_in_ui">true</Annotation>
