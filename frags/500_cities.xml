@@ -1,7 +1,7 @@
 <Cube name="500 Cities">
     <Annotations>
         <Annotation name="source_name">500 Cities</Annotation>
-        <Annotation name="source_description">500 Cities: Local Data for Better Health</Annotation>
+        <Annotation name="source_description">The 500 Cities project is a collaboration between CDC, the Robert Wood Johnson Foundation, and the CDC Foundation. Data is only available for Detroit, Dearborn, Livonia, and Westland.</Annotation>
         <Annotation name="dataset_link">https://www.cdc.gov/500cities/</Annotation>
         <Annotation name="dataset_name">500 Cities</Annotation>
         <Annotation name="topic">Health Behaviors</Annotation>
