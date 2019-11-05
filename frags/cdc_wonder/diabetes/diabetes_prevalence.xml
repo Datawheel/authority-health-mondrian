@@ -67,19 +67,19 @@
 
     <Measure name="Age-Adjusted Diabetes Prevalence" caption="Age-Adjusted Diabetes Prevalence (per 100,000)" column="adj_percent" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement">Percentage</Annotation>
+            <Annotation name="units_of_measurement">People</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Age-Adjusted Diabetes Prevalence Lower Confidence Limit" column="adj_lower_confidence_limit" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement">Percentage</Annotation>
+            <Annotation name="units_of_measurement">People</Annotation>
             <Annotation name="error_type">LCI</Annotation>
             <Annotation name="error_for_measure">Age-Adjusted Diabetes Prevalence</Annotation>
         </Annotations>
     </Measure>
     <Measure name="Age-Adjusted Diabetes Prevalence Upper Confidence Limit" column="adj_upper_confidence_limit" aggregator="avg">
         <Annotations>
-            <Annotation name="units_of_measurement">Percentage</Annotation>
+            <Annotation name="units_of_measurement">People</Annotation>
             <Annotation name="error_type">UCI</Annotation>
             <Annotation name="error_for_measure">Age-Adjusted Diabetes Prevalence</Annotation>
         </Annotations>
