@@ -1,7 +1,7 @@
 <Cube name="CDC Wonder - Cancer">
     <Annotations>
         <Annotation name="source_name">CDC Wonder</Annotation>
-        <Annotation name="source_description">CDC Wonder</Annotation>
+        <Annotation name="source_description">Wide-ranging Online Data for Epidemiologic Research</Annotation>
         <Annotation name="dataset_link">https://wonder.cdc.gov/CancerIncidence.html</Annotation>
         <Annotation name="dataset_name">CDC Wonder</Annotation>
         <Annotation name="topic">Health Conditions</Annotation>
