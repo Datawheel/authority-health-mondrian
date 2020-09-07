@@ -2,7 +2,7 @@
     <Annotations>
         <Annotation name="source_name">USDA</Annotation>
         <Annotation name="source_description">United State Department of Agriculture</Annotation>
-        <Annotation name="dataset_link">https://www.ers.usda.gov/</Annotation>
+        <Annotation name="dataset_link">https://www.ers.usda.gov/data-products/food-environment-atlas/data-access-and-documentation-downloads/#Current%20Version</Annotation>
         <Annotation name="dataset_name">United State Department of Agriculture</Annotation>
         <Annotation name="topic">Food Access</Annotation>
         <Annotation name="subtopic">Food Availability</Annotation>

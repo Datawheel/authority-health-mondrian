@@ -2,7 +2,7 @@
     <Annotations>
         <Annotation name="source_name">Feeding America</Annotation>
         <Annotation name="source_description">Feeding America: Map the Meal Gap</Annotation>
-        <Annotation name="dataset_link">http://www.feedingamerica.org/</Annotation>
+        <Annotation name="dataset_link">https://www.feedingamerica.org/research/map-the-meal-gap/by-county</Annotation>
         <Annotation name="dataset_name">Feeding America</Annotation>
         <Annotation name="topic">Food Access</Annotation>
         <Annotation name="subtopic">Insecurity</Annotation>
